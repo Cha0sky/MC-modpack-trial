@@ -1,0 +1,62 @@
+{
+  "source_inputs": {
+    "evolvingblade": {
+      "files_checked": 128,
+      "unchanged": true
+    },
+    "rpgleveling": {
+      "files_checked": 160,
+      "unchanged": true
+    }
+  },
+  "artifacts": [
+    {
+      "module": "evolvingblade",
+      "version": "1.1.0",
+      "jar": "D:\\PCL 正式版 2.10.6 (1)\\codex\\modpack-project\\modules\\evolvingblade\\build\\libs\\evolvingblade-1.1.0.jar",
+      "bytes": 185362,
+      "sha256": "1c307442c3e95c401bc0847c7f900420e0d7115409c08c92c38069b44703a539",
+      "production_classes": 61,
+      "java_class_major": 65,
+      "json_resources_parsed": 18,
+      "png_headers_checked": 8,
+      "source_resources_present": 32,
+      "test_classes_packaged": false,
+      "passed": true,
+      "baseline_comparison": {
+        "baseline": "D:\\PCL 正式版 2.10.6 (1)\\codex\\evolvingblade\\build\\libs\\evolvingblade-1.1.0.jar",
+        "baseline_sha256": "2d9be326e8310189da15e36cdbfd29c8b9c42bd4681d7143dda12481589bf7c0",
+        "added_entries": [],
+        "removed_entries": [],
+        "changed_payload_entries": [],
+        "payload_identical": true
+      },
+      "visual_game_check_run": false
+    },
+    {
+      "module": "rpgleveling",
+      "version": "1.0.0",
+      "jar": "D:\\PCL 正式版 2.10.6 (1)\\codex\\modpack-project\\modules\\rpgleveling\\build\\libs\\rpgleveling-1.0.0.jar",
+      "bytes": 379569,
+      "sha256": "0b475581512a643a6d126be165aef54b1befd1220d5f67c7da1bad30a170761d",
+      "production_classes": 77,
+      "java_class_major": 65,
+      "json_resources_parsed": 67,
+      "png_headers_checked": 8,
+      "source_resources_present": 78,
+      "test_classes_packaged": false,
+      "passed": true,
+      "baseline_comparison": {
+        "baseline": "D:\\Agent_workspaces\\Deepseek Harness\\MC_mod\\build\\libs\\rpgleveling-1.0.0.jar",
+        "baseline_sha256": "c80a959783b33fa65d75fffab14b43fdd21c70a97f3634bb02ea3ad58b043bb0",
+        "added_entries": [],
+        "removed_entries": [],
+        "changed_payload_entries": [],
+        "payload_identical": true
+      },
+      "visual_game_check_run": false
+    }
+  ],
+  "game_started": false,
+  "deployment_run": false
+}

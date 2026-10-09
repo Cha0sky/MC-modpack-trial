@@ -1,0 +1,95 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.2/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+
+Daemon will be stopped at the end of the build
+
+
+
+> Configure project :
+
+[evolvingblade] 项目路径包含非 ASCII 字符：标准 `test` 任务自身已禁用（Gradle worker @argfile 编码问题），
+[evolvingblade] 但它依赖 `ebTest`，所以 `gradlew test` 与 `gradlew build` 都会真正执行 JUnit 套件。
+
+
+
+> Task :createMinecraftArtifacts UP-TO-DATE
+
+> Task :compileJava UP-TO-DATE
+
+> Task :generateModMetadata UP-TO-DATE
+
+> Task :processResources UP-TO-DATE
+
+> Task :classes UP-TO-DATE
+
+> Task :jarJar NO-SOURCE
+
+> Task :jar UP-TO-DATE
+
+> Task :assemble UP-TO-DATE
+
+> Task :compileTestJava
+
+> Task :processTestResources NO-SOURCE
+
+> Task :testClasses
+
+
+
+> Task :ebTest
+
+
+
+Test run finished after 292 ms
+
+[        16 containers found      ]
+
+[         0 containers skipped    ]
+
+[        16 containers started    ]
+
+[         0 containers aborted    ]
+
+[        16 containers successful ]
+
+[         0 containers failed     ]
+
+[       112 tests found           ]
+
+[         0 tests skipped         ]
+
+[       112 tests started         ]
+
+[         0 tests aborted         ]
+
+[       112 tests successful      ]
+
+[         0 tests failed          ]
+
+
+
+EBTEST tests=112 succeeded=112 failed=0 aborted=0 skipped=0 containersFailed=0 containersAborted=0 -> exitCode=0
+
+
+
+> Task :test SKIPPED
+
+> Task :check
+
+> Task :build
+
+
+
+[Incubating] Problems report is available at: file:///D:/PCL%20%E6%AD%A3%E5%BC%8F%E7%89%88%202.10.6%20(1)/codex/modpack-project/modules/evolvingblade/build/reports/problems/problems-report.html
+
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.14.2/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+
+
+BUILD SUCCESSFUL in 27s
+
+7 actionable tasks: 2 executed, 5 up-to-date

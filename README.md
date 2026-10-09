@@ -4,7 +4,7 @@
 
 最新设计以 [PLAN.md](PLAN.md) 为准：Minecraft 1.21.1 / NeoForge 21.1.248 / Java 21，围绕固定基地的休闲生活、女仆与 Create 自动化，结合原创剧情、少数关键 Boss 推动的世界共享阶段及大量可选冒险。航空学保留为小型载具与玩具，完整移动基地暂不开发。
 
-项目已进入按任务批准的正式开发流程。**已完成仓库整理与两个源码工程归档；M0 尚未完成。** 归档不代表重新编译或整包兼容验证已经通过。无限之核源码已由用户确认丢失，仓库仅保存其现有运行 JAR。
+项目已进入按任务批准的正式开发流程。**两个归档工程的构建与 Java 检查已通过；M0 的游戏内及整包验证尚未完成。** 成长武器 JUnit 112/112，角色加点数学与布局自检 471/471，记录见 [BUILD-BASELINE.md](BUILD-BASELINE.md)。无限之核原始源码丢失，基准 JAR 保留；另一个对话已新增重制工程，本轮不验收其功能。
 
 ## 目录
 
@@ -15,6 +15,7 @@
 | `STATE.md` | 当前进度、验收边界和下一项候选任务 |
 | `modules/evolvingblade` | 成长武器源码副本，含资源、构建入口、测试、设计与美术资料 |
 | `modules/rpgleveling` | 角色加点源码副本，含资源、构建入口、测试与设计资料 |
+| `modules/infinitecore` | 另一对话提交的无限之核重制工程，验收状态见其模块文档 |
 | `vendor/infinitecore` | 无限之核 1.0.0 的运行 JAR 与来源说明；没有源码 |
 | `integration/src` | 旧版配方整合原型，保留待评估 |
 | `sanctuary/src/main` | 庇护石原型源码，保留待评估 |
@@ -22,6 +23,7 @@
 | `tools` | 现有构建、清单、部署和启动工具；执行前必须检查写入范围 |
 | `evidence` | 版本、部署和验证记录；完整运行日志留在本机 |
 | `SOURCE-ARCHIVE.md` | 本次复制范围、原工程位置、校验和限制 |
+| `BUILD-BASELINE.md` | 两个归档工程的实际构建、Java 检查、工具链问题和复现命令 |
 | `BASELINE-AUDIT.md`、`HANDOFF.md` 等 | 历史核查、交接与草案；不覆盖当前 PLAN 或执行授权 |
 
 ## 开发与 Git
@@ -38,23 +40,30 @@
 
 两个工程均保留了 `gradlew.bat`、`build.gradle`、`settings.gradle`、`gradle.properties` 和 Wrapper。版本锁定为 Gradle 8.14.2 / ModDevGradle 2.0.81 / Java 21 / NeoForge 21.1.248。
 
-后续获准编译时，分别在以下目录使用各自的 Wrapper：
+本轮使用完整 Temurin JDK 21.0.12+8（`C:\Gradle\jdk-21-temurin`）及 `-PneoForge.neoFormRuntime.useEclipseCompiler=true` 构建通过。后续获准编译时，从仓库根目录设置当前进程环境，再分别使用各自的 Wrapper；完整参数见 BUILD-BASELINE.md：
 
 ```powershell
-Set-Location '.\modules\evolvingblade'
-.\gradlew.bat build
+$env:JAVA_HOME = 'C:\Gradle\jdk-21-temurin'
+$env:GRADLE_USER_HOME = Join-Path (Get-Location) 'work\build-baseline\gradle-user-home'
 ```
 
 ```powershell
-Set-Location '.\modules\rpgleveling'
-.\gradlew.bat build
+Push-Location '.\modules\evolvingblade'
+.\gradlew.bat build -PneoForge.neoFormRuntime.useEclipseCompiler=true --no-daemon --no-configuration-cache
+Pop-Location
 ```
 
-以上是后续构建入口，**本次未执行**。首次构建可能下载 Gradle、依赖和工具链；未随源码复制本机缓存。历史测试结果见各模块归档资料，不等于从新位置重跑通过。
+```powershell
+Push-Location '.\modules\rpgleveling'
+.\gradlew.bat build verifyMath -PneoForge.neoFormRuntime.useEclipseCompiler=true --no-daemon --no-configuration-cache -Dorg.gradle.vfs.watch=false
+Pop-Location
+```
+
+以上是已有 Wrapper 的复现入口。本轮实际调用的入口、命令和结果保存在 `evidence/build-baseline`；没有启动游戏或部署。缓存不在 Git 中，新机器仍可能需要下载 Gradle 和依赖。默认 NeoForm JDK 编译路径的故障没有永久修复，本轮使用 Eclipse 编译选项绕过；历史验收不能替代后续游戏测试。
 
 - 成长武器有 `ebTest` 和 GameTest 入口；GameTest 清理任务会删除隔离运行目录，运行前需要检查。
 - 角色加点有 `verifyMath` 和 GameTest 入口；运行元数据要求 Patchouli。其美术辅助脚本仍含原作者机器的外部图片/字体路径，本次未改造。
-- 无限之核无法从本仓库源码重建；今后恢复、反编译研究或重写须作为单独批准的任务。
+- 无限之核原始源码没有恢复；另一对话新增了重制工程，不能据此宣称与原 JAR 已完成存档或整包兼容验收。
 - 庇护石原型的 Python 构建脚本仍依赖仓库外 `../evolvingblade/build` 和本机 PCL 路径；本次未改造。
 
 ## 实例与存档

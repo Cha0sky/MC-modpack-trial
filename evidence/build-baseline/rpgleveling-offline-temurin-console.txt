@@ -1,0 +1,146 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.2/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+
+Daemon will be stopped at the end of the build
+
+
+
+> Task :createMinecraftArtifacts
+
+Loaded 125 artifacts from D:\PCL ... 2.10.6 (1)\codex\modpack-project\modules\rpgleveling\build\tmp\createMinecraftArtifacts\nfrt_artifact_manifest.properties
+
+*** Started working on downloadJson
+
+ DONE  Completed downloadJson in 0.02s
+
+*** Started working on downloadClient
+
+*** Started working on downloadServer
+
+*** Started working on downloadClientMappings
+
+*** Started working on listLibraries
+
+ REUSE Used cache of listLibraries in 0.00s
+
+ DONE  Completed downloadServer in 0.03s
+
+ DONE  Completed downloadClient in 0.03s
+
+ DONE  Completed downloadClientMappings in 0.03s
+
+*** Started working on mergeMappings
+
+ REUSE Used cache of mergeMappings in 0.00s
+
+*** Started working on stripClient
+
+ REUSE Used cache of stripClient in 0.00s
+
+*** Started working on extractServer
+
+ REUSE Used cache of extractServer in 0.00s
+
+*** Started working on stripServer
+
+ REUSE Used cache of stripServer in 0.00s
+
+*** Started working on merge
+
+ REUSE Used cache of merge in 0.00s
+
+*** Started working on rename
+
+ REUSE Used cache of rename in 0.00s
+
+*** Started working on decompile
+
+ REUSE Used cache of decompile in 0.00s
+
+*** Started working on inject
+
+ REUSE Used cache of inject in 0.00s
+
+*** Started working on patch
+
+ REUSE Used cache of patch in 0.00s
+
+*** Started working on applyNeoforgePatches
+
+ REUSE Used cache of applyNeoforgePatches in 0.00s
+
+*** Started working on transformSources
+
+ RUN   Running external tool net.neoforged.jst:jst-cli-bundle:1.0.66
+
+ DONE  Completed transformSources in 4.91s
+
+*** Started working on recompile
+
+ 123 items on the compile classpath
+
+ 0 items on the sourcepath
+
+*** Started working on sourcesWithNeoForge
+
+ Compiling 5364 source files
+
+ DONE  Completed sourcesWithNeoForge in 3.42s
+
+ ERROR Line: 1, ..net.minecraft.world.ticks.package-info...: null in /net/minecraft/world/ticks/package-info.java
+
+Total runtime: 22.90s
+
+
+net.neoforged.neoform.runtime.graph.NodeExecutionException: Node action for recompile failed
+
+	at net.neoforged.neoform.runtime.engine.NeoFormEngine.runNode(NeoFormEngine.java:519)
+
+	at net.neoforged.neoform.runtime.engine.NeoFormEngine.lambda$getWaitCondition$5(NeoFormEngine.java:465)
+
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+
+	at java.base/java.util.concurrent.ThreadPerTaskExecutor$TaskRunner.run(ThreadPerTaskExecutor.java:314)
+
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:329)
+
+Caused by: java.io.IOException: Compilation failed
+
+	at net.neoforged.neoform.runtime.actions.RecompileSourcesActionWithJDK.run(RecompileSourcesActionWithJDK.java:77)
+
+	at net.neoforged.neoform.runtime.engine.NeoFormEngine.runNode(NeoFormEngine.java:508)
+
+	... 4 more
+
+
+
+> Task :createMinecraftArtifacts FAILED
+
+
+
+FAILURE: Build failed with an exception.
+
+
+
+* What went wrong:
+
+Execution failed for task ':createMinecraftArtifacts'.
+
+> Process 'command 'C:\gradle\jdk-21-temurin\bin\java.exe'' finished with non-zero exit value 1
+
+
+
+* Try:
+
+> Run with --stacktrace option to get the stack trace.
+
+> Run with --info or --debug option to get more log output.
+
+> Run with --scan to get full insights.
+
+> Get more help at https://help.gradle.org.
+
+
+
+BUILD FAILED in 31s
+
+1 actionable task: 1 executed

@@ -54,7 +54,7 @@
 - 原始只读实例：`D:\PCL 正式版 2.10.6 (1)\.minecraft\versions\mod test`。
 - 原工程 `D:\PCL 正式版 2.10.6 (1)\codex\evolvingblade` 与 `D:\Agent_workspaces\Deepseek Harness\MC_mod` 是保留原件，不作为后续默认修改位置。
 
-两个模块的 Gradle 构建文件和 Wrapper 已归档，尚未从新位置重新编译。环境信息核对不等于编译、游戏启动或整包兼容性验证通过。
+2026-10-10 的构建核查另外确认完整开发 JDK `C:\Gradle\jdk-21-temurin` 为 Temurin **21.0.12+8**，含 `javac` 和 `jmods`；它与上述 PCL 游戏运行时分开记录。两个归档模块已使用该 JDK、原有 Wrapper 和 `-PneoForge.neoFormRuntime.useEclipseCompiler=true` 从新位置构建通过，详见 BUILD-BASELINE.md。这个选项尚未写入模块构建文件，默认 NeoForm JDK 编译路径的故障仍有记录。构建及 Java 测试通过不等于游戏内或整包兼容验证通过。
 
 ## 工作范围与源码
 

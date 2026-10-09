@@ -1,0 +1,168 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.2/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+
+Daemon will be stopped at the end of the build
+
+
+
+> Configure project :
+
+[evolvingblade] 项目路径包含非 ASCII 字符：标准 `test` 任务自身已禁用（Gradle worker @argfile 编码问题），
+[evolvingblade] 但它依赖 `ebTest`，所以 `gradlew test` 与 `gradlew build` 都会真正执行 JUnit 套件。
+
+
+
+> Task :createMinecraftArtifacts
+
+Loaded 125 artifacts from D:\PCL ... 2.10.6 (1)\codex\modpack-project\modules\evolvingblade\build\tmp\createMinecraftArtifacts\nfrt_artifact_manifest.properties
+
+*** Started working on downloadJson
+
+ DONE  Completed downloadJson in 0.02s
+
+*** Started working on downloadClient
+
+*** Started working on downloadServer
+
+*** Started working on downloadClientMappings
+
+*** Started working on listLibraries
+
+ REUSE Used cache of listLibraries in 0.00s
+
+ DONE  Completed downloadClientMappings in 0.03s
+
+ DONE  Completed downloadServer in 0.03s
+
+ DONE  Completed downloadClient in 0.03s
+
+*** Started working on mergeMappings
+
+ REUSE Used cache of mergeMappings in 0.00s
+
+*** Started working on stripClient
+
+ REUSE Used cache of stripClient in 0.00s
+
+*** Started working on extractServer
+
+ REUSE Used cache of extractServer in 0.00s
+
+*** Started working on stripServer
+
+ REUSE Used cache of stripServer in 0.00s
+
+*** Started working on merge
+
+ REUSE Used cache of merge in 0.00s
+
+*** Started working on rename
+
+ REUSE Used cache of rename in 0.00s
+
+*** Started working on decompile
+
+ REUSE Used cache of decompile in 0.00s
+
+*** Started working on inject
+
+ REUSE Used cache of inject in 0.00s
+
+*** Started working on patch
+
+ RUN   Running external tool io.codechicken:DiffPatch:2.0.0.36:all
+
+ DONE  Completed patch in 6.56s
+
+*** Started working on applyNeoforgePatches
+
+ RUN   Running external tool io.codechicken:DiffPatch:2.0.0.36:all
+
+ DONE  Completed applyNeoforgePatches in 2.52s
+
+*** Started working on transformSources
+
+ RUN   Running external tool net.neoforged.jst:jst-cli-bundle:1.0.66
+
+ DONE  Completed transformSources in 6.37s
+
+*** Started working on recompile
+
+ 123 items on the compile classpath
+
+ 0 items on the sourcepath
+
+*** Started working on sourcesWithNeoForge
+
+ Compiling 5364 source files
+
+ DONE  Completed sourcesWithNeoForge in 3.69s
+
+ ERROR Line: 1, ..net.minecraft.world.ticks.package-info...: null in /net/minecraft/world/ticks/package-info.java
+
+Total runtime: 32.34s
+
+
+net.neoforged.neoform.runtime.graph.NodeExecutionException: Node action for recompile failed
+
+	at net.neoforged.neoform.runtime.engine.NeoFormEngine.runNode(NeoFormEngine.java:519)
+
+	at net.neoforged.neoform.runtime.engine.NeoFormEngine.lambda$getWaitCondition$5(NeoFormEngine.java:465)
+
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+
+	at java.base/java.util.concurrent.ThreadPerTaskExecutor$TaskRunner.run(ThreadPerTaskExecutor.java:314)
+
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:329)
+
+Caused by: java.io.IOException: Compilation failed
+
+	at net.neoforged.neoform.runtime.actions.RecompileSourcesActionWithJDK.run(RecompileSourcesActionWithJDK.java:77)
+
+	at net.neoforged.neoform.runtime.engine.NeoFormEngine.runNode(NeoFormEngine.java:508)
+
+	... 4 more
+
+
+
+> Task :createMinecraftArtifacts FAILED
+
+
+
+[Incubating] Problems report is available at: file:///D:/PCL%20%E6%AD%A3%E5%BC%8F%E7%89%88%202.10.6%20(1)/codex/modpack-project/modules/evolvingblade/build/reports/problems/problems-report.html
+
+
+
+FAILURE: Build failed with an exception.
+
+
+
+* What went wrong:
+
+Execution failed for task ':createMinecraftArtifacts'.
+
+> Process 'command 'C:\Users\俞皓天\AppData\Roaming\.minecraft\runtime\java-runtime-delta\bin\java.exe'' finished with non-zero exit value 1
+
+
+
+* Try:
+
+> Run with --stacktrace option to get the stack trace.
+
+> Run with --info or --debug option to get more log output.
+
+> Run with --scan to get full insights.
+
+> Get more help at https://help.gradle.org.
+
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.14.2/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+
+
+BUILD FAILED in 48s
+
+1 actionable task: 1 executed

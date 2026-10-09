@@ -1,0 +1,44 @@
+{
+  "base_commit": "5c547c2a265b569c3aa98f53f27b9a8ecd69e9dc",
+  "cache": "D:\\PCL 正式版 2.10.6 (1)\\codex\\modpack-project\\work\\build-baseline\\gradle-user-home",
+  "seeded_caches": [
+    {
+      "source": "C:\\Users\\俞皓天\\.gradle\\wrapper\\dists\\gradle-8.14.2-bin\\2pb3mgt1p815evrl3weanttgr",
+      "destination": "D:\\PCL 正式版 2.10.6 (1)\\codex\\modpack-project\\work\\build-baseline\\gradle-user-home\\wrapper\\dists\\gradle-8.14.2-bin\\2pb3mgt1p815evrl3weanttgr",
+      "files": 318,
+      "bytes": 152102628
+    },
+    {
+      "source": "C:\\Users\\俞皓天\\.gradle\\caches\\modules-2\\files-2.1",
+      "destination": "D:\\PCL 正式版 2.10.6 (1)\\codex\\modpack-project\\work\\build-baseline\\gradle-user-home\\caches\\modules-2\\files-2.1",
+      "files": 610,
+      "bytes": 262313014
+    },
+    {
+      "source": "C:\\Users\\俞皓天\\.gradle\\caches\\modules-2\\metadata-2.107",
+      "destination": "D:\\PCL 正式版 2.10.6 (1)\\codex\\modpack-project\\work\\build-baseline\\gradle-user-home\\caches\\modules-2\\metadata-2.107",
+      "files": 347,
+      "bytes": 858060
+    },
+    {
+      "source": "C:\\Users\\俞皓天\\.gradle\\caches\\modules-2\\metadata-2.106",
+      "destination": "D:\\PCL 正式版 2.10.6 (1)\\codex\\modpack-project\\work\\build-baseline\\gradle-user-home\\caches\\modules-2\\metadata-2.106",
+      "files": 347,
+      "bytes": 856995
+    },
+    {
+      "source": "C:\\Users\\俞皓天\\.gradle\\caches\\neoformruntime\\artifacts",
+      "destination": "D:\\PCL 正式版 2.10.6 (1)\\codex\\modpack-project\\work\\build-baseline\\gradle-user-home\\caches\\neoformruntime\\artifacts",
+      "files": 5,
+      "bytes": 88375326
+    },
+    {
+      "source": "C:\\Users\\俞皓天\\.gradle\\caches\\neoformruntime\\intermediate_results",
+      "destination": "D:\\PCL 正式版 2.10.6 (1)\\codex\\modpack-project\\work\\build-baseline\\gradle-user-home\\caches\\neoformruntime\\intermediate_results",
+      "files": 37,
+      "bytes": 222702288
+    }
+  ],
+  "source_projects_modified": false,
+  "user_gradle_home_modified_by_preparation": false
+}

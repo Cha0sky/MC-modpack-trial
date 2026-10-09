@@ -1,0 +1,203 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.2/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+
+Daemon will be stopped at the end of the build
+
+
+
+> Task :createMinecraftArtifacts
+
+Loaded 125 artifacts from D:\PCL ... 2.10.6 (1)\codex\modpack-project\modules\rpgleveling\build\tmp\createMinecraftArtifacts\nfrt_artifact_manifest.properties
+
+*** Started working on downloadJson
+
+ DONE  Completed downloadJson in 0.02s
+
+*** Started working on downloadClient
+
+*** Started working on downloadServer
+
+*** Started working on downloadClientMappings
+
+*** Started working on listLibraries
+
+ REUSE Used cache of listLibraries in 0.00s
+
+ DONE  Completed downloadClientMappings in 0.03s
+
+ DONE  Completed downloadServer in 0.03s
+
+ DONE  Completed downloadClient in 0.03s
+
+*** Started working on mergeMappings
+
+ REUSE Used cache of mergeMappings in 0.00s
+
+*** Started working on stripClient
+
+ REUSE Used cache of stripClient in 0.00s
+
+*** Started working on extractServer
+
+ REUSE Used cache of extractServer in 0.00s
+
+*** Started working on stripServer
+
+ REUSE Used cache of stripServer in 0.00s
+
+*** Started working on merge
+
+ REUSE Used cache of merge in 0.00s
+
+*** Started working on rename
+
+ REUSE Used cache of rename in 0.00s
+
+*** Started working on decompile
+
+ REUSE Used cache of decompile in 0.00s
+
+*** Started working on inject
+
+ REUSE Used cache of inject in 0.00s
+
+*** Started working on patch
+
+ REUSE Used cache of patch in 0.00s
+
+*** Started working on applyNeoforgePatches
+
+ REUSE Used cache of applyNeoforgePatches in 0.00s
+
+*** Started working on transformSources
+
+ REUSE Used cache of transformSources in 0.00s
+
+*** Started working on recompile
+
+ 123 items on the compile classpath
+
+ 0 items on the sourcepath
+
+*** Started working on sourcesWithNeoForge
+
+ REUSE Used cache of sourcesWithNeoForge in 0.00s
+
+Compiling 5364 source files...
+
+Wrote 8125 class files (46373481 bytes total)
+
+Copied 0 resource files
+
+ DONE  Completed recompile in 16.86s
+
+*** Started working on compiledWithNeoForge
+
+ DONE  Completed compiledWithNeoForge in 4.74s
+
+*** Started working on sourcesAndCompiledWithNeoForge
+
+ DONE  Completed sourcesAndCompiledWithNeoForge in 1.98s
+
+Total runtime: 24.42s
+
+
+
+
+> Task :compileJava
+
+D:\PCL 正式版 2.10.6 (1)\codex\modpack-project\modules\rpgleveling\src\main\java\com\rpgleveling\client\RpgLevelingClient.java:18: 警告: [removal] EventBusSubscriber 中的 bus() 已过时, 且标记为待删除
+@EventBusSubscriber(modid = "rpgleveling", bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+                                           ^
+
+D:\PCL 正式版 2.10.6 (1)\codex\modpack-project\modules\rpgleveling\src\main\java\com\rpgleveling\client\RpgLevelingClient.java:18: 警告: [removal] EventBusSubscriber 中的 Bus 已过时, 且标记为待删除
+@EventBusSubscriber(modid = "rpgleveling", bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+                                                                   ^
+
+注: D:\PCL 正式版 2.10.6 (1)\codex\modpack-project\modules\rpgleveling\src\main\java\com\rpgleveling\event\CombatEvents.java使用了未经检查或不安全的操作。
+
+注: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+
+2 个警告
+
+
+
+> Task :processResources
+
+> Task :classes
+
+> Task :jarJar NO-SOURCE
+
+> Task :jar
+
+> Task :assemble
+
+
+
+> Task :compileTestJava
+
+D:\PCL 正式版 2.10.6 (1)\codex\modpack-project\modules\rpgleveling\src\test\java\com\rpgleveling\gametest\GameTestSupport.java:37: 警告: [removal] GameTestHelper 中的 makeMockServerPlayerInLevel() 已过时, 且标记为待删除
+        ServerPlayer player = helper.makeMockServerPlayerInLevel();
+                                    ^
+
+D:\PCL 正式版 2.10.6 (1)\codex\modpack-project\modules\rpgleveling\src\test\java\com\rpgleveling\gametest\HarnessSmokeSuite.java:71: 警告: [removal] GameTestHelper 中的 makeMockServerPlayerInLevel() 已过时, 且标记为待删除
+        ServerPlayer player = helper.makeMockServerPlayerInLevel();
+                                    ^
+
+D:\PCL 正式版 2.10.6 (1)\codex\modpack-project\modules\rpgleveling\src\test\java\com\rpgleveling\gametest\PersistenceSuite.java:76: 警告: [removal] GameTestHelper 中的 makeMockServerPlayerInLevel() 已过时, 且标记为待删除
+        ServerPlayer reborn = helper.makeMockServerPlayerInLevel();
+                                    ^
+
+3 个警告
+
+
+
+> Task :processTestResources NO-SOURCE
+
+> Task :testClasses
+
+> Task :test
+
+> Task :check
+
+> Task :build
+
+
+
+> Task :verifyMath
+
+  [info] linear closed form: exact at every boundary, drift 0
+
+  [info] LINEAR slope rule verified for 18 converted lines
+
+  [info] safety proof: damage_reduction only - every other dimension is LINEAR by design
+
+  [info] cum(1e6) 0.0 ms | lvl(A) 0.1 ms | lvl(A-1) 0.1 ms
+
+  [info] deep-level probe (build + 2 lookups) took 0.2 ms
+
+  [info] levelForXp(Long.MAX_VALUE/4) = 2147483646 in 0.04 ms
+
+  [info] widest line name 126 px, name column 146 px
+
+  [info] layout self check: 178/178 passed
+
+
+
+RpgMath self check: 471/471 passed, 0 failed
+
+
+
+[Incubating] Problems report is available at: file:///D:/PCL%20%E6%AD%A3%E5%BC%8F%E7%89%88%202.10.6%20(1)/codex/modpack-project/modules/rpgleveling/build/reports/problems/problems-report.html
+
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.14.2/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+
+
+BUILD SUCCESSFUL in 44s
+
+7 actionable tasks: 7 executed
