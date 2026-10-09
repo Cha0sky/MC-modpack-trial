@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "TMT",
+    "FCF",
+    "TMT"
+  ],
+  "key": {
+    "T": {
+      "item": "infinitecore:template_gold"
+    },
+    "M": {
+      "item": "create:precision_mechanism"
+    },
+    "F": {
+      "item": "create:large_cogwheel"
+    },
+    "C": {
+      "item": "create:brass_casing"
+    }
+  },
+  "result": {
+    "id": "infinitecore:gold_generator",
+    "count": 1
+  }
+}

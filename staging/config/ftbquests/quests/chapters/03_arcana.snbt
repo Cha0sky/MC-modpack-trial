@@ -1,0 +1,414 @@
+{
+  "id": "5F8B6A6CF08EEBA1",
+  "filename": "03_arcana",
+  "order_index": 2,
+  "icon": {
+    "id": "irons_spellbooks:copper_spell_book"
+  },
+  "quests": [
+    {
+      "id": "002CA61C8686BEB8",
+      "x": 0.0,
+      "y": 0.0,
+      "icon": {
+        "id": "irons_spellbooks:copper_spell_book"
+      },
+      "tasks": [
+        {
+          "id": "562F4055318FEB8F",
+          "type": "item",
+          "item": {
+            "id": "irons_spellbooks:copper_spell_book",
+            "count": 1
+          },
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": "43C61744A1EB82D8",
+          "type": "item",
+          "item": {
+            "id": "minecraft:bread",
+            "count": 1
+          },
+          "count": 2
+        }
+      ],
+      "min_width": 300
+    },
+    {
+      "id": "627864CB136ECB90",
+      "x": 2.5,
+      "y": 0.0,
+      "icon": {
+        "id": "irons_spellbooks:arcane_essence"
+      },
+      "tasks": [
+        {
+          "id": "0D61375C6F1F1BDB",
+          "type": "item",
+          "item": {
+            "id": "irons_spellbooks:arcane_essence",
+            "count": 1
+          },
+          "count": 8
+        }
+      ],
+      "rewards": [
+        {
+          "id": "37FC141A22EA5C2C",
+          "type": "item",
+          "item": {
+            "id": "minecraft:bread",
+            "count": 1
+          },
+          "count": 2
+        }
+      ],
+      "min_width": 300
+    },
+    {
+      "id": "3EDB48778C9AF28E",
+      "x": 5.0,
+      "y": 0.0,
+      "icon": {
+        "id": "irons_spellbooks:common_ink"
+      },
+      "tasks": [
+        {
+          "id": "3B79A832C801BA6F",
+          "type": "item",
+          "item": {
+            "id": "irons_spellbooks:common_ink",
+            "count": 1
+          },
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": "3A5A648D17D83BD7",
+          "type": "item",
+          "item": {
+            "id": "minecraft:bread",
+            "count": 1
+          },
+          "count": 2
+        }
+      ],
+      "min_width": 300
+    },
+    {
+      "id": "4E160AF5A8ACEA84",
+      "x": 7.5,
+      "y": 0.0,
+      "icon": {
+        "id": "irons_spellbooks:inscription_table"
+      },
+      "tasks": [
+        {
+          "id": "3090418740FAD539",
+          "type": "item",
+          "item": {
+            "id": "irons_spellbooks:inscription_table",
+            "count": 1
+          },
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": "1796B97E656EDE7B",
+          "type": "item",
+          "item": {
+            "id": "minecraft:bread",
+            "count": 1
+          },
+          "count": 2
+        }
+      ],
+      "min_width": 300
+    },
+    {
+      "id": "68CA328F68C5C94E",
+      "x": 0.0,
+      "y": 2.0,
+      "icon": {
+        "id": "irons_spellbooks:copper_spell_book"
+      },
+      "tasks": [
+        {
+          "id": "4D989DDA9306225B",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "45ED73F29109A72E",
+          "type": "item",
+          "item": {
+            "id": "minecraft:bread",
+            "count": 1
+          },
+          "count": 2
+        }
+      ],
+      "min_width": 300
+    },
+    {
+      "id": "65FE2886F26F06F4",
+      "x": 2.5,
+      "y": 2.0,
+      "icon": {
+        "id": "irons_spellbooks:copper_spell_book"
+      },
+      "tasks": [
+        {
+          "id": "56D6A8708EE5256E",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "1E0810D012CF2229",
+          "type": "item",
+          "item": {
+            "id": "minecraft:bread",
+            "count": 1
+          },
+          "count": 2
+        }
+      ],
+      "min_width": 300
+    },
+    {
+      "id": "38CC46F292A4F403",
+      "x": 5.0,
+      "y": 2.0,
+      "icon": {
+        "id": "goety:black_book"
+      },
+      "tasks": [
+        {
+          "id": "416451F89DC3D74C",
+          "type": "item",
+          "item": {
+            "id": "goety:black_book",
+            "count": 1
+          },
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": "4E1BA5625C10F149",
+          "type": "item",
+          "item": {
+            "id": "minecraft:bread",
+            "count": 1
+          },
+          "count": 2
+        }
+      ],
+      "min_width": 300
+    },
+    {
+      "id": "14098669ABF49350",
+      "x": 7.5,
+      "y": 2.0,
+      "icon": {
+        "id": "goety:totem_of_souls"
+      },
+      "tasks": [
+        {
+          "id": "4918AC7843A1C645",
+          "type": "item",
+          "item": {
+            "id": "goety:totem_of_souls",
+            "count": 1
+          },
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": "338C4D3C16F0BC46",
+          "type": "item",
+          "item": {
+            "id": "minecraft:bread",
+            "count": 1
+          },
+          "count": 2
+        }
+      ],
+      "min_width": 300
+    },
+    {
+      "id": "5C2E0E480D48FC5A",
+      "x": 0.0,
+      "y": 4.0,
+      "icon": {
+        "id": "goety:dark_wand"
+      },
+      "tasks": [
+        {
+          "id": "55FC930DA1D5BF7C",
+          "type": "item",
+          "item": {
+            "id": "goety:dark_wand",
+            "count": 1
+          },
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": "12337CF62159CC9A",
+          "type": "item",
+          "item": {
+            "id": "minecraft:bread",
+            "count": 1
+          },
+          "count": 2
+        }
+      ],
+      "min_width": 300
+    },
+    {
+      "id": "4DB53126DC8BC315",
+      "x": 2.5,
+      "y": 4.0,
+      "icon": {
+        "id": "irons_spellbooks:copper_spell_book"
+      },
+      "tasks": [
+        {
+          "id": "2EA7C769957504B9",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "2F22CC60EE966A44",
+          "type": "item",
+          "item": {
+            "id": "minecraft:bread",
+            "count": 1
+          },
+          "count": 2
+        }
+      ],
+      "min_width": 300
+    },
+    {
+      "id": "71F3C61DE6FAB052",
+      "x": 5.0,
+      "y": 4.0,
+      "icon": {
+        "id": "irons_spellbooks:copper_spell_book"
+      },
+      "tasks": [
+        {
+          "id": "7B1FFD570C358569",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "489D5B7BEC7B7B36",
+          "type": "item",
+          "item": {
+            "id": "minecraft:bread",
+            "count": 1
+          },
+          "count": 2
+        }
+      ],
+      "min_width": 300
+    },
+    {
+      "id": "6ACF3211236B8975",
+      "x": 7.5,
+      "y": 4.0,
+      "icon": {
+        "id": "minecraft:brewing_stand"
+      },
+      "tasks": [
+        {
+          "id": "67F8C1E6BC2F01BB",
+          "type": "item",
+          "item": {
+            "id": "minecraft:brewing_stand",
+            "count": 1
+          },
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": "26DEA998C17E4975",
+          "type": "item",
+          "item": {
+            "id": "minecraft:bread",
+            "count": 1
+          },
+          "count": 2
+        }
+      ],
+      "min_width": 300
+    },
+    {
+      "id": "097C16EA8BF94AE0",
+      "x": 0.0,
+      "y": 6.0,
+      "icon": {
+        "id": "irons_spellbooks:copper_spell_book"
+      },
+      "tasks": [
+        {
+          "id": "58A8C8FD6A6534B4",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "289A5716FFA141ED",
+          "type": "item",
+          "item": {
+            "id": "minecraft:bread",
+            "count": 1
+          },
+          "count": 2
+        }
+      ],
+      "min_width": 300
+    },
+    {
+      "id": "07AA1521CD414709",
+      "x": 2.5,
+      "y": 6.0,
+      "icon": {
+        "id": "irons_spellbooks:copper_spell_book"
+      },
+      "tasks": [
+        {
+          "id": "67E3FF84067EFE0B",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "0C106AC2D3278940",
+          "type": "item",
+          "item": {
+            "id": "minecraft:bread",
+            "count": 1
+          },
+          "count": 2
+        }
+      ],
+      "min_width": 300
+    }
+  ]
+}

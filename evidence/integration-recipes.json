@@ -1,0 +1,95 @@
+{
+  "jar": "stargarden-integration-0.1.0.jar",
+  "sha256": "7c2406f366ac901f640a9d61cad1f1122ca8c6deb98a8ff756d6f090962c2372",
+  "recipes": [
+    {
+      "tier": "dirt",
+      "output": "infinitecore:dirt_generator",
+      "inputs": {
+        "infinitecore:template_dirt": 4,
+        "create:andesite_alloy": 2,
+        "create:cogwheel": 2,
+        "create:andesite_casing": 1
+      },
+      "original_recipe_preserved": true
+    },
+    {
+      "tier": "wood",
+      "output": "infinitecore:wood_generator",
+      "inputs": {
+        "infinitecore:template_wood": 4,
+        "create:andesite_alloy": 2,
+        "create:cogwheel": 2,
+        "create:andesite_casing": 1
+      },
+      "original_recipe_preserved": true
+    },
+    {
+      "tier": "stone",
+      "output": "infinitecore:stone_generator",
+      "inputs": {
+        "infinitecore:template_stone": 4,
+        "create:andesite_alloy": 2,
+        "create:cogwheel": 2,
+        "create:andesite_casing": 1
+      },
+      "original_recipe_preserved": true
+    },
+    {
+      "tier": "copper",
+      "output": "infinitecore:copper_generator",
+      "inputs": {
+        "infinitecore:template_copper": 4,
+        "create:precision_mechanism": 2,
+        "create:large_cogwheel": 2,
+        "create:brass_casing": 1
+      },
+      "original_recipe_preserved": true
+    },
+    {
+      "tier": "iron",
+      "output": "infinitecore:iron_generator",
+      "inputs": {
+        "infinitecore:template_iron": 4,
+        "create:precision_mechanism": 2,
+        "create:large_cogwheel": 2,
+        "create:brass_casing": 1
+      },
+      "original_recipe_preserved": true
+    },
+    {
+      "tier": "gold",
+      "output": "infinitecore:gold_generator",
+      "inputs": {
+        "infinitecore:template_gold": 4,
+        "create:precision_mechanism": 2,
+        "create:large_cogwheel": 2,
+        "create:brass_casing": 1
+      },
+      "original_recipe_preserved": true
+    },
+    {
+      "tier": "diamond",
+      "output": "infinitecore:diamond_generator",
+      "inputs": {
+        "infinitecore:template_diamond": 4,
+        "create:precision_mechanism": 2,
+        "create:sturdy_sheet": 2,
+        "create:brass_casing": 1
+      },
+      "original_recipe_preserved": true
+    },
+    {
+      "tier": "netherite",
+      "output": "infinitecore:netherite_generator",
+      "inputs": {
+        "infinitecore:template_netherite": 4,
+        "create:precision_mechanism": 2,
+        "create:sturdy_sheet": 2,
+        "create:brass_casing": 1
+      },
+      "original_recipe_preserved": true
+    }
+  ],
+  "purpose": "Alternative engineering recipes; preserve original routes and production rates"
+}

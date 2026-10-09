@@ -1,0 +1,11 @@
+{
+  "version": 13,
+  "progression_mode": "flexible",
+  "default_consume_items": false,
+  "default_reward_team": false,
+  "default_autoclaim_rewards": "disabled",
+  "detection_delay": 20,
+  "fallback_locale": "zh_cn",
+  "drop_book_on_death": false,
+  "pause_game": false
+}

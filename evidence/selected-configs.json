@@ -1,0 +1,202 @@
+{
+  "evolvingblade-server.toml": {
+    "sha256": "3c45176911669450f81b571e048cee87809c75a297257c58f3c43783bc85842b",
+    "selected_sections": {
+      "growth": {
+        "hostile_point_weight": 1,
+        "boss_point_weight": 100,
+        "quick_points": [
+          0,
+          10,
+          30,
+          70,
+          140,
+          240,
+          400,
+          600
+        ],
+        "quick_bosses": [
+          0,
+          0,
+          0,
+          1,
+          1,
+          2,
+          3,
+          5
+        ],
+        "standard_points": [
+          0,
+          50,
+          150,
+          350,
+          700,
+          1200,
+          2000,
+          3000
+        ],
+        "standard_bosses": [
+          0,
+          0,
+          0,
+          1,
+          3,
+          6,
+          12,
+          20
+        ],
+        "long_points": [
+          0,
+          300,
+          1000,
+          2400,
+          4800,
+          8000,
+          13000,
+          20000
+        ],
+        "long_bosses": [
+          0,
+          0,
+          0,
+          5,
+          15,
+          30,
+          60,
+          100
+        ]
+      },
+      "stages": {
+        "attack_damage": [
+          7.0,
+          12.0,
+          24.0,
+          48.0,
+          120.0,
+          300.0,
+          750.0,
+          1500.0
+        ],
+        "attack_speed": [
+          1.6,
+          1.7,
+          1.8,
+          1.9,
+          2.0,
+          2.1,
+          2.2,
+          2.4
+        ]
+      }
+    }
+  },
+  "rpgleveling-common.toml": {
+    "sha256": "a4cd1400d91a407bedf700117cbe94926a1a07781e5e11b790ef1fa2acbdc134",
+    "selected_sections": {
+      "general": {
+        "max_level": -1,
+        "strict_convergence": true,
+        "reapply_interval_ticks": 20,
+        "xp": {
+          "linear_until_level": 200,
+          "linear_base": 100.0,
+          "linear_step": 20.0,
+          "log_scale": 0.15
+        },
+        "points": {
+          "per_level": 1
+        },
+        "respec": {
+          "free": true,
+          "cooldown_ticks": 0
+        }
+      },
+      "xp": {
+        "count_spawner_mobs": false,
+        "minute_cap": 0,
+        "discovery": {
+          "enabled": true,
+          "sources": [
+            "mine",
+            "craft",
+            "smelt",
+            "fish",
+            "trade"
+          ],
+          "max_bits_per_source": 65536,
+          "storage": "BITSET",
+          "notify": true,
+          "creative": false,
+          "reward": {
+            "mine": 10,
+            "craft": 15,
+            "smelt": 8,
+            "fish": 20,
+            "trade": 10
+          }
+        },
+        "kill": {
+          "reward_mode": "HEALTH_AND_ATTACK",
+          "fixed_reward": 5,
+          "health_coefficient": 1.0,
+          "attack_coefficient": 9.0
+        },
+        "safety": {
+          "max_per_tick": {
+            "mine": 60,
+            "craft": 40,
+            "smelt": 20
+          }
+        },
+        "advancement": {
+          "enabled": false,
+          "reward": 0
+        }
+      }
+    }
+  },
+  "l2configs/l2hostility-server.toml": {
+    "sha256": "c507bca3f180bc0df62b8ebe994cf4d7be72ab79f7b4b9383d8878cfb91b89fd",
+    "selected_sections": {
+      "scaling": {
+        "healthFactor": 0.03,
+        "exponentialHealth": false,
+        "damageFactor": 0.02,
+        "exponentialDamage": false,
+        "expDropFactor": 0.05,
+        "drownedTridentChancePerLevel": 0.005,
+        "dimensionFactor": 10,
+        "distanceFactor": 0.003,
+        "globalApplyChance": 1.0,
+        "globalTraitChance": 1.0,
+        "globalTraitSuppression": 0.1,
+        "allowLegendary": true,
+        "allowSectionDifficulty": true,
+        "allowBypassMinimum": true,
+        "allowExtraEnchantments": true,
+        "defaultLevelBase": 20,
+        "defaultLevelVar": 16.0,
+        "defaultLevelScale": 1.5,
+        "initialTraitChanceSlope": 0.01,
+        "splitDropRateFactor": 0.25,
+        "allowNoAI": false,
+        "allowPlayerAllies": false,
+        "allowTraitOnOwnable": false,
+        "dropRateFromSpawner": 0.5,
+        "equipmentDropRate": 0.085,
+        "maxTraitCount": 9,
+        "enableAdaptiveLeveling": true
+      },
+      "difficulty": {
+        "maxPlayerLevel": 2000,
+        "maxMobLevel": 3000,
+        "killsPerLevel": 30,
+        "playerDeathDecay": 0.8,
+        "keepInventoryRuleKeepDifficulty": false,
+        "deathDecayDimension": true,
+        "deathDecayTraitCap": true,
+        "newPlayerProtectRange": 48
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "jar": "stargarden-sanctuary-0.1.0.jar",
+  "sha256": "f6c1178cac6f69d98e0c96140c0ced21fe21610689734338035bba09486ae090",
+  "java_sources": 3,
+  "compiled": true,
+  "tests_run": false,
+  "gameplay_verified": false
+}

@@ -1,0 +1,6 @@
+{
+  "block.stargarden_sanctuary.sanctuary_ward": "庇护石",
+  "tooltip.stargarden_sanctuary.ward_1": "放置启用 · 拆除解除 · 多块可扩建",
+  "tooltip.stargarden_sanctuary.ward_2": "默认水平半径48格，覆盖全部高度",
+  "tooltip.stargarden_sanctuary.ward_3": "不生成击杀收益；刷怪场请放在保护区外"
+}

@@ -1,0 +1,30 @@
+{
+  "completed_at": "2026-10-09T02:48:18.502861+08:00",
+  "target": "D:\\PCL 正式版 2.10.6 (1)\\.minecraft\\versions\\星庭远征-开发版",
+  "changes": [
+    {
+      "from": "mods\\星空之刃模组-starsword-1.0.0.jar",
+      "to": "mods\\星空之刃模组-starsword-1.0.0.jar.disabled",
+      "reason": "用户允许排除 starsword"
+    },
+    {
+      "from": "mods\\curios-neoforge-9.1.4+1.21.0.jar",
+      "to": "mods\\curios-neoforge-9.1.4+1.21.0.jar.disabled",
+      "reason": "保留最近运行使用的 9.5.1"
+    },
+    {
+      "from": "mods\\[钠 · 扩展] sodium-extra-neoforge-0.9.3+mc1.21.1.jar",
+      "to": "mods\\[钠 · 扩展] sodium-extra-neoforge-0.9.3+mc1.21.1.jar.disabled",
+      "reason": "保留最近运行使用的 0.9.4"
+    },
+    {
+      "from": "mods\\[钠] sodium-neoforge-0.8.13-beta.2+mc1.21.1.jar",
+      "to": "mods\\[钠] sodium-neoforge-0.8.13-beta.2+mc1.21.1.jar.disabled",
+      "reason": "保留最近运行使用的 0.8.13 正式版"
+    }
+  ],
+  "source_unchanged": true,
+  "only_expected_changes": true,
+  "gameplay_configs_changed": false,
+  "launch_tested": false
+}

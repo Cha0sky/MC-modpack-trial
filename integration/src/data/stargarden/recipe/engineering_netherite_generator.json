@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "TMT",
+    "FCF",
+    "TMT"
+  ],
+  "key": {
+    "T": {
+      "item": "infinitecore:template_netherite"
+    },
+    "M": {
+      "item": "create:precision_mechanism"
+    },
+    "F": {
+      "item": "create:sturdy_sheet"
+    },
+    "C": {
+      "item": "create:brass_casing"
+    }
+  },
+  "result": {
+    "id": "infinitecore:netherite_generator",
+    "count": 1
+  }
+}

@@ -1,0 +1,205 @@
+[
+  {
+    "source": "D:\\PCL 正式版 2.10.6 (1)\\.minecraft\\versions\\FTB OceanBlock 2\\mods\\ftb-quests-neoforge-2101.1.27.jar",
+    "filename": "ftb-quests-neoforge-2101.1.27.jar",
+    "sha256": "460b163ebefb4580e1ad32e1f94f1ea4bdc8f763692ee821628ace10bde49a03",
+    "mods": [
+      {
+        "modId": "ftbquests",
+        "version": "2101.1.27",
+        "displayName": "FTB Quests",
+        "authors": "FTB Team",
+        "description": "Lets you easily create and play with quests\n"
+      }
+    ],
+    "dependencies": {
+      "ftbquests": [
+        {
+          "modId": "neoforge",
+          "type": "required",
+          "versionRange": "[21.1.0,)",
+          "ordering": "NONE",
+          "side": "BOTH"
+        },
+        {
+          "modId": "minecraft",
+          "type": "required",
+          "versionRange": "[1.21.1,)",
+          "ordering": "NONE",
+          "side": "BOTH"
+        },
+        {
+          "modId": "architectury",
+          "type": "required",
+          "versionRange": "[13.0.8,)",
+          "ordering": "NONE",
+          "side": "BOTH"
+        },
+        {
+          "modId": "ftblibrary",
+          "type": "required",
+          "versionRange": "[2101.1.31,)",
+          "ordering": "AFTER",
+          "side": "BOTH"
+        },
+        {
+          "modId": "ftbteams",
+          "type": "required",
+          "versionRange": "[2101.1.9,)",
+          "ordering": "AFTER",
+          "side": "BOTH"
+        },
+        {
+          "modId": "ftbxmodcompat",
+          "type": "optional",
+          "versionRange": "[21.1.7,)",
+          "side": "BOTH"
+        }
+      ]
+    }
+  },
+  {
+    "source": "D:\\PCL 正式版 2.10.6 (1)\\.minecraft\\versions\\FTB OceanBlock 2\\mods\\ftb-teams-neoforge-2101.1.10.jar",
+    "filename": "ftb-teams-neoforge-2101.1.10.jar",
+    "sha256": "a656f2aa0e11a933aab3ba697690aa0eb2041f65e6c5daa448897ee0a6d37a6c",
+    "mods": [
+      {
+        "modId": "ftbteams",
+        "version": "2101.1.10",
+        "displayName": "FTB Teams",
+        "authors": "FTB Team",
+        "description": "FTB Teams adds ability to create your own teams that can be used for quests etc.\n"
+      }
+    ],
+    "dependencies": {
+      "ftbteams": [
+        {
+          "modId": "neoforge",
+          "type": "required",
+          "versionRange": "[21.1.0,)",
+          "ordering": "NONE",
+          "side": "BOTH"
+        },
+        {
+          "modId": "minecraft",
+          "type": "required",
+          "versionRange": "[1.21.1,)",
+          "ordering": "NONE",
+          "side": "BOTH"
+        },
+        {
+          "modId": "architectury",
+          "type": "required",
+          "versionRange": "[13.0.8,)",
+          "ordering": "AFTER",
+          "side": "BOTH"
+        },
+        {
+          "modId": "ftblibrary",
+          "type": "required",
+          "versionRange": "[2101.1.30,)",
+          "ordering": "AFTER",
+          "side": "BOTH"
+        }
+      ]
+    }
+  },
+  {
+    "source": "D:\\PCL 正式版 2.10.6 (1)\\.minecraft\\versions\\FTB OceanBlock 2\\mods\\ftb-xmod-compat-neoforge-21.1.8.jar",
+    "filename": "ftb-xmod-compat-neoforge-21.1.8.jar",
+    "sha256": "7e04b6d10e8eb6bac55f023d3d88ac3e8e146e57c3bb912462155ad1e49b3ca1",
+    "mods": [
+      {
+        "modId": "ftbxmodcompat",
+        "version": "21.1.8",
+        "displayName": "FTB XMod Compat",
+        "authors": "FTB Team",
+        "description": "Provides cross-mod compatibilty/integration for all main FTB mods\n"
+      }
+    ],
+    "dependencies": {
+      "ftbxmodcompat": [
+        {
+          "modId": "neoforge",
+          "type": "required",
+          "versionRange": "[21.1.0,)",
+          "ordering": "NONE",
+          "side": "BOTH"
+        },
+        {
+          "modId": "minecraft",
+          "type": "required",
+          "versionRange": "[1.21.1,)",
+          "ordering": "NONE",
+          "side": "BOTH"
+        },
+        {
+          "modId": "architectury",
+          "type": "required",
+          "versionRange": "[13.0.8,)",
+          "ordering": "AFTER",
+          "side": "BOTH"
+        },
+        {
+          "modId": "ftblibrary",
+          "type": "required",
+          "versionRange": "[2101.1.20,)",
+          "ordering": "AFTER",
+          "side": "BOTH"
+        },
+        {
+          "modId": "ftbquests",
+          "type": "optional",
+          "versionRange": "[2101.1.21,)",
+          "ordering": "AFTER",
+          "side": "BOTH"
+        },
+        {
+          "modId": "ftbchunks",
+          "type": "optional",
+          "versionRange": "[2101.1.13,)",
+          "ordering": "AFTER",
+          "side": "BOTH"
+        },
+        {
+          "modId": "ftbranks",
+          "type": "optional",
+          "versionRange": "[2101.1.2,)",
+          "ordering": "AFTER",
+          "side": "BOTH"
+        },
+        {
+          "modId": "jei",
+          "type": "optional",
+          "versionRange": "[19,)",
+          "ordering": "AFTER",
+          "side": "BOTH"
+        },
+        {
+          "modId": "kubejs",
+          "type": "optional",
+          "versionRange": "[2100.7.0,)",
+          "ordering": "AFTER",
+          "side": "BOTH"
+        },
+        {
+          "modId": "luckperms",
+          "type": "optional",
+          "versionRange": "[5.4.112,)",
+          "ordering": "AFTER",
+          "side": "SERVER"
+        },
+        {
+          "modId": "waystones",
+          "type": "optional",
+          "versionRange": "[21.1.5,)"
+        },
+        {
+          "modId": "sg_economy",
+          "type": "optional",
+          "versionRange": "[1.0.2,)"
+        }
+      ]
+    }
+  }
+]

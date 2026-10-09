@@ -1,0 +1,404 @@
+{
+  "id": "2D5FDDD6C5503CF0",
+  "filename": "05_homestead",
+  "order_index": 4,
+  "icon": {
+    "id": "touhou_little_maid:maid_bed"
+  },
+  "quests": [
+    {
+      "id": "5E8668CD602009E1",
+      "x": 0.0,
+      "y": 0.0,
+      "icon": {
+        "id": "touhou_little_maid:maid_bed"
+      },
+      "tasks": [
+        {
+          "id": "1990D914D9935ED2",
+          "type": "item",
+          "item": {
+            "id": "touhou_little_maid:maid_bed",
+            "count": 1
+          },
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": "0A26C5D91A8A9ADE",
+          "type": "item",
+          "item": {
+            "id": "minecraft:poppy",
+            "count": 1
+          },
+          "count": 2
+        }
+      ],
+      "min_width": 300
+    },
+    {
+      "id": "022B9F7384AF4B61",
+      "x": 2.5,
+      "y": 0.0,
+      "icon": {
+        "id": "touhou_little_maid:maid_backpack_small"
+      },
+      "tasks": [
+        {
+          "id": "6AC62034BCF5F1CA",
+          "type": "item",
+          "item": {
+            "id": "touhou_little_maid:maid_backpack_small",
+            "count": 1
+          },
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": "5923294D98FF780F",
+          "type": "item",
+          "item": {
+            "id": "minecraft:poppy",
+            "count": 1
+          },
+          "count": 2
+        }
+      ],
+      "min_width": 300
+    },
+    {
+      "id": "00E7C5C0FAED12FC",
+      "x": 5.0,
+      "y": 0.0,
+      "icon": {
+        "id": "touhou_little_maid:maid_backpack_middle"
+      },
+      "tasks": [
+        {
+          "id": "5CA099E6D4529FC5",
+          "type": "item",
+          "item": {
+            "id": "touhou_little_maid:maid_backpack_middle",
+            "count": 1
+          },
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": "6E20AE8F8B08144E",
+          "type": "item",
+          "item": {
+            "id": "minecraft:poppy",
+            "count": 1
+          },
+          "count": 2
+        }
+      ],
+      "min_width": 300
+    },
+    {
+      "id": "6F95EBCAEC9032A5",
+      "x": 7.5,
+      "y": 0.0,
+      "icon": {
+        "id": "touhou_little_maid:maid_bed"
+      },
+      "tasks": [
+        {
+          "id": "4C426DA0BF30365E",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "1212657EC96693E0",
+          "type": "item",
+          "item": {
+            "id": "minecraft:poppy",
+            "count": 1
+          },
+          "count": 2
+        }
+      ],
+      "min_width": 300
+    },
+    {
+      "id": "5BB56B6E3E536129",
+      "x": 0.0,
+      "y": 2.0,
+      "icon": {
+        "id": "touhou_little_maid:maid_bed"
+      },
+      "tasks": [
+        {
+          "id": "6BDE3F3C6BEC4E3A",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "1C5D7AFFEFD634E9",
+          "type": "item",
+          "item": {
+            "id": "minecraft:poppy",
+            "count": 1
+          },
+          "count": 2
+        }
+      ],
+      "min_width": 300
+    },
+    {
+      "id": "0B175B1A183ED159",
+      "x": 2.5,
+      "y": 2.0,
+      "icon": {
+        "id": "maid_restaurant:order_menu"
+      },
+      "tasks": [
+        {
+          "id": "026CE6AF5CD0369D",
+          "type": "item",
+          "item": {
+            "id": "maid_restaurant:order_menu",
+            "count": 1
+          },
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": "54D6FEF18EC69593",
+          "type": "item",
+          "item": {
+            "id": "minecraft:poppy",
+            "count": 1
+          },
+          "count": 2
+        }
+      ],
+      "min_width": 300
+    },
+    {
+      "id": "4344140618BC2E0E",
+      "x": 5.0,
+      "y": 2.0,
+      "icon": {
+        "id": "farmersdelight:oak_cabinet"
+      },
+      "tasks": [
+        {
+          "id": "39DDA22720AB1987",
+          "type": "item",
+          "item": {
+            "id": "farmersdelight:oak_cabinet",
+            "count": 1
+          },
+          "count": 2
+        }
+      ],
+      "rewards": [
+        {
+          "id": "18391C81394B0749",
+          "type": "item",
+          "item": {
+            "id": "minecraft:poppy",
+            "count": 1
+          },
+          "count": 2
+        }
+      ],
+      "min_width": 300
+    },
+    {
+      "id": "1EA842CC7BFCCB89",
+      "x": 7.5,
+      "y": 2.0,
+      "icon": {
+        "id": "touhou_little_maid:maid_bed"
+      },
+      "tasks": [
+        {
+          "id": "0E846479BC0D43BB",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "16E9110F01EB0BEA",
+          "type": "item",
+          "item": {
+            "id": "minecraft:poppy",
+            "count": 1
+          },
+          "count": 2
+        }
+      ],
+      "min_width": 300
+    },
+    {
+      "id": "79C6B184C0DE7B10",
+      "x": 0.0,
+      "y": 4.0,
+      "icon": {
+        "id": "touhou_little_maid:camera"
+      },
+      "tasks": [
+        {
+          "id": "38620CC3558349E5",
+          "type": "item",
+          "item": {
+            "id": "touhou_little_maid:camera",
+            "count": 1
+          },
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": "63210E731A89B38C",
+          "type": "item",
+          "item": {
+            "id": "minecraft:poppy",
+            "count": 1
+          },
+          "count": 2
+        }
+      ],
+      "min_width": 300
+    },
+    {
+      "id": "78FB12DB1A49C0FB",
+      "x": 2.5,
+      "y": 4.0,
+      "icon": {
+        "id": "touhou_little_maid:maid_bed"
+      },
+      "tasks": [
+        {
+          "id": "0A66E98FC7F031A7",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "2CE0597B2EAADE6B",
+          "type": "item",
+          "item": {
+            "id": "minecraft:poppy",
+            "count": 1
+          },
+          "count": 2
+        }
+      ],
+      "min_width": 300
+    },
+    {
+      "id": "0A5D70F8725E5B7D",
+      "x": 5.0,
+      "y": 4.0,
+      "icon": {
+        "id": "touhou_little_maid:maid_bed"
+      },
+      "tasks": [
+        {
+          "id": "7B01B412BFBA59AE",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "404291A45064487E",
+          "type": "item",
+          "item": {
+            "id": "minecraft:poppy",
+            "count": 1
+          },
+          "count": 2
+        }
+      ],
+      "min_width": 300
+    },
+    {
+      "id": "4F7DA81AE9C30258",
+      "x": 7.5,
+      "y": 4.0,
+      "icon": {
+        "id": "touhou_little_maid:maid_bed"
+      },
+      "tasks": [
+        {
+          "id": "06F51F59704C4543",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "133085AE4E16EE45",
+          "type": "item",
+          "item": {
+            "id": "minecraft:poppy",
+            "count": 1
+          },
+          "count": 2
+        }
+      ],
+      "min_width": 300
+    },
+    {
+      "id": "6BC606D5A5219EF2",
+      "x": 0.0,
+      "y": 6.0,
+      "icon": {
+        "id": "touhou_little_maid:maid_bed"
+      },
+      "tasks": [
+        {
+          "id": "27A3DB425AA1D244",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "43CA4032D09FB197",
+          "type": "item",
+          "item": {
+            "id": "minecraft:poppy",
+            "count": 1
+          },
+          "count": 2
+        }
+      ],
+      "min_width": 300
+    },
+    {
+      "id": "12168CA123939797",
+      "x": 2.5,
+      "y": 6.0,
+      "icon": {
+        "id": "touhou_little_maid:maid_bed"
+      },
+      "tasks": [
+        {
+          "id": "5CB9C60C7E0D81EF",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "2A622D1111AA29B8",
+          "type": "item",
+          "item": {
+            "id": "minecraft:poppy",
+            "count": 1
+          },
+          "count": 2
+        }
+      ],
+      "min_width": 300
+    }
+  ]
+}

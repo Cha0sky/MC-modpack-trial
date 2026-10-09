@@ -1,0 +1,52 @@
+{
+  "completed_at": "2026-10-09T02:55:49.884633+08:00",
+  "target": "D:\\PCL 正式版 2.10.6 (1)\\.minecraft\\versions\\星庭远征-开发版",
+  "files": [
+    {
+      "path": "mods\\ftb-quests-neoforge-2101.1.27.jar",
+      "sha256": "460b163ebefb4580e1ad32e1f94f1ea4bdc8f763692ee821628ace10bde49a03",
+      "already_present": false
+    },
+    {
+      "path": "mods\\ftb-teams-neoforge-2101.1.10.jar",
+      "sha256": "a656f2aa0e11a933aab3ba697690aa0eb2041f65e6c5daa448897ee0a6d37a6c",
+      "already_present": false
+    },
+    {
+      "path": "mods\\ftb-xmod-compat-neoforge-21.1.8.jar",
+      "sha256": "7e04b6d10e8eb6bac55f023d3d88ac3e8e146e57c3bb912462155ad1e49b3ca1",
+      "already_present": false
+    },
+    {
+      "path": "config\\ftbquests\\quests\\chapter_groups.snbt",
+      "sha256": "dcefa23f7441409db799365bac250dc2418800a7b7468b15984c2c866f0cb4cd",
+      "already_present": false
+    },
+    {
+      "path": "config\\ftbquests\\quests\\data.snbt",
+      "sha256": "1a166e20ebea9c805176f14fd35afce1a204faf32064266ae069622ebe787ec3",
+      "already_present": false
+    },
+    {
+      "path": "config\\ftbquests\\quests\\chapters\\01_home.snbt",
+      "sha256": "de73c0ccf5c8881ef3c528b171d178029790bf2d4e3419357dfb00262c3d69b8",
+      "already_present": false
+    },
+    {
+      "path": "config\\ftbquests\\quests\\chapters\\02_workshop.snbt",
+      "sha256": "87595f2a79b7fa0c1728ecbf6b096407162fb45a99cd301daeed1d2b96694eb7",
+      "already_present": false
+    },
+    {
+      "path": "config\\ftbquests\\quests\\lang\\en_us.snbt",
+      "sha256": "976946da54f8518888cade77756ce8ce6d0a856b3f7948a6aada81d8ff91d829",
+      "already_present": false
+    },
+    {
+      "path": "config\\ftbquests\\quests\\lang\\zh_cn.snbt",
+      "sha256": "976946da54f8518888cade77756ce8ce6d0a856b3f7948a6aada81d8ff91d829",
+      "already_present": false
+    }
+  ],
+  "launch_tested": false
+}

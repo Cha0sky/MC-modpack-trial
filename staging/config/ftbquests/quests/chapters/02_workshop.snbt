@@ -1,0 +1,429 @@
+{
+  "id": "1A79192E96D02164",
+  "filename": "02_workshop",
+  "order_index": 1,
+  "icon": {
+    "id": "create:water_wheel"
+  },
+  "quests": [
+    {
+      "id": "49357C37B476AD91",
+      "x": 0.0,
+      "y": 0.0,
+      "icon": {
+        "id": "create:andesite_alloy"
+      },
+      "tasks": [
+        {
+          "id": "4C5A387AEF51BD0B",
+          "type": "item",
+          "item": {
+            "id": "create:andesite_alloy",
+            "count": 1
+          },
+          "count": 8
+        }
+      ],
+      "rewards": [
+        {
+          "id": "69FB840BED67E425",
+          "type": "item",
+          "item": {
+            "id": "minecraft:bread",
+            "count": 1
+          },
+          "count": 2
+        }
+      ],
+      "min_width": 300
+    },
+    {
+      "id": "252C541353825117",
+      "x": 2.5,
+      "y": 0.0,
+      "icon": {
+        "id": "create:water_wheel"
+      },
+      "tasks": [
+        {
+          "id": "70D1514847074EE6",
+          "type": "item",
+          "item": {
+            "id": "create:water_wheel",
+            "count": 1
+          },
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": "0641E8F23CA1E323",
+          "type": "item",
+          "item": {
+            "id": "minecraft:bread",
+            "count": 1
+          },
+          "count": 2
+        }
+      ],
+      "min_width": 300
+    },
+    {
+      "id": "05D0B2F88EFB14B9",
+      "x": 5.0,
+      "y": 0.0,
+      "icon": {
+        "id": "create:shaft"
+      },
+      "tasks": [
+        {
+          "id": "6B9027F3BE46B2A5",
+          "type": "item",
+          "item": {
+            "id": "create:shaft",
+            "count": 1
+          },
+          "count": 8
+        }
+      ],
+      "rewards": [
+        {
+          "id": "4DCAD92C44E7CA5C",
+          "type": "item",
+          "item": {
+            "id": "minecraft:bread",
+            "count": 1
+          },
+          "count": 2
+        }
+      ],
+      "min_width": 300
+    },
+    {
+      "id": "7CE162BDD28821F7",
+      "x": 7.5,
+      "y": 0.0,
+      "icon": {
+        "id": "create:cogwheel"
+      },
+      "tasks": [
+        {
+          "id": "10109F07A47CB6CE",
+          "type": "item",
+          "item": {
+            "id": "create:cogwheel",
+            "count": 1
+          },
+          "count": 8
+        }
+      ],
+      "rewards": [
+        {
+          "id": "20FC853A4D936B1F",
+          "type": "item",
+          "item": {
+            "id": "minecraft:bread",
+            "count": 1
+          },
+          "count": 2
+        }
+      ],
+      "min_width": 300
+    },
+    {
+      "id": "3D8944EECD92CBA5",
+      "x": 0.0,
+      "y": 2.0,
+      "icon": {
+        "id": "create:mechanical_press"
+      },
+      "tasks": [
+        {
+          "id": "4668795AB59AB495",
+          "type": "item",
+          "item": {
+            "id": "create:mechanical_press",
+            "count": 1
+          },
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": "792D9AC41B0E8CA4",
+          "type": "item",
+          "item": {
+            "id": "minecraft:bread",
+            "count": 1
+          },
+          "count": 2
+        }
+      ],
+      "min_width": 300
+    },
+    {
+      "id": "7521B436FA5DF77E",
+      "x": 2.5,
+      "y": 2.0,
+      "icon": {
+        "id": "create:depot"
+      },
+      "tasks": [
+        {
+          "id": "4BBCF175830F7FD0",
+          "type": "item",
+          "item": {
+            "id": "create:depot",
+            "count": 1
+          },
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": "1F2BBC511C6FE18B",
+          "type": "item",
+          "item": {
+            "id": "minecraft:bread",
+            "count": 1
+          },
+          "count": 2
+        }
+      ],
+      "min_width": 300
+    },
+    {
+      "id": "339FED95428ECFD9",
+      "x": 5.0,
+      "y": 2.0,
+      "icon": {
+        "id": "create:iron_sheet"
+      },
+      "tasks": [
+        {
+          "id": "546E29ED4E7EF2D6",
+          "type": "item",
+          "item": {
+            "id": "create:iron_sheet",
+            "count": 1
+          },
+          "count": 4
+        }
+      ],
+      "rewards": [
+        {
+          "id": "6CF4EDC340B89492",
+          "type": "item",
+          "item": {
+            "id": "minecraft:bread",
+            "count": 1
+          },
+          "count": 2
+        }
+      ],
+      "min_width": 300
+    },
+    {
+      "id": "582A53F81B3A210C",
+      "x": 7.5,
+      "y": 2.0,
+      "icon": {
+        "id": "create:engineers_goggles"
+      },
+      "tasks": [
+        {
+          "id": "0E5AE7DC8639845B",
+          "type": "item",
+          "item": {
+            "id": "create:engineers_goggles",
+            "count": 1
+          },
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": "5CBAFBFBC1485543",
+          "type": "item",
+          "item": {
+            "id": "minecraft:bread",
+            "count": 1
+          },
+          "count": 2
+        }
+      ],
+      "min_width": 300
+    },
+    {
+      "id": "75D2738E4A7487B4",
+      "x": 0.0,
+      "y": 4.0,
+      "icon": {
+        "id": "infinitecore:stone_generator"
+      },
+      "tasks": [
+        {
+          "id": "6FEE42C384F60A8B",
+          "type": "item",
+          "item": {
+            "id": "infinitecore:stone_generator",
+            "count": 1
+          },
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": "00F4414F3744E087",
+          "type": "item",
+          "item": {
+            "id": "minecraft:bread",
+            "count": 1
+          },
+          "count": 2
+        }
+      ],
+      "min_width": 300
+    },
+    {
+      "id": "6AB80ED74AF21F6A",
+      "x": 2.5,
+      "y": 4.0,
+      "icon": {
+        "id": "infinitecore:template_stone"
+      },
+      "tasks": [
+        {
+          "id": "4C4E4EEC23BB53F4",
+          "type": "item",
+          "item": {
+            "id": "infinitecore:template_stone",
+            "count": 1
+          },
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": "2256B5881AEC9474",
+          "type": "item",
+          "item": {
+            "id": "minecraft:bread",
+            "count": 1
+          },
+          "count": 2
+        }
+      ],
+      "min_width": 300
+    },
+    {
+      "id": "68A39D988F774347",
+      "x": 5.0,
+      "y": 4.0,
+      "icon": {
+        "id": "minecraft:hopper"
+      },
+      "tasks": [
+        {
+          "id": "45A7BE04CBAEAD3C",
+          "type": "item",
+          "item": {
+            "id": "minecraft:hopper",
+            "count": 1
+          },
+          "count": 1
+        }
+      ],
+      "rewards": [
+        {
+          "id": "710D2F8286B7A590",
+          "type": "item",
+          "item": {
+            "id": "minecraft:bread",
+            "count": 1
+          },
+          "count": 2
+        }
+      ],
+      "min_width": 300
+    },
+    {
+      "id": "4A3AF0C6CE2DECFE",
+      "x": 7.5,
+      "y": 4.0,
+      "icon": {
+        "id": "create:water_wheel"
+      },
+      "tasks": [
+        {
+          "id": "4B17341D12A5013E",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "64CFBA546E46B035",
+          "type": "item",
+          "item": {
+            "id": "minecraft:bread",
+            "count": 1
+          },
+          "count": 2
+        }
+      ],
+      "min_width": 300
+    },
+    {
+      "id": "042E5FEA3C341FFC",
+      "x": 0.0,
+      "y": 6.0,
+      "icon": {
+        "id": "create:water_wheel"
+      },
+      "tasks": [
+        {
+          "id": "3DA248459F4C490B",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "4D8F36A7B34F9187",
+          "type": "item",
+          "item": {
+            "id": "minecraft:bread",
+            "count": 1
+          },
+          "count": 2
+        }
+      ],
+      "min_width": 300
+    },
+    {
+      "id": "1A4809762024D8FB",
+      "x": 2.5,
+      "y": 6.0,
+      "icon": {
+        "id": "create:water_wheel"
+      },
+      "tasks": [
+        {
+          "id": "67ED79EEAD4A34ED",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "3FEA5036B2D69B37",
+          "type": "item",
+          "item": {
+            "id": "minecraft:bread",
+            "count": 1
+          },
+          "count": 2
+        }
+      ],
+      "min_width": 300
+    }
+  ]
+}

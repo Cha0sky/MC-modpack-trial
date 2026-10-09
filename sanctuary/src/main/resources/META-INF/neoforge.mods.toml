@@ -1,0 +1,16 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="MIT"
+[[mods]]
+modId="stargarden_sanctuary"
+version="0.1.0"
+displayName="星庭远征 · 庇护石"
+description="可摆放、可扩建的基地庇护机制。服务器保存保护区域，防止敌对进入、敌方伤害和标准爆炸破坏。"
+[[dependencies.stargarden_sanctuary]]
+modId="neoforge"
+type="required"
+versionRange="[21.1.248,21.2)"
+[[dependencies.stargarden_sanctuary]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.1]"

@@ -1,0 +1,5701 @@
+{
+  "scanned_at": "2026-10-09T02:49:14.540088+08:00",
+  "instance": "D:\\PCL 正式版 2.10.6 (1)\\.minecraft\\versions\\星庭远征-开发版",
+  "minecraft": "1.21.1",
+  "neoforge": "21.1.248",
+  "java": {
+    "component": "java-runtime-delta",
+    "majorVersion": 21
+  },
+  "loader_libraries": [
+    "net.neoforged.fancymodloader:earlydisplay:4.0.43",
+    "net.neoforged.fancymodloader:loader:4.0.43",
+    "net.neoforged.accesstransformers:at-modlauncher:10.0.1",
+    "net.neoforged:accesstransformers:10.0.1",
+    "net.neoforged:bus:8.0.5",
+    "net.neoforged:coremods:7.0.3",
+    "net.neoforged:mergetool:2.0.0:api",
+    "net.neoforged:JarJarSelector:0.4.1",
+    "net.neoforged:JarJarMetadata:0.4.1",
+    "net.neoforged:JarJarFileSystems:0.4.1"
+  ],
+  "files": [
+    {
+      "file": "[Iron的法术与魔法书] irons_spellbooks-1.21.1-3.16.3.jar",
+      "size": 13890046,
+      "enabled_extension": true,
+      "sha256": "13d644474ddba4f8478b4ce68294687fd509c994b3f344a224142b102dbe6f73",
+      "jar": {
+        "origin": "[Iron的法术与魔法书] irons_spellbooks-1.21.1-3.16.3.jar",
+        "mods": [
+          {
+            "modId": "irons_spellbooks",
+            "displayName": "Iron's Spells 'n Spellbooks",
+            "version": "1.21.1-3.16.3",
+            "authors": "Iron431, Lab3",
+            "description": "A magic mod for Minecraft returning to the classic RPG spellcasting fantasy."
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "irons_spellbooks": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.0.0-beta,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21.1,1.21.2)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "geckolib",
+              "type": "required",
+              "versionRange": "[4.7.5.1,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "playeranimator",
+              "type": "required",
+              "versionRange": "[2.0.1+1.21.1,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "curios",
+              "type": "required",
+              "versionRange": "[9.0.5+1.21.0,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "irons_lib",
+              "type": "required",
+              "versionRange": "[1.21.1-2,1.21.1-3)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[JEI物品管理器] jei-1.21.1-neoforge-19.43.0.393.jar",
+      "size": 1685121,
+      "enabled_extension": true,
+      "sha256": "088c583065db05abeedca7868b619d22e204bcd73aafe7736b9eb79bcbb67c8a",
+      "jar": {
+        "origin": "[JEI物品管理器] jei-1.21.1-neoforge-19.43.0.393.jar",
+        "mods": [
+          {
+            "modId": "jei",
+            "displayName": "Just Enough Items",
+            "version": "19.43.0.393",
+            "authors": "mezz",
+            "description": "JEI is an item and recipe viewing mod for Minecraft, built from the ground up for stability and performance.\n"
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "jei": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.1.238,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21, 1.21.1)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[Reese的钠视频界面] reeses-sodium-options-neoforge-2.2.3+mc1.21.1.jar",
+      "size": 260876,
+      "enabled_extension": true,
+      "sha256": "25812f308a87c04686de6ac9f24a8073101f81864f0eb9abf348f95d73a6629e",
+      "jar": {
+        "origin": "[Reese的钠视频界面] reeses-sodium-options-neoforge-2.2.3+mc1.21.1.jar",
+        "mods": [
+          {
+            "modId": "reeses_sodium_options",
+            "displayName": "Reese's Sodium Options",
+            "version": "2.2.3+mc1.21.1",
+            "authors": "FlashyReese",
+            "description": "Replaces Sodium's Options Screen\n"
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "reeses_sodium_options": [
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "1.21.1",
+              "ordering": "NONE",
+              "side": "CLIENT"
+            },
+            {
+              "modId": "sodium",
+              "type": "required",
+              "versionRange": "[0.8.12,)",
+              "ordering": "NONE",
+              "side": "CLIENT"
+            },
+            {
+              "modId": "controlify",
+              "type": "optional",
+              "versionRange": "[3.0.0,)",
+              "ordering": "AFTER",
+              "side": "CLIENT"
+            },
+            {
+              "modId": "sodiumoptionsapi",
+              "type": "incompatible",
+              "versionRange": "[0,)",
+              "ordering": "NONE",
+              "side": "CLIENT"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[Xaero的世界地图] xaeroworldmap-neoforge-1.21.1-1.44.2.jar",
+      "size": 1418918,
+      "enabled_extension": true,
+      "sha256": "2c4089c2f9132b85749a18920d6e2098744f61fe98854fcff2e3768f2d7269fa",
+      "jar": {
+        "origin": "[Xaero的世界地图] xaeroworldmap-neoforge-1.21.1-1.44.2.jar",
+        "mods": [
+          {
+            "modId": "xaeroworldmap",
+            "displayName": "Xaero's World Map",
+            "version": "1.44.2",
+            "authors": "xaero96",
+            "description": "A self-writing fullscreen map which also works as an add-on to Xaero's Minimap."
+          }
+        ],
+        "nested": [
+          {
+            "origin": "[Xaero的世界地图] xaeroworldmap-neoforge-1.21.1-1.44.2.jar!META-INF/jarjar/xaerolib-neoforge-1.21.1-1.7.1.jar",
+            "mods": [
+              {
+                "modId": "xaerolib",
+                "displayName": "XaeroLib",
+                "version": "1.7.1",
+                "authors": "xaero96",
+                "description": "A library containing shared code for Xaero's Minimap and World Map."
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "xaerolib": [
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21.0.110-beta,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "[1.21, 1.21.1]",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                }
+              ]
+            }
+          }
+        ],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "xaeroworldmap": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.0.110-beta, 21.2.0)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21, 1.21.2)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "openpartiesandclaims",
+              "type": "optional",
+              "versionRange": "[0.27.0,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "xaerominimap",
+              "type": "optional",
+              "versionRange": "[26.4.0,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "xaerobetterpvp",
+              "type": "optional",
+              "versionRange": "[26.4.0,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "xaerolib",
+              "type": "required",
+              "versionRange": "[1.0,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[Xaero的小地图] xaerominimap-neoforge-1.21.1-26.4.2.jar",
+      "size": 2185409,
+      "enabled_extension": true,
+      "sha256": "b722bcf794288f0ed51165cd1f057fc4505e20abbc723b2e17e900426e443603",
+      "jar": {
+        "origin": "[Xaero的小地图] xaerominimap-neoforge-1.21.1-26.4.2.jar",
+        "mods": [
+          {
+            "modId": "xaerominimap",
+            "displayName": "Xaero's Minimap",
+            "version": "26.4.2",
+            "authors": "xaero96",
+            "description": "The most vanilla-looking minimap for Minecraft."
+          }
+        ],
+        "nested": [
+          {
+            "origin": "[Xaero的小地图] xaerominimap-neoforge-1.21.1-26.4.2.jar!META-INF/jarjar/xaerolib-neoforge-1.21.1-1.7.1.jar",
+            "mods": [
+              {
+                "modId": "xaerolib",
+                "displayName": "XaeroLib",
+                "version": "1.7.1",
+                "authors": "xaero96",
+                "description": "A library containing shared code for Xaero's Minimap and World Map."
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "xaerolib": [
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21.0.110-beta,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "[1.21, 1.21.1]",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                }
+              ]
+            }
+          }
+        ],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "xaerominimap": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.0.110-beta,21.2.0)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "1.21.1",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "openpartiesandclaims",
+              "type": "optional",
+              "versionRange": "[0.27.0,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "xaeroworldmap",
+              "type": "optional",
+              "versionRange": "[1.44.0,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            }
+          ],
+          "xaerobetterpvp": [
+            {
+              "modId": "xaerolib",
+              "type": "required",
+              "versionRange": "[1.0,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[一键背包整理Next] InventoryProfilesNext-neoforge-1.21.1-2.2.5.jar",
+      "size": 1295466,
+      "enabled_extension": true,
+      "sha256": "05f1b8660f74f543fba61d4ce7cf8632d4c69a95b7c15b1a6fd442be2e397ca6",
+      "jar": {
+        "origin": "[一键背包整理Next] InventoryProfilesNext-neoforge-1.21.1-2.2.5.jar",
+        "mods": [
+          {
+            "modId": "inventoryprofilesnext",
+            "displayName": "Inventory Profiles Next",
+            "version": "2.2.5",
+            "authors": "Mirinimi\n",
+            "description": "\"Inventory Profiles Next\"\n"
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "inventoryprofilesnext": [
+            {
+              "modId": "neoforge",
+              "mandatory": true,
+              "versionRange": "[21, 22.2)"
+            },
+            {
+              "modId": "minecraft",
+              "mandatory": true,
+              "versionRange": "[1.21.1, 1.21.2)"
+            },
+            {
+              "modId": "libipn",
+              "mandatory": true,
+              "versionRange": "[6.6.3, 6.7)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[农夫乐事] FarmersDelight-1.21.1-1.3.4.jar",
+      "size": 3160490,
+      "enabled_extension": true,
+      "sha256": "139ad7696462c89c03eea463f805abffa552526c5dadaadae221dd9624cb197c",
+      "jar": {
+        "origin": "[农夫乐事] FarmersDelight-1.21.1-1.3.4.jar",
+        "mods": [
+          {
+            "modId": "farmersdelight",
+            "displayName": "Farmer's Delight",
+            "version": "1.3.4",
+            "authors": "vectorwing",
+            "description": "A cozy farming and cooking expansion for Minecraft!"
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "farmersdelight": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.1.219,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21.1]",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "crafttweaker",
+              "type": "optional",
+              "versionRange": "[14.0.6,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[动态 FPS] dynamic-fps-3.11.4+minecraft-1.21.0-neoforge.jar",
+      "size": 220193,
+      "enabled_extension": true,
+      "sha256": "78cb67c9faeff5d1cb4da48d41e48ecc47baddaaec0f792e6edc8207aee0ab8e",
+      "jar": {
+        "origin": "[动态 FPS] dynamic-fps-3.11.4+minecraft-1.21.0-neoforge.jar",
+        "mods": [
+          {
+            "modId": "dynamic_fps",
+            "displayName": "Dynamic FPS",
+            "version": "3.11.4",
+            "authors": "juliand665 & LostLuma",
+            "description": "Reduce resource usage while Minecraft is in the background or idle."
+          }
+        ],
+        "nested": [
+          {
+            "origin": "[动态 FPS] dynamic-fps-3.11.4+minecraft-1.21.0-neoforge.jar!META-INF/jars/battery-2.0.0.jar",
+            "mods": [],
+            "nested": []
+          }
+        ],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "dynamic_fps": [
+            {
+              "modId": "minecraft",
+              "mandatory": true,
+              "versionRange": "[1.21.0,1.21.1]",
+              "ordering": "NONE",
+              "side": "CLIENT"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[塔罗牌：重制] tarotcards-2.3.5-neoforge-1.21.1.jar",
+      "size": 166150,
+      "enabled_extension": true,
+      "sha256": "1f2b9cb2d1c390f44824be470656a75d3e8c5048f00990271dc0a4f99b69933a",
+      "jar": {
+        "origin": "[塔罗牌：重制] tarotcards-2.3.5-neoforge-1.21.1.jar",
+        "mods": [
+          {
+            "modId": "tarotcards",
+            "displayName": "TarotCards",
+            "version": "2.3.5",
+            "authors": "Suel_ki, shiroroku",
+            "description": "Adds the 22 Major Arcana Tarot Cards with unique passive bonuses.\n"
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "tarotcards": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.1,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21.1]",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "fzzy_config",
+              "type": "required",
+              "versionRange": "*",
+              "ordering": "NONE",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[女仆实用任务] 1.21.1-maid_useful_task-1.4.2.jar",
+      "size": 160465,
+      "enabled_extension": true,
+      "sha256": "e9334d429ff9da4ede5b9a8d2cad0f8472c3821ba20c8ec5e6a8827a52278711",
+      "jar": {
+        "origin": "[女仆实用任务] 1.21.1-maid_useful_task-1.4.2.jar",
+        "mods": [
+          {
+            "modId": "maid_useful_task",
+            "displayName": "maid useful task",
+            "version": "1.4.2",
+            "authors": "xypp",
+            "description": "Add some useful task for touhou little maid."
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "maid_useful_task": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.1,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21,1.22)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "touhou_little_maid",
+              "type": "required",
+              "versionRange": "[1.3.7,)",
+              "ordering": "AFTER",
+              "side": "BOTH"
+            },
+            {
+              "modId": "playerrevive",
+              "type": "optional",
+              "versionRange": "[2.0.16,)",
+              "ordering": "AFTER",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[女仆餐厅] maid_restaurant-0.2.9.jar",
+      "size": 405729,
+      "enabled_extension": true,
+      "sha256": "cc80278a000b3c7abb91ac923bfebacc60afc7cc7e605d0a63e6eb75373c98a0",
+      "jar": {
+        "origin": "[女仆餐厅] maid_restaurant-0.2.9.jar",
+        "mods": [
+          {
+            "modId": "maid_restaurant",
+            "displayName": "Maid Restaurant",
+            "version": "0.2.9",
+            "authors": "摸里傻",
+            "description": "An addon mod designed to deliver a restaurant-style automatic experience with maids.\n"
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "maid_restaurant": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[${neo_version},)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "${minecraft_version_range}",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "touhou_little_maid",
+              "type": "required",
+              "versionRange": "[1.5.0,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "kaleidoscope_cookery",
+              "type": "required",
+              "versionRange": "[1.1.2,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[属性修复] attributefix-neoforge-1.21.1-21.1.3.jar",
+      "size": 19809,
+      "enabled_extension": true,
+      "sha256": "b2b20f3d44e824071284c14de3f4d3323d420e1c450040b339a5c37d2c382ad4",
+      "jar": {
+        "origin": "[属性修复] attributefix-neoforge-1.21.1-21.1.3.jar",
+        "mods": [
+          {
+            "modId": "attributefix",
+            "displayName": "AttributeFix",
+            "version": "21.1.3",
+            "authors": "Darkhax",
+            "description": "Extends the maximum attribute ranges to allow for higher values."
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "attributefix": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.1.209,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21.1, 1.22)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "bookshelf",
+              "type": "required",
+              "versionRange": "[21.1, 21.2)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "prickle",
+              "type": "required",
+              "versionRange": "[21.1, 21.2)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[帕秋莉手册] Patchouli-1.21.1-93-NEOFORGE.jar",
+      "size": 646777,
+      "enabled_extension": true,
+      "sha256": "959af52ed6640c316c3a8469203420be4aeea11ad6603890ba83bf48f5d9f993",
+      "jar": {
+        "origin": "[帕秋莉手册] Patchouli-1.21.1-93-NEOFORGE.jar",
+        "mods": [
+          {
+            "modId": "patchouli",
+            "displayName": "Patchouli",
+            "version": "${file.jarVersion}",
+            "authors": "Vazkii",
+            "description": "Accessible, Data-Driven, Dependency-Free Documentation for Minecraft Modders and Pack Makers\n"
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "patchouli": [
+            {
+              "modId": "neoforge",
+              "type": "REQUIRED",
+              "versionRange": "[21.0.31-beta,)"
+            },
+            {
+              "modId": "minecraft",
+              "type": "REQUIRED",
+              "versionRange": "[1.21.1,1.21.2)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[护甲显示上限突破] overloadedarmorbar-neoforge-1.21-2.jar",
+      "size": 22307,
+      "enabled_extension": true,
+      "sha256": "d9c809d62e4dac5e2dabfd6c672bbe47e89e41f680d0937aa59e49f7f65ff405",
+      "jar": {
+        "origin": "[护甲显示上限突破] overloadedarmorbar-neoforge-1.21-2.jar",
+        "mods": [
+          {
+            "modId": "overloadedarmorbar",
+            "displayName": "OverloadedArmorBar",
+            "version": "2",
+            "authors": "Jared",
+            "description": "Enhanced armor bar rendering for armor levels above diamond"
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "overloadedarmorbar": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[2,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[无尽贪婪Neo] AvaritiaNeo-1.21-1.3.1.jar",
+      "size": 1017768,
+      "enabled_extension": true,
+      "sha256": "4cd1dd5b6b366218c7d7880a826c20875acba62db15555c7f6654086c34c4a93",
+      "jar": {
+        "origin": "[无尽贪婪Neo] AvaritiaNeo-1.21-1.3.1.jar",
+        "mods": [
+          {
+            "modId": "avaritia",
+            "displayName": "Avaritia",
+            "version": "1.3.1",
+            "authors": "Aqua3",
+            "description": ""
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "avaritia": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.0.0-beta,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21,1.21.1)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[更美观的血条] colorfulhearts-neoforge-1.21.1-10.5.9.jar",
+      "size": 156588,
+      "enabled_extension": true,
+      "sha256": "332a7f3df1274cabeae05e9361c41561c42a670787adc7e4b6795961b4721401",
+      "jar": {
+        "origin": "[更美观的血条] colorfulhearts-neoforge-1.21.1-10.5.9.jar",
+        "mods": [
+          {
+            "modId": "colorfulhearts",
+            "displayName": "Colorful Hearts",
+            "version": "10.5.9",
+            "authors": "Terrails",
+            "description": " A client side mod that replaces multiple vanilla heart rows with a single row using colored hearts "
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "colorfulhearts": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.0,)",
+              "ordering": "NONE",
+              "side": "CLIENT"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21,)",
+              "ordering": "NONE",
+              "side": "CLIENT"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[机械动力] create-1.21.1-6.0.10.jar",
+      "size": 19123767,
+      "enabled_extension": true,
+      "sha256": "ef87fe5709f1ba1f5b8bb20a2925b5afb4669e178fd6d8bf10c167759eefe37a",
+      "jar": {
+        "origin": "[机械动力] create-1.21.1-6.0.10.jar",
+        "mods": [
+          {
+            "modId": "create",
+            "displayName": "Create",
+            "version": "6.0.10",
+            "authors": "simibubi",
+            "description": "Technology that empowers the player."
+          }
+        ],
+        "nested": [
+          {
+            "origin": "[机械动力] create-1.21.1-6.0.10.jar!META-INF/jarjar/Registrate-MC1.21-1.3.0+67.jar",
+            "mods": [],
+            "nested": []
+          },
+          {
+            "origin": "[机械动力] create-1.21.1-6.0.10.jar!META-INF/jarjar/flywheel-neoforge-1.21.1-1.0.6.jar",
+            "mods": [
+              {
+                "modId": "flywheel",
+                "displayName": "Flywheel",
+                "version": "1.0.6",
+                "authors": "Jozufozu, PepperCode1",
+                "description": "An overhauled entity and block entity rendering API."
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "flywheel": [
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "[1.21.1,1.21.2)",
+                  "side": "CLIENT"
+                },
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21.1.66,)",
+                  "side": "CLIENT"
+                },
+                {
+                  "modId": "embeddium",
+                  "type": "optional",
+                  "versionRange": "[0.3.25,)",
+                  "side": "CLIENT"
+                },
+                {
+                  "modId": "sodium",
+                  "type": "optional",
+                  "versionRange": "[0.6.0-beta.2,)",
+                  "side": "CLIENT"
+                }
+              ]
+            }
+          },
+          {
+            "origin": "[机械动力] create-1.21.1-6.0.10.jar!META-INF/jarjar/ponder-neoforge-1.0.82+mc1.21.1.jar",
+            "mods": [
+              {
+                "modId": "ponder",
+                "displayName": "Ponder",
+                "version": "1.0.82+mc1.21.1",
+                "authors": "simibubi, Pepper, zelophed",
+                "description": "Visual in-Game Documentation"
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "ponder": [
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21.1.206,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "[1.21.1]",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "flywheel",
+                  "type": "required",
+                  "versionRange": "[1.0.0,2.0)",
+                  "ordering": "AFTER",
+                  "side": "CLIENT"
+                }
+              ]
+            }
+          }
+        ],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "create": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.1.219,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21.1]",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "flywheel",
+              "type": "required",
+              "versionRange": "[1.0.0,2.0)",
+              "ordering": "AFTER",
+              "side": "CLIENT"
+            },
+            {
+              "modId": "ponder",
+              "type": "required",
+              "versionRange": "[1.0.82,)",
+              "ordering": "AFTER",
+              "side": "BOTH"
+            },
+            {
+              "modId": "sodium",
+              "type": "optional",
+              "reason": "Versions before 0.6.9 do not include the neccesary APIs Create needs to work properly with Sodium.",
+              "versionRange": "[0.6.9,)",
+              "ordering": "NONE",
+              "side": "CLIENT"
+            },
+            {
+              "modId": "lithium",
+              "type": "optional",
+              "reason": "Versions before 0.14.7 crash when paired with Create, Update Lithium.",
+              "versionRange": "[0.14.7,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "journeymap",
+              "type": "optional",
+              "reason": "Versions before 1.21.1-6.0.0-beta.46 do not contain the APIs Create requires to work with JourneyMap.",
+              "versionRange": "[1.21.1-6.0.0-beta.46,)",
+              "ordering": "NONE",
+              "side": "CLIENT"
+            },
+            {
+              "modId": "xaeroworldmap",
+              "type": "optional",
+              "reason": "Versions before 1.40.2 do not contain the classes Create requires to work with Xaero's World Map.",
+              "versionRange": "[1.40.2,)",
+              "ordering": "NONE",
+              "side": "CLIENT"
+            },
+            {
+              "modId": "radium",
+              "type": "incompatible",
+              "reason": "Radium is a unofficial port of Lithium, Lithium is now natively available for NeoForge and does not suffer from the same issues radium does, use Lithium instead.",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "palladium",
+              "type": "incompatible",
+              "reason": "Palladium does not improve memory usage by anything meaningful, and results in broken visuals for Create's blocks with connected textures.",
+              "ordering": "NONE",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[机械动力：创想附加] createaddition-1.7.2.jar",
+      "size": 1772844,
+      "enabled_extension": true,
+      "sha256": "71e9c3ac39089e72c1e47a129a44e41eb55efc9534eecfdead8da8fb64313414",
+      "jar": {
+        "origin": "[机械动力：创想附加] createaddition-1.7.2.jar",
+        "mods": [
+          {
+            "modId": "createaddition",
+            "displayName": "Create Crafts & Additions",
+            "version": "1.7.2",
+            "authors": "MRH0",
+            "description": "Create Crafts & Additions extends Create and acts as a bridge between electric and kinetic energy from Create.\nJoin the Discord: https://discord.gg/mRbNnyKTEu\nSpecial thanks to:\nthe Create team, the Forge team, and all contributors on the CC&A discord including:\nAlphaMode, Skippyall, BobDole, legoatoom, gobiidaiah, StockiesLad, THEREDSTONEBRO lawliet__, and Uraxys.\n"
+          }
+        ],
+        "nested": [
+          {
+            "origin": "[机械动力：创想附加] createaddition-1.7.2.jar!META-INF/jarjar/sable-companion-common-1.21.1-1.6.0.jar",
+            "mods": [
+              {
+                "modId": "sablecompanion",
+                "displayName": "Sable Companion",
+                "version": "1.6.0",
+                "authors": "RyanHCode, Ocelot",
+                "description": "A lightweight library for making mods compatible with Sable"
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "sablecompanion": [
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21.1.80,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "[1.21.1,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                }
+              ]
+            }
+          }
+        ],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "createaddition": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.1.248,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "create",
+              "type": "required",
+              "versionRange": "[6.0.7,6.1.0)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "jei",
+              "type": "optional",
+              "versionRange": "[15.0.0.0,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "computercraft",
+              "type": "optional",
+              "versionRange": "[0,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "simulated",
+              "type": "optional",
+              "ordering": "AFTER"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21.1]",
+              "ordering": "NONE"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[机械动力：创意传动] create_connected-1.3.3-mc1.21.1.jar",
+      "size": 6786783,
+      "enabled_extension": true,
+      "sha256": "0c5eb9ffb5c8d71e6e2a39023feb85c51adfb10d38949bc47c4abbd53b351a4f",
+      "jar": {
+        "origin": "[机械动力：创意传动] create_connected-1.3.3-mc1.21.1.jar",
+        "mods": [
+          {
+            "modId": "create_connected",
+            "displayName": "Create: Connected",
+            "version": "1.3.3-mc1.21.1",
+            "authors": "Lysine",
+            "description": "Quality-of-life blocks that you wish existed in Create."
+          }
+        ],
+        "nested": [
+          {
+            "origin": "[机械动力：创意传动] create_connected-1.3.3-mc1.21.1.jar!META-INF/jarjar/sable-companion-common-1.21.1-1.6.0.jar",
+            "mods": [
+              {
+                "modId": "sablecompanion",
+                "displayName": "Sable Companion",
+                "version": "1.6.0",
+                "authors": "RyanHCode, Ocelot",
+                "description": "A lightweight library for making mods compatible with Sable"
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "sablecompanion": [
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21.1.80,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "[1.21.1,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                }
+              ]
+            }
+          }
+        ],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "create_connected": [
+            {
+              "modId": "neoforge",
+              "mandatory": true,
+              "versionRange": "[21.1.200,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "mandatory": true,
+              "versionRange": "[1.21.1,1.22)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "create",
+              "mandatory": true,
+              "versionRange": "[6.0.10,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[机械动力：航空学] create-aeronautics-bundled-1.21.1-1.3.2.jar",
+      "size": 33123131,
+      "enabled_extension": true,
+      "sha256": "a3f330d4757640f8715d991a43eedb826e4d0e51558d859c843ae6693bd35f1e",
+      "jar": {
+        "origin": "[机械动力：航空学] create-aeronautics-bundled-1.21.1-1.3.2.jar",
+        "mods": [
+          {
+            "modId": "aeronautics_bundled",
+            "displayName": "Create Aeronautics",
+            "version": "1.3.2",
+            "authors": "Simulated Team",
+            "description": "Expands the Create mod with physics-based contraptions, to build anything from cars to planes. This is a bundled JAR that contains Simulated, Aeronautics, and Offroad."
+          }
+        ],
+        "nested": [
+          {
+            "origin": "[机械动力：航空学] create-aeronautics-bundled-1.21.1-1.3.2.jar!META-INF/jarjar/dev.eriksonn.aeronautics.aeronautics-neoforge-1.21.1-1.3.2.jar",
+            "mods": [
+              {
+                "modId": "aeronautics",
+                "displayName": "Create Aeronautics",
+                "version": "1.3.2",
+                "authors": "Simulated Team",
+                "description": "Enables all manner of flying contraptions with hot air, propellers, and magic floating rocks. Typically included in an aeronautics-bundled JAR."
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "aeronautics": [
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21.1.228,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "[1.21.1]",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "create",
+                  "type": "required",
+                  "versionRange": "[6.0.10,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "sable",
+                  "type": "required",
+                  "versionRange": "[2.0.0,3.0.0)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "simulated",
+                  "type": "required",
+                  "versionRange": "[1.3.2,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "jei",
+                  "type": "optional",
+                  "versionRange": "[19.21.0.247,)",
+                  "ordering": "NONE",
+                  "side": "CLIENT"
+                }
+              ]
+            }
+          },
+          {
+            "origin": "[机械动力：航空学] create-aeronautics-bundled-1.21.1-1.3.2.jar!META-INF/jarjar/dev.ryanhcode.offroad.offroad-neoforge-1.21.1-1.3.2.jar",
+            "mods": [
+              {
+                "modId": "offroad",
+                "displayName": "Create Offroad",
+                "version": "1.3.2",
+                "authors": "Simulated Team",
+                "description": "Adds components to build cars and land vehicles. Typically included in an aeronautics-bundled JAR."
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "offroad": [
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21.1.228,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "[1.21.1]",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "create",
+                  "type": "required",
+                  "versionRange": "[6.0.10,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "sable",
+                  "type": "required",
+                  "versionRange": "[2.0.0,3.0.0)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "simulated",
+                  "type": "required",
+                  "versionRange": "[1.3.2,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                }
+              ]
+            }
+          },
+          {
+            "origin": "[机械动力：航空学] create-aeronautics-bundled-1.21.1-1.3.2.jar!META-INF/jarjar/dev.simulated_team.simulated.simulated-neoforge-1.21.1-1.3.2.jar",
+            "mods": [
+              {
+                "modId": "simulated",
+                "displayName": "Create Simulated",
+                "version": "1.3.2",
+                "authors": "Simulated Team",
+                "description": "Expands Create with physics-based interactive contraptions. Typically included in an aeronautics-bundled JAR."
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "simulated": [
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21.1.228,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "[1.21.1]",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "create",
+                  "type": "required",
+                  "versionRange": "[6.0.10,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "flywheel",
+                  "type": "required",
+                  "versionRange": "[1.0.6,)",
+                  "ordering": "NONE",
+                  "side": "CLIENT"
+                },
+                {
+                  "modId": "sable",
+                  "type": "required",
+                  "versionRange": "[2.0.0,3.0.0)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "jei",
+                  "type": "optional",
+                  "versionRange": "[19.21.0.247,)",
+                  "ordering": "NONE",
+                  "side": "CLIENT"
+                }
+              ]
+            }
+          }
+        ],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "aeronautics_bundled": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.1.228,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21.1]",
+              "ordering": "NONE",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[机械动力：附魔工业] create-enchantment-industry-2.5.4.jar",
+      "size": 1607409,
+      "enabled_extension": true,
+      "sha256": "6e68d68eb0619fb092861d981ae998b1fcf3757d5ca72636103a24bcdb89d1ad",
+      "jar": {
+        "origin": "[机械动力：附魔工业] create-enchantment-industry-2.5.4.jar",
+        "mods": [
+          {
+            "modId": "create_enchantment_industry",
+            "displayName": "Create: Enchantment Industry",
+            "version": "2.5.4",
+            "authors": "DragonsPlus",
+            "description": "Enchantment, Experience, Enhancement and Enlightening - with Create"
+          }
+        ],
+        "nested": [
+          {
+            "origin": "[机械动力：附魔工业] create-enchantment-industry-2.5.4.jar!META-INF/jarjar/conditional-mixin-neoforge-0.6.4.jar",
+            "mods": [
+              {
+                "modId": "conditional_mixin",
+                "displayName": "conditional mixin",
+                "version": "0.6.4",
+                "authors": "Fallen_Breath",
+                "description": "Use annotation to conditionally apply your mixins"
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "conditional_mixin": [
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[20.5,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                }
+              ]
+            }
+          }
+        ],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "create_enchantment_industry": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.1.228,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21.1, 1.22)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "create",
+              "type": "required",
+              "versionRange": "[6.0.10,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "create_dragons_plus",
+              "type": "required",
+              "versionRange": "[1.11.9,)",
+              "ordering": "AFTER",
+              "side": "BOTH"
+            },
+            {
+              "modId": "apothic_enchanting",
+              "type": "optional",
+              "versionRange": "[1.6.1,)",
+              "ordering": "AFTER",
+              "side": "BOTH"
+            },
+            {
+              "modId": "apotheosis",
+              "type": "optional",
+              "versionRange": "[8.7.0,)",
+              "ordering": "AFTER",
+              "side": "BOTH"
+            },
+            {
+              "modId": "apothic_spawners",
+              "type": "optional",
+              "versionRange": "[1.4.0,)",
+              "ordering": "AFTER",
+              "side": "BOTH"
+            },
+            {
+              "modId": "sable",
+              "type": "optional",
+              "versionRange": "[2.0.3,)",
+              "ordering": "AFTER",
+              "side": "BOTH"
+            },
+            {
+              "modId": "touhou_little_maid",
+              "type": "optional",
+              "versionRange": "[1.2.0,)",
+              "ordering": "AFTER",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[机械动力：龙+] CreateDragonsPlus-1.11.9.jar",
+      "size": 1085674,
+      "enabled_extension": true,
+      "sha256": "37f05a6775bbe811fe8c2833fa6289a1c704d0b25bdd5f239d343a5c6f62ed8a",
+      "jar": {
+        "origin": "[机械动力：龙+] CreateDragonsPlus-1.11.9.jar",
+        "mods": [
+          {
+            "modId": "create_dragons_plus",
+            "displayName": "Create: Dragons Plus",
+            "version": "1.11.9",
+            "authors": "DragonsPlus",
+            "description": "Library mod for DragonsPlusMinecraft Create-addons."
+          }
+        ],
+        "nested": [
+          {
+            "origin": "[机械动力：龙+] CreateDragonsPlus-1.11.9.jar!META-INF/jarjar/conditional-mixin-neoforge-0.6.4.jar",
+            "mods": [
+              {
+                "modId": "conditional_mixin",
+                "displayName": "conditional mixin",
+                "version": "0.6.4",
+                "authors": "Fallen_Breath",
+                "description": "Use annotation to conditionally apply your mixins"
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "conditional_mixin": [
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[20.5,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                }
+              ]
+            }
+          }
+        ],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "create_dragons_plus": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.1.0,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21.1, 1.22)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "create",
+              "type": "required",
+              "versionRange": "[6.0.10,)",
+              "ordering": "AFTER",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[森罗物语：厨房] kaleidoscopecookery-1.6.0-neoforge+mc1.21.1.jar",
+      "size": 3496661,
+      "enabled_extension": true,
+      "sha256": "e93784a3f17e546ebfa7c449572933bf67c6b694c01cb26b83ad120c40452b33",
+      "jar": {
+        "origin": "[森罗物语：厨房] kaleidoscopecookery-1.6.0-neoforge+mc1.21.1.jar",
+        "mods": [
+          {
+            "modId": "kaleidoscope_cookery",
+            "displayName": "Kaleidoscope Cookery",
+            "version": "1.6.0-neoforge+mc1.21.1",
+            "authors": "ysbbbbbb, tartaric_acid, Azumic",
+            "description": "A Minecraft mod that adds immersive cooking systems and delicious recipes to enhance your culinary adventure."
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "kaleidoscope_cookery": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21.1,1.21.2)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "kubejs",
+              "type": "optional",
+              "versionRange": "[2101.7.2-build.309,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[汇流来世] ConfluenceOtherworld-1.2.4-260226.jar",
+      "size": 35564736,
+      "enabled_extension": true,
+      "sha256": "b86bf2ef565760127d7c1e0e8e7fce0b71e3f7c08056066c2dd6ad56f1e4d0b6",
+      "jar": {
+        "origin": "[汇流来世] ConfluenceOtherworld-1.2.4-260226.jar",
+        "mods": [
+          {
+            "modId": "confluence",
+            "displayName": "Confluence",
+            "version": "1.2.4",
+            "authors": "Magic Harp, Westernat, CoooBird, Maker(R), Mustard Oasis, Kaleb Langley, XiaoHuNao, SiHuai_2412, Voila, XuanYu_1725, Coffee, SquidSine",
+            "description": "Hi from Confluence Team!"
+          }
+        ],
+        "nested": [
+          {
+            "origin": "[汇流来世] ConfluenceOtherworld-1.2.4-260226.jar!META-INF/jarjar/mixinsquared-neoforge-0.3.7-beta.1.jar",
+            "mods": [],
+            "nested": [
+              {
+                "origin": "[汇流来世] ConfluenceOtherworld-1.2.4-260226.jar!META-INF/jarjar/mixinsquared-neoforge-0.3.7-beta.1.jar!META-INF/jars/MixinSquared-0.3.7-beta.1.jar",
+                "mods": [],
+                "nested": []
+              }
+            ]
+          },
+          {
+            "origin": "[汇流来世] ConfluenceOtherworld-1.2.4-260226.jar!META-INF/jarjar/TerraBlender-neoforge-1.21.1-4.1.0.8.jar",
+            "mods": [
+              {
+                "modId": "terrablender",
+                "displayName": "TerraBlender",
+                "version": "${file.jarVersion}",
+                "authors": "Adubbz",
+                "description": "A library mod for adding biomes in a simple and compatible manner with Minecraft's new biome/terrain system."
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "terrablender": [
+                {
+                  "modId": "neoforge",
+                  "required": true,
+                  "versionRange": "[20.4,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                }
+              ]
+            }
+          },
+          {
+            "origin": "[汇流来世] ConfluenceOtherworld-1.2.4-260226.jar!META-INF/jarjar/nowebsite.makertechno.the_trackers.the_trackers-1.21.1-0.2.5.jar",
+            "mods": [
+              {
+                "modId": "the_trackers",
+                "displayName": "The Trackers",
+                "version": "1.21.1-0.2.5",
+                "authors": "MakerTechno",
+                "description": "To follow the light to where all shadows begin.\n逐光溯影，追梦而行\n"
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "the_trackers": [
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21.1.0,)",
+                  "ordering": "NONE",
+                  "side": "CLIENT"
+                },
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "[1.21.1, 1.22)",
+                  "ordering": "NONE",
+                  "side": "CLIENT"
+                }
+              ]
+            }
+          },
+          {
+            "origin": "[汇流来世] ConfluenceOtherworld-1.2.4-260226.jar!META-INF/jarjar/org.confluence.lib.confluence_magic_lib-0.0.8.jar",
+            "mods": [
+              {
+                "modId": "confluence_magic_lib",
+                "displayName": "Confluence Magic Lib",
+                "version": "0.0.8",
+                "authors": "Westernat",
+                "description": ""
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "confluence_magic_lib": [
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "[1.21.1,1.22)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                }
+              ]
+            }
+          },
+          {
+            "origin": "[汇流来世] ConfluenceOtherworld-1.2.4-260226.jar!META-INF/jarjar/org.confluence.terra_furniture.terra_furniture-1.21.1-0.0.5.jar",
+            "mods": [
+              {
+                "modId": "terra_furniture",
+                "displayName": "Terra Furniture",
+                "version": "1.21.1-0.0.5",
+                "authors": "MakerTechno, Westernat",
+                "description": "Furniture!"
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "terra_furniture": [
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21.1.0,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "[1.21.1, 1.22)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                }
+              ]
+            }
+          },
+          {
+            "origin": "[汇流来世] ConfluenceOtherworld-1.2.4-260226.jar!META-INF/jarjar/org.confluence.terra_curio-1.2.0.jar",
+            "mods": [
+              {
+                "modId": "terra_curio",
+                "displayName": "TerraCurio",
+                "version": "1.2.0",
+                "authors": "Westernat, XiaoHuNao",
+                "description": ""
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "terra_curio": [
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "[1.21.1,1.22)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                }
+              ]
+            }
+          },
+          {
+            "origin": "[汇流来世] ConfluenceOtherworld-1.2.4-260226.jar!META-INF/jarjar/org.confluence.terra_entity-1.2.1.jar",
+            "mods": [
+              {
+                "modId": "terra_entity",
+                "displayName": "Terra Entity",
+                "version": "1.2.1",
+                "authors": "Coffee, Westernat, Magic Harp, Nakinosi, SiHuai_2412, Voila",
+                "description": "A mod containing sticky monster of Terraria, while submodule of Confluence."
+              }
+            ],
+            "nested": [
+              {
+                "origin": "[汇流来世] ConfluenceOtherworld-1.2.4-260226.jar!META-INF/jarjar/org.confluence.terra_entity-1.2.1.jar!META-INF/jarjar/commons-math3-3.6.1.jar",
+                "mods": [],
+                "nested": []
+              }
+            ],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "terra_entity": [
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "1.21.1",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                }
+              ]
+            }
+          },
+          {
+            "origin": "[汇流来世] ConfluenceOtherworld-1.2.4-260226.jar!META-INF/jarjar/org.confluence.terra_guns-1.21.1-1.0.jar",
+            "mods": [
+              {
+                "modId": "terra_guns",
+                "displayName": "TerraGuns",
+                "version": "1.0",
+                "authors": "Kaleb Langley",
+                "description": ""
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "terra_guns": [
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "[1.21.1,1.22)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "confluence",
+                  "type": "optional",
+                  "versionRange": "[1.1.5-beta,)",
+                  "ordering": "AFTER",
+                  "side": "BOTH"
+                }
+              ]
+            }
+          },
+          {
+            "origin": "[汇流来世] ConfluenceOtherworld-1.2.4-260226.jar!META-INF/jarjar/ThreeDimensionParticle-core-1.0.5.jar",
+            "mods": [
+              {
+                "modId": "thr_dim_particle",
+                "displayName": "Three Dimension Particle",
+                "version": "1.0.5",
+                "authors": "Westerant, Lazy_Pillow",
+                "description": "Replace and expand vanilla"
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "thr_dim_particle": [
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21.1.215,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "[1.21.1]",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                }
+              ]
+            }
+          },
+          {
+            "origin": "[汇流来世] ConfluenceOtherworld-1.2.4-260226.jar!META-INF/jarjar/ParticleStorm-1.1.4.3.jar",
+            "mods": [
+              {
+                "modId": "particlestorm",
+                "displayName": "ParticleStorm",
+                "version": "1.1.4.3",
+                "authors": "Westernat",
+                "description": "Uses a Bedrock Edition JSON format for particle effects."
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "particlestorm": [
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "[1.21.1,1.22)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                }
+              ]
+            }
+          },
+          {
+            "origin": "[汇流来世] ConfluenceOtherworld-1.2.4-260226.jar!META-INF/jarjar/geckolib-neoforge-1.21.1-4.8.2.jar",
+            "mods": [
+              {
+                "modId": "geckolib",
+                "displayName": "GeckoLib 4",
+                "version": "4.8.2",
+                "authors": "Gecko, Eliot, AzureDoom, DerToaster, Tslat, Witixin",
+                "description": "GeckoLib is an animation engine for Minecraft Mods, with support for complex 3D keyframe-based animations, 30+ easings, concurrent animation support, sound and particle keyframes, event keyframes, and more.\n"
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "geckolib": [
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21.1.150,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "[1.21,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                }
+              ]
+            }
+          }
+        ],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "confluence": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21.1,1.22)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "curios",
+              "type": "required",
+              "versionRange": "[9.5.1+1.21.1,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "touhou_little_maid",
+              "type": "optional",
+              "versionRange": "[1.3.5,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "waystones",
+              "type": "optional",
+              "versionRange": "[21.1.19,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "create",
+              "type": "optional",
+              "versionRange": "[6.0.9,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[汇流来世：武器修改] Confluence-WeaponModification-1.2.0.jar.disabled",
+      "size": 17230,
+      "enabled_extension": false,
+      "sha256": "a672741e6710fcb39d95f4ab0ce38ae76d2ac738cbb5ea048b5ce8dc8f878d83",
+      "jar": {
+        "origin": "[汇流来世：武器修改] Confluence-WeaponModification-1.2.0.jar.disabled",
+        "mods": [
+          {
+            "modId": "cowm",
+            "displayName": "Confluence:Weapon Modification",
+            "version": "1.2.0",
+            "authors": "SorryWonder",
+            "description": "Used to remove or modify indestructible items.."
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "cowm": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21.1,1.22)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[灾变] L_Ender's Cataclysm 1.21.1-3.33.jar",
+      "size": 73375667,
+      "enabled_extension": true,
+      "sha256": "371956d0c2e3b56729ee93b955e936875d210e372fe734cdb74326d89ef79875",
+      "jar": {
+        "origin": "[灾变] L_Ender's Cataclysm 1.21.1-3.33.jar",
+        "mods": [
+          {
+            "modId": "cataclysm",
+            "displayName": "L_Ender's Cataclysm 1.21.1",
+            "version": "3.33",
+            "authors": "L_Ender",
+            "description": "https://www.curseforge.com/minecraft/texture-packs/cataclysmic-tunes"
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "cataclysm": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.1.0,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "1.21.1",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "curios",
+              "type": "required",
+              "versionRange": "[9.2.2+1.21.1,)",
+              "ordering": "NONE"
+            },
+            {
+              "modId": "lionfishapi",
+              "type": "required",
+              "versionRange": "3.1",
+              "ordering": "NONE"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[玉 🔍] Jade-1.21.1-NeoForge-15.10.6.jar",
+      "size": 726853,
+      "enabled_extension": true,
+      "sha256": "276f1f65a20d04f536989c4f311949d770b52c440c23c2b904a08860f3c93810",
+      "jar": {
+        "origin": "[玉 🔍] Jade-1.21.1-NeoForge-15.10.6.jar",
+        "mods": [
+          {
+            "modId": "jade",
+            "displayName": "Jade",
+            "version": "${file.jarVersion}",
+            "authors": "Snownee",
+            "description": "Minecraft mod shows what you are looking at. (Hwyla fork)"
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "jade": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.0.143, )",
+              "ordering": "NONE",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[现代化修复] modernfix-neoforge-5.27.24+mc1.21.1.jar",
+      "size": 604333,
+      "enabled_extension": true,
+      "sha256": "e6e9446890f0feb3aab3f6e73ae18cb17575c370f232179fef7baa30e61538fe",
+      "jar": {
+        "origin": "[现代化修复] modernfix-neoforge-5.27.24+mc1.21.1.jar",
+        "mods": [
+          {
+            "modId": "modernfix",
+            "displayName": "ModernFix",
+            "version": "5.27.24+mc1.21.1",
+            "authors": "embeddedt",
+            "description": "Egregious, yet effective performance improvements for modern Minecraft\n"
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "modernfix": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.0.111-beta,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21, 1.22)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "jei",
+              "type": "optional",
+              "versionRange": "[15.8.0.11,)",
+              "ordering": "NONE",
+              "side": "CLIENT"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[生活调味料：酒狐萝贝] solmaid-1.0.1.jar",
+      "size": 105359,
+      "enabled_extension": true,
+      "sha256": "f8bc3fcc8670164a6fc76c150472350a9e42b1537b36b96c5430e6656081422f",
+      "jar": {
+        "origin": "[生活调味料：酒狐萝贝] solmaid-1.0.1.jar",
+        "mods": [
+          {
+            "modId": "solmaid",
+            "displayName": "Spice of Life: Maid",
+            "version": "1.0.1",
+            "authors": "摸里傻",
+            "description": "女仆的生活也需要一些美食的调味\n"
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "solmaid": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[${neo_version},)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "${minecraft_version_range}",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "touhou_little_maid",
+              "type": "required",
+              "versionRange": "[1.4.6,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[经验机制改革] Clumps-neoforge-1.21.1-19.0.0.1.jar",
+      "size": 18382,
+      "enabled_extension": true,
+      "sha256": "b524ccdace2ef8fd19f5b2074f7de1103ac5065c52553f064c00e098346c293e",
+      "jar": {
+        "origin": "[经验机制改革] Clumps-neoforge-1.21.1-19.0.0.1.jar",
+        "mods": [
+          {
+            "modId": "clumps",
+            "displayName": "Clumps",
+            "version": "19.0.0.1",
+            "authors": "Jared",
+            "description": "Clumps xp orbs together."
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "clumps": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[4,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21.1]",
+              "ordering": "NONE",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[苹果皮] appleskin-neoforge-mc1.21-3.0.9.jar",
+      "size": 75804,
+      "enabled_extension": true,
+      "sha256": "38b48dd6231341c9f964ce6e42c57ec866c6cc8f72bec938390a59bafb3922df",
+      "jar": {
+        "origin": "[苹果皮] appleskin-neoforge-mc1.21-3.0.9.jar",
+        "mods": [
+          {
+            "modId": "appleskin",
+            "displayName": "AppleSkin",
+            "version": "${file.jarVersion}",
+            "authors": "squeek",
+            "description": "Adds various food-related HUD improvements"
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "appleskin": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.0.0-beta,)",
+              "ordering": "NONE",
+              "side": "CLIENT"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[莱特兰-恶意] l2hostility-3.0.18.jar",
+      "size": 2307082,
+      "enabled_extension": true,
+      "sha256": "cd16a0c736e8693a1ae42581cbe8044c30b4e6d6551c2545e09f0b770c6b7800",
+      "jar": {
+        "origin": "[莱特兰-恶意] l2hostility-3.0.18.jar",
+        "mods": [
+          {
+            "modId": "l2hostility",
+            "displayName": "L2Hostility",
+            "version": "3.0.18",
+            "authors": "lcy0x1",
+            "description": "Mob enhancements"
+          }
+        ],
+        "nested": [
+          {
+            "origin": "[莱特兰-恶意] l2hostility-3.0.18.jar!META-INF/jarjar/fast_projectile_api-3.0.2+1.jar",
+            "mods": [
+              {
+                "modId": "fast_projectile_api",
+                "displayName": "Fast Projectile API",
+                "version": "3.0.2+1",
+                "authors": "lcy0x1",
+                "description": "Efficient collision and rendering"
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "fast_projectile_api": [
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21.1.4,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "[1.21.1,1.22)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                }
+              ]
+            }
+          },
+          {
+            "origin": "[莱特兰-恶意] l2hostility-3.0.18.jar!META-INF/jarjar/l2core-3.0.8+12.jar",
+            "mods": [
+              {
+                "modId": "l2core",
+                "displayName": "L2Core",
+                "version": "3.0.8+12",
+                "authors": "lcy0x1",
+                "description": "Core Library mod for all L2 mods"
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "l2core": [
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21.1.4,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "[1.21.1,1.22)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                }
+              ]
+            }
+          },
+          {
+            "origin": "[莱特兰-恶意] l2hostility-3.0.18.jar!META-INF/jarjar/l2damagetracker-3.0.8+3.jar",
+            "mods": [
+              {
+                "modId": "l2damagetracker",
+                "displayName": "L2DamageTracker",
+                "version": "3.0.8+3",
+                "authors": "lcy0x1",
+                "description": "Damage system for L2 mods"
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "l2damagetracker": [
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21.1.61,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "[1.21.1,1.22)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                }
+              ]
+            }
+          },
+          {
+            "origin": "[莱特兰-恶意] l2hostility-3.0.18.jar!META-INF/jarjar/l2magic-3.0.2+14.jar",
+            "mods": [
+              {
+                "modId": "l2magic",
+                "displayName": "L2Magic",
+                "version": "3.0.2+14",
+                "authors": "lcy0x1",
+                "description": "Materials"
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "l2magic": [
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21.1.4,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "[1.21,1.22)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                }
+              ]
+            }
+          },
+          {
+            "origin": "[莱特兰-恶意] l2hostility-3.0.18.jar!META-INF/jarjar/mob_weapon_api-3.0.10.jar",
+            "mods": [
+              {
+                "modId": "mob_weapon_api",
+                "displayName": "Mob Weapon API",
+                "version": "3.0.10",
+                "authors": "lcy0x1",
+                "description": "Core Library mod for all L2 mods"
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "mob_weapon_api": [
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21.1.4,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "[1.21.1,1.22)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "l2complements",
+                  "type": "optional",
+                  "versionRange": "[3.1.2,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "l2archery",
+                  "type": "optional",
+                  "versionRange": "[3.0.3,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "cataclysm",
+                  "type": "optional",
+                  "versionRange": "[3.23,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                }
+              ]
+            }
+          },
+          {
+            "origin": "[莱特兰-恶意] l2hostility-3.0.18.jar!META-INF/jarjar/pandora-1.0.5.jar",
+            "mods": [
+              {
+                "modId": "pandora",
+                "displayName": "Pandora API",
+                "version": "1.0.5",
+                "authors": "lcy0x1",
+                "description": "Charms and Artifacts"
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "pandora": [
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21.1.61,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "[1.21.1,1.22)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                }
+              ]
+            }
+          }
+        ],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "l2hostility": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.1.61,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21.1,1.22)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "l2library",
+              "type": "required",
+              "versionRange": "[3.0.3,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "l2complements",
+              "type": "required",
+              "versionRange": "[3.1.2,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "curios",
+              "type": "required",
+              "versionRange": "[5,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "patchouli",
+              "type": "required",
+              "versionRange": "[0,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "cataclysm",
+              "type": "optional",
+              "versionRange": "[3.23,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[莱特兰-扩充] l2complements-3.1.3.jar",
+      "size": 1129976,
+      "enabled_extension": true,
+      "sha256": "111968216d2088eda26eaee34619656c5a3e570f08da0f9c270e923130d20334",
+      "jar": {
+        "origin": "[莱特兰-扩充] l2complements-3.1.3.jar",
+        "mods": [
+          {
+            "modId": "l2complements",
+            "displayName": "L2Complements",
+            "version": "3.1.3",
+            "authors": "lcy0x1",
+            "description": "Materials"
+          }
+        ],
+        "nested": [
+          {
+            "origin": "[莱特兰-扩充] l2complements-3.1.3.jar!META-INF/jarjar/l2damagetracker-3.0.8+3.jar",
+            "mods": [
+              {
+                "modId": "l2damagetracker",
+                "displayName": "L2DamageTracker",
+                "version": "3.0.8+3",
+                "authors": "lcy0x1",
+                "description": "Damage system for L2 mods"
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "l2damagetracker": [
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21.1.61,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "[1.21.1,1.22)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                }
+              ]
+            }
+          }
+        ],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "l2complements": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.1.61,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21.1,1.22)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "l2library",
+              "type": "required",
+              "versionRange": "[3.0.4,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[诡厄乐事] goetydelight-1.5.0-1.21.1-20260911_alpha-7(1).jar",
+      "size": 1943413,
+      "enabled_extension": true,
+      "sha256": "91e6b43baf33a603681d56b0b5951a305d6865930a8f2255aa0a52ec1350c1a8",
+      "jar": {
+        "origin": "[诡厄乐事] goetydelight-1.5.0-1.21.1-20260911_alpha-7(1).jar",
+        "mods": [
+          {
+            "modId": "goetydelight",
+            "displayName": "Goety Delight",
+            "version": "1.5.0-1.21.1-20260911_alpha-7",
+            "authors": "V_BlackCAT,wu1wu2,BaiXi_a,Upharsin,Kun_Zhong,Fracsail,bai_ze_li,vanilla_haozi,Xiao_wu,Lll252,sybsysj",
+            "description": "Goety And Food.\n"
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "goetydelight": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.1.235,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21.1]",
+              "ordering": "NONE",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[诡厄巫法] goety-3.2.0.jar",
+      "size": 80416092,
+      "enabled_extension": true,
+      "sha256": "edeeb623f626bc85bd26df6458dbb440fd4b044f34f3de78ee715cbc01e692d8",
+      "jar": {
+        "origin": "[诡厄巫法] goety-3.2.0.jar",
+        "mods": [
+          {
+            "modId": "goety",
+            "displayName": "Goety",
+            "version": "${file.jarVersion}",
+            "authors": "Polarice3",
+            "description": "Goety adds new mobs that can help or hinder players and a magic system that gives players a different way to fight.\n"
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "goety": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "${neo_version_range}",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "curios",
+              "type": "required",
+              "versionRange": "[9.5.1,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "${minecraft_version_range}",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "apotheosis",
+              "type": "optional",
+              "versionRange": "[8.5.4,)",
+              "ordering": "AFTER",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[诡厄灾变] goety_cataclysm-1.21.1-1.8.4.jar",
+      "size": 1826641,
+      "enabled_extension": true,
+      "sha256": "0c9a122cdd94eef65fe5d6b610b20b4a811659032707fa314756494fb9772738",
+      "jar": {
+        "origin": "[诡厄灾变] goety_cataclysm-1.21.1-1.8.4.jar",
+        "mods": [
+          {
+            "modId": "goety_cataclysm",
+            "displayName": "Goety Cataclysm",
+            "version": "1.21.1-1.8.4",
+            "authors": "Polarice3",
+            "description": "Compat addon between Goety and L_Ender's Cataclysm for Minecraft 1.21.1 on NeoForge.\n"
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "goety_cataclysm": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.1,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21.1,1.22)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "goety",
+              "type": "required",
+              "versionRange": "[3.1.4,)",
+              "ordering": "AFTER",
+              "side": "BOTH"
+            },
+            {
+              "modId": "cataclysm",
+              "type": "required",
+              "versionRange": "[3.31,)",
+              "ordering": "AFTER",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[诡厄铁魔法] GoetyIron-1.21.1-NeoForge-3.1.jar",
+      "size": 507646,
+      "enabled_extension": true,
+      "sha256": "9eaf778861a5c8cd45af8d127055528913d832976bbe3caf4f32e135104784aa",
+      "jar": {
+        "origin": "[诡厄铁魔法] GoetyIron-1.21.1-NeoForge-3.1.jar",
+        "mods": [
+          {
+            "modId": "goetyiron",
+            "displayName": "Goety Iron",
+            "version": "3.1",
+            "authors": "k1sak1",
+            "description": "Goety Iron - an addon mod linking Goety and Iron's Spells 'n Spellbooks"
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "goetyiron": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.1.244,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21.1]",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "goety",
+              "type": "required",
+              "versionRange": "[3.1.0,)",
+              "ordering": "AFTER",
+              "side": "BOTH"
+            },
+            {
+              "modId": "irons_spellbooks",
+              "type": "required",
+              "versionRange": "[1.21.1-3.16.2,)",
+              "ordering": "AFTER",
+              "side": "BOTH"
+            },
+            {
+              "modId": "curios",
+              "type": "required",
+              "versionRange": "[9.5.1,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "geckolib",
+              "type": "required",
+              "versionRange": "[4.9.2,)",
+              "ordering": "AFTER",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[超越维度] beyonddimensions-1.21.1-neoforge-0.7.27.jar",
+      "size": 3537941,
+      "enabled_extension": true,
+      "sha256": "b5b9af4a6de4b2d9054a4dde6a96f61d437594993f160dc4c9c56835df434aa8",
+      "jar": {
+        "origin": "[超越维度] beyonddimensions-1.21.1-neoforge-0.7.27.jar",
+        "mods": [
+          {
+            "modId": "beyonddimensions",
+            "displayName": "Beyond Dimensions",
+            "version": "0.7.27",
+            "authors": "Frostbite",
+            "description": "A mod provided some utilities."
+          }
+        ],
+        "nested": [
+          {
+            "origin": "[超越维度] beyonddimensions-1.21.1-neoforge-0.7.27.jar!META-INF/jarjar/tinypinyin-2.0.3.jar",
+            "mods": [],
+            "nested": []
+          }
+        ],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "beyonddimensions": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.1.194,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21.1]",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "create",
+              "type": "optional",
+              "versionRange": "[6.0.0,)",
+              "ordering": "AFTER",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[车万女仆] touhoulittlemaid-1.5.3-neoforge+mc1.21.1.jar",
+      "size": 24408776,
+      "enabled_extension": true,
+      "sha256": "f6db04195820c8508704277ea76d63723804ff236a7b780369ba59ebe5cd9c27",
+      "jar": {
+        "origin": "[车万女仆] touhoulittlemaid-1.5.3-neoforge+mc1.21.1.jar",
+        "mods": [
+          {
+            "modId": "touhou_little_maid",
+            "displayName": "Touhou Little Maid",
+            "version": "1.5.3-neoforge+mc1.21.1",
+            "authors": "TartaricAcid, Snownee, Succinum, Pajinyi, Zhi_Ban, CrystalizedSun, Foky, ZeniCrow, Paulzzh, Yuriscat, Lappland162",
+            "description": "A new version of the minecraft mod inspired by the LittleMaidReengaged mod."
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "touhou_little_maid": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21.1,1.21.2)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "kubejs",
+              "type": "optional",
+              "versionRange": "[2101.7.2-build.309,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[车万女仆附属：爱恋] touhou-maid-affection-1.7.5.2.jar",
+      "size": 1513925,
+      "enabled_extension": true,
+      "sha256": "a64767716665337845d7e25643d0bfbee57c51451a96ed0a5a52da470e8d00f2",
+      "jar": {
+        "origin": "[车万女仆附属：爱恋] touhou-maid-affection-1.7.5.2.jar",
+        "mods": [
+          {
+            "modId": "touhou_maid_affection",
+            "displayName": "Touhou Maid: Affection",
+            "version": "1.7.5.2",
+            "authors": "TouhouMaidAffection",
+            "description": "Kiss your maid! Adds affectionate interactions to Touhou Little Maid."
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "touhou_maid_affection": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21.1,1.21.2)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "touhou_little_maid",
+              "type": "required",
+              "versionRange": "[1.5.1,)",
+              "ordering": "AFTER",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[车万女仆：万法皆通] touhou_little_maid_spell-1.21.1-1.9.0-neoforge.jar",
+      "size": 10335936,
+      "enabled_extension": true,
+      "sha256": "3fafb158365115d613e4a82384bc789c726616f807f5158f574e6b0dfb270aca",
+      "jar": {
+        "origin": "[车万女仆：万法皆通] touhou_little_maid_spell-1.21.1-1.9.0-neoforge.jar",
+        "mods": [
+          {
+            "modId": "touhou_little_maid_spell",
+            "displayName": "Touhou Little Maid: Spell",
+            "version": "1.9.0-neoforge",
+            "authors": "DreamCat",
+            "description": "Add spell combat to Touhou Little Maid."
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "touhou_little_maid_spell": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21.1,1.21.2)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "touhou_little_maid",
+              "type": "required",
+              "versionRange": "[1.5.3,)",
+              "ordering": "AFTER",
+              "side": "BOTH"
+            },
+            {
+              "modId": "irons_spellbooks",
+              "type": "optional",
+              "versionRange": "[1.21.1-3.13.0,)",
+              "ordering": "AFTER",
+              "side": "BOTH"
+            },
+            {
+              "modId": "ars_nouveau",
+              "type": "optional",
+              "versionRange": "[5.10.0,)",
+              "ordering": "AFTER",
+              "side": "BOTH"
+            },
+            {
+              "modId": "curios",
+              "type": "optional",
+              "versionRange": "[0,)",
+              "ordering": "AFTER",
+              "side": "BOTH"
+            },
+            {
+              "modId": "goety",
+              "type": "optional",
+              "versionRange": "[3.0.0,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "youkaishomecoming",
+              "type": "optional",
+              "versionRange": "[3.0.0,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "psi",
+              "type": "optional",
+              "versionRange": "[2.0.0,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "slashblade",
+              "type": "optional",
+              "versionRange": "[2.0.0,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "usefulmagic",
+              "type": "optional",
+              "versionRange": "[3.0.0,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "enigmaticaddons",
+              "type": "optional",
+              "versionRange": "[0,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "travelerstitles",
+              "type": "optional",
+              "versionRange": "[1.21.1-NeoForge-5.1.3,)",
+              "ordering": "AFTER",
+              "side": "CLIENT"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[输入法冲突修复] IMBlocker-5.5.4-neoforge+1.20.6-1.21.8.jar",
+      "size": 196761,
+      "enabled_extension": true,
+      "sha256": "08c5581bda0ab0fbfdbb10c51102685b403f64b0e712517c4b2d918b2c83cea3",
+      "jar": {
+        "origin": "[输入法冲突修复] IMBlocker-5.5.4-neoforge+1.20.6-1.21.8.jar",
+        "mods": [
+          {
+            "modId": "imblocker",
+            "displayName": "IMBlocker",
+            "version": "5.5.4",
+            "authors": "reserveword, LitnhJacuzzi",
+            "description": "Blocks Input Methods when you're not using it.\n在你不打字的时候自动关闭输入法"
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {}
+      }
+    },
+    {
+      "file": "[连锁破坏] ftb-ultimine-neoforge-2101.1.15.jar",
+      "size": 177109,
+      "enabled_extension": true,
+      "sha256": "1393a85ceb6e4794450d5f06043e3a033278e31b86de8e03950d8b87604b2213",
+      "jar": {
+        "origin": "[连锁破坏] ftb-ultimine-neoforge-2101.1.15.jar",
+        "mods": [
+          {
+            "modId": "ftbultimine",
+            "displayName": "FTB Ultimine",
+            "version": "2101.1.15",
+            "authors": "FTB Team",
+            "description": "Allows you to break multiple blocks at once\n"
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "ftbultimine": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.1.0,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21.1,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "architectury",
+              "type": "required",
+              "versionRange": "[13.0.6,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "ftblibrary",
+              "type": "required",
+              "versionRange": "[2101.1.28,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "ftbezcrystals",
+              "type": "optional",
+              "versionRange": "[21.1.1,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[钠 · 扩展] sodium-extra-neoforge-0.9.3+mc1.21.1.jar.disabled",
+      "size": 465013,
+      "enabled_extension": false,
+      "sha256": "fa553bce38bad6fdd478841a270a79a31dc05f87d7892b1cf839850602ac9186",
+      "jar": {
+        "origin": "[钠 · 扩展] sodium-extra-neoforge-0.9.3+mc1.21.1.jar.disabled",
+        "mods": [
+          {
+            "modId": "sodium_extra",
+            "displayName": "Sodium Extra",
+            "version": "0.9.3+mc1.21.1",
+            "authors": "FlashyReese",
+            "description": "Features that shouldn't be in Sodium.\n"
+          }
+        ],
+        "nested": [
+          {
+            "origin": "[钠 · 扩展] sodium-extra-neoforge-0.9.3+mc1.21.1.jar.disabled!META-INF/jarjar/greenlight-api-0.1.0+mc1.21.10.jar",
+            "mods": [],
+            "nested": []
+          }
+        ],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "sodium_extra": [
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21.1,1.21.2)",
+              "ordering": "NONE",
+              "side": "CLIENT"
+            },
+            {
+              "modId": "sodium",
+              "type": "required",
+              "versionRange": "[0.8.12+mc1.21.1,)",
+              "ordering": "NONE",
+              "side": "CLIENT"
+            },
+            {
+              "modId": "greenlight",
+              "type": "optional",
+              "versionRange": "[0.1.0,)",
+              "ordering": "AFTER",
+              "side": "CLIENT"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[钠 · 扩展] sodium-extra-neoforge-0.9.4+mc1.21.1.jar",
+      "size": 472060,
+      "enabled_extension": true,
+      "sha256": "655b4a25d3d1ccc0f53d0589c676f0a86e46843ae537749048b4b0edc33a0f6f",
+      "jar": {
+        "origin": "[钠 · 扩展] sodium-extra-neoforge-0.9.4+mc1.21.1.jar",
+        "mods": [
+          {
+            "modId": "sodium_extra",
+            "displayName": "Sodium Extra",
+            "version": "0.9.4+mc1.21.1",
+            "authors": "FlashyReese",
+            "description": "Features that shouldn't be in Sodium.\n"
+          }
+        ],
+        "nested": [
+          {
+            "origin": "[钠 · 扩展] sodium-extra-neoforge-0.9.4+mc1.21.1.jar!META-INF/jars/greenlight-api-0.1.0+mc1.21.10.jar",
+            "mods": [],
+            "nested": []
+          }
+        ],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "sodium_extra": [
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21.1]",
+              "ordering": "NONE",
+              "side": "CLIENT"
+            },
+            {
+              "modId": "sodium",
+              "type": "required",
+              "versionRange": "[0.8.13+mc1.21.1,)",
+              "ordering": "NONE",
+              "side": "CLIENT"
+            },
+            {
+              "modId": "greenlight",
+              "type": "optional",
+              "versionRange": "[0.1.0,)",
+              "ordering": "AFTER",
+              "side": "CLIENT"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[钠] sodium-neoforge-0.8.13+mc1.21.1.jar",
+      "size": 1292934,
+      "enabled_extension": true,
+      "sha256": "575d187b15328d7bddd8a9b1bee64333c22c14735f5780ec49eac0cd5503c08d",
+      "jar": {
+        "origin": "[钠] sodium-neoforge-0.8.13+mc1.21.1.jar",
+        "mods": [
+          {
+            "modId": "sodium",
+            "displayName": "Sodium",
+            "version": "0.8.13+mc1.21.1",
+            "authors": "JellySquid (jellysquid3), IMS212",
+            "description": "Sodium is a powerful rendering engine for Minecraft which improves frame rates and reduces lag spikes.\n"
+          }
+        ],
+        "nested": [
+          {
+            "origin": "[钠] sodium-neoforge-0.8.13+mc1.21.1.jar!META-INF/jarjar/net.caffeinemc.sodium-neoforge-0.8.13+mc1.21.1-mod.jar",
+            "mods": [
+              {
+                "modId": "sodium",
+                "displayName": "Sodium",
+                "version": "0.8.13+mc1.21.1",
+                "authors": "JellySquid (jellysquid3), IMS212",
+                "description": "Sodium is a powerful rendering engine for Minecraft which improves frame rates and reduces lag spikes.\n"
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "sodium": [
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "1.21.1",
+                  "ordering": "NONE",
+                  "side": "CLIENT"
+                },
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21.1.82,)",
+                  "ordering": "NONE",
+                  "side": "CLIENT"
+                },
+                {
+                  "modId": "embeddium",
+                  "type": "incompatible",
+                  "reason": "Sodium and Embeddium cannot be used together. Please remove Embeddium.",
+                  "versionRange": "[0.0.1,)",
+                  "ordering": "NONE",
+                  "side": "CLIENT"
+                }
+              ]
+            }
+          },
+          {
+            "origin": "[钠] sodium-neoforge-0.8.13+mc1.21.1.jar!META-INF/jarjar/fabric-api-base-0.4.42+d1308ded19.jar",
+            "mods": [
+              {
+                "modId": "fabric_api_base",
+                "displayName": "Forgified Fabric API Base",
+                "version": "${file.jarVersion}",
+                "authors": "Sinytra, FabricMC",
+                "description": "Contains the essentials for Fabric API modules."
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "fabric_api_base": [
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21.1.219,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "[1.21.1,1.22)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                }
+              ]
+            }
+          },
+          {
+            "origin": "[钠] sodium-neoforge-0.8.13+mc1.21.1.jar!META-INF/jarjar/fabric-block-view-api-v2-1.0.10+9afaaf8c19.jar",
+            "mods": [
+              {
+                "modId": "fabric_block_view_api_v2",
+                "displayName": "Forgified Fabric BlockView API (v2)",
+                "version": "${file.jarVersion}",
+                "authors": "Sinytra, FabricMC",
+                "description": "Hooks for block views"
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "fabric_block_view_api_v2": [
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21.1.115,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "[1.21.1,1.22)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                }
+              ]
+            }
+          },
+          {
+            "origin": "[钠] sodium-neoforge-0.8.13+mc1.21.1.jar!META-INF/jarjar/fabric-renderer-api-v1-3.4.1+9125b6dc19.jar",
+            "mods": [
+              {
+                "modId": "fabric_renderer_api_v1",
+                "displayName": "Forgified Fabric Renderer API (v1)",
+                "version": "${file.jarVersion}",
+                "authors": "Sinytra, FabricMC",
+                "description": "Defines rendering extensions for dynamic/fancy block and item models."
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "fabric_renderer_api_v1": [
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21.1.219,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "[1.21.1,1.22)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "fabric_api_base",
+                  "type": "required",
+                  "versionRange": "*",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                }
+              ]
+            }
+          },
+          {
+            "origin": "[钠] sodium-neoforge-0.8.13+mc1.21.1.jar!META-INF/jarjar/fabric-rendering-data-attachment-v1-0.3.48+73761d2e19.jar",
+            "mods": [
+              {
+                "modId": "fabric_rendering_data_attachment_v1",
+                "displayName": "Forgified Fabric Rendering Data Attachment (v1)",
+                "version": "${file.jarVersion}",
+                "authors": "Sinytra, FabricMC",
+                "description": "Thread-safe hooks for block entity data use during terrain rendering."
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "fabric_rendering_data_attachment_v1": [
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21.1.115,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "[1.21.1,1.22)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "fabric_block_view_api_v2",
+                  "type": "required",
+                  "versionRange": "*",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                }
+              ]
+            }
+          }
+        ],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "sodium": [
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "1.21.1",
+              "ordering": "NONE",
+              "side": "CLIENT"
+            },
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.1.82,)",
+              "ordering": "NONE",
+              "side": "CLIENT"
+            },
+            {
+              "modId": "embeddium",
+              "type": "incompatible",
+              "reason": "Sodium and Embeddium cannot be used together. Please remove Embeddium.",
+              "versionRange": "[0.0.1,)",
+              "ordering": "NONE",
+              "side": "CLIENT"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[钠] sodium-neoforge-0.8.13-beta.2+mc1.21.1.jar.disabled",
+      "size": 1292887,
+      "enabled_extension": false,
+      "sha256": "72eb00f2a0bd9d21e9b7b0e4abc8f4a399287fc0ce5dced75968a3e2461e8919",
+      "jar": {
+        "origin": "[钠] sodium-neoforge-0.8.13-beta.2+mc1.21.1.jar.disabled",
+        "mods": [
+          {
+            "modId": "sodium",
+            "displayName": "Sodium",
+            "version": "0.8.13-beta.2+mc1.21.1",
+            "authors": "JellySquid (jellysquid3), IMS212",
+            "description": "Sodium is a powerful rendering engine for Minecraft which improves frame rates and reduces lag spikes.\n"
+          }
+        ],
+        "nested": [
+          {
+            "origin": "[钠] sodium-neoforge-0.8.13-beta.2+mc1.21.1.jar.disabled!META-INF/jarjar/net.caffeinemc.sodium-neoforge-0.8.13-beta.2+mc1.21.1-mod.jar",
+            "mods": [
+              {
+                "modId": "sodium",
+                "displayName": "Sodium",
+                "version": "0.8.13-beta.2+mc1.21.1",
+                "authors": "JellySquid (jellysquid3), IMS212",
+                "description": "Sodium is a powerful rendering engine for Minecraft which improves frame rates and reduces lag spikes.\n"
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "sodium": [
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "1.21.1",
+                  "ordering": "NONE",
+                  "side": "CLIENT"
+                },
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21.1.82,)",
+                  "ordering": "NONE",
+                  "side": "CLIENT"
+                },
+                {
+                  "modId": "embeddium",
+                  "type": "incompatible",
+                  "reason": "Sodium and Embeddium cannot be used together. Please remove Embeddium.",
+                  "versionRange": "[0.0.1,)",
+                  "ordering": "NONE",
+                  "side": "CLIENT"
+                }
+              ]
+            }
+          },
+          {
+            "origin": "[钠] sodium-neoforge-0.8.13-beta.2+mc1.21.1.jar.disabled!META-INF/jarjar/fabric-api-base-0.4.42+d1308ded19.jar",
+            "mods": [
+              {
+                "modId": "fabric_api_base",
+                "displayName": "Forgified Fabric API Base",
+                "version": "${file.jarVersion}",
+                "authors": "Sinytra, FabricMC",
+                "description": "Contains the essentials for Fabric API modules."
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "fabric_api_base": [
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21.1.219,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "[1.21.1,1.22)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                }
+              ]
+            }
+          },
+          {
+            "origin": "[钠] sodium-neoforge-0.8.13-beta.2+mc1.21.1.jar.disabled!META-INF/jarjar/fabric-block-view-api-v2-1.0.10+9afaaf8c19.jar",
+            "mods": [
+              {
+                "modId": "fabric_block_view_api_v2",
+                "displayName": "Forgified Fabric BlockView API (v2)",
+                "version": "${file.jarVersion}",
+                "authors": "Sinytra, FabricMC",
+                "description": "Hooks for block views"
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "fabric_block_view_api_v2": [
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21.1.115,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "[1.21.1,1.22)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                }
+              ]
+            }
+          },
+          {
+            "origin": "[钠] sodium-neoforge-0.8.13-beta.2+mc1.21.1.jar.disabled!META-INF/jarjar/fabric-renderer-api-v1-3.4.1+9125b6dc19.jar",
+            "mods": [
+              {
+                "modId": "fabric_renderer_api_v1",
+                "displayName": "Forgified Fabric Renderer API (v1)",
+                "version": "${file.jarVersion}",
+                "authors": "Sinytra, FabricMC",
+                "description": "Defines rendering extensions for dynamic/fancy block and item models."
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "fabric_renderer_api_v1": [
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21.1.219,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "[1.21.1,1.22)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "fabric_api_base",
+                  "type": "required",
+                  "versionRange": "*",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                }
+              ]
+            }
+          },
+          {
+            "origin": "[钠] sodium-neoforge-0.8.13-beta.2+mc1.21.1.jar.disabled!META-INF/jarjar/fabric-rendering-data-attachment-v1-0.3.48+73761d2e19.jar",
+            "mods": [
+              {
+                "modId": "fabric_rendering_data_attachment_v1",
+                "displayName": "Forgified Fabric Rendering Data Attachment (v1)",
+                "version": "${file.jarVersion}",
+                "authors": "Sinytra, FabricMC",
+                "description": "Thread-safe hooks for block entity data use during terrain rendering."
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "fabric_rendering_data_attachment_v1": [
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21.1.115,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "[1.21.1,1.22)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "fabric_block_view_api_v2",
+                  "type": "required",
+                  "versionRange": "*",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                }
+              ]
+            }
+          }
+        ],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "sodium": [
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "1.21.1",
+              "ordering": "NONE",
+              "side": "CLIENT"
+            },
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.1.82,)",
+              "ordering": "NONE",
+              "side": "CLIENT"
+            },
+            {
+              "modId": "embeddium",
+              "type": "incompatible",
+              "reason": "Sodium and Embeddium cannot be used together. Please remove Embeddium.",
+              "versionRange": "[0.0.1,)",
+              "ordering": "NONE",
+              "side": "CLIENT"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[铁氧体磁芯] ferritecore-7.0.3-neoforge.jar",
+      "size": 121559,
+      "enabled_extension": true,
+      "sha256": "d87ea28262715ebff45b8a82d493e6b468e7a4521bc021df5d88302196d030a8",
+      "jar": {
+        "origin": "[铁氧体磁芯] ferritecore-7.0.3-neoforge.jar",
+        "mods": [
+          {
+            "modId": "ferritecore",
+            "displayName": "Ferrite Core",
+            "version": "7.0.3",
+            "authors": "malte0811",
+            "description": "Reduces memory usage.\n"
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "ferritecore": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.1.218,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21.1,1.22)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[键位冲突显示] Controlling-neoforge-1.21.1-19.0.5.jar",
+      "size": 77555,
+      "enabled_extension": true,
+      "sha256": "cc525fb6b030d9e4d33176983f278919e17b33935e2ca568929bdfa98f2b44a0",
+      "jar": {
+        "origin": "[键位冲突显示] Controlling-neoforge-1.21.1-19.0.5.jar",
+        "mods": [
+          {
+            "modId": "controlling",
+            "displayName": "Controlling",
+            "version": "19.0.5",
+            "authors": "Jaredlll08",
+            "description": "Adds the ability to search for keybinds using their name in the KeyBinding menu, this allows players to easily find a key binding in the menu."
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "controlling": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.1.94,)",
+              "ordering": "NONE",
+              "side": "CLIENT"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21.1]",
+              "ordering": "NONE",
+              "side": "CLIENT"
+            },
+            {
+              "modId": "searchables",
+              "type": "required",
+              "versionRange": "[1.0.1,)",
+              "ordering": "NONE",
+              "side": "CLIENT"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "[鼠标手势] MouseTweaks-neoforge-mc1.21-2.26.1.jar",
+      "size": 73938,
+      "enabled_extension": true,
+      "sha256": "68e6f4201c5de97b77929a7215c9552495696ca6a3bf3ae4eacc34e135f6cc8b",
+      "jar": {
+        "origin": "[鼠标手势] MouseTweaks-neoforge-mc1.21-2.26.1.jar",
+        "mods": [
+          {
+            "modId": "mousetweaks",
+            "displayName": "Mouse Tweaks",
+            "version": "2.26.1",
+            "authors": "Ivan Molodetskikh (YaLTeR)",
+            "description": "A mod that enhances the inventory management by adding various additional functions to the usual mouse buttons."
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {}
+      }
+    },
+    {
+      "file": "architectury-13.0.11-neoforge.jar",
+      "size": 584734,
+      "enabled_extension": true,
+      "sha256": "9cc92f2c09533fc5482c60f993bd891c655a0e32b637037cdcb7c2b23adedeeb",
+      "jar": {
+        "origin": "architectury-13.0.11-neoforge.jar",
+        "mods": [
+          {
+            "modId": "architectury",
+            "displayName": "Architectury",
+            "version": "13.0.11",
+            "authors": "shedaniel",
+            "description": "A intermediary api aimed to ease developing multiplatform mods.\n"
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "architectury": [
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.0.110-beta,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "bookshelf-neoforge-1.21.1-21.1.81.jar",
+      "size": 328813,
+      "enabled_extension": true,
+      "sha256": "19e88d40da2b6a114c2b808f7fb469d96e66a5379df0a8a43fcb7834498b3e76",
+      "jar": {
+        "origin": "bookshelf-neoforge-1.21.1-21.1.81.jar",
+        "mods": [
+          {
+            "modId": "bookshelf",
+            "displayName": "Bookshelf",
+            "version": "21.1.81",
+            "authors": "Darkhax",
+            "description": "Bookshelf is a library mod that provides code, frameworks, and utilities for other mods. Many mods make use of Bookshelf and are powered by its code."
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "bookshelf": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.1.209,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21.1, 1.22)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "BS_addon_neoforge-1.21.1-1.4.0.jar",
+      "size": 49029,
+      "enabled_extension": true,
+      "sha256": "3013f7ae48262d334ef950c5ef2706588d54c2530510a54dcebb66afcf53c748",
+      "jar": {
+        "origin": "BS_addon_neoforge-1.21.1-1.4.0.jar",
+        "mods": [
+          {
+            "modId": "beyondstorage",
+            "displayName": "Beyond Storage Addon",
+            "version": "1.4.0",
+            "authors": "User",
+            "description": "A NeoForge 1.21.1 build of Beyond Storage Addon that adds a button and keybind to transfer container items into the Beyond Dimensions network.\n"
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "beyondstorage": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.1.194,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21.1]",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "beyonddimensions",
+              "type": "required",
+              "versionRange": "[0.7.24,)",
+              "ordering": "AFTER",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "curios-neoforge-9.1.4+1.21.0.jar.disabled",
+      "size": 366070,
+      "enabled_extension": false,
+      "sha256": "bf765f10a374b060e4316cdca67cdfbd28946b7c2852aaf4122ced70a18fb347",
+      "jar": {
+        "origin": "curios-neoforge-9.1.4+1.21.0.jar.disabled",
+        "mods": [
+          {
+            "modId": "curios",
+            "displayName": "Adorned API",
+            "version": "9.1.4+1.21.0",
+            "authors": "LobsterJonn, C4",
+            "description": "A flexible and expandable accessory/equipment API for users and developers."
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "curios": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.0.146,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21,1.22)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "curios-neoforge-9.5.1+1.21.1.jar",
+      "size": 410690,
+      "enabled_extension": true,
+      "sha256": "a45df2125c26219974aba7507ffc9afe7b83acc941a386af3faacb1cc0056fde",
+      "jar": {
+        "origin": "curios-neoforge-9.5.1+1.21.1.jar",
+        "mods": [
+          {
+            "modId": "curios",
+            "displayName": "Curios API",
+            "version": "9.5.1+1.21.1",
+            "authors": "C4",
+            "description": "A flexible and expandable accessory/equipment API for users and developers."
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "curios": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.1.60,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21, 1.22)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "evolvingblade-1.1.0.jar",
+      "size": 185362,
+      "enabled_extension": true,
+      "sha256": "2d9be326e8310189da15e36cdbfd29c8b9c42bd4681d7143dda12481589bf7c0",
+      "jar": {
+        "origin": "evolvingblade-1.1.0.jar",
+        "mods": [
+          {
+            "modId": "evolvingblade",
+            "displayName": "Evolving Blade",
+            "version": "1.1.0",
+            "authors": "Evolving Blade contributors",
+            "description": "噬星之刃（Evolving Blade）：一把不可破坏、抗火的成长之剑。\n击杀敌对生物与 Boss 累积成长点，在 快速/标准/长期 三种模式中选择其一，\n沿 8 个阶段（胚刃 → 终焉）成长。\n所有门槛与数值均由服务器配置决定，成长数据按玩家、按存档独立持久化。\n"
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "evolvingblade": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.1.248,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21.1]",
+              "ordering": "NONE",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "ftb-library-neoforge-2101.1.35.jar",
+      "size": 1439018,
+      "enabled_extension": true,
+      "sha256": "be7b2bd0b5370a9951624a1d84fd802efecae88d5a0cd24552731f887430599d",
+      "jar": {
+        "origin": "ftb-library-neoforge-2101.1.35.jar",
+        "mods": [
+          {
+            "modId": "ftblibrary",
+            "displayName": "FTB Library",
+            "version": "2101.1.35",
+            "authors": "FTB Team",
+            "description": "FTB Library adds nothing.\n"
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "ftblibrary": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.1.0,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21.1,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "architectury",
+              "type": "required",
+              "versionRange": "[13.0.6,)",
+              "ordering": "AFTER",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "fzzy_config-0.7.7+1.21+neoforge.jar",
+      "size": 2392693,
+      "enabled_extension": true,
+      "sha256": "26af871cacd134ce52610384bbdd362a018707444eb2d498e4833063f378cf85",
+      "jar": {
+        "origin": "fzzy_config-0.7.7+1.21+neoforge.jar",
+        "mods": [
+          {
+            "modId": "fzzy_config",
+            "displayName": "Fzzy Config",
+            "version": "0.7.7+1.21+neoforge",
+            "authors": "fzzyhmstrs",
+            "description": "Configuration engine with automatic GUI generation, client-server syncing, powerful validation and error handling, and much more.\n"
+          }
+        ],
+        "nested": [
+          {
+            "origin": "fzzy_config-0.7.7+1.21+neoforge.jar!META-INF/jars/tomlkt-jvm-0.3.7.jar",
+            "mods": [],
+            "nested": []
+          },
+          {
+            "origin": "fzzy_config-0.7.7+1.21+neoforge.jar!META-INF/jars/jankson-1.2.3.jar",
+            "mods": [],
+            "nested": []
+          }
+        ],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "fzzy_config": [
+            {
+              "modId": "neoforge",
+              "type": "REQUIRED",
+              "versionRange": "[21.0.0-beta,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "REQUIRED",
+              "versionRange": "[1.21,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "kotlinforforge",
+              "type": "REQUIRED",
+              "versionRange": "[5.3.0,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "geckolib-neoforge-1.21.1-4.9.3.jar",
+      "size": 634531,
+      "enabled_extension": true,
+      "sha256": "20a1995e4074f387ff549e2c57ea79dd7d41ee83c6afb9dd6a6e840e592d1c47",
+      "jar": {
+        "origin": "geckolib-neoforge-1.21.1-4.9.3.jar",
+        "mods": [
+          {
+            "modId": "geckolib",
+            "displayName": "GeckoLib 4",
+            "version": "4.9.3",
+            "authors": "Gecko, Eliot, AzureDoom, DerToaster, Tslat, Witixin",
+            "description": "GeckoLib is an animation engine for Minecraft Mods, with support for complex 3D keyframe-based animations, 30+ easings, concurrent animation support, sound and particle keyframes, event keyframes, and more.\n"
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "geckolib": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.1.150,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "geckoanimfix",
+              "type": "incompatible",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "iris-neoforge-1.8.14-beta.1+mc1.21.1.jar",
+      "size": 2540723,
+      "enabled_extension": true,
+      "sha256": "60d5f8bf52f25e9986440f4a4270a6bd986d9cff994510e1108ac1547063b314",
+      "jar": {
+        "origin": "iris-neoforge-1.8.14-beta.1+mc1.21.1.jar",
+        "mods": [
+          {
+            "modId": "iris",
+            "displayName": "Iris",
+            "version": "1.8.14-beta.1+mc1.21.1",
+            "authors": "coderbot, IMS212",
+            "description": "Iris is a modern shaders mod for Minecraft intended to be compatible with existing OptiFine shader packs.\n"
+          }
+        ],
+        "nested": [
+          {
+            "origin": "iris-neoforge-1.8.14-beta.1+mc1.21.1.jar!META-INF/jarjar/glsl-transformer-3.0.0-pre3.jar",
+            "mods": [],
+            "nested": []
+          },
+          {
+            "origin": "iris-neoforge-1.8.14-beta.1+mc1.21.1.jar!META-INF/jarjar/jcpp-1.4.14.jar",
+            "mods": [],
+            "nested": []
+          },
+          {
+            "origin": "iris-neoforge-1.8.14-beta.1+mc1.21.1.jar!META-INF/jarjar/fabric-api-base-0.4.42+d1308ded19.jar",
+            "mods": [
+              {
+                "modId": "fabric_api_base",
+                "displayName": "Forgified Fabric API Base",
+                "version": "${file.jarVersion}",
+                "authors": "Sinytra, FabricMC",
+                "description": "Contains the essentials for Fabric API modules."
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "fabric_api_base": [
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21.1.219,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "[1.21.1,1.22)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                }
+              ]
+            }
+          },
+          {
+            "origin": "iris-neoforge-1.8.14-beta.1+mc1.21.1.jar!META-INF/jarjar/fabric-block-view-api-v2-1.0.10+9afaaf8c19.jar",
+            "mods": [
+              {
+                "modId": "fabric_block_view_api_v2",
+                "displayName": "Forgified Fabric BlockView API (v2)",
+                "version": "${file.jarVersion}",
+                "authors": "Sinytra, FabricMC",
+                "description": "Hooks for block views"
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "fabric_block_view_api_v2": [
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21.1.115,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "[1.21.1,1.22)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                }
+              ]
+            }
+          },
+          {
+            "origin": "iris-neoforge-1.8.14-beta.1+mc1.21.1.jar!META-INF/jarjar/fabric-renderer-api-v1-3.4.0+acb05a3919.jar",
+            "mods": [
+              {
+                "modId": "fabric_renderer_api_v1",
+                "displayName": "Forgified Fabric Renderer API (v1)",
+                "version": "${file.jarVersion}",
+                "authors": "Sinytra, FabricMC",
+                "description": "Defines rendering extensions for dynamic/fancy block and item models."
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "fabric_renderer_api_v1": [
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21.1.57,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "[1.21.1,1.22)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "fabric_api_base",
+                  "type": "required",
+                  "versionRange": "*",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                }
+              ]
+            }
+          },
+          {
+            "origin": "iris-neoforge-1.8.14-beta.1+mc1.21.1.jar!META-INF/jarjar/fabric-rendering-data-attachment-v1-0.3.48+73761d2e19.jar",
+            "mods": [
+              {
+                "modId": "fabric_rendering_data_attachment_v1",
+                "displayName": "Forgified Fabric Rendering Data Attachment (v1)",
+                "version": "${file.jarVersion}",
+                "authors": "Sinytra, FabricMC",
+                "description": "Thread-safe hooks for block entity data use during terrain rendering."
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "fabric_rendering_data_attachment_v1": [
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21.1.115,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "[1.21.1,1.22)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "fabric_block_view_api_v2",
+                  "type": "required",
+                  "versionRange": "*",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                }
+              ]
+            }
+          }
+        ],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "iris": [
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21,1.21.1)",
+              "ordering": "NONE",
+              "side": "CLIENT"
+            },
+            {
+              "modId": "embeddium",
+              "type": "incompatible",
+              "reason": "Iris and Embeddium cannot be used together. Please use Sodium 0.8 instead.",
+              "versionRange": "[0.0.1,)",
+              "ordering": "NONE",
+              "side": "CLIENT"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "irons_lib-1.21.1-2.2.0.jar",
+      "size": 462255,
+      "enabled_extension": true,
+      "sha256": "9e086a4d449147baad6468b11fd34924a905d9cb6818c962676aa0c4589dcc3c",
+      "jar": {
+        "origin": "irons_lib-1.21.1-2.2.0.jar",
+        "mods": [
+          {
+            "modId": "irons_lib",
+            "displayName": "Iron's Lib",
+            "version": "1.21.1-2.2.0",
+            "authors": null,
+            "description": "Provides common functionality and content for Iron431's mods.\n"
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "irons_lib": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.1.221,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21.1]",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "geckolib",
+              "type": "required",
+              "versionRange": "4.7.5.1",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "irons_patreon_lib",
+              "type": "incompatible",
+              "ordering": "NONE",
+              "side": "BOTH",
+              "reason": "Patreon Lib is superceeded by Iron's Lib! You can safely uninstall it."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "kotlinforforge-5.12.0-all.jar",
+      "size": 7279264,
+      "enabled_extension": true,
+      "sha256": "2785a4dd6de5c6c56065fd8eb789c82771bd2ee773c30794c23160a3b2c39139",
+      "jar": {
+        "origin": "kotlinforforge-5.12.0-all.jar",
+        "mods": [],
+        "nested": [
+          {
+            "origin": "kotlinforforge-5.12.0-all.jar!META-INF/jarjar/kotlin-reflect-2.4.0.jar",
+            "mods": [],
+            "nested": []
+          },
+          {
+            "origin": "kotlinforforge-5.12.0-all.jar!META-INF/jarjar/kotlin-stdlib-2.4.0.jar",
+            "mods": [],
+            "nested": []
+          },
+          {
+            "origin": "kotlinforforge-5.12.0-all.jar!META-INF/jarjar/kotlin-stdlib-jdk7-2.4.0.jar",
+            "mods": [],
+            "nested": []
+          },
+          {
+            "origin": "kotlinforforge-5.12.0-all.jar!META-INF/jarjar/kotlin-stdlib-jdk8-2.4.0.jar",
+            "mods": [],
+            "nested": []
+          },
+          {
+            "origin": "kotlinforforge-5.12.0-all.jar!META-INF/jarjar/kotlinx-coroutines-core-jvm-1.11.0.jar",
+            "mods": [],
+            "nested": []
+          },
+          {
+            "origin": "kotlinforforge-5.12.0-all.jar!META-INF/jarjar/kotlinx-coroutines-jdk8-1.11.0.jar",
+            "mods": [],
+            "nested": []
+          },
+          {
+            "origin": "kotlinforforge-5.12.0-all.jar!META-INF/jarjar/thedarkcolour.kfflang-5.12.0.jar",
+            "mods": [],
+            "nested": []
+          },
+          {
+            "origin": "kotlinforforge-5.12.0-all.jar!META-INF/jarjar/thedarkcolour.kfflib-5.12.0.jar",
+            "mods": [],
+            "nested": []
+          },
+          {
+            "origin": "kotlinforforge-5.12.0-all.jar!META-INF/jarjar/thedarkcolour.kffmod-5.12.0.jar",
+            "mods": [
+              {
+                "modId": "kotlinforforge",
+                "displayName": "Kotlin For Forge",
+                "version": "5.12.0",
+                "authors": "thedarkcolour",
+                "description": "Makes Kotlin forge-friendly\n"
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "kotlinforforge": [
+                {
+                  "modId": "minecraft",
+                  "mandatory": true,
+                  "type": "required",
+                  "versionRange": "[1.20.6,1.21.9)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                }
+              ]
+            }
+          },
+          {
+            "origin": "kotlinforforge-5.12.0-all.jar!META-INF/jarjar/kotlinx-serialization-core-jvm-1.11.0.jar",
+            "mods": [],
+            "nested": []
+          },
+          {
+            "origin": "kotlinforforge-5.12.0-all.jar!META-INF/jarjar/kotlinx-serialization-json-jvm-1.11.0.jar",
+            "mods": [],
+            "nested": []
+          }
+        ]
+      }
+    },
+    {
+      "file": "l2library-3.0.8.jar",
+      "size": 973882,
+      "enabled_extension": true,
+      "sha256": "26038e30873cf505bc289e28f9dcf084561b8a4929b294dd0552ba5e52505dd6",
+      "jar": {
+        "origin": "l2library-3.0.8.jar",
+        "mods": [
+          {
+            "modId": "l2library",
+            "displayName": "L2Library",
+            "version": "3.0.8",
+            "authors": "lcy0x1",
+            "description": "Library mod for all L2 mods"
+          }
+        ],
+        "nested": [
+          {
+            "origin": "l2library-3.0.8.jar!META-INF/jarjar/Registrate-MC1.21-1.3.0+67.jar",
+            "mods": [],
+            "nested": []
+          },
+          {
+            "origin": "l2library-3.0.8.jar!META-INF/jarjar/l2core-3.0.8+15.jar",
+            "mods": [
+              {
+                "modId": "l2core",
+                "displayName": "L2Core",
+                "version": "3.0.8+15",
+                "authors": "lcy0x1",
+                "description": "Core Library mod for all L2 mods"
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "l2core": [
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21.1.4,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "[1.21.1,1.22)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                }
+              ]
+            }
+          },
+          {
+            "origin": "l2library-3.0.8.jar!META-INF/jarjar/l2itemselector-3.0.9.jar",
+            "mods": [
+              {
+                "modId": "l2itemselector",
+                "displayName": "L2ItemSelector",
+                "version": "3.0.9",
+                "authors": "lcy0x1",
+                "description": "Inventory Tabs"
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "l2itemselector": [
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21.0,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "[1.21,1.22)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                }
+              ]
+            }
+          },
+          {
+            "origin": "l2library-3.0.8.jar!META-INF/jarjar/l2menustacker-3.0.10.jar",
+            "mods": [
+              {
+                "modId": "l2menustacker",
+                "displayName": "L2MenuStacker",
+                "version": "3.0.10",
+                "authors": "lcy0x1",
+                "description": "Inventory Tabs"
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "l2menustacker": [
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21.0,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "[1.21,1.22)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                }
+              ]
+            }
+          },
+          {
+            "origin": "l2library-3.0.8.jar!META-INF/jarjar/l2modularblocks-3.0.0+4.jar",
+            "mods": [],
+            "nested": []
+          },
+          {
+            "origin": "l2library-3.0.8.jar!META-INF/jarjar/l2serial-3.1.1.jar",
+            "mods": [],
+            "nested": []
+          },
+          {
+            "origin": "l2library-3.0.8.jar!META-INF/jarjar/l2tabs-3.0.5+7.jar",
+            "mods": [
+              {
+                "modId": "l2tabs",
+                "displayName": "L2Tabs",
+                "version": "3.0.5+7",
+                "authors": "lcy0x1",
+                "description": "Inventory Tabs"
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "l2tabs": [
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21.0,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "[1.21.1,1.22)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "accessories",
+                  "type": "optional",
+                  "versionRange": "[1.1.0-beta.5+1.21.1,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                }
+              ]
+            }
+          }
+        ],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "l2library": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.1.4,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21.1,1.22)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "libIPN-neoforge-1.21.1-6.6.3.jar",
+      "size": 626146,
+      "enabled_extension": true,
+      "sha256": "98f061ba69d31764fa10ab7810ca49062633e107a6b261ba3b66dc25ba5fef7b",
+      "jar": {
+        "origin": "libIPN-neoforge-1.21.1-6.6.3.jar",
+        "mods": [
+          {
+            "modId": "libipn",
+            "displayName": "libIPN",
+            "version": "6.6.3",
+            "authors": "Mirinimi\n",
+            "description": "\"Inventory Profiles Next Settings and GUI Library\"\n"
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "libipn": [
+            {
+              "modId": "neoforge",
+              "mandatory": true,
+              "versionRange": "[21.1,)"
+            },
+            {
+              "modId": "minecraft",
+              "mandatory": true,
+              "versionRange": "[1.21.1, 1.21.2)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "lionfishapi-3.1.jar",
+      "size": 91596,
+      "enabled_extension": true,
+      "sha256": "aeebf0692650afbbc78259c0d4e3d5b7edf037707e8ae5d56045066d83a19cf6",
+      "jar": {
+        "origin": "lionfishapi-3.1.jar",
+        "mods": [
+          {
+            "modId": "lionfishapi",
+            "displayName": "lionfishapi",
+            "version": "3.1",
+            "authors": "L_Ender",
+            "description": ""
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "lionfishapi": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.1.219,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "1.21.1",
+              "ordering": "NONE",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "player-animation-lib-forge-2.0.4+1.21.1.jar",
+      "size": 203149,
+      "enabled_extension": true,
+      "sha256": "dbe5de45f5cd60c0e5e47af14e6d564534a98456e973cf670cb881f6938eee92",
+      "jar": {
+        "origin": "player-animation-lib-forge-2.0.4+1.21.1.jar",
+        "mods": [
+          {
+            "modId": "playeranimator",
+            "displayName": "Player Animator",
+            "version": "2.0.4+1.21.1",
+            "authors": "KosmX",
+            "description": "A lightweight library to easily animate the player"
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "playeranimator": [
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "mandatory": true,
+              "versionRange": "[1.21,1.21.2)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "prickle-neoforge-1.21.1-21.1.11.jar",
+      "size": 84812,
+      "enabled_extension": true,
+      "sha256": "ccf46c442ed3c7fe41ad056f0940560829ec4dd88360985dfacd78f4614eb167",
+      "jar": {
+        "origin": "prickle-neoforge-1.21.1-21.1.11.jar",
+        "mods": [
+          {
+            "modId": "prickle",
+            "displayName": "PrickleMC",
+            "version": "21.1.11",
+            "authors": "Darkhax",
+            "description": "Bringing Prickle, the JSON based configuration file format to Minecraft."
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "prickle": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.1.61,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21.1, 1.22)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "rpgleveling-1.0.0.jar",
+      "size": 379569,
+      "enabled_extension": true,
+      "sha256": "c80a959783b33fa65d75fffab14b43fdd21c70a97f3634bb02ea3ad58b043bb0",
+      "jar": {
+        "origin": "rpgleveling-1.0.0.jar",
+        "mods": [
+          {
+            "modId": "rpgleveling",
+            "displayName": "RPG Leveling",
+            "version": "1.0.0",
+            "authors": "RPGLeveling Team",
+            "description": "RPG leveling mod: 13 stats x {flat, percent} point-buy lines, unbounded levels with saturating returns, server-authoritative.\n"
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "rpgleveling": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.1.0,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21.1,1.22)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "patchouli",
+              "type": "required",
+              "versionRange": "[1.21,)",
+              "ordering": "AFTER",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "sable-neoforge-1.21.1-2.0.6.jar",
+      "size": 12986135,
+      "enabled_extension": true,
+      "sha256": "9c199157843bf953a47dff625fc5bb41c01a90538d35ad18e6996bbcb8a617c2",
+      "jar": {
+        "origin": "sable-neoforge-1.21.1-2.0.6.jar",
+        "mods": [
+          {
+            "modId": "sable",
+            "displayName": "Sable",
+            "version": "2.0.6",
+            "authors": "RyanHCode",
+            "description": "Interactive moving block structures with physics."
+          }
+        ],
+        "nested": [
+          {
+            "origin": "sable-neoforge-1.21.1-2.0.6.jar!META-INF/jarjar/sable-companion-common-1.21.1-1.6.0.jar",
+            "mods": [
+              {
+                "modId": "sablecompanion",
+                "displayName": "Sable Companion",
+                "version": "1.6.0",
+                "authors": "RyanHCode, Ocelot",
+                "description": "A lightweight library for making mods compatible with Sable"
+              }
+            ],
+            "nested": [],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "sablecompanion": [
+                {
+                  "modId": "neoforge",
+                  "type": "required",
+                  "versionRange": "[21.1.80,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                },
+                {
+                  "modId": "minecraft",
+                  "type": "required",
+                  "versionRange": "[1.21.1,)",
+                  "ordering": "NONE",
+                  "side": "BOTH"
+                }
+              ]
+            }
+          },
+          {
+            "origin": "sable-neoforge-1.21.1-2.0.6.jar!META-INF/jarjar/dev.ryanhcode.sable.sable-sable_rapier-1.21.1-2.0.6.jar",
+            "mods": [],
+            "nested": []
+          },
+          {
+            "origin": "sable-neoforge-1.21.1-2.0.6.jar!META-INF/jarjar/veil-neoforge-1.21.1-4.3.2.jar",
+            "mods": [
+              {
+                "modId": "veil",
+                "displayName": "Veil",
+                "version": "4.3.2",
+                "authors": "amo, Cappin, Ocelot",
+                "description": "Veil is a sophisticated collection of tools and utilities designed to facilitate advanced rendering for Minecraft mod developers. Our goal is to enable more modern game-engine level content in Java Minecraft, pushing the boundaries of what is possible in modding."
+              }
+            ],
+            "nested": [
+              {
+                "origin": "sable-neoforge-1.21.1-2.0.6.jar!META-INF/jarjar/veil-neoforge-1.21.1-4.3.2.jar!META-INF/jarjar/molang-compiler-3.1.1.19.jar",
+                "mods": [],
+                "nested": []
+              },
+              {
+                "origin": "sable-neoforge-1.21.1-2.0.6.jar!META-INF/jarjar/veil-neoforge-1.21.1-4.3.2.jar!META-INF/jarjar/glsl-processor-0.2.3.jar",
+                "mods": [],
+                "nested": []
+              }
+            ],
+            "metadata_file": "META-INF/neoforge.mods.toml",
+            "dependencies": {
+              "veil": [
+                {
+                  "modId": "neoforge",
+                  "versionRange": "[21.1.1,)"
+                },
+                {
+                  "modId": "minecraft",
+                  "versionRange": "[1.21.1,1.21.3]"
+                },
+                {
+                  "modId": "rubidium",
+                  "type": "incompatible",
+                  "reason": "Veil supports Sodium 0.8.12-alpha.2+mc1.21.1 and above"
+                },
+                {
+                  "modId": "embeddium",
+                  "type": "incompatible",
+                  "reason": "Veil supports Sodium 0.8.12-alpha.2+mc1.21.1 and above"
+                },
+                {
+                  "modId": "celeritas",
+                  "type": "incompatible",
+                  "reason": "Veil supports Sodium 0.8.12-alpha.2+mc1.21.1 and above"
+                },
+                {
+                  "modId": "sodium",
+                  "type": "optional",
+                  "versionRange": "[0.8.12-alpha.2+mc1.21.1,)",
+                  "reason": "Veil supports Sodium 0.8.12-alpha.2+mc1.21.1 and above"
+                },
+                {
+                  "modId": "imguimc",
+                  "type": "optional",
+                  "versionRange": "[1.1.0,2.0.0)",
+                  "reason": "Veil supports imguimc 1.1.0 to 2.0.0"
+                }
+              ]
+            }
+          }
+        ],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "sable": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.1.228,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21.1]",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "flywheel",
+              "type": "optional",
+              "versionRange": "[1.0.6,)",
+              "ordering": "AFTER",
+              "side": "CLIENT"
+            },
+            {
+              "modId": "create",
+              "type": "optional",
+              "versionRange": "[6.0.10,6.1.0)",
+              "ordering": "AFTER",
+              "side": "CLIENT"
+            },
+            {
+              "modId": "sablecompanion",
+              "type": "incompatible",
+              "versionRange": "(1.6.0,)",
+              "reason": "Sable is out of date"
+            },
+            {
+              "modId": "sodium",
+              "type": "incompatible",
+              "versionRange": "(,0.8.12-alpha.2+mc1.21.1)",
+              "reason": "Sable supports Sodium 0.8.12-alpha.2+mc1.21.1 and above"
+            },
+            {
+              "modId": "scalablelux",
+              "type": "incompatible"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "Searchables-neoforge-1.21.1-1.0.2.jar",
+      "size": 77326,
+      "enabled_extension": true,
+      "sha256": "ca193f0c69033d8f709f9e073a7c1ef4ea46714e5c2f94eb23ace12781c6aa68",
+      "jar": {
+        "origin": "Searchables-neoforge-1.21.1-1.0.2.jar",
+        "mods": [
+          {
+            "modId": "searchables",
+            "displayName": "Searchables",
+            "version": "1.0.2",
+            "authors": "Jaredlll08",
+            "description": "A library mod to facilitate adding search bars with auto complete and search types."
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "searchables": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[4,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21.1]",
+              "ordering": "NONE",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "无限之核模组-infinitecore-1.0.0.jar",
+      "size": 79264,
+      "enabled_extension": true,
+      "sha256": "10ec43204404817c8738088670571d5044bbf4b992a9247ab8d67b986aa2e400",
+      "jar": {
+        "origin": "无限之核模组-infinitecore-1.0.0.jar",
+        "mods": [
+          {
+            "modId": "infinitecore",
+            "displayName": "Infinite Core",
+            "version": "1.0.0",
+            "authors": "Infinite Core Team",
+            "description": "Infinite Core - a series of single-block machines that generate resources infinitely.\nEight tiers: dirt, wood, stone, copper, iron, gold, diamond, netherite.\nPlace a crafted generation template into the machine to start generating.\n"
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "infinitecore": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.1.0,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21.1,1.22)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "星空之刃模组-starsword-1.0.0.jar.disabled",
+      "size": 36802,
+      "enabled_extension": false,
+      "sha256": "f3a164decacefd572a1b8369bee2ae17ac6419bb8497a0aa445e53a0d6596f23",
+      "jar": {
+        "origin": "星空之刃模组-starsword-1.0.0.jar.disabled",
+        "mods": [
+          {
+            "modId": "starsword",
+            "displayName": "星空之刃 Star Sword",
+            "version": "1.0.0",
+            "authors": "Stardust",
+            "description": "A legendary starry-sky sword for NeoForge 1.21.1.\n一把来自星空的传说之刃：500 基础伤害、1% 生命上限真实伤害（无视防御与减伤）、右键远程攻击视野内一切目标、按 C 键切换单体/范围伤害模式。"
+          }
+        ],
+        "nested": [],
+        "metadata_file": "META-INF/neoforge.mods.toml",
+        "dependencies": {
+          "starsword": [
+            {
+              "modId": "neoforge",
+              "type": "required",
+              "versionRange": "[21.1.0,)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            },
+            {
+              "modId": "minecraft",
+              "type": "required",
+              "versionRange": "[1.21.1,1.22)",
+              "ordering": "NONE",
+              "side": "BOTH"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "config_files": [
+    "MouseTweaks.cfg",
+    "aeronautics-server.toml",
+    "appleskin-client.toml",
+    "attributefix\\cataclysm\\additional_critical_damage.json",
+    "attributefix\\cataclysm\\charge_time.json",
+    "attributefix\\cataclysm\\eat_speed.json",
+    "attributefix\\cataclysm\\nature_heal.json",
+    "attributefix\\confluence_magic_lib\\player.mob_spawn_count_multiplier.json",
+    "attributefix\\confluence_magic_lib\\player.mob_spawn_speed_multiplier.json",
+    "attributefix\\ftbultimine\\cooldown_modifier.json",
+    "attributefix\\ftbultimine\\exhaustion_modifier.json",
+    "attributefix\\ftbultimine\\experience_modifier.json",
+    "attributefix\\ftbultimine\\max_blocks_modifier.json",
+    "attributefix\\goety\\abyss_discount.json",
+    "attributefix\\goety\\abyss_potency.json",
+    "attributefix\\goety\\casting_speed.json",
+    "attributefix\\goety\\cooldown_discount.json",
+    "attributefix\\goety\\frost_discount.json",
+    "attributefix\\goety\\frost_potency.json",
+    "attributefix\\goety\\geomancy_discount.json",
+    "attributefix\\goety\\geomancy_potency.json",
+    "attributefix\\goety\\necromancy_discount.json",
+    "attributefix\\goety\\necromancy_potency.json",
+    "attributefix\\goety\\nether_discount.json",
+    "attributefix\\goety\\nether_potency.json",
+    "attributefix\\goety\\soul_discount.json",
+    "attributefix\\goety\\spell_burning.json",
+    "attributefix\\goety\\spell_duration.json",
+    "attributefix\\goety\\spell_potency.json",
+    "attributefix\\goety\\spell_radius.json",
+    "attributefix\\goety\\spell_range.json",
+    "attributefix\\goety\\spell_velocity.json",
+    "attributefix\\goety\\storm_discount.json",
+    "attributefix\\goety\\storm_potency.json",
+    "attributefix\\goety\\void_discount.json",
+    "attributefix\\goety\\void_potency.json",
+    "attributefix\\goety\\wild_discount.json",
+    "attributefix\\goety\\wild_potency.json",
+    "attributefix\\goety\\wind_discount.json",
+    "attributefix\\goety\\wind_potency.json",
+    "attributefix\\irons_lib\\armor_pierce.json",
+    "attributefix\\irons_lib\\arrow_damage.json",
+    "attributefix\\irons_lib\\crit_damage.json",
+    "attributefix\\irons_lib\\dodge_chance.json",
+    "attributefix\\irons_lib\\experience_gained.json",
+    "attributefix\\irons_lib\\healing_received.json",
+    "attributefix\\irons_lib\\mining_speed.json",
+    "attributefix\\irons_lib\\projectile_damage.json",
+    "attributefix\\irons_spellbooks\\blood_magic_resist.json",
+    "attributefix\\irons_spellbooks\\blood_spell_power.json",
+    "attributefix\\irons_spellbooks\\cast_time_reduction.json",
+    "attributefix\\irons_spellbooks\\casting_movespeed.json",
+    "attributefix\\irons_spellbooks\\cooldown_reduction.json",
+    "attributefix\\irons_spellbooks\\eldritch_magic_resist.json",
+    "attributefix\\irons_spellbooks\\eldritch_spell_power.json",
+    "attributefix\\irons_spellbooks\\ender_magic_resist.json",
+    "attributefix\\irons_spellbooks\\ender_spell_power.json",
+    "attributefix\\irons_spellbooks\\evocation_magic_resist.json",
+    "attributefix\\irons_spellbooks\\evocation_spell_power.json",
+    "attributefix\\irons_spellbooks\\fire_magic_resist.json",
+    "attributefix\\irons_spellbooks\\fire_spell_power.json",
+    "attributefix\\irons_spellbooks\\holy_magic_resist.json",
+    "attributefix\\irons_spellbooks\\holy_spell_power.json",
+    "attributefix\\irons_spellbooks\\ice_magic_resist.json",
+    "attributefix\\irons_spellbooks\\ice_spell_power.json",
+    "attributefix\\irons_spellbooks\\lightning_magic_resist.json",
+    "attributefix\\irons_spellbooks\\lightning_spell_power.json",
+    "attributefix\\irons_spellbooks\\mana_regen.json",
+    "attributefix\\irons_spellbooks\\max_mana.json",
+    "attributefix\\irons_spellbooks\\nature_magic_resist.json",
+    "attributefix\\irons_spellbooks\\nature_spell_power.json",
+    "attributefix\\irons_spellbooks\\spell_power.json",
+    "attributefix\\irons_spellbooks\\spell_resist.json",
+    "attributefix\\irons_spellbooks\\summon_damage.json",
+    "attributefix\\l2damagetracker\\bow_strength.json",
+    "attributefix\\l2damagetracker\\crit_damage.json",
+    "attributefix\\l2damagetracker\\crit_rate.json",
+    "attributefix\\l2damagetracker\\damage_absorption.json",
+    "attributefix\\l2damagetracker\\damage_reduction.json",
+    "attributefix\\l2damagetracker\\explosion_damage.json",
+    "attributefix\\l2damagetracker\\fire_damage.json",
+    "attributefix\\l2damagetracker\\freezing_damage.json",
+    "attributefix\\l2damagetracker\\lightning_damage.json",
+    "attributefix\\l2damagetracker\\magic_damage.json",
+    "attributefix\\l2damagetracker\\regen.json",
+    "attributefix\\l2hostility\\extra_difficulty.json",
+    "attributefix\\minecraft\\generic.armor.json",
+    "attributefix\\minecraft\\generic.armor_toughness.json",
+    "attributefix\\minecraft\\generic.attack_damage.json",
+    "attributefix\\minecraft\\generic.attack_knockback.json",
+    "attributefix\\minecraft\\generic.attack_speed.json",
+    "attributefix\\minecraft\\generic.burning_time.json",
+    "attributefix\\minecraft\\generic.explosion_knockback_resistance.json",
+    "attributefix\\minecraft\\generic.fall_damage_multiplier.json",
+    "attributefix\\minecraft\\generic.flying_speed.json",
+    "attributefix\\minecraft\\generic.follow_range.json",
+    "attributefix\\minecraft\\generic.gravity.json",
+    "attributefix\\minecraft\\generic.jump_strength.json",
+    "attributefix\\minecraft\\generic.knockback_resistance.json",
+    "attributefix\\minecraft\\generic.luck.json",
+    "attributefix\\minecraft\\generic.max_absorption.json",
+    "attributefix\\minecraft\\generic.max_health.json",
+    "attributefix\\minecraft\\generic.movement_efficiency.json",
+    "attributefix\\minecraft\\generic.movement_speed.json",
+    "attributefix\\minecraft\\generic.oxygen_bonus.json",
+    "attributefix\\minecraft\\generic.safe_fall_distance.json",
+    "attributefix\\minecraft\\generic.scale.json",
+    "attributefix\\minecraft\\generic.step_height.json",
+    "attributefix\\minecraft\\generic.water_movement_efficiency.json",
+    "attributefix\\minecraft\\player.block_break_speed.json",
+    "attributefix\\minecraft\\player.block_interaction_range.json",
+    "attributefix\\minecraft\\player.entity_interaction_range.json",
+    "attributefix\\minecraft\\player.mining_efficiency.json",
+    "attributefix\\minecraft\\player.sneaking_speed.json",
+    "attributefix\\minecraft\\player.submerged_mining_speed.json",
+    "attributefix\\minecraft\\player.sweeping_damage_ratio.json",
+    "attributefix\\minecraft\\zombie.spawn_reinforcements.json",
+    "attributefix\\neoforge\\nametag_distance.json",
+    "attributefix\\neoforge\\swim_speed.json",
+    "attributefix\\rpgleveling\\crit_chance.json",
+    "attributefix\\rpgleveling\\crit_damage.json",
+    "attributefix\\rpgleveling\\damage_reduction.json",
+    "attributefix\\rpgleveling\\drop_rate.json",
+    "attributefix\\rpgleveling\\health_regen.json",
+    "attributefix\\rpgleveling\\lifesteal.json",
+    "attributefix\\rpgleveling\\xp_gain.json",
+    "attributefix\\sable\\player.sub_level_punch_cooldown.json",
+    "attributefix\\sable\\player.sub_level_punch_strength.json",
+    "attributefix\\terra_curio\\generic.armor_penetration.json",
+    "attributefix\\terra_curio\\generic.crit_chance.json",
+    "attributefix\\terra_curio\\generic.dodge_chance.json",
+    "attributefix\\terra_curio\\generic.magic_damage.json",
+    "attributefix\\terra_curio\\generic.ranged_damage.json",
+    "attributefix\\terra_curio\\generic.ranged_velocity.json",
+    "attributefix\\terra_curio\\player.aggro.json",
+    "attributefix\\terra_curio\\player.pickup_range.json",
+    "attributefix\\terra_entity\\player.mark_damage.json",
+    "attributefix\\terra_entity\\player.minion_capacity.json",
+    "attributefix\\terra_entity\\player.sentry_capacity.json",
+    "attributefix\\terra_entity\\player.summon_damage.json",
+    "attributefix\\terra_entity\\player.summon_knockback.json",
+    "attributefix\\terra_entity\\player.whip_range.json",
+    "attributefix\\touhou_little_maid\\maid_crossbow_attack_speed.json",
+    "attributefix\\touhou_little_maid\\maid_gun_attack_speed.json",
+    "attributefix\\touhou_little_maid\\maid_hunger.json",
+    "attributefix\\touhou_little_maid\\maid_passive_use_shield_tick.json",
+    "attributefix\\touhou_little_maid\\maid_pickup_range.json",
+    "attributefix\\touhou_little_maid\\maid_shoot_cooldown.json",
+    "attributefix\\touhou_little_maid\\maid_trident_cooldown.json",
+    "attributefix\\touhou_little_maid\\maid_use_item_speed.json",
+    "avaritia-server.toml",
+    "beyonddimensions-common.toml",
+    "beyonddimensions-server.toml",
+    "beyondstorage.properties",
+    "cataclysm-client.toml",
+    "cataclysm-common.toml",
+    "colorfulhearts.toml",
+    "confluence-client.toml",
+    "confluence-common.toml",
+    "confluence-startup.toml",
+    "confluence_magic_lib-startup.toml",
+    "confluence_weaponmod.json",
+    "create-client.toml",
+    "create-common.toml",
+    "create-server.toml",
+    "create_connected-common.toml",
+    "create_connected-server.toml",
+    "create_dragons_plus-client.toml",
+    "create_dragons_plus-common.toml",
+    "create_dragons_plus-server.toml",
+    "create_dragons_plus-simulated-extension-server.toml",
+    "create_enchantment_industry-client.toml",
+    "create_enchantment_industry-common.toml",
+    "create_enchantment_industry-server.toml",
+    "create_enchantment_industry-touhou_little_maid-server.toml",
+    "createaddition-common.toml",
+    "curios-client.toml",
+    "curios-common.toml",
+    "curios-server.toml",
+    "dynamic_fps.json",
+    "evolvingblade-server-1.toml.bak",
+    "evolvingblade-server.toml",
+    "farmersdelight-client.toml",
+    "farmersdelight-common.toml",
+    "ferritecore-mixin.toml",
+    "flywheel-client.toml",
+    "fml.toml",
+    "ftblibrary-client.snbt",
+    "ftbultimine-client.snbt",
+    "ftbultimine-server.snbt",
+    "fzzy_config\\keybinds.toml",
+    "goety\\goety-attributes.toml",
+    "goety\\goety-brews.toml",
+    "goety\\goety-items.toml",
+    "goety\\goety-mobs.toml",
+    "goety\\goety-spells.toml",
+    "goety\\goety.toml",
+    "goety_cataclysm\\goety_cataclysm-attributes.toml",
+    "goety_cataclysm\\goety_cataclysm-mobs.toml",
+    "goety_cataclysm\\goety_cataclysm-spells.toml",
+    "goetydelight-client.toml",
+    "goetydelight-common.toml",
+    "goetydelight-server.toml",
+    "goetydelight-startup.toml",
+    "goetyiron-common.toml",
+    "inventoryprofilesnext\\EvolvingBlade Install QA\\prev-villager-trading-config-v2.json",
+    "inventoryprofilesnext\\EvolvingBlade Install QA\\villager-trading-config-v2.json",
+    "inventoryprofilesnext\\integrationHints\\exampleIntegrationHints.json",
+    "inventoryprofilesnext\\inventoryprofiles.json",
+    "inventoryprofilesnext\\新的世界\\prev-villager-trading-config-v2.json",
+    "inventoryprofilesnext\\新的世界\\villager-trading-config-v2.json",
+    "iris-excluded.json",
+    "iris.properties",
+    "irons_spellbooks-client.toml",
+    "irons_spellbooks-server.toml",
+    "irons_spellbooks_spell_config\\global_config.json",
+    "irons_spellbooks_spell_config\\irons_spellbooks\\example.txt",
+    "jade\\hide-blocks.json",
+    "jade\\hide-entities.json",
+    "jade\\jade.json",
+    "jade\\plugins.json",
+    "jade\\sort-order.json",
+    "jei-server.toml",
+    "jei\\blacklist.json",
+    "jei\\ingredient-list-mod-sort-order.ini",
+    "jei\\ingredient-list-type-sort-order.ini",
+    "jei\\jei-client.ini",
+    "jei\\jei-colors.ini",
+    "jei\\jei-debug.ini",
+    "jei\\jei-mod-id-format.ini",
+    "jei\\recipe-category-sort-order.ini",
+    "jei\\world\\local\\EvolvingBlade Install QA\\bookmarks.json",
+    "jei\\world\\local\\EvolvingBlade Install QA\\lookupHistory.json",
+    "jei\\world\\local\\新的世界 (2)\\lookupHistory.json",
+    "jei\\world\\local\\新的世界\\lookupHistory.json",
+    "kaleidoscope_cookery-client.toml",
+    "kaleidoscope_cookery-common.toml",
+    "l2configs\\l2complements-client.toml",
+    "l2configs\\l2complements-common.toml",
+    "l2configs\\l2complements-server.toml",
+    "l2configs\\l2core-client.toml",
+    "l2configs\\l2damagetracker-server.toml",
+    "l2configs\\l2hostility-client.toml",
+    "l2configs\\l2hostility-server.toml",
+    "l2configs\\l2itemselector-client.toml",
+    "l2configs\\l2library-server.toml",
+    "l2configs\\l2menustacker-server.toml",
+    "l2configs\\l2tabs-client.toml",
+    "l2configs\\pandora-server.toml",
+    "maid_restaurant-server.toml",
+    "maid_useful_task-common.toml",
+    "modernfix-common.toml",
+    "modernfix-mixins.properties",
+    "neoforge-client.toml",
+    "neoforge-common.toml",
+    "neoforge-server.toml",
+    "offroad-server.toml",
+    "overloadedarmorbar-client.toml",
+    "particlestorm-common.toml",
+    "patchouli-client.toml",
+    "ponder-client.toml",
+    "rpgleveling-client-1.toml.bak",
+    "rpgleveling-client.toml",
+    "rpgleveling-common-1.toml.bak",
+    "rpgleveling-common-2.toml.bak",
+    "rpgleveling-common.toml",
+    "rpgleveling-common.toml.bak-2026-10-08",
+    "sable-client.toml",
+    "sable-common.toml",
+    "sable-server.toml",
+    "simulated-client.toml",
+    "simulated-server.toml",
+    "sodium-extra-options.json",
+    "sodium-extra.properties",
+    "sodium-fingerprint.json",
+    "sodium-mixins.properties",
+    "sodium-options.json",
+    "solmaid-server.toml",
+    "tarotcards\\tarotcards.toml",
+    "terra_curio-client.toml",
+    "terra_curio-common.toml",
+    "terra_curio-startup.toml",
+    "terra_entity-client.toml",
+    "terra_entity-server.toml",
+    "terra_entity\\attribute_config.json",
+    "terrablender.toml",
+    "the_trackers-client.toml",
+    "thr_dim_particle-client.toml",
+    "touhou_little_maid-common.toml",
+    "touhou_little_maid-server.toml",
+    "touhou_little_maid\\info.json",
+    "touhou_little_maid\\sites\\llm.json",
+    "touhou_little_maid\\sites\\stt.json",
+    "touhou_little_maid\\sites\\tts.json",
+    "touhou_little_maid_spell-client.toml",
+    "touhou_little_maid_spell-common.toml",
+    "touhou_maid_affection-common.toml",
+    "xaero\\lib\\client.cfg",
+    "xaero\\lib\\common.cfg",
+    "xaero\\lib\\profiles\\default.cfg",
+    "xaero\\lib\\server_profiles\\default.cfg",
+    "xaero\\minimap\\client.cfg",
+    "xaero\\minimap\\common.cfg",
+    "xaero\\minimap\\default_radar_categories_client.json",
+    "xaero\\minimap\\default_radar_categories_server.json",
+    "xaero\\minimap\\profiles\\default.cfg",
+    "xaero\\minimap\\profiles\\info_display_config\\default.cfg.txt",
+    "xaero\\minimap\\server_profiles\\default.cfg",
+    "xaero\\world-map\\client.cfg",
+    "xaero\\world-map\\common.cfg",
+    "xaero\\world-map\\profiles\\default.cfg",
+    "xaero\\world-map\\server_profiles\\default.cfg",
+    "xaerohud.txt",
+    "xaeropatreon.txt"
+  ],
+  "defaultconfigs": [],
+  "duplicate_top_level_ids": {},
+  "ftb_top_level_ids": [
+    "ftblibrary",
+    "ftbultimine"
+  ],
+  "runtime_log": {
+    "path": "D:\\PCL 正式版 2.10.6 (1)\\.minecraft\\versions\\星庭远征-开发版\\logs\\latest.log",
+    "sha256": "bf5ddefb0229f695c5d1bf487de32717eb9523ec241ab888e13fb25cfb760944",
+    "modified_at": "2026-10-09T02:12:52.700508+08:00",
+    "provenance": "Inherited mod test log; development instance not launch-tested",
+    "mod_list_lines": [
+      "\t\tName Version (Mod Id)",
+      "\t\tAppleSkin 3.0.9+mc1.21 (appleskin)",
+      "\t\tArchitectury 13.0.11 (architectury)",
+      "\t\tAttributeFix 21.1.3 (attributefix)",
+      "\t\tAvaritia 1.3.1 (avaritia)",
+      "\t\tBeyond Dimensions 0.7.27 (beyonddimensions)",
+      "\t\tBeyond Storage Addon 1.4.0 (beyondstorage)",
+      "\t\tBookshelf 21.1.81 (bookshelf)",
+      "\t\tClumps 19.0.0.1 (clumps)",
+      "\t\tColorful Hearts 10.5.9 (colorfulhearts)",
+      "\t\tconditional mixin 0.6.4 (conditional_mixin)",
+      "\t\tConfluence 1.2.4 (confluence)",
+      "\t\tConfluence Magic Lib 0.0.8 (confluence_magic_lib)",
+      "\t\tControlling 19.0.5 (controlling)",
+      "\t\tCreate 6.0.10 (create)",
+      "\t\tCreate Aeronautics 1.3.2 (aeronautics_bundled)",
+      "\t\tCreate Aeronautics 1.3.2 (aeronautics)",
+      "\t\tCreate Crafts & Additions 1.7.2 (createaddition)",
+      "\t\tCreate Offroad 1.3.2 (offroad)",
+      "\t\tCreate Simulated 1.3.2 (simulated)",
+      "\t\tCreate: Connected 1.3.3-mc1.21.1 (create_connected)",
+      "\t\tCreate: Dragons Plus 1.11.9 (create_dragons_plus)",
+      "\t\tCreate: Enchantment Industry 2.5.4 (create_enchantment_industry)",
+      "\t\tCurios API 9.5.1+1.21.1 (curios)",
+      "\t\tDynamic FPS 3.11.4 (dynamic_fps)",
+      "\t\tEvolving Blade 1.1.0 (evolvingblade)",
+      "\t\tFarmer's Delight 1.3.4 (farmersdelight)",
+      "\t\tFast Projectile API 3.0.2+1 (fast_projectile_api)",
+      "\t\tFerrite Core 7.0.3 (ferritecore)",
+      "\t\tFlywheel 1.0.6 (flywheel)",
+      "\t\tForgified Fabric API Base 0.4.42+d1308ded19 (fabric_api_base)",
+      "\t\tForgified Fabric BlockView API (v2) 1.0.10+9afaaf8c19 (fabric_block_view_api_v2)",
+      "\t\tForgified Fabric Renderer API (v1) 3.4.1+9125b6dc19 (fabric_renderer_api_v1)",
+      "\t\tForgified Fabric Rendering Data Attachment (v1) 0.3.48+73761d2e19 (fabric_rendering_data_attachment_v1)",
+      "\t\tFTB Library 2101.1.35 (ftblibrary)",
+      "\t\tFTB Ultimine 2101.1.15 (ftbultimine)",
+      "\t\tFzzy Config 0.7.7+1.21+neoforge (fzzy_config)",
+      "\t\tGeckoLib 4 4.9.3 (geckolib)",
+      "\t\tGoety 3.2.0 (goety)",
+      "\t\tGoety Cataclysm 1.21.1-1.8.4 (goety_cataclysm)",
+      "\t\tGoety Delight 1.5.0-1.21.1-20260911_alpha-7 (goetydelight)",
+      "\t\tGoety Iron 3.1 (goetyiron)",
+      "\t\tIMBlocker 5.5.4 (imblocker)",
+      "\t\tInfinite Core 1.0.0 (infinitecore)",
+      "\t\tInventory Profiles Next 2.2.5 (inventoryprofilesnext)",
+      "\t\tIris 1.8.14-beta.1+mc1.21.1 (iris)",
+      "\t\tIron's Lib 1.21.1-2.2.0 (irons_lib)",
+      "\t\tIron's Spells 'n Spellbooks 1.21.1-3.16.3 (irons_spellbooks)",
+      "\t\tJade 15.10.6+neoforge (jade)",
+      "\t\tJust Enough Items 19.43.0.393 (jei)",
+      "\t\tKaleidoscope Cookery 1.6.0-neoforge+mc1.21.1 (kaleidoscope_cookery)",
+      "\t\tKotlin For Forge 5.12.0 (kotlinforforge)",
+      "\t\tL2Complements 3.1.3 (l2complements)",
+      "\t\tL2Core 3.0.8+15 (l2core)",
+      "\t\tL2DamageTracker 3.0.8+3 (l2damagetracker)",
+      "\t\tL2Hostility 3.0.18 (l2hostility)",
+      "\t\tL2ItemSelector 3.0.9 (l2itemselector)",
+      "\t\tL2Library 3.0.8 (l2library)",
+      "\t\tL2Magic 3.0.2+14 (l2magic)",
+      "\t\tL2MenuStacker 3.0.10 (l2menustacker)",
+      "\t\tL2Tabs 3.0.5+7 (l2tabs)",
+      "\t\tL_Ender's Cataclysm 1.21.1 3.33 (cataclysm)",
+      "\t\tlibIPN 6.6.3 (libipn)",
+      "\t\tlionfishapi 3.1 (lionfishapi)",
+      "\t\tMaid Restaurant 0.2.9 (maid_restaurant)",
+      "\t\tmaid useful task 1.4.2 (maid_useful_task)",
+      "\t\tMinecraft 1.21.1 (minecraft)",
+      "\t\tMob Weapon API 3.0.10 (mob_weapon_api)",
+      "\t\tModernFix 5.27.24+mc1.21.1 (modernfix)",
+      "\t\tMouse Tweaks 2.26.1 (mousetweaks)",
+      "\t\tNeoForge 21.1.248 (neoforge)",
+      "\t\tOverloadedArmorBar 2 (overloadedarmorbar)",
+      "\t\tPandora API 1.0.5 (pandora)",
+      "\t\tParticleStorm 1.1.4.3 (particlestorm)",
+      "\t\tPatchouli 1.21.1-93-NEOFORGE (patchouli)",
+      "\t\tPlayer Animator 2.0.4+1.21.1 (playeranimator)",
+      "\t\tPonder 1.0.82+mc1.21.1 (ponder)",
+      "\t\tPrickleMC 21.1.11 (prickle)",
+      "\t\tReese's Sodium Options 2.2.3+mc1.21.1 (reeses_sodium_options)",
+      "\t\tRPG Leveling 1.0.0 (rpgleveling)",
+      "\t\tSable 2.0.6 (sable)",
+      "\t\tSable Companion 1.6.0 (sablecompanion)",
+      "\t\tSearchables 1.0.2 (searchables)",
+      "\t\tSodium 0.8.13+mc1.21.1 (sodium)",
+      "\t\tSodium Extra 0.9.4+mc1.21.1 (sodium_extra)",
+      "\t\tSpice of Life: Maid 1.0.1 (solmaid)",
+      "\t\tTarotCards 2.3.5 (tarotcards)",
+      "\t\tTerra Entity 1.2.1 (terra_entity)",
+      "\t\tTerra Furniture 1.21.1-0.0.5 (terra_furniture)",
+      "\t\tTerraBlender 4.1.0.8 (terrablender)",
+      "\t\tTerraCurio 1.2.0 (terra_curio)",
+      "\t\tTerraGuns 1.0 (terra_guns)",
+      "\t\tThe Trackers 1.21.1-0.2.5 (the_trackers)",
+      "\t\tThree Dimension Particle 1.0.5 (thr_dim_particle)",
+      "\t\tTouhou Little Maid 1.5.3-neoforge+mc1.21.1 (touhou_little_maid)",
+      "\t\tTouhou Little Maid: Spell 1.9.0-neoforge (touhou_little_maid_spell)",
+      "\t\tTouhou Maid: Affection 1.7.5.2 (touhou_maid_affection)",
+      "\t\tVeil 4.3.2 (veil)",
+      "\t\tXaero's Minimap 26.4.2 (xaerominimap)",
+      "\t\tXaero's World Map 1.44.2 (xaeroworldmap)",
+      "\t\tXaeroLib 1.7.1 (xaerolib)",
+      "\t\t星空之刃 Star Sword 1.0.0 (starsword)"
+    ]
+  }
+}
