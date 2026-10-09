@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "TTT",
+    "TCT",
+    "TTT"
+  ],
+  "key": {
+    "T": {
+      "item": "infinitecore:template_diamond"
+    },
+    "C": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  "result": {
+    "id": "infinitecore:diamond_generator",
+    "count": 1
+  }
+}

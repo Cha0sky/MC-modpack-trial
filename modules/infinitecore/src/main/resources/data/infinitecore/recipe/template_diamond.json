@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:diamond_block"
+    }
+  },
+  "result": {
+    "id": "infinitecore:template_diamond",
+    "count": 1
+  }
+}

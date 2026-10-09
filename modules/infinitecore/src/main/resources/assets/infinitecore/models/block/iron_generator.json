@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "side": "infinitecore:block/iron_generator",
+    "top": "infinitecore:block/iron_generator_top",
+    "bottom": "infinitecore:block/iron_generator_bottom"
+  }
+}

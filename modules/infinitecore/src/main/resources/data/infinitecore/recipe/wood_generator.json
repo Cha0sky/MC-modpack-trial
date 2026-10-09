@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "TTT",
+    "TCT",
+    "TTT"
+  ],
+  "key": {
+    "T": {
+      "item": "infinitecore:template_wood"
+    },
+    "C": {
+      "item": "minecraft:stone"
+    }
+  },
+  "result": {
+    "id": "infinitecore:wood_generator",
+    "count": 1
+  }
+}

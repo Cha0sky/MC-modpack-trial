@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-10",
+  "version": "1.1.0-rebuild",
+  "artifact": "build\\libs\\infinitecore-1.1.0-rebuild.jar",
+  "artifact_sha256": "afefc4bbf0d1c3eb41a9db82e58a35d882494c1f3a9de1c8e2a586372366c338",
+  "artifact_bytes": 81511,
+  "baseline_sha256": "10ec43204404817c8738088670571d5044bbf4b992a9247ab8d67b986aa2e400",
+  "checks": {
+    "jar_crc": "pass",
+    "machine_recipes_byte_identical": 8,
+    "approved_direct_template_recipes": 8,
+    "recipe_count": 17,
+    "blank_recipes": 0,
+    "legacy_item_models_retained": 8,
+    "json_parsed": 61,
+    "png_decoded": 42,
+    "local_model_texture_references": "pass",
+    "locale_keys_and_literal_source_keys": "pass",
+    "java_21_class_versions": "pass",
+    "metadata_expansion": "pass",
+    "no_verification_classes_in_jar": "pass"
+  },
+  "runtime_verification": {
+    "game_launched": false,
+    "deployed": false,
+    "save_compatibility_verified": false
+  }
+}

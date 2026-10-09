@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "infinitecore:dirt_generator",
+    "infinitecore:wood_generator",
+    "infinitecore:stone_generator",
+    "infinitecore:copper_generator",
+    "infinitecore:iron_generator",
+    "infinitecore:gold_generator",
+    "infinitecore:diamond_generator",
+    "infinitecore:netherite_generator"
+  ]
+}

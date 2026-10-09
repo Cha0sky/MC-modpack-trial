@@ -1,0 +1,27 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="MIT"
+
+[[mods]]
+modId="infinitecore"
+version="${mod_version}"
+displayName="Infinite Core"
+authors="Infinite Core Team"
+description='''Reimplementation of the user's Infinite Core binary baseline.
+Eight tiers of single-block, consumption-free template resource generators.
+Direct template crafting, unified mechanical textures and clear GUI.
+'''
+
+[[dependencies.infinitecore]]
+modId="neoforge"
+type="required"
+versionRange="[21.1.248,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.infinitecore]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.1,1.22)"
+ordering="NONE"
+side="BOTH"

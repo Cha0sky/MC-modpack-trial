@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "side": "infinitecore:block/diamond_generator",
+    "top": "infinitecore:block/diamond_generator_top",
+    "bottom": "infinitecore:block/diamond_generator_bottom"
+  }
+}

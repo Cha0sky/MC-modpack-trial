@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:netherite_block"
+    }
+  },
+  "result": {
+    "id": "infinitecore:template_netherite",
+    "count": 1
+  }
+}

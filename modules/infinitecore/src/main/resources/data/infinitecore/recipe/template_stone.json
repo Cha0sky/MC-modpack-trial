@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:smooth_stone"
+    }
+  },
+  "result": {
+    "id": "infinitecore:template_stone",
+    "count": 1
+  }
+}

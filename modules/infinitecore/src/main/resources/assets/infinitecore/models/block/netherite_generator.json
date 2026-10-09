@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "side": "infinitecore:block/netherite_generator",
+    "top": "infinitecore:block/netherite_generator_top",
+    "bottom": "infinitecore:block/netherite_generator_bottom"
+  }
+}

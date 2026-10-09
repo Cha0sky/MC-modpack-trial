@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "side": "infinitecore:block/dirt_generator",
+    "top": "infinitecore:block/dirt_generator_top",
+    "bottom": "infinitecore:block/dirt_generator_bottom"
+  }
+}

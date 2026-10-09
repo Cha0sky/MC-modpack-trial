@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "infinitecore:block/gold_generator"
+    }
+  }
+}
