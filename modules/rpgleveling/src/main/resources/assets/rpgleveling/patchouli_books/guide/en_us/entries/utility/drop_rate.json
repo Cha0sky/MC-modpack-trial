@@ -1,0 +1,54 @@
+{
+  "name": "Drop Rate",
+  "category": "rpgleveling:utility",
+  "icon": "minecraft:diamond",
+  "sortnum": 30,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "What it does",
+      "text": [
+        "It is a drop-count multiplier: a stat value of v means m = 1 + v / 100, so v = 100 doubles your drops.",
+        "It applies to mob drops and to block drops (drop_rate.apply_to_blocks defaults to true).",
+        "Fractional counts use stochastic rounding (drop_rate.rounding = STOCHASTIC): an expected 1.5 items means a 50% chance of 1 and a 50% chance of 2, which is unbiased in expectation.",
+        "It multiplies with vanilla Fortune / Looting, whose bonuses are already baked into the drop list before the event fires."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Flat (numeric) line",
+      "text": [
+        "The curve is LINEAR: +1.875 percentage points per point.",
+        "20 points -> +37.50%; 50 -> +93.75%; 100 -> +187.50%; 200 -> +375.00%.",
+        "The old curve, gain = 150 * x / (x + 80), had an initial slope of 150/80 = 1.875, so the early feel is unchanged."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Percent line",
+      "text": [
+        "Also LINEAR: 5.0 per point, on the DESIGN_BASELINE basis with reference B_ref = 50 percentage points.",
+        "Contribution = 50 * gain / 100, i.e. +2.5 percentage points per point. 20 points -> +50.00; 50 -> +125.00; 100 -> +250.00; 200 -> +500.00.",
+        "The two contributions add up to the stat value v, and the final multiplier is m = 1 + v/100."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Ceiling & returns",
+      "text": [
+        "Both lines are linear, so the drop multiplier keeps climbing until it meets the attribute's own range (1.0E6, unreachable in practice). There is no designed ceiling and no diminishing returns.",
+        "What actually stops you first are two guards: a single event spawns at most 256 items and 64 item entities, and any overflow beyond one stack is split into extra item entities instead of being silently truncated by vanilla.",
+        "Randomness is drawn on the server only, so client prediction and the server result stay consistent."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Practical advice",
+      "text": [
+        "It feels best on drops that already come in quantity; on a single-item block, +100% is still just one extra item in expectation.",
+        "Combine it with experience gain to accelerate resource accumulation noticeably.",
+        "Remember it is probabilistic: the same multiplier shows short-term variance, which is expected."
+      ]
+    }
+  ]
+}

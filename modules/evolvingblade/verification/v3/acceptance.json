@@ -1,0 +1,21 @@
+{
+  "version": "1.1.0",
+  "session_id": "488a261a-516e-4e8e-9646-2e5fe59afc31",
+  "jar_sha256": "2d9be326e8310189da15e36cdbfd29c8b9c42bd4681d7143dda12481589bf7c0",
+  "server_gametest_passed": 117,
+  "log": "evolvingblade\\verification\\v3-rework2-independent.log",
+  "runtime": "Java 21.0.7 / MC 1.21.1 / NeoForge 21.1.248",
+  "harness": "Desktop 0.2.0-rc.2 ACP",
+  "server_passed": true,
+  "resource_audit_passed": true,
+  "junit_passed": 112,
+  "client_visual": "pending user manual test",
+  "visual_revision": "v3 MC 32px",
+  "client_automation": "stopped by user Escape; no further window actions",
+  "verified_at": "2026-10-08T21:03:29.4064899+08:00",
+  "task_ids": [
+    "014-eb-material-v3",
+    "015-eb-material-v3-rework1",
+    "016-eb-material-v3-rework2"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Experience Crystal",
+  "category": "rpgleveling:items",
+  "icon": "rpgleveling:experience_crystal",
+  "sortnum": 20,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "What it does",
+      "text": [
+        "Right-click to bank 100 RPG experience directly (items.experience_crystal.xp = 100, configurable).",
+        "It goes through the very same booking path as kills and mining, so the xp_gain multiplier applies - exactly once.",
+        "Stacks to 16."
+      ]
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "rpgleveling:experience_crystal",
+      "title": "Crafting",
+      "text": [
+        "Glowstone dust + glass + emerald, shaped."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "When to use it",
+      "text": [
+        "When you want to rush the early levels. Note that it books the experience directly; no experience orbs are dropped."
+      ]
+    }
+  ]
+}

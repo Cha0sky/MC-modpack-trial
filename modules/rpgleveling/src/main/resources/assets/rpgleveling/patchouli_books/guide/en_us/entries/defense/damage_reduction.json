@@ -1,0 +1,54 @@
+{
+  "name": "Damage Reduction",
+  "category": "rpgleveling:defense",
+  "icon": "minecraft:shield",
+  "sortnum": 30,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "What it does",
+      "text": [
+        "After armor, resistance effects and Protection have all been settled, it multiplies a further percentage reduction on top. It therefore chains with the armor stat instead of double-counting it.",
+        "Permanent bypasses (hard-coded, cannot be removed by config): minecraft:generic_kill from /kill, minecraft:out_of_world from the void, and anything tagged BYPASSES_INVULNERABILITY. This keeps admins able to end a player and prevents surviving in the void.",
+        "The damage_reduction.applies_to_bypass_armor option (default true) and extra_bypass_damage_types list (empty by default, append-only) let you fine-tune this.",
+        "It is the only dimension in the whole mod that still has diminishing returns - because its 90% ceiling must stay out of reach forever."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Flat (numeric) line",
+      "text": [
+        "The curve is still SATURATING: gain = 60 * x / (x + 80) percentage points.",
+        "20 points -> 12.00%; 50 -> 23.08%; 100 -> 33.33%; 200 -> 42.86%.",
+        "The asymptote is 60 percentage points and is never reached. The 80th point is the half-saturation point. This line was deliberately not converted to LINEAR, so the never-immune guarantee keeps holding."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Percent line",
+      "text": [
+        "Also SATURATING: gain = 75 * x / (x + 80), on the DESIGN_BASELINE basis with reference B_ref = 40 percentage points.",
+        "Contribution = 40 * gain / 100. 20 points -> +6.00 percentage points; 50 -> +11.54; 100 -> +16.67; 200 -> +21.43.",
+        "This line asymptotes at +30 percentage points (40 * 75/100)."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Ceiling & returns",
+      "text": [
+        "The two lines add up: flat asymptotes at 60 and percent at 30, so the ceiling is 90%.",
+        "Both are saturating curves, strictly below their own asymptote, so 90% is unreachable: at 10 000 points the two lines together give 89.2857. A player always takes at least 10% of the damage - the mathematical \"never immune\" guarantee still holds.",
+        "Chained after armor's 80%, the worst case is D * 0.2 * 0.1 = 2% of the damage (98% total reduction), but still not invulnerability."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Practical advice",
+      "text": [
+        "This is where defensive growth actually lives. It is also the only dimension that keeps diminishing returns and the only one with a mathematical safety proof left.",
+        "Because it is applied after armor, \"80% armor + 90% reduction\" multiplies rather than adds, and both layers are worth stacking.",
+        "Remember that /kill and the void always ignore it, so no amount of points makes standing at the void's edge safe."
+      ]
+    }
+  ]
+}

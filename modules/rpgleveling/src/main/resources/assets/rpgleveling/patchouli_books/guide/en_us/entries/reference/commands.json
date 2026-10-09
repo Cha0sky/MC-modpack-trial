@@ -1,0 +1,44 @@
+{
+  "name": "Commands",
+  "category": "rpgleveling:reference",
+  "icon": "minecraft:command_block",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Player commands (no permission needed)",
+      "text": [
+        "/rpg - same as /rpg info.",
+        "/rpg info [player] - level, total experience, experience into the current level, experience for the next level, available points.",
+        "/rpg stats [player] - the full machine-readable snapshot, one key=value per line (see the next page).",
+        "/rpg list [player] - every one of the 26 lines with its invested points and current line value.",
+        "/rpg spend <line> <amount> - allocate points; a negative amount refunds, range -100..100.",
+        "/rpg respec - free respec.",
+        "/rpg discovery [player] - first-time reward progress per source."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "What /rpg stats prints",
+      "text": [
+        "Level and points: level, total_xp, xp_into_level, xp_for_next_level, earned_points, spent_points, unspent_points, respec_count.",
+        "The 26 lines: line.<stat>.<flat|percent>.points and line.<stat>.<flat|percent>.value.",
+        "The 13 stats: stat.<stat>.computed (calculated value including equipment), stat.<stat>.effective (what the attribute actually holds) and stat.<stat>.clamped (whether the value was truncated - by the vanilla attribute range or by one of this mod's functional caps, such as 100% crit chance, 1.0 knockback resistance or the 90% damage reduction ceiling); plus attr.<vanilla attribute name>.",
+        "Misc: discovery.<source>.unlocked/.total, debug.override.count, debug.forcecrit."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Debug and admin commands (permission level 2)",
+      "text": [
+        "/rpg debug stats [player] - identical to /rpg stats.",
+        "/rpg debug addpoints <player> <n> - add or remove available points.",
+        "/rpg debug setlevel <player> <n> - set the level directly.",
+        "/rpg debug override <player> <stat> <value> - force a stat to a fixed value; use clear instead of <value> to remove it; /rpg debug override list [player] shows active overrides.",
+        "/rpg debug forcecrit <player> <true|false> - force every hit to crit, for testing.",
+        "/rpg admin setlevel <player> <level>, /rpg admin addxp <player> <amount>, /rpg admin setpoints <player> <line> <points>, /rpg admin reset <player> - direct admin writes and a full reset.",
+        "A line name is <stat>.<flat|percent>, for example attack_damage.flat or crit_chance.percent."
+      ]
+    }
+  ]
+}

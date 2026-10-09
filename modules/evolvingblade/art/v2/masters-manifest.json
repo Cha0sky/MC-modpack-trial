@@ -1,0 +1,217 @@
+{
+  "created_on": "2026-10-08",
+  "tool": "imagegen",
+  "art_direction": "DESIGN.md",
+  "reframed_stage6_discarded_source": "exec-165c1e96-b21b-4b95-ab8d-fe1599dd2b13.png",
+  "passed": true,
+  "masters": [
+    {
+      "stage": 0,
+      "file": "masters\\stage0.png",
+      "generation_source": "exec-3e786383-6aa7-41ba-b9de-c86227e142cb.png",
+      "sha256": "e736bee040734284b8bd75f78e1f757dd4c96a74e5bce8adac5abc597941e971",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "visible_alpha_bounds": [
+        138,
+        80,
+        1195,
+        1184
+      ],
+      "raw_alpha_bounds": [
+        23,
+        23,
+        1240,
+        1254
+      ],
+      "visibility_threshold": 128,
+      "transparent_pixels": 1403749,
+      "opaque_pixels": 1469
+    },
+    {
+      "stage": 1,
+      "file": "masters\\stage1.png",
+      "generation_source": "exec-3d3ee898-68d9-47cf-8bc2-62a4bb6dcb1f.png",
+      "sha256": "b50ef64b81f40793c393cfc813230798a68087497f14fe628a59f008595402a2",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "visible_alpha_bounds": [
+        127,
+        71,
+        1220,
+        1192
+      ],
+      "raw_alpha_bounds": [
+        89,
+        68,
+        1223,
+        1228
+      ],
+      "visibility_threshold": 128,
+      "transparent_pixels": 1391101,
+      "opaque_pixels": 936
+    },
+    {
+      "stage": 2,
+      "file": "masters\\stage2.png",
+      "generation_source": "exec-b821d4e5-a060-4d2c-aaf3-04f9f6ba3398.png",
+      "sha256": "d1e4c18abe85a83429eb6d81120efd35803e7c0c8006e65e40cdc7255844910c",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "visible_alpha_bounds": [
+        117,
+        63,
+        1226,
+        1205
+      ],
+      "raw_alpha_bounds": [
+        33,
+        43,
+        1238,
+        1224
+      ],
+      "visibility_threshold": 128,
+      "transparent_pixels": 1378244,
+      "opaque_pixels": 1110
+    },
+    {
+      "stage": 3,
+      "file": "masters\\stage3.png",
+      "generation_source": "exec-41e8393d-5719-4889-ac76-da16216c8f5e.png",
+      "sha256": "966de0d8669d8abe7d4cd14315b2b8b5473b72328d14b8f69b15584a9eb75ebe",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "visible_alpha_bounds": [
+        113,
+        55,
+        1242,
+        1211
+      ],
+      "raw_alpha_bounds": [
+        0,
+        51,
+        1253,
+        1229
+      ],
+      "visibility_threshold": 128,
+      "transparent_pixels": 1336999,
+      "opaque_pixels": 450
+    },
+    {
+      "stage": 4,
+      "file": "masters\\stage4.png",
+      "generation_source": "exec-644bfd65-afbf-4d47-9612-b0e3061553ff.png",
+      "sha256": "4f2237793835549d1a08a3b8a3679214418f2d247eab8571ecceacf1433e956f",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "visible_alpha_bounds": [
+        122,
+        48,
+        1240,
+        1222
+      ],
+      "raw_alpha_bounds": [
+        0,
+        23,
+        1253,
+        1254
+      ],
+      "visibility_threshold": 128,
+      "transparent_pixels": 1278500,
+      "opaque_pixels": 208
+    },
+    {
+      "stage": 5,
+      "file": "masters\\stage5.png",
+      "generation_source": "exec-fea960e2-43c4-4add-8480-12fadd2a57e1.png",
+      "sha256": "e1e61c63b0d6bb7f2643d4d9c7750deb7f039bc01023d44e3e044d42e6e025de",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "visible_alpha_bounds": [
+        138,
+        38,
+        1237,
+        1234
+      ],
+      "raw_alpha_bounds": [
+        0,
+        21,
+        1241,
+        1254
+      ],
+      "visibility_threshold": 128,
+      "transparent_pixels": 1259557,
+      "opaque_pixels": 159
+    },
+    {
+      "stage": 6,
+      "file": "masters\\stage6.png",
+      "generation_source": "exec-fda09a6d-6d0d-4fcc-baf2-2bebf742b76f.png",
+      "sha256": "bfc6ce5dab6c4aa52dcf7a2f755d7ea3ca1b88e618515621d01ee9875909843e",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "visible_alpha_bounds": [
+        233,
+        151,
+        1121,
+        1135
+      ],
+      "raw_alpha_bounds": [
+        37,
+        119,
+        1152,
+        1228
+      ],
+      "visibility_threshold": 128,
+      "transparent_pixels": 1371098,
+      "opaque_pixels": 621
+    },
+    {
+      "stage": 7,
+      "file": "masters\\stage7.png",
+      "generation_source": "exec-070f007b-40dd-49df-967c-008418889134.png",
+      "sha256": "825bd12e7cf98b12563f444fa2b020e5e72cdb424bb4f332134a9dfe18339e26",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "visible_alpha_bounds": [
+        220,
+        106,
+        1157,
+        1179
+      ],
+      "raw_alpha_bounds": [
+        23,
+        21,
+        1240,
+        1254
+      ],
+      "visibility_threshold": 128,
+      "transparent_pixels": 1323789,
+      "opaque_pixels": 260
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "passed": true,
+  "checks": 491,
+  "failures": [],
+  "jar": "D:\\PCL 正式版 2.10.6 (1)\\codex\\evolvingblade\\build\\libs\\evolvingblade-1.1.0.jar",
+  "sha256": "2d9be326e8310189da15e36cdbfd29c8b9c42bd4681d7143dda12481589bf7c0",
+  "textures": [
+    {
+      "stage": 0,
+      "frames": 1,
+      "opaque_colors": 7,
+      "changed_pixels": 0,
+      "sha256": "3ba54d3e0b916f68ffe35ffbfdf993d0fd51a2399d4d81ef2d37ae538d9c6fcc"
+    },
+    {
+      "stage": 1,
+      "frames": 1,
+      "opaque_colors": 10,
+      "changed_pixels": 0,
+      "sha256": "fe0c28b3a1076daf1ea920e01837dfcf511265b1a04326697a4dba566f5fe9c2"
+    },
+    {
+      "stage": 2,
+      "frames": 6,
+      "opaque_colors": 11,
+      "changed_pixels": 65,
+      "sha256": "d430ae697595115796247e258a7b7d2059f856472894d38e01293555edb0273a"
+    },
+    {
+      "stage": 3,
+      "frames": 6,
+      "opaque_colors": 8,
+      "changed_pixels": 65,
+      "sha256": "04c3549fa6c956cc899c9c94be720113598151abd69bcffe482ac389d7a2513a"
+    },
+    {
+      "stage": 4,
+      "frames": 6,
+      "opaque_colors": 9,
+      "changed_pixels": 65,
+      "sha256": "6c6a1e567585e83264d7259b0f91a8b860975808b63387acc4ff6dca289fa23d"
+    },
+    {
+      "stage": 5,
+      "frames": 8,
+      "opaque_colors": 11,
+      "changed_pixels": 66,
+      "sha256": "c7bfeff91d6e965dc0a5088b6830ce03f9b8be18cd47ad97d5d86469798c8e50"
+    },
+    {
+      "stage": 6,
+      "frames": 8,
+      "opaque_colors": 10,
+      "changed_pixels": 64,
+      "sha256": "7c0a1bd1ede0a43600e6b7c1b86300293045c27745274ff88360aa9f411e5fb2"
+    },
+    {
+      "stage": 7,
+      "frames": 8,
+      "opaque_colors": 9,
+      "changed_pixels": 65,
+      "sha256": "09d594288527c92802db377402cb4dd46a2ae722b05a6167fb33d918a24a8197"
+    }
+  ],
+  "client_visual": "pending user manual test"
+}

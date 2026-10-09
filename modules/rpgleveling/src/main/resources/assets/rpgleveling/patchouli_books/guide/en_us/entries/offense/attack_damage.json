@@ -1,0 +1,54 @@
+{
+  "name": "Attack Damage",
+  "category": "rpgleveling:offense",
+  "icon": "minecraft:iron_sword",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "What it does",
+      "text": [
+        "It drives the vanilla minecraft:attack_damage attribute, raising your melee damage. Bare hands, swords, axes, pickaxes and shovels all benefit.",
+        "It is the base value: critical multipliers and enchantments (Sharpness and friends) are applied after it, so this dimension is amplified by those multipliers.",
+        "1 damage = 1 health point = half a heart."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Flat (numeric) line",
+      "text": [
+        "The curve is LINEAR: +0.5 attack damage per point, with no ceiling.",
+        "20 points -> +10.0 damage; 50 -> +25.0; 100 -> +50.0; 200 -> +100.0.",
+        "A player's attack damage base is 1.0, and a netherite axe adds +9 more from equipment (equipment and points are additive). So 20 points is 11.0 damage bare-handed and 20.0 damage with a netherite axe."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Percent line",
+      "text": [
+        "Also LINEAR: +3% per point, on the TOTAL basis.",
+        "TOTAL means the percentage scales base 1.0 + every ADD_VALUE your gear contributes + the result of the flat line. Wearing a strong weapon therefore amplifies the percent line.",
+        "20 points -> +60%; 50 -> +150%; 100 -> +300%; 200 -> +600%.",
+        "Worked example (netherite axe): 20 flat + 20 percent -> (1 + 9 + 10) * (1 + 60%) = 32.0 attack damage."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Ceiling & returns",
+      "text": [
+        "There is no designed functional ceiling here: both lines are linear, so every point pays out forever.",
+        "The only boundary is the attribute's own range: vanilla clamps attack_damage at 2048 (an attribute-range mod such as AttributeFix raises that automatically). With a +9 netherite axe in hand, reaching it takes roughly 4076 flat points or roughly 6793 percent points. Past that further points do nothing and the row shows a \"!\" marker.",
+        "With diminishing returns removed, attack damage is no longer special - every dimension grows faster now; this one is simply the most visible."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Practical advice",
+      "text": [
+        "Early on, prefer the flat line: two points buy one damage (half a heart), which is the most direct upgrade at the iron-sword stage.",
+        "Later, the percent line wins: the better your weapon and the more flat points you hold, the larger the absolute amount it multiplies out.",
+        "The two lines do not conflict. A common pattern is 20..40 flat points and then everything into percent."
+      ]
+    }
+  ]
+}

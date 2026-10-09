@@ -1,0 +1,6 @@
+{
+  "name": "进攻加点",
+  "description": "四个进攻维度：攻击伤害、暴击率、暴击伤害、生命偷取。",
+  "icon": "minecraft:iron_sword",
+  "sortnum": 10
+}

@@ -1,0 +1,45 @@
+# 本地构建与缓存
+.gradle/
+.gradle-user-home/
+build/
+out/
+__pycache__/
+*.py[cod]
+*.class
+**/src/generated/**/.cache/
+
+# 下载与编译的 JAR；必要的构建入口及丢失源码模组另行保留
+*.jar
+!**/gradle/wrapper/gradle-wrapper.jar
+!/vendor/infinitecore/infinitecore-1.0.0.jar
+
+# 本地实例、测试存档、临时工作与备份
+/backups/
+/work/
+run/
+run-*/
+runs/
+saves/
+.reference*/
+.research/
+_verify/
+
+# 完整运行日志留在本机；短编译诊断作为历史证据保留
+*.log
+!/evidence/sanctuary-compile.log
+
+# 编辑器与操作系统缓存
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+.DS_Store
+Thumbs.db
+
+# 私密配置
+.env
+.env.*
+!.env.example
+*.pem
+*.key

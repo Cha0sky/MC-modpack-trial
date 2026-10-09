@@ -1,0 +1,6 @@
+{
+  "name": "Offense",
+  "description": "The four offensive stats: attack damage, critical chance, critical damage and life steal.",
+  "icon": "minecraft:iron_sword",
+  "sortnum": 10
+}

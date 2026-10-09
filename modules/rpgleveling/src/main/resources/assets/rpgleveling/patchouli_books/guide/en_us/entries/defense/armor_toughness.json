@@ -1,0 +1,53 @@
+{
+  "name": "Armor Toughness",
+  "category": "rpgleveling:defense",
+  "icon": "minecraft:netherite_ingot",
+  "sortnum": 20,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "What it does",
+      "text": [
+        "It drives the vanilla minecraft:armor_toughness attribute. Toughness lives in the denominator of the armor formula: f = 2 + T/4, so more toughness means armor erodes more slowly under heavy hits.",
+        "Measured comparison (armor 30): without toughness, a 40 damage hit is reduced by 40% and an 80 damage hit by only 24%; with toughness pushed to 20, those same hits are reduced by 80% and 74.3%.",
+        "Toughness is therefore not a nice-to-have - it is the core defensive stat for heavy hitters."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Flat (numeric) line",
+      "text": [
+        "The curve is LINEAR: +0.125 toughness points per point, with no diminishing returns.",
+        "20 points -> +2.5000; 50 -> +6.2500; 100 -> +12.5000; 200 -> +25.0000.",
+        "The old curve, gain = 5 * x / (x + 40), had an initial slope of 5/40 = 0.125, so the early feel is unchanged."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Percent line",
+      "text": [
+        "Also LINEAR: 1.666667 per point, on the DESIGN_BASELINE basis with reference B_ref = 3.0 toughness points.",
+        "Contribution = 3.0 * gain / 100, i.e. +0.05 toughness points per point. 20 points -> +1.0000; 50 -> +2.5000; 100 -> +5.0000; 200 -> +10.0000.",
+        "Pushing toughness with no armor is pointless: it enlarges the denominator without giving it anything to divide. Take both."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Ceiling & returns",
+      "text": [
+        "The armor_toughness attribute caps at 20 (an attribute-range mod raises that automatically). About 160 flat points, or 100 + 100 across both lines, fill it.",
+        "Past that, further points do nothing: the row shows a \"!\" marker and stat.armor_toughness.clamped reads true.",
+        "Toughness decides how fast armor erodes under heavy hits: with armor 30 and no toughness, an 80 damage hit is only reduced by 24%; with toughness 20 it is 74.3%. That makes this line worth more in practice than the armor line."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Practical advice",
+      "text": [
+        "If you already have good armor, this line is worth more in practice than the armor line: it decides whether you keep that 80% reduction against heavy hits.",
+        "It only works together with armor: toughness alone enlarges the denominator without giving it anything to divide.",
+        "For the mid and late game, push armor toughness and damage reduction together - those two are where defensive growth actually lives."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Defense",
+  "description": "The five defensive stats: max health, armor, armor toughness, damage reduction and knockback resistance.",
+  "icon": "minecraft:netherite_chestplate",
+  "sortnum": 20
+}

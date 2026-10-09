@@ -1,0 +1,53 @@
+{
+  "name": "Knockback Resistance",
+  "category": "rpgleveling:defense",
+  "icon": "minecraft:netherite_boots",
+  "sortnum": 40,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "What it does",
+      "text": [
+        "It drives the vanilla minecraft:knockback_resistance attribute, ranging from 0 to 1, where 1.0 means complete immunity to knockback.",
+        "This mod pins the ceiling at 1.0: on a naked character about 115 flat points, or 100 + 100 across both lines, fill it. Full netherite already contributes 0.4, so you get there faster.",
+        "Anything past 1.0 is meaningless, which makes this one of the mod's three functional ceilings (with critical chance 100% and damage reduction 90%): points are still accepted, the effect is capped at 1.0, and the row shows a \"!\" marker."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Flat (numeric) line",
+      "text": [
+        "The curve is LINEAR: +0.00875 per point.",
+        "20 points -> +0.1750; 50 -> +0.4375; 100 -> +0.8750; 200 -> +1.7500.",
+        "The old curve, gain = 0.35 * x / (x + 40), had an initial slope of 0.35/40 = 0.00875, so the early feel is unchanged."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Percent line",
+      "text": [
+        "Also LINEAR: 1.666667 per point, on the DESIGN_BASELINE basis with reference B_ref = 0.20.",
+        "Contribution = 0.20 * gain / 100, i.e. +0.00333 per point. 20 points -> +0.0667; 50 -> +0.1667; 100 -> +0.3333; 200 -> +0.6667.",
+        "The two contributions add up to the attribute value, which is finally clamped to 1.0."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Ceiling & returns",
+      "text": [
+        "The ceiling is pinned at 1.0 (complete immunity). It is an intentional functional cap, does not follow the attribute range, and is unaffected by attribute-range mods.",
+        "Past 1.0 further points do nothing: the row shows a \"!\" marker and stat.knockback_resistance.clamped reads true. Points are accepted, the effect is capped - that is the explicit requirement.",
+        "This dimension no longer has diminishing returns: both lines are linear, so every point below 1.0 counts in full."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Practical advice",
+      "text": [
+        "If you want to stand and trade blows, 0.6..0.8 is already very noticeable: skeleton arrows stop shoving you around and melee mobs struggle to push you off a ledge.",
+        "On a naked character the flat line is the better deal (0.1750 for 20 points); in netherite you already hold 0.4 from gear, so check the number before committing.",
+        "This line provides no damage reduction at all - it only keeps you standing still."
+      ]
+    }
+  ]
+}

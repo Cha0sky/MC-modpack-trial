@@ -1,0 +1,32 @@
+{
+  "name": "经验结晶",
+  "category": "rpgleveling:items",
+  "icon": "rpgleveling:experience_crystal",
+  "sortnum": 20,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "用途",
+      "text": [
+        "右键使用：直接入账 100 点 RPG 经验（items.experience_crystal.xp = 100，可配置）。",
+        "它走的是和击杀、挖矿完全相同的那一个入账通道，所以经验获取倍率同样生效，而且只乘一次。",
+        "堆叠上限 16。"
+      ]
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "rpgleveling:experience_crystal",
+      "title": "合成",
+      "text": [
+        "萤石粉 + 玻璃 + 绿宝石，有序合成。"
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "什么时候用",
+      "text": [
+        "想快速推进前期等级时。注意它是「直接入账」，不会掉出经验球。"
+      ]
+    }
+  ]
+}

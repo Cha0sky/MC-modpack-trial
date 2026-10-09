@@ -1,0 +1,6 @@
+{
+  "name": "Utility",
+  "description": "The four utility stats: movement speed, health regeneration, experience gain and drop rate.",
+  "icon": "minecraft:feather",
+  "sortnum": 30
+}

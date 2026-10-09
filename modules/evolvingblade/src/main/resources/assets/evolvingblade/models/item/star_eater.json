@@ -1,0 +1,15 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "evolvingblade:item/star_eater_stage0"
+  },
+  "overrides": [
+    {"predicate": {"evolvingblade:stage": 1}, "model": "evolvingblade:item/star_eater_stage1"},
+    {"predicate": {"evolvingblade:stage": 2}, "model": "evolvingblade:item/star_eater_stage2"},
+    {"predicate": {"evolvingblade:stage": 3}, "model": "evolvingblade:item/star_eater_stage3"},
+    {"predicate": {"evolvingblade:stage": 4}, "model": "evolvingblade:item/star_eater_stage4"},
+    {"predicate": {"evolvingblade:stage": 5}, "model": "evolvingblade:item/star_eater_stage5"},
+    {"predicate": {"evolvingblade:stage": 6}, "model": "evolvingblade:item/star_eater_stage6"},
+    {"predicate": {"evolvingblade:stage": 7}, "model": "evolvingblade:item/star_eater_stage7"}
+  ]
+}

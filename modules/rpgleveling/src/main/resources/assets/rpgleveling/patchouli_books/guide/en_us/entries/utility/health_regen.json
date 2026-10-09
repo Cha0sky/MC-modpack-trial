@@ -1,0 +1,53 @@
+{
+  "name": "Health Regeneration",
+  "category": "rpgleveling:utility",
+  "icon": "minecraft:golden_carrot",
+  "sortnum": 10,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "What it does",
+      "text": [
+        "It drives the custom attribute rpgleveling:health_regen: how many health points you regain per second, ticked by the server.",
+        "By default it only regenerates when you are not at full health (health_regen.only_when_hurt = true) and does not require food (require_food_level = 0).",
+        "It stacks with vanilla food-based regeneration without interfering: the mod only reads the food level for the optional gate (require_food_level, default 0 = inactive) and never modifies it."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Flat (numeric) line",
+      "text": [
+        "The curve is LINEAR: +0.125 HP/s per point.",
+        "20 points -> 2.5000 HP/s; 50 -> 6.2500; 100 -> 12.5000; 200 -> 25.0000.",
+        "The old curve, gain = 5 * x / (x + 40), had an initial slope of 5/40 = 0.125, so the early feel is unchanged."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Percent line",
+      "text": [
+        "Also LINEAR: 3.333333 per point, on the DESIGN_BASELINE basis with reference B_ref = 2.0 HP/s.",
+        "Contribution = 2.0 * gain / 100, i.e. +0.0667 HP/s per point. 20 points -> +1.3333; 50 -> +3.3333; 100 -> +6.6667; 200 -> +13.3333.",
+        "The final value is the flat contribution plus the percent contribution - the design basis is additive, it does not scale the live attribute."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Ceiling & returns",
+      "text": [
+        "Both lines are linear, so the regeneration rate keeps climbing until it meets the attribute's own range (1.0E6, unreachable in practice). There is no designed ceiling and no diminishing returns.",
+        "It still cannot make you immortal: healing is a per-second flow, so any damage source whose burst DPS exceeds it punches straight through. The ender dragon, the wither and the warden all hit far harder than the early numbers.",
+        "The mod applies no clamp by default (health_regen.hard_cap_hps defaults to 0 = disabled); the attribute's own range is the only bound. An admin who wants a backstop can set it to a positive value."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Practical advice",
+      "text": [
+        "Excellent value for a survival build: 2..3 HP/s early on already cuts down on eating and potion drinking.",
+        "If you want to shrug off chip damage, take both lines to 20..50 points.",
+        "To make the custom regeneration respect hunger too (closer to the vanilla feel), set health_regen.require_food_level to 18."
+      ]
+    }
+  ]
+}

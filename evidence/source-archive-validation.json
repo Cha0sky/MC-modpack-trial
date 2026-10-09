@@ -1,0 +1,24 @@
+{
+  "copied_files_hash_verified": 384,
+  "original_inputs_preserved": true,
+  "cleanup_files_hash_verified": 19,
+  "staged_scope_verified": true,
+  "staged_paths": 414,
+  "ignored_tracked_files": 0,
+  "required_jars_tracked": [
+    "modules/evolvingblade/gradle/wrapper/gradle-wrapper.jar",
+    "modules/rpgleveling/gradle/wrapper/gradle-wrapper.jar",
+    "vendor/infinitecore/infinitecore-1.0.0.jar"
+  ],
+  "plan_content_preserved": true,
+  "new_project_files_diff_check": "passed",
+  "full_diff_check_exit_code": 2,
+  "legacy_whitespace_warning_count": 3,
+  "legacy_whitespace_warning_preview": [
+    "modules/evolvingblade/src/gametest/java/com/evolvingblade/gametest/WaveBurstAcceptanceGameTests.java:657: new blank line at EOF.",
+    "modules/evolvingblade/tools/ExportSwordArtwork.java:106: trailing whitespace.",
+    "modules/rpgleveling/docs/VERIFICATION.md:1211: trailing whitespace."
+  ],
+  "compilation_run": false,
+  "game_started": false
+}

@@ -1,0 +1,97 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev' version '2.0.81'
+}
+
+version = mod_version
+group = mod_group_id
+
+base {
+    archivesName = mod_id
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+neoForge {
+    version = project.neo_version
+
+    runs {
+        client {
+            client()
+        }
+        server {
+            server()
+        }
+        gameTestServer {
+            type = 'gameTestServer'
+            // NeoForge filters registered tests by namespace; without this the set is
+            // empty and GameTestHooks logs "Enabled Gametest Namespaces: []".
+            systemProperty 'neoforge.enabledGameTestNamespaces', mod_id
+            systemProperty 'neoforge.enableGameTest', 'true'
+        }
+        data {
+            data()
+        }
+    }
+
+    mods {
+        rpgleveling {
+            sourceSet sourceSets.main
+            // GameTest classes live in the test source set so they are on the classpath
+            // of runGameTestServer but never end up inside the published jar
+            // (VERIFICATION B-08 forbids packaging test classes).
+            sourceSet sourceSets.test
+        }
+    }
+}
+
+repositories {
+    mavenLocal()
+}
+
+// The test source set carries the GameTest classes. It needs the same Minecraft /
+// NeoForge classpath the main source set compiles against, which ModDevGradle wires into
+// sourceSets.main.compileClasspath.
+sourceSets {
+    test {
+        compileClasspath += sourceSets.main.compileClasspath
+        runtimeClasspath += sourceSets.main.runtimeClasspath
+    }
+}
+
+tasks.named('processResources', ProcessResources).configure {
+    var replaceProperties = [
+            minecraft_version      : minecraft_version,
+            minecraft_version_range: minecraft_version_range,
+            neo_version            : neo_version,
+            neo_version_range      : neo_version_range,
+            loader_version_range   : loader_version_range,
+            mod_id                 : mod_id,
+            mod_name               : mod_name,
+            mod_license            : mod_license,
+            mod_version            : mod_version,
+            mod_authors            : mod_authors,
+            mod_description        : mod_description
+    ]
+    inputs.properties replaceProperties
+    filesMatching(['META-INF/neoforge.mods.toml']) {
+        expand replaceProperties
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+// --- pure-Java numerical self check (no Minecraft runtime needed) ---
+// RpgMath is deliberately free of any Minecraft dependency so that the whole
+// §8.5 sampling table and the §7.7 sanity checks can be asserted without
+// booting a game.  Test sources never end up in the published jar.
+tasks.register('verifyMath', JavaExec) {
+    group = 'verification'
+    description = 'Runs the pure-Java RpgMath self check (curve + level table).'
+    dependsOn tasks.named('testClasses')
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'com.rpgleveling.selfcheck.RpgMathSelfCheck'
+    jvmArgs = ['-Dfile.encoding=UTF-8']
+}

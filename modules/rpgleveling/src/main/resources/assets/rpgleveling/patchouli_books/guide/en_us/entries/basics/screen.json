@@ -1,0 +1,43 @@
+{
+  "name": "The Point-Buy Screen",
+  "category": "rpgleveling:basics",
+  "icon": "minecraft:item_frame",
+  "sortnum": 20,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Opening the screen",
+      "text": [
+        "Press K by default; rebind it under Options -> Controls.",
+        "The screen is a plain custom Screen and does not touch your inventory. It requests a fresh snapshot from the server on open and shows \"Syncing...\" until it arrives."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Layout",
+      "text": [
+        "The header shows your current level and available points. The body is 26 rows: 13 stats x 2 modes (flat / percent).",
+        "Each row has five columns: stat name, mode, invested points, current contribution and the action buttons. There are three buttons: -1, +1 and +10.",
+        "Scroll with the mouse wheel; the \"Respec (free)\" button at the bottom refunds every point at once.",
+        "If the stat has been truncated by a ceiling - the vanilla attribute range, or one of this mod's functional caps such as 100% critical chance - a \"!\" marker appears at the start of the row, meaning further points do nothing. With an attribute-range mod installed that marker appears much later."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Tooltips",
+      "text": [
+        "Hovering a row shows the stat and mode, the invested points and the current contribution.",
+        "Only the two damage reduction lines are saturating; they additionally show how much of the asymptote you already hold, roughly how many more points buy another 5%, and the asymptote itself (never reached). Linear rows show none of that.",
+        "Percent rows show their basis: TOTAL scales base + equipment + your flat points, while DESIGN_BASELINE converts the percentage into a fixed amount on top of the design reference B_ref."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Server validation and feedback",
+      "text": [
+        "Every allocation is re-validated on the server. Possible replies: not enough points, that line is disabled, that line is already at its point cap, too many requests, respec on cooldown.",
+        "The client-side number is only a display; the server is always the authority."
+      ]
+    }
+  ]
+}

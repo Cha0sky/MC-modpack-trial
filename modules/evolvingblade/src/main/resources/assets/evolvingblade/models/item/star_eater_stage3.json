@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "evolvingblade:item/star_eater_stage3"
+  }
+}

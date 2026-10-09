@@ -1,0 +1,53 @@
+{
+  "name": "Armor",
+  "category": "rpgleveling:defense",
+  "icon": "minecraft:iron_chestplate",
+  "sortnum": 10,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "What it does",
+      "text": [
+        "It drives the vanilla minecraft:armor attribute inside the vanilla armor pipeline (before resistance and Protection).",
+        "Armor points are not a damage reduction percentage. The vanilla formula is: reduction = clamp( clamp(A - D / (2 + T/4), A * 0.2, 20), 0, 25 ) / 25, where A is armor, T is armor toughness and D is the incoming damage.",
+        "Because the formula clamps effective armor to 20, armor alone can never reduce more than 20/25 = 80%, and the harder you are hit the more of it is eroded. With 20 armor and no toughness: 40% reduction against a 20 damage hit, only 16% against 40 or more."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Flat (numeric) line",
+      "text": [
+        "The curve is LINEAR: +0.15 armor points per point, with no diminishing returns.",
+        "20 points -> +3.0000; 50 -> +7.5000; 100 -> +15.0000; 200 -> +30.0000.",
+        "The old curve, gain = 6 * x / (x + 40), had an initial slope of exactly 6/40 = 0.15, so the first points pay exactly what they always did - they simply never converge now."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Percent line",
+      "text": [
+        "Also LINEAR: 1.666667 per point, on the DESIGN_BASELINE basis with reference B_ref = 4.0 armor points.",
+        "Contribution = 4.0 * gain / 100, i.e. +0.0667 armor points per point. 20 points -> +1.3333; 50 -> +3.3333; 100 -> +6.6667; 200 -> +13.3333.",
+        "It does not scale the live attribute, which is why it still pays out on a naked character."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Ceiling & returns",
+      "text": [
+        "The armor attribute caps at 30 (an attribute-range mod such as AttributeFix raises that automatically). Both lines are linear, so points climb all the way to 30: the flat line alone reaches +30 at 200 points, which already fills a naked character.",
+        "Past the ceiling vanilla sanitizeValue silently discards the excess. This mod reports that fact instead of hiding it: the row shows a \"!\" marker and stat.armor.clamped reads true. That is the price of removing diminishing returns, not a defect.",
+        "A second, independent ceiling lives in the damage formula: effective armor is clamped to 20, so for single hits up to roughly 70 damage, armor above 20 buys almost nothing unless you also have armor toughness."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Practical advice",
+      "text": [
+        "Armor should mostly come from gear; spend points on armor toughness and damage reduction instead.",
+        "If you already wear full netherite (gear holds 20 of the 30), only 10 points of headroom remain, and 200 flat points fill it.",
+        "With an attribute-range mod (AttributeFix) that headroom grows together with the attribute, and no configuration changes are needed."
+      ]
+    }
+  ]
+}

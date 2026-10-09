@@ -1,0 +1,55 @@
+{
+  "name": "Movement Speed",
+  "category": "rpgleveling:utility",
+  "icon": "minecraft:feather",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "What it does",
+      "text": [
+        "It drives the vanilla minecraft:movement_speed attribute. A player's base is 0.1, which is about 4.317 m/s of walking speed.",
+        "This mod no longer limits movement speed: the ceiling follows the attribute's own range (vanilla 1024, higher with an attribute-range mod such as AttributeFix).",
+        "The vanilla server does have a \"moved too quickly\" check: on 1.21.1 it uses a fixed threshold that does not read the attribute, roughly 46x vanilla speed, and triggering it only teleports you back and logs a warning - it does not kick you. That is a vanilla mechanic, not this mod's cap.",
+        "The movement_speed.hard_cap_attr option defaults to 0 (disabled); an admin who wants a local backstop can set it to any positive value."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Flat (numeric) line",
+      "text": [
+        "The curve is LINEAR: +0.006666667 per point.",
+        "20 points -> +0.1333 (attribute 0.2333, about 2.3x vanilla); 50 -> +0.3333; 100 -> +0.6667; 200 -> +1.3333.",
+        "The old curve, gain = 0.4 * x / (x + 60), had an initial slope of 0.4/60 = 0.006666667, so the early feel is unchanged."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Percent line",
+      "text": [
+        "Also LINEAR: +2.5% per point, on the TOTAL basis.",
+        "TOTAL means the percentage scales base 0.1 + equipment (vanilla has no speed gear) + the result of the flat line.",
+        "20 points -> +50.00%; 50 -> +125.00%; 100 -> +250.00%; 200 -> +500.00%.",
+        "Worked example: 20 flat + 20 percent -> (0.1 + 0.1333) * (1 + 50%) = 0.35, about 3.5x vanilla."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Ceiling & returns",
+      "text": [
+        "There is no designed ceiling and no diminishing returns: the attribute value climbs until it meets the attribute's own range (vanilla 1024).",
+        "What you meet first is actually the vanilla server's \"moved too quickly\" pull-back (a fixed threshold, about 46x vanilla speed). It only teleports you back and logs a warning; it does not kick you.",
+        "Set your own comfort limit: 5x to 8x vanilla (attribute 0.5..0.8) is plenty; beyond that it starts hurting combat footwork and building precision."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Practical advice",
+      "text": [
+        "5x to 8x vanilla (attribute 0.5..0.8) is plenty; beyond that it starts hurting combat footwork and building precision.",
+        "It is an efficiency stat: great for travelling, exploring and dodging, but it adds no combat power.",
+        "Remember that it also magnifies your momentum after a jump, so leave extra room when landing."
+      ]
+    }
+  ]
+}

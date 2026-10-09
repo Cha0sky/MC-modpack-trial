@@ -1,0 +1,6 @@
+{
+  "name": "辅助加点",
+  "description": "四个辅助维度：移动速度、生命恢复、经验获取、掉落倍率。",
+  "icon": "minecraft:feather",
+  "sortnum": 30
+}

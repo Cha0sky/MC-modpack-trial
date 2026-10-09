@@ -1,0 +1,2342 @@
+{
+  "archived_at": "2026-10-10T00:11:12.257070+08:00",
+  "base_commit": "0dabe4c",
+  "source_preserved": true,
+  "copied_files_hash_verified": true,
+  "plan_sha256": "9a7b8a1086703f81337e602bc1df7e078714ee663cf6e1bcc23caeb66e0409ee",
+  "modules": [
+    {
+      "module": "evolvingblade",
+      "source_root": "D:\\PCL 正式版 2.10.6 (1)\\codex\\evolvingblade",
+      "destination_root": "modules/evolvingblade",
+      "files": [
+        {
+          "source_relative": ".gitattributes",
+          "destination": "modules/evolvingblade/.gitattributes",
+          "bytes": 252,
+          "sha256": "9d443200b564a23ed644531ce866c43dcff8cf5fc40ea48b10f8050fa970bd91"
+        },
+        {
+          "source_relative": ".github/workflows/build.yml",
+          "destination": "modules/evolvingblade/.github/workflows/build.yml",
+          "bytes": 501,
+          "sha256": "574731fc199631423ae71ce9aea23cec4b9caeb037292e94592854c05066547a"
+        },
+        {
+          "source_relative": ".gitignore",
+          "destination": "modules/evolvingblade/.gitignore",
+          "bytes": 599,
+          "sha256": "f029c60bc99280a63f702b74ff895122c77b789073a7e12cd308ce7f920dba67"
+        },
+        {
+          "source_relative": "LICENSE",
+          "destination": "modules/evolvingblade/LICENSE",
+          "bytes": 1274,
+          "sha256": "912d7e38f74624e58e2c5f992207c81cdc90512eb3ca6926bc6c34cdc6342700"
+        },
+        {
+          "source_relative": "README.md",
+          "destination": "modules/evolvingblade/README.md",
+          "bytes": 18153,
+          "sha256": "2330ceeb1ed7015f92ca4b2de9982f3ad4b119068448b1f80a2ba01752e7e453"
+        },
+        {
+          "source_relative": "TEMPLATE_LICENSE.txt",
+          "destination": "modules/evolvingblade/TEMPLATE_LICENSE.txt",
+          "bytes": 1159,
+          "sha256": "dac9ce41f6f46e455f31aea51c366f6ffd2a4be8486eb1b1cb4bd99afb584297"
+        },
+        {
+          "source_relative": "art/v2/DESIGN.md",
+          "destination": "modules/evolvingblade/art/v2/DESIGN.md",
+          "bytes": 1853,
+          "sha256": "d1b344985272073b353a03784542a9e3960b740053bee7ecac6307980174499a"
+        },
+        {
+          "source_relative": "art/v2/READY.md",
+          "destination": "modules/evolvingblade/art/v2/READY.md",
+          "bytes": 621,
+          "sha256": "34dbc5b310030f037a0c56b19c63f4e94d1d4c14597c6c6b62c1a356c4c78119"
+        },
+        {
+          "source_relative": "art/v2/exports/128/star_eater_stage0.png",
+          "destination": "modules/evolvingblade/art/v2/exports/128/star_eater_stage0.png",
+          "bytes": 5442,
+          "sha256": "b3357d9cdf7aee2367f0e42abe06c1a9774c1f5237f19d047abda60a9e6d7692"
+        },
+        {
+          "source_relative": "art/v2/exports/128/star_eater_stage1.png",
+          "destination": "modules/evolvingblade/art/v2/exports/128/star_eater_stage1.png",
+          "bytes": 5672,
+          "sha256": "dc8f4879871af8df815055fde5550b4b107228dce3ad4efe8c3c103d553cea41"
+        },
+        {
+          "source_relative": "art/v2/exports/128/star_eater_stage2.png",
+          "destination": "modules/evolvingblade/art/v2/exports/128/star_eater_stage2.png",
+          "bytes": 6020,
+          "sha256": "cd908dd69a906fdf08d72138ea3eed5c6b6c969ccdfb0e0e86425b6cb852417f"
+        },
+        {
+          "source_relative": "art/v2/exports/128/star_eater_stage3.png",
+          "destination": "modules/evolvingblade/art/v2/exports/128/star_eater_stage3.png",
+          "bytes": 6639,
+          "sha256": "93ddee9f0f108ee57ccdd7f09475fc07683a3770331369194a0387ad7b83953a"
+        },
+        {
+          "source_relative": "art/v2/exports/128/star_eater_stage4.png",
+          "destination": "modules/evolvingblade/art/v2/exports/128/star_eater_stage4.png",
+          "bytes": 7494,
+          "sha256": "4f1fd4353769ad9822fa3aa925efe01acc5dc72adb7511e7f504c14de9021d74"
+        },
+        {
+          "source_relative": "art/v2/exports/128/star_eater_stage5.png",
+          "destination": "modules/evolvingblade/art/v2/exports/128/star_eater_stage5.png",
+          "bytes": 8039,
+          "sha256": "ca828c593a49ad1258a6461bbae0c07094f15c6721b5be52597e3c79a31170f4"
+        },
+        {
+          "source_relative": "art/v2/exports/128/star_eater_stage6.png",
+          "destination": "modules/evolvingblade/art/v2/exports/128/star_eater_stage6.png",
+          "bytes": 7679,
+          "sha256": "1f681411a130345a5649c091aeb87ea47c81334a48774a2b9a6d37ec1a265142"
+        },
+        {
+          "source_relative": "art/v2/exports/128/star_eater_stage7.png",
+          "destination": "modules/evolvingblade/art/v2/exports/128/star_eater_stage7.png",
+          "bytes": 7914,
+          "sha256": "a663d42b1d4410651b338116e4b79f0eae46b59a9c4b4fb71ad6f14b1d1123e6"
+        },
+        {
+          "source_relative": "art/v2/exports/EXPORT-REPORT.md",
+          "destination": "modules/evolvingblade/art/v2/exports/EXPORT-REPORT.md",
+          "bytes": 1642,
+          "sha256": "2e6cf826f79f6cdf80dd3de9dbbbc2f7a541d5f7758ad258f3b396315ff33eab"
+        },
+        {
+          "source_relative": "art/v2/exports/contact-sheet.png",
+          "destination": "modules/evolvingblade/art/v2/exports/contact-sheet.png",
+          "bytes": 84336,
+          "sha256": "295b8545665bbe852aba7a0f50718ca2ead7efa96d96c99ce114d981520ab8f5"
+        },
+        {
+          "source_relative": "art/v2/masters-manifest.json",
+          "destination": "modules/evolvingblade/art/v2/masters-manifest.json",
+          "bytes": 5084,
+          "sha256": "7781084086d68806b40243b1228fc6a9fa10faac0cd539dcddcc1c8581c971fa"
+        },
+        {
+          "source_relative": "art/v2/masters/stage0.png",
+          "destination": "modules/evolvingblade/art/v2/masters/stage0.png",
+          "bytes": 306767,
+          "sha256": "e736bee040734284b8bd75f78e1f757dd4c96a74e5bce8adac5abc597941e971"
+        },
+        {
+          "source_relative": "art/v2/masters/stage1.png",
+          "destination": "modules/evolvingblade/art/v2/masters/stage1.png",
+          "bytes": 354454,
+          "sha256": "b50ef64b81f40793c393cfc813230798a68087497f14fe628a59f008595402a2"
+        },
+        {
+          "source_relative": "art/v2/masters/stage2.png",
+          "destination": "modules/evolvingblade/art/v2/masters/stage2.png",
+          "bytes": 404342,
+          "sha256": "d1e4c18abe85a83429eb6d81120efd35803e7c0c8006e65e40cdc7255844910c"
+        },
+        {
+          "source_relative": "art/v2/masters/stage3.png",
+          "destination": "modules/evolvingblade/art/v2/masters/stage3.png",
+          "bytes": 491022,
+          "sha256": "966de0d8669d8abe7d4cd14315b2b8b5473b72328d14b8f69b15584a9eb75ebe"
+        },
+        {
+          "source_relative": "art/v2/masters/stage4.png",
+          "destination": "modules/evolvingblade/art/v2/masters/stage4.png",
+          "bytes": 608189,
+          "sha256": "4f2237793835549d1a08a3b8a3679214418f2d247eab8571ecceacf1433e956f"
+        },
+        {
+          "source_relative": "art/v2/masters/stage5.png",
+          "destination": "modules/evolvingblade/art/v2/masters/stage5.png",
+          "bytes": 673790,
+          "sha256": "e1e61c63b0d6bb7f2643d4d9c7750deb7f039bc01023d44e3e044d42e6e025de"
+        },
+        {
+          "source_relative": "art/v2/masters/stage6.png",
+          "destination": "modules/evolvingblade/art/v2/masters/stage6.png",
+          "bytes": 508431,
+          "sha256": "bfc6ce5dab6c4aa52dcf7a2f755d7ea3ca1b88e618515621d01ee9875909843e"
+        },
+        {
+          "source_relative": "art/v2/masters/stage7.png",
+          "destination": "modules/evolvingblade/art/v2/masters/stage7.png",
+          "bytes": 605635,
+          "sha256": "825bd12e7cf98b12563f444fa2b020e5e72cdb424bb4f332134a9dfe18339e26"
+        },
+        {
+          "source_relative": "art/v3/ART-NOTE.md",
+          "destination": "modules/evolvingblade/art/v3/ART-NOTE.md",
+          "bytes": 2613,
+          "sha256": "944a5462fd5b871272cb36f4091ddf17b93d0486c62b89c4771d0bca856e5eab"
+        },
+        {
+          "source_relative": "art/v3/exports/.keep",
+          "destination": "modules/evolvingblade/art/v3/exports/.keep",
+          "bytes": 12,
+          "sha256": "2f73349cfc4630255319c6c8dfc1b46a8996ace9d14d8e07563b165915918ec2"
+        },
+        {
+          "source_relative": "art/v3/exports/EXPORT-REPORT.md",
+          "destination": "modules/evolvingblade/art/v3/exports/EXPORT-REPORT.md",
+          "bytes": 2203,
+          "sha256": "00c5d236b92ac30634a3a2003b51961ad6cb0ab8f56af05bfc586ac88772b9be"
+        },
+        {
+          "source_relative": "art/v3/exports/animation-frames.png",
+          "destination": "modules/evolvingblade/art/v3/exports/animation-frames.png",
+          "bytes": 11821,
+          "sha256": "df89d02487950da2f4bb97e56b303a47a67aad747956efd33690a9d33d9ec2cd"
+        },
+        {
+          "source_relative": "art/v3/exports/blade-mask.png",
+          "destination": "modules/evolvingblade/art/v3/exports/blade-mask.png",
+          "bytes": 3373,
+          "sha256": "0298be2ed4a1a37049a3dca86b27b9587db53845b9b56e5683a81613809ec4c6"
+        },
+        {
+          "source_relative": "art/v3/exports/contact-sheet.png",
+          "destination": "modules/evolvingblade/art/v3/exports/contact-sheet.png",
+          "bytes": 5986,
+          "sha256": "70ea697c01df9e844411c9d59a4af93fa076a30d564006db5f9547b2f4cef7b3"
+        },
+        {
+          "source_relative": "art/v3/exports/star_eater_stage0.png",
+          "destination": "modules/evolvingblade/art/v3/exports/star_eater_stage0.png",
+          "bytes": 264,
+          "sha256": "3ba54d3e0b916f68ffe35ffbfdf993d0fd51a2399d4d81ef2d37ae538d9c6fcc"
+        },
+        {
+          "source_relative": "art/v3/exports/star_eater_stage1.png",
+          "destination": "modules/evolvingblade/art/v3/exports/star_eater_stage1.png",
+          "bytes": 276,
+          "sha256": "fe0c28b3a1076daf1ea920e01837dfcf511265b1a04326697a4dba566f5fe9c2"
+        },
+        {
+          "source_relative": "art/v3/exports/star_eater_stage2.png",
+          "destination": "modules/evolvingblade/art/v3/exports/star_eater_stage2.png",
+          "bytes": 693,
+          "sha256": "d430ae697595115796247e258a7b7d2059f856472894d38e01293555edb0273a"
+        },
+        {
+          "source_relative": "art/v3/exports/star_eater_stage3.png",
+          "destination": "modules/evolvingblade/art/v3/exports/star_eater_stage3.png",
+          "bytes": 613,
+          "sha256": "04c3549fa6c956cc899c9c94be720113598151abd69bcffe482ac389d7a2513a"
+        },
+        {
+          "source_relative": "art/v3/exports/star_eater_stage4.png",
+          "destination": "modules/evolvingblade/art/v3/exports/star_eater_stage4.png",
+          "bytes": 670,
+          "sha256": "6c6a1e567585e83264d7259b0f91a8b860975808b63387acc4ff6dca289fa23d"
+        },
+        {
+          "source_relative": "art/v3/exports/star_eater_stage5.png",
+          "destination": "modules/evolvingblade/art/v3/exports/star_eater_stage5.png",
+          "bytes": 825,
+          "sha256": "c7bfeff91d6e965dc0a5088b6830ce03f9b8be18cd47ad97d5d86469798c8e50"
+        },
+        {
+          "source_relative": "art/v3/exports/star_eater_stage6.png",
+          "destination": "modules/evolvingblade/art/v3/exports/star_eater_stage6.png",
+          "bytes": 812,
+          "sha256": "7c0a1bd1ede0a43600e6b7c1b86300293045c27745274ff88360aa9f411e5fb2"
+        },
+        {
+          "source_relative": "art/v3/exports/star_eater_stage7.png",
+          "destination": "modules/evolvingblade/art/v3/exports/star_eater_stage7.png",
+          "bytes": 745,
+          "sha256": "09d594288527c92802db377402cb4dd46a2ae722b05a6167fb33d918a24a8197"
+        },
+        {
+          "source_relative": "art/v3/masters/stage0.png",
+          "destination": "modules/evolvingblade/art/v3/masters/stage0.png",
+          "bytes": 247708,
+          "sha256": "8f1b149f98064049a7436ae87f2139cef8fc867feb5b4d2a9266965796aa3f7b"
+        },
+        {
+          "source_relative": "art/v3/masters/stage1.png",
+          "destination": "modules/evolvingblade/art/v3/masters/stage1.png",
+          "bytes": 252476,
+          "sha256": "408bad5a19ac1233c675b872a0218db045ed7d81b5be5dfb0052c8b99c8fda6b"
+        },
+        {
+          "source_relative": "art/v3/masters/stage2.png",
+          "destination": "modules/evolvingblade/art/v3/masters/stage2.png",
+          "bytes": 311064,
+          "sha256": "41403c8b80922d23783aad57a6c4f676f8d1931448d5f6bf48d781e42b3680f4"
+        },
+        {
+          "source_relative": "art/v3/masters/stage3.png",
+          "destination": "modules/evolvingblade/art/v3/masters/stage3.png",
+          "bytes": 330071,
+          "sha256": "e00a26505eba760eaff7083db3d4c0e36326fc208c5156677bf9af178b11b411"
+        },
+        {
+          "source_relative": "art/v3/masters/stage4.png",
+          "destination": "modules/evolvingblade/art/v3/masters/stage4.png",
+          "bytes": 298655,
+          "sha256": "bcd76446dd35af0a5c716616024c3e22f9c04fd9cb6645403e9cd3ca61590eeb"
+        },
+        {
+          "source_relative": "art/v3/masters/stage5.png",
+          "destination": "modules/evolvingblade/art/v3/masters/stage5.png",
+          "bytes": 255900,
+          "sha256": "ca3d5a6e69767e2588fa360010bf1d3c8a3a849807ce7c0bdb27c0e56c83244d"
+        },
+        {
+          "source_relative": "art/v3/masters/stage6.png",
+          "destination": "modules/evolvingblade/art/v3/masters/stage6.png",
+          "bytes": 257283,
+          "sha256": "db72b891b43886dbd77d9bd97380ef749d3b8849c75e557c2fb77d9c605ee128"
+        },
+        {
+          "source_relative": "art/v3/masters/stage7.png",
+          "destination": "modules/evolvingblade/art/v3/masters/stage7.png",
+          "bytes": 253378,
+          "sha256": "70a6f507e5d1b0bc2f225bc95c36d4ee74bc0c582cbd4ea2d9ddfcb787964257"
+        },
+        {
+          "source_relative": "build.gradle",
+          "destination": "modules/evolvingblade/build.gradle",
+          "bytes": 14315,
+          "sha256": "14e49e69e162aadc4624e94ee1a73379ef8134c81c3088765c8564ad46a5efdb"
+        },
+        {
+          "source_relative": "docs/API-NOTES-phase1.md",
+          "destination": "modules/evolvingblade/docs/API-NOTES-phase1.md",
+          "bytes": 20347,
+          "sha256": "21adfdbd8846f122850a46d0333cb42f725af83aa94aeb194bbbae6e0dbd7de2"
+        },
+        {
+          "source_relative": "docs/CHANGELOG-1.1.0.md",
+          "destination": "modules/evolvingblade/docs/CHANGELOG-1.1.0.md",
+          "bytes": 17474,
+          "sha256": "5f096fbaef3500d938e1feee28e3c497eee49135e934dc075eb5bd987b7ac402"
+        },
+        {
+          "source_relative": "docs/TEST-MAPPING-1.1.0.md",
+          "destination": "modules/evolvingblade/docs/TEST-MAPPING-1.1.0.md",
+          "bytes": 11083,
+          "sha256": "23360255f293993c48ff173fc1f990e1fa4263c654e40e23f9bbb0d49a0a7bf4"
+        },
+        {
+          "source_relative": "docs/TEST-MAPPING.md",
+          "destination": "modules/evolvingblade/docs/TEST-MAPPING.md",
+          "bytes": 13844,
+          "sha256": "e20edf2ce5ad03b7173eda468ab34270f768e43898e5ae3c2c77b106b96e16de"
+        },
+        {
+          "source_relative": "AGENTS.md",
+          "destination": "modules/evolvingblade/docs/archive/original-agent-instructions.md",
+          "bytes": 1348,
+          "sha256": "53f90be413c7035e015cdde9494e022b1bd43228176ed0e876e078ca5fa203e5"
+        },
+        {
+          "source_relative": "gradle.properties",
+          "destination": "modules/evolvingblade/gradle.properties",
+          "bytes": 2323,
+          "sha256": "cd1481fdc87ae34f6bf5afeb124226018e5bb94bd108c4f885f87b92a57565ea"
+        },
+        {
+          "source_relative": "gradle/wrapper/gradle-wrapper.jar",
+          "destination": "modules/evolvingblade/gradle/wrapper/gradle-wrapper.jar",
+          "bytes": 43764,
+          "sha256": "7d3a4ac4de1c32b59bc6a4eb8ecb8e612ccd0cf1ae1e99f66902da64df296172"
+        },
+        {
+          "source_relative": "gradle/wrapper/gradle-wrapper.properties",
+          "destination": "modules/evolvingblade/gradle/wrapper/gradle-wrapper.properties",
+          "bytes": 253,
+          "sha256": "97e38c4092036e177d1d31ebb454332a61a1d1313fc76aefe34b35e88211715d"
+        },
+        {
+          "source_relative": "gradlew",
+          "destination": "modules/evolvingblade/gradlew",
+          "bytes": 8733,
+          "sha256": "b187b4c52e749f5760afdd6fadc31b2a98ad35fb249bf0dff03b72650f320409"
+        },
+        {
+          "source_relative": "gradlew.bat",
+          "destination": "modules/evolvingblade/gradlew.bat",
+          "bytes": 2843,
+          "sha256": "94102713eb8fb22d032397924c0f38ab2da783ba60d07054339f1190a0c4e2cd"
+        },
+        {
+          "source_relative": "result-combat-acceptance-rework1.md",
+          "destination": "modules/evolvingblade/result-combat-acceptance-rework1.md",
+          "bytes": 4800,
+          "sha256": "e064aa6b450e0f79d8dd74bff1321a6ff1c0652856846e807f818bc188f8c40c"
+        },
+        {
+          "source_relative": "result-combat-acceptance-rework2.md",
+          "destination": "modules/evolvingblade/result-combat-acceptance-rework2.md",
+          "bytes": 3980,
+          "sha256": "20cfa07e7990ea8ff7760e22e2351732f90c383d7e46fef39802e172c677ffad"
+        },
+        {
+          "source_relative": "result-combat-acceptance.md",
+          "destination": "modules/evolvingblade/result-combat-acceptance.md",
+          "bytes": 5094,
+          "sha256": "24b6c3a624edbbf884ec4e2dc0007ce9a5703fecdbd3eb2fbeeffab8fc850bed"
+        },
+        {
+          "source_relative": "result-persistence-acceptance.md",
+          "destination": "modules/evolvingblade/result-persistence-acceptance.md",
+          "bytes": 7427,
+          "sha256": "29aa6e6181a5eb979f5186d41fd1a567b32556a4b1316f30fccbfdfe260f8a27"
+        },
+        {
+          "source_relative": "result-phase1-rework1.md",
+          "destination": "modules/evolvingblade/result-phase1-rework1.md",
+          "bytes": 19110,
+          "sha256": "a42a56ce4cc7d5403fbb6be817df97f6acdd50555e145ac1e67be937a35644c2"
+        },
+        {
+          "source_relative": "result-phase1-rework2.md",
+          "destination": "modules/evolvingblade/result-phase1-rework2.md",
+          "bytes": 22842,
+          "sha256": "0f9478155b1c2d235d10303ba08f2d98a866bf2c91359fcfbc9addcbad986c9b"
+        },
+        {
+          "source_relative": "result-phase1.md",
+          "destination": "modules/evolvingblade/result-phase1.md",
+          "bytes": 19418,
+          "sha256": "e556f07050104d536494acc88087697713ee4900f8fe12c31c45a4b7605c3abd"
+        },
+        {
+          "source_relative": "result-phase2-rework1.md",
+          "destination": "modules/evolvingblade/result-phase2-rework1.md",
+          "bytes": 12313,
+          "sha256": "b328c5b0e96b82f3ac7f18dba548bb978400a13e4e2a48c80ee40e6b509f4664"
+        },
+        {
+          "source_relative": "result-phase2-rework2.md",
+          "destination": "modules/evolvingblade/result-phase2-rework2.md",
+          "bytes": 10583,
+          "sha256": "8e0d609f91eec9a70323a99b416d69aa4fa50f2a7107384af3f930857600c708"
+        },
+        {
+          "source_relative": "result-phase2.md",
+          "destination": "modules/evolvingblade/result-phase2.md",
+          "bytes": 20255,
+          "sha256": "bc9c690cf4327191ac4facb33e04f1c4b52db7a200f63a2593334738e9d70b12"
+        },
+        {
+          "source_relative": "result-phase3-rework1.md",
+          "destination": "modules/evolvingblade/result-phase3-rework1.md",
+          "bytes": 7211,
+          "sha256": "9488a423ced65bd2236f89f344bf0ff48006ba77e566e54857b979cdcc2a4bab"
+        },
+        {
+          "source_relative": "result-phase3-rework2.md",
+          "destination": "modules/evolvingblade/result-phase3-rework2.md",
+          "bytes": 7794,
+          "sha256": "b83293a4ebcc437b67c6d0ed190e39b240fbe38f475d8bd13c531b30f0a9d1e7"
+        },
+        {
+          "source_relative": "result-phase3.md",
+          "destination": "modules/evolvingblade/result-phase3.md",
+          "bytes": 8393,
+          "sha256": "e23964c7b18b455a96b42e1cf107e7e3d5bc74c2f0ff0313dde828e606d35fc1"
+        },
+        {
+          "source_relative": "result-skill-rework1.md",
+          "destination": "modules/evolvingblade/result-skill-rework1.md",
+          "bytes": 6402,
+          "sha256": "edd5f7667e9c0208f760eec341905912e0f089574b9cd21c3cea219326626606"
+        },
+        {
+          "source_relative": "result-wave-burst-acceptance.md",
+          "destination": "modules/evolvingblade/result-wave-burst-acceptance.md",
+          "bytes": 6381,
+          "sha256": "d0c89b55f42c58ef91033de32c4bbaf16d08fad9351e5271ecabd5a89f3d8d59"
+        },
+        {
+          "source_relative": "settings.gradle",
+          "destination": "modules/evolvingblade/settings.gradle",
+          "bytes": 162,
+          "sha256": "a046c67e1f43e3de1fcd4c2ad0e9c850a663748cc90f86f53de240f1370b84f9"
+        },
+        {
+          "source_relative": "src/gametest/java/com/evolvingblade/gametest/AttributeMathGameTests.java",
+          "destination": "modules/evolvingblade/src/gametest/java/com/evolvingblade/gametest/AttributeMathGameTests.java",
+          "bytes": 10908,
+          "sha256": "467ae661c71a36aa19cc75377465ec6a3075de07fd9a0e21e490b8d0a90533f2"
+        },
+        {
+          "source_relative": "src/gametest/java/com/evolvingblade/gametest/BossCompatGameTests.java",
+          "destination": "modules/evolvingblade/src/gametest/java/com/evolvingblade/gametest/BossCompatGameTests.java",
+          "bytes": 8916,
+          "sha256": "c13063cdbe098958f7e384204dd49a0921b1dd268bfac7e657e2b17d9dda344a"
+        },
+        {
+          "source_relative": "src/gametest/java/com/evolvingblade/gametest/BossMechanismGapGameTests.java",
+          "destination": "modules/evolvingblade/src/gametest/java/com/evolvingblade/gametest/BossMechanismGapGameTests.java",
+          "bytes": 8272,
+          "sha256": "1bff482f58bb890377d75ba516afd8def3f0a6322d571b1e42c35c36b13ea276"
+        },
+        {
+          "source_relative": "src/gametest/java/com/evolvingblade/gametest/BurstSphereGameTests.java",
+          "destination": "modules/evolvingblade/src/gametest/java/com/evolvingblade/gametest/BurstSphereGameTests.java",
+          "bytes": 18311,
+          "sha256": "3f1b0d56e6759deee65a21269e65b23087a899ad76d88ac6eca1e1989a287f84"
+        },
+        {
+          "source_relative": "src/gametest/java/com/evolvingblade/gametest/CodexDeathRegressionGameTests.java",
+          "destination": "modules/evolvingblade/src/gametest/java/com/evolvingblade/gametest/CodexDeathRegressionGameTests.java",
+          "bytes": 5373,
+          "sha256": "b2aaa79bcaeacdee7b10b882b83aa11e09de4bc018dbdb66f8146ac32af649d4"
+        },
+        {
+          "source_relative": "src/gametest/java/com/evolvingblade/gametest/CodexFixtureGeometryGameTests.java",
+          "destination": "modules/evolvingblade/src/gametest/java/com/evolvingblade/gametest/CodexFixtureGeometryGameTests.java",
+          "bytes": 1309,
+          "sha256": "cf045c7f0e4d78631f07d79d9e91a10eaed365c565e5019702def914cf45c69c"
+        },
+        {
+          "source_relative": "src/gametest/java/com/evolvingblade/gametest/CombatAcceptanceGameTests.java",
+          "destination": "modules/evolvingblade/src/gametest/java/com/evolvingblade/gametest/CombatAcceptanceGameTests.java",
+          "bytes": 44204,
+          "sha256": "4078a1b7e9101f173dfad9c0dee0a16507d7ed74640ac0d610c20f630e4a3227"
+        },
+        {
+          "source_relative": "src/gametest/java/com/evolvingblade/gametest/FixtureEntities.java",
+          "destination": "modules/evolvingblade/src/gametest/java/com/evolvingblade/gametest/FixtureEntities.java",
+          "bytes": 8462,
+          "sha256": "fe774ddc3702c759354eff336a10de36474c8fd409cde9899eccbc8a4c386f8b"
+        },
+        {
+          "source_relative": "src/gametest/java/com/evolvingblade/gametest/FixtureGuardGameTests.java",
+          "destination": "modules/evolvingblade/src/gametest/java/com/evolvingblade/gametest/FixtureGuardGameTests.java",
+          "bytes": 2812,
+          "sha256": "2f9e22347cabb6bc2c7efe5aef3bde73fbb89a90620ec4862e4a47fc49fccc07"
+        },
+        {
+          "source_relative": "src/gametest/java/com/evolvingblade/gametest/GiftModeGameTests.java",
+          "destination": "modules/evolvingblade/src/gametest/java/com/evolvingblade/gametest/GiftModeGameTests.java",
+          "bytes": 8018,
+          "sha256": "bb6033854c906da195d193987c231886833d1f45e917bcd2985001f3bb6c8118"
+        },
+        {
+          "source_relative": "src/gametest/java/com/evolvingblade/gametest/GrowthPersistenceGameTests.java",
+          "destination": "modules/evolvingblade/src/gametest/java/com/evolvingblade/gametest/GrowthPersistenceGameTests.java",
+          "bytes": 8437,
+          "sha256": "18d22186d0163c0bff9bc9e6dc6f6b529c96277979f8e0e2185a69afd92ec6bb"
+        },
+        {
+          "source_relative": "src/gametest/java/com/evolvingblade/gametest/ImmediateEquipGameTests.java",
+          "destination": "modules/evolvingblade/src/gametest/java/com/evolvingblade/gametest/ImmediateEquipGameTests.java",
+          "bytes": 11413,
+          "sha256": "f5fa1e04c06cc2ee1f8ec25032e2a10d75090ce0d55f151d073ad16e4de9d0db"
+        },
+        {
+          "source_relative": "src/gametest/java/com/evolvingblade/gametest/KillCreditGameTests.java",
+          "destination": "modules/evolvingblade/src/gametest/java/com/evolvingblade/gametest/KillCreditGameTests.java",
+          "bytes": 26178,
+          "sha256": "6370f5487d7b76fe511b7192e7355d3fcb211d15d4a5defea5920bf9ffbc69d0"
+        },
+        {
+          "source_relative": "src/gametest/java/com/evolvingblade/gametest/MultipartAttackGameTests.java",
+          "destination": "modules/evolvingblade/src/gametest/java/com/evolvingblade/gametest/MultipartAttackGameTests.java",
+          "bytes": 9032,
+          "sha256": "9f5904aa60da00cccb58d1a2644d018f7e416b419d6b2032336123f6d8a594df"
+        },
+        {
+          "source_relative": "src/gametest/java/com/evolvingblade/gametest/PersistenceAcceptanceGameTests.java",
+          "destination": "modules/evolvingblade/src/gametest/java/com/evolvingblade/gametest/PersistenceAcceptanceGameTests.java",
+          "bytes": 17011,
+          "sha256": "3d0698b6371836e32a23f04e98f8a31e0d6386a5387a62eeba267633d91e6aa1"
+        },
+        {
+          "source_relative": "src/gametest/java/com/evolvingblade/gametest/SourceFactGameTests.java",
+          "destination": "modules/evolvingblade/src/gametest/java/com/evolvingblade/gametest/SourceFactGameTests.java",
+          "bytes": 19333,
+          "sha256": "3d6fe0751aa6899678c16d4ebf0042b0c83626dc4410cfbada607c429a089b8f"
+        },
+        {
+          "source_relative": "src/gametest/java/com/evolvingblade/gametest/StageAndWaveGameTests.java",
+          "destination": "modules/evolvingblade/src/gametest/java/com/evolvingblade/gametest/StageAndWaveGameTests.java",
+          "bytes": 9777,
+          "sha256": "b6697ea2654d7273b69b97442d53dd3489ab06a9b449411fb1a183cc113785ef"
+        },
+        {
+          "source_relative": "src/gametest/java/com/evolvingblade/gametest/SyncClockGameTests.java",
+          "destination": "modules/evolvingblade/src/gametest/java/com/evolvingblade/gametest/SyncClockGameTests.java",
+          "bytes": 7042,
+          "sha256": "ee51c8f8d9299540b37362787768d7bf3efcb6246075c7c208a576bac39bbed6"
+        },
+        {
+          "source_relative": "src/gametest/java/com/evolvingblade/gametest/ThirdPartyDamageGameTests.java",
+          "destination": "modules/evolvingblade/src/gametest/java/com/evolvingblade/gametest/ThirdPartyDamageGameTests.java",
+          "bytes": 53889,
+          "sha256": "ed8639e3efdae215b7cca3166f84ebb09d727192d3102c1dbbc7d250550e3970"
+        },
+        {
+          "source_relative": "src/gametest/java/com/evolvingblade/gametest/WaveBurstAcceptanceGameTests.java",
+          "destination": "modules/evolvingblade/src/gametest/java/com/evolvingblade/gametest/WaveBurstAcceptanceGameTests.java",
+          "bytes": 37030,
+          "sha256": "041933ec80f988da0181cce17bbea83ad215fb18413c4325e2a431ce2ec0d695"
+        },
+        {
+          "source_relative": "src/gametest/resources/data/c/tags/entity_type/bosses.json",
+          "destination": "modules/evolvingblade/src/gametest/resources/data/c/tags/entity_type/bosses.json",
+          "bytes": 65,
+          "sha256": "489bbc10ae0357bcdf4cbc227ea8f12bf074d593ebae041ab3bc8ac05baa8ae0"
+        },
+        {
+          "source_relative": "src/gametest/resources/data/evolvingblade/structure/boss_arena.nbt",
+          "destination": "modules/evolvingblade/src/gametest/resources/data/evolvingblade/structure/boss_arena.nbt",
+          "bytes": 6125,
+          "sha256": "544fab0c8cafc2198c1d8595e183cbb41bc902da14b82a06021cc6bd9a396b8a"
+        },
+        {
+          "source_relative": "src/gametest/resources/data/evolvingblade/structure/empty.nbt",
+          "destination": "modules/evolvingblade/src/gametest/resources/data/evolvingblade/structure/empty.nbt",
+          "bytes": 315,
+          "sha256": "5ae24e9904ab801cea8e9f2d2531a8a6df2ee5a28c53ce0b73f9deca7f31190c"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/EvolvingBlade.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/EvolvingBlade.java",
+          "bytes": 2276,
+          "sha256": "c8b9dd5fc6cba76e373d88384ea65407ed1f38910d07c7d81ca6734922319295"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/boss/BossClassification.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/boss/BossClassification.java",
+          "bytes": 1128,
+          "sha256": "784883dfd4951e15ca9b6cde0d8a22c66aa47d08b193a765fdcad3e0db1978a8"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/boss/BossClassifier.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/boss/BossClassifier.java",
+          "bytes": 4265,
+          "sha256": "d757738f29f88070dc8d45b3e27817e1a3a2d4b4790fecb41d9edb4edf821877"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/boss/BossClassifierCore.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/boss/BossClassifierCore.java",
+          "bytes": 2390,
+          "sha256": "f5cb703874d483aa5e1f0144eede92abf1592d6ecc50762578cec8f070b8ff1a"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/boss/BossEventProbe.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/boss/BossEventProbe.java",
+          "bytes": 5362,
+          "sha256": "a46eb24c89bf551326de5c364518ecc0bfb805b2df6e97613c757b6d7117378b"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/boss/BossReason.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/boss/BossReason.java",
+          "bytes": 1510,
+          "sha256": "f83eb77612edfc8f24804bc6d85ae6403c3cb087f627a974c030e1f4738ff399"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/boss/BossRules.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/boss/BossRules.java",
+          "bytes": 2078,
+          "sha256": "e590960d200a8ff65c742e517c958e047537f0db51443cb525d6238f50c6193b"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/client/ChoiceScreen.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/client/ChoiceScreen.java",
+          "bytes": 9490,
+          "sha256": "11cbaea2895e08bd664fa3d01a015a4c22dbb80eccf50f5ea1ccd3b8be26aa04"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/client/DashboardScreen.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/client/DashboardScreen.java",
+          "bytes": 3659,
+          "sha256": "d2bd2d3352ec0cc427f13d52944d24a0a003a642e89873a8edf83d035b56b546"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/client/EBAbilityClient.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/client/EBAbilityClient.java",
+          "bytes": 30487,
+          "sha256": "336e35aa1b998d1fbd7ddebdf8d352043c361aba73b0165bc1830f4872fcecab"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/client/EBClient.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/client/EBClient.java",
+          "bytes": 8406,
+          "sha256": "c540c895951420f274d18259f38e8b53ccd08951f2c051a19fc07dab8517343d"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/client/EBClientState.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/client/EBClientState.java",
+          "bytes": 1803,
+          "sha256": "dce54b7c65d580def9ad385c59f80abac9492b1d4f9140ea8ade205679500a0f"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/client/ModeCardText.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/client/ModeCardText.java",
+          "bytes": 9293,
+          "sha256": "3bb8883ccd763f9624abbb2e07a5dbb6ae7b8fb203be7d7755ecb948b01d3610"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/combat/AbilityGeometry.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/combat/AbilityGeometry.java",
+          "bytes": 12074,
+          "sha256": "e102cfa98f4925446916b98844423c97cb222ee890c841da471a29f50e12f58d"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/combat/AbilityState.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/combat/AbilityState.java",
+          "bytes": 3516,
+          "sha256": "e4853040a8cb56e6b9e22ffc4bd74f219c4dd0dda8124bbb380c9d0bd58a6bfb"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/combat/AbilityVisuals.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/combat/AbilityVisuals.java",
+          "bytes": 5003,
+          "sha256": "80b5148cd81eeebb1cefe3c11e7ae3c988ef2f3121ca27b6fda4f2d6d521942c"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/combat/BossRateCodec.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/combat/BossRateCodec.java",
+          "bytes": 3554,
+          "sha256": "38cde9b5d71f2d147a5ee231321e5ed968f32035c292a658a52765b16905a2b7"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/combat/CombatMath.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/combat/CombatMath.java",
+          "bytes": 6808,
+          "sha256": "5e9a065cf000c8fc322813040431ecb665af524c595cce04bf1d9168004991e3"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/combat/EffectiveDamage.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/combat/EffectiveDamage.java",
+          "bytes": 7802,
+          "sha256": "3a5dfbce9bc490670dd21464eecb398cf5ac41a9b834f9c03801a31657e5b811"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/combat/StageAttributes.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/combat/StageAttributes.java",
+          "bytes": 14446,
+          "sha256": "e6d7303a3182a5ab58b24e8e926749bb8df3a0b3b8925113744106356f521c4e"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/combat/StarEaterAbilities.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/combat/StarEaterAbilities.java",
+          "bytes": 21991,
+          "sha256": "724794ac0246bd575925ad739e125b06e82d56a4059e682335a826743874cf49"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/combat/SwordHit.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/combat/SwordHit.java",
+          "bytes": 1735,
+          "sha256": "228f4370a438de71c94dd3b91cd84916755dbbf932b7d6809f673af6067ae94e"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/combat/__wtest.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/combat/__wtest.java",
+          "bytes": 1,
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/command/EBCommands.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/command/EBCommands.java",
+          "bytes": 10584,
+          "sha256": "209bd5d0d0b4f4decbf6c574940c4fd14e8aa912ee1f7b50872b365ba2a35154"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/config/EBConfig.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/config/EBConfig.java",
+          "bytes": 30694,
+          "sha256": "129faf8c3550a186edb412df92759a22c8068d59894687bb72b8d97b966ae1df"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/event/EBCombatHandler.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/event/EBCombatHandler.java",
+          "bytes": 13877,
+          "sha256": "95345a14eb299dc5e4129754c0c37ca8509200c68530607c8a7c6906edfdfefc"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/event/EBKillCreditHandler.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/event/EBKillCreditHandler.java",
+          "bytes": 14037,
+          "sha256": "4b749f1cad2b5168f771cab99e9b807c76476be47249f8174f54145ddaa4798f"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/event/EBPlayerLifecycleHandler.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/event/EBPlayerLifecycleHandler.java",
+          "bytes": 4983,
+          "sha256": "51820d1b9aeeebb4daf6d913f7e5174fb18bf370f2e2da8e6545c374309b8219"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/growth/Abilities.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/growth/Abilities.java",
+          "bytes": 6317,
+          "sha256": "fba9343216b764578e3b6162bea49a2626fe4909fcb13a0573c073d322fa0be9"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/growth/DeathDecision.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/growth/DeathDecision.java",
+          "bytes": 3563,
+          "sha256": "5ac410e598a68b8ef09b45d584c72539307ca98033cd3bd1ab3b85c9d5f866b4"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/growth/GiftDelivery.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/growth/GiftDelivery.java",
+          "bytes": 1549,
+          "sha256": "385bbbf45a725af1b5712f109ee88aa4990c55da0d8a5cd84698346b2a0d5548"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/growth/GiftState.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/growth/GiftState.java",
+          "bytes": 1336,
+          "sha256": "4db34bef2a69788ab261601ed04eb93ec7289632d8c38a8914e813256eeec355"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/growth/GrowthData.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/growth/GrowthData.java",
+          "bytes": 7156,
+          "sha256": "8e8c7fa0b554814403aa5d70b972040c95860705f20f16a5baf94bc5b8f2d7f2"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/growth/GrowthMode.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/growth/GrowthMode.java",
+          "bytes": 3741,
+          "sha256": "35aba626c38e1eeb656117961ae5a7a5a43216050ca906b71745e9108d999ea8"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/growth/GrowthService.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/growth/GrowthService.java",
+          "bytes": 12442,
+          "sha256": "6015b5ca5b88da92501ef27042e70d4d831ca8f58ca759e145cf1233b9f4da86"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/growth/GrowthSettings.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/growth/GrowthSettings.java",
+          "bytes": 8913,
+          "sha256": "18a68b3ec527aa78028e3323cf0035be4e7ea8061e58bb30ba938603e0b9529b"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/growth/GrowthThresholds.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/growth/GrowthThresholds.java",
+          "bytes": 3463,
+          "sha256": "1a3fb20e81c11efe9e9895ee4a55af39aa1c01fb19197da040b46d8b9e49d1f2"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/growth/HostileRules.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/growth/HostileRules.java",
+          "bytes": 1065,
+          "sha256": "b6dcdb7336677c33227ee255e726b36f44f8d883f544a378ced38c239b1598d9"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/growth/PendingDeathQueue.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/growth/PendingDeathQueue.java",
+          "bytes": 2928,
+          "sha256": "91dfbbcb392db20c020d0ce8822fbab9c2f2611875e2a925c55a214b0589c008"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/growth/StageCalculator.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/growth/StageCalculator.java",
+          "bytes": 5013,
+          "sha256": "7ff65a78cf1f251b879fc0931e9c9647e0339dd014ac631652b0eb26a5beee39"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/item/StarEaterItem.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/item/StarEaterItem.java",
+          "bytes": 5548,
+          "sha256": "2b2ecf21a6b387a52ec3a2d9afd9db0d7b24da86bf1909d29834222bd9aa7cb9"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/network/AbilityEffectPayload.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/network/AbilityEffectPayload.java",
+          "bytes": 7226,
+          "sha256": "59c4cbf58448b610a713533010b19606116f2bd9d350f23364465a27bb3b124f"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/network/EBPayloads.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/network/EBPayloads.java",
+          "bytes": 21950,
+          "sha256": "5d7c6c52f36a00c94272cd067b5bc88adc2657a32df66b7f7369b6c9936f64b6"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/registry/EBAttachments.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/registry/EBAttachments.java",
+          "bytes": 3467,
+          "sha256": "434863ac200084797bdd21f9e26741c56efcf2c36bf1c7560ad64412e3b27d26"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/registry/EBCreativeTabs.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/registry/EBCreativeTabs.java",
+          "bytes": 1254,
+          "sha256": "1e8b17ca0087a75f79493272afbe71f38c58f3eda7bb82bfbe6e14e68df56c7f"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/registry/EBDataComponents.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/registry/EBDataComponents.java",
+          "bytes": 1460,
+          "sha256": "bdbe337adbaaf80365c291cc34502651681b9526db9db33e2a7b1a4dacf73e96"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/registry/EBItems.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/registry/EBItems.java",
+          "bytes": 860,
+          "sha256": "8bd32809486835a5732738bce9fe2f24ebe09cda0cdff9348ee0673d6f8c9195"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/registry/EBTags.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/registry/EBTags.java",
+          "bytes": 1333,
+          "sha256": "91fb5ac1d57872dc5aae2610644bf715f8c71b1fa29477f7fbe6ce68ab33e559"
+        },
+        {
+          "source_relative": "src/main/java/com/evolvingblade/util/BoundedLog.java",
+          "destination": "modules/evolvingblade/src/main/java/com/evolvingblade/util/BoundedLog.java",
+          "bytes": 1293,
+          "sha256": "c84a54d9b359049d35ecfb760b3c06501c7ab29f249a126b67006a800c0d9d73"
+        },
+        {
+          "source_relative": "src/main/resources/assets/evolvingblade/lang/en_us.json",
+          "destination": "modules/evolvingblade/src/main/resources/assets/evolvingblade/lang/en_us.json",
+          "bytes": 12822,
+          "sha256": "2adc3965561de98a0df9d2fe532f94d748ba3d771825754f3f64a63b0a8a9617"
+        },
+        {
+          "source_relative": "src/main/resources/assets/evolvingblade/lang/zh_cn.json",
+          "destination": "modules/evolvingblade/src/main/resources/assets/evolvingblade/lang/zh_cn.json",
+          "bytes": 12666,
+          "sha256": "7fcd66ed111046a59b514dd04c8e57c98081ac47595757954da53c4ac977ff13"
+        },
+        {
+          "source_relative": "src/main/resources/assets/evolvingblade/models/item/star_eater.json",
+          "destination": "modules/evolvingblade/src/main/resources/assets/evolvingblade/models/item/star_eater.json",
+          "bytes": 800,
+          "sha256": "bd9db61c817cb4237b9f5ffce4507414cd229cffcbc2ecba3d282d32464393ad"
+        },
+        {
+          "source_relative": "src/main/resources/assets/evolvingblade/models/item/star_eater_stage0.json",
+          "destination": "modules/evolvingblade/src/main/resources/assets/evolvingblade/models/item/star_eater_stage0.json",
+          "bytes": 107,
+          "sha256": "e97e019c3ae8ed8eba9ef780314bb33d474b0e45dada6d55b57e7448d7b8e882"
+        },
+        {
+          "source_relative": "src/main/resources/assets/evolvingblade/models/item/star_eater_stage1.json",
+          "destination": "modules/evolvingblade/src/main/resources/assets/evolvingblade/models/item/star_eater_stage1.json",
+          "bytes": 107,
+          "sha256": "039f5777302dbb81a3f6fe21e9171ba5855f57e44d5400a2302833c21148e34e"
+        },
+        {
+          "source_relative": "src/main/resources/assets/evolvingblade/models/item/star_eater_stage2.json",
+          "destination": "modules/evolvingblade/src/main/resources/assets/evolvingblade/models/item/star_eater_stage2.json",
+          "bytes": 107,
+          "sha256": "00a202384f94d691bcb85b9bced4b71cd8978ba53ea82c1128c4c7e4e3ac6cb5"
+        },
+        {
+          "source_relative": "src/main/resources/assets/evolvingblade/models/item/star_eater_stage3.json",
+          "destination": "modules/evolvingblade/src/main/resources/assets/evolvingblade/models/item/star_eater_stage3.json",
+          "bytes": 107,
+          "sha256": "a23aec3c7f90f37ef39a576bf56e7e7365438905eae6a0a63ff678b901e3d643"
+        },
+        {
+          "source_relative": "src/main/resources/assets/evolvingblade/models/item/star_eater_stage4.json",
+          "destination": "modules/evolvingblade/src/main/resources/assets/evolvingblade/models/item/star_eater_stage4.json",
+          "bytes": 107,
+          "sha256": "8b513cfa8ac8b667a7bb5153eeb007c56db85e1bbed217d13d28a587cfc1998a"
+        },
+        {
+          "source_relative": "src/main/resources/assets/evolvingblade/models/item/star_eater_stage5.json",
+          "destination": "modules/evolvingblade/src/main/resources/assets/evolvingblade/models/item/star_eater_stage5.json",
+          "bytes": 107,
+          "sha256": "7303cc72f69896ae14f4f36458639aedc4fc7b4d158ea0f025424b5d1acc5ebb"
+        },
+        {
+          "source_relative": "src/main/resources/assets/evolvingblade/models/item/star_eater_stage6.json",
+          "destination": "modules/evolvingblade/src/main/resources/assets/evolvingblade/models/item/star_eater_stage6.json",
+          "bytes": 107,
+          "sha256": "4a6181b3f061656812dd6a601c4179e5c18e1d644c4d8f97a9c4c05ed1cc9e6c"
+        },
+        {
+          "source_relative": "src/main/resources/assets/evolvingblade/models/item/star_eater_stage7.json",
+          "destination": "modules/evolvingblade/src/main/resources/assets/evolvingblade/models/item/star_eater_stage7.json",
+          "bytes": 107,
+          "sha256": "4c64cd12070bcf92df909a19d23c9b5f4dbcb946c9d1e3ca8895d86e38b8a1af"
+        },
+        {
+          "source_relative": "src/main/resources/assets/evolvingblade/textures/item/star_eater_stage0.png",
+          "destination": "modules/evolvingblade/src/main/resources/assets/evolvingblade/textures/item/star_eater_stage0.png",
+          "bytes": 264,
+          "sha256": "3ba54d3e0b916f68ffe35ffbfdf993d0fd51a2399d4d81ef2d37ae538d9c6fcc"
+        },
+        {
+          "source_relative": "src/main/resources/assets/evolvingblade/textures/item/star_eater_stage1.png",
+          "destination": "modules/evolvingblade/src/main/resources/assets/evolvingblade/textures/item/star_eater_stage1.png",
+          "bytes": 276,
+          "sha256": "fe0c28b3a1076daf1ea920e01837dfcf511265b1a04326697a4dba566f5fe9c2"
+        },
+        {
+          "source_relative": "src/main/resources/assets/evolvingblade/textures/item/star_eater_stage2.png",
+          "destination": "modules/evolvingblade/src/main/resources/assets/evolvingblade/textures/item/star_eater_stage2.png",
+          "bytes": 693,
+          "sha256": "d430ae697595115796247e258a7b7d2059f856472894d38e01293555edb0273a"
+        },
+        {
+          "source_relative": "src/main/resources/assets/evolvingblade/textures/item/star_eater_stage2.png.mcmeta",
+          "destination": "modules/evolvingblade/src/main/resources/assets/evolvingblade/textures/item/star_eater_stage2.png.mcmeta",
+          "bytes": 70,
+          "sha256": "444b9ce7e3f1cf7c88ce6f4e54754ecf59157820b3723b68888f1cdc5de44629"
+        },
+        {
+          "source_relative": "src/main/resources/assets/evolvingblade/textures/item/star_eater_stage3.png",
+          "destination": "modules/evolvingblade/src/main/resources/assets/evolvingblade/textures/item/star_eater_stage3.png",
+          "bytes": 613,
+          "sha256": "04c3549fa6c956cc899c9c94be720113598151abd69bcffe482ac389d7a2513a"
+        },
+        {
+          "source_relative": "src/main/resources/assets/evolvingblade/textures/item/star_eater_stage3.png.mcmeta",
+          "destination": "modules/evolvingblade/src/main/resources/assets/evolvingblade/textures/item/star_eater_stage3.png.mcmeta",
+          "bytes": 70,
+          "sha256": "444b9ce7e3f1cf7c88ce6f4e54754ecf59157820b3723b68888f1cdc5de44629"
+        },
+        {
+          "source_relative": "src/main/resources/assets/evolvingblade/textures/item/star_eater_stage4.png",
+          "destination": "modules/evolvingblade/src/main/resources/assets/evolvingblade/textures/item/star_eater_stage4.png",
+          "bytes": 670,
+          "sha256": "6c6a1e567585e83264d7259b0f91a8b860975808b63387acc4ff6dca289fa23d"
+        },
+        {
+          "source_relative": "src/main/resources/assets/evolvingblade/textures/item/star_eater_stage4.png.mcmeta",
+          "destination": "modules/evolvingblade/src/main/resources/assets/evolvingblade/textures/item/star_eater_stage4.png.mcmeta",
+          "bytes": 70,
+          "sha256": "444b9ce7e3f1cf7c88ce6f4e54754ecf59157820b3723b68888f1cdc5de44629"
+        },
+        {
+          "source_relative": "src/main/resources/assets/evolvingblade/textures/item/star_eater_stage5.png",
+          "destination": "modules/evolvingblade/src/main/resources/assets/evolvingblade/textures/item/star_eater_stage5.png",
+          "bytes": 825,
+          "sha256": "c7bfeff91d6e965dc0a5088b6830ce03f9b8be18cd47ad97d5d86469798c8e50"
+        },
+        {
+          "source_relative": "src/main/resources/assets/evolvingblade/textures/item/star_eater_stage5.png.mcmeta",
+          "destination": "modules/evolvingblade/src/main/resources/assets/evolvingblade/textures/item/star_eater_stage5.png.mcmeta",
+          "bytes": 70,
+          "sha256": "444b9ce7e3f1cf7c88ce6f4e54754ecf59157820b3723b68888f1cdc5de44629"
+        },
+        {
+          "source_relative": "src/main/resources/assets/evolvingblade/textures/item/star_eater_stage6.png",
+          "destination": "modules/evolvingblade/src/main/resources/assets/evolvingblade/textures/item/star_eater_stage6.png",
+          "bytes": 812,
+          "sha256": "7c0a1bd1ede0a43600e6b7c1b86300293045c27745274ff88360aa9f411e5fb2"
+        },
+        {
+          "source_relative": "src/main/resources/assets/evolvingblade/textures/item/star_eater_stage6.png.mcmeta",
+          "destination": "modules/evolvingblade/src/main/resources/assets/evolvingblade/textures/item/star_eater_stage6.png.mcmeta",
+          "bytes": 70,
+          "sha256": "444b9ce7e3f1cf7c88ce6f4e54754ecf59157820b3723b68888f1cdc5de44629"
+        },
+        {
+          "source_relative": "src/main/resources/assets/evolvingblade/textures/item/star_eater_stage7.png",
+          "destination": "modules/evolvingblade/src/main/resources/assets/evolvingblade/textures/item/star_eater_stage7.png",
+          "bytes": 745,
+          "sha256": "09d594288527c92802db377402cb4dd46a2ae722b05a6167fb33d918a24a8197"
+        },
+        {
+          "source_relative": "src/main/resources/assets/evolvingblade/textures/item/star_eater_stage7.png.mcmeta",
+          "destination": "modules/evolvingblade/src/main/resources/assets/evolvingblade/textures/item/star_eater_stage7.png.mcmeta",
+          "bytes": 70,
+          "sha256": "444b9ce7e3f1cf7c88ce6f4e54754ecf59157820b3723b68888f1cdc5de44629"
+        },
+        {
+          "source_relative": "src/main/resources/data/evolvingblade/damage_type/boss_slayer.json",
+          "destination": "modules/evolvingblade/src/main/resources/data/evolvingblade/damage_type/boss_slayer.json",
+          "bytes": 105,
+          "sha256": "2278c43e431d2fe36141c27462ed58c69c890910aa067d13ff0a507df52f00ab"
+        },
+        {
+          "source_relative": "src/main/resources/data/evolvingblade/damage_type/sword_ability.json",
+          "destination": "modules/evolvingblade/src/main/resources/data/evolvingblade/damage_type/sword_ability.json",
+          "bytes": 107,
+          "sha256": "87fa66afa587d98cbd7382e95f1251582ccceecee998469253dbeb830e287629"
+        },
+        {
+          "source_relative": "src/main/resources/data/evolvingblade/recipe/star_eater.json",
+          "destination": "modules/evolvingblade/src/main/resources/data/evolvingblade/recipe/star_eater.json",
+          "bytes": 419,
+          "sha256": "0ca8408b2552ae533ae5bcd84630fe5a0edb519f4262788e1bf1f6890b4d009d"
+        },
+        {
+          "source_relative": "src/main/resources/data/evolvingblade/tags/entity_type/bosses.json",
+          "destination": "modules/evolvingblade/src/main/resources/data/evolvingblade/tags/entity_type/bosses.json",
+          "bytes": 95,
+          "sha256": "f30583b45190cdf58bb2447fee92462f5b1b368f717e721395621aad1266ff02"
+        },
+        {
+          "source_relative": "src/main/resources/data/evolvingblade/tags/entity_type/hostile.json",
+          "destination": "modules/evolvingblade/src/main/resources/data/evolvingblade/tags/entity_type/hostile.json",
+          "bytes": 39,
+          "sha256": "0c615d27d6e7932dab70603593b0d4b2098f06e605c17c7e8549a677ec84ef94"
+        },
+        {
+          "source_relative": "src/main/resources/data/minecraft/tags/damage_type/bypasses_armor.json",
+          "destination": "modules/evolvingblade/src/main/resources/data/minecraft/tags/damage_type/bypasses_armor.json",
+          "bytes": 75,
+          "sha256": "16865d6b836f0b2a7813916dcfc709c52a4975af4644c2bcd42fc6cff9d2284a"
+        },
+        {
+          "source_relative": "src/main/resources/data/minecraft/tags/damage_type/bypasses_cooldown.json",
+          "destination": "modules/evolvingblade/src/main/resources/data/minecraft/tags/damage_type/bypasses_cooldown.json",
+          "bytes": 75,
+          "sha256": "16865d6b836f0b2a7813916dcfc709c52a4975af4644c2bcd42fc6cff9d2284a"
+        },
+        {
+          "source_relative": "src/main/templates/META-INF/neoforge.mods.toml",
+          "destination": "modules/evolvingblade/src/main/templates/META-INF/neoforge.mods.toml",
+          "bytes": 1096,
+          "sha256": "28e6759720e2329c0dfa1a2803c8264286399016d53a10da159db60c9272f976"
+        },
+        {
+          "source_relative": "src/test/java/com/evolvingblade/boss/BossClassifierCoreTest.java",
+          "destination": "modules/evolvingblade/src/test/java/com/evolvingblade/boss/BossClassifierCoreTest.java",
+          "bytes": 5969,
+          "sha256": "386219bd57c2fca15de5f33e5ecbc212ed3825d12c84ceb860a95d258d0588ad"
+        },
+        {
+          "source_relative": "src/test/java/com/evolvingblade/boss/BossEventProbeTest.java",
+          "destination": "modules/evolvingblade/src/test/java/com/evolvingblade/boss/BossEventProbeTest.java",
+          "bytes": 6819,
+          "sha256": "96cdcdb6a648a4a67f4688a50352753a8dbe99294a238528719fa90a6f8c83b7"
+        },
+        {
+          "source_relative": "src/test/java/com/evolvingblade/combat/AbilityGeometryTest.java",
+          "destination": "modules/evolvingblade/src/test/java/com/evolvingblade/combat/AbilityGeometryTest.java",
+          "bytes": 16742,
+          "sha256": "b0d1815445b4b971d2212e20c302c229e8367419aa47c5581c64e96787d00a96"
+        },
+        {
+          "source_relative": "src/test/java/com/evolvingblade/combat/BossRateCodecTest.java",
+          "destination": "modules/evolvingblade/src/test/java/com/evolvingblade/combat/BossRateCodecTest.java",
+          "bytes": 2856,
+          "sha256": "29236e1ccb805ef2e9cfd1158db30d016f7fca6ed986a800ec81f447a687b2b0"
+        },
+        {
+          "source_relative": "src/test/java/com/evolvingblade/combat/CombatPhase2Test.java",
+          "destination": "modules/evolvingblade/src/test/java/com/evolvingblade/combat/CombatPhase2Test.java",
+          "bytes": 5255,
+          "sha256": "488194a764be3576941c50dc79d19ab83945c24426f570cd13cc901223a4e1d5"
+        },
+        {
+          "source_relative": "src/test/java/com/evolvingblade/combat/EffectiveDamageTest.java",
+          "destination": "modules/evolvingblade/src/test/java/com/evolvingblade/combat/EffectiveDamageTest.java",
+          "bytes": 9836,
+          "sha256": "eeb45723dd2d54dfebd47b5e5b04998ed926d3a6175363401d083724365ddc7c"
+        },
+        {
+          "source_relative": "src/test/java/com/evolvingblade/growth/DeathDecisionTest.java",
+          "destination": "modules/evolvingblade/src/test/java/com/evolvingblade/growth/DeathDecisionTest.java",
+          "bytes": 4519,
+          "sha256": "7d74d111951ef20a058e23a9877762b5c8daa6bce5e00359329970045832be5a"
+        },
+        {
+          "source_relative": "src/test/java/com/evolvingblade/growth/GiftDeliveryTest.java",
+          "destination": "modules/evolvingblade/src/test/java/com/evolvingblade/growth/GiftDeliveryTest.java",
+          "bytes": 2754,
+          "sha256": "29742f1d95dff0462eb966ff1693f06acd9f38b57c74d93b43eab413c260bf28"
+        },
+        {
+          "source_relative": "src/test/java/com/evolvingblade/growth/GrowthDataTest.java",
+          "destination": "modules/evolvingblade/src/test/java/com/evolvingblade/growth/GrowthDataTest.java",
+          "bytes": 5913,
+          "sha256": "6a11f0cbd23b7cb7f9f7aede3d15c93bfd7bce412b8b20a2266b9cc71f7efd75"
+        },
+        {
+          "source_relative": "src/test/java/com/evolvingblade/growth/GrowthModeTest.java",
+          "destination": "modules/evolvingblade/src/test/java/com/evolvingblade/growth/GrowthModeTest.java",
+          "bytes": 2596,
+          "sha256": "b75289e678bcc629af76148eb82a51ed22a18a7559c791a6890cdda3d773e4cf"
+        },
+        {
+          "source_relative": "src/test/java/com/evolvingblade/growth/GrowthServiceBoundaryTest.java",
+          "destination": "modules/evolvingblade/src/test/java/com/evolvingblade/growth/GrowthServiceBoundaryTest.java",
+          "bytes": 2317,
+          "sha256": "6df4a4440cd5391351d45369f313e22307c6608a2e288afd21aa1628e1bdc030"
+        },
+        {
+          "source_relative": "src/test/java/com/evolvingblade/growth/GrowthSettingsTest.java",
+          "destination": "modules/evolvingblade/src/test/java/com/evolvingblade/growth/GrowthSettingsTest.java",
+          "bytes": 7241,
+          "sha256": "da039820510c0c1ace08a14c24bbf7c8c00bea385a485686f1000f47e19ebc66"
+        },
+        {
+          "source_relative": "src/test/java/com/evolvingblade/growth/PendingDeathQueueTest.java",
+          "destination": "modules/evolvingblade/src/test/java/com/evolvingblade/growth/PendingDeathQueueTest.java",
+          "bytes": 3996,
+          "sha256": "ff6c49168154330862d9e947e096ef34dd76933af5801ca3ccdab59ebf42f586"
+        },
+        {
+          "source_relative": "src/test/java/com/evolvingblade/growth/StageCalculatorTest.java",
+          "destination": "modules/evolvingblade/src/test/java/com/evolvingblade/growth/StageCalculatorTest.java",
+          "bytes": 8843,
+          "sha256": "b357e5ea24af9a4d8e66c47ede54c98f14936f5317ac8bcf8eba5ace6120267b"
+        },
+        {
+          "source_relative": "src/test/java/com/evolvingblade/test/EBTestRunner.java",
+          "destination": "modules/evolvingblade/src/test/java/com/evolvingblade/test/EBTestRunner.java",
+          "bytes": 8025,
+          "sha256": "0b2fe5375a4965b7fc3d27652e74a3daadb9cfe45e58d92e02f1ab750ce782b0"
+        },
+        {
+          "source_relative": "src/test/java/com/evolvingblade/test/EBTestRunnerExitCodeTest.java",
+          "destination": "modules/evolvingblade/src/test/java/com/evolvingblade/test/EBTestRunnerExitCodeTest.java",
+          "bytes": 1904,
+          "sha256": "568baf97b396e4b9a39b382852c849f2793509f2eba1a15f26cbda26c21a3b42"
+        },
+        {
+          "source_relative": "tools/DumpArtworkBase64.java",
+          "destination": "modules/evolvingblade/tools/DumpArtworkBase64.java",
+          "bytes": 7342,
+          "sha256": "e6b8eb4ab35502bd4b602cab330ebd5c7e4867a14776fe8e3bb11cd28c425e3a"
+        },
+        {
+          "source_relative": "tools/EbAlphaAudit.java",
+          "destination": "modules/evolvingblade/tools/EbAlphaAudit.java",
+          "bytes": 1544,
+          "sha256": "daa0501a8c3ea8a2ef6dd5de9944c40f8446c5b149e3fc7d3645ebc0a24c4405"
+        },
+        {
+          "source_relative": "tools/ExportSwordArtwork.java",
+          "destination": "modules/evolvingblade/tools/ExportSwordArtwork.java",
+          "bytes": 16244,
+          "sha256": "91a58bae1fdf964f21503ecb3ff6121592073d4c065f63a5e150bd902d49e851"
+        },
+        {
+          "source_relative": "tools/ExportSwordArtworkV3.java",
+          "destination": "modules/evolvingblade/tools/ExportSwordArtworkV3.java",
+          "bytes": 33684,
+          "sha256": "a4970918b38a0f5da336e52f01a0a778292dcb6510dd8a7de3e754a322506db3"
+        },
+        {
+          "source_relative": "tools/GenerateGameTestStructure.java",
+          "destination": "modules/evolvingblade/tools/GenerateGameTestStructure.java",
+          "bytes": 3828,
+          "sha256": "141f7cd02f87d4b92d67c43cc5fc580d856ed6fc0efcc1a22c8304510a2f1989"
+        },
+        {
+          "source_relative": "tools/GenerateSwordTextures.java",
+          "destination": "modules/evolvingblade/tools/GenerateSwordTextures.java",
+          "bytes": 9287,
+          "sha256": "18b3e3130c6bab402820b9cb29119bc2b9c262958f9953a8f31bf36b4053d8db"
+        },
+        {
+          "source_relative": "tools/PlaceholderTexture.java",
+          "destination": "modules/evolvingblade/tools/PlaceholderTexture.java",
+          "bytes": 2716,
+          "sha256": "9659dbcfa037fcb01ea6de31d651923531b8afce76c341b8c6a2752d26bf4839"
+        },
+        {
+          "source_relative": "tools/VerifySwordArtworkV3.java",
+          "destination": "modules/evolvingblade/tools/VerifySwordArtworkV3.java",
+          "bytes": 8425,
+          "sha256": "c2987e2716f55fc0e4bc8ca8704115bc385f206a2491aac41e28c4c84f6b191f"
+        },
+        {
+          "source_relative": "verification/COMBAT-ACCEPTANCE.md",
+          "destination": "modules/evolvingblade/verification/COMBAT-ACCEPTANCE.md",
+          "bytes": 8479,
+          "sha256": "b88a49e782d891994991e6d1aae0968167e73cf48f9cbccdc3a5efc37aebf6ce"
+        },
+        {
+          "source_relative": "verification/FINAL-VERIFICATION.md",
+          "destination": "modules/evolvingblade/verification/FINAL-VERIFICATION.md",
+          "bytes": 8403,
+          "sha256": "17be7465330c59285eaa1cf314f0fafe2e14cc121e6a5dac94630d523a4fbfe8"
+        },
+        {
+          "source_relative": "verification/v3/CODEX-VERIFICATION.md",
+          "destination": "modules/evolvingblade/verification/v3/CODEX-VERIFICATION.md",
+          "bytes": 4091,
+          "sha256": "a31eb14d5c78faacfeaf8a17eb4af0f4a19f7e96dd885c19824553724893788c"
+        },
+        {
+          "source_relative": "verification/v3/MANUAL-QA-V3.md",
+          "destination": "modules/evolvingblade/verification/v3/MANUAL-QA-V3.md",
+          "bytes": 9895,
+          "sha256": "319760c7666cc0277defc964eb32497ed9db5b594f9a2fb892e31603d0b59ce1"
+        },
+        {
+          "source_relative": "verification/v3/acceptance.json",
+          "destination": "modules/evolvingblade/verification/v3/acceptance.json",
+          "bytes": 793,
+          "sha256": "fba3848344760e442d31c7ba0abe9ca06fbd57b24baef4d1d6782bf387624a4f"
+        },
+        {
+          "source_relative": "verification/v3/artifact-audit.json",
+          "destination": "modules/evolvingblade/verification/v3/artifact-audit.json",
+          "bytes": 1866,
+          "sha256": "26f82c45af98728f824e55ca30ded3bc5e0e5ef58bdcd2fe93d4530ecdfdd405"
+        }
+      ],
+      "file_count": 211,
+      "total_bytes": 7562952
+    },
+    {
+      "module": "rpgleveling",
+      "source_root": "D:\\Agent_workspaces\\Deepseek Harness\\MC_mod",
+      "destination_root": "modules/rpgleveling",
+      "files": [
+        {
+          "source_relative": ".gitignore",
+          "destination": "modules/rpgleveling/.gitignore",
+          "bytes": 103,
+          "sha256": "16d829a017b5dc6cd92db11427d0019a906f9bf2410fc6e81f4026da24bedd41"
+        },
+        {
+          "source_relative": "build.gradle",
+          "destination": "modules/rpgleveling/build.gradle",
+          "bytes": 3083,
+          "sha256": "9fd84d6474539c03c2db8b55a81e47e4d1515df2972db6ce3c9fc2cf5d2996df"
+        },
+        {
+          "source_relative": "docs/DESIGN-API-NOTES.md",
+          "destination": "modules/rpgleveling/docs/DESIGN-API-NOTES.md",
+          "bytes": 46390,
+          "sha256": "0de392a2c1570027091dbb36d8e07763609be7b452ad20b4d1100751c0c01d95"
+        },
+        {
+          "source_relative": "docs/DESIGN.md",
+          "destination": "modules/rpgleveling/docs/DESIGN.md",
+          "bytes": 228127,
+          "sha256": "98772a25ffd832994db7430cec74926023f81a84034d4db5bcbf119cc4741d5a"
+        },
+        {
+          "source_relative": "docs/VERIFICATION-REPORT.md",
+          "destination": "modules/rpgleveling/docs/VERIFICATION-REPORT.md",
+          "bytes": 129148,
+          "sha256": "13dc6ec0e61c2cd2ea9c8c2431bbdb5d06f0c2e812b1f1614ec1e304d1a17501"
+        },
+        {
+          "source_relative": "docs/VERIFICATION.md",
+          "destination": "modules/rpgleveling/docs/VERIFICATION.md",
+          "bytes": 91991,
+          "sha256": "c9d2e25f0ea6d22d46b69a2d4995593e3c9cacbcecefb8ae0318886a0d22d846"
+        },
+        {
+          "source_relative": "gradle.properties",
+          "destination": "modules/rpgleveling/gradle.properties",
+          "bytes": 464,
+          "sha256": "769dbf5a0f2820e75dcca81e76336ae4f176e6f6540127b0c34221b85967ab10"
+        },
+        {
+          "source_relative": "gradle/wrapper/gradle-wrapper.jar",
+          "destination": "modules/rpgleveling/gradle/wrapper/gradle-wrapper.jar",
+          "bytes": 43583,
+          "sha256": "2db75c40782f5e8ba1fc278a5574bab070adccb2d21ca5a6e5ed840888448046"
+        },
+        {
+          "source_relative": "gradle/wrapper/gradle-wrapper.properties",
+          "destination": "modules/rpgleveling/gradle/wrapper/gradle-wrapper.properties",
+          "bytes": 253,
+          "sha256": "97e38c4092036e177d1d31ebb454332a61a1d1313fc76aefe34b35e88211715d"
+        },
+        {
+          "source_relative": "gradlew",
+          "destination": "modules/rpgleveling/gradlew",
+          "bytes": 8762,
+          "sha256": "a3648413b47ef77af21d5ebc36c687c7d103aaef3e17f33de7d4f080a6f300a3"
+        },
+        {
+          "source_relative": "gradlew.bat",
+          "destination": "modules/rpgleveling/gradlew.bat",
+          "bytes": 2966,
+          "sha256": "57931b17dd228e5c24dac90e815d0bf82477e831a4618dfab4136f5446b42a9f"
+        },
+        {
+          "source_relative": "settings.gradle",
+          "destination": "modules/rpgleveling/settings.gradle",
+          "bytes": 310,
+          "sha256": "590f8cdfeb12b2a22eb27b1388c66da61627ff47d9389ea3816c31ff7b23ab13"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/RpgConfig.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/RpgConfig.java",
+          "bytes": 28841,
+          "sha256": "64876743f41993c9c1f11c1805714c629b64b00c16e8a0631e7b670f910a1c11"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/RpgLevelingMod.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/RpgLevelingMod.java",
+          "bytes": 1667,
+          "sha256": "1bbcd2b12369489861f4dc844bf012a84def82bafb45a7c17c6b5e2f0aa237e0"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/api/Basis.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/api/Basis.java",
+          "bytes": 661,
+          "sha256": "6efd2711ad3988c740a23338320fca063be7a8e5e932df2916b029fa0991f8ab"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/api/Carrier.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/api/Carrier.java",
+          "bytes": 3444,
+          "sha256": "a59680466ffdf919fa455707a0cbd9de936cd6630d51d0a16b80277229377f91"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/api/Curve.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/api/Curve.java",
+          "bytes": 963,
+          "sha256": "1dbc6e5b8043cb4dc106e0b3579af09abdade30165489c1d43189b3ac1a8c1c1"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/api/Mode.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/api/Mode.java",
+          "bytes": 764,
+          "sha256": "47471b3a1ffa4a3735df0316b2ac051a4d8cd774779f39332fd58ce6a0582ce1"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/api/Rounding.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/api/Rounding.java",
+          "bytes": 919,
+          "sha256": "5fb7ed4fab620c45dfc762b0944a8f951ce19ccd58092bebd2ee57b85b94c108"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/api/Stat.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/api/Stat.java",
+          "bytes": 8562,
+          "sha256": "62222ced634c684f6b6d026b02a407c9c64a4c4ccdf1c789be0ca8907c40b174"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/api/StatLine.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/api/StatLine.java",
+          "bytes": 10676,
+          "sha256": "6a14f93e00b2622a2dba25102f7c524efb193b9d6fad7f7d8280e5b48938e8de"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/client/ClientEvents.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/client/ClientEvents.java",
+          "bytes": 1510,
+          "sha256": "329b543cf594cff604ab36fd157968dedba7a1bbd13eac5aedb9fcc4a757d014"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/client/ClientRpgData.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/client/ClientRpgData.java",
+          "bytes": 1321,
+          "sha256": "af898b1d5b7233bb7e4134e582d173fbe167098ef3f6289a7dc25a7f4f895244"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/client/KeyBindings.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/client/KeyBindings.java",
+          "bytes": 544,
+          "sha256": "395ebb3db313e07b96ac16d7d2ac830b977dad45e19ae1a7e4e88a017041b94c"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/client/RpgLevelingClient.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/client/RpgLevelingClient.java",
+          "bytes": 1033,
+          "sha256": "c499210477f58e898a8d98b7ad42d048d5a73aec15a07e679a44957b7138b6f2"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/client/screen/RpgLayout.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/client/screen/RpgLayout.java",
+          "bytes": 8683,
+          "sha256": "33c0a4d4658e722492f0b40835b964cbbbdb3ebaff81530f3d217caace31cc93"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/client/screen/RpgScreen.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/client/screen/RpgScreen.java",
+          "bytes": 18748,
+          "sha256": "e2fc197d080e069c90e01d1ee35c2d21eaabbc12d37164d0128598fa4cd7c0c5"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/client/screen/RpgTheme.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/client/screen/RpgTheme.java",
+          "bytes": 2360,
+          "sha256": "ae5368d4618cb532b72de9161c5c21fb300fe082300678238a44033d726b5271"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/client/screen/RpgTooltips.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/client/screen/RpgTooltips.java",
+          "bytes": 2509,
+          "sha256": "d6a32c96fdf13884cea3807e6e5bbdf933a8577eb71643d159a791c85d410977"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/client/screen/StatRow.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/client/screen/StatRow.java",
+          "bytes": 5859,
+          "sha256": "a066f16bdc753130512b7d5c747cad1f8e7e368bef919206e59a00e7f17d82ab"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/command/CommandFeedback.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/command/CommandFeedback.java",
+          "bytes": 787,
+          "sha256": "722d3d05b545d2533c61cbd582f9a373b9063a440caa308a93714e5c022bff63"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/command/RpgCommand.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/command/RpgCommand.java",
+          "bytes": 21282,
+          "sha256": "14d2d5a64becdc815243616716129071126aa771fda8f24316f85b85cc968ba5"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/data/DiscoveryData.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/data/DiscoveryData.java",
+          "bytes": 7908,
+          "sha256": "9bd25525952074dda3855b3403b476ef91261ce3fe339b7ff901ead1d361f843"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/data/LevelCurve.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/data/LevelCurve.java",
+          "bytes": 1174,
+          "sha256": "b4befd6480acf149cfd131664fc5c49fdbf0a641fcae0066ebf5d47bb1135a2d"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/data/PlayerRpgData.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/data/PlayerRpgData.java",
+          "bytes": 7385,
+          "sha256": "b593b95c8110c1523f19d130fff61ce3231bc42d40c3cd4909d8311ed90e56dd"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/data/RpgMath.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/data/RpgMath.java",
+          "bytes": 21191,
+          "sha256": "c74e80b72afa7074e63d22fd5b09bcd2201e58d0f1735581aa0c1562ae6d12c3"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/data/SaturatingCurve.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/data/SaturatingCurve.java",
+          "bytes": 1136,
+          "sha256": "e3e6c1222e18e72596a1f039a638e3b7202dfa38e5429948e9630ce9f351e03e"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/event/CombatEvents.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/event/CombatEvents.java",
+          "bytes": 9442,
+          "sha256": "cc220d30d945ab0b5ab3e1e2e5ecdfff597a537574d11e8abbd83d7b146c386c"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/event/ConfigEvents.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/event/ConfigEvents.java",
+          "bytes": 2380,
+          "sha256": "d2c48680ac5dd19814fec0216b5b0e365c2907fc25771d12b3e30bac3fe1993c"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/event/DiscoveryHelper.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/event/DiscoveryHelper.java",
+          "bytes": 1715,
+          "sha256": "fedf717ff3eaf227ea7f295ec492204612b20683509319413a82d9f785a72941"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/event/DropRateHelper.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/event/DropRateHelper.java",
+          "bytes": 3103,
+          "sha256": "3aaa6ccb8e7f45ed67162df41fa99d83623a51cccd60360e3c285ecd7c865985"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/event/MobSpawnEvents.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/event/MobSpawnEvents.java",
+          "bytes": 975,
+          "sha256": "ebf956caff42655d957dda754d2cf211c6a1938fa74ddfc5f7037a622c3dac50"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/event/PlayerLifecycleEvents.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/event/PlayerLifecycleEvents.java",
+          "bytes": 4543,
+          "sha256": "f74aa18e0286870434e2cac375283b759aeac0f9675e5ea07ef358dad02d6262"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/event/PlayerTickHandler.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/event/PlayerTickHandler.java",
+          "bytes": 2183,
+          "sha256": "35f46e5cb9f847d48c427bf75f2ca44374a934bdbdbb9b170a3c8ee416eb0cda"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/event/XpEvents.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/event/XpEvents.java",
+          "bytes": 10105,
+          "sha256": "9538c3817b7443891c8eca9ef1bd9a0cdb7d4389e0d41f14cee3114ac034b7fd"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/item/ExperienceCrystalItem.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/item/ExperienceCrystalItem.java",
+          "bytes": 914,
+          "sha256": "22459bed5d73c3292ed83dd21e1aba2e0afa90cb31eb4409c28b011a8260b58c"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/item/RespecTokenItem.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/item/RespecTokenItem.java",
+          "bytes": 712,
+          "sha256": "142b32392c48f6f36acf4cc301a1d0fda5786bc87aefb2b5792253318b94a50b"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/item/RpgConsumableItem.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/item/RpgConsumableItem.java",
+          "bytes": 2668,
+          "sha256": "26e5d575daafe80b463604fee858a926b7a88444763d4183b1e6f185cdc60f64"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/item/SkillScrollItem.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/item/SkillScrollItem.java",
+          "bytes": 883,
+          "sha256": "cbca037af5247628c6ccfe716b3ef0b19af25a6e4507bdea1d2911a134bffbb7"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/net/ClientPayloadHandler.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/net/ClientPayloadHandler.java",
+          "bytes": 759,
+          "sha256": "b18ec117f7508b23a817408b01b8abf26c032691f8fc80afb91f3bed57e67673"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/net/ClientboundRpgDataPayload.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/net/ClientboundRpgDataPayload.java",
+          "bytes": 2348,
+          "sha256": "f74970d10b5702521dfc5d8c6475f2e8843728ad8f23c0223ccbd03522108453"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/net/ClientboundRpgFeedbackPayload.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/net/ClientboundRpgFeedbackPayload.java",
+          "bytes": 1056,
+          "sha256": "1cc2602db2e857d4838bd6647a89dc1334205837e8b446129b4fe3f6ede841fc"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/net/RpgNet.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/net/RpgNet.java",
+          "bytes": 3615,
+          "sha256": "d93d6963574665a90b0f89b3c24e5ac8eb4f774e11e7b7fb88de80a77fe518e2"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/net/ServerPayloadHandler.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/net/ServerPayloadHandler.java",
+          "bytes": 1216,
+          "sha256": "137a22b584558ad86c13dff22d39b3c6ca38d2e62cdbf35f37c77c4d31501ef0"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/net/ServerboundRequestDataPayload.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/net/ServerboundRequestDataPayload.java",
+          "bytes": 996,
+          "sha256": "7403f7d0f329cc02e01ab0c817da5c49b100a8149088352b9d6c35f9a9f9e7fb"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/net/ServerboundRespecPayload.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/net/ServerboundRespecPayload.java",
+          "bytes": 957,
+          "sha256": "c6d7b7326605cda502e98018bb0c64d28b39a5d27362d6e995db76221b1028c6"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/net/ServerboundSpendPointPayload.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/net/ServerboundSpendPointPayload.java",
+          "bytes": 1326,
+          "sha256": "269a29ae4ab6b334f26f99618c6dd0893e1736d96552f2567b84ce1c69240755"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/registry/RpgAttachments.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/registry/RpgAttachments.java",
+          "bytes": 1803,
+          "sha256": "d4e76cee75502439d07c1b2f4126d470779d21e11a73babfa1dc43997625d6aa"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/registry/RpgAttributes.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/registry/RpgAttributes.java",
+          "bytes": 4286,
+          "sha256": "e2c8c870481da2c5df95e2fde4be45d8b94898428eab6638ff12c58398d0f9d1"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/registry/RpgCreativeTabs.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/registry/RpgCreativeTabs.java",
+          "bytes": 1241,
+          "sha256": "05f33a6666dd7e6322ccee40c25c6848da02777adcb8b3c8b429fb2868290cfd"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/registry/RpgItems.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/registry/RpgItems.java",
+          "bytes": 1074,
+          "sha256": "c4cd91fa2cc47ef68a533641a789c3fa03ea653bc501265321a69d4c6e27eb3c"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/registry/RpgPayloads.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/registry/RpgPayloads.java",
+          "bytes": 1698,
+          "sha256": "59e4c88ae772e63ff2f250d6e76b0a73b4bef527205a8b169dd51e4f5c97fff9"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/service/PlayerCache.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/service/PlayerCache.java",
+          "bytes": 2066,
+          "sha256": "0e6090155eb12fcd304afa8315b4da8e5376ca02fc5e5a5ad9eeacff16691b4c"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/service/RateLimiter.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/service/RateLimiter.java",
+          "bytes": 1282,
+          "sha256": "4d20984e77d80115e373c0c208f49ebf43d41fb668af1b3c53d95253b482c629"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/service/RpgService.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/service/RpgService.java",
+          "bytes": 10780,
+          "sha256": "18b314a6e836e1f60d42d6acee8edf3f17ec7d6c567ddd5e9051ab03ee7a7a44"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/service/StatOverrides.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/service/StatOverrides.java",
+          "bytes": 2301,
+          "sha256": "684e6f175f0dadf3999da48df53660cc500e8b5ae4f3f81622d3202f7c182bf4"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/service/XpRateLimiter.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/service/XpRateLimiter.java",
+          "bytes": 1816,
+          "sha256": "122a2782cf64b8e75d3cf61532deed9a6bad717c1e1d1e76a6b332e82250e00d"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/service/XpService.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/service/XpService.java",
+          "bytes": 2253,
+          "sha256": "80f5c32cfd26d60e4c904fcc8940275621ffc77410f8b033d8ccbe19e7a0192b"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/service/XpSource.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/service/XpSource.java",
+          "bytes": 749,
+          "sha256": "2ed9e74d6c188c981522458b19032065ab589994dde6b49fb1416d75038f4913"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/stat/AttributeApplier.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/stat/AttributeApplier.java",
+          "bytes": 9027,
+          "sha256": "4bba47fb3031c2450b7183b7f823e2a5e4498c6bd728ea3e5e32d3fc91009dc7"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/stat/DerivedStats.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/stat/DerivedStats.java",
+          "bytes": 10658,
+          "sha256": "029f1526747fadb805b874f1fa74c56fd7357af03ff939cd83dc60fa2c81a2ca"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/stat/LineCfg.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/stat/LineCfg.java",
+          "bytes": 1211,
+          "sha256": "9dd788ab1ec717afa2e1b76581aa4ef0f35e0d635371bcb0ae98766d7b6271c2"
+        },
+        {
+          "source_relative": "src/main/java/com/rpgleveling/util/RpgLog.java",
+          "destination": "modules/rpgleveling/src/main/java/com/rpgleveling/util/RpgLog.java",
+          "bytes": 300,
+          "sha256": "a52a269fca8ba729a3142c37fc3fc4a117ff38cb35147b3c9b2713abfe3de6fe"
+        },
+        {
+          "source_relative": "src/main/resources/META-INF/neoforge.mods.toml",
+          "destination": "modules/rpgleveling/src/main/resources/META-INF/neoforge.mods.toml",
+          "bytes": 600,
+          "sha256": "6737bf4361878f6dd8115fa9c1922d1f9f1c9e07e922b321dea9ff56b0e60ca4"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/lang/en_us.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/lang/en_us.json",
+          "bytes": 5690,
+          "sha256": "502a2a8c44a5bd529b57c77c4d19aec46f22ef35b6784598c7bccc8a7bd3f0fa"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/lang/zh_cn.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/lang/zh_cn.json",
+          "bytes": 5713,
+          "sha256": "96e7bcc9579724208c7b5928f009d77caae697f0d3d9cd5d408652d769f05bf8"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/models/item/experience_crystal.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/models/item/experience_crystal.json",
+          "bytes": 116,
+          "sha256": "febb7cafb13e148fae8f4b4ea06cba4d0016433c85976bc5353b7e00e7f15522"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/models/item/guide_book.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/models/item/guide_book.json",
+          "bytes": 108,
+          "sha256": "7c096d2f59504d160b3246486497e07ba6f2d8c237ff25dd6f80621ba6d4e128"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/models/item/respec_token.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/models/item/respec_token.json",
+          "bytes": 110,
+          "sha256": "b00dd1b7b6e02c5324950fadd5e78da38f4702fe319a3291bdb1c68e74acba03"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/models/item/skill_scroll.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/models/item/skill_scroll.json",
+          "bytes": 110,
+          "sha256": "7090cb3b268464b638dea7ef1211c6d93cd2e5fb187d110b4c90e660dbee6bdc"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/categories/basics.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/categories/basics.json",
+          "bytes": 181,
+          "sha256": "004764dd1de5499b351ec31424cb379f3bfd687f656df38c6562e4313d4f217a"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/categories/defense.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/categories/defense.json",
+          "bytes": 210,
+          "sha256": "fdb37a317141d7d05c1a11840474e911d48fb82e5be570aa8d0e3fee693cbea2"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/categories/items.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/categories/items.json",
+          "bytes": 183,
+          "sha256": "4a084965ed2c7034d48db423fe6cc5c1d4d41fc2a24fb795ada67987cf5bf75d"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/categories/offense.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/categories/offense.json",
+          "bytes": 185,
+          "sha256": "5c2cdcfc5d8d594f148ee0dc01951f07731f14253c5e8a2c9dea6e87b404182a"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/categories/reference.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/categories/reference.json",
+          "bytes": 159,
+          "sha256": "19da93f7123e4d2d236a856f167a1fb9366ca9fe9ec55fe0949ce4bd9d5f8731"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/categories/utility.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/categories/utility.json",
+          "bytes": 184,
+          "sha256": "ed61f32d2f0691b57d5a13511f2002485b5b0cfb134e86b0c28f44abf0bfad4e"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/basics/leveling.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/basics/leveling.json",
+          "bytes": 1847,
+          "sha256": "89fd405f282ff4afe998d8f537cae91e45d418f2ce232f38f2b5953b1cc143c3"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/basics/overview.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/basics/overview.json",
+          "bytes": 2963,
+          "sha256": "744cd76923e45f9951c401c807b45b0fc0aa9fc901b1a8669167863e64ec39ba"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/basics/respec.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/basics/respec.json",
+          "bytes": 1348,
+          "sha256": "698bf688be486e3a58c483996e9fddd6b984bc7b31c64ce688b910cec6149ed6"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/basics/screen.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/basics/screen.json",
+          "bytes": 2332,
+          "sha256": "26fade227b1b669a5084acdf648b24c67dee83cd5c6f7d67221e75cfacf77467"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/defense/armor.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/defense/armor.json",
+          "bytes": 3117,
+          "sha256": "d2c79ffb2e6b70a92c463237a25f8b40f7f9cad7046e4f10f01356200206f871"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/defense/armor_toughness.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/defense/armor_toughness.json",
+          "bytes": 2838,
+          "sha256": "ae316685b03ec4e0712781577c2a107ac0e11ea932176190eff964576cc0d8e2"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/defense/damage_reduction.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/defense/damage_reduction.json",
+          "bytes": 3073,
+          "sha256": "581abc7379ad52132952c1b0d8e3ca788faf1e4edc718b9bc4708df8b492eb04"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/defense/knockback_resistance.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/defense/knockback_resistance.json",
+          "bytes": 2793,
+          "sha256": "a152d8bd5e7fdd6362f76691d79cd9ca43be5835d768737d96577d77a03e6d1b"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/defense/max_health.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/defense/max_health.json",
+          "bytes": 2640,
+          "sha256": "be3dd3b2f36d997db13a7d64294f9831ba66fde7f476da155c35341f4d47afb3"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/items/experience_crystal.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/items/experience_crystal.json",
+          "bytes": 937,
+          "sha256": "3d8cfd8b3002fb15b9d88d206225173b7abca575a9f95fff5b3487d851ec7d95"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/items/respec_token.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/items/respec_token.json",
+          "bytes": 984,
+          "sha256": "bb393820ce07ac32dc64295e0e169fbea8a75b1c448733956efde170a7b6ad2a"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/items/skill_scroll.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/items/skill_scroll.json",
+          "bytes": 901,
+          "sha256": "549bbb20c61965772251fa276ad308642ff4bfb8dceafef9de6cfe3dfc591ed9"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/offense/attack_damage.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/offense/attack_damage.json",
+          "bytes": 2845,
+          "sha256": "9d0bed758da0d124a17277159570bd117b1c8893ba909ff73bb8abf2d124fa28"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/offense/crit_chance.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/offense/crit_chance.json",
+          "bytes": 2687,
+          "sha256": "8b14cddac0899c2811ed2a4de3c81fcb485b839158a3c30113cb6e3864043467"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/offense/crit_damage.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/offense/crit_damage.json",
+          "bytes": 2620,
+          "sha256": "6419f27743b5ae9b36a1c5ea0623a3f9b85249b71a025a670d4d4017d6aafa27"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/offense/lifesteal.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/offense/lifesteal.json",
+          "bytes": 2615,
+          "sha256": "b3ad38c5114a8281b6637a48de9f3d12376d3322fec0a40bebf1d6525292aa0f"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/reference/commands.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/reference/commands.json",
+          "bytes": 2639,
+          "sha256": "7eb06e0a28ee53e4423bc142b694b1b6ad2fea435782ebf78ed0e602ae8ca732"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/reference/config.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/reference/config.json",
+          "bytes": 3115,
+          "sha256": "5560731d7c0710b80a2376c27cdf36b7334c4fa647cb447d8fa8265fb0ed6908"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/utility/drop_rate.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/utility/drop_rate.json",
+          "bytes": 2706,
+          "sha256": "af72c5d23f50a79ea68f4029f2769ee6bcf757a9f5111fc684e16804aa829a6f"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/utility/health_regen.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/utility/health_regen.json",
+          "bytes": 2801,
+          "sha256": "98ab68a32ed93c5bbe35b260e3b1db5b1925ee8ffeb7bf112f0196899fb5dfa4"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/utility/movement_speed.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/utility/movement_speed.json",
+          "bytes": 2947,
+          "sha256": "77f1c5036a21bc882cb161b385daccc8245841c441ef6cafdceee3fdca174b41"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/utility/xp_gain.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/en_us/entries/utility/xp_gain.json",
+          "bytes": 2698,
+          "sha256": "17ef63a81f283dc68f32f29fcb24a8762d0dbd2cb66121ea38dffbaf3b3ed062"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/categories/basics.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/categories/basics.json",
+          "bytes": 166,
+          "sha256": "583b16641e911fb14ae07625610488b0ff1b84e6d21263c9054b1d61e32e5384"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/categories/defense.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/categories/defense.json",
+          "bytes": 201,
+          "sha256": "3a77d1bde1343a028a3d506510cbbdd925889645b0763a86d0cbda3590b645f7"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/categories/items.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/categories/items.json",
+          "bytes": 168,
+          "sha256": "95fda1b39f5d5372b857458ac9bab79eb046265d95b15c72834457486fa449f7"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/categories/offense.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/categories/offense.json",
+          "bytes": 179,
+          "sha256": "d9d921d61f8f2ebfdf1578e7d7a9137dd4ac2a02856a3f88049804787f01703a"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/categories/reference.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/categories/reference.json",
+          "bytes": 148,
+          "sha256": "48b340505a4d0f5e2d5f1773fba6024a672718f00dd0e1d00a1de544a24e9281"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/categories/utility.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/categories/utility.json",
+          "bytes": 179,
+          "sha256": "e0fd9b34280b52ab4900bb806f153b16dd95836f5d83371f8db14912e794a558"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/basics/leveling.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/basics/leveling.json",
+          "bytes": 1764,
+          "sha256": "4ad3bbbb7b2905da6e163a62a30c44a33cd178503b94c34ef6c926754757e930"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/basics/overview.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/basics/overview.json",
+          "bytes": 2734,
+          "sha256": "c5e5395f57745d4c441289976e6f29e10a9ab3e0edefdb81e2880c936a4c6cda"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/basics/respec.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/basics/respec.json",
+          "bytes": 1259,
+          "sha256": "1787418fabd07add7e43bf4846eccd0bb210905aea8c756276ea5289e352e88a"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/basics/screen.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/basics/screen.json",
+          "bytes": 2259,
+          "sha256": "b891402f553bab8102ef99351b06f0d49fa63d85bc72218395fca784fd43cceb"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/defense/armor.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/defense/armor.json",
+          "bytes": 3086,
+          "sha256": "0628d80f624c000ddb3c428b0b50677950b2fcd4c1066da367b61aaa0948b73a"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/defense/armor_toughness.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/defense/armor_toughness.json",
+          "bytes": 2713,
+          "sha256": "38c50348d8b0b25bd21cf7f6ed8bfc0d94c33711852029330b28a5f8371af609"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/defense/damage_reduction.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/defense/damage_reduction.json",
+          "bytes": 2984,
+          "sha256": "e56d634ddf46deb55fea4707226606ffac08b61217659792e94ca96a87db6b41"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/defense/knockback_resistance.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/defense/knockback_resistance.json",
+          "bytes": 2653,
+          "sha256": "d03f43d5248150d9a82e867e34dfc791b8297564679943be54d28d6c49f38c95"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/defense/max_health.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/defense/max_health.json",
+          "bytes": 2720,
+          "sha256": "b5923d9783ef33b7ca2bcef439d55c0c54d7edadde9eb10c3e7cfa980f12c7fd"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/items/experience_crystal.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/items/experience_crystal.json",
+          "bytes": 929,
+          "sha256": "6f25d0a46f04b8fb41a6b17249a4855eb107f407ca614b47311bc5dd821cf639"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/items/respec_token.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/items/respec_token.json",
+          "bytes": 970,
+          "sha256": "601b33b905acb2ab9927314342eca03c232c515d4709cdcbf8d7df560aaec831"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/items/skill_scroll.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/items/skill_scroll.json",
+          "bytes": 858,
+          "sha256": "5410f48a4652a2a855cfddaaa5de52f352a9d0626db0832515ff9078ebf61002"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/offense/attack_damage.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/offense/attack_damage.json",
+          "bytes": 2890,
+          "sha256": "0892a195a857691ce2bf50f18d1ee278f7dc01aa3c3c78c1537afd2192449472"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/offense/crit_chance.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/offense/crit_chance.json",
+          "bytes": 2565,
+          "sha256": "2474fe13e60c284b2003a95eaf958966d89e34b28cc75b9d046061fc96f5ef12"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/offense/crit_damage.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/offense/crit_damage.json",
+          "bytes": 2553,
+          "sha256": "241a362183f245037eba069e6b6c6a6b5df3ebe4eef6d8991042da1e64a67db7"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/offense/lifesteal.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/offense/lifesteal.json",
+          "bytes": 2655,
+          "sha256": "7f1585ef60d36942ea14f562b7d3e7cf37c247330bd50d2df951592d700dea80"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/reference/commands.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/reference/commands.json",
+          "bytes": 2621,
+          "sha256": "a8d8f3b6403d79c059c31e37829816b65cd35d2c4a9758146b57be88674849b9"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/reference/config.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/reference/config.json",
+          "bytes": 3187,
+          "sha256": "7931311dd5ceb87a5e8862cad391b7fa49599f92348d2fbb478a75c2897fabf9"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/utility/drop_rate.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/utility/drop_rate.json",
+          "bytes": 2621,
+          "sha256": "82b5cd774d34c425088d6ed42bddff1e39785d96b9ab6e6f8a8d19df2df99394"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/utility/health_regen.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/utility/health_regen.json",
+          "bytes": 2759,
+          "sha256": "373d4164eba0e4002c1ef3b446a66b0b8a15f1a67ae2d75b431bc5eb48ed7786"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/utility/movement_speed.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/utility/movement_speed.json",
+          "bytes": 2934,
+          "sha256": "c5880b5b3ce1846618d39017173ae1689f8e3f483550a26b55e740e287a5d5c9"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/utility/xp_gain.json",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/patchouli_books/guide/zh_cn/entries/utility/xp_gain.json",
+          "bytes": 2587,
+          "sha256": "05a9842c435e1b55dd12cd7424d16719177f8ff6fbff96f224481d52d3453e45"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/textures/gui/backdrop.png",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/textures/gui/backdrop.png",
+          "bytes": 80682,
+          "sha256": "e769e217ea6b53ac5a0f8e85a04c7dd1aa1bffedc2ceea974b898fd4d27644cc"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/textures/gui/corner.png",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/textures/gui/corner.png",
+          "bytes": 200,
+          "sha256": "5bc210ade8ccd06cb428af8cafe459b6c7fe1fc4b6c03d4330674d3040c3c87e"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/textures/gui/panel.png",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/textures/gui/panel.png",
+          "bytes": 64515,
+          "sha256": "32efaff5c16b81771ea51917f0212692ea5db8b66ba27deb2de8547b0cd41479"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/textures/gui/panel_body.png",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/textures/gui/panel_body.png",
+          "bytes": 147,
+          "sha256": "2f154bab5af6933f2f7f4465d3f681db9b09de25cc2e46812aab4ec57fae77c5"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/textures/item/experience_crystal.png",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/textures/item/experience_crystal.png",
+          "bytes": 218,
+          "sha256": "a4599b1b7334f6aede0f1143a35b015f8210cfb84a2e560f18a97c2507d77142"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/textures/item/guide_book.png",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/textures/item/guide_book.png",
+          "bytes": 162,
+          "sha256": "d1b97fa6259069d3fcf0c312827c07c51b1cd675d09fb37279eb1e7f5dc406a9"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/textures/item/respec_token.png",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/textures/item/respec_token.png",
+          "bytes": 272,
+          "sha256": "d13471ca63393e863ec3aa30519ab573ed0d6b2b6f73305bace86822d1f025c0"
+        },
+        {
+          "source_relative": "src/main/resources/assets/rpgleveling/textures/item/skill_scroll.png",
+          "destination": "modules/rpgleveling/src/main/resources/assets/rpgleveling/textures/item/skill_scroll.png",
+          "bytes": 188,
+          "sha256": "d8d13cc161a8963a3bd20dbf9eaa5c4339bd70dc838f68dcf2457680fc39840e"
+        },
+        {
+          "source_relative": "src/main/resources/data/rpgleveling/patchouli_books/guide/book.json",
+          "destination": "modules/rpgleveling/src/main/resources/data/rpgleveling/patchouli_books/guide/book.json",
+          "bytes": 599,
+          "sha256": "802d541b8bd79e42a4a3a4c87f48613bcddda452eada0b8b69eb9c676faf8bb0"
+        },
+        {
+          "source_relative": "src/main/resources/data/rpgleveling/recipe/experience_crystal.json",
+          "destination": "modules/rpgleveling/src/main/resources/data/rpgleveling/recipe/experience_crystal.json",
+          "bytes": 370,
+          "sha256": "166105df54432b0e9ff4ecceb7daa047f88c1d0289a2a13787aeca4e65024d3e"
+        },
+        {
+          "source_relative": "src/main/resources/data/rpgleveling/recipe/guide_book.json",
+          "destination": "modules/rpgleveling/src/main/resources/data/rpgleveling/recipe/guide_book.json",
+          "bytes": 383,
+          "sha256": "3196a5fa0591ca7d88e00f3219a1d6470d9c6a42271ec24ebf1533b9bd10f291"
+        },
+        {
+          "source_relative": "src/main/resources/data/rpgleveling/recipe/respec_token.json",
+          "destination": "modules/rpgleveling/src/main/resources/data/rpgleveling/recipe/respec_token.json",
+          "bytes": 413,
+          "sha256": "9c383afddfd4c7f3a1639d4cc0eed855d9cc4a309f4dc9be3e144e99e59c3775"
+        },
+        {
+          "source_relative": "src/main/resources/data/rpgleveling/recipe/skill_scroll.json",
+          "destination": "modules/rpgleveling/src/main/resources/data/rpgleveling/recipe/skill_scroll.json",
+          "bytes": 365,
+          "sha256": "dd2d5eb192cdf35c8566cb92e24192d9ef1b8d6454149a035b0237cd3f0d7a0d"
+        },
+        {
+          "source_relative": "src/main/resources/data/rpgleveling/structure/empty.nbt",
+          "destination": "modules/rpgleveling/src/main/resources/data/rpgleveling/structure/empty.nbt",
+          "bytes": 119,
+          "sha256": "2d41b3b9a788debbf9efa220fed34d9d09218773d8c187a0ea6c4c559fd7981e"
+        },
+        {
+          "source_relative": "src/main/resources/pack.mcmeta",
+          "destination": "modules/rpgleveling/src/main/resources/pack.mcmeta",
+          "bytes": 87,
+          "sha256": "e710425f477d4275fe67305d55ba8e4c07aef8e7b0f1c1c7c8057d9078f1840c"
+        },
+        {
+          "source_relative": "src/test/java/com/rpgleveling/gametest/AuthoritySuite.java",
+          "destination": "modules/rpgleveling/src/test/java/com/rpgleveling/gametest/AuthoritySuite.java",
+          "bytes": 5516,
+          "sha256": "39b02c0312c4688fabeb12a0afa220c922bc4bfbd91a507a28605901d35d9de4"
+        },
+        {
+          "source_relative": "src/test/java/com/rpgleveling/gametest/CombatEffectSuite.java",
+          "destination": "modules/rpgleveling/src/test/java/com/rpgleveling/gametest/CombatEffectSuite.java",
+          "bytes": 34385,
+          "sha256": "015180b01410df97fc2d04eba53ade49923f132d67675e309790807861941f03"
+        },
+        {
+          "source_relative": "src/test/java/com/rpgleveling/gametest/CurvePolicySuite.java",
+          "destination": "modules/rpgleveling/src/test/java/com/rpgleveling/gametest/CurvePolicySuite.java",
+          "bytes": 17351,
+          "sha256": "c79ae82c68c49b165f00a1bf613955db8fc515e44dc628b4ae524a3888b2a595"
+        },
+        {
+          "source_relative": "src/test/java/com/rpgleveling/gametest/EquipmentClampSuite.java",
+          "destination": "modules/rpgleveling/src/test/java/com/rpgleveling/gametest/EquipmentClampSuite.java",
+          "bytes": 12835,
+          "sha256": "1d7569d0affc4f1c919001dc2e136495cd2a159c6a864b44637452676caccf43"
+        },
+        {
+          "source_relative": "src/test/java/com/rpgleveling/gametest/GameTestSupport.java",
+          "destination": "modules/rpgleveling/src/test/java/com/rpgleveling/gametest/GameTestSupport.java",
+          "bytes": 5991,
+          "sha256": "c141277fbf1af0fdcde9f91e29f57090914f2b23af395b657e62d1e4ee43175b"
+        },
+        {
+          "source_relative": "src/test/java/com/rpgleveling/gametest/HarnessSmokeSuite.java",
+          "destination": "modules/rpgleveling/src/test/java/com/rpgleveling/gametest/HarnessSmokeSuite.java",
+          "bytes": 4652,
+          "sha256": "865dcb69fcfa6b10ff71dbd62f990bd2e7c17933d12c0bdb4e4f285da443f1f6"
+        },
+        {
+          "source_relative": "src/test/java/com/rpgleveling/gametest/ItemSuite.java",
+          "destination": "modules/rpgleveling/src/test/java/com/rpgleveling/gametest/ItemSuite.java",
+          "bytes": 10405,
+          "sha256": "65992b491b28d3eb68e67f428253468e10d71e74b74c0744488ade3bb102957b"
+        },
+        {
+          "source_relative": "src/test/java/com/rpgleveling/gametest/LevelCurveSuite.java",
+          "destination": "modules/rpgleveling/src/test/java/com/rpgleveling/gametest/LevelCurveSuite.java",
+          "bytes": 5635,
+          "sha256": "fd3ac6657bba69664af8d0a78d947f5b113d3bf807290b68dfa6250137e72043"
+        },
+        {
+          "source_relative": "src/test/java/com/rpgleveling/gametest/LineEffectSuite.java",
+          "destination": "modules/rpgleveling/src/test/java/com/rpgleveling/gametest/LineEffectSuite.java",
+          "bytes": 6833,
+          "sha256": "8aee2dc186cb49e3b78b246fde9774dd5b69e0cb74cf2baf06e36bcb0cdfc12f"
+        },
+        {
+          "source_relative": "src/test/java/com/rpgleveling/gametest/PersistenceSuite.java",
+          "destination": "modules/rpgleveling/src/test/java/com/rpgleveling/gametest/PersistenceSuite.java",
+          "bytes": 4477,
+          "sha256": "f96626158538a42f6a77ff167419e14dc161cb27cfd3fcdd95ba05837843f24f"
+        },
+        {
+          "source_relative": "src/test/java/com/rpgleveling/gametest/RespecSuite.java",
+          "destination": "modules/rpgleveling/src/test/java/com/rpgleveling/gametest/RespecSuite.java",
+          "bytes": 5529,
+          "sha256": "f61922318609cc4ecf930b6e8a2141e085391d14dbe304ed9fe4e1b231110430"
+        },
+        {
+          "source_relative": "src/test/java/com/rpgleveling/gametest/XpBookingSuite.java",
+          "destination": "modules/rpgleveling/src/test/java/com/rpgleveling/gametest/XpBookingSuite.java",
+          "bytes": 9858,
+          "sha256": "3fbf0314d70ebbd276df4e4c950fde43dca50b42b43cdaae72a3cdec6cfcc75d"
+        },
+        {
+          "source_relative": "src/test/java/com/rpgleveling/selfcheck/LayoutSelfCheck.java",
+          "destination": "modules/rpgleveling/src/test/java/com/rpgleveling/selfcheck/LayoutSelfCheck.java",
+          "bytes": 8371,
+          "sha256": "ff72ccc0168f443287adb8cbb2c65e90cb2d64e9bfe13313e15b6835c1621d78"
+        },
+        {
+          "source_relative": "src/test/java/com/rpgleveling/selfcheck/RpgMathSelfCheck.java",
+          "destination": "modules/rpgleveling/src/test/java/com/rpgleveling/selfcheck/RpgMathSelfCheck.java",
+          "bytes": 21789,
+          "sha256": "ca5cf8265df528a290004b964955825e3a4a64bd6a8cdb0117e5f439f2657156"
+        },
+        {
+          "source_relative": "tools/build_gui_assets.py",
+          "destination": "modules/rpgleveling/tools/build_gui_assets.py",
+          "bytes": 6418,
+          "sha256": "3805f6669e1ba63504eb124545aa537973937bab71e4f69f7ef6ac50ba5b21bf"
+        },
+        {
+          "source_relative": "tools/gen_book_texture.py",
+          "destination": "modules/rpgleveling/tools/gen_book_texture.py",
+          "bytes": 965,
+          "sha256": "fcdcba76ecb21e05ef8f7044cfbaae8dc46a1794d7fe0ef34bc0edf0a01d0938"
+        },
+        {
+          "source_relative": "tools/gen_textures.py",
+          "destination": "modules/rpgleveling/tools/gen_textures.py",
+          "bytes": 4947,
+          "sha256": "1fa286ee253a12fa429d60db73a8209e1948c3b2cdcc317198a147f6acbf45c9"
+        },
+        {
+          "source_relative": "tools/gui_layout_preview.py",
+          "destination": "modules/rpgleveling/tools/gui_layout_preview.py",
+          "bytes": 5257,
+          "sha256": "c9a2484780d4cf3d3c3cc60a4cc29e5463275b4fa69e5a31eb6f9b81debc05cc"
+        },
+        {
+          "source_relative": "tools/lead_check_book.py",
+          "destination": "modules/rpgleveling/tools/lead_check_book.py",
+          "bytes": 7247,
+          "sha256": "855273da1f54215a89dd0e526871b1e23db932ecf7cc050f862c8bf8e8c99c6b"
+        },
+        {
+          "source_relative": "tools/qwen_bg2_workflow.json",
+          "destination": "modules/rpgleveling/tools/qwen_bg2_workflow.json",
+          "bytes": 1984,
+          "sha256": "5b6cf313921e35e4214a1d6515c7b9fa800bab5624c81bb50301cd97130fe669"
+        },
+        {
+          "source_relative": "tools/qwen_bg_workflow.json",
+          "destination": "modules/rpgleveling/tools/qwen_bg_workflow.json",
+          "bytes": 1964,
+          "sha256": "96a92908c04f130c7fa90945458cd55ee6b1a8e809b765b8c99520fdb54df782"
+        },
+        {
+          "source_relative": "tools/validate_patchouli_book.py",
+          "destination": "modules/rpgleveling/tools/validate_patchouli_book.py",
+          "bytes": 22395,
+          "sha256": "a0bd7ba2fe0776a4117014b38cfe0b3f131a91e34bd5ea3500211f57a6ab3ce1"
+        }
+      ],
+      "file_count": 173,
+      "total_bytes": 1293409
+    }
+  ],
+  "infinitecore": {
+    "source_lost_confirmed_by_user": true,
+    "source_path": "D:\\PCL 正式版 2.10.6 (1)\\.minecraft\\versions\\星庭远征-开发版\\mods\\无限之核模组-infinitecore-1.0.0.jar",
+    "destination": "vendor/infinitecore/infinitecore-1.0.0.jar",
+    "bytes": 79264,
+    "sha256": "10ec43204404817c8738088670571d5044bbf4b992a9247ab8d67b986aa2e400",
+    "source_recovered": false
+  },
+  "compilation_run": false,
+  "game_started": false,
+  "deployment_run": false
+}

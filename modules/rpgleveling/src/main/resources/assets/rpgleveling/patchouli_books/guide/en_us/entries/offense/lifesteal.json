@@ -1,0 +1,53 @@
+{
+  "name": "Life Steal",
+  "category": "rpgleveling:offense",
+  "icon": "minecraft:glistering_melon_slice",
+  "sortnum": 30,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "What it does",
+      "text": [
+        "After you deal damage, you heal for a percentage of the health the victim actually lost.",
+        "Because it uses the real loss, overkill does not over-heal: hitting a two-health zombie for 100 damage only counts as 2.",
+        "It only applies when the attacker is a player and the victim is somebody else. Thorns damage does not steal life by default (lifesteal.include_thorns = false)."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Flat (numeric) line",
+      "text": [
+        "The curve is LINEAR: +0.333333 percentage points per point.",
+        "20 points -> 6.67%; 50 -> 16.67%; 100 -> 33.33%; 200 -> 66.67%.",
+        "The old curve, gain = 20 * x / (x + 60), had an initial slope of 20/60 = 0.333333, so the early feel is unchanged."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Percent line",
+      "text": [
+        "Also LINEAR: 1.25 per point, on the DESIGN_BASELINE basis with reference B_ref = 10 percentage points.",
+        "Contribution = 10 * gain / 100, i.e. +0.125 percentage points per point. 20 points -> +2.50; 50 -> +6.25; 100 -> +12.50; 200 -> +25.00.",
+        "The two contributions add up to the final life steal value v; healing = actual damage * v / 100."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Ceiling & returns",
+      "text": [
+        "Both lines are linear, so the life steal percentage keeps climbing until it meets the attribute's own range (1.0E6, unreachable in practice). There is no designed ceiling and no diminishing returns.",
+        "What actually stops you first is the global throttle: lifesteal.hps_cap defaults to 20 HP/s and is spent through a per-tick budget. Even an AoE hitting ten targets cannot heal more than 20 health per second.",
+        "In other words the binding limit is the healing rate, not the percentage - the percentage can be pushed forever, the per-second payout is gated."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Practical advice",
+      "text": [
+        "A sustain stat: it shines with fast weapons and against multiple targets.",
+        "Keep the 20 HP/s throttle in mind: your attack rate and hit count decide the real ceiling, not how high you push the percentage.",
+        "Thorns does not steal life by default; set lifesteal.include_thorns to true if you want it to."
+      ]
+    }
+  ]
+}

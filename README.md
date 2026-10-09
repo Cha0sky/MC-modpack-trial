@@ -1,44 +1,66 @@
-# 整合包制作项目
+# Minecraft 整合包开发项目
 
-长期目标：与用户持续讨论、实现并实测一个基于现有 mod test 实例的 Minecraft 整合包。
-当前处于需求确认与设计阶段，整合包尚未完成。
+本仓库是正式开发目录：`D:\PCL 正式版 2.10.6 (1)\codex\modpack-project`。
 
-## 已确认定位（2026-10-09）
+最新设计以 [PLAN.md](PLAN.md) 为准：Minecraft 1.21.1 / NeoForge 21.1.248 / Java 21，围绕固定基地的休闲生活、女仆与 Create 自动化，结合原创剧情、少数关键 Boss 推动的世界共享阶段及大量可选冒险。航空学保留为小型载具与玩具，完整移动基地暂不开发。
 
-- 单人游玩，目标流程 100 小时以上。
-- 科技与冒险并重，通过基地建设支持外出挑战，再把收获带回基地。
-- 压力适中；基地充分安全，主要战斗发生在玩家主动外出时。
-- 主线任务用于引导，允许提前探索和获取装备，不采用强制按章节解锁全部内容的结构。
-- 风景美化、休闲和女仆养成都是正式内容。
-- 保留三个自制核心：infinitecore、evolvingblade、rpgleveling。
-- starsword 可以不要；已在开发副本中停用，原测试版保持不变。
-- 用户要求完整复制测试版后再修改；已建立独立实例 `D:\PCL 正式版 2.10.6 (1)\.minecraft\versions\星庭远征-开发版`，名称为暂定工作名。
+项目已进入按任务批准的正式开发流程。**已完成仓库整理与两个源码工程归档；M0 尚未完成。** 归档不代表重新编译或整包兼容验证已经通过。无限之核源码已由用户确认丢失，仓库仅保存其现有运行 JAR。
 
-## 文件导航
+## 目录
 
-- [设计草案](DESIGN.md)：玩法循环、主线章节、平衡和安全区要求，未确认细节会明确标注。
-- [项目状态](STATE.md)：已完成检查、待办及后续工作的入口。
-- [决策记录](DECISIONS.md)：用户确认过的方向，后续不必重复确认。
-- [模组清单](evidence/mod-list.md)：目录中的模组快照。
-- [机器可读清单](evidence/inventory.json)：JAR 元数据、SHA-256、内嵌模组和日志模组列表。
-- [关键配置快照](evidence/selected-configs.json)：成长与难度配置的选定字段。
-- [五章中文任务](QUESTS-v0.2.md)：当前内容与完成条件。
-- [工程联动配方](INTEGRATION-v0.1.md)：八阶无限之核的可选机械动力合成路线。
+| 位置 | 内容 |
+|---|---|
+| `AGENTS.md` | 用户可编辑的开发与 Git 工作规则，适用于整个仓库 |
+| `PLAN.md` | 当前设计与里程碑 |
+| `STATE.md` | 当前进度、验收边界和下一项候选任务 |
+| `modules/evolvingblade` | 成长武器源码副本，含资源、构建入口、测试、设计与美术资料 |
+| `modules/rpgleveling` | 角色加点源码副本，含资源、构建入口、测试与设计资料 |
+| `vendor/infinitecore` | 无限之核 1.0.0 的运行 JAR 与来源说明；没有源码 |
+| `integration/src` | 旧版配方整合原型，保留待评估 |
+| `sanctuary/src/main` | 庇护石原型源码，保留待评估 |
+| `staging/config/ftbquests` | 旧版任务书原型，尚未按当前 PLAN 改造 |
+| `tools` | 现有构建、清单、部署和启动工具；执行前必须检查写入范围 |
+| `evidence` | 版本、部署和验证记录；完整运行日志留在本机 |
+| `SOURCE-ARCHIVE.md` | 本次复制范围、原工程位置、校验和限制 |
+| `BASELINE-AUDIT.md`、`HANDOFF.md` 等 | 历史核查、交接与草案；不覆盖当前 PLAN 或执行授权 |
 
-## 工作方式
+## 开发与 Git
 
-在本目录积累设计、任务、配方、配置覆盖及测试记录；现有 mod test 作为只读输入基线，之后只修改星庭远征-开发版。
-副本已复制全部配置、存档、资源包、光影及其他文件，并通过逐文件 SHA-256 校验；版本标识已改为新名称。
-副本中停用 starsword 及三组重复模组的旧版本，文件均保留为 .jar.disabled。详见 evidence/clone-receipt.json 和 evidence/initial-changes.json。
-副本已完成加入 FTB 后的初次启动；世界内任务体验和本轮新增配方仍未验证。以后部署前备份开发副本，保留现有存档；验收流程使用新建测试世界。
-静态检查、开发环境测试、原实例测试要分别记载，不能互相代替。
+每项新任务先向用户说明计划并询问是否开始，获准后先检查 Git，再在批准范围内执行；完成后审查差异、验证并提交本地 Git。推送 GitHub 需要明确指示。详细规则见 [AGENTS.md](AGENTS.md)，用户可以直接编辑它。
 
-目前已有五章初中期任务和八条真实联动配方。下一步优先实现充分安全基地，再完善远航、终局、景观和成长节奏。
-根据用户要求减少测试占比，保留必要检查，并通过实际游玩反馈迭代内容。
+远端名为 `MC`，仓库为 [MC-modpack-trial](https://github.com/Cha0sky/MC-modpack-trial)。
 
-清单更新命令（只读开发副本，输出到本项目 evidence）：
+`.gitignore` 排除构建产物、下载 JAR、缓存、运行目录、存档、备份和临时文件。Gradle Wrapper JAR 与丢失源码的无限之核 JAR 是明确保留的例外。取消跟踪不删除本地文件，也不重写首次提交历史。
+
+正式修改应在 `modules` 的源码副本中进行；原始两个工程继续保留。历史模块文档和 `docs/archive/original-agent-instructions.md` 是归档资料，不是当前操作指令。
+
+## 构建入口与尚未验证的内容
+
+两个工程均保留了 `gradlew.bat`、`build.gradle`、`settings.gradle`、`gradle.properties` 和 Wrapper。版本锁定为 Gradle 8.14.2 / ModDevGradle 2.0.81 / Java 21 / NeoForge 21.1.248。
+
+后续获准编译时，分别在以下目录使用各自的 Wrapper：
 
 ```powershell
-$env:PYTHONIOENCODING='utf-8'
-python .\modpack-project\tools\inventory.py
+Set-Location '.\modules\evolvingblade'
+.\gradlew.bat build
 ```
+
+```powershell
+Set-Location '.\modules\rpgleveling'
+.\gradlew.bat build
+```
+
+以上是后续构建入口，**本次未执行**。首次构建可能下载 Gradle、依赖和工具链；未随源码复制本机缓存。历史测试结果见各模块归档资料，不等于从新位置重跑通过。
+
+- 成长武器有 `ebTest` 和 GameTest 入口；GameTest 清理任务会删除隔离运行目录，运行前需要检查。
+- 角色加点有 `verifyMath` 和 GameTest 入口；运行元数据要求 Patchouli。其美术辅助脚本仍含原作者机器的外部图片/字体路径，本次未改造。
+- 无限之核无法从本仓库源码重建；今后恢复、反编译研究或重写须作为单独批准的任务。
+- 庇护石原型的 Python 构建脚本仍依赖仓库外 `../evolvingblade/build` 和本机 PCL 路径；本次未改造。
+
+## 实例与存档
+
+原始实例 `D:\PCL 正式版 2.10.6 (1)\.minecraft\versions\mod test` 保持只读。
+
+已存在的开发实例为 `D:\PCL 正式版 2.10.6 (1)\.minecraft\versions\星庭远征-开发版`。它是部署和测试目标，名称是旧阶段的工作名；不需要重新克隆或覆盖。批准仓库修改不等于批准修改实例或存档。
+
+旧任务、配方与庇护石属于原型。世界进度核心和旧区块补矿尚未实现，汇流来世内建进度尚未完成兼容调查。

@@ -1,0 +1,6 @@
+{
+  "name": "Reference",
+  "description": "The complete /rpg command tree and the configuration file.",
+  "icon": "minecraft:command_block",
+  "sortnum": 50
+}

@@ -1,0 +1,32 @@
+{
+  "name": "加点卷轴",
+  "category": "rpgleveling:items",
+  "icon": "rpgleveling:skill_scroll",
+  "sortnum": 10,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "用途",
+      "text": [
+        "右键使用：直接获得 1 点可分配点数，不改变等级，也不改变经验。",
+        "默认每张 1 点（items.skill_scroll.points = 1，可配置）。",
+        "堆叠上限 16。"
+      ]
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "rpgleveling:skill_scroll",
+      "title": "合成",
+      "text": [
+        "金锭 + 青金石 + 纸，有序合成。"
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "什么时候用",
+      "text": [
+        "想「提前」拿到点数、或者给朋友送点数时。点数会持久化保存，掉线不会丢失。"
+      ]
+    }
+  ]
+}

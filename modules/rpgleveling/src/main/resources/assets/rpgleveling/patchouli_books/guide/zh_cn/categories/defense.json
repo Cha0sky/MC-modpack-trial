@@ -1,0 +1,6 @@
+{
+  "name": "防御加点",
+  "description": "五个生存维度：生命值、防御力、盔甲韧性、伤害减免、击退抗性。",
+  "icon": "minecraft:netherite_chestplate",
+  "sortnum": 20
+}

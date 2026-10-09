@@ -1,0 +1,104 @@
+{
+  "base_commit": "0dabe4c",
+  "operation": "git rm --cached",
+  "history_rewritten": false,
+  "local_files_preserved": true,
+  "removed_count": 19,
+  "files": [
+    {
+      "path": "backups/20261009-040039/config/ftbquests/quests/lang/en_us.snbt",
+      "bytes": 9052,
+      "sha256": "976946da54f8518888cade77756ce8ce6d0a856b3f7948a6aada81d8ff91d829"
+    },
+    {
+      "path": "backups/20261009-040039/config/ftbquests/quests/lang/zh_cn.snbt",
+      "bytes": 9052,
+      "sha256": "976946da54f8518888cade77756ce8ce6d0a856b3f7948a6aada81d8ff91d829"
+    },
+    {
+      "path": "backups/20261009-040802/config/ftbquests/quests/chapters/01_home.snbt",
+      "bytes": 9611,
+      "sha256": "de73c0ccf5c8881ef3c528b171d178029790bf2d4e3419357dfb00262c3d69b8"
+    },
+    {
+      "path": "backups/20261009-040802/config/ftbquests/quests/lang/en_us.snbt",
+      "bytes": 21208,
+      "sha256": "c591adf6f4fb3719c778a72be353fe276906fe58020ac5e201d3fc86455d9d69"
+    },
+    {
+      "path": "backups/20261009-040802/config/ftbquests/quests/lang/zh_cn.snbt",
+      "bytes": 21208,
+      "sha256": "c591adf6f4fb3719c778a72be353fe276906fe58020ac5e201d3fc86455d9d69"
+    },
+    {
+      "path": "evidence/development-client-console.log",
+      "bytes": 1948001,
+      "sha256": "ecb519a7bdd35a0944c8f9167df0e4c3ceb1a709798fd6401a5a0a62a414bc30"
+    },
+    {
+      "path": "sanctuary/build/classes/local/stargarden/StarGardenSanctuary$1.class",
+      "bytes": 1441,
+      "sha256": "d68f3e1c6da2479426fb0dfd6ed28b60d2c919fadb647a1c7b357e21f6ccd282"
+    },
+    {
+      "path": "sanctuary/build/classes/local/stargarden/StarGardenSanctuary$WardBlock.class",
+      "bytes": 4529,
+      "sha256": "1cab9dcd57a00cc82937aef329900ecffa51a4be57917893bd01544dbb4c4f19"
+    },
+    {
+      "path": "sanctuary/build/classes/local/stargarden/StarGardenSanctuary.class",
+      "bytes": 7230,
+      "sha256": "abd6d509fb395a04e865a92cd0443256ee7ebdb3e655365b192c3b038a8bc4e3"
+    },
+    {
+      "path": "sanctuary/build/classes/local/stargarden/WardData.class",
+      "bytes": 5284,
+      "sha256": "26d8277d8670b8a8e8faed474deec2b5cb313fa87b87344ae2aa14d4b198f91f"
+    },
+    {
+      "path": "sanctuary/build/classes/local/stargarden/WardProtection$1.class",
+      "bytes": 1282,
+      "sha256": "a286c7274924e1e46872ae5aee0634814c5c007c91fd88ac5d2362c9793780f1"
+    },
+    {
+      "path": "sanctuary/build/classes/local/stargarden/WardProtection.class",
+      "bytes": 8103,
+      "sha256": "da932ea15892a4b258dcadddf0189699f6c6facb72d6f15f2868162aec748f5c"
+    },
+    {
+      "path": "staging/mods/ftb-quests-neoforge-2101.1.27.jar",
+      "bytes": 1470929,
+      "sha256": "460b163ebefb4580e1ad32e1f94f1ea4bdc8f763692ee821628ace10bde49a03"
+    },
+    {
+      "path": "staging/mods/ftb-teams-neoforge-2101.1.10.jar",
+      "bytes": 302712,
+      "sha256": "a656f2aa0e11a933aab3ba697690aa0eb2041f65e6c5daa448897ee0a6d37a6c"
+    },
+    {
+      "path": "staging/mods/ftb-xmod-compat-neoforge-21.1.8.jar",
+      "bytes": 141328,
+      "sha256": "7e04b6d10e8eb6bac55f023d3d88ac3e8e146e57c3bb912462155ad1e49b3ca1"
+    },
+    {
+      "path": "staging/mods/stargarden-integration-0.1.0.jar",
+      "bytes": 4117,
+      "sha256": "7c2406f366ac901f640a9d61cad1f1122ca8c6deb98a8ff756d6f090962c2372"
+    },
+    {
+      "path": "staging/mods/stargarden-sanctuary-0.1.0.jar",
+      "bytes": 15438,
+      "sha256": "f6c1178cac6f69d98e0c96140c0ced21fe21610689734338035bba09486ae090"
+    },
+    {
+      "path": "tools/__pycache__/clone_instance.cpython-312.pyc",
+      "bytes": 8157,
+      "sha256": "70804562dba31ba42a90806776bd07d283aa73c682cf6de43a520d04e4348842"
+    },
+    {
+      "path": "tools/__pycache__/quest_expansion.cpython-312.pyc",
+      "bytes": 10519,
+      "sha256": "d2e7987893d527d3109ac6462c4656d15595d01e1659f89cbcfe686eb8ab2d66"
+    }
+  ]
+}

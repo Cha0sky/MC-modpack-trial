@@ -1,0 +1,6 @@
+{
+  "name": "指令与配置",
+  "description": "/rpg 指令全集与配置文件说明。",
+  "icon": "minecraft:command_block",
+  "sortnum": 50
+}

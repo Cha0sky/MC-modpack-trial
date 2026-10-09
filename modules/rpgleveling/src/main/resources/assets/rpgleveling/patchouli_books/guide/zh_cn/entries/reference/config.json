@@ -1,0 +1,47 @@
+{
+  "name": "配置文件",
+  "category": "rpgleveling:reference",
+  "icon": "minecraft:redstone_torch",
+  "sortnum": 10,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "文件位置",
+      "text": [
+        "config/rpgleveling-common.toml —— 服务端与游戏逻辑相关（所有数值都在这里）。",
+        "config/rpgleveling-client.toml —— 仅客户端显示（HUD 开关、界面提示、面板不透明度）。",
+        "服务器可以把自己的默认值放进 defaultconfigs/，这样每个新世界都会带上你的配置。",
+        "配置在加载与重载时生效；重载后会立即重新计算在线玩家的属性并同步，不需要重登。"
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "主要段落",
+      "text": [
+        "general —— max_level（默认 −1 无上限）、strict_convergence、reapply_interval_ticks，以及 general.xp（经验曲线参数）、general.points（每级点数）、general.respec（免费与冷却）。",
+        "xp —— 经验来源：xp.discovery（首次行为奖励的开关、来源列表、各来源奖励值）、xp.kill（击杀奖励模式，以及 health_coefficient / attack_coefficient 两个系数）、xp.safety（每 tick 上限）、xp.advancement、xp.count_spawner_mobs、xp.minute_cap。",
+        "lines —— 26 条加点线，每段 9 项：enabled、curve、per_point、cap、half_points、gamma、basis、basis_value、max_points。",
+        "维度专属段：health_regen、damage_reduction、movement_speed、max_health、lifesteal、drop_rate；另有 stats（诊断输出）与 items（卷轴点数与结晶经验）。"
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "曲线与基数",
+      "text": [
+        "curve 有三种：LINEAR（每点固定收益，真无上限，默认值）、SATURATING（渐近饱和，收益递减但永不为零）、SUBLINEAR_POW（次线性幂函数，可选）。默认只有 damage_reduction 的两条线是 SATURATING，其余 24 条都是 LINEAR。",
+        "basis 有两种：TOTAL 表示百分比乘「基础值 + 装备 + 数值点」；DESIGN_BASELINE 表示百分比按 basis_value（即 B_ref）换算成固定量再加上去。",
+        "general.strict_convergence 默认 true。因为默认配置本身几乎全是 LINEAR，它现在只在你想把伤害减免也变成 LINEAR 时才起作用——那会让「减伤永不超过 90%」的保证消失。"
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "想改数值时",
+      "text": [
+        "只想调强度：LINEAR 线改 per_point（每点收益）；伤害减免那两条改 cap（渐近上限）与 half_points（半饱和点数，越小前期越快）。",
+        "想改经验节奏：改 general.xp 的四个参数，或者 general.points.per_level。",
+        "想停掉某个维度：把该线 enabled 设为 false，界面上该行会变灰且无法加点。",
+        "想给移速加回一道本地兜底：把 movement_speed.hard_cap_attr 设成正数（默认 0 = 关闭；原版服务端的 `moved too quickly` 回拉不受此影响）。"
+      ]
+    }
+  ]
+}

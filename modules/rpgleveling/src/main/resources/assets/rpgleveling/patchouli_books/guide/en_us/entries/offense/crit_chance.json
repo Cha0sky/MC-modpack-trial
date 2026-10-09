@@ -1,0 +1,53 @@
+{
+  "name": "Critical Chance",
+  "category": "rpgleveling:offense",
+  "icon": "minecraft:golden_sword",
+  "sortnum": 10,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "What it does",
+      "text": [
+        "Every attack rolls against this percentage independently; on a hit the damage is multiplied by your critical multiplier.",
+        "Critical multiplier = 1.5 + critical damage / 100, so with 0 critical damage a crit is the vanilla 1.5x.",
+        "The vanilla jump crit uses the same path and is overwritten by the same multiplier."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Flat (numeric) line",
+      "text": [
+        "The curve is LINEAR: +0.833333 percentage points per point.",
+        "20 points -> 16.67%; 50 -> 41.67%; 100 -> 83.33%; 200 -> 166.67% (clamped to 100% by the ceiling).",
+        "The old curve, gain = 50 * x / (x + 60), had an initial slope of 50/60 = 0.833333, so the early feel is unchanged."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Percent line",
+      "text": [
+        "Also LINEAR: 1.25 per point, on the DESIGN_BASELINE basis with reference B_ref = 20 percentage points.",
+        "Contribution = 20 * gain / 100, i.e. +0.25 percentage points per point. 20 points -> +5.00; 50 -> +12.50; 100 -> +25.00; 200 -> +50.00.",
+        "Because the basis is a fixed number, this line pays out even with no gear at all and can never degenerate to zero."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Ceiling & returns",
+      "text": [
+        "The probability ceiling is pinned at 100% (FIXED; it does not follow the attribute range). A probability above 100% means nothing.",
+        "Whatever the two lines add up to, anything above 100% is capped by the mod: points are still accepted, the effect stops at 100%, the row shows a \"!\" marker and /rpg stats reports stat.crit_chance.clamped as true.",
+        "The \"!\" marker has two meanings here: the vanilla attribute range may have truncated the value, or this mod's own functional cap may be biting. Either way, \"more points will not help\" is shown."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Practical advice",
+      "text": [
+        "Critical chance is only meaningful together with critical damage: 20% chance with 0 critical damage is worse than putting those points straight into attack damage.",
+        "The usual route is 25%..35% chance first, then everything into critical damage.",
+        "Of the two lines the flat one is better at low counts (12.5% for 20 points), while the percent line is the stable one because its basis is fixed."
+      ]
+    }
+  ]
+}

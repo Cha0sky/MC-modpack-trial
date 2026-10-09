@@ -1,0 +1,34 @@
+# 噬星之刃 / Evolving Blade — NeoForge mod metadata
+# 由官方 MDK 模板（MDK-1.21.1-ModDevGradle）改写而来，模板许可证见 TEMPLATE_LICENSE.txt。
+modLoader="javafml"
+
+loaderVersion="${loader_version_range}"
+
+license="${mod_license}"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+authors="Evolving Blade contributors"
+description='''
+噬星之刃（Evolving Blade）：一把不可破坏、抗火的成长之剑。
+击杀敌对生物与 Boss 累积成长点，在 快速/标准/长期 三种模式中选择其一，
+沿 8 个阶段（胚刃 → 终焉）成长。
+所有门槛与数值均由服务器配置决定，成长数据按玩家、按存档独立持久化。
+'''
+
+# 依赖：仅需 NeoForge 与 Minecraft 1.21.1，无第三方必装模组。
+[[dependencies.${mod_id}]]
+    modId="neoforge"
+    type="required"
+    versionRange="[${neo_version},)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    type="required"
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"

@@ -1,0 +1,34 @@
+{
+  "name": "Respeccing",
+  "category": "rpgleveling:basics",
+  "icon": "rpgleveling:respec_token",
+  "sortnum": 30,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "What a respec does",
+      "text": [
+        "A respec refunds every point invested across the 26 lines; your level, total experience and earned points stay exactly the same. It is free and has no cooldown by default.",
+        "Because available points are derived (level minus invested points), the refund is instant and exact - there is no refund arithmetic that could drift."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Three ways to respec",
+      "text": [
+        "The \"Respec (free)\" button at the bottom of the point-buy screen.",
+        "The /rpg respec command.",
+        "Right-clicking a Respec Token (rpgleveling:respec_token); see the Items category."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Things to know",
+      "text": [
+        "Attributes are recomputed and synced immediately. If your maximum health drops, vanilla clamps your current health to the new maximum, so no free healing is handed out.",
+        "A Respec Token is not consumed when nothing is invested, so a misclick cannot waste a stack.",
+        "Respecs are counted; see respec_count in /rpg stats."
+      ]
+    }
+  ]
+}

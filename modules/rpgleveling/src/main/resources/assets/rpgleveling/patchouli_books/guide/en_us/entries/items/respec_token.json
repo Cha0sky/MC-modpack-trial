@@ -1,0 +1,33 @@
+{
+  "name": "Respec Token",
+  "category": "rpgleveling:items",
+  "icon": "rpgleveling:respec_token",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "What it does",
+      "text": [
+        "Right-click to refund every invested point while keeping your level and experience.",
+        "It is exactly equivalent to /rpg respec and to the button on the screen. It is not consumed when nothing is invested.",
+        "Stacks to 16."
+      ]
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "rpgleveling:respec_token",
+      "title": "Crafting",
+      "text": [
+        "Book + gold ingot + ender pearl + paper, shaped."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "When to use it",
+      "text": [
+        "When you want to switch builds (offense to defense, say) or simply experiment with a stat.",
+        "Respeccing is free and has no cooldown, so the only cost is the crafting materials."
+      ]
+    }
+  ]
+}

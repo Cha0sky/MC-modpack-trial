@@ -1,0 +1,47 @@
+{
+  "name": "Overview",
+  "category": "rpgleveling:basics",
+  "icon": "minecraft:writable_book",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "What is RPG Leveling?",
+      "text": [
+        "An RPG stat mod built around \"kill things, gain levels, spend points\". Killing, mining, crafting, smelting, fishing and trading all bank experience; experience becomes levels, and every level grants you 1 allocatable point.",
+        "There are 13 stats, and every stat has two independent point-buy lines: a numeric (flat) line and a percentage (percent) line - 26 lines in total.",
+        "Neither the level nor a single line's point count is capped by default. Every dimension except damage reduction now uses a plain linear curve with no diminishing returns; damage reduction alone still converges asymptotically towards 90%, which it never reaches.",
+        "Every allocation is computed and validated on the server; the screen only displays it."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Where experience comes from",
+      "text": [
+        "Killing mobs: every kill pays out. The base is max_health x 1 + attack_damage x 9 (coefficients are configurable under xp.kill): a zombie (20 hp, 3 attack) pays 47, a cow (10 hp, no attack attribute at all) pays 10. Mobs spawned by a spawner do not count by default, which kills mob-farm towers.",
+        "Mining / crafting / smelting / fishing / trading: the first time you mine a given block, craft or smelt a given item, fish up an item or use a trade offer, you are paid once; repeat actions pay nothing. Default rewards: mine 10, craft 15, smelt 8, fish 20, trade 10. This makes experience farming structurally impossible and doubles as a discovery collection (see /rpg discovery).",
+        "Advancements grant nothing by default (xp.advancement.enabled = false).",
+        "The experience multiplier (the xp_gain stat) is applied in exactly one booking function, so it can never be applied twice."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "How to spend points",
+      "text": [
+        "Exactly 1 point per level (general.points.per_level = 1). Available points = earned points minus everything invested across the 26 lines, so a respec refunds instantly and exactly.",
+        "Press K to open the point-buy screen, or run /rpg spend <line> <amount>.",
+        "Respeccing is free and does not change your level or experience. Death never costs you levels, experience or points.",
+        "Attributes are recomputed immediately and idempotently: the same point table always produces the same stats."
+      ]
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "rpgleveling:guide_book",
+      "title": "How to get this book",
+      "text": [
+        "Book + gold ingot + experience crystal, shapeless.",
+        "This book is a Patchouli guide; install Patchouli to craft and read it."
+      ]
+    }
+  ]
+}

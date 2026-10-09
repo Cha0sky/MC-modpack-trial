@@ -1,0 +1,37 @@
+{
+  "name": "Leveling & Experience",
+  "category": "rpgleveling:basics",
+  "icon": "minecraft:experience_bottle",
+  "sortnum": 10,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Experience needed per level",
+      "text": [
+        "Experience required to go from level L−1 to level L:",
+        "Linear segment (L <= 200): XP(L) = 100 + 20 * (L - 1)",
+        "Logarithmic segment (L > 200): XP(L) = 4080 * (1 + 0.15 * ln(L - 199))",
+        "The two segments join seamlessly at level 200: level 200 costs 4080 and level 201 costs 4504. All parameters live in the general.xp section (linear_until_level, linear_base, linear_step, log_scale)."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Sampling table",
+      "text": [
+        "Single level cost: L1 100, L10 280, L50 1080, L100 2080, L200 4080, L201 4504, L300 6904, L500 7573.",
+        "Cumulative experience: 109,000 for level 100; 418,000 for level 200; 1,051,430 for level 300; 2,511,411 for level 500.",
+        "Closed form for the linear segment: 10 * L^2 + 90 * L (L <= 200).",
+        "There is no level cap; the logarithmic segment merely makes the late-game requirement grow very slowly."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Levels and points",
+      "text": [
+        "One point per level, so at level L you have earned L points in total.",
+        "Available points = level minus everything invested across the 26 lines.",
+        "For example, level 200 gives 200 points - 7.7 per line on average - and level 500 gives 500 points, 19 per line. Now that every line is linear with per_point equal to the old curve's initial slope (cap/half), the first 20 points buy at least as much as before: roughly 20%..50% of the old cap, depending on whether that line's half was 100 or 40."
+      ]
+    }
+  ]
+}

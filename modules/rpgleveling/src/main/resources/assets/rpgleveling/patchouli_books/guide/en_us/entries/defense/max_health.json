@@ -1,0 +1,54 @@
+{
+  "name": "Max Health",
+  "category": "rpgleveling:defense",
+  "icon": "minecraft:golden_apple",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "What it does",
+      "text": [
+        "It drives the vanilla minecraft:max_health attribute, raising your maximum health.",
+        "When the maximum rises, max_health.heal_mode decides what happens to your current health: ADD_DELTA (default) grants as much health as the maximum gained, KEEP_RATIO preserves the ratio and NONE grants nothing.",
+        "Death and respawn never cost you stats: level, experience, points and every allocation are kept."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Flat (numeric) line",
+      "text": [
+        "The curve is LINEAR: +1 health per point (half a heart), with no ceiling.",
+        "20 points -> +20 health (40 total, 20 hearts); 50 -> +50; 100 -> +100; 200 -> +200.",
+        "A player's base maximum health is 20.0 (10 hearts)."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Percent line",
+      "text": [
+        "Also LINEAR: +2% per point, on the TOTAL basis.",
+        "TOTAL means the percentage scales base 20.0 + any health your equipment contributes (vanilla has none) + the result of the flat line.",
+        "20 points -> +40%; 50 -> +100%; 100 -> +200%; 200 -> +400%.",
+        "Worked example: 20 flat + 20 percent -> (20 + 20) * (1 + 40%) = 56.0 max health."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Ceiling & returns",
+      "text": [
+        "There is no designed functional ceiling (this mod does not cap it); both lines are linear.",
+        "The only boundary is the attribute's own range: vanilla clamps max_health at 1024 (= 512 hearts). About 1004 flat points, or about 2510 percent points, reach it. Past that further points do nothing and the row shows a \"!\" marker. An attribute-range mod (AttributeFix) raises that boundary automatically.",
+        "With diminishing returns gone everywhere, it remains the most purely linear dimension: a constant return per point, stacking forever."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Practical advice",
+      "text": [
+        "Health is forgiveness, not mitigation: it keeps you alive through mistakes, but a big hit still takes a big bite. Combine it with damage reduction and health regeneration for a complete defensive build.",
+        "The first 20..40 points are excellent value (10..20 hearts of buffer).",
+        "Note that ADD_DELTA mode heals you as you allocate; that is intended behaviour, not a bug."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "name": "Critical Damage",
+  "category": "rpgleveling:offense",
+  "icon": "minecraft:netherite_sword",
+  "sortnum": 20,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "What it does",
+      "text": [
+        "It sets how much extra damage a crit deals: final critical multiplier = 1.5 + critical damage / 100.",
+        "With 0 critical damage the multiplier is 1.5 (vanilla); 50 points -> 2.0x; 100 -> 2.5x; 200 -> 3.5x.",
+        "It only matters when the critical chance roll says the hit is a crit, so the two stats belong together."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Flat (numeric) line",
+      "text": [
+        "The curve is LINEAR: +1.0 percentage point per point, no ceiling.",
+        "20 points -> +20; 50 -> +50; 100 -> +100; 200 -> +200 percentage points.",
+        "As a multiplier: 50 points -> 2.0x crits, 100 -> 2.5x, 200 -> 3.5x."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Percent line",
+      "text": [
+        "Also LINEAR: +2% per point, on the DESIGN_BASELINE basis with reference B_ref = 50 percentage points.",
+        "Contribution = 50 * (2 * points) / 100 = +1.0 percentage point per point.",
+        "In other words, with the shipped defaults the flat and percent lines are worth exactly the same per point (+1 percentage point each). The percent line matters when you raise basis_value, or when you want to constrain it with its own curve or max_points.",
+        "The two contributions add up to your final critical damage value."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Ceiling & returns",
+      "text": [
+        "There is no ceiling: this stat is not a probability and does not change any mechanic, it only scales a damage number, so it can grow forever.",
+        "Its limit follows the attribute's own range (1.0E9), which is unreachable in practice - a numeric backstop only.",
+        "With diminishing returns gone it is a purely linear dimension: +1.0 percentage point per point, and with the shipped defaults both lines are identical."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Practical advice",
+      "text": [
+        "Critical damage is only worth as much as your critical chance: at 10% chance, +100 percentage points is effectively +10% damage overall.",
+        "Recommended route: take critical chance to 25%..35%, then pour points into critical damage.",
+        "With the default configuration the two lines are equivalent, so pick either or split evenly; if you plan to raise B_ref, favour the percent line."
+      ]
+    }
+  ]
+}

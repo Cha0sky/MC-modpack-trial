@@ -1,0 +1,47 @@
+{
+  "name": "Configuration",
+  "category": "rpgleveling:reference",
+  "icon": "minecraft:redstone_torch",
+  "sortnum": 10,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Files",
+      "text": [
+        "config/rpgleveling-common.toml - server-side and gameplay related (every number lives here).",
+        "config/rpgleveling-client.toml - client presentation only (HUD toggle, screen hints, panel opacity).",
+        "A server can ship its own defaults in defaultconfigs/ so every new world starts with them.",
+        "Configuration applies on load and on reload; a reload immediately recomputes and syncs online players, so nobody has to relog."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Main sections",
+      "text": [
+        "general - max_level (default -1, unbounded), strict_convergence, reapply_interval_ticks, plus general.xp (level curve parameters), general.points (points per level) and general.respec (free flag and cooldown).",
+        "xp - experience sources: xp.discovery (first-time rewards: master switch, source list, per-source reward), xp.kill (kill reward mode plus the health_coefficient / attack_coefficient pair), xp.safety (per-tick limits), xp.advancement, xp.count_spawner_mobs and xp.minute_cap.",
+        "lines - the 26 point-buy lines, nine entries each: enabled, curve, per_point, cap, half_points, gamma, basis, basis_value, max_points.",
+        "Per-stat sections: health_regen, damage_reduction, movement_speed, max_health, lifesteal, drop_rate; plus stats (diagnostics) and items (scroll points and crystal experience)."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Curves and bases",
+      "text": [
+        "Three curves: LINEAR (fixed gain per point, genuinely unbounded - the default), SATURATING (asymptotic, diminishing but never zero) and SUBLINEAR_POW (a sub-linear power curve, opt-in). Only the two damage_reduction lines are SATURATING by default; the other 24 are LINEAR.",
+        "Two bases: TOTAL multiplies base + equipment + your flat points; DESIGN_BASELINE converts the percentage into a fixed amount using basis_value (B_ref) and adds it.",
+        "general.strict_convergence defaults to true. Since the shipped configuration is almost entirely LINEAR already, it now only matters if you want to turn damage reduction linear too - which removes the \"never more than 90%\" guarantee."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Changing the numbers",
+      "text": [
+        "For raw power, edit per_point on a LINEAR line, or cap / half_points on the two damage reduction lines (the half-saturation count; smaller means faster early gains).",
+        "For pacing, edit the four general.xp parameters or general.points.per_level.",
+        "To disable a stat, set that line's enabled to false: the row greys out and cannot be allocated to.",
+        "To restore a local movement speed backstop, set movement_speed.hard_cap_attr to a positive value (default 0 = disabled; the vanilla 'moved too quickly' pull-back is unaffected by it)."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "name": "Experience Gain",
+  "category": "rpgleveling:utility",
+  "icon": "minecraft:experience_bottle",
+  "sortnum": 20,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "What it does",
+      "text": [
+        "It is a multiplier: a stat value of v means an experience multiplier of m = 1 + v / 100. So v = 100 is double experience.",
+        "It is applied exactly once, in the single booking function, and covers kills, first-time rewards (mining / crafting / smelting / fishing / trading) and experience crystals.",
+        "Because there is only one booking site, double-counting (paying a multiplier twice for one action) is structurally impossible."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Flat (numeric) line",
+      "text": [
+        "The curve is LINEAR: +1.666667 percentage points per point.",
+        "20 points -> +33.33%; 50 -> +83.33%; 100 -> +166.67%; 200 -> +333.33%.",
+        "The old curve, gain = 100 * x / (x + 60), had an initial slope of 100/60 = 1.666667, so the early feel is unchanged."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Percent line",
+      "text": [
+        "Also LINEAR: 5.0 per point, on the DESIGN_BASELINE basis with reference B_ref = 50 percentage points.",
+        "Contribution = 50 * gain / 100, i.e. +2.5 percentage points per point. 20 points -> +50.00; 50 -> +125.00; 100 -> +250.00; 200 -> +500.00.",
+        "The two contributions add up to the stat value v, and the final multiplier is m = 1 + v/100."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Ceiling & returns",
+      "text": [
+        "Both lines are linear, so the experience multiplier keeps climbing until it meets the attribute's own range (1.0E6, unreachable in practice). There is no designed ceiling and no diminishing returns.",
+        "There is also an optional global budget, xp.minute_cap (0 by default, meaning disabled; 3000 is recommended for servers): at most that much experience is booked inside a rolling 60 second window, and the rest is discarded.",
+        "That budget, not the multiplier number, is what really paces the game."
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Practical advice",
+      "text": [
+        "This is a compounding stat: the earlier you invest, the more every later point of experience is worth.",
+        "Worked examples: 100 flat + 100 percent = +166.67 + 250 = +416.67% (5.1667x); 200 + 200 = +333.33 + 500 = +833.33% (9.33x).",
+        "Pair it with experience crystals to rush the early levels. Server admins should look at xp.minute_cap before combining a high multiplier with automation."
+      ]
+    }
+  ]
+}

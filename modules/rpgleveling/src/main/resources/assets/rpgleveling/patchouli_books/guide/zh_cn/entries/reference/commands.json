@@ -1,0 +1,44 @@
+{
+  "name": "指令一览",
+  "category": "rpgleveling:reference",
+  "icon": "minecraft:command_block",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "玩家指令（不需要权限）",
+      "text": [
+        "/rpg —— 等价于 /rpg info。",
+        "/rpg info [玩家] —— 等级、总经验、本级已得经验、升级所需经验、可用点数。",
+        "/rpg stats [玩家] —— 完整机器可读快照，每行都是 key=value（见下一页）。",
+        "/rpg list [玩家] —— 逐条列出 26 条线的已投点数与当前线值。",
+        "/rpg spend <线> <数量> —— 加点；数量可以为负（即退点），范围 −100..100。",
+        "/rpg respec —— 免费洗点。",
+        "/rpg discovery [玩家] —— 各来源的首次奖励解锁进度。"
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "/rpg stats 的输出内容",
+      "text": [
+        "等级与点数：level、total_xp、xp_into_level、xp_for_next_level、earned_points、spent_points、unspent_points、respec_count。",
+        "26 条线：line.<维度>.<flat|percent>.points 与 line.<维度>.<flat|percent>.value。",
+        "13 个维度：stat.<维度>.computed（计算值，含装备）、stat.<维度>.effective（属性实际生效值）与 stat.<维度>.clamped（该值是否已被截断——既包括原版属性范围，也包括本 mod 的功能上限如暴击率 100%、击退抗性 1.0、伤害减免 90%）；另附 attr.<原版属性名>。",
+        "其它：discovery.<来源>.unlocked/.total、debug.override.count、debug.forcecrit。"
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "调试与管理指令（需要权限等级 2）",
+      "text": [
+        "/rpg debug stats [玩家] —— 与 /rpg stats 相同。",
+        "/rpg debug addpoints <玩家> <n> —— 直接增减可用点数。",
+        "/rpg debug setlevel <玩家> <n> —— 直接设置等级。",
+        "/rpg debug override <玩家> <维度> <值> —— 把某个维度强制成指定值；<值> 换成 clear 可取消；/rpg debug override list [玩家] 查看当前覆盖。",
+        "/rpg debug forcecrit <玩家> <true|false> —— 强制每次攻击都暴击，便于测试。",
+        "/rpg admin setlevel <玩家> <等级>、/rpg admin addxp <玩家> <数量>、/rpg admin setpoints <玩家> <线> <点数>、/rpg admin reset <玩家> —— 管理员的直接改写与重置。",
+        "线的名字是 <维度>.<flat|percent>，例如 attack_damage.flat、crit_chance.percent。"
+      ]
+    }
+  ]
+}

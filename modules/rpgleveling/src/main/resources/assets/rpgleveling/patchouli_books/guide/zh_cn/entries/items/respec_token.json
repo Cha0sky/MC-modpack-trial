@@ -1,0 +1,33 @@
+{
+  "name": "洗点令牌",
+  "category": "rpgleveling:items",
+  "icon": "rpgleveling:respec_token",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "用途",
+      "text": [
+        "右键使用：退还全部已投点数，等级与经验不变。",
+        "与 /rpg respec 和界面上的洗点按钮完全等价。当当前没有任何已投点数时不会被消耗。",
+        "堆叠上限 16。"
+      ]
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "rpgleveling:respec_token",
+      "title": "合成",
+      "text": [
+        "书 + 金锭 + 末影珍珠 + 纸，有序合成。"
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "什么时候用",
+      "text": [
+        "想换一套加点（例如从进攻转防御），或者只是想试试某个维度的手感时用。",
+        "因为洗点免费且无冷却，唯一的成本就是合成令牌的材料。"
+      ]
+    }
+  ]
+}

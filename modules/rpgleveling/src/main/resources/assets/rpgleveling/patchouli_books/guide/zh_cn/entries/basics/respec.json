@@ -1,0 +1,34 @@
+{
+  "name": "洗点",
+  "category": "rpgleveling:basics",
+  "icon": "rpgleveling:respec_token",
+  "sortnum": 30,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "什么是洗点",
+      "text": [
+        "洗点会把 26 条线的已投点数全部退还，等级、总经验与已获得点数都不变。默认免费、无冷却。",
+        "因为「可用点数」是派生值（等级减去已投点数），洗点后瞬间全额返还，不存在任何返还计算的误差。"
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "三种洗点方式",
+      "text": [
+        "加点界面底部的「洗点（免费）」按钮。",
+        "指令 /rpg respec。",
+        "右键使用洗点令牌（rpgleveling:respec_token），见「实用物品」分类。"
+      ]
+    },
+    {
+      "type": "patchouli:text",
+      "title": "注意事项",
+      "text": [
+        "洗点后属性立即重算并同步。生命上限下降时，当前生命会被原版自动钳到新上限，不会白送血量。",
+        "洗点令牌在「当前没有任何已投点数」时不会被消耗，避免误点浪费。",
+        "洗点会记录次数，可以用 /rpg stats 里的 respec_count 查看。"
+      ]
+    }
+  ]
+}

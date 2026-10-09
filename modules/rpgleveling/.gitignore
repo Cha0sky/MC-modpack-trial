@@ -1,0 +1,12 @@
+.gradle/
+build/
+build-logs/
+runs/
+run/
+run-data/
+.research/
+_recon_jar/
+.idea/
+*.iml
+.eclipse/
+.vscode/
