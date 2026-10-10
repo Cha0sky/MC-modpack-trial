@@ -1,0 +1,24 @@
+{
+  "imported_at": "2026-10-11T01:19:58.932575+08:00",
+  "base_commit": "4fbe03e7aad732089c3712f79a4bdf2aef07623d",
+  "source": "C:\\Users\\俞皓天\\Downloads\\失落世界_世界观设定_v1.0.md",
+  "destination": "docs/lore/失落世界_世界观设定_v1.0.md",
+  "bytes": 30161,
+  "sha256": "dfc796ed6721ff764d706567fdd926534eaf5e948127f237a2f5865b17c2c757",
+  "source_preserved": true,
+  "copied_byte_identical": true,
+  "encoding_verified": "UTF-8",
+  "canon_status_markers_preserved": true,
+  "planning_file": "docs/design/失落世界_开发落地规划_v0.1.md",
+  "planning_is_proposal_not_implementation": true,
+  "game_started": false,
+  "mods_modified": false,
+  "validation": {
+    "source_and_copy_byte_identical": true,
+    "utf8_verified": true,
+    "source_markers_preserved": true,
+    "local_markdown_links_checked": 10,
+    "markdown_fences_checked": true
+  },
+  "attachment_is_creative_reference_not_execution_authorization": true
+}
