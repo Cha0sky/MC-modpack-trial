@@ -1,0 +1,93 @@
+Compiled from "ModUtils.java"
+public final class org.confluence.mod.util.ModUtils {
+  public static final java.util.Set<java.lang.String> CONFLUENCE_NAMESPACES;
+
+  public static final com.google.gson.Gson GSON;
+
+  public static final java.lang.String DEV_ITEM_ATTRIBUTES_KEY = "Attributes";
+
+
+  public static void bossDeath(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.LivingEntity);
+    Code:
+       0: aload_0
+       1: invokevirtual #208                // Method net/minecraft/server/level/ServerLevel.getDifficulty:()Lnet/minecraft/world/Difficulty;
+       4: getstatic     #212                // Field net/minecraft/world/Difficulty.PEACEFUL:Lnet/minecraft/world/Difficulty;
+       7: if_acmpne     11
+      10: return
+      11: aload_1
+      12: invokevirtual #218                // Method net/minecraft/world/entity/LivingEntity.getType:()Lnet/minecraft/world/entity/EntityType;
+      15: astore_2
+      16: getstatic     #224                // Field org/confluence/mod/common/data/saved/KillBoard.INSTANCE:Lorg/confluence/mod/common/data/saved/KillBoard;
+      19: aload_2
+      20: invokevirtual #230                // Method org/confluence/mod/common/data/saved/KillBoard.defeat:(Lnet/minecraft/world/entity/EntityType;)V
+      23: aload_2
+      24: getstatic     #234                // Field org/confluence/terraentity/init/entity/TEBossEntities.EATER_OF_WORLDS:Lnet/neoforged/neoforge/registries/DeferredHolder;
+      27: invokevirtual #240                // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+      30: if_acmpne     37
+      33: iconst_1
+      34: goto          38
+      37: iconst_0
+      38: istore_3
+      39: iload_3
+      40: ifne          53
+      43: aload_2
+      44: getstatic     #243                // Field org/confluence/terraentity/init/entity/TEBossEntities.BRAIN_OF_CTHULHU:Lnet/neoforged/neoforge/registries/DeferredHolder;
+      47: invokevirtual #240                // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+      50: if_acmpne     100
+      53: getstatic     #246                // Field org/confluence/lib/util/LibDateUtils._00$00:I
+      56: getstatic     #252                // Field org/confluence/lib/util/LibDateUtils._04$30:I
+      59: aload_0
+      60: invokestatic  #255                // Method org/confluence/lib/util/LibDateUtils.isWithinDayTime:(IILnet/minecraft/world/level/Level;)Z
+      63: ifeq          76
+      66: getstatic     #259                // Field org/confluence/mod/common/data/saved/MeteoriteTracker.INSTANCE:Lorg/confluence/mod/common/data/saved/MeteoriteTracker;
+      69: iconst_1
+      70: putfield      #264                // Field org/confluence/mod/common/data/saved/MeteoriteTracker.spawnAtNextNight:Z
+      73: goto          100
+      76: getstatic     #259                // Field org/confluence/mod/common/data/saved/MeteoriteTracker.INSTANCE:Lorg/confluence/mod/common/data/saved/MeteoriteTracker;
+      79: getfield      #264                // Field org/confluence/mod/common/data/saved/MeteoriteTracker.spawnAtNextNight:Z
+      82: ifne          100
+      85: getstatic     #259                // Field org/confluence/mod/common/data/saved/MeteoriteTracker.INSTANCE:Lorg/confluence/mod/common/data/saved/MeteoriteTracker;
+      88: aload_0
+      89: getfield      #111                // Field net/minecraft/server/level/ServerLevel.random:Lnet/minecraft/util/RandomSource;
+      92: invokeinterface #268,  1          // InterfaceMethod net/minecraft/util/RandomSource.nextBoolean:()Z
+      97: putfield      #264                // Field org/confluence/mod/common/data/saved/MeteoriteTracker.spawnAtNextNight:Z
+     100: aload_2
+     101: getstatic     #274                // Field org/confluence/terraentity/init/entity/TEBossEntities.KING_SLIME:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     104: invokevirtual #240                // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     107: if_acmpne     123
+     110: getstatic     #277                // Field org/confluence/mod/common/gameevent/SlimeRainGameEvent.INSTANCE:Lorg/confluence/mod/common/gameevent/SlimeRainGameEvent;
+     113: invokevirtual #282                // Method org/confluence/mod/common/gameevent/SlimeRainGameEvent.started:()Z
+     116: ifeq          123
+     119: iconst_1
+     120: goto          124
+     123: iconst_0
+     124: istore        4
+     126: aload_2
+     127: getstatic     #285                // Field org/confluence/terraentity/init/entity/TEBossEntities.WALL_OF_FLESH:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     130: invokevirtual #240                // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     133: if_acmpeq     146
+     136: aload_2
+     137: getstatic     #288                // Field org/confluence/terraentity/init/entity/TEBossEntities.HILL_OF_FLESH:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     140: invokevirtual #240                // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     143: if_acmpne     150
+     146: iconst_1
+     147: goto          151
+     150: iconst_0
+     151: istore        5
+     153: aload_1
+     154: invokevirtual #291                // Method net/minecraft/world/entity/LivingEntity.level:()Lnet/minecraft/world/level/Level;
+     157: invokevirtual #295                // Method net/minecraft/world/level/Level.dimension:()Lnet/minecraft/resources/ResourceKey;
+     160: astore        6
+     162: aload_0
+     163: invokevirtual #301                // Method net/minecraft/server/level/ServerLevel.players:()Ljava/util/List;
+     166: invokeinterface #305,  1          // InterfaceMethod java/util/List.stream:()Ljava/util/stream/Stream;
+     171: aload         6
+     173: invokedynamic #311,  0            // InvokeDynamic #0:test:(Lnet/minecraft/resources/ResourceKey;)Ljava/util/function/Predicate;
+     178: invokeinterface #315,  2          // InterfaceMethod java/util/stream/Stream.filter:(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
+     183: aload_1
+     184: iload_3
+     185: iload         4
+     187: iload         5
+     189: invokedynamic #321,  0            // InvokeDynamic #1:accept:(Lnet/minecraft/world/entity/LivingEntity;ZZZ)Ljava/util/function/Consumer;
+     194: invokeinterface #325,  2          // InterfaceMethod java/util/stream/Stream.forEach:(Ljava/util/function/Consumer;)V
+     199: return

@@ -1,0 +1,24 @@
+Compiled from "WorldOptionsMixin.java"
+public abstract class org.confluence.mod.mixin.level.WorldOptionsMixin implements org.confluence.mod.mixed.IWorldOptions {
+  private long seed;
+
+  private boolean generateStructures;
+
+  private boolean generateBonusChest;
+
+  private java.util.Optional<java.lang.String> legacyCustomOptions;
+
+  private long confluence$secretFlag;
+
+  private int confluence$version;
+
+
+  public void confluence$withSecretFlag(long);
+    Code:
+       0: aload_0
+       1: dup
+       2: getfield      #7                  // Field confluence$secretFlag:J
+       5: lload_1
+       6: lor
+       7: putfield      #7                  // Field confluence$secretFlag:J
+      10: return

@@ -1,0 +1,51 @@
+{
+  "commit": "08d2e722e136bc96c4a85f8ba95daf5185cf7bc2",
+  "files": [
+    {
+      "path": "common/data/saved/KillBoard.java",
+      "url": "https://raw.githubusercontent.com/Magic-team-jvav/confluence/08d2e722e136bc96c4a85f8ba95daf5185cf7bc2/ConfluenceOtherworld/src/main/java/org/confluence/mod/common/data/saved/KillBoard.java",
+      "sha256": "5f4c69bbd2afdbd0486450851c5f2e2a5e7e813aa0c27618c38c730d34c8bb34"
+    },
+    {
+      "path": "common/data/saved/HardmodeConvertor.java",
+      "url": "https://raw.githubusercontent.com/Magic-team-jvav/confluence/08d2e722e136bc96c4a85f8ba95daf5185cf7bc2/ConfluenceOtherworld/src/main/java/org/confluence/mod/common/data/saved/HardmodeConvertor.java",
+      "sha256": "47621b7c9bcc0d749e0c5796ee0bbc44745e4f9d034adf4a051b048afcc60564"
+    },
+    {
+      "path": "common/block/functional/crafting/AltarBlock.java",
+      "url": "https://raw.githubusercontent.com/Magic-team-jvav/confluence/08d2e722e136bc96c4a85f8ba95daf5185cf7bc2/ConfluenceOtherworld/src/main/java/org/confluence/mod/common/block/functional/crafting/AltarBlock.java",
+      "sha256": "213911bcff8806dea5c6f3080c850a50fc38593e3073f5c3a55335dd2da99403"
+    },
+    {
+      "path": "common/data/saved/ConfluenceData.java",
+      "url": "https://raw.githubusercontent.com/Magic-team-jvav/confluence/08d2e722e136bc96c4a85f8ba95daf5185cf7bc2/ConfluenceOtherworld/src/main/java/org/confluence/mod/common/data/saved/ConfluenceData.java",
+      "sha256": "336065a8301267a13b93a28485cf36ba7ca6293d7ea2fa33919ceac6d2b8ce63"
+    },
+    {
+      "path": "common/data/saved/GlobalCloakData.java",
+      "url": "https://raw.githubusercontent.com/Magic-team-jvav/confluence/08d2e722e136bc96c4a85f8ba95daf5185cf7bc2/ConfluenceOtherworld/src/main/java/org/confluence/mod/common/data/saved/GlobalCloakData.java",
+      "sha256": "b9f52d2168ce295cea9f011c4f3a1d290eed0517eeafdffd230a59f05ee0378d"
+    },
+    {
+      "path": "common/data/saved/GamePhase.java",
+      "url": "https://raw.githubusercontent.com/Magic-team-jvav/confluence/08d2e722e136bc96c4a85f8ba95daf5185cf7bc2/ConfluenceOtherworld/src/main/java/org/confluence/mod/common/data/saved/GamePhase.java",
+      "sha256": "0ea758b4b5f6e502cb42977a6513b30ff1cdcef49ba28c8c7c328f8e44e2bda4"
+    },
+    {
+      "path": "api/event/EnterHardmodeEvent.java",
+      "url": "https://raw.githubusercontent.com/Magic-team-jvav/confluence/08d2e722e136bc96c4a85f8ba95daf5185cf7bc2/ConfluenceOtherworld/src/main/java/org/confluence/mod/api/event/EnterHardmodeEvent.java",
+      "sha256": "12c7eab43bea964ed447fb2db1eb2994266bd5af6d7e63c3063e452adbe6268a"
+    },
+    {
+      "path": "common/init/ModCommands.java",
+      "url": "https://raw.githubusercontent.com/Magic-team-jvav/confluence/08d2e722e136bc96c4a85f8ba95daf5185cf7bc2/ConfluenceOtherworld/src/main/java/org/confluence/mod/common/init/ModCommands.java",
+      "sha256": "6db247015d4cc7659ed4893864aedd26392515d0c679b3b41a533ec104ca0311"
+    },
+    {
+      "path": "common/data/map/GamePhase2AttributeModifiers.java",
+      "url": "https://raw.githubusercontent.com/Magic-team-jvav/confluence/08d2e722e136bc96c4a85f8ba95daf5185cf7bc2/ConfluenceOtherworld/src/main/java/org/confluence/mod/common/data/map/GamePhase2AttributeModifiers.java",
+      "sha256": "94406332422d25eea9d825398b373486f27bad371e74b0e19430fade5b772907"
+    }
+  ],
+  "binary_rebuilt_for_equivalence": false
+}

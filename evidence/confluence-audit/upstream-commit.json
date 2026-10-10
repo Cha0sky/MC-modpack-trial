@@ -1,0 +1,7 @@
+{
+  "url": "https://api.github.com/repos/Magic-team-jvav/confluence/commits?sha=neoforge%2F1.21.1&until=2026-02-25T17%3A03%3A00Z&per_page=1",
+  "sha": "08d2e722e136bc96c4a85f8ba95daf5185cf7bc2",
+  "date": "2026-02-25T17:01:01Z",
+  "message": "1.2.4",
+  "exact_binary_correspondence_verified": false
+}

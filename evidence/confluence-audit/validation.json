@@ -1,0 +1,16 @@
+{
+  "evidence_hashes_verified": 26,
+  "evidence_json_and_toml_parsed": true,
+  "jar_and_three_source_configs_unchanged": true,
+  "upstream_sources_located": 9,
+  "report_links_and_fences_checked": true,
+  "game_started": false,
+  "instance_modified": false,
+  "policy_implemented": false,
+  "new_project_documents_diff_check": "passed",
+  "full_diff_check_exit_code": 2,
+  "original_config_snapshot_whitespace_warnings": [
+    "evidence/confluence-audit/terra_entity-server.toml:15: trailing whitespace."
+  ],
+  "source_snapshot_preserved_without_formatting": true
+}

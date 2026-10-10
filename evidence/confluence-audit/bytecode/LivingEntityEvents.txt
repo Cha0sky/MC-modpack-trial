@@ -1,0 +1,222 @@
+Compiled from "LivingEntityEvents.java"
+public final class org.confluence.mod.common.event.game.entity.LivingEntityEvents {
+
+  public static void livingDeath(net.neoforged.neoforge.event.entity.living.LivingDeathEvent);
+    Code:
+       0: aload_0
+       1: invokevirtual #7                  // Method net/neoforged/neoforge/event/entity/living/LivingDeathEvent.getEntity:()Lnet/minecraft/world/entity/LivingEntity;
+       4: astore_1
+       5: aload_0
+       6: invokevirtual #13                 // Method net/neoforged/neoforge/event/entity/living/LivingDeathEvent.getSource:()Lnet/minecraft/world/damagesource/DamageSource;
+       9: astore_2
+      10: aload_1
+      11: invokevirtual #17                 // Method net/minecraft/world/entity/LivingEntity.level:()Lnet/minecraft/world/level/Level;
+      14: astore        4
+      16: aload         4
+      18: instanceof    #23                 // class net/minecraft/server/level/ServerLevel
+      21: ifeq          525
+      24: aload         4
+      26: checkcast     #23                 // class net/minecraft/server/level/ServerLevel
+      29: astore_3
+      30: getstatic     #25                 // Field org/confluence/mod/common/gameevent/GameEventSystem.INSTANCE:Lorg/confluence/mod/common/gameevent/GameEventSystem;
+      33: aload_1
+      34: invokevirtual #31                 // Method org/confluence/mod/common/gameevent/GameEventSystem.countKilled:(Lnet/minecraft/world/entity/LivingEntity;)V
+      37: aload_1
+      38: invokestatic  #35                 // Method org/confluence/mod/common/entity/projectile/boulder/TombstoneBoulderEntity.createTombstoneEntity:(Lnet/minecraft/world/entity/LivingEntity;)V
+      41: aload_2
+      42: invokestatic  #40                 // Method org/confluence/lib/util/LibUtils.getOwner:(Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/world/entity/Entity;
+      45: astore        4
+      47: aload         4
+      49: instanceof    #46                 // class net/minecraft/server/level/ServerPlayer
+      52: ifeq          126
+      55: aload_1
+      56: instanceof    #48                 // class net/minecraft/world/entity/monster/Enemy
+      59: ifeq          118
+      62: getstatic     #50                 // Field org/confluence/mod/common/CommonConfigs.ENEMY_DROPS_MONEY:Lnet/neoforged/neoforge/common/ModConfigSpec$BooleanValue;
+      65: invokevirtual #56                 // Method net/neoforged/neoforge/common/ModConfigSpec$BooleanValue.get:()Ljava/lang/Object;
+      68: checkcast     #62                 // class java/lang/Boolean
+      71: invokevirtual #64                 // Method java/lang/Boolean.booleanValue:()Z
+      74: ifeq          118
+      77: aload_3
+      78: invokevirtual #68                 // Method net/minecraft/server/level/ServerLevel.getGameRules:()Lnet/minecraft/world/level/GameRules;
+      81: getstatic     #72                 // Field net/minecraft/world/level/GameRules.RULE_DOMOBLOOT:Lnet/minecraft/world/level/GameRules$Key;
+      84: invokevirtual #78                 // Method net/minecraft/world/level/GameRules.getBoolean:(Lnet/minecraft/world/level/GameRules$Key;)Z
+      87: ifeq          118
+      90: aload_1
+      91: instanceof    #82                 // class org/confluence/terraentity/api/entity/IMinion
+      94: ifeq          113
+      97: aload_1
+      98: checkcast     #82                 // class org/confluence/terraentity/api/entity/IMinion
+     101: astore        5
+     103: aload         5
+     105: invokeinterface #84,  1           // InterfaceMethod org/confluence/terraentity/api/entity/IMinion.minion_getOwnerUUID:()Ljava/util/UUID;
+     110: ifnonnull     118
+     113: aload_1
+     114: aload_3
+     115: invokestatic  #88                 // Method org/confluence/mod/util/ModUtils.enemyDropMoney:(Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/server/level/ServerLevel;)V
+     118: getstatic     #94                 // Field org/confluence/mod/common/data/saved/Bestiary.INSTANCE:Lorg/confluence/mod/common/data/saved/Bestiary;
+     121: aload_1
+     122: iconst_1
+     123: invokevirtual #99                 // Method org/confluence/mod/common/data/saved/Bestiary.updateEntry:(Lnet/minecraft/world/entity/LivingEntity;Z)V
+     126: aload         4
+     128: ifnull        159
+     131: aload         4
+     133: invokevirtual #103                // Method net/minecraft/world/entity/Entity.getType:()Lnet/minecraft/world/entity/EntityType;
+     136: getstatic     #109                // Field org/confluence/terraentity/init/TETags$EntityTypes.CORRUPT:Lnet/minecraft/tags/TagKey;
+     139: invokevirtual #115                // Method net/minecraft/world/entity/EntityType.is:(Lnet/minecraft/tags/TagKey;)Z
+     142: ifeq          159
+     145: getstatic     #121                // Field org/confluence/mod/common/init/block/NatureBlocks.DECOMPOSE_THE_SOURCE_EXTRACT_BLOCK:Lnet/neoforged/neoforge/registries/DeferredBlock;
+     148: invokevirtual #127                // Method net/neoforged/neoforge/registries/DeferredBlock.get:()Ljava/lang/Object;
+     151: checkcast     #130                // class org/confluence/mod/common/block/natural/DecomposeTheSourceExtractBlock
+     154: aload_3
+     155: aload_1
+     156: invokevirtual #132                // Method org/confluence/mod/common/block/natural/DecomposeTheSourceExtractBlock.checkVisibilityAndSummonEntity:(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;)V
+     159: aload_1
+     160: instanceof    #136                // class org/confluence/lib/api/entity/Boss
+     163: ifeq          194
+     166: aload_1
+     167: checkcast     #136                // class org/confluence/lib/api/entity/Boss
+     170: astore        5
+     172: aload         5
+     174: invokeinterface #138,  1          // InterfaceMethod org/confluence/lib/api/entity/Boss.shouldShowMessage:()Z
+     179: ifeq          194
+     182: aload_3
+     183: aload_1
+     184: invokestatic  #141                // Method org/confluence/mod/util/ModUtils.bossDeath:(Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/LivingEntity;)V
+     187: getstatic     #145                // Field org/confluence/mod/common/gameevent/SlimeRainGameEvent.INSTANCE:Lorg/confluence/mod/common/gameevent/SlimeRainGameEvent;
+     190: aload_1
+     191: invokevirtual #150                // Method org/confluence/mod/common/gameevent/SlimeRainGameEvent.checkEnd:(Lnet/minecraft/world/entity/LivingEntity;)V
+     194: aload_1
+     195: instanceof    #46                 // class net/minecraft/server/level/ServerPlayer
+     198: ifeq          212
+     201: aload_1
+     202: checkcast     #46                 // class net/minecraft/server/level/ServerPlayer
+     205: astore        5
+     207: aload         5
+     209: invokestatic  #153                // Method org/confluence/mod/util/PlayerUtils.dropMoney:(Lnet/minecraft/world/entity/player/Player;)V
+     212: aload_3
+     213: invokevirtual #159                // Method net/minecraft/server/level/ServerLevel.players:()Ljava/util/List;
+     216: invokeinterface #163,  1          // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+     221: astore        5
+     223: aload         5
+     225: invokeinterface #169,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+     230: ifeq          315
+     233: aload         5
+     235: invokeinterface #174,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+     240: checkcast     #46                 // class net/minecraft/server/level/ServerPlayer
+     243: astore        6
+     245: aload         6
+     247: invokevirtual #177                // Method net/minecraft/server/level/ServerPlayer.position:()Lnet/minecraft/world/phys/Vec3;
+     250: aload_1
+     251: invokevirtual #181                // Method net/minecraft/world/entity/LivingEntity.position:()Lnet/minecraft/world/phys/Vec3;
+     254: invokevirtual #182                // Method net/minecraft/world/phys/Vec3.distanceToSqr:(Lnet/minecraft/world/phys/Vec3;)D
+     257: ldc2_w        #188                // double 1024.0d
+     260: dcmpl
+     261: ifle          267
+     264: goto          223
+     267: aload         6
+     269: invokestatic  #190                // Method org/confluence/mod/common/attachment/ManaStorage.of:(Lnet/minecraft/world/entity/LivingEntity;)Lorg/confluence/mod/common/attachment/ManaStorage;
+     272: invokevirtual #196                // Method org/confluence/mod/common/attachment/ManaStorage.canReceive:()Z
+     275: ifeq          312
+     278: aload         6
+     280: invokevirtual #199                // Method net/minecraft/server/level/ServerPlayer.getRandom:()Lnet/minecraft/util/RandomSource;
+     283: invokeinterface #203,  1          // InterfaceMethod net/minecraft/util/RandomSource.nextFloat:()F
+     288: ldc           #209                // float 0.083f
+     290: fcmpg
+     291: ifge          312
+     294: invokestatic  #210                // Method org/confluence/mod/util/DateUtils.getStarItem:()Lnet/minecraft/world/item/Item;
+     297: invokevirtual #216                // Method net/minecraft/world/item/Item.getDefaultInstance:()Lnet/minecraft/world/item/ItemStack;
+     300: aload_1
+     301: invokevirtual #181                // Method net/minecraft/world/entity/LivingEntity.position:()Lnet/minecraft/world/phys/Vec3;
+     304: aload_3
+     305: iconst_0
+     306: invokestatic  #222                // Method org/confluence/lib/util/LibUtils.createItemEntity:(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/level/Level;I)V
+     309: goto          315
+     312: goto          223
+     315: aload_1
+     316: instanceof    #226                // class org/confluence/terraentity/entity/npc/AbstractTerraNPC
+     319: ifeq          493
+     322: aload_1
+     323: checkcast     #226                // class org/confluence/terraentity/entity/npc/AbstractTerraNPC
+     326: astore        5
+     328: getstatic     #228                // Field org/confluence/mod/common/data/saved/NPCSpawner.INSTANCE:Lorg/confluence/mod/common/data/saved/NPCSpawner;
+     331: aload         5
+     333: invokevirtual #233                // Method org/confluence/mod/common/data/saved/NPCSpawner.onNPCRemoved:(Lorg/confluence/terraentity/entity/npc/AbstractTerraNPC;)V
+     336: aload         4
+     338: ifnull        438
+     341: aload         5
+     343: invokevirtual #237                // Method org/confluence/terraentity/entity/npc/AbstractTerraNPC.getType:()Lnet/minecraft/world/entity/EntityType;
+     346: getstatic     #238                // Field org/confluence/terraentity/init/entity/TENpcEntities.CLOTHIER:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     349: invokevirtual #244                // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     352: if_acmpne     438
+     355: aload         4
+     357: instanceof    #247                // class net/minecraft/world/entity/player/Player
+     360: ifeq          438
+     363: aload         4
+     365: checkcast     #247                // class net/minecraft/world/entity/player/Player
+     368: astore        6
+     370: aload_3
+     371: invokestatic  #249                // Method org/confluence/lib/util/LibDateUtils.isNight:(Lnet/minecraft/world/level/Level;)Z
+     374: ifeq          438
+     377: aload         6
+     379: getstatic     #255                // Field org/confluence/mod/common/init/item/AccessoryItems.CLOTHIER$KILLER:Lorg/confluence/terra_curio/api/primitive/ValueType;
+     382: invokestatic  #261                // Method org/confluence/terra_curio/util/TCUtils.hasType:(Lnet/minecraft/world/entity/LivingEntity;Lorg/confluence/terra_curio/api/primitive/ValueType;)Z
+     385: ifeq          438
+     388: new           #267                // class org/confluence/terraentity/entity/boss/Skeletron
+     391: dup
+     392: getstatic     #269                // Field org/confluence/terraentity/init/entity/TEBossEntities.SKELETRON:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     395: invokevirtual #244                // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     398: checkcast     #116                // class net/minecraft/world/entity/EntityType
+     401: aload_3
+     402: invokespecial #274                // Method org/confluence/terraentity/entity/boss/Skeletron."<init>":(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/Level;)V
+     405: astore        7
+     407: aload         7
+     409: aload_3
+     410: aload_3
+     411: aload         7
+     413: invokevirtual #277                // Method org/confluence/terraentity/entity/boss/Skeletron.blockPosition:()Lnet/minecraft/core/BlockPos;
+     416: invokevirtual #281                // Method net/minecraft/server/level/ServerLevel.getCurrentDifficultyAt:(Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/DifficultyInstance;
+     419: getstatic     #285                // Field net/minecraft/world/entity/MobSpawnType.EVENT:Lnet/minecraft/world/entity/MobSpawnType;
+     422: aconst_null
+     423: invokevirtual #291                // Method org/confluence/terraentity/entity/boss/Skeletron.finalizeSpawn:(Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/world/DifficultyInstance;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/world/entity/SpawnGroupData;)Lnet/minecraft/world/entity/SpawnGroupData;
+     426: pop
+     427: aload_3
+     428: aload         4
+     430: invokevirtual #295                // Method net/minecraft/world/entity/Entity.blockPosition:()Lnet/minecraft/core/BlockPos;
+     433: aload         7
+     435: invokestatic  #296                // Method org/confluence/mod/util/ModUtils.summonBoss:(Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lorg/confluence/terraentity/entity/boss/AbstractTerraBossBase;)V
+     438: aload         5
+     440: invokevirtual #237                // Method org/confluence/terraentity/entity/npc/AbstractTerraNPC.getType:()Lnet/minecraft/world/entity/EntityType;
+     443: getstatic     #300                // Field org/confluence/terraentity/init/entity/TENpcEntities.GUIDE:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     446: invokevirtual #244                // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     449: if_acmpne     493
+     452: aload_3
+     453: invokevirtual #303                // Method net/minecraft/server/level/ServerLevel.dimension:()Lnet/minecraft/resources/ResourceKey;
+     456: invokestatic  #307                // Method org/confluence/mod/util/OverworldUtils.underworld:()Lnet/minecraft/resources/ResourceKey;
+     459: if_acmpne     493
+     462: aload_2
+     463: getstatic     #312                // Field net/minecraft/world/damagesource/DamageTypes.LAVA:Lnet/minecraft/resources/ResourceKey;
+     466: invokevirtual #318                // Method net/minecraft/world/damagesource/DamageSource.is:(Lnet/minecraft/resources/ResourceKey;)Z
+     469: ifeq          493
+     472: aload         5
+     474: aload_3
+     475: aload         5
+     477: invokevirtual #323                // Method org/confluence/terraentity/entity/npc/AbstractTerraNPC.getRandom:()Lnet/minecraft/util/RandomSource;
+     480: invokeinterface #324,  1          // InterfaceMethod net/minecraft/util/RandomSource.nextBoolean:()Z
+     485: invokedynamic #327,  0            // InvokeDynamic #0:get:()Ljava/util/function/Supplier;
+     490: invokestatic  #330                // Method org/confluence/mod/common/item/accessory/GuideVooDooDollItem.summon:(Lnet/minecraft/world/entity/Entity;Lnet/minecraft/server/level/ServerLevel;ZLjava/util/function/Supplier;)V
+     493: aload_1
+     494: getstatic     #336                // Field org/confluence/mod/common/init/ModEffects.BLOOD_BUTCHERED:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     497: invokevirtual #341                // Method net/minecraft/world/entity/LivingEntity.hasEffect:(Lnet/minecraft/core/Holder;)Z
+     500: ifeq          517
+     503: getstatic     #345                // Field org/confluence/mod/common/init/block/NatureBlocks.BLOODTHIRST_CRYSTALLIZED_BLOCK:Lnet/neoforged/neoforge/registries/DeferredBlock;
+     506: invokevirtual #127                // Method net/neoforged/neoforge/registries/DeferredBlock.get:()Ljava/lang/Object;
+     509: checkcast     #348                // class org/confluence/mod/common/block/natural/BloodthirstCrystallizedBlock
+     512: aload_3
+     513: aload_1
+     514: invokevirtual #350                // Method org/confluence/mod/common/block/natural/BloodthirstCrystallizedBlock.checkVisibility:(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;)V
+     517: aload_1
+     518: invokestatic  #353                // Method org/confluence/mod/network/s2c/DeathMotionPacketS2C.sendToAll:(Lnet/minecraft/world/entity/LivingEntity;)V
+     521: aload_1
+     522: invokestatic  #358                // Method org/confluence/mod/common/worldgen/secret_seed/NoTraps.entityDropsGrenade:(Lnet/minecraft/world/entity/LivingEntity;)V
+     525: return

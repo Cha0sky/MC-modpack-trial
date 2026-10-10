@@ -1,0 +1,23 @@
+Compiled from "Confluence.java"
+public final class org.confluence.mod.Confluence {
+  public static final java.lang.String MODID = "confluence";
+
+  public static final org.slf4j.Logger LOGGER;
+
+  public static net.minecraft.world.level.GameRules$Key<net.minecraft.world.level.GameRules$IntegerValue> SPREADABLE_CHANCE;
+
+
+  public static void registerGameRules();
+    Code:
+       0: getstatic     #154                // Field SPREADABLE_CHANCE:Lnet/minecraft/world/level/GameRules$Key;
+       3: ifnonnull     30
+       6: ldc           #160                // String confluenceSpreadableChance
+       8: getstatic     #162                // Field net/minecraft/world/level/GameRules$Category.UPDATES:Lnet/minecraft/world/level/GameRules$Category;
+      11: bipush        10
+      13: iconst_0
+      14: bipush        100
+      16: invokedynamic #168,  0            // InvokeDynamic #1:accept:()Ljava/util/function/BiConsumer;
+      21: invokestatic  #172                // Method net/minecraft/world/level/GameRules$IntegerValue.create:(IIILjava/util/function/BiConsumer;)Lnet/minecraft/world/level/GameRules$Type;
+      24: invokestatic  #178                // Method net/minecraft/world/level/GameRules.register:(Ljava/lang/String;Lnet/minecraft/world/level/GameRules$Category;Lnet/minecraft/world/level/GameRules$Type;)Lnet/minecraft/world/level/GameRules$Key;
+      27: putstatic     #154                // Field SPREADABLE_CHANCE:Lnet/minecraft/world/level/GameRules$Key;
+      30: return

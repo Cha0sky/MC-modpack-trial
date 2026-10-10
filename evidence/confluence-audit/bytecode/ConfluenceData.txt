@@ -1,0 +1,75 @@
+Compiled from "ConfluenceData.java"
+public final class org.confluence.mod.common.data.saved.ConfluenceData extends net.minecraft.world.level.saveddata.SavedData {
+  public static final int STAR_PHASES_SIZE = 10;
+
+  private boolean initialized;
+
+  private final org.joml.Vector3f windSpeed;
+
+  private final it.unimi.dsi.fastutil.ints.Int2ObjectMap<org.confluence.mod.common.data.saved.StarPhase> starPhases;
+
+  private int revealStep;
+
+  private final org.confluence.mod.common.data.saved.MeteoriteTracker meteoriteTracker;
+
+  private int evilBrokenCount;
+
+  org.confluence.mod.common.data.saved.ConfluenceData();
+
+  public static org.confluence.mod.common.data.saved.ConfluenceData get(net.minecraft.server.level.ServerLevel);
+    Code:
+       0: aload_0
+       1: invokevirtual #114                // Method net/minecraft/server/level/ServerLevel.getDataStorage:()Lnet/minecraft/world/level/storage/DimensionDataStorage;
+       4: new           #120                // class net/minecraft/world/level/saveddata/SavedData$Factory
+       7: dup
+       8: invokedynamic #122,  0            // InvokeDynamic #0:get:()Ljava/util/function/Supplier;
+      13: invokedynamic #126,  0            // InvokeDynamic #1:apply:()Ljava/util/function/BiFunction;
+      18: invokespecial #130                // Method net/minecraft/world/level/saveddata/SavedData$Factory."<init>":(Ljava/util/function/Supplier;Ljava/util/function/BiFunction;)V
+      21: ldc           #135                // String confluence
+      23: invokevirtual #137                // Method net/minecraft/world/level/storage/DimensionDataStorage.computeIfAbsent:(Lnet/minecraft/world/level/saveddata/SavedData$Factory;Ljava/lang/String;)Lnet/minecraft/world/level/saveddata/SavedData;
+      26: checkcast     #8                  // class org/confluence/mod/common/data/saved/ConfluenceData
+      29: astore_1
+      30: aload_0
+      31: aload_1
+      32: invokestatic  #143                // Method initialize:(Lnet/minecraft/server/level/ServerLevel;Lorg/confluence/mod/common/data/saved/ConfluenceData;)V
+      35: aload_1
+      36: areturn
+
+
+  public boolean increaseRevealStep();
+    Code:
+       0: getstatic     #279                // Field org/confluence/mod/common/block/natural/StepRevealingBlock.PAIRS:Lnet/neoforged/neoforge/common/util/Lazy;
+       3: invokevirtual #285                // Method net/neoforged/neoforge/common/util/Lazy.get:()Ljava/lang/Object;
+       6: checkcast     #288                // class "[[Lnet/minecraft/world/level/block/state/BlockState;"
+       9: astore_1
+      10: aload_0
+      11: getfield      #27                 // Field revealStep:I
+      14: aload_1
+      15: arraylength
+      16: iconst_1
+      17: isub
+      18: if_icmpge     46
+      21: getstatic     #290                // Field org/confluence/mod/common/data/saved/GlobalCloakData.INSTANCE:Lorg/confluence/mod/common/data/saved/GlobalCloakData;
+      24: aload_1
+      25: aload_0
+      26: dup
+      27: getfield      #27                 // Field revealStep:I
+      30: iconst_1
+      31: iadd
+      32: dup_x1
+      33: putfield      #27                 // Field revealStep:I
+      36: aaload
+      37: invokevirtual #295                // Method org/confluence/mod/common/data/saved/GlobalCloakData.reveal:([Lnet/minecraft/world/level/block/state/BlockState;)V
+      40: aload_0
+      41: invokevirtual #221                // Method setDirty:()V
+      44: iconst_1
+      45: ireturn
+      46: iconst_0
+      47: ireturn
+
+
+  public int getRevealStep();
+    Code:
+       0: aload_0
+       1: getfield      #27                 // Field revealStep:I
+       4: ireturn

@@ -1,0 +1,61 @@
+Compiled from "GamePhaseLootItemCondition.java"
+public final class org.confluence.mod.common.loot.GamePhaseLootItemCondition extends java.lang.Record implements net.minecraft.world.level.storage.loot.predicates.LootItemCondition {
+  private final org.confluence.mod.common.data.saved.GamePhase from;
+
+  private final boolean fromInclusive;
+
+  private final org.confluence.mod.common.data.saved.GamePhase to;
+
+  private final boolean toInclusive;
+
+  public static final com.mojang.serialization.MapCodec<org.confluence.mod.common.loot.GamePhaseLootItemCondition> CODEC;
+
+
+  public boolean test(net.minecraft.world.level.storage.loot.LootContext);
+    Code:
+       0: getstatic     #37                 // Field org/confluence/mod/common/data/saved/KillBoard.INSTANCE:Lorg/confluence/mod/common/data/saved/KillBoard;
+       3: invokevirtual #43                 // Method org/confluence/mod/common/data/saved/KillBoard.getGamePhase:()Lorg/confluence/mod/common/data/saved/GamePhase;
+       6: astore_2
+       7: aload_0
+       8: getfield      #13                 // Field fromInclusive:Z
+      11: ifeq          28
+      14: aload_2
+      15: aload_0
+      16: getfield      #7                  // Field from:Lorg/confluence/mod/common/data/saved/GamePhase;
+      19: invokevirtual #47                 // Method org/confluence/mod/common/data/saved/GamePhase.isAtLeast:(Lorg/confluence/mod/common/data/saved/GamePhase;)Z
+      22: ifeq          77
+      25: goto          39
+      28: aload_2
+      29: aload_0
+      30: getfield      #7                  // Field from:Lorg/confluence/mod/common/data/saved/GamePhase;
+      33: invokevirtual #53                 // Method org/confluence/mod/common/data/saved/GamePhase.isAboveThan:(Lorg/confluence/mod/common/data/saved/GamePhase;)Z
+      36: ifeq          77
+      39: aload_0
+      40: getfield      #20                 // Field toInclusive:Z
+      43: ifeq          60
+      46: aload_2
+      47: aload_0
+      48: getfield      #17                 // Field to:Lorg/confluence/mod/common/data/saved/GamePhase;
+      51: invokevirtual #53                 // Method org/confluence/mod/common/data/saved/GamePhase.isAboveThan:(Lorg/confluence/mod/common/data/saved/GamePhase;)Z
+      54: ifeq          71
+      57: goto          75
+      60: aload_2
+      61: aload_0
+      62: getfield      #17                 // Field to:Lorg/confluence/mod/common/data/saved/GamePhase;
+      65: invokevirtual #47                 // Method org/confluence/mod/common/data/saved/GamePhase.isAtLeast:(Lorg/confluence/mod/common/data/saved/GamePhase;)Z
+      68: ifne          75
+      71: iconst_1
+      72: goto          76
+      75: iconst_0
+      76: ireturn
+      77: iconst_0
+      78: ireturn
+
+
+  public boolean test(java.lang.Object);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: checkcast     #90                 // class net/minecraft/world/level/storage/loot/LootContext
+       5: invokevirtual #92                 // Method test:(Lnet/minecraft/world/level/storage/loot/LootContext;)Z
+       8: ireturn

@@ -1,0 +1,219 @@
+Compiled from "GamePhase.java"
+public final class org.confluence.mod.common.data.saved.GamePhase extends java.lang.Enum<org.confluence.mod.common.data.saved.GamePhase> implements net.minecraft.util.StringRepresentable, net.neoforged.fml.common.asm.enumextension.IExtensibleEnum {
+  public static final org.confluence.mod.common.data.saved.GamePhase BEFORE_SKELETRON;
+
+  public static final org.confluence.mod.common.data.saved.GamePhase AFTER_SKELETRON;
+
+  public static final org.confluence.mod.common.data.saved.GamePhase WALL_OF_FLESH;
+
+  public static final org.confluence.mod.common.data.saved.GamePhase MECHANICAL_BOSSES;
+
+  public static final org.confluence.mod.common.data.saved.GamePhase PLANTERA;
+
+  public static final org.confluence.mod.common.data.saved.GamePhase GOLEM;
+
+  public static final org.confluence.mod.common.data.saved.GamePhase MOON_LORD;
+
+  public static final com.mojang.serialization.Codec<org.confluence.mod.common.data.saved.GamePhase> CODEC;
+
+  public static final java.util.function.IntFunction<org.confluence.mod.common.data.saved.GamePhase> BY_ORDER;
+
+  public static final net.minecraft.network.codec.StreamCodec<io.netty.buffer.ByteBuf, org.confluence.mod.common.data.saved.GamePhase> STREAM_CODEC;
+
+  private final int order;
+
+  private static final org.confluence.mod.common.data.saved.GamePhase[] $VALUES;
+
+  public static org.confluence.mod.common.data.saved.GamePhase[] values();
+    Code:
+       0: getstatic     #25                 // Field $VALUES:[Lorg/confluence/mod/common/data/saved/GamePhase;
+       3: invokevirtual #29                 // Method "[Lorg/confluence/mod/common/data/saved/GamePhase;".clone:()Ljava/lang/Object;
+       6: checkcast     #30                 // class "[Lorg/confluence/mod/common/data/saved/GamePhase;"
+       9: areturn
+
+  public static org.confluence.mod.common.data.saved.GamePhase valueOf(java.lang.String);
+    Code:
+       0: ldc           #1                  // class org/confluence/mod/common/data/saved/GamePhase
+       2: aload_0
+       3: invokestatic  #34                 // Method java/lang/Enum.valueOf:(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+       6: checkcast     #1                  // class org/confluence/mod/common/data/saved/GamePhase
+       9: areturn
+
+  private org.confluence.mod.common.data.saved.GamePhase(int);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: iload_2
+       3: invokespecial #40                 // Method java/lang/Enum."<init>":(Ljava/lang/String;I)V
+       6: aload_0
+       7: iload_3
+       8: putfield      #44                 // Field order:I
+      11: return
+
+  public java.lang.String getSerializedName();
+    Code:
+       0: aload_0
+       1: invokevirtual #48                 // Method name:()Ljava/lang/String;
+       4: getstatic     #52                 // Field java/util/Locale.ROOT:Ljava/util/Locale;
+       7: invokevirtual #58                 // Method java/lang/String.toLowerCase:(Ljava/util/Locale;)Ljava/lang/String;
+      10: areturn
+
+  public boolean isHardmode();
+    Code:
+       0: aload_0
+       1: getstatic     #10                 // Field WALL_OF_FLESH:Lorg/confluence/mod/common/data/saved/GamePhase;
+       4: invokevirtual #64                 // Method isAtLeast:(Lorg/confluence/mod/common/data/saved/GamePhase;)Z
+       7: ireturn
+
+  public boolean isGraduated();
+    Code:
+       0: aload_0
+       1: getstatic     #22                 // Field MOON_LORD:Lorg/confluence/mod/common/data/saved/GamePhase;
+       4: invokevirtual #64                 // Method isAtLeast:(Lorg/confluence/mod/common/data/saved/GamePhase;)Z
+       7: ireturn
+
+  public boolean isAboveThan(org.confluence.mod.common.data.saved.GamePhase);
+    Code:
+       0: aload_0
+       1: invokevirtual #68                 // Method getOrder:()I
+       4: aload_1
+       5: invokevirtual #68                 // Method getOrder:()I
+       8: if_icmple     15
+      11: iconst_1
+      12: goto          16
+      15: iconst_0
+      16: ireturn
+
+  public boolean isAtLeast(org.confluence.mod.common.data.saved.GamePhase);
+    Code:
+       0: aload_0
+       1: invokevirtual #68                 // Method getOrder:()I
+       4: aload_1
+       5: invokevirtual #68                 // Method getOrder:()I
+       8: if_icmplt     15
+      11: iconst_1
+      12: goto          16
+      15: iconst_0
+      16: ireturn
+
+  public int getOrder();
+    Code:
+       0: aload_0
+       1: getfield      #44                 // Field order:I
+       4: ireturn
+
+  public static org.confluence.mod.common.data.saved.GamePhase getByOrder(int);
+    Code:
+       0: getstatic     #72                 // Field BY_ORDER:Ljava/util/function/IntFunction;
+       3: iload_0
+       4: invokeinterface #76,  2           // InterfaceMethod java/util/function/IntFunction.apply:(I)Ljava/lang/Object;
+       9: checkcast     #1                  // class org/confluence/mod/common/data/saved/GamePhase
+      12: areturn
+
+  public static net.neoforged.fml.common.asm.enumextension.ExtensionInfo getExtensionInfo();
+    Code:
+       0: ldc           #1                  // class org/confluence/mod/common/data/saved/GamePhase
+       2: invokestatic  #82                 // Method net/neoforged/fml/common/asm/enumextension/ExtensionInfo.nonExtended:(Ljava/lang/Class;)Lnet/neoforged/fml/common/asm/enumextension/ExtensionInfo;
+       5: areturn
+
+  private static org.confluence.mod.common.data.saved.GamePhase[] $values();
+    Code:
+       0: bipush        7
+       2: anewarray     #1                  // class org/confluence/mod/common/data/saved/GamePhase
+       5: dup
+       6: iconst_0
+       7: getstatic     #3                  // Field BEFORE_SKELETRON:Lorg/confluence/mod/common/data/saved/GamePhase;
+      10: aastore
+      11: dup
+      12: iconst_1
+      13: getstatic     #7                  // Field AFTER_SKELETRON:Lorg/confluence/mod/common/data/saved/GamePhase;
+      16: aastore
+      17: dup
+      18: iconst_2
+      19: getstatic     #10                 // Field WALL_OF_FLESH:Lorg/confluence/mod/common/data/saved/GamePhase;
+      22: aastore
+      23: dup
+      24: iconst_3
+      25: getstatic     #13                 // Field MECHANICAL_BOSSES:Lorg/confluence/mod/common/data/saved/GamePhase;
+      28: aastore
+      29: dup
+      30: iconst_4
+      31: getstatic     #16                 // Field PLANTERA:Lorg/confluence/mod/common/data/saved/GamePhase;
+      34: aastore
+      35: dup
+      36: iconst_5
+      37: getstatic     #19                 // Field GOLEM:Lorg/confluence/mod/common/data/saved/GamePhase;
+      40: aastore
+      41: dup
+      42: bipush        6
+      44: getstatic     #22                 // Field MOON_LORD:Lorg/confluence/mod/common/data/saved/GamePhase;
+      47: aastore
+      48: areturn
+
+  static {};
+    Code:
+       0: new           #1                  // class org/confluence/mod/common/data/saved/GamePhase
+       3: dup
+       4: ldc           #88                 // String BEFORE_SKELETRON
+       6: iconst_0
+       7: iconst_0
+       8: invokespecial #89                 // Method "<init>":(Ljava/lang/String;II)V
+      11: putstatic     #3                  // Field BEFORE_SKELETRON:Lorg/confluence/mod/common/data/saved/GamePhase;
+      14: new           #1                  // class org/confluence/mod/common/data/saved/GamePhase
+      17: dup
+      18: ldc           #92                 // String AFTER_SKELETRON
+      20: iconst_1
+      21: bipush        100
+      23: invokespecial #89                 // Method "<init>":(Ljava/lang/String;II)V
+      26: putstatic     #7                  // Field AFTER_SKELETRON:Lorg/confluence/mod/common/data/saved/GamePhase;
+      29: new           #1                  // class org/confluence/mod/common/data/saved/GamePhase
+      32: dup
+      33: ldc           #93                 // String WALL_OF_FLESH
+      35: iconst_2
+      36: sipush        200
+      39: invokespecial #89                 // Method "<init>":(Ljava/lang/String;II)V
+      42: putstatic     #10                 // Field WALL_OF_FLESH:Lorg/confluence/mod/common/data/saved/GamePhase;
+      45: new           #1                  // class org/confluence/mod/common/data/saved/GamePhase
+      48: dup
+      49: ldc           #94                 // String MECHANICAL_BOSSES
+      51: iconst_3
+      52: sipush        300
+      55: invokespecial #89                 // Method "<init>":(Ljava/lang/String;II)V
+      58: putstatic     #13                 // Field MECHANICAL_BOSSES:Lorg/confluence/mod/common/data/saved/GamePhase;
+      61: new           #1                  // class org/confluence/mod/common/data/saved/GamePhase
+      64: dup
+      65: ldc           #95                 // String PLANTERA
+      67: iconst_4
+      68: sipush        400
+      71: invokespecial #89                 // Method "<init>":(Ljava/lang/String;II)V
+      74: putstatic     #16                 // Field PLANTERA:Lorg/confluence/mod/common/data/saved/GamePhase;
+      77: new           #1                  // class org/confluence/mod/common/data/saved/GamePhase
+      80: dup
+      81: ldc           #96                 // String GOLEM
+      83: iconst_5
+      84: sipush        500
+      87: invokespecial #89                 // Method "<init>":(Ljava/lang/String;II)V
+      90: putstatic     #19                 // Field GOLEM:Lorg/confluence/mod/common/data/saved/GamePhase;
+      93: new           #1                  // class org/confluence/mod/common/data/saved/GamePhase
+      96: dup
+      97: ldc           #97                 // String MOON_LORD
+      99: bipush        6
+     101: sipush        600
+     104: invokespecial #89                 // Method "<init>":(Ljava/lang/String;II)V
+     107: putstatic     #22                 // Field MOON_LORD:Lorg/confluence/mod/common/data/saved/GamePhase;
+     110: invokestatic  #98                 // Method $values:()[Lorg/confluence/mod/common/data/saved/GamePhase;
+     113: putstatic     #25                 // Field $VALUES:[Lorg/confluence/mod/common/data/saved/GamePhase;
+     116: invokedynamic #102,  0            // InvokeDynamic #0:get:()Ljava/util/function/Supplier;
+     121: invokestatic  #106                // InterfaceMethod net/minecraft/util/StringRepresentable.fromValues:(Ljava/util/function/Supplier;)Lcom/mojang/serialization/Codec;
+     124: putstatic     #112                // Field CODEC:Lcom/mojang/serialization/Codec;
+     127: invokedynamic #116,  0            // InvokeDynamic #1:applyAsInt:()Ljava/util/function/ToIntFunction;
+     132: invokestatic  #120                // Method values:()[Lorg/confluence/mod/common/data/saved/GamePhase;
+     135: getstatic     #7                  // Field AFTER_SKELETRON:Lorg/confluence/mod/common/data/saved/GamePhase;
+     138: invokestatic  #123                // Method net/minecraft/util/ByIdMap.sparse:(Ljava/util/function/ToIntFunction;[Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/function/IntFunction;
+     141: putstatic     #72                 // Field BY_ORDER:Ljava/util/function/IntFunction;
+     144: getstatic     #72                 // Field BY_ORDER:Ljava/util/function/IntFunction;
+     147: invokedynamic #116,  0            // InvokeDynamic #1:applyAsInt:()Ljava/util/function/ToIntFunction;
+     152: invokestatic  #129                // InterfaceMethod net/minecraft/network/codec/ByteBufCodecs.idMapper:(Ljava/util/function/IntFunction;Ljava/util/function/ToIntFunction;)Lnet/minecraft/network/codec/StreamCodec;
+     155: putstatic     #135                // Field STREAM_CODEC:Lnet/minecraft/network/codec/StreamCodec;
+     158: return
+}

@@ -1,0 +1,58 @@
+Compiled from "PrimaryLevelDataMixin.java"
+public abstract class org.confluence.lib.mixin.PrimaryLevelDataMixin {
+  public org.confluence.lib.mixin.PrimaryLevelDataMixin();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  private static <T> void decode(com.mojang.serialization.Dynamic<T>, net.minecraft.world.level.LevelSettings, net.minecraft.world.level.storage.PrimaryLevelData$SpecialWorldProperty, net.minecraft.world.level.levelgen.WorldOptions, com.mojang.serialization.Lifecycle, org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable<net.minecraft.world.level.storage.PrimaryLevelData>);
+    Code:
+       0: getstatic     #7                  // Field org/confluence/lib/common/data/saved/IGlobalData.DAT:Ljava/util/List;
+       3: invokeinterface #13,  1           // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+       8: astore        6
+      10: aload         6
+      12: invokeinterface #19,  1           // InterfaceMethod java/util/Iterator.hasNext:()Z
+      17: ifeq          56
+      20: aload         6
+      22: invokeinterface #25,  1           // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+      27: checkcast     #8                  // class org/confluence/lib/common/data/saved/IGlobalData
+      30: astore        7
+      32: aload         7
+      34: aload_0
+      35: aload         7
+      37: invokeinterface #29,  1           // InterfaceMethod org/confluence/lib/common/data/saved/IGlobalData.serializeKey:()Ljava/lang/String;
+      42: invokevirtual #33                 // Method com/mojang/serialization/Dynamic.get:(Ljava/lang/String;)Lcom/mojang/serialization/OptionalDynamic;
+      45: invokevirtual #39                 // Method com/mojang/serialization/OptionalDynamic.orElseEmptyMap:()Lcom/mojang/serialization/Dynamic;
+      48: invokeinterface #45,  2           // InterfaceMethod org/confluence/lib/common/data/saved/IGlobalData.decode:(Lcom/mojang/serialization/Dynamic;)V
+      53: goto          10
+      56: return
+
+  private void encode(net.minecraft.core.RegistryAccess, net.minecraft.nbt.CompoundTag, net.minecraft.nbt.CompoundTag, org.spongepowered.asm.mixin.injection.callback.CallbackInfo);
+    Code:
+       0: getstatic     #7                  // Field org/confluence/lib/common/data/saved/IGlobalData.DAT:Ljava/util/List;
+       3: invokeinterface #13,  1           // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+       8: astore        5
+      10: aload         5
+      12: invokeinterface #19,  1           // InterfaceMethod java/util/Iterator.hasNext:()Z
+      17: ifeq          67
+      20: aload         5
+      22: invokeinterface #25,  1           // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+      27: checkcast     #8                  // class org/confluence/lib/common/data/saved/IGlobalData
+      30: astore        6
+      32: new           #49                 // class net/minecraft/nbt/CompoundTag
+      35: dup
+      36: invokespecial #51                 // Method net/minecraft/nbt/CompoundTag."<init>":()V
+      39: astore        7
+      41: aload         6
+      43: aload         7
+      45: invokeinterface #52,  2           // InterfaceMethod org/confluence/lib/common/data/saved/IGlobalData.encode:(Lnet/minecraft/nbt/CompoundTag;)V
+      50: aload_2
+      51: aload         6
+      53: invokeinterface #29,  1           // InterfaceMethod org/confluence/lib/common/data/saved/IGlobalData.serializeKey:()Ljava/lang/String;
+      58: aload         7
+      60: invokevirtual #56                 // Method net/minecraft/nbt/CompoundTag.put:(Ljava/lang/String;Lnet/minecraft/nbt/Tag;)Lnet/minecraft/nbt/Tag;
+      63: pop
+      64: goto          10
+      67: return
+}

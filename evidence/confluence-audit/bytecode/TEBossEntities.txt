@@ -1,0 +1,893 @@
+Compiled from "TEBossEntities.java"
+public class org.confluence.terraentity.init.entity.TEBossEntities {
+  public static final net.neoforged.neoforge.registries.DeferredHolder<net.minecraft.world.entity.EntityType<?>, net.minecraft.world.entity.EntityType<org.confluence.terraentity.entity.boss.KingSlime>> KING_SLIME;
+
+  public static final net.neoforged.neoforge.registries.DeferredHolder<net.minecraft.world.entity.EntityType<?>, net.minecraft.world.entity.EntityType<org.confluence.terraentity.entity.model.CrownOfKingSlimeModelEntity>> CROWN_OF_KING_SLIME_MODEL;
+
+  public static final net.neoforged.neoforge.registries.DeferredHolder<net.minecraft.world.entity.EntityType<?>, net.minecraft.world.entity.EntityType<org.confluence.terraentity.entity.boss.EyeOfCthulhu>> EYE_OF_CTHULHU;
+
+  public static final net.neoforged.neoforge.registries.DeferredHolder<net.minecraft.world.entity.EntityType<?>, net.minecraft.world.entity.EntityType<org.confluence.terraentity.entity.boss.EaterOfWorldsSegment>> EATER_OF_WORLDS_SEGMENT;
+
+  public static final net.neoforged.neoforge.registries.DeferredHolder<net.minecraft.world.entity.EntityType<?>, net.minecraft.world.entity.EntityType<org.confluence.terraentity.entity.boss.EaterOfWorlds>> EATER_OF_WORLDS;
+
+  public static final net.neoforged.neoforge.registries.DeferredHolder<net.minecraft.world.entity.EntityType<?>, net.minecraft.world.entity.EntityType<org.confluence.terraentity.entity.boss.BrainOfCthulhu>> BRAIN_OF_CTHULHU;
+
+  public static final net.neoforged.neoforge.registries.DeferredHolder<net.minecraft.world.entity.EntityType<?>, net.minecraft.world.entity.EntityType<org.confluence.terraentity.entity.boss.BrainFake>> BRAIN_FAKE;
+
+  public static final net.neoforged.neoforge.registries.DeferredHolder<net.minecraft.world.entity.EntityType<?>, net.minecraft.world.entity.EntityType<org.confluence.terraentity.entity.boss.Deerclops>> DEERCLOPS;
+
+  public static final net.neoforged.neoforge.registries.DeferredHolder<net.minecraft.world.entity.EntityType<?>, net.minecraft.world.entity.EntityType<org.confluence.terraentity.entity.boss.QueenBee>> QUEEN_BEE;
+
+  public static final net.neoforged.neoforge.registries.DeferredHolder<net.minecraft.world.entity.EntityType<?>, net.minecraft.world.entity.EntityType<org.confluence.terraentity.entity.boss.Skeletron>> SKELETRON;
+
+  public static final net.neoforged.neoforge.registries.DeferredHolder<net.minecraft.world.entity.EntityType<?>, net.minecraft.world.entity.EntityType<org.confluence.terraentity.entity.boss.SkeletronHand>> SKELETRON_HAND;
+
+  public static final net.neoforged.neoforge.registries.DeferredHolder<net.minecraft.world.entity.EntityType<?>, net.minecraft.world.entity.EntityType<org.confluence.terraentity.entity.boss.wallofflesh.WallOfFlesh>> WALL_OF_FLESH;
+
+  public static final net.neoforged.neoforge.registries.DeferredHolder<net.minecraft.world.entity.EntityType<?>, net.minecraft.world.entity.EntityType<org.confluence.terraentity.entity.boss.DungeonGuardian>> DUNGEON_GUARDIAN;
+
+  public static final net.neoforged.neoforge.registries.DeferredHolder<net.minecraft.world.entity.EntityType<?>, net.minecraft.world.entity.EntityType<org.confluence.terraentity.entity.boss.hillofflesh.HillOfFlesh>> HILL_OF_FLESH;
+
+  public static final net.neoforged.neoforge.registries.DeferredHolder<net.minecraft.world.entity.EntityType<?>, net.minecraft.world.entity.EntityType<org.confluence.terraentity.entity.boss.thetwins.Spazmatism>> SPAZMATISM;
+
+  public static final net.neoforged.neoforge.registries.DeferredHolder<net.minecraft.world.entity.EntityType<?>, net.minecraft.world.entity.EntityType<org.confluence.terraentity.entity.boss.thetwins.Retinazer>> RETINAZER;
+
+  public static final net.neoforged.neoforge.registries.DeferredHolder<net.minecraft.world.entity.EntityType<?>, net.minecraft.world.entity.EntityType<org.confluence.terraentity.entity.boss.thetwins.TheTwins>> THE_TWINS;
+
+  public static final net.neoforged.neoforge.registries.DeferredHolder<net.minecraft.world.entity.EntityType<?>, net.minecraft.world.entity.EntityType<org.confluence.terraentity.entity.boss.skeletronprime.SkeletronPrime>> SKELETRON_PRIME;
+
+  public static final net.neoforged.neoforge.registries.DeferredHolder<net.minecraft.world.entity.EntityType<?>, net.minecraft.world.entity.EntityType<org.confluence.terraentity.entity.boss.skeletronprime.SkeletronPrimePart>> SKELETRON_PRIME_PART;
+
+  public static final net.neoforged.neoforge.registries.DeferredHolder<net.minecraft.world.entity.EntityType<?>, net.minecraft.world.entity.EntityType<org.confluence.terraentity.entity.boss.thedestroyer.TheDestroyer>> THE_DESTROYER;
+
+  public static final net.neoforged.neoforge.registries.DeferredHolder<net.minecraft.world.entity.EntityType<?>, net.minecraft.world.entity.EntityType<org.confluence.terraentity.entity.boss.thedestroyer.TheDestroyerPart>> THE_DESTROYER_PART;
+
+  public static final net.neoforged.neoforge.registries.DeferredHolder<net.minecraft.world.entity.EntityType<?>, net.minecraft.world.entity.EntityType<org.confluence.terraentity.entity.boss.thedestroyer.TheDestroyerProbe>> THE_DESTROYER_PROBE;
+
+  public static final net.neoforged.neoforge.registries.DeferredHolder<net.minecraft.world.entity.EntityType<?>, net.minecraft.world.entity.EntityType<org.confluence.terraentity.entity.boss.plantera.Plantera>> PLANTERA;
+
+  public static final net.neoforged.neoforge.registries.DeferredHolder<net.minecraft.world.entity.EntityType<?>, net.minecraft.world.entity.EntityType<org.confluence.terraentity.entity.boss.plantera.PlanteraHook>> PLANTERA_HOOK;
+
+  public static final net.neoforged.neoforge.registries.DeferredHolder<net.minecraft.world.entity.EntityType<?>, net.minecraft.world.entity.EntityType<org.confluence.terraentity.entity.boss.plantera.PlanteraTentacle>> PLANTERA_TENTACLE;
+
+  public org.confluence.terraentity.init.entity.TEBossEntities();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static void registerRenderers(net.neoforged.neoforge.client.event.EntityRenderersEvent$RegisterRenderers);
+    Code:
+       0: aload_0
+       1: getstatic     #7                  // Field CROWN_OF_KING_SLIME_MODEL:Lnet/neoforged/neoforge/registries/DeferredHolder;
+       4: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+       7: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+      10: invokedynamic #21,  0             // InvokeDynamic #0:create:()Lnet/minecraft/client/renderer/entity/EntityRendererProvider;
+      15: invokevirtual #25                 // Method net/neoforged/neoforge/client/event/EntityRenderersEvent$RegisterRenderers.registerEntityRenderer:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/client/renderer/entity/EntityRendererProvider;)V
+      18: aload_0
+      19: getstatic     #31                 // Field KING_SLIME:Lnet/neoforged/neoforge/registries/DeferredHolder;
+      22: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+      25: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+      28: invokedynamic #34,  0             // InvokeDynamic #1:create:()Lnet/minecraft/client/renderer/entity/EntityRendererProvider;
+      33: invokevirtual #25                 // Method net/neoforged/neoforge/client/event/EntityRenderersEvent$RegisterRenderers.registerEntityRenderer:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/client/renderer/entity/EntityRendererProvider;)V
+      36: aload_0
+      37: getstatic     #35                 // Field EYE_OF_CTHULHU:Lnet/neoforged/neoforge/registries/DeferredHolder;
+      40: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+      43: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+      46: invokedynamic #38,  0             // InvokeDynamic #2:create:()Lnet/minecraft/client/renderer/entity/EntityRendererProvider;
+      51: invokevirtual #25                 // Method net/neoforged/neoforge/client/event/EntityRenderersEvent$RegisterRenderers.registerEntityRenderer:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/client/renderer/entity/EntityRendererProvider;)V
+      54: aload_0
+      55: getstatic     #39                 // Field EATER_OF_WORLDS_SEGMENT:Lnet/neoforged/neoforge/registries/DeferredHolder;
+      58: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+      61: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+      64: invokedynamic #42,  0             // InvokeDynamic #3:create:()Lnet/minecraft/client/renderer/entity/EntityRendererProvider;
+      69: invokevirtual #25                 // Method net/neoforged/neoforge/client/event/EntityRenderersEvent$RegisterRenderers.registerEntityRenderer:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/client/renderer/entity/EntityRendererProvider;)V
+      72: aload_0
+      73: getstatic     #43                 // Field EATER_OF_WORLDS:Lnet/neoforged/neoforge/registries/DeferredHolder;
+      76: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+      79: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+      82: invokedynamic #46,  0             // InvokeDynamic #4:create:()Lnet/minecraft/client/renderer/entity/EntityRendererProvider;
+      87: invokevirtual #25                 // Method net/neoforged/neoforge/client/event/EntityRenderersEvent$RegisterRenderers.registerEntityRenderer:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/client/renderer/entity/EntityRendererProvider;)V
+      90: aload_0
+      91: getstatic     #47                 // Field BRAIN_OF_CTHULHU:Lnet/neoforged/neoforge/registries/DeferredHolder;
+      94: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+      97: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+     100: invokedynamic #50,  0             // InvokeDynamic #5:create:()Lnet/minecraft/client/renderer/entity/EntityRendererProvider;
+     105: invokevirtual #25                 // Method net/neoforged/neoforge/client/event/EntityRenderersEvent$RegisterRenderers.registerEntityRenderer:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/client/renderer/entity/EntityRendererProvider;)V
+     108: aload_0
+     109: getstatic     #51                 // Field org/confluence/terraentity/init/entity/TEMonsterEntities.VISUAL_NEURON:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     112: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     115: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+     118: invokedynamic #56,  0             // InvokeDynamic #6:create:()Lnet/minecraft/client/renderer/entity/EntityRendererProvider;
+     123: invokevirtual #25                 // Method net/neoforged/neoforge/client/event/EntityRenderersEvent$RegisterRenderers.registerEntityRenderer:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/client/renderer/entity/EntityRendererProvider;)V
+     126: aload_0
+     127: getstatic     #57                 // Field BRAIN_FAKE:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     130: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     133: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+     136: invokedynamic #60,  0             // InvokeDynamic #7:create:()Lnet/minecraft/client/renderer/entity/EntityRendererProvider;
+     141: invokevirtual #25                 // Method net/neoforged/neoforge/client/event/EntityRenderersEvent$RegisterRenderers.registerEntityRenderer:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/client/renderer/entity/EntityRendererProvider;)V
+     144: aload_0
+     145: getstatic     #61                 // Field DEERCLOPS:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     148: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     151: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+     154: invokedynamic #64,  0             // InvokeDynamic #8:create:()Lnet/minecraft/client/renderer/entity/EntityRendererProvider;
+     159: invokevirtual #25                 // Method net/neoforged/neoforge/client/event/EntityRenderersEvent$RegisterRenderers.registerEntityRenderer:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/client/renderer/entity/EntityRendererProvider;)V
+     162: aload_0
+     163: getstatic     #65                 // Field QUEEN_BEE:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     166: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     169: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+     172: invokedynamic #68,  0             // InvokeDynamic #9:create:()Lnet/minecraft/client/renderer/entity/EntityRendererProvider;
+     177: invokevirtual #25                 // Method net/neoforged/neoforge/client/event/EntityRenderersEvent$RegisterRenderers.registerEntityRenderer:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/client/renderer/entity/EntityRendererProvider;)V
+     180: aload_0
+     181: getstatic     #69                 // Field SKELETRON:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     184: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     187: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+     190: invokedynamic #72,  0             // InvokeDynamic #10:create:()Lnet/minecraft/client/renderer/entity/EntityRendererProvider;
+     195: invokevirtual #25                 // Method net/neoforged/neoforge/client/event/EntityRenderersEvent$RegisterRenderers.registerEntityRenderer:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/client/renderer/entity/EntityRendererProvider;)V
+     198: aload_0
+     199: getstatic     #73                 // Field SKELETRON_HAND:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     202: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     205: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+     208: invokedynamic #76,  0             // InvokeDynamic #11:create:()Lnet/minecraft/client/renderer/entity/EntityRendererProvider;
+     213: invokevirtual #25                 // Method net/neoforged/neoforge/client/event/EntityRenderersEvent$RegisterRenderers.registerEntityRenderer:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/client/renderer/entity/EntityRendererProvider;)V
+     216: aload_0
+     217: getstatic     #77                 // Field DUNGEON_GUARDIAN:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     220: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     223: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+     226: invokedynamic #80,  0             // InvokeDynamic #12:create:()Lnet/minecraft/client/renderer/entity/EntityRendererProvider;
+     231: invokevirtual #25                 // Method net/neoforged/neoforge/client/event/EntityRenderersEvent$RegisterRenderers.registerEntityRenderer:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/client/renderer/entity/EntityRendererProvider;)V
+     234: aload_0
+     235: getstatic     #81                 // Field WALL_OF_FLESH:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     238: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     241: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+     244: invokedynamic #84,  0             // InvokeDynamic #13:create:()Lnet/minecraft/client/renderer/entity/EntityRendererProvider;
+     249: invokevirtual #25                 // Method net/neoforged/neoforge/client/event/EntityRenderersEvent$RegisterRenderers.registerEntityRenderer:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/client/renderer/entity/EntityRendererProvider;)V
+     252: aload_0
+     253: getstatic     #85                 // Field HILL_OF_FLESH:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     256: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     259: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+     262: invokedynamic #88,  0             // InvokeDynamic #14:create:()Lnet/minecraft/client/renderer/entity/EntityRendererProvider;
+     267: invokevirtual #25                 // Method net/neoforged/neoforge/client/event/EntityRenderersEvent$RegisterRenderers.registerEntityRenderer:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/client/renderer/entity/EntityRendererProvider;)V
+     270: aload_0
+     271: getstatic     #89                 // Field SPAZMATISM:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     274: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     277: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+     280: invokedynamic #92,  0             // InvokeDynamic #15:create:()Lnet/minecraft/client/renderer/entity/EntityRendererProvider;
+     285: invokevirtual #25                 // Method net/neoforged/neoforge/client/event/EntityRenderersEvent$RegisterRenderers.registerEntityRenderer:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/client/renderer/entity/EntityRendererProvider;)V
+     288: aload_0
+     289: getstatic     #93                 // Field RETINAZER:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     292: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     295: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+     298: invokedynamic #96,  0             // InvokeDynamic #16:create:()Lnet/minecraft/client/renderer/entity/EntityRendererProvider;
+     303: invokevirtual #25                 // Method net/neoforged/neoforge/client/event/EntityRenderersEvent$RegisterRenderers.registerEntityRenderer:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/client/renderer/entity/EntityRendererProvider;)V
+     306: aload_0
+     307: getstatic     #97                 // Field THE_TWINS:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     310: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     313: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+     316: invokedynamic #100,  0            // InvokeDynamic #17:create:()Lnet/minecraft/client/renderer/entity/EntityRendererProvider;
+     321: invokevirtual #25                 // Method net/neoforged/neoforge/client/event/EntityRenderersEvent$RegisterRenderers.registerEntityRenderer:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/client/renderer/entity/EntityRendererProvider;)V
+     324: aload_0
+     325: getstatic     #101                // Field SKELETRON_PRIME:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     328: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     331: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+     334: invokedynamic #104,  0            // InvokeDynamic #18:create:()Lnet/minecraft/client/renderer/entity/EntityRendererProvider;
+     339: invokevirtual #25                 // Method net/neoforged/neoforge/client/event/EntityRenderersEvent$RegisterRenderers.registerEntityRenderer:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/client/renderer/entity/EntityRendererProvider;)V
+     342: aload_0
+     343: getstatic     #105                // Field SKELETRON_PRIME_PART:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     346: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     349: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+     352: invokedynamic #108,  0            // InvokeDynamic #19:create:()Lnet/minecraft/client/renderer/entity/EntityRendererProvider;
+     357: invokevirtual #25                 // Method net/neoforged/neoforge/client/event/EntityRenderersEvent$RegisterRenderers.registerEntityRenderer:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/client/renderer/entity/EntityRendererProvider;)V
+     360: aload_0
+     361: getstatic     #109                // Field THE_DESTROYER:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     364: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     367: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+     370: invokedynamic #112,  0            // InvokeDynamic #20:create:()Lnet/minecraft/client/renderer/entity/EntityRendererProvider;
+     375: invokevirtual #25                 // Method net/neoforged/neoforge/client/event/EntityRenderersEvent$RegisterRenderers.registerEntityRenderer:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/client/renderer/entity/EntityRendererProvider;)V
+     378: aload_0
+     379: getstatic     #113                // Field THE_DESTROYER_PART:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     382: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     385: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+     388: invokedynamic #116,  0            // InvokeDynamic #21:create:()Lnet/minecraft/client/renderer/entity/EntityRendererProvider;
+     393: invokevirtual #25                 // Method net/neoforged/neoforge/client/event/EntityRenderersEvent$RegisterRenderers.registerEntityRenderer:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/client/renderer/entity/EntityRendererProvider;)V
+     396: aload_0
+     397: getstatic     #117                // Field THE_DESTROYER_PROBE:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     400: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     403: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+     406: invokedynamic #120,  0            // InvokeDynamic #22:create:()Lnet/minecraft/client/renderer/entity/EntityRendererProvider;
+     411: invokevirtual #25                 // Method net/neoforged/neoforge/client/event/EntityRenderersEvent$RegisterRenderers.registerEntityRenderer:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/client/renderer/entity/EntityRendererProvider;)V
+     414: aload_0
+     415: getstatic     #121                // Field PLANTERA:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     418: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     421: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+     424: invokedynamic #124,  0            // InvokeDynamic #23:create:()Lnet/minecraft/client/renderer/entity/EntityRendererProvider;
+     429: invokevirtual #25                 // Method net/neoforged/neoforge/client/event/EntityRenderersEvent$RegisterRenderers.registerEntityRenderer:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/client/renderer/entity/EntityRendererProvider;)V
+     432: aload_0
+     433: getstatic     #125                // Field PLANTERA_HOOK:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     436: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     439: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+     442: invokedynamic #128,  0            // InvokeDynamic #24:create:()Lnet/minecraft/client/renderer/entity/EntityRendererProvider;
+     447: invokevirtual #25                 // Method net/neoforged/neoforge/client/event/EntityRenderersEvent$RegisterRenderers.registerEntityRenderer:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/client/renderer/entity/EntityRendererProvider;)V
+     450: aload_0
+     451: getstatic     #129                // Field PLANTERA_TENTACLE:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     454: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     457: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+     460: invokedynamic #132,  0            // InvokeDynamic #25:create:()Lnet/minecraft/client/renderer/entity/EntityRendererProvider;
+     465: invokevirtual #25                 // Method net/neoforged/neoforge/client/event/EntityRenderersEvent$RegisterRenderers.registerEntityRenderer:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/client/renderer/entity/EntityRendererProvider;)V
+     468: return
+
+  public static void registerEntityAttributes(net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent);
+    Code:
+       0: aload_0
+       1: getstatic     #31                 // Field KING_SLIME:Lnet/neoforged/neoforge/registries/DeferredHolder;
+       4: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+       7: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+      10: invokestatic  #133                // Method org/confluence/terraentity/entity/boss/KingSlime.createSlimeAttributes:()Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier$Builder;
+      13: invokevirtual #139                // Method net/minecraft/world/entity/ai/attributes/AttributeSupplier$Builder.build:()Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;
+      16: invokevirtual #145                // Method net/neoforged/neoforge/event/entity/EntityAttributeCreationEvent.put:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;)V
+      19: aload_0
+      20: getstatic     #35                 // Field EYE_OF_CTHULHU:Lnet/neoforged/neoforge/registries/DeferredHolder;
+      23: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+      26: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+      29: ldc2_w        #151                // double 4.0d
+      32: ldc2_w        #153                // double 728.0d
+      35: ldc2_w        #155                // double 12.0d
+      38: invokestatic  #157                // Method org/confluence/terraentity/entity/util/AttBuilder.createBoss:(DDD)Lorg/confluence/terraentity/entity/util/AttBuilder;
+      41: invokevirtual #163                // Method org/confluence/terraentity/entity/util/AttBuilder.build:()Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;
+      44: invokevirtual #145                // Method net/neoforged/neoforge/event/entity/EntityAttributeCreationEvent.put:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;)V
+      47: aload_0
+      48: getstatic     #39                 // Field EATER_OF_WORLDS_SEGMENT:Lnet/neoforged/neoforge/registries/DeferredHolder;
+      51: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+      54: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+      57: ldc2_w        #151                // double 4.0d
+      60: ldc2_w        #164                // double 50.0d
+      63: ldc2_w        #166                // double 6.0d
+      66: invokestatic  #157                // Method org/confluence/terraentity/entity/util/AttBuilder.createBoss:(DDD)Lorg/confluence/terraentity/entity/util/AttBuilder;
+      69: invokevirtual #163                // Method org/confluence/terraentity/entity/util/AttBuilder.build:()Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;
+      72: invokevirtual #145                // Method net/neoforged/neoforge/event/entity/EntityAttributeCreationEvent.put:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;)V
+      75: aload_0
+      76: getstatic     #43                 // Field EATER_OF_WORLDS:Lnet/neoforged/neoforge/registries/DeferredHolder;
+      79: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+      82: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+      85: ldc2_w        #168                // double 11.5d
+      88: ldc2_w        #170                // double 54.0d
+      91: ldc2_w        #151                // double 4.0d
+      94: invokestatic  #157                // Method org/confluence/terraentity/entity/util/AttBuilder.createBoss:(DDD)Lorg/confluence/terraentity/entity/util/AttBuilder;
+      97: invokevirtual #163                // Method org/confluence/terraentity/entity/util/AttBuilder.build:()Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;
+     100: invokevirtual #145                // Method net/neoforged/neoforge/event/entity/EntityAttributeCreationEvent.put:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;)V
+     103: aload_0
+     104: getstatic     #47                 // Field BRAIN_OF_CTHULHU:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     107: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     110: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+     113: ldc2_w        #172                // double 14.0d
+     116: ldc2_w        #174                // double 552.0d
+     119: ldc2_w        #172                // double 14.0d
+     122: invokestatic  #157                // Method org/confluence/terraentity/entity/util/AttBuilder.createBoss:(DDD)Lorg/confluence/terraentity/entity/util/AttBuilder;
+     125: ldc2_w        #176                // double 0.5d
+     128: invokevirtual #178                // Method org/confluence/terraentity/entity/util/AttBuilder.knockResistance:(D)Lorg/confluence/terraentity/entity/util/AttBuilder;
+     131: invokevirtual #163                // Method org/confluence/terraentity/entity/util/AttBuilder.build:()Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;
+     134: invokevirtual #145                // Method net/neoforged/neoforge/event/entity/EntityAttributeCreationEvent.put:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;)V
+     137: aload_0
+     138: getstatic     #57                 // Field BRAIN_FAKE:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     141: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     144: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+     147: invokestatic  #182                // Method org/confluence/terraentity/entity/boss/AbstractTerraBossBase.createAttributes:()Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier$Builder;
+     150: invokevirtual #139                // Method net/minecraft/world/entity/ai/attributes/AttributeSupplier$Builder.build:()Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;
+     153: invokevirtual #145                // Method net/neoforged/neoforge/event/entity/EntityAttributeCreationEvent.put:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;)V
+     156: aload_0
+     157: getstatic     #61                 // Field DEERCLOPS:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     160: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     163: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+     166: ldc2_w        #187                // double 10.4d
+     169: ldc2_w        #189                // double 3094.0d
+     172: ldc2_w        #191                // double 10.0d
+     175: invokestatic  #157                // Method org/confluence/terraentity/entity/util/AttBuilder.createBoss:(DDD)Lorg/confluence/terraentity/entity/util/AttBuilder;
+     178: ldc2_w        #193                // double 0.4000000059604645d
+     181: invokevirtual #195                // Method org/confluence/terraentity/entity/util/AttBuilder.moveSpeed:(D)Lorg/confluence/terraentity/entity/util/AttBuilder;
+     184: invokevirtual #163                // Method org/confluence/terraentity/entity/util/AttBuilder.build:()Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;
+     187: invokevirtual #145                // Method net/neoforged/neoforge/event/entity/EntityAttributeCreationEvent.put:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;)V
+     190: aload_0
+     191: getstatic     #65                 // Field QUEEN_BEE:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     194: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     197: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+     200: ldc2_w        #172                // double 14.0d
+     203: ldc2_w        #198                // double 1237.0d
+     206: ldc2_w        #200                // double 8.0d
+     209: invokestatic  #157                // Method org/confluence/terraentity/entity/util/AttBuilder.createBoss:(DDD)Lorg/confluence/terraentity/entity/util/AttBuilder;
+     212: invokevirtual #163                // Method org/confluence/terraentity/entity/util/AttBuilder.build:()Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;
+     215: invokevirtual #145                // Method net/neoforged/neoforge/event/entity/EntityAttributeCreationEvent.put:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;)V
+     218: aload_0
+     219: getstatic     #69                 // Field SKELETRON:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     222: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     225: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+     228: ldc2_w        #202                // double 18.2d
+     231: ldc2_w        #204                // double 2288.0d
+     234: ldc2_w        #191                // double 10.0d
+     237: invokestatic  #157                // Method org/confluence/terraentity/entity/util/AttBuilder.createBoss:(DDD)Lorg/confluence/terraentity/entity/util/AttBuilder;
+     240: invokevirtual #163                // Method org/confluence/terraentity/entity/util/AttBuilder.build:()Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;
+     243: invokevirtual #145                // Method net/neoforged/neoforge/event/entity/EntityAttributeCreationEvent.put:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;)V
+     246: aload_0
+     247: getstatic     #73                 // Field SKELETRON_HAND:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     250: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     253: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+     256: ldc2_w        #191                // double 10.0d
+     259: ldc2_w        #206                // double 405.0d
+     262: ldc2_w        #151                // double 4.0d
+     265: invokestatic  #157                // Method org/confluence/terraentity/entity/util/AttBuilder.createBoss:(DDD)Lorg/confluence/terraentity/entity/util/AttBuilder;
+     268: invokevirtual #163                // Method org/confluence/terraentity/entity/util/AttBuilder.build:()Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;
+     271: invokevirtual #145                // Method net/neoforged/neoforge/event/entity/EntityAttributeCreationEvent.put:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;)V
+     274: aload_0
+     275: getstatic     #81                 // Field WALL_OF_FLESH:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     278: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     281: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+     284: ldc2_w        #208                // double 39.0d
+     287: ldc2_w        #210                // double 3096.0d
+     290: ldc2_w        #166                // double 6.0d
+     293: invokestatic  #157                // Method org/confluence/terraentity/entity/util/AttBuilder.createBoss:(DDD)Lorg/confluence/terraentity/entity/util/AttBuilder;
+     296: invokevirtual #163                // Method org/confluence/terraentity/entity/util/AttBuilder.build:()Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;
+     299: invokevirtual #145                // Method net/neoforged/neoforge/event/entity/EntityAttributeCreationEvent.put:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;)V
+     302: aload_0
+     303: getstatic     #77                 // Field DUNGEON_GUARDIAN:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     306: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     309: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+     312: ldc2_w        #212                // double 9999.0d
+     315: ldc2_w        #212                // double 9999.0d
+     318: ldc2_w        #212                // double 9999.0d
+     321: invokestatic  #157                // Method org/confluence/terraentity/entity/util/AttBuilder.createBoss:(DDD)Lorg/confluence/terraentity/entity/util/AttBuilder;
+     324: invokevirtual #163                // Method org/confluence/terraentity/entity/util/AttBuilder.build:()Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;
+     327: invokevirtual #145                // Method net/neoforged/neoforge/event/entity/EntityAttributeCreationEvent.put:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;)V
+     330: aload_0
+     331: getstatic     #85                 // Field HILL_OF_FLESH:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     334: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     337: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+     340: ldc2_w        #214                // double 3824.0d
+     343: ldc2_w        #166                // double 6.0d
+     346: invokestatic  #216                // Method org/confluence/terraentity/entity/util/AttBuilder.createBoss:(DD)Lorg/confluence/terraentity/entity/util/AttBuilder;
+     349: invokevirtual #163                // Method org/confluence/terraentity/entity/util/AttBuilder.build:()Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;
+     352: invokevirtual #145                // Method net/neoforged/neoforge/event/entity/EntityAttributeCreationEvent.put:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;)V
+     355: aload_0
+     356: getstatic     #89                 // Field SPAZMATISM:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     359: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     362: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+     365: ldc2_w        #219                // double 22.0d
+     368: ldc2_w        #221                // double 8970.0d
+     371: ldc2_w        #191                // double 10.0d
+     374: invokestatic  #157                // Method org/confluence/terraentity/entity/util/AttBuilder.createBoss:(DDD)Lorg/confluence/terraentity/entity/util/AttBuilder;
+     377: invokevirtual #163                // Method org/confluence/terraentity/entity/util/AttBuilder.build:()Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;
+     380: invokevirtual #145                // Method net/neoforged/neoforge/event/entity/EntityAttributeCreationEvent.put:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;)V
+     383: aload_0
+     384: getstatic     #93                 // Field RETINAZER:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     387: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     390: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+     393: ldc2_w        #223                // double 19.0d
+     396: ldc2_w        #225                // double 7800.0d
+     399: ldc2_w        #191                // double 10.0d
+     402: invokestatic  #157                // Method org/confluence/terraentity/entity/util/AttBuilder.createBoss:(DDD)Lorg/confluence/terraentity/entity/util/AttBuilder;
+     405: invokevirtual #163                // Method org/confluence/terraentity/entity/util/AttBuilder.build:()Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;
+     408: invokevirtual #145                // Method net/neoforged/neoforge/event/entity/EntityAttributeCreationEvent.put:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;)V
+     411: aload_0
+     412: getstatic     #97                 // Field THE_TWINS:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     415: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     418: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+     421: dconst_0
+     422: ldc2_w        #227                // double 16770.0d
+     425: dconst_0
+     426: invokestatic  #157                // Method org/confluence/terraentity/entity/util/AttBuilder.createBoss:(DDD)Lorg/confluence/terraentity/entity/util/AttBuilder;
+     429: invokevirtual #163                // Method org/confluence/terraentity/entity/util/AttBuilder.build:()Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;
+     432: invokevirtual #145                // Method net/neoforged/neoforge/event/entity/EntityAttributeCreationEvent.put:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;)V
+     435: aload_0
+     436: getstatic     #101                // Field SKELETRON_PRIME:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     439: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     442: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+     445: ldc2_w        #229                // double 21.0d
+     448: ldc2_w        #231                // double 10920.0d
+     451: ldc2_w        #166                // double 6.0d
+     454: invokestatic  #157                // Method org/confluence/terraentity/entity/util/AttBuilder.createBoss:(DDD)Lorg/confluence/terraentity/entity/util/AttBuilder;
+     457: invokevirtual #163                // Method org/confluence/terraentity/entity/util/AttBuilder.build:()Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;
+     460: invokevirtual #145                // Method net/neoforged/neoforge/event/entity/EntityAttributeCreationEvent.put:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;)V
+     463: aload_0
+     464: getstatic     #105                // Field SKELETRON_PRIME_PART:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     467: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     470: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+     473: ldc2_w        #200                // double 8.0d
+     476: ldc2_w        #233                // double 2080.0d
+     479: ldc2_w        #235                // double 26.0d
+     482: invokestatic  #157                // Method org/confluence/terraentity/entity/util/AttBuilder.createBoss:(DDD)Lorg/confluence/terraentity/entity/util/AttBuilder;
+     485: invokevirtual #163                // Method org/confluence/terraentity/entity/util/AttBuilder.build:()Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;
+     488: invokevirtual #145                // Method net/neoforged/neoforge/event/entity/EntityAttributeCreationEvent.put:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;)V
+     491: aload_0
+     492: getstatic     #109                // Field THE_DESTROYER:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     495: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     498: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+     501: ldc2_w        #237                // double 35.0d
+     504: ldc2_w        #239                // double 23333.0d
+     507: ldc2_w        #241                // double 2.0d
+     510: invokestatic  #157                // Method org/confluence/terraentity/entity/util/AttBuilder.createBoss:(DDD)Lorg/confluence/terraentity/entity/util/AttBuilder;
+     513: invokevirtual #163                // Method org/confluence/terraentity/entity/util/AttBuilder.build:()Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;
+     516: invokevirtual #145                // Method net/neoforged/neoforge/event/entity/EntityAttributeCreationEvent.put:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;)V
+     519: aload_0
+     520: getstatic     #113                // Field THE_DESTROYER_PART:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     523: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     526: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+     529: ldc2_w        #243                // double 66.0d
+     532: ldc2_w        #239                // double 23333.0d
+     535: ldc2_w        #241                // double 2.0d
+     538: invokestatic  #157                // Method org/confluence/terraentity/entity/util/AttBuilder.createBoss:(DDD)Lorg/confluence/terraentity/entity/util/AttBuilder;
+     541: invokevirtual #163                // Method org/confluence/terraentity/entity/util/AttBuilder.build:()Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;
+     544: invokevirtual #145                // Method net/neoforged/neoforge/event/entity/EntityAttributeCreationEvent.put:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;)V
+     547: aload_0
+     548: getstatic     #117                // Field THE_DESTROYER_PROBE:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     551: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     554: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+     557: ldc2_w        #155                // double 12.0d
+     560: ldc2_w        #245                // double 100.0d
+     563: ldc2_w        #191                // double 10.0d
+     566: invokestatic  #157                // Method org/confluence/terraentity/entity/util/AttBuilder.createBoss:(DDD)Lorg/confluence/terraentity/entity/util/AttBuilder;
+     569: invokevirtual #163                // Method org/confluence/terraentity/entity/util/AttBuilder.build:()Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;
+     572: invokevirtual #145                // Method net/neoforged/neoforge/event/entity/EntityAttributeCreationEvent.put:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;)V
+     575: aload_0
+     576: getstatic     #121                // Field PLANTERA:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     579: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     582: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+     585: ldc2_w        #235                // double 26.0d
+     588: ldc2_w        #231                // double 10920.0d
+     591: ldc2_w        #247                // double 36.0d
+     594: invokestatic  #157                // Method org/confluence/terraentity/entity/util/AttBuilder.createBoss:(DDD)Lorg/confluence/terraentity/entity/util/AttBuilder;
+     597: invokevirtual #163                // Method org/confluence/terraentity/entity/util/AttBuilder.build:()Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;
+     600: invokevirtual #145                // Method net/neoforged/neoforge/event/entity/EntityAttributeCreationEvent.put:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;)V
+     603: aload_0
+     604: getstatic     #125                // Field PLANTERA_HOOK:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     607: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     610: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+     613: ldc2_w        #249                // double 15.6d
+     616: ldc2_w        #251                // double 1040.0d
+     619: ldc2_w        #253                // double 24.0d
+     622: invokestatic  #157                // Method org/confluence/terraentity/entity/util/AttBuilder.createBoss:(DDD)Lorg/confluence/terraentity/entity/util/AttBuilder;
+     625: invokevirtual #163                // Method org/confluence/terraentity/entity/util/AttBuilder.build:()Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;
+     628: invokevirtual #145                // Method net/neoforged/neoforge/event/entity/EntityAttributeCreationEvent.put:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;)V
+     631: aload_0
+     632: getstatic     #129                // Field PLANTERA_TENTACLE:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     635: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     638: checkcast     #19                 // class net/minecraft/world/entity/EntityType
+     641: ldc2_w        #249                // double 15.6d
+     644: ldc2_w        #257                // double 260.0d
+     647: ldc2_w        #259                // double 20.0d
+     650: invokestatic  #157                // Method org/confluence/terraentity/entity/util/AttBuilder.createBoss:(DDD)Lorg/confluence/terraentity/entity/util/AttBuilder;
+     653: invokevirtual #163                // Method org/confluence/terraentity/entity/util/AttBuilder.build:()Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;
+     656: invokevirtual #145                // Method net/neoforged/neoforge/event/entity/EntityAttributeCreationEvent.put:(Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;)V
+     659: return
+
+  public static void register();
+    Code:
+       0: return
+
+  private static net.minecraft.client.renderer.entity.EntityRenderer lambda$registerRenderers$21(net.minecraft.client.renderer.entity.EntityRendererProvider$Context);
+    Code:
+       0: new           #261                // class org/confluence/terraentity/client/entity/renderer/GeoNormalRenderer
+       3: dup
+       4: aload_0
+       5: getstatic     #51                 // Field org/confluence/terraentity/init/entity/TEMonsterEntities.VISUAL_NEURON:Lnet/neoforged/neoforge/registries/DeferredHolder;
+       8: invokevirtual #263                // Method net/neoforged/neoforge/registries/DeferredHolder.getId:()Lnet/minecraft/resources/ResourceLocation;
+      11: iconst_1
+      12: fconst_1
+      13: fconst_0
+      14: invokespecial #267                // Method org/confluence/terraentity/client/entity/renderer/GeoNormalRenderer."<init>":(Lnet/minecraft/client/renderer/entity/EntityRendererProvider$Context;Lnet/minecraft/resources/ResourceLocation;ZFF)V
+      17: areturn
+
+  private static net.minecraft.client.renderer.entity.EntityRenderer lambda$registerRenderers$20(net.minecraft.client.renderer.entity.EntityRendererProvider$Context);
+    Code:
+       0: new           #261                // class org/confluence/terraentity/client/entity/renderer/GeoNormalRenderer
+       3: dup
+       4: aload_0
+       5: getstatic     #51                 // Field org/confluence/terraentity/init/entity/TEMonsterEntities.VISUAL_NEURON:Lnet/neoforged/neoforge/registries/DeferredHolder;
+       8: invokevirtual #263                // Method net/neoforged/neoforge/registries/DeferredHolder.getId:()Lnet/minecraft/resources/ResourceLocation;
+      11: iconst_1
+      12: ldc_w         #270                // float 2.2f
+      15: fconst_0
+      16: invokespecial #267                // Method org/confluence/terraentity/client/entity/renderer/GeoNormalRenderer."<init>":(Lnet/minecraft/client/renderer/entity/EntityRendererProvider$Context;Lnet/minecraft/resources/ResourceLocation;ZFF)V
+      19: areturn
+
+  private static net.minecraft.client.renderer.entity.EntityRenderer lambda$registerRenderers$19(net.minecraft.client.renderer.entity.EntityRendererProvider$Context);
+    Code:
+       0: new           #261                // class org/confluence/terraentity/client/entity/renderer/GeoNormalRenderer
+       3: dup
+       4: aload_0
+       5: getstatic     #51                 // Field org/confluence/terraentity/init/entity/TEMonsterEntities.VISUAL_NEURON:Lnet/neoforged/neoforge/registries/DeferredHolder;
+       8: invokevirtual #263                // Method net/neoforged/neoforge/registries/DeferredHolder.getId:()Lnet/minecraft/resources/ResourceLocation;
+      11: iconst_1
+      12: ldc_w         #270                // float 2.2f
+      15: fconst_0
+      16: invokespecial #267                // Method org/confluence/terraentity/client/entity/renderer/GeoNormalRenderer."<init>":(Lnet/minecraft/client/renderer/entity/EntityRendererProvider$Context;Lnet/minecraft/resources/ResourceLocation;ZFF)V
+      19: areturn
+
+  private static net.minecraft.client.renderer.entity.EntityRenderer lambda$registerRenderers$18(net.minecraft.client.renderer.entity.EntityRendererProvider$Context);
+    Code:
+       0: new           #261                // class org/confluence/terraentity/client/entity/renderer/GeoNormalRenderer
+       3: dup
+       4: aload_0
+       5: getstatic     #51                 // Field org/confluence/terraentity/init/entity/TEMonsterEntities.VISUAL_NEURON:Lnet/neoforged/neoforge/registries/DeferredHolder;
+       8: invokevirtual #263                // Method net/neoforged/neoforge/registries/DeferredHolder.getId:()Lnet/minecraft/resources/ResourceLocation;
+      11: iconst_1
+      12: invokespecial #271                // Method org/confluence/terraentity/client/entity/renderer/GeoNormalRenderer."<init>":(Lnet/minecraft/client/renderer/entity/EntityRendererProvider$Context;Lnet/minecraft/resources/ResourceLocation;Z)V
+      15: areturn
+
+  private static net.minecraft.client.renderer.entity.EntityRenderer lambda$registerRenderers$17(net.minecraft.client.renderer.entity.EntityRendererProvider$Context);
+    Code:
+       0: new           #274                // class org/confluence/terraentity/client/boss/renderer/SkeletronPrimePartRenderer
+       3: dup
+       4: aload_0
+       5: getstatic     #101                // Field SKELETRON_PRIME:Lnet/neoforged/neoforge/registries/DeferredHolder;
+       8: invokevirtual #263                // Method net/neoforged/neoforge/registries/DeferredHolder.getId:()Lnet/minecraft/resources/ResourceLocation;
+      11: ldc_w         #276                // String boss/
+      14: invokevirtual #278                // Method net/minecraft/resources/ResourceLocation.withPrefix:(Ljava/lang/String;)Lnet/minecraft/resources/ResourceLocation;
+      17: invokespecial #284                // Method org/confluence/terraentity/client/boss/renderer/SkeletronPrimePartRenderer."<init>":(Lnet/minecraft/client/renderer/entity/EntityRendererProvider$Context;Lnet/minecraft/resources/ResourceLocation;)V
+      20: areturn
+
+  private static net.minecraft.client.renderer.entity.EntityRenderer lambda$registerRenderers$16(net.minecraft.client.renderer.entity.EntityRendererProvider$Context);
+    Code:
+       0: new           #287                // class org/confluence/terraentity/client/boss/renderer/SkeletronPrimeRenderer
+       3: dup
+       4: aload_0
+       5: getstatic     #101                // Field SKELETRON_PRIME:Lnet/neoforged/neoforge/registries/DeferredHolder;
+       8: invokespecial #289                // Method org/confluence/terraentity/client/boss/renderer/SkeletronPrimeRenderer."<init>":(Lnet/minecraft/client/renderer/entity/EntityRendererProvider$Context;Ljava/util/function/Supplier;)V
+      11: areturn
+
+  private static net.minecraft.client.renderer.entity.EntityRenderer lambda$registerRenderers$15(net.minecraft.client.renderer.entity.EntityRendererProvider$Context);
+    Code:
+       0: new           #261                // class org/confluence/terraentity/client/entity/renderer/GeoNormalRenderer
+       3: dup
+       4: aload_0
+       5: new           #292                // class org/confluence/terraentity/client/boss/model/GeoBossModel
+       8: dup
+       9: getstatic     #93                 // Field RETINAZER:Lnet/neoforged/neoforge/registries/DeferredHolder;
+      12: invokespecial #294                // Method org/confluence/terraentity/client/boss/model/GeoBossModel."<init>":(Ljava/util/function/Supplier;)V
+      15: iconst_1
+      16: fconst_1
+      17: fconst_0
+      18: invokespecial #297                // Method org/confluence/terraentity/client/entity/renderer/GeoNormalRenderer."<init>":(Lnet/minecraft/client/renderer/entity/EntityRendererProvider$Context;Lsoftware/bernie/geckolib/model/GeoModel;ZFF)V
+      21: areturn
+
+  private static net.minecraft.client.renderer.entity.EntityRenderer lambda$registerRenderers$14(net.minecraft.client.renderer.entity.EntityRendererProvider$Context);
+    Code:
+       0: new           #261                // class org/confluence/terraentity/client/entity/renderer/GeoNormalRenderer
+       3: dup
+       4: aload_0
+       5: new           #292                // class org/confluence/terraentity/client/boss/model/GeoBossModel
+       8: dup
+       9: getstatic     #89                 // Field SPAZMATISM:Lnet/neoforged/neoforge/registries/DeferredHolder;
+      12: invokespecial #294                // Method org/confluence/terraentity/client/boss/model/GeoBossModel."<init>":(Ljava/util/function/Supplier;)V
+      15: iconst_1
+      16: fconst_1
+      17: fconst_0
+      18: invokespecial #297                // Method org/confluence/terraentity/client/entity/renderer/GeoNormalRenderer."<init>":(Lnet/minecraft/client/renderer/entity/EntityRendererProvider$Context;Lsoftware/bernie/geckolib/model/GeoModel;ZFF)V
+      21: areturn
+
+  private static net.minecraft.client.renderer.entity.EntityRenderer lambda$registerRenderers$13(net.minecraft.client.renderer.entity.EntityRendererProvider$Context);
+    Code:
+       0: new           #300                // class org/confluence/terraentity/client/boss/renderer/SkeletronRenderer
+       3: dup
+       4: aload_0
+       5: new           #292                // class org/confluence/terraentity/client/boss/model/GeoBossModel
+       8: dup
+       9: getstatic     #69                 // Field SKELETRON:Lnet/neoforged/neoforge/registries/DeferredHolder;
+      12: invokespecial #294                // Method org/confluence/terraentity/client/boss/model/GeoBossModel."<init>":(Ljava/util/function/Supplier;)V
+      15: invokespecial #302                // Method org/confluence/terraentity/client/boss/renderer/SkeletronRenderer."<init>":(Lnet/minecraft/client/renderer/entity/EntityRendererProvider$Context;Lorg/confluence/terraentity/client/boss/model/GeoBossModel;)V
+      18: areturn
+
+  private static net.minecraft.client.renderer.entity.EntityRenderer lambda$registerRenderers$12(net.minecraft.client.renderer.entity.EntityRendererProvider$Context);
+    Code:
+       0: new           #305                // class org/confluence/terraentity/client/boss/renderer/SkeletronHandRenderer
+       3: dup
+       4: aload_0
+       5: new           #307                // class org/confluence/terraentity/client/boss/model/SkeletronHandModel
+       8: dup
+       9: invokespecial #309                // Method org/confluence/terraentity/client/boss/model/SkeletronHandModel."<init>":()V
+      12: invokespecial #310                // Method org/confluence/terraentity/client/boss/renderer/SkeletronHandRenderer."<init>":(Lnet/minecraft/client/renderer/entity/EntityRendererProvider$Context;Lorg/confluence/terraentity/client/boss/model/SkeletronHandModel;)V
+      15: areturn
+
+  private static net.minecraft.client.renderer.entity.EntityRenderer lambda$registerRenderers$11(net.minecraft.client.renderer.entity.EntityRendererProvider$Context);
+    Code:
+       0: new           #300                // class org/confluence/terraentity/client/boss/renderer/SkeletronRenderer
+       3: dup
+       4: aload_0
+       5: new           #292                // class org/confluence/terraentity/client/boss/model/GeoBossModel
+       8: dup
+       9: getstatic     #69                 // Field SKELETRON:Lnet/neoforged/neoforge/registries/DeferredHolder;
+      12: invokespecial #294                // Method org/confluence/terraentity/client/boss/model/GeoBossModel."<init>":(Ljava/util/function/Supplier;)V
+      15: invokespecial #302                // Method org/confluence/terraentity/client/boss/renderer/SkeletronRenderer."<init>":(Lnet/minecraft/client/renderer/entity/EntityRendererProvider$Context;Lorg/confluence/terraentity/client/boss/model/GeoBossModel;)V
+      18: areturn
+
+  private static net.minecraft.client.renderer.entity.EntityRenderer lambda$registerRenderers$10(net.minecraft.client.renderer.entity.EntityRendererProvider$Context);
+    Code:
+       0: new           #313                // class org/confluence/terraentity/client/boss/renderer/QueenBeeRenderer
+       3: dup
+       4: aload_0
+       5: new           #292                // class org/confluence/terraentity/client/boss/model/GeoBossModel
+       8: dup
+       9: getstatic     #65                 // Field QUEEN_BEE:Lnet/neoforged/neoforge/registries/DeferredHolder;
+      12: invokespecial #294                // Method org/confluence/terraentity/client/boss/model/GeoBossModel."<init>":(Ljava/util/function/Supplier;)V
+      15: invokespecial #315                // Method org/confluence/terraentity/client/boss/renderer/QueenBeeRenderer."<init>":(Lnet/minecraft/client/renderer/entity/EntityRendererProvider$Context;Lorg/confluence/terraentity/client/boss/model/GeoBossModel;)V
+      18: areturn
+
+  private static net.minecraft.client.renderer.entity.EntityRenderer lambda$registerRenderers$9(net.minecraft.client.renderer.entity.EntityRendererProvider$Context);
+    Code:
+       0: new           #316                // class org/confluence/terraentity/client/boss/renderer/DeerclopsRenderer
+       3: dup
+       4: aload_0
+       5: new           #292                // class org/confluence/terraentity/client/boss/model/GeoBossModel
+       8: dup
+       9: getstatic     #61                 // Field DEERCLOPS:Lnet/neoforged/neoforge/registries/DeferredHolder;
+      12: invokespecial #294                // Method org/confluence/terraentity/client/boss/model/GeoBossModel."<init>":(Ljava/util/function/Supplier;)V
+      15: invokespecial #318                // Method org/confluence/terraentity/client/boss/renderer/DeerclopsRenderer."<init>":(Lnet/minecraft/client/renderer/entity/EntityRendererProvider$Context;Lsoftware/bernie/geckolib/model/GeoModel;)V
+      18: areturn
+
+  private static net.minecraft.client.renderer.entity.EntityRenderer lambda$registerRenderers$8(net.minecraft.client.renderer.entity.EntityRendererProvider$Context);
+    Code:
+       0: new           #321                // class org/confluence/terraentity/client/boss/renderer/BrainOfCthulhuRenderer
+       3: dup
+       4: aload_0
+       5: new           #292                // class org/confluence/terraentity/client/boss/model/GeoBossModel
+       8: dup
+       9: getstatic     #47                 // Field BRAIN_OF_CTHULHU:Lnet/neoforged/neoforge/registries/DeferredHolder;
+      12: invokespecial #294                // Method org/confluence/terraentity/client/boss/model/GeoBossModel."<init>":(Ljava/util/function/Supplier;)V
+      15: invokespecial #323                // Method org/confluence/terraentity/client/boss/renderer/BrainOfCthulhuRenderer."<init>":(Lnet/minecraft/client/renderer/entity/EntityRendererProvider$Context;Lorg/confluence/terraentity/client/boss/model/GeoBossModel;)V
+      18: areturn
+
+  private static net.minecraft.client.renderer.entity.EntityRenderer lambda$registerRenderers$7(net.minecraft.client.renderer.entity.EntityRendererProvider$Context);
+    Code:
+       0: new           #261                // class org/confluence/terraentity/client/entity/renderer/GeoNormalRenderer
+       3: dup
+       4: aload_0
+       5: getstatic     #51                 // Field org/confluence/terraentity/init/entity/TEMonsterEntities.VISUAL_NEURON:Lnet/neoforged/neoforge/registries/DeferredHolder;
+       8: invokevirtual #263                // Method net/neoforged/neoforge/registries/DeferredHolder.getId:()Lnet/minecraft/resources/ResourceLocation;
+      11: iconst_1
+      12: invokespecial #271                // Method org/confluence/terraentity/client/entity/renderer/GeoNormalRenderer."<init>":(Lnet/minecraft/client/renderer/entity/EntityRendererProvider$Context;Lnet/minecraft/resources/ResourceLocation;Z)V
+      15: areturn
+
+  private static net.minecraft.client.renderer.entity.EntityRenderer lambda$registerRenderers$6(net.minecraft.client.renderer.entity.EntityRendererProvider$Context);
+    Code:
+       0: new           #321                // class org/confluence/terraentity/client/boss/renderer/BrainOfCthulhuRenderer
+       3: dup
+       4: aload_0
+       5: new           #292                // class org/confluence/terraentity/client/boss/model/GeoBossModel
+       8: dup
+       9: getstatic     #47                 // Field BRAIN_OF_CTHULHU:Lnet/neoforged/neoforge/registries/DeferredHolder;
+      12: invokespecial #294                // Method org/confluence/terraentity/client/boss/model/GeoBossModel."<init>":(Ljava/util/function/Supplier;)V
+      15: invokespecial #323                // Method org/confluence/terraentity/client/boss/renderer/BrainOfCthulhuRenderer."<init>":(Lnet/minecraft/client/renderer/entity/EntityRendererProvider$Context;Lorg/confluence/terraentity/client/boss/model/GeoBossModel;)V
+      18: areturn
+
+  private static net.minecraft.client.renderer.entity.EntityRenderer lambda$registerRenderers$5(net.minecraft.client.renderer.entity.EntityRendererProvider$Context);
+    Code:
+       0: new           #261                // class org/confluence/terraentity/client/entity/renderer/GeoNormalRenderer
+       3: dup
+       4: aload_0
+       5: new           #292                // class org/confluence/terraentity/client/boss/model/GeoBossModel
+       8: dup
+       9: getstatic     #43                 // Field EATER_OF_WORLDS:Lnet/neoforged/neoforge/registries/DeferredHolder;
+      12: invokespecial #294                // Method org/confluence/terraentity/client/boss/model/GeoBossModel."<init>":(Ljava/util/function/Supplier;)V
+      15: iconst_1
+      16: ldc_w         #270                // float 2.2f
+      19: fconst_0
+      20: invokespecial #297                // Method org/confluence/terraentity/client/entity/renderer/GeoNormalRenderer."<init>":(Lnet/minecraft/client/renderer/entity/EntityRendererProvider$Context;Lsoftware/bernie/geckolib/model/GeoModel;ZFF)V
+      23: areturn
+
+  private static net.minecraft.client.renderer.entity.EntityRenderer lambda$registerRenderers$4(net.minecraft.client.renderer.entity.EntityRendererProvider$Context);
+    Code:
+       0: new           #324                // class org/confluence/terraentity/client/boss/renderer/EaterOfWorldSegmentRenderer
+       3: dup
+       4: aload_0
+       5: ldc_w         #270                // float 2.2f
+       8: fconst_0
+       9: invokespecial #326                // Method org/confluence/terraentity/client/boss/renderer/EaterOfWorldSegmentRenderer."<init>":(Lnet/minecraft/client/renderer/entity/EntityRendererProvider$Context;FF)V
+      12: areturn
+
+  private static net.minecraft.client.renderer.entity.EntityRenderer lambda$registerRenderers$3(net.minecraft.client.renderer.entity.EntityRendererProvider$Context);
+    Code:
+       0: new           #329                // class org/confluence/terraentity/client/entity/renderer/GeoMotionBlurRenderer
+       3: dup
+       4: aload_0
+       5: new           #292                // class org/confluence/terraentity/client/boss/model/GeoBossModel
+       8: dup
+       9: getstatic     #35                 // Field EYE_OF_CTHULHU:Lnet/neoforged/neoforge/registries/DeferredHolder;
+      12: invokespecial #294                // Method org/confluence/terraentity/client/boss/model/GeoBossModel."<init>":(Ljava/util/function/Supplier;)V
+      15: iconst_1
+      16: fconst_1
+      17: ldc_w         #331                // float 1.5f
+      20: invokespecial #332                // Method org/confluence/terraentity/client/entity/renderer/GeoMotionBlurRenderer."<init>":(Lnet/minecraft/client/renderer/entity/EntityRendererProvider$Context;Lsoftware/bernie/geckolib/model/GeoModel;ZFF)V
+      23: invokedynamic #333,  0            // InvokeDynamic #26:apply:()Ljava/util/function/Function;
+      28: invokevirtual #337                // Method org/confluence/terraentity/client/entity/renderer/GeoMotionBlurRenderer.setMotionBlurRenderer:(Ljava/util/function/Function;)Lorg/confluence/terraentity/client/entity/renderer/GeoMotionBlurRenderer;
+      31: areturn
+
+  private static org.confluence.terraentity.api.entity.blur.IMotionBlurRenderer lambda$registerRenderers$2(org.confluence.terraentity.client.entity.renderer.GeoMotionBlurRenderer);
+    Code:
+       0: new           #341                // class org/confluence/terraentity/entity/blur/PosRotMotionBlurRenderer
+       3: dup
+       4: aload_0
+       5: invokevirtual #343                // Method org/confluence/terraentity/client/entity/renderer/GeoMotionBlurRenderer.isIfRotX:()Z
+       8: aload_0
+       9: invokevirtual #347                // Method org/confluence/terraentity/client/entity/renderer/GeoMotionBlurRenderer.getOffsetY:()F
+      12: invokespecial #351                // Method org/confluence/terraentity/entity/blur/PosRotMotionBlurRenderer."<init>":(ZF)V
+      15: areturn
+
+  private static net.minecraft.world.entity.EntityType lambda$static$1();
+    Code:
+       0: invokedynamic #354,  0            // InvokeDynamic #27:create:()Lnet/minecraft/world/entity/EntityType$EntityFactory;
+       5: getstatic     #357                // Field net/minecraft/world/entity/MobCategory.MISC:Lnet/minecraft/world/entity/MobCategory;
+       8: invokestatic  #363                // Method net/minecraft/world/entity/EntityType$Builder.of:(Lnet/minecraft/world/entity/EntityType$EntityFactory;Lnet/minecraft/world/entity/MobCategory;)Lnet/minecraft/world/entity/EntityType$Builder;
+      11: fconst_0
+      12: fconst_0
+      13: invokevirtual #369                // Method net/minecraft/world/entity/EntityType$Builder.sized:(FF)Lnet/minecraft/world/entity/EntityType$Builder;
+      16: bipush        10
+      18: invokevirtual #373                // Method net/minecraft/world/entity/EntityType$Builder.clientTrackingRange:(I)Lnet/minecraft/world/entity/EntityType$Builder;
+      21: ldc_w         #377                // String crown_of_king_slime_model
+      24: invokestatic  #379                // Method org/confluence/terraentity/init/TEEntities.Key:(Ljava/lang/String;)Ljava/lang/String;
+      27: invokevirtual #385                // Method net/minecraft/world/entity/EntityType$Builder.build:(Ljava/lang/String;)Lnet/minecraft/world/entity/EntityType;
+      30: areturn
+
+  private static net.minecraft.world.entity.EntityType lambda$static$0();
+    Code:
+       0: invokedynamic #388,  0            // InvokeDynamic #28:create:()Lnet/minecraft/world/entity/EntityType$EntityFactory;
+       5: getstatic     #389                // Field net/minecraft/world/entity/MobCategory.MONSTER:Lnet/minecraft/world/entity/MobCategory;
+       8: invokestatic  #363                // Method net/minecraft/world/entity/EntityType$Builder.of:(Lnet/minecraft/world/entity/EntityType$EntityFactory;Lnet/minecraft/world/entity/MobCategory;)Lnet/minecraft/world/entity/EntityType$Builder;
+      11: ldc_w         #392                // float 0.6f
+      14: ldc_w         #392                // float 0.6f
+      17: invokevirtual #369                // Method net/minecraft/world/entity/EntityType$Builder.sized:(FF)Lnet/minecraft/world/entity/EntityType$Builder;
+      20: bipush        10
+      22: invokevirtual #373                // Method net/minecraft/world/entity/EntityType$Builder.clientTrackingRange:(I)Lnet/minecraft/world/entity/EntityType$Builder;
+      25: ldc_w         #393                // String king_slime
+      28: invokestatic  #379                // Method org/confluence/terraentity/init/TEEntities.Key:(Ljava/lang/String;)Ljava/lang/String;
+      31: invokevirtual #385                // Method net/minecraft/world/entity/EntityType$Builder.build:(Ljava/lang/String;)Lnet/minecraft/world/entity/EntityType;
+      34: areturn
+
+  static {};
+    Code:
+       0: getstatic     #395                // Field org/confluence/terraentity/init/TEEntities.ENTITIES:Lnet/neoforged/neoforge/registries/DeferredRegister;
+       3: ldc_w         #393                // String king_slime
+       6: invokedynamic #399,  0            // InvokeDynamic #29:get:()Ljava/util/function/Supplier;
+      11: invokevirtual #402                // Method net/neoforged/neoforge/registries/DeferredRegister.register:(Ljava/lang/String;Ljava/util/function/Supplier;)Lnet/neoforged/neoforge/registries/DeferredHolder;
+      14: putstatic     #31                 // Field KING_SLIME:Lnet/neoforged/neoforge/registries/DeferredHolder;
+      17: getstatic     #395                // Field org/confluence/terraentity/init/TEEntities.ENTITIES:Lnet/neoforged/neoforge/registries/DeferredRegister;
+      20: ldc_w         #377                // String crown_of_king_slime_model
+      23: invokedynamic #408,  0            // InvokeDynamic #30:get:()Ljava/util/function/Supplier;
+      28: invokevirtual #402                // Method net/neoforged/neoforge/registries/DeferredRegister.register:(Ljava/lang/String;Ljava/util/function/Supplier;)Lnet/neoforged/neoforge/registries/DeferredHolder;
+      31: putstatic     #7                  // Field CROWN_OF_KING_SLIME_MODEL:Lnet/neoforged/neoforge/registries/DeferredHolder;
+      34: ldc_w         #409                // String eye_of_cthulhu
+      37: invokedynamic #411,  0            // InvokeDynamic #31:create:()Lnet/minecraft/world/entity/EntityType$EntityFactory;
+      42: ldc_w         #412                // float 2.6f
+      45: ldc_w         #412                // float 2.6f
+      48: invokestatic  #413                // Method org/confluence/terraentity/init/TEEntities.registerMonster:(Ljava/lang/String;Lnet/minecraft/world/entity/EntityType$EntityFactory;FF)Lnet/neoforged/neoforge/registries/DeferredHolder;
+      51: putstatic     #35                 // Field EYE_OF_CTHULHU:Lnet/neoforged/neoforge/registries/DeferredHolder;
+      54: ldc_w         #417                // String eater_of_worlds_segment
+      57: invokedynamic #419,  0            // InvokeDynamic #32:create:()Lnet/minecraft/world/entity/EntityType$EntityFactory;
+      62: fconst_2
+      63: fconst_2
+      64: invokestatic  #413                // Method org/confluence/terraentity/init/TEEntities.registerMonster:(Ljava/lang/String;Lnet/minecraft/world/entity/EntityType$EntityFactory;FF)Lnet/neoforged/neoforge/registries/DeferredHolder;
+      67: putstatic     #39                 // Field EATER_OF_WORLDS_SEGMENT:Lnet/neoforged/neoforge/registries/DeferredHolder;
+      70: ldc_w         #420                // String eater_of_worlds
+      73: invokedynamic #422,  0            // InvokeDynamic #33:create:()Lnet/minecraft/world/entity/EntityType$EntityFactory;
+      78: ldc_w         #423                // float 3.0f
+      81: fconst_2
+      82: invokestatic  #413                // Method org/confluence/terraentity/init/TEEntities.registerMonster:(Ljava/lang/String;Lnet/minecraft/world/entity/EntityType$EntityFactory;FF)Lnet/neoforged/neoforge/registries/DeferredHolder;
+      85: putstatic     #43                 // Field EATER_OF_WORLDS:Lnet/neoforged/neoforge/registries/DeferredHolder;
+      88: ldc_w         #424                // String brain_of_cthulhu
+      91: invokedynamic #426,  0            // InvokeDynamic #34:create:()Lnet/minecraft/world/entity/EntityType$EntityFactory;
+      96: ldc_w         #427                // float 4.0f
+      99: ldc_w         #427                // float 4.0f
+     102: invokestatic  #413                // Method org/confluence/terraentity/init/TEEntities.registerMonster:(Ljava/lang/String;Lnet/minecraft/world/entity/EntityType$EntityFactory;FF)Lnet/neoforged/neoforge/registries/DeferredHolder;
+     105: putstatic     #47                 // Field BRAIN_OF_CTHULHU:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     108: ldc_w         #428                // String brain_fake
+     111: invokedynamic #430,  0            // InvokeDynamic #35:create:()Lnet/minecraft/world/entity/EntityType$EntityFactory;
+     116: ldc_w         #427                // float 4.0f
+     119: ldc_w         #427                // float 4.0f
+     122: invokestatic  #413                // Method org/confluence/terraentity/init/TEEntities.registerMonster:(Ljava/lang/String;Lnet/minecraft/world/entity/EntityType$EntityFactory;FF)Lnet/neoforged/neoforge/registries/DeferredHolder;
+     125: putstatic     #57                 // Field BRAIN_FAKE:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     128: ldc_w         #431                // String deerclops
+     131: invokedynamic #433,  0            // InvokeDynamic #36:create:()Lnet/minecraft/world/entity/EntityType$EntityFactory;
+     136: ldc_w         #423                // float 3.0f
+     139: ldc_w         #434                // float 7.0f
+     142: invokestatic  #413                // Method org/confluence/terraentity/init/TEEntities.registerMonster:(Ljava/lang/String;Lnet/minecraft/world/entity/EntityType$EntityFactory;FF)Lnet/neoforged/neoforge/registries/DeferredHolder;
+     145: putstatic     #61                 // Field DEERCLOPS:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     148: ldc_w         #435                // String queen_bee
+     151: invokedynamic #437,  0            // InvokeDynamic #37:create:()Lnet/minecraft/world/entity/EntityType$EntityFactory;
+     156: ldc_w         #438                // float 2.5f
+     159: ldc_w         #423                // float 3.0f
+     162: invokestatic  #413                // Method org/confluence/terraentity/init/TEEntities.registerMonster:(Ljava/lang/String;Lnet/minecraft/world/entity/EntityType$EntityFactory;FF)Lnet/neoforged/neoforge/registries/DeferredHolder;
+     165: putstatic     #65                 // Field QUEEN_BEE:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     168: ldc_w         #439                // String skeletron
+     171: invokedynamic #441,  0            // InvokeDynamic #38:create:()Lnet/minecraft/world/entity/EntityType$EntityFactory;
+     176: ldc_w         #442                // float 2.3f
+     179: ldc_w         #442                // float 2.3f
+     182: invokestatic  #413                // Method org/confluence/terraentity/init/TEEntities.registerMonster:(Ljava/lang/String;Lnet/minecraft/world/entity/EntityType$EntityFactory;FF)Lnet/neoforged/neoforge/registries/DeferredHolder;
+     185: putstatic     #69                 // Field SKELETRON:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     188: ldc_w         #443                // String skeletron_hand
+     191: invokedynamic #445,  0            // InvokeDynamic #39:create:()Lnet/minecraft/world/entity/EntityType$EntityFactory;
+     196: fconst_2
+     197: fconst_2
+     198: invokestatic  #413                // Method org/confluence/terraentity/init/TEEntities.registerMonster:(Ljava/lang/String;Lnet/minecraft/world/entity/EntityType$EntityFactory;FF)Lnet/neoforged/neoforge/registries/DeferredHolder;
+     201: putstatic     #73                 // Field SKELETRON_HAND:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     204: ldc_w         #446                // String wall_of_flesh
+     207: invokedynamic #448,  0            // InvokeDynamic #40:create:()Lnet/minecraft/world/entity/EntityType$EntityFactory;
+     212: ldc_w         #449                // float 0.1f
+     215: ldc_w         #449                // float 0.1f
+     218: invokestatic  #413                // Method org/confluence/terraentity/init/TEEntities.registerMonster:(Ljava/lang/String;Lnet/minecraft/world/entity/EntityType$EntityFactory;FF)Lnet/neoforged/neoforge/registries/DeferredHolder;
+     221: putstatic     #81                 // Field WALL_OF_FLESH:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     224: ldc_w         #450                // String dungeon_guardian
+     227: invokedynamic #452,  0            // InvokeDynamic #41:create:()Lnet/minecraft/world/entity/EntityType$EntityFactory;
+     232: ldc_w         #438                // float 2.5f
+     235: ldc_w         #438                // float 2.5f
+     238: invokestatic  #413                // Method org/confluence/terraentity/init/TEEntities.registerMonster:(Ljava/lang/String;Lnet/minecraft/world/entity/EntityType$EntityFactory;FF)Lnet/neoforged/neoforge/registries/DeferredHolder;
+     241: putstatic     #77                 // Field DUNGEON_GUARDIAN:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     244: ldc_w         #453                // String hill_of_flesh
+     247: invokedynamic #455,  0            // InvokeDynamic #42:create:()Lnet/minecraft/world/entity/EntityType$EntityFactory;
+     252: ldc_w         #456                // float 10.0f
+     255: ldc_w         #456                // float 10.0f
+     258: invokestatic  #413                // Method org/confluence/terraentity/init/TEEntities.registerMonster:(Ljava/lang/String;Lnet/minecraft/world/entity/EntityType$EntityFactory;FF)Lnet/neoforged/neoforge/registries/DeferredHolder;
+     261: putstatic     #85                 // Field HILL_OF_FLESH:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     264: ldc_w         #457                // String spazmatism
+     267: invokedynamic #459,  0            // InvokeDynamic #43:create:()Lnet/minecraft/world/entity/EntityType$EntityFactory;
+     272: ldc_w         #412                // float 2.6f
+     275: ldc_w         #412                // float 2.6f
+     278: invokestatic  #413                // Method org/confluence/terraentity/init/TEEntities.registerMonster:(Ljava/lang/String;Lnet/minecraft/world/entity/EntityType$EntityFactory;FF)Lnet/neoforged/neoforge/registries/DeferredHolder;
+     281: putstatic     #89                 // Field SPAZMATISM:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     284: ldc_w         #460                // String retinazer
+     287: invokedynamic #462,  0            // InvokeDynamic #44:create:()Lnet/minecraft/world/entity/EntityType$EntityFactory;
+     292: ldc_w         #412                // float 2.6f
+     295: ldc_w         #412                // float 2.6f
+     298: invokestatic  #413                // Method org/confluence/terraentity/init/TEEntities.registerMonster:(Ljava/lang/String;Lnet/minecraft/world/entity/EntityType$EntityFactory;FF)Lnet/neoforged/neoforge/registries/DeferredHolder;
+     301: putstatic     #93                 // Field RETINAZER:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     304: ldc_w         #463                // String the_twins
+     307: invokedynamic #465,  0            // InvokeDynamic #45:create:()Lnet/minecraft/world/entity/EntityType$EntityFactory;
+     312: ldc_w         #412                // float 2.6f
+     315: ldc_w         #412                // float 2.6f
+     318: invokestatic  #413                // Method org/confluence/terraentity/init/TEEntities.registerMonster:(Ljava/lang/String;Lnet/minecraft/world/entity/EntityType$EntityFactory;FF)Lnet/neoforged/neoforge/registries/DeferredHolder;
+     321: putstatic     #97                 // Field THE_TWINS:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     324: ldc_w         #466                // String skeletron_prime
+     327: invokedynamic #468,  0            // InvokeDynamic #46:create:()Lnet/minecraft/world/entity/EntityType$EntityFactory;
+     332: ldc_w         #412                // float 2.6f
+     335: ldc_w         #412                // float 2.6f
+     338: invokestatic  #413                // Method org/confluence/terraentity/init/TEEntities.registerMonster:(Ljava/lang/String;Lnet/minecraft/world/entity/EntityType$EntityFactory;FF)Lnet/neoforged/neoforge/registries/DeferredHolder;
+     341: putstatic     #101                // Field SKELETRON_PRIME:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     344: ldc_w         #469                // String skeletron_prime_part
+     347: invokedynamic #471,  0            // InvokeDynamic #47:create:()Lnet/minecraft/world/entity/EntityType$EntityFactory;
+     352: ldc_w         #412                // float 2.6f
+     355: ldc_w         #412                // float 2.6f
+     358: invokestatic  #413                // Method org/confluence/terraentity/init/TEEntities.registerMonster:(Ljava/lang/String;Lnet/minecraft/world/entity/EntityType$EntityFactory;FF)Lnet/neoforged/neoforge/registries/DeferredHolder;
+     361: putstatic     #105                // Field SKELETRON_PRIME_PART:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     364: ldc_w         #472                // String the_destroyer
+     367: invokedynamic #474,  0            // InvokeDynamic #48:create:()Lnet/minecraft/world/entity/EntityType$EntityFactory;
+     372: ldc_w         #423                // float 3.0f
+     375: ldc_w         #423                // float 3.0f
+     378: invokestatic  #413                // Method org/confluence/terraentity/init/TEEntities.registerMonster:(Ljava/lang/String;Lnet/minecraft/world/entity/EntityType$EntityFactory;FF)Lnet/neoforged/neoforge/registries/DeferredHolder;
+     381: putstatic     #109                // Field THE_DESTROYER:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     384: ldc_w         #475                // String the_destroyer_part
+     387: invokedynamic #477,  0            // InvokeDynamic #49:create:()Lnet/minecraft/world/entity/EntityType$EntityFactory;
+     392: ldc_w         #423                // float 3.0f
+     395: ldc_w         #423                // float 3.0f
+     398: invokestatic  #413                // Method org/confluence/terraentity/init/TEEntities.registerMonster:(Ljava/lang/String;Lnet/minecraft/world/entity/EntityType$EntityFactory;FF)Lnet/neoforged/neoforge/registries/DeferredHolder;
+     401: putstatic     #113                // Field THE_DESTROYER_PART:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     404: ldc_w         #478                // String the_destroyer_probe
+     407: invokedynamic #480,  0            // InvokeDynamic #50:create:()Lnet/minecraft/world/entity/EntityType$EntityFactory;
+     412: fconst_2
+     413: fconst_2
+     414: invokestatic  #413                // Method org/confluence/terraentity/init/TEEntities.registerMonster:(Ljava/lang/String;Lnet/minecraft/world/entity/EntityType$EntityFactory;FF)Lnet/neoforged/neoforge/registries/DeferredHolder;
+     417: putstatic     #117                // Field THE_DESTROYER_PROBE:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     420: ldc_w         #481                // String plantera
+     423: invokedynamic #483,  0            // InvokeDynamic #51:create:()Lnet/minecraft/world/entity/EntityType$EntityFactory;
+     428: ldc_w         #456                // float 10.0f
+     431: ldc_w         #456                // float 10.0f
+     434: invokestatic  #413                // Method org/confluence/terraentity/init/TEEntities.registerMonster:(Ljava/lang/String;Lnet/minecraft/world/entity/EntityType$EntityFactory;FF)Lnet/neoforged/neoforge/registries/DeferredHolder;
+     437: putstatic     #121                // Field PLANTERA:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     440: ldc_w         #484                // String plantera_hook
+     443: invokedynamic #486,  0            // InvokeDynamic #52:create:()Lnet/minecraft/world/entity/EntityType$EntityFactory;
+     448: ldc_w         #487                // float 1.25f
+     451: ldc_w         #487                // float 1.25f
+     454: invokestatic  #413                // Method org/confluence/terraentity/init/TEEntities.registerMonster:(Ljava/lang/String;Lnet/minecraft/world/entity/EntityType$EntityFactory;FF)Lnet/neoforged/neoforge/registries/DeferredHolder;
+     457: putstatic     #125                // Field PLANTERA_HOOK:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     460: ldc_w         #488                // String plantera_tentacle
+     463: invokedynamic #490,  0            // InvokeDynamic #53:create:()Lnet/minecraft/world/entity/EntityType$EntityFactory;
+     468: fconst_2
+     469: fconst_2
+     470: invokestatic  #413                // Method org/confluence/terraentity/init/TEEntities.registerMonster:(Ljava/lang/String;Lnet/minecraft/world/entity/EntityType$EntityFactory;FF)Lnet/neoforged/neoforge/registries/DeferredHolder;
+     473: putstatic     #129                // Field PLANTERA_TENTACLE:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     476: return
+}

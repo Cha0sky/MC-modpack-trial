@@ -1,0 +1,10 @@
+Compiled from "IMinecraftServer.java"
+public interface org.confluence.mod.mixed.IMinecraftServer {
+
+  public static boolean isHardmode(net.minecraft.server.MinecraftServer);
+    Code:
+       0: aload_0
+       1: invokestatic  #23                 // InterfaceMethod of:(Lnet/minecraft/server/MinecraftServer;)Lorg/confluence/mod/mixed/IMinecraftServer;
+       4: ldc2_w        #49                 // long 4l
+       7: invokeinterface #16,  3           // InterfaceMethod confluence$matchesSecretFlag:(J)Z
+      12: ireturn

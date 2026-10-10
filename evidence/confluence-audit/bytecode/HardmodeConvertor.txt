@@ -1,0 +1,478 @@
+Compiled from "HardmodeConvertor.java"
+public final class org.confluence.mod.common.data.saved.HardmodeConvertor implements org.confluence.lib.common.data.saved.IGlobalData {
+  public static final org.confluence.mod.common.data.saved.HardmodeConvertor INSTANCE;
+
+  public static final com.mojang.serialization.Codec<java.util.List<net.minecraft.util.Tuple<net.minecraft.world.level.ChunkPos, org.confluence.mod.common.data.saved.HardmodeConvertor$BlockPosColumn[][]>>> SANCTIFICATION_CODEC;
+
+  private volatile boolean started;
+
+  private volatile java.util.List<net.minecraft.util.Tuple<net.minecraft.world.level.ChunkPos, org.confluence.mod.common.data.saved.HardmodeConvertor$BlockPosColumn[][]>> sanctification;
+
+  private volatile boolean completed;
+
+  private volatile transient boolean shouldContinue;
+
+
+  public boolean isStarted();
+    Code:
+       0: aload_0
+       1: getfield      #7                  // Field started:Z
+       4: ireturn
+
+
+  public boolean isCompleted();
+    Code:
+       0: aload_0
+       1: getfield      #20                 // Field completed:Z
+       4: ireturn
+
+
+  public void start(net.minecraft.server.MinecraftServer, boolean);
+    Code:
+       0: aload_0
+       1: getfield      #7                  // Field started:Z
+       4: ifne          14
+       7: aload_0
+       8: getfield      #20                 // Field completed:Z
+      11: ifeq          15
+      14: return
+      15: aload_1
+      16: instanceof    #26                 // class org/confluence/mod/mixed/IDedicatedServer
+      19: ifeq          34
+      22: aload_1
+      23: checkcast     #26                 // class org/confluence/mod/mixed/IDedicatedServer
+      26: astore_3
+      27: aload_3
+      28: iconst_1
+      29: invokeinterface #28,  2           // InterfaceMethod org/confluence/mod/mixed/IDedicatedServer.confluence$setOnHardmodeConversation:(Z)V
+      34: aload_0
+      35: iconst_0
+      36: putfield      #23                 // Field shouldContinue:Z
+      39: aload_0
+      40: iconst_1
+      41: putfield      #7                  // Field started:Z
+      44: aload_1
+      45: ldc           #32                 // String event.confluence.hardmode_conversion.starting
+      47: invokestatic  #34                 // InterfaceMethod net/minecraft/network/chat/Component.translatable:(Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;
+      50: iload_2
+      51: invokestatic  #40                 // Method print:(Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/network/chat/Component;Z)V
+      54: aload_1
+      55: invokedynamic #44,  0             // InvokeDynamic #0:get:(Lnet/minecraft/server/MinecraftServer;)Ljava/util/function/Supplier;
+      60: invokestatic  #48                 // Method net/minecraft/Util.backgroundExecutor:()Ljava/util/concurrent/ExecutorService;
+      63: invokestatic  #54                 // Method java/util/concurrent/CompletableFuture.supplyAsync:(Ljava/util/function/Supplier;Ljava/util/concurrent/Executor;)Ljava/util/concurrent/CompletableFuture;
+      66: aload_0
+      67: aload_1
+      68: iload_2
+      69: invokedynamic #60,  0             // InvokeDynamic #1:accept:(Lorg/confluence/mod/common/data/saved/HardmodeConvertor;Lnet/minecraft/server/MinecraftServer;Z)Ljava/util/function/Consumer;
+      74: invokevirtual #64                 // Method java/util/concurrent/CompletableFuture.thenAccept:(Ljava/util/function/Consumer;)Ljava/util/concurrent/CompletableFuture;
+      77: pop
+      78: return
+
+
+  public void scheduleRefill(net.minecraft.server.level.ServerLevel);
+    Code:
+       0: aload_0
+       1: getfield      #20                 // Field completed:Z
+       4: ifne          14
+       7: aload_0
+       8: getfield      #23                 // Field shouldContinue:Z
+      11: ifne          15
+      14: return
+      15: aload_0
+      16: getfield      #16                 // Field sanctification:Ljava/util/List;
+      19: invokeinterface #68,  1           // InterfaceMethod java/util/List.isEmpty:()Z
+      24: ifeq          200
+      27: aload_0
+      28: getfield      #7                  // Field started:Z
+      31: ifeq          192
+      34: aload_0
+      35: iconst_1
+      36: putfield      #20                 // Field completed:Z
+      39: aload_1
+      40: invokevirtual #74                 // Method net/minecraft/server/level/ServerLevel.getServer:()Lnet/minecraft/server/MinecraftServer;
+      43: astore_2
+      44: aload_2
+      45: instanceof    #26                 // class org/confluence/mod/mixed/IDedicatedServer
+      48: ifeq          63
+      51: aload_2
+      52: checkcast     #26                 // class org/confluence/mod/mixed/IDedicatedServer
+      55: astore_3
+      56: aload_3
+      57: iconst_0
+      58: invokeinterface #28,  2           // InterfaceMethod org/confluence/mod/mixed/IDedicatedServer.confluence$setOnHardmodeConversation:(Z)V
+      63: getstatic     #80                 // Field org/confluence/mod/common/data/saved/KillBoard.INSTANCE:Lorg/confluence/mod/common/data/saved/KillBoard;
+      66: aload_2
+      67: invokevirtual #86                 // Method org/confluence/mod/common/data/saved/KillBoard.onUnlockHardmode:(Lnet/minecraft/server/MinecraftServer;)V
+      70: aload_2
+      71: invokestatic  #90                 // InterfaceMethod org/confluence/mod/mixed/IMinecraftServer.of:(Lnet/minecraft/server/MinecraftServer;)Lorg/confluence/mod/mixed/IMinecraftServer;
+      74: invokeinterface #96,  1           // InterfaceMethod org/confluence/mod/mixed/IMinecraftServer.confluence$getSecretFlag:()J
+      79: invokestatic  #100                // Method org/confluence/mod/network/s2c/SecretFlagSyncPacketS2C.sendToAll:(J)V
+      82: aload_2
+      83: invokevirtual #106                // Method net/minecraft/server/MinecraftServer.getPlayerList:()Lnet/minecraft/server/players/PlayerList;
+      86: invokevirtual #112                // Method net/minecraft/server/players/PlayerList.getPlayers:()Ljava/util/List;
+      89: invokeinterface #118,  1          // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+      94: astore_3
+      95: aload_3
+      96: invokeinterface #122,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+     101: ifeq          125
+     104: aload_3
+     105: invokeinterface #127,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+     110: checkcast     #131                // class net/minecraft/server/level/ServerPlayer
+     113: astore        4
+     115: aload         4
+     117: ldc           #133                // String its_hard
+     119: invokestatic  #135                // Method org/confluence/mod/util/AchievementUtils.awardAchievement:(Lnet/minecraft/server/level/ServerPlayer;Ljava/lang/String;)V
+     122: goto          95
+     125: aload_2
+     126: ldc           #141                // String event.confluence.hardmode_conversion.hardmode
+     128: invokestatic  #34                 // InterfaceMethod net/minecraft/network/chat/Component.translatable:(Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;
+     131: invokestatic  #143                // Method org/confluence/lib/util/LibUtils.isDev:()Z
+     134: invokestatic  #40                 // Method print:(Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/network/chat/Component;Z)V
+     137: aload_2
+     138: ldc           #148                // String event.confluence.hardmode_conversion.finished
+     140: invokestatic  #34                 // InterfaceMethod net/minecraft/network/chat/Component.translatable:(Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;
+     143: getstatic     #150                // Field org/confluence/lib/color/GlobalColors.MESSAGE:Lorg/confluence/lib/color/IntegerRGB;
+     146: invokevirtual #156                // Method org/confluence/lib/color/IntegerRGB.get:()I
+     149: invokevirtual #161                // Method net/minecraft/network/chat/MutableComponent.withColor:(I)Lnet/minecraft/network/chat/MutableComponent;
+     152: iconst_1
+     153: invokestatic  #40                 // Method print:(Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/network/chat/Component;Z)V
+     156: aload_2
+     157: ldc           #167                // String event.confluence.hardmode_conversion.welcome
+     159: invokestatic  #34                 // InterfaceMethod net/minecraft/network/chat/Component.translatable:(Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;
+     162: getstatic     #169                // Field org/confluence/lib/color/GlobalColors.EVENT:Lorg/confluence/lib/color/IntegerRGB;
+     165: invokevirtual #156                // Method org/confluence/lib/color/IntegerRGB.get:()I
+     168: invokevirtual #161                // Method net/minecraft/network/chat/MutableComponent.withColor:(I)Lnet/minecraft/network/chat/MutableComponent;
+     171: iconst_1
+     172: invokestatic  #40                 // Method print:(Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/network/chat/Component;Z)V
+     175: getstatic     #172                // Field net/neoforged/neoforge/common/NeoForge.EVENT_BUS:Lnet/neoforged/bus/api/IEventBus;
+     178: new           #178                // class org/confluence/mod/api/event/EnterHardmodeEvent
+     181: dup
+     182: aload_2
+     183: invokespecial #180                // Method org/confluence/mod/api/event/EnterHardmodeEvent."<init>":(Lnet/minecraft/server/MinecraftServer;)V
+     186: invokeinterface #182,  2          // InterfaceMethod net/neoforged/bus/api/IEventBus.post:(Lnet/neoforged/bus/api/Event;)Lnet/neoforged/bus/api/Event;
+     191: pop
+     192: aload_0
+     193: iconst_0
+     194: putfield      #7                  // Field started:Z
+     197: goto          449
+     200: aload_1
+     201: invokevirtual #74                 // Method net/minecraft/server/level/ServerLevel.getServer:()Lnet/minecraft/server/MinecraftServer;
+     204: astore_3
+     205: aload_3
+     206: instanceof    #26                 // class org/confluence/mod/mixed/IDedicatedServer
+     209: ifeq          233
+     212: aload_3
+     213: checkcast     #26                 // class org/confluence/mod/mixed/IDedicatedServer
+     216: astore_2
+     217: aload_2
+     218: invokeinterface #188,  1          // InterfaceMethod org/confluence/mod/mixed/IDedicatedServer.confluence$isOnHardmodeConversation:()Z
+     223: ifne          233
+     226: aload_2
+     227: iconst_1
+     228: invokeinterface #28,  2           // InterfaceMethod org/confluence/mod/mixed/IDedicatedServer.confluence$setOnHardmodeConversation:(Z)V
+     233: getstatic     #191                // Field org/confluence/mod/common/CommonConfigs.INSTANTLY_HARDMODE_CONVERSION:Lnet/neoforged/neoforge/common/ModConfigSpec$BooleanValue;
+     236: invokevirtual #197                // Method net/neoforged/neoforge/common/ModConfigSpec$BooleanValue.get:()Ljava/lang/Object;
+     239: checkcast     #201                // class java/lang/Boolean
+     242: invokevirtual #203                // Method java/lang/Boolean.booleanValue:()Z
+     245: ifeq          296
+     248: getstatic     #206                // Field org/confluence/mod/Confluence.LOGGER:Lorg/slf4j/Logger;
+     251: ldc           #212                // String Starting hardmode conversion ...
+     253: invokeinterface #214,  2          // InterfaceMethod org/slf4j/Logger.debug:(Ljava/lang/String;)V
+     258: invokestatic  #220                // Method com/google/common/base/Stopwatch.createStarted:()Lcom/google/common/base/Stopwatch;
+     261: astore_2
+     262: aload_0
+     263: getfield      #16                 // Field sanctification:Ljava/util/List;
+     266: aload_0
+     267: aload_1
+     268: invokedynamic #226,  0            // InvokeDynamic #2:test:(Lorg/confluence/mod/common/data/saved/HardmodeConvertor;Lnet/minecraft/server/level/ServerLevel;)Ljava/util/function/Predicate;
+     273: invokeinterface #230,  2          // InterfaceMethod java/util/List.removeIf:(Ljava/util/function/Predicate;)Z
+     278: pop
+     279: getstatic     #206                // Field org/confluence/mod/Confluence.LOGGER:Lorg/slf4j/Logger;
+     282: ldc           #234                // String Hardmode conversion took {}
+     284: aload_2
+     285: invokevirtual #236                // Method com/google/common/base/Stopwatch.stop:()Lcom/google/common/base/Stopwatch;
+     288: invokeinterface #239,  3          // InterfaceMethod org/slf4j/Logger.debug:(Ljava/lang/String;Ljava/lang/Object;)V
+     293: goto          449
+     296: aload_1
+     297: invokevirtual #242                // Method net/minecraft/server/level/ServerLevel.getGameTime:()J
+     300: ldc2_w        #245                // long 5l
+     303: lrem
+     304: lconst_0
+     305: lcmp
+     306: ifne          449
+     309: aload_1
+     310: invokevirtual #74                 // Method net/minecraft/server/level/ServerLevel.getServer:()Lnet/minecraft/server/MinecraftServer;
+     313: invokevirtual #106                // Method net/minecraft/server/MinecraftServer.getPlayerList:()Lnet/minecraft/server/players/PlayerList;
+     316: invokevirtual #112                // Method net/minecraft/server/players/PlayerList.getPlayers:()Ljava/util/List;
+     319: invokeinterface #247,  1          // InterfaceMethod java/util/List.stream:()Ljava/util/stream/Stream;
+     324: invokedynamic #251,  0            // InvokeDynamic #3:test:()Ljava/util/function/Predicate;
+     329: invokeinterface #254,  2          // InterfaceMethod java/util/stream/Stream.noneMatch:(Ljava/util/function/Predicate;)Z
+     334: ifeq          449
+     337: aload_0
+     338: getfield      #16                 // Field sanctification:Ljava/util/List;
+     341: invokeinterface #259,  1          // InterfaceMethod java/util/List.getFirst:()Ljava/lang/Object;
+     346: checkcast     #262                // class net/minecraft/util/Tuple
+     349: astore_2
+     350: aload_2
+     351: invokevirtual #264                // Method net/minecraft/util/Tuple.getA:()Ljava/lang/Object;
+     354: checkcast     #267                // class net/minecraft/world/level/ChunkPos
+     357: astore_3
+     358: aload_1
+     359: invokevirtual #269                // Method net/minecraft/server/level/ServerLevel.getForcedChunks:()Lit/unimi/dsi/fastutil/longs/LongSet;
+     362: aload_3
+     363: invokevirtual #273                // Method net/minecraft/world/level/ChunkPos.toLong:()J
+     366: invokeinterface #276,  3          // InterfaceMethod it/unimi/dsi/fastutil/longs/LongSet.contains:(J)Z
+     371: ifne          378
+     374: iconst_1
+     375: goto          379
+     378: iconst_0
+     379: istore        4
+     381: iload         4
+     383: ifeq          400
+     386: aload_1
+     387: aload_3
+     388: getfield      #282                // Field net/minecraft/world/level/ChunkPos.x:I
+     391: aload_3
+     392: getfield      #286                // Field net/minecraft/world/level/ChunkPos.z:I
+     395: iconst_1
+     396: invokevirtual #289                // Method net/minecraft/server/level/ServerLevel.setChunkForced:(IIZ)Z
+     399: pop
+     400: aload_0
+     401: aload_1
+     402: aload_3
+     403: aload_2
+     404: invokevirtual #293                // Method net/minecraft/util/Tuple.getB:()Ljava/lang/Object;
+     407: checkcast     #296                // class "[[Lorg/confluence/mod/common/data/saved/HardmodeConvertor$BlockPosColumn;"
+     410: invokevirtual #298                // Method refill:(Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/ChunkPos;[[Lorg/confluence/mod/common/data/saved/HardmodeConvertor$BlockPosColumn;)Z
+     413: istore        5
+     415: iload         4
+     417: ifeq          434
+     420: aload_1
+     421: aload_3
+     422: getfield      #282                // Field net/minecraft/world/level/ChunkPos.x:I
+     425: aload_3
+     426: getfield      #286                // Field net/minecraft/world/level/ChunkPos.z:I
+     429: iconst_0
+     430: invokevirtual #289                // Method net/minecraft/server/level/ServerLevel.setChunkForced:(IIZ)Z
+     433: pop
+     434: iload         5
+     436: ifeq          449
+     439: aload_0
+     440: getfield      #16                 // Field sanctification:Ljava/util/List;
+     443: invokeinterface #302,  1          // InterfaceMethod java/util/List.removeFirst:()Ljava/lang/Object;
+     448: pop
+     449: return
+
+
+  private boolean refill(net.minecraft.server.level.ServerLevel, net.minecraft.world.level.ChunkPos, org.confluence.mod.common.data.saved.HardmodeConvertor$BlockPosColumn[][]);
+    Code:
+       0: aload_1
+       1: aload_2
+       2: getfield      #282                // Field net/minecraft/world/level/ChunkPos.x:I
+       5: aload_2
+       6: getfield      #286                // Field net/minecraft/world/level/ChunkPos.z:I
+       9: getstatic     #305                // Field net/minecraft/world/level/chunk/status/ChunkStatus.FULL:Lnet/minecraft/world/level/chunk/status/ChunkStatus;
+      12: iconst_0
+      13: invokevirtual #311                // Method net/minecraft/server/level/ServerLevel.getChunk:(IILnet/minecraft/world/level/chunk/status/ChunkStatus;Z)Lnet/minecraft/world/level/chunk/ChunkAccess;
+      16: astore        4
+      18: aload         4
+      20: ifnonnull     25
+      23: iconst_0
+      24: ireturn
+      25: aload_2
+      26: getfield      #282                // Field net/minecraft/world/level/ChunkPos.x:I
+      29: invokestatic  #315                // Method net/minecraft/core/SectionPos.sectionToBlockCoord:(I)I
+      32: istore        5
+      34: aload_2
+      35: getfield      #286                // Field net/minecraft/world/level/ChunkPos.z:I
+      38: invokestatic  #315                // Method net/minecraft/core/SectionPos.sectionToBlockCoord:(I)I
+      41: istore        6
+      43: aconst_null
+      44: astore        7
+      46: iconst_0
+      47: istore        8
+      49: iconst_0
+      50: istore        9
+      52: iload         9
+      54: bipush        16
+      56: if_icmpge     259
+      59: aload_3
+      60: iload         9
+      62: aaload
+      63: astore        10
+      65: iconst_0
+      66: istore        11
+      68: iload         11
+      70: bipush        16
+      72: if_icmpge     253
+      75: aload         10
+      77: iload         11
+      79: aaload
+      80: astore        12
+      82: aload         12
+      84: ifnull        247
+      87: aload         12
+      89: getstatic     #321                // Field org/confluence/mod/common/data/saved/HardmodeConvertor$BlockPosColumn.ZERO:Lorg/confluence/mod/common/data/saved/HardmodeConvertor$BlockPosColumn;
+      92: if_acmpne     98
+      95: goto          247
+      98: aload         12
+     100: iload         5
+     102: iload         9
+     104: iadd
+     105: iload         6
+     107: iload         11
+     109: iadd
+     110: invokevirtual #327                // Method org/confluence/mod/common/data/saved/HardmodeConvertor$BlockPosColumn.iterable:(II)Ljava/lang/Iterable;
+     113: invokeinterface #331,  1          // InterfaceMethod java/lang/Iterable.iterator:()Ljava/util/Iterator;
+     118: astore        13
+     120: aload         13
+     122: invokeinterface #122,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+     127: ifeq          247
+     130: aload         13
+     132: invokeinterface #127,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+     137: checkcast     #334                // class net/minecraft/core/BlockPos
+     140: astore        14
+     142: getstatic     #336                // Field org/confluence/mod/common/block/natural/spreadable/ISpreadable$Type.HALLOW:Lorg/confluence/mod/common/block/natural/spreadable/ISpreadable$Type;
+     145: aload         4
+     147: aload         14
+     149: invokevirtual #342                // Method net/minecraft/world/level/chunk/ChunkAccess.getBlockState:(Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
+     152: iconst_1
+     153: invokevirtual #348                // Method org/confluence/mod/common/block/natural/spreadable/ISpreadable$Type.getNullable:(Lnet/minecraft/world/level/block/state/BlockState;Z)Lnet/minecraft/world/level/block/state/BlockState;
+     156: astore        15
+     158: aload         15
+     160: ifnonnull     166
+     163: goto          120
+     166: aload         7
+     168: aload         15
+     170: if_acmpeq     187
+     173: aload         15
+     175: astore        7
+     177: aload         15
+     179: getstatic     #352                // Field org/confluence/mod/common/init/ModTags$Blocks.SPREADABLE_GRASS_BLOCK:Lnet/minecraft/tags/TagKey;
+     182: invokevirtual #358                // Method net/minecraft/world/level/block/state/BlockState.is:(Lnet/minecraft/tags/TagKey;)Z
+     185: istore        8
+     187: iload         8
+     189: ifeq          233
+     192: aload         14
+     194: invokevirtual #364                // Method net/minecraft/core/BlockPos.above:()Lnet/minecraft/core/BlockPos;
+     197: astore        16
+     199: aload         4
+     201: aload         16
+     203: invokevirtual #342                // Method net/minecraft/world/level/chunk/ChunkAccess.getBlockState:(Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
+     206: aload         4
+     208: aload         16
+     210: invokevirtual #368                // Method net/minecraft/world/level/block/state/BlockState.getCollisionShape:(Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/shapes/VoxelShape;
+     213: invokestatic  #372                // Method net/minecraft/world/level/block/Block.isShapeFullBlock:(Lnet/minecraft/world/phys/shapes/VoxelShape;)Z
+     216: ifeq          230
+     219: aload         4
+     221: aload         14
+     223: aload         15
+     225: iconst_0
+     226: invokevirtual #378                // Method net/minecraft/world/level/chunk/ChunkAccess.setBlockState:(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Z)Lnet/minecraft/world/level/block/state/BlockState;
+     229: pop
+     230: goto          244
+     233: aload         4
+     235: aload         14
+     237: aload         15
+     239: iconst_0
+     240: invokevirtual #378                // Method net/minecraft/world/level/chunk/ChunkAccess.setBlockState:(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Z)Lnet/minecraft/world/level/block/state/BlockState;
+     243: pop
+     244: goto          120
+     247: iinc          11, 1
+     250: goto          68
+     253: iinc          9, 1
+     256: goto          52
+     259: aload_1
+     260: invokevirtual #382                // Method net/minecraft/server/level/ServerLevel.getChunkSource:()Lnet/minecraft/server/level/ServerChunkCache;
+     263: getfield      #386                // Field net/minecraft/server/level/ServerChunkCache.chunkMap:Lnet/minecraft/server/level/ChunkMap;
+     266: astore        9
+     268: aload_1
+     269: invokevirtual #392                // Method net/minecraft/server/level/ServerLevel.players:()Ljava/util/List;
+     272: invokeinterface #118,  1          // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+     277: astore        10
+     279: aload         10
+     281: invokeinterface #122,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+     286: ifeq          326
+     289: aload         10
+     291: invokeinterface #127,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+     296: checkcast     #131                // class net/minecraft/server/level/ServerPlayer
+     299: astore        11
+     301: aload         11
+     303: invokevirtual #395                // Method net/minecraft/server/level/ServerPlayer.getChunkTrackingView:()Lnet/minecraft/server/level/ChunkTrackingView;
+     306: aload_2
+     307: invokeinterface #399,  2          // InterfaceMethod net/minecraft/server/level/ChunkTrackingView.contains:(Lnet/minecraft/world/level/ChunkPos;)Z
+     312: ifeq          323
+     315: aload         9
+     317: aload         11
+     319: aload_2
+     320: invokevirtual #404                // Method net/minecraft/server/level/ChunkMap.markChunkPendingToSend:(Lnet/minecraft/server/level/ServerPlayer;Lnet/minecraft/world/level/ChunkPos;)V
+     323: goto          279
+     326: iconst_1
+     327: ireturn
+
+
+  public void decode(net.minecraft.nbt.CompoundTag);
+    Code:
+       0: aload_0
+       1: iconst_0
+       2: putfield      #23                 // Field shouldContinue:Z
+       5: getstatic     #496                // Field SANCTIFICATION_CODEC:Lcom/mojang/serialization/Codec;
+       8: getstatic     #500                // Field net/minecraft/nbt/NbtOps.INSTANCE:Lnet/minecraft/nbt/NbtOps;
+      11: aload_1
+      12: ldc_w         #505                // String sanctification
+      15: invokevirtual #506                // Method net/minecraft/nbt/CompoundTag.get:(Ljava/lang/String;)Lnet/minecraft/nbt/Tag;
+      18: invokeinterface #511,  3          // InterfaceMethod com/mojang/serialization/Codec.parse:(Lcom/mojang/serialization/DynamicOps;Ljava/lang/Object;)Lcom/mojang/serialization/DataResult;
+      23: aload_0
+      24: invokedynamic #517,  0            // InvokeDynamic #5:accept:(Lorg/confluence/mod/common/data/saved/HardmodeConvertor;)Ljava/util/function/Consumer;
+      29: invokeinterface #520,  2          // InterfaceMethod com/mojang/serialization/DataResult.ifSuccess:(Ljava/util/function/Consumer;)Lcom/mojang/serialization/DataResult;
+      34: pop
+      35: aload_0
+      36: aload_1
+      37: ldc_w         #526                // String started
+      40: invokevirtual #527                // Method net/minecraft/nbt/CompoundTag.getBoolean:(Ljava/lang/String;)Z
+      43: putfield      #7                  // Field started:Z
+      46: aload_0
+      47: aload_1
+      48: ldc_w         #531                // String completed
+      51: invokevirtual #527                // Method net/minecraft/nbt/CompoundTag.getBoolean:(Ljava/lang/String;)Z
+      54: putfield      #20                 // Field completed:Z
+      57: aload_0
+      58: iconst_1
+      59: putfield      #23                 // Field shouldContinue:Z
+      62: return
+
+
+  public void encode(net.minecraft.nbt.CompoundTag);
+    Code:
+       0: aload_0
+       1: iconst_0
+       2: putfield      #23                 // Field shouldContinue:Z
+       5: getstatic     #496                // Field SANCTIFICATION_CODEC:Lcom/mojang/serialization/Codec;
+       8: getstatic     #500                // Field net/minecraft/nbt/NbtOps.INSTANCE:Lnet/minecraft/nbt/NbtOps;
+      11: aload_0
+      12: getfield      #16                 // Field sanctification:Ljava/util/List;
+      15: invokeinterface #532,  3          // InterfaceMethod com/mojang/serialization/Codec.encodeStart:(Lcom/mojang/serialization/DynamicOps;Ljava/lang/Object;)Lcom/mojang/serialization/DataResult;
+      20: aload_1
+      21: invokedynamic #535,  0            // InvokeDynamic #6:accept:(Lnet/minecraft/nbt/CompoundTag;)Ljava/util/function/Consumer;
+      26: invokeinterface #520,  2          // InterfaceMethod com/mojang/serialization/DataResult.ifSuccess:(Ljava/util/function/Consumer;)Lcom/mojang/serialization/DataResult;
+      31: pop
+      32: aload_1
+      33: ldc_w         #526                // String started
+      36: aload_0
+      37: getfield      #7                  // Field started:Z
+      40: invokevirtual #538                // Method net/minecraft/nbt/CompoundTag.putBoolean:(Ljava/lang/String;Z)V
+      43: aload_1
+      44: ldc_w         #531                // String completed
+      47: aload_0
+      48: getfield      #20                 // Field completed:Z
+      51: invokevirtual #538                // Method net/minecraft/nbt/CompoundTag.putBoolean:(Ljava/lang/String;Z)V
+      54: aload_0
+      55: iconst_1
+      56: putfield      #23                 // Field shouldContinue:Z
+      59: return
+
+
+  public java.lang.String serializeKey();
+    Code:
+       0: ldc_w         #542                // String confluence:hardmode_convertor
+       3: areturn

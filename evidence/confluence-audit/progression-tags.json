@@ -1,0 +1,97 @@
+{
+  "data/confluence/tags/item/able_to_destroy_altar.json": {
+    "values": [
+      "confluence:pwnhammer",
+      "confluence:hammush"
+    ]
+  },
+  "data/confluence/tags/item/boss_summoning.json": {
+    "values": [
+      "confluence:suspicious_looking_eye",
+      "confluence:slime_crown",
+      "confluence:worm_food",
+      "confluence:bloody_spine",
+      "confluence:abeemination",
+      "confluence:deer_thing",
+      "confluence:clothier_voodoo_doll",
+      "confluence:guide_voodoo_doll"
+    ]
+  },
+  "data/confluence/tags/item/hardmode.json": {
+    "values": [
+      "#confluence:hardmode_raw_materials",
+      "confluence:pearl_planks",
+      "confluence:pearl_log",
+      "confluence:stripped_pearl_log",
+      "confluence:pearl_leaves",
+      "confluence:pearl_wood",
+      "confluence:stripped_pearl_wood",
+      "confluence:pearl_button",
+      "confluence:pearl_fence",
+      "confluence:pearl_fence_gate",
+      "confluence:pearl_pressure_plate",
+      "confluence:pearl_slab",
+      "confluence:pearl_stairs",
+      "confluence:pearl_trapdoor",
+      "confluence:pearl_door",
+      "confluence:pearl_sapling",
+      "confluence:pearl_sign",
+      "confluence:pearl_hanging_sign",
+      "confluence:spooky_planks",
+      "confluence:spooky_log",
+      "confluence:stripped_spooky_log",
+      "confluence:spooky_leaves",
+      "confluence:spooky_wood",
+      "confluence:stripped_spooky_wood",
+      "confluence:spooky_button",
+      "confluence:spooky_fence",
+      "confluence:spooky_fence_gate",
+      "confluence:spooky_pressure_plate",
+      "confluence:spooky_slab",
+      "confluence:spooky_stairs",
+      "confluence:spooky_trapdoor",
+      "confluence:spooky_door",
+      "confluence:spooky_sign",
+      "confluence:spooky_hanging_sign",
+      "confluence:ichorfish",
+      "confluence:cursedfish",
+      "confluence:fishron",
+      "confluence:derpfish",
+      "confluence:capn_tunabeard",
+      "confluence:hungerfish",
+      "confluence:mirage_fish",
+      "confluence:pixiefish",
+      "confluence:unicorn_fish"
+    ]
+  },
+  "data/confluence/tags/item/hardmode_raw_materials.json": {
+    "values": [
+      "confluence:raw_cobalt",
+      "confluence:raw_palladium",
+      "confluence:raw_mythril",
+      "confluence:raw_orichalcum",
+      "confluence:raw_adamantite",
+      "confluence:raw_titanium",
+      "confluence:raw_chlorophyte",
+      "confluence:raw_luminite",
+      "confluence:soul_of_fright",
+      "confluence:soul_of_might",
+      "confluence:soul_of_flight",
+      "confluence:soul_of_night",
+      "confluence:soul_of_light",
+      "confluence:soul_of_sight",
+      "confluence:soul_of_bright",
+      "confluence:crystal_shards",
+      "confluence:cursed_flame",
+      "confluence:ichor",
+      "confluence:pixie_dust",
+      "confluence:unicorn_horn",
+      "confluence:ancient_cloth",
+      "confluence:spider_fang",
+      "confluence:spell_tome",
+      "confluence:forbidden_fragment",
+      "confluence:colorful_mineral_fish",
+      "confluence:chaos_fish"
+    ]
+  }
+}

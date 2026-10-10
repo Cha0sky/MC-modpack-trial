@@ -1,0 +1,56 @@
+Compiled from "TEBossEvent.java"
+public class org.confluence.terraentity.api.event.TEBossEvent$Summon extends org.confluence.terraentity.api.event.TEBossEvent implements net.neoforged.bus.api.ICancellableEvent {
+  net.minecraft.world.entity.player.Player player;
+
+  boolean shouldChangeCamera;
+
+  float distance;
+
+  public org.confluence.terraentity.api.event.TEBossEvent$Summon(net.minecraft.world.entity.EntityType<?>, net.minecraft.world.entity.player.Player, float);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokespecial #1                  // Method org/confluence/terraentity/api/event/TEBossEvent."<init>":(Lnet/minecraft/world/entity/EntityType;)V
+       5: aload_0
+       6: iconst_1
+       7: putfield      #7                  // Field shouldChangeCamera:Z
+      10: aload_0
+      11: aload_2
+      12: putfield      #13                 // Field player:Lnet/minecraft/world/entity/player/Player;
+      15: aload_0
+      16: fload_3
+      17: putfield      #17                 // Field distance:F
+      20: return
+
+  public net.minecraft.world.entity.player.Player getPlayer();
+    Code:
+       0: aload_0
+       1: getfield      #13                 // Field player:Lnet/minecraft/world/entity/player/Player;
+       4: areturn
+
+  public boolean shouldChangeCamera();
+    Code:
+       0: aload_0
+       1: getfield      #7                  // Field shouldChangeCamera:Z
+       4: ireturn
+
+  public void setNotShouldChangeCamera();
+    Code:
+       0: aload_0
+       1: iconst_0
+       2: putfield      #7                  // Field shouldChangeCamera:Z
+       5: return
+
+  public float getDistance();
+    Code:
+       0: aload_0
+       1: getfield      #17                 // Field distance:F
+       4: freturn
+
+  public void setDistance(float);
+    Code:
+       0: aload_0
+       1: fload_1
+       2: putfield      #17                 // Field distance:F
+       5: return
+}

@@ -1,0 +1,45 @@
+{
+  "GamePhase": [
+    "org/confluence/mod/api/event/ShimmerEntityTransmutationEvent$EntityTransmutation.class",
+    "org/confluence/mod/api/event/ShimmerEntityTransmutationEvent.class",
+    "org/confluence/mod/common/block/common/BasePotBlock.class",
+    "org/confluence/mod/common/block/natural/BasePlantBlock.class",
+    "org/confluence/mod/common/block/natural/BaseTallPlantBlock.class",
+    "org/confluence/mod/common/block/natural/spreadable/ISpreadable.class",
+    "org/confluence/mod/common/data/map/GamePhase2AttributeModifiers$Merger.class",
+    "org/confluence/mod/common/data/map/GamePhase2AttributeModifiers$Remover.class",
+    "org/confluence/mod/common/data/map/GamePhase2AttributeModifiers.class",
+    "org/confluence/mod/common/data/saved/GamePhase.class",
+    "org/confluence/mod/common/data/saved/KillBoard.class",
+    "org/confluence/mod/common/data/saved/NPCSpawner.class",
+    "org/confluence/mod/common/event/game/entity/LivingEntityEvents.class",
+    "org/confluence/mod/common/gameevent/GoblinArmyGameEvent.class",
+    "org/confluence/mod/common/gameevent/LanternNightGameEvent.class",
+    "org/confluence/mod/common/gameevent/SlimeRainGameEvent.class",
+    "org/confluence/mod/common/init/ModCommands.class",
+    "org/confluence/mod/common/loot/GamePhaseLootItemCondition$Builder.class",
+    "org/confluence/mod/common/loot/GamePhaseLootItemCondition.class",
+    "org/confluence/mod/common/recipe/ItemTransmutationRecipe$Serializer.class",
+    "org/confluence/mod/common/recipe/ItemTransmutationRecipe.class",
+    "org/confluence/mod/integration/jei/category/ShimmerItemTransmutationCategory.class",
+    "org/confluence/mod/integration/terra_entity/npc_trade/MoneyTradeHealthFull.class",
+    "org/confluence/mod/mixin/entity/EntityMixin.class",
+    "org/confluence/mod/mixin/entity/ItemEntityMixin.class",
+    "org/confluence/mod/util/ModUtils.class"
+  ],
+  "HardmodeConvertor": [
+    "org/confluence/mod/common/data/saved/HardmodeConvertor$1.class",
+    "org/confluence/mod/common/data/saved/HardmodeConvertor$BlockPosColumn$1.class",
+    "org/confluence/mod/common/data/saved/HardmodeConvertor$BlockPosColumn.class",
+    "org/confluence/mod/common/data/saved/HardmodeConvertor.class",
+    "org/confluence/mod/common/data/saved/KillBoard.class",
+    "org/confluence/mod/common/event/game/entity/PlayerEvents.class",
+    "org/confluence/mod/common/event/game/TickEvents.class",
+    "org/confluence/mod/common/event/ModEvents.class",
+    "org/confluence/mod/common/item/common/HardmodeConvertorItem.class"
+  ],
+  "EnterHardmodeEvent": [
+    "org/confluence/mod/api/event/EnterHardmodeEvent.class",
+    "org/confluence/mod/common/data/saved/HardmodeConvertor.class"
+  ]
+}

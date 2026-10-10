@@ -1,0 +1,19 @@
+Compiled from "EnterHardmodeEvent.java"
+public class org.confluence.mod.api.event.EnterHardmodeEvent extends net.neoforged.bus.api.Event {
+  private final net.minecraft.server.MinecraftServer server;
+
+  public org.confluence.mod.api.event.EnterHardmodeEvent(net.minecraft.server.MinecraftServer);
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method net/neoforged/bus/api/Event."<init>":()V
+       4: aload_0
+       5: aload_1
+       6: putfield      #7                  // Field server:Lnet/minecraft/server/MinecraftServer;
+       9: return
+
+  public net.minecraft.server.MinecraftServer getServer();
+    Code:
+       0: aload_0
+       1: getfield      #7                  // Field server:Lnet/minecraft/server/MinecraftServer;
+       4: areturn
+}

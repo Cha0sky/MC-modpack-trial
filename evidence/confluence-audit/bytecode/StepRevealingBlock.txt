@@ -1,0 +1,160 @@
+Compiled from "StepRevealingBlock.java"
+public class org.confluence.mod.common.block.natural.StepRevealingBlock extends net.minecraft.world.level.block.Block {
+  public static final net.minecraft.world.level.block.state.properties.IntegerProperty REVEAL_STEP;
+
+  public static final net.neoforged.neoforge.common.util.Lazy<net.minecraft.world.level.block.state.BlockState[][]> PAIRS;
+
+  public org.confluence.mod.common.block.natural.StepRevealingBlock(net.minecraft.world.level.block.state.BlockBehaviour$Properties);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokespecial #1                  // Method net/minecraft/world/level/block/Block."<init>":(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
+       5: aload_0
+       6: aload_0
+       7: getfield      #7                  // Field stateDefinition:Lnet/minecraft/world/level/block/state/StateDefinition;
+      10: invokevirtual #13                 // Method net/minecraft/world/level/block/state/StateDefinition.any:()Lnet/minecraft/world/level/block/state/StateHolder;
+      13: checkcast     #19                 // class net/minecraft/world/level/block/state/BlockState
+      16: getstatic     #21                 // Field REVEAL_STEP:Lnet/minecraft/world/level/block/state/properties/IntegerProperty;
+      19: iconst_0
+      20: invokestatic  #25                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+      23: invokevirtual #31                 // Method net/minecraft/world/level/block/state/BlockState.setValue:(Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Ljava/lang/Object;
+      26: checkcast     #19                 // class net/minecraft/world/level/block/state/BlockState
+      29: invokevirtual #35                 // Method registerDefaultState:(Lnet/minecraft/world/level/block/state/BlockState;)V
+      32: return
+
+  protected void createBlockStateDefinition(net.minecraft.world.level.block.state.StateDefinition$Builder<net.minecraft.world.level.block.Block, net.minecraft.world.level.block.state.BlockState>);
+    Code:
+       0: aload_1
+       1: iconst_1
+       2: anewarray     #39                 // class net/minecraft/world/level/block/state/properties/Property
+       5: dup
+       6: iconst_0
+       7: getstatic     #21                 // Field REVEAL_STEP:Lnet/minecraft/world/level/block/state/properties/IntegerProperty;
+      10: aastore
+      11: invokevirtual #41                 // Method net/minecraft/world/level/block/state/StateDefinition$Builder.add:([Lnet/minecraft/world/level/block/state/properties/Property;)Lnet/minecraft/world/level/block/state/StateDefinition$Builder;
+      14: pop
+      15: return
+
+  private static net.minecraft.world.level.block.state.BlockState[][] lambda$static$0();
+    Code:
+       0: bipush        9
+       2: iconst_2
+       3: multianewarray #47,  2            // class "[[Lnet/minecraft/world/level/block/state/BlockState;"
+       7: astore_0
+       8: iconst_0
+       9: istore_1
+      10: iload_1
+      11: iconst_3
+      12: if_icmpge     218
+      15: iload_1
+      16: iconst_3
+      17: imul
+      18: istore_2
+      19: aload_0
+      20: iload_2
+      21: iconst_2
+      22: anewarray     #19                 // class net/minecraft/world/level/block/state/BlockState
+      25: dup
+      26: iconst_0
+      27: getstatic     #49                 // Field org/confluence/mod/common/init/block/OreBlocks.DEEPSLATE_COBALT_ORE:Lnet/neoforged/neoforge/registries/DeferredBlock;
+      30: invokevirtual #55                 // Method net/neoforged/neoforge/registries/DeferredBlock.get:()Ljava/lang/Object;
+      33: checkcast     #8                  // class org/confluence/mod/common/block/natural/StepRevealingBlock
+      36: invokevirtual #61                 // Method defaultBlockState:()Lnet/minecraft/world/level/block/state/BlockState;
+      39: getstatic     #21                 // Field REVEAL_STEP:Lnet/minecraft/world/level/block/state/properties/IntegerProperty;
+      42: iload_1
+      43: invokestatic  #25                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+      46: invokevirtual #31                 // Method net/minecraft/world/level/block/state/BlockState.setValue:(Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Ljava/lang/Object;
+      49: checkcast     #19                 // class net/minecraft/world/level/block/state/BlockState
+      52: aastore
+      53: dup
+      54: iconst_1
+      55: getstatic     #65                 // Field org/confluence/mod/common/init/block/OreBlocks.DEEPSLATE_PALLADIUM_ORE:Lnet/neoforged/neoforge/registries/DeferredBlock;
+      58: invokevirtual #55                 // Method net/neoforged/neoforge/registries/DeferredBlock.get:()Ljava/lang/Object;
+      61: checkcast     #8                  // class org/confluence/mod/common/block/natural/StepRevealingBlock
+      64: invokevirtual #61                 // Method defaultBlockState:()Lnet/minecraft/world/level/block/state/BlockState;
+      67: getstatic     #21                 // Field REVEAL_STEP:Lnet/minecraft/world/level/block/state/properties/IntegerProperty;
+      70: iload_1
+      71: invokestatic  #25                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+      74: invokevirtual #31                 // Method net/minecraft/world/level/block/state/BlockState.setValue:(Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Ljava/lang/Object;
+      77: checkcast     #19                 // class net/minecraft/world/level/block/state/BlockState
+      80: aastore
+      81: aastore
+      82: aload_0
+      83: iload_2
+      84: iconst_1
+      85: iadd
+      86: iconst_2
+      87: anewarray     #19                 // class net/minecraft/world/level/block/state/BlockState
+      90: dup
+      91: iconst_0
+      92: getstatic     #68                 // Field org/confluence/mod/common/init/block/OreBlocks.DEEPSLATE_MYTHRIL_ORE:Lnet/neoforged/neoforge/registries/DeferredBlock;
+      95: invokevirtual #55                 // Method net/neoforged/neoforge/registries/DeferredBlock.get:()Ljava/lang/Object;
+      98: checkcast     #8                  // class org/confluence/mod/common/block/natural/StepRevealingBlock
+     101: invokevirtual #61                 // Method defaultBlockState:()Lnet/minecraft/world/level/block/state/BlockState;
+     104: getstatic     #21                 // Field REVEAL_STEP:Lnet/minecraft/world/level/block/state/properties/IntegerProperty;
+     107: iload_1
+     108: invokestatic  #25                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+     111: invokevirtual #31                 // Method net/minecraft/world/level/block/state/BlockState.setValue:(Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Ljava/lang/Object;
+     114: checkcast     #19                 // class net/minecraft/world/level/block/state/BlockState
+     117: aastore
+     118: dup
+     119: iconst_1
+     120: getstatic     #71                 // Field org/confluence/mod/common/init/block/OreBlocks.DEEPSLATE_ORICHALCUM_ORE:Lnet/neoforged/neoforge/registries/DeferredBlock;
+     123: invokevirtual #55                 // Method net/neoforged/neoforge/registries/DeferredBlock.get:()Ljava/lang/Object;
+     126: checkcast     #8                  // class org/confluence/mod/common/block/natural/StepRevealingBlock
+     129: invokevirtual #61                 // Method defaultBlockState:()Lnet/minecraft/world/level/block/state/BlockState;
+     132: getstatic     #21                 // Field REVEAL_STEP:Lnet/minecraft/world/level/block/state/properties/IntegerProperty;
+     135: iload_1
+     136: invokestatic  #25                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+     139: invokevirtual #31                 // Method net/minecraft/world/level/block/state/BlockState.setValue:(Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Ljava/lang/Object;
+     142: checkcast     #19                 // class net/minecraft/world/level/block/state/BlockState
+     145: aastore
+     146: aastore
+     147: aload_0
+     148: iload_2
+     149: iconst_2
+     150: iadd
+     151: iconst_2
+     152: anewarray     #19                 // class net/minecraft/world/level/block/state/BlockState
+     155: dup
+     156: iconst_0
+     157: getstatic     #74                 // Field org/confluence/mod/common/init/block/OreBlocks.DEEPSLATE_ADAMANTITE_ORE:Lnet/neoforged/neoforge/registries/DeferredBlock;
+     160: invokevirtual #55                 // Method net/neoforged/neoforge/registries/DeferredBlock.get:()Ljava/lang/Object;
+     163: checkcast     #8                  // class org/confluence/mod/common/block/natural/StepRevealingBlock
+     166: invokevirtual #61                 // Method defaultBlockState:()Lnet/minecraft/world/level/block/state/BlockState;
+     169: getstatic     #21                 // Field REVEAL_STEP:Lnet/minecraft/world/level/block/state/properties/IntegerProperty;
+     172: iload_1
+     173: invokestatic  #25                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+     176: invokevirtual #31                 // Method net/minecraft/world/level/block/state/BlockState.setValue:(Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Ljava/lang/Object;
+     179: checkcast     #19                 // class net/minecraft/world/level/block/state/BlockState
+     182: aastore
+     183: dup
+     184: iconst_1
+     185: getstatic     #77                 // Field org/confluence/mod/common/init/block/OreBlocks.DEEPSLATE_TITANIUM_ORE:Lnet/neoforged/neoforge/registries/DeferredBlock;
+     188: invokevirtual #55                 // Method net/neoforged/neoforge/registries/DeferredBlock.get:()Ljava/lang/Object;
+     191: checkcast     #8                  // class org/confluence/mod/common/block/natural/StepRevealingBlock
+     194: invokevirtual #61                 // Method defaultBlockState:()Lnet/minecraft/world/level/block/state/BlockState;
+     197: getstatic     #21                 // Field REVEAL_STEP:Lnet/minecraft/world/level/block/state/properties/IntegerProperty;
+     200: iload_1
+     201: invokestatic  #25                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+     204: invokevirtual #31                 // Method net/minecraft/world/level/block/state/BlockState.setValue:(Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Ljava/lang/Object;
+     207: checkcast     #19                 // class net/minecraft/world/level/block/state/BlockState
+     210: aastore
+     211: aastore
+     212: iinc          1, 1
+     215: goto          10
+     218: aload_0
+     219: areturn
+
+  static {};
+    Code:
+       0: ldc           #80                 // String reveal_step
+       2: iconst_0
+       3: iconst_2
+       4: invokestatic  #82                 // Method net/minecraft/world/level/block/state/properties/IntegerProperty.create:(Ljava/lang/String;II)Lnet/minecraft/world/level/block/state/properties/IntegerProperty;
+       7: putstatic     #21                 // Field REVEAL_STEP:Lnet/minecraft/world/level/block/state/properties/IntegerProperty;
+      10: invokedynamic #88,  0             // InvokeDynamic #0:get:()Ljava/util/function/Supplier;
+      15: invokestatic  #91                 // Method net/neoforged/neoforge/common/util/Lazy.of:(Ljava/util/function/Supplier;)Lnet/neoforged/neoforge/common/util/Lazy;
+      18: putstatic     #97                 // Field PAIRS:Lnet/neoforged/neoforge/common/util/Lazy;
+      21: return
+}

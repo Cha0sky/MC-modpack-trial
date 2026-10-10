@@ -1,0 +1,127 @@
+Compiled from "AltarBlock.java"
+public class org.confluence.mod.common.block.functional.crafting.AltarBlock extends net.minecraft.world.level.block.BaseEntityBlock {
+  public static final com.mojang.serialization.MapCodec<org.confluence.mod.common.block.functional.crafting.AltarBlock> CODEC;
+
+  public static final net.minecraft.world.phys.shapes.VoxelShape SHAPE;
+
+  private static final net.minecraft.network.chat.Component TIPS;
+
+  private final org.confluence.mod.common.block.functional.crafting.AltarBlock$Variant variant;
+
+
+  public void playerDestroy(net.minecraft.world.level.Level, net.minecraft.world.entity.player.Player, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.block.entity.BlockEntity, net.minecraft.world.item.ItemStack);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: aload_2
+       3: aload_3
+       4: aload         4
+       6: aload         5
+       8: aload         6
+      10: invokespecial #55                 // Method net/minecraft/world/level/block/BaseEntityBlock.playerDestroy:(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/entity/BlockEntity;Lnet/minecraft/world/item/ItemStack;)V
+      13: aload_2
+      14: instanceof    #59                 // class net/minecraft/server/level/ServerPlayer
+      17: ifeq          194
+      20: aload_2
+      21: checkcast     #59                 // class net/minecraft/server/level/ServerPlayer
+      24: astore        7
+      26: aload         7
+      28: getfield      #61                 // Field net/minecraft/server/level/ServerPlayer.server:Lnet/minecraft/server/MinecraftServer;
+      31: invokestatic  #65                 // InterfaceMethod org/confluence/mod/mixed/IMinecraftServer.isHardmode:(Lnet/minecraft/server/MinecraftServer;)Z
+      34: ifeq          194
+      37: aload         7
+      39: invokevirtual #71                 // Method net/minecraft/server/level/ServerPlayer.serverLevel:()Lnet/minecraft/server/level/ServerLevel;
+      42: astore        8
+      44: aload         8
+      46: invokestatic  #75                 // Method org/confluence/mod/common/data/saved/ConfluenceData.get:(Lnet/minecraft/server/level/ServerLevel;)Lorg/confluence/mod/common/data/saved/ConfluenceData;
+      49: astore        9
+      51: aload         9
+      53: invokevirtual #81                 // Method org/confluence/mod/common/data/saved/ConfluenceData.increaseRevealStep:()Z
+      56: ifeq          93
+      59: aload         8
+      61: invokevirtual #85                 // Method net/minecraft/server/level/ServerLevel.getServer:()Lnet/minecraft/server/MinecraftServer;
+      64: invokevirtual #91                 // Method net/minecraft/server/MinecraftServer.getPlayerList:()Lnet/minecraft/server/players/PlayerList;
+      67: aload         9
+      69: invokevirtual #97                 // Method org/confluence/mod/common/data/saved/ConfluenceData.getRevealStep:()I
+      72: invokedynamic #101,  0            // InvokeDynamic #0:makeConcatWithConstants:(I)Ljava/lang/String;
+      77: invokestatic  #105                // InterfaceMethod net/minecraft/network/chat/Component.translatable:(Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;
+      80: getstatic     #111                // Field org/confluence/lib/color/GlobalColors.MESSAGE:Lorg/confluence/lib/color/IntegerRGB;
+      83: invokevirtual #117                // Method org/confluence/lib/color/IntegerRGB.get:()I
+      86: invokevirtual #121                // Method net/minecraft/network/chat/MutableComponent.withColor:(I)Lnet/minecraft/network/chat/MutableComponent;
+      89: iconst_0
+      90: invokevirtual #127                // Method net/minecraft/server/players/PlayerList.broadcastSystemMessage:(Lnet/minecraft/network/chat/Component;Z)V
+      93: aload         6
+      95: getstatic     #133                // Field org/confluence/mod/common/init/item/HammerItems.PWNHAMMER:Lnet/neoforged/neoforge/registries/DeferredItem;
+      98: invokevirtual #139                // Method net/minecraft/world/item/ItemStack.is:(Lnet/minecraft/core/Holder;)Z
+     101: ifeq          111
+     104: aload         7
+     106: ldc           #142                // String begone_evil
+     108: invokestatic  #144                // Method org/confluence/mod/util/AchievementUtils.awardAchievement:(Lnet/minecraft/server/level/ServerPlayer;Ljava/lang/String;)V
+     111: aload_2
+     112: invokevirtual #150                // Method net/minecraft/world/entity/player/Player.getRandom:()Lnet/minecraft/util/RandomSource;
+     115: astore        10
+     117: aload         10
+     119: iconst_2
+     120: invokeinterface #154,  2          // InterfaceMethod net/minecraft/util/RandomSource.nextInt:(I)I
+     125: iconst_1
+     126: iadd
+     127: istore        11
+     129: iconst_0
+     130: istore        12
+     132: iload         12
+     134: iload         11
+     136: if_icmpge     194
+     139: getstatic     #160                // Field org/confluence/terraentity/init/entity/TEMonsterEntities.WRAITH:Lnet/neoforged/neoforge/registries/DeferredHolder;
+     142: invokevirtual #166                // Method net/neoforged/neoforge/registries/DeferredHolder.get:()Ljava/lang/Object;
+     145: checkcast     #171                // class net/minecraft/world/entity/EntityType
+     148: aload         8
+     150: aload_3
+     151: aload         10
+     153: bipush        -15
+     155: bipush        15
+     157: invokestatic  #173                // Method net/minecraft/util/Mth.randomBetweenInclusive:(Lnet/minecraft/util/RandomSource;II)I
+     160: aload         10
+     162: bipush        -15
+     164: bipush        15
+     166: invokestatic  #173                // Method net/minecraft/util/Mth.randomBetweenInclusive:(Lnet/minecraft/util/RandomSource;II)I
+     169: aload         10
+     171: bipush        -15
+     173: bipush        15
+     175: invokestatic  #173                // Method net/minecraft/util/Mth.randomBetweenInclusive:(Lnet/minecraft/util/RandomSource;II)I
+     178: invokevirtual #179                // Method net/minecraft/core/BlockPos.offset:(III)Lnet/minecraft/core/BlockPos;
+     181: getstatic     #185                // Field net/minecraft/world/entity/MobSpawnType.MOB_SUMMONED:Lnet/minecraft/world/entity/MobSpawnType;
+     184: invokevirtual #191                // Method net/minecraft/world/entity/EntityType.spawn:(Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/MobSpawnType;)Lnet/minecraft/world/entity/Entity;
+     187: pop
+     188: iinc          12, 1
+     191: goto          132
+     194: return
+
+
+  public static boolean hurtPlayerIfBrokenNotAllowed(net.minecraft.world.entity.player.Player, net.minecraft.world.level.block.state.BlockState);
+    Code:
+       0: aload_0
+       1: invokevirtual #361                // Method net/minecraft/world/entity/player/Player.hasInfiniteMaterials:()Z
+       4: ifne          50
+       7: aload_1
+       8: invokevirtual #276                // Method net/minecraft/world/level/block/state/BlockState.getBlock:()Lnet/minecraft/world/level/block/Block;
+      11: instanceof    #8                  // class org/confluence/mod/common/block/functional/crafting/AltarBlock
+      14: ifeq          50
+      17: aload_0
+      18: invokevirtual #27                 // Method net/minecraft/world/entity/player/Player.getMainHandItem:()Lnet/minecraft/world/item/ItemStack;
+      21: getstatic     #364                // Field org/confluence/mod/common/init/ModTags$Items.ABLE_TO_DESTROY_ALTAR:Lnet/minecraft/tags/TagKey;
+      24: invokevirtual #39                 // Method net/minecraft/world/item/ItemStack.is:(Lnet/minecraft/tags/TagKey;)Z
+      27: ifne          50
+      30: aload_0
+      31: aload_0
+      32: invokevirtual #367                // Method net/minecraft/world/entity/player/Player.damageSources:()Lnet/minecraft/world/damagesource/DamageSources;
+      35: invokevirtual #371                // Method net/minecraft/world/damagesource/DamageSources.fellOutOfWorld:()Lnet/minecraft/world/damagesource/DamageSource;
+      38: aload_0
+      39: invokevirtual #377                // Method net/minecraft/world/entity/player/Player.getMaxHealth:()F
+      42: fconst_2
+      43: fdiv
+      44: invokevirtual #381                // Method net/minecraft/world/entity/player/Player.hurt:(Lnet/minecraft/world/damagesource/DamageSource;F)Z
+      47: pop
+      48: iconst_1
+      49: ireturn
+      50: iconst_0
+      51: ireturn

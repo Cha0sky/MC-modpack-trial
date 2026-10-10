@@ -1,0 +1,102 @@
+Compiled from "GamePhase2AttributeModifiers.java"
+public final class org.confluence.mod.common.data.map.GamePhase2AttributeModifiers extends java.lang.Record {
+  private final java.util.Map<org.confluence.mod.common.data.saved.GamePhase, org.confluence.terra_curio.api.primitive.AttributeModifiersValue> map;
+
+  public static final com.mojang.serialization.Codec<org.confluence.mod.common.data.map.GamePhase2AttributeModifiers> CODEC;
+
+
+  public static void applyModifiers(net.minecraft.world.entity.LivingEntity);
+    Code:
+       0: aload_0
+       1: instanceof    #76                 // class net/minecraft/world/entity/player/Player
+       4: ifeq          8
+       7: return
+       8: aload_0
+       9: invokevirtual #78                 // Method net/minecraft/world/entity/LivingEntity.getType:()Lnet/minecraft/world/entity/EntityType;
+      12: astore_1
+      13: getstatic     #84                 // Field org/confluence/mod/common/CommonConfigs.ALLOWS_VANILLA_ENTITIES_TO_PERFORM_STAGE_ATTRIBUTES:Lnet/neoforged/neoforge/common/ModConfigSpec$BooleanValue;
+      16: invokevirtual #90                 // Method net/neoforged/neoforge/common/ModConfigSpec$BooleanValue.get:()Ljava/lang/Object;
+      19: checkcast     #95                 // class java/lang/Boolean
+      22: invokevirtual #97                 // Method java/lang/Boolean.booleanValue:()Z
+      25: ifne          50
+      28: ldc           #101                // String minecraft
+      30: aload_1
+      31: invokevirtual #103                // Method net/minecraft/world/entity/EntityType.builtInRegistryHolder:()Lnet/minecraft/core/Holder$Reference;
+      34: invokevirtual #109                // Method net/minecraft/core/Holder$Reference.key:()Lnet/minecraft/resources/ResourceKey;
+      37: invokevirtual #115                // Method net/minecraft/resources/ResourceKey.location:()Lnet/minecraft/resources/ResourceLocation;
+      40: invokevirtual #121                // Method net/minecraft/resources/ResourceLocation.getNamespace:()Ljava/lang/String;
+      43: invokevirtual #127                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+      46: ifeq          50
+      49: return
+      50: aload_0
+      51: invokevirtual #133                // Method net/minecraft/world/entity/LivingEntity.level:()Lnet/minecraft/world/level/Level;
+      54: invokevirtual #137                // Method net/minecraft/world/level/Level.getDifficulty:()Lnet/minecraft/world/Difficulty;
+      57: astore_2
+      58: aload_2
+      59: getstatic     #143                // Field net/minecraft/world/Difficulty.PEACEFUL:Lnet/minecraft/world/Difficulty;
+      62: if_acmpeq     72
+      65: aload_2
+      66: getstatic     #149                // Field net/minecraft/world/Difficulty.EASY:Lnet/minecraft/world/Difficulty;
+      69: if_acmpne     73
+      72: return
+      73: getstatic     #152                // Field org/confluence/mod/common/init/ModDataMaps.GAME_PHASE_2_ATTRIBUTE_MODIFIERS:Lnet/neoforged/neoforge/registries/datamaps/AdvancedDataMapType;
+      76: aload_1
+      77: invokestatic  #158                // Method org/confluence/mod/common/init/ModDataMaps.getEntityData:(Lnet/neoforged/neoforge/registries/datamaps/DataMapType;Lnet/minecraft/world/entity/EntityType;)Ljava/lang/Object;
+      80: checkcast     #8                  // class org/confluence/mod/common/data/map/GamePhase2AttributeModifiers
+      83: astore_3
+      84: aload_3
+      85: ifnonnull     89
+      88: return
+      89: aload_3
+      90: getstatic     #162                // Field org/confluence/mod/common/data/saved/KillBoard.INSTANCE:Lorg/confluence/mod/common/data/saved/KillBoard;
+      93: invokevirtual #168                // Method org/confluence/mod/common/data/saved/KillBoard.getGamePhase:()Lorg/confluence/mod/common/data/saved/GamePhase;
+      96: invokevirtual #172                // Method get:(Lorg/confluence/mod/common/data/saved/GamePhase;)Lorg/confluence/terra_curio/api/primitive/AttributeModifiersValue;
+      99: invokevirtual #175                // Method org/confluence/terra_curio/api/primitive/AttributeModifiersValue.get:()Lcom/google/common/collect/ImmutableListMultimap;
+     102: astore        4
+     104: aload         4
+     106: invokevirtual #178                // Method com/google/common/collect/ImmutableListMultimap.isEmpty:()Z
+     109: ifeq          113
+     112: return
+     113: aload         4
+     115: invokevirtual #183                // Method com/google/common/collect/ImmutableListMultimap.asMap:()Lcom/google/common/collect/ImmutableMap;
+     118: invokevirtual #187                // Method com/google/common/collect/ImmutableMap.entrySet:()Lcom/google/common/collect/ImmutableSet;
+     121: invokevirtual #193                // Method com/google/common/collect/ImmutableSet.iterator:()Lcom/google/common/collect/UnmodifiableIterator;
+     124: astore        5
+     126: aload         5
+     128: invokeinterface #199,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+     133: ifeq          224
+     136: aload         5
+     138: invokeinterface #204,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+     143: checkcast     #207                // class java/util/Map$Entry
+     146: astore        6
+     148: aload_0
+     149: aload         6
+     151: invokeinterface #209,  1          // InterfaceMethod java/util/Map$Entry.getKey:()Ljava/lang/Object;
+     156: checkcast     #212                // class net/minecraft/core/Holder
+     159: invokevirtual #214                // Method net/minecraft/world/entity/LivingEntity.getAttribute:(Lnet/minecraft/core/Holder;)Lnet/minecraft/world/entity/ai/attributes/AttributeInstance;
+     162: astore        7
+     164: aload         7
+     166: ifnonnull     172
+     169: goto          126
+     172: aload         6
+     174: invokeinterface #218,  1          // InterfaceMethod java/util/Map$Entry.getValue:()Ljava/lang/Object;
+     179: checkcast     #221                // class java/util/Collection
+     182: invokeinterface #223,  1          // InterfaceMethod java/util/Collection.iterator:()Ljava/util/Iterator;
+     187: astore        8
+     189: aload         8
+     191: invokeinterface #199,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+     196: ifeq          221
+     199: aload         8
+     201: invokeinterface #204,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+     206: checkcast     #226                // class net/minecraft/world/entity/ai/attributes/AttributeModifier
+     209: astore        9
+     211: aload         7
+     213: aload         9
+     215: invokevirtual #228                // Method net/minecraft/world/entity/ai/attributes/AttributeInstance.addOrReplacePermanentModifier:(Lnet/minecraft/world/entity/ai/attributes/AttributeModifier;)V
+     218: goto          189
+     221: goto          126
+     224: aload_0
+     225: aload_0
+     226: invokevirtual #234                // Method net/minecraft/world/entity/LivingEntity.getMaxHealth:()F
+     229: invokevirtual #238                // Method net/minecraft/world/entity/LivingEntity.setHealth:(F)V
+     232: return

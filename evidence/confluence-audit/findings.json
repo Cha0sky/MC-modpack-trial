@@ -1,0 +1,221 @@
+{
+  "audit_date": "2026-10-10",
+  "base_commit": "4d827d38d4aa09666ec86bf01ca2be41b3f32054",
+  "confluence": {
+    "version": "1.2.4",
+    "jar": "D:\\PCL 正式版 2.10.6 (1)\\.minecraft\\versions\\星庭远征-开发版\\mods\\[汇流来世] ConfluenceOtherworld-1.2.4-260226.jar",
+    "bytes": 35564736,
+    "sha256": "b86bf2ef565760127d7c1e0e8e7fce0b71e3f7c08056066c2dd6ad56f1e4d0b6"
+  },
+  "embedded_dependencies": {
+    "terra_entity": {
+      "version": "1.2.1",
+      "sha256": "5b02411afbe693f1626a85b53fbc7a263184eb69b40c6b52f695d2b96764a7ef"
+    },
+    "confluence_magic_lib": {
+      "version": "0.0.8",
+      "sha256": "10d6ab159bff354d0d7318f269649b9276cd71dab99343da7b06ab70919eff49"
+    }
+  },
+  "native_base_phases": [
+    {
+      "id": "before_skeletron",
+      "order": 0
+    },
+    {
+      "id": "after_skeletron",
+      "order": 100
+    },
+    {
+      "id": "wall_of_flesh",
+      "order": 200
+    },
+    {
+      "id": "mechanical_bosses",
+      "order": 300
+    },
+    {
+      "id": "plantera",
+      "order": 400
+    },
+    {
+      "id": "golem",
+      "order": 500
+    },
+    {
+      "id": "moon_lord",
+      "order": 600
+    }
+  ],
+  "native_persistence": {
+    "kill_board_key": "confluence:kill_board",
+    "kill_board_fields": [
+      "defeated_bosses",
+      "defeated_events",
+      "game_phase"
+    ],
+    "primary_level_data_mixin": true,
+    "confluence_data_storage_name": "confluence",
+    "cloak_key": "confluence:global_cloak_data"
+  },
+  "hardmode": {
+    "secret_flag_bit": 4,
+    "enter_event_cancellable": false,
+    "event_published_after_conversion_completed": true,
+    "conversion_and_milestone_are_separate_states": true
+  },
+  "direct_set_game_phase_references": [
+    "org/confluence/mod/common/data/saved/KillBoard.class",
+    "org/confluence/mod/common/init/ModCommands.class"
+  ],
+  "summon_event_cancellable": true,
+  "config_snapshot": {
+    "instantlyHardmodeConversion": false,
+    "allowsVanillaEntitiesToPerformStageAttributes": false,
+    "doMeteoriteSpawning": true,
+    "eyeOfCthulhuNatureSpawning": true,
+    "deerclopsNatureSpawning": true
+  },
+  "sources_unchanged_verified": true,
+  "javap_class_count": 43,
+  "public_source_commit": {
+    "url": "https://api.github.com/repos/Magic-team-jvav/confluence/commits?sha=neoforge%2F1.21.1&until=2026-02-25T17%3A03%3A00Z&per_page=1",
+    "sha": "08d2e722e136bc96c4a85f8ba95daf5185cf7bc2",
+    "date": "2026-02-25T17:01:01Z",
+    "message": "1.2.4",
+    "exact_binary_correspondence_verified": false
+  },
+  "public_source_recompiled_for_binary_equivalence": false,
+  "game_started": false,
+  "world_save_read_or_modified": false,
+  "instance_modified": false,
+  "mods_installed": false,
+  "evidence_files": [
+    {
+      "file": "class-references.json",
+      "sha256": "2312bfd9e2e2ce3996887151ca1113782e347159a4b9fbf4dceb1ef49a4b010d"
+    },
+    {
+      "file": "progression-tags.json",
+      "sha256": "2fc40dc462a4731e15300e30325e1562377f5c97a7078fa84fb7b27990ada07b"
+    },
+    {
+      "file": "confluence-common.toml",
+      "sha256": "36173f0f0ebdaf5b9699a638b991fbbd6e42dd1752283a464114fcb64c6ff045"
+    },
+    {
+      "file": "confluence-startup.toml",
+      "sha256": "5e6e9a9c0112b9efd65407e133d97ffc8999b2f22f2d3565a36510a1d8e9a80b"
+    },
+    {
+      "file": "terra_entity-server.toml",
+      "sha256": "f9fcec57e992adaf6425cd59686af5e206413030db7e74fd4d3261be053097af"
+    },
+    {
+      "file": "upstream-commit.json",
+      "sha256": "e603fef6ea06d353c9ba325a0e8aecbc400ffd1c497ba15e04f59337a070e08d"
+    },
+    {
+      "file": "upstream-sources.json",
+      "sha256": "a05cc504926cabe99f03855dbe607dc9d29d1555de54d540688990549185f537"
+    },
+    {
+      "file": "bytecode/GamePhase.txt",
+      "raw_javap_sha256": "7cb475d5a2625440f19080269011db5dc70a1e9d4df37b4c780f15d6377ac944",
+      "sha256": "7cb475d5a2625440f19080269011db5dc70a1e9d4df37b4c780f15d6377ac944"
+    },
+    {
+      "file": "bytecode/KillBoard.txt",
+      "raw_javap_sha256": "2c4caafdf5af42c2b42839d25a123161d554adc8b344dfe5f468a9eb49815290",
+      "sha256": "59c2973f68f44716fac3c2fdcd3a354989b4954be5678a44a34a10af5ff9abd7"
+    },
+    {
+      "file": "bytecode/EnterHardmodeEvent.txt",
+      "raw_javap_sha256": "9da9d4769e4f28267b6cac0e255c43adee54eee1ff49062bf1e050cdee5732ee",
+      "sha256": "9da9d4769e4f28267b6cac0e255c43adee54eee1ff49062bf1e050cdee5732ee"
+    },
+    {
+      "file": "bytecode/HardmodeConvertor.txt",
+      "raw_javap_sha256": "17d9ad40e32cd7c7b794da495055eb28ebc1356d1fd65c02282a36e45cfc70ff",
+      "sha256": "9c7816aa60e0ac28eba637154f78866bb67563ebeaf7c9157075b5c3249d5c93"
+    },
+    {
+      "file": "bytecode/ConfluenceData.txt",
+      "raw_javap_sha256": "396a6c071add409135dbe5dea2bfbdca7e3d2fc37c25727705e6f616c8746945",
+      "sha256": "368a72e162c5f95e14239544bb9b01fb42c7db2343e162e4ea22390dcb0d0e9d"
+    },
+    {
+      "file": "bytecode/GlobalCloakData.txt",
+      "raw_javap_sha256": "652f3a33d34fe07e698f5d0c3ce7149ef74f2d40ee2dc6978d6af845a25683ad",
+      "sha256": "02874097b885a47838e688eb0d63c377d46b5b89d78b6787ad54c0ae5de40986"
+    },
+    {
+      "file": "bytecode/AltarBlock.txt",
+      "raw_javap_sha256": "be57a42aecac3dfe3461e01b9eaace988bde93d73a95b809c193668be5c743e2",
+      "sha256": "99bdd4175a2aeba1f231b554c9727e2a7b464f9f69121b3bbc97c09a7bb5c31b"
+    },
+    {
+      "file": "bytecode/StepRevealingBlock.txt",
+      "raw_javap_sha256": "1d52234d018827ecdb68e2eb54ceb1ce9d5f134d9119f2e89c2257b27b238f31",
+      "sha256": "1d52234d018827ecdb68e2eb54ceb1ce9d5f134d9119f2e89c2257b27b238f31"
+    },
+    {
+      "file": "bytecode/IMinecraftServer.txt",
+      "raw_javap_sha256": "7b88b9b42093a978d222b9cad3438d5ca7f6a89760b2b29f69157621135eb518",
+      "sha256": "ec3f49cca8747b1ec9eef7cb4ef7fb3f8ed7f33eda43807d8fa4161dd55f41c5"
+    },
+    {
+      "file": "bytecode/WorldOptionsMixin.txt",
+      "raw_javap_sha256": "42467ea27c6d82237bac50988ca62c5ab00169a0cb12f7676b5c2d58c392a747",
+      "sha256": "afc0a267e25adbc663f484bcc37d8d45cac4d6db3f96319ebb175c672d6438aa"
+    },
+    {
+      "file": "bytecode/MagicLib-PrimaryLevelDataMixin.txt",
+      "raw_javap_sha256": "356d9af821f9966f822b281367cc82848be26b577cf88ecb5727fe1ab7a3862c",
+      "sha256": "356d9af821f9966f822b281367cc82848be26b577cf88ecb5727fe1ab7a3862c"
+    },
+    {
+      "file": "bytecode/ModUtils.txt",
+      "raw_javap_sha256": "8f55e04279fb0899859b2c2848ae25aee9ccc599b0cc345a14e7c3e69b53a21f",
+      "sha256": "d023e822e167a31e49ee95a2c3bbeca6011dcefdbf830552a74a261cbe98697a"
+    },
+    {
+      "file": "bytecode/LivingEntityEvents.txt",
+      "raw_javap_sha256": "a3ed0c260a67727e8723e201445fb60f55296a7b07884a9b6f991ffd46417685",
+      "sha256": "869be5b3b70432c8ed192ac8b345b6e22c0b2c47ee4faf9cced14c68051c2048"
+    },
+    {
+      "file": "bytecode/TickEvents.txt",
+      "raw_javap_sha256": "38aff2f435b06d014a71afd4e1b6109d63f265490affc102c6b5d2e8ead61ef0",
+      "sha256": "2757692013b40d668f885445e2494bba5bcada636cfd8e328f292f705df1f03e"
+    },
+    {
+      "file": "bytecode/GamePhase2AttributeModifiers.txt",
+      "raw_javap_sha256": "aca80fc63401677d3e984f0cf569e4be75a66fe39b8618ca3ae622ddaf78367e",
+      "sha256": "88010883040f8213420d3978bbc46d4f6b88a1ea52870df33a5d669011a822f3"
+    },
+    {
+      "file": "bytecode/GamePhaseLootItemCondition.txt",
+      "raw_javap_sha256": "e0ef2fb2a45ced74f9b47aad9924e953c9698756cacc5ea31bcac01c22c37c2b",
+      "sha256": "131e09894a8805692942329a67697061d3f06d0a59455eb48ea9cbd13867d0ac"
+    },
+    {
+      "file": "bytecode/TEBossEntities.txt",
+      "raw_javap_sha256": "c2002cbda36ebe571d14973c4ceb82a5724f1ee87aeaaa2719f730da1ca6e58b",
+      "sha256": "c2002cbda36ebe571d14973c4ceb82a5724f1ee87aeaaa2719f730da1ca6e58b"
+    },
+    {
+      "file": "bytecode/TEBossEvent$Summon.txt",
+      "raw_javap_sha256": "5a7c8295b72f74222b8e9aa5879daef1fde9103c842bccf8ff733641b037a3a0",
+      "sha256": "5a7c8295b72f74222b8e9aa5879daef1fde9103c842bccf8ff733641b037a3a0"
+    },
+    {
+      "file": "bytecode/Confluence.txt",
+      "raw_javap_sha256": "79bf0b8d52252209b64c140b6529963f4988c6c874d4252a9be4cbf44903a3d9",
+      "sha256": "832523da99aa9b9cc1e5a0563ca49cdbb6c57c5cc53e257c8ee72cb43f177d81"
+    }
+  ],
+  "proposed_policy": "preserve native progression; read-only import of completed milestones into independent monotonic world progression data",
+  "policy_implemented": false,
+  "policy_approved_as_final_design": false
+}
