@@ -1,0 +1,63 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev' version '2.0.81'
+}
+version = mod_version
+group = 'local.lostworld'
+base { archivesName = 'world-progression-core' }
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+sourceSets {
+    gametest {
+        compileClasspath += sourceSets.main.output + sourceSets.main.compileClasspath
+        runtimeClasspath += sourceSets.main.output + sourceSets.main.runtimeClasspath
+    }
+}
+neoForge {
+    version = project.neo_version
+    runs {
+        gameTestServer {
+            type = 'gameTestServer'
+            systemProperty 'neoforge.enabledGameTestNamespaces', 'world_progression_core'
+            systemProperty 'lostworld.disableAutomaticSettlement', 'true'
+            gameDirectory = project.file(project.findProperty('chapterTestDir') ?: 'run-gametest')
+        }
+        server {
+            server()
+            programArgument '--nogui'
+            gameDirectory = project.file(project.findProperty('chapterServerDir') ?: 'run-server')
+            if (project.hasProperty('chapterWorldGenSmoke')) {
+                systemProperty 'lostworld.smokeWorldGeneration', 'true'
+            }
+        }
+    }
+    mods {
+        world_progression_core {
+            sourceSet(sourceSets.main)
+            sourceSet(sourceSets.gametest)
+        }
+    }
+}
+configurations {
+    localRuntime
+    runtimeClasspath.extendsFrom localRuntime
+}
+dependencies {
+    implementation files('../evolvingblade/build/libs/evolvingblade-1.1.0.jar')
+    if (project.hasProperty('chapterIntegrationMods')) {
+        localRuntime fileTree('../../work/chapter1/integration-mods') { include '*.jar' }
+    }
+}
+tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }
+tasks.named('processResources') {
+    filteringCharset = 'UTF-8'
+    inputs.property('mod_version', project.version)
+    filesMatching('META-INF/neoforge.mods.toml') { expand(mod_version: project.version) }
+}
+tasks.register('verifyLogic', JavaExec) {
+    group = 'verification'
+    dependsOn tasks.named('testClasses')
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'local.lostworld.ChapterLogicCheck'
+}
+tasks.named('check') { dependsOn tasks.named('verifyLogic') }
+tasks.named('jar') { from('LICENSE') }

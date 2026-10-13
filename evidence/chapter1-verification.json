@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-13",
+  "minecraft": "1.21.1",
+  "neoforge": "21.1.248",
+  "java": "Temurin 21.0.12+8",
+  "module": "world_progression_core 0.1.0",
+  "jar_sha256": "31a29ce8336f6c67387e3a325272459e20ed4a99699f61734c012c78a44ebff1",
+  "build_and_state_checks": "passed",
+  "standalone_gametest": {
+    "required": 1,
+    "passed": 1,
+    "real_confluence_boss_loaded": false
+  },
+  "normal_world": {
+    "seed": 20261013,
+    "origin": [
+      32,
+      63,
+      -608
+    ],
+    "home": [
+      42,
+      64,
+      -580
+    ],
+    "terrain_sites": 6,
+    "server_ready_seconds": 4.912,
+    "reload_passed": true,
+    "reconstructed_on_reload": false
+  },
+  "actual_client": {
+    "first_deployment_loaded": true,
+    "java21_startup_succeeded": true,
+    "user_created_test_world": true,
+    "user_reported_creation_problem": true,
+    "stopped": true,
+    "final_deployment_client_retest": false
+  },
+  "confluence_development_test": {
+    "completed": false,
+    "blocker": "DataComponentsMixin lambda$static$1 injection target missing",
+    "real_king_death_verified": false
+  },
+  "ftb_in_game_ui_and_rewards_verified": false,
+  "preexisting_non_task_files_checked": 41694,
+  "unexpected_changes": 0,
+  "log_evidence": {
+    "gametest": {
+      "path": "work/chapter1/gametest-standalone-final/logs/latest.log",
+      "sha256": "f08cd2d440b683cbbbd80b2de46308a94840f9405594ed9a7bb6bf469b38b06a",
+      "excerpts": [
+        "[1310月2026 23:32:24.387] [Server thread/INFO] [local.lostworld.LostWorld/]: CHAPTER_TEST_STANDALONE_PASS (Confluence boss not loaded)",
+        "[1310月2026 23:32:24.419] [Server thread/INFO] [net.minecraft.gametest.framework.GameTestServer/]: All 1 required tests passed :)"
+      ]
+    },
+    "new_world": {
+      "path": "work/chapter1/worldgen-smoke-06-first-load.log",
+      "sha256": "d570687e1daa9920e9c0520c93c4a197ee64492dfeaa1fc620c3b5f6c270655a",
+      "excerpts": [
+        "[1310月2026 23:31:16.935] [Server thread/INFO] [local.lostworld.LostWorld/]: 启程聚落已生成：BlockPos{x=32, y=63, z=-608}, 玩家之家：BlockPos{x=42, y=64, z=-580}, 实际选址检查 6 次",
+        "[1310月2026 23:31:17.450] [Server thread/INFO] [local.lostworld.LostWorld/]: CHAPTER_TEST_NORMAL_WORLD_GENERATION_PASS origin=BlockPos{x=32, y=63, z=-608} home=BlockPos{x=42, y=64, z=-580}"
+      ]
+    },
+    "reload": {
+      "path": "work/chapter1/worldgen-smoke-06/logs/latest.log",
+      "sha256": "f3cc33763d8b33c3df214c7e03dde417506a977f3249c2b3b02224f3c029de65",
+      "excerpts": [
+        "[1310月2026 23:33:18.482] [Server thread/INFO] [local.lostworld.LostWorld/]: CHAPTER_TEST_NORMAL_WORLD_GENERATION_PASS origin=BlockPos{x=32, y=63, z=-608} home=BlockPos{x=42, y=64, z=-580}"
+      ]
+    },
+    "confluence_dev": {
+      "path": "work/chapter1/gametest-confluence-01/logs/latest.log",
+      "sha256": "e06e6acea41b3a924cb9869c5bcc40be5554701c0c1bd399fb03fcbc4023d2b9",
+      "excerpts": [
+        "[1310月2026 23:15:40.569] [main/FATAL] [mixin/]: Mixin apply for mod confluence failed confluence.mixins.json:item.DataComponentsMixin from mod confluence -> net.minecraft.core.component.DataComponents: org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionException Critical injection failure: @WrapOperation annotation on modify could not find any targets matching 'lambda$static$1' in net/minecraft/core/component/DataComponents. No refMap loaded. [INJECT_PREPARE Applicator Phase -> confluence.mixins.json:item.DataComponentsMixin from mod confluence -> Prepare Injections -> wrapOperation$zee000$confluence$modify(IILcom/llamalad7/mixinextras/injector/wrapoperation/Operation;)Lcom/mojang/serialization/Codec; -> Parse ->  -> Validate Targets]",
+        "org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionException: Critical injection failure: @WrapOperation annotation on modify could not find any targets matching 'lambda$static$1' in net/minecraft/core/component/DataComponents. No refMap loaded. [INJECT_PREPARE Applicator Phase -> confluence.mixins.json:item.DataComponentsMixin from mod confluence -> Prepare Injections -> wrapOperation$zee000$confluence$modify(IILcom/llamalad7/mixinextras/injector/wrapoperation/Operation;)Lcom/mojang/serialization/Codec; -> Parse ->  -> Validate Targets]"
+      ]
+    }
+  }
+}

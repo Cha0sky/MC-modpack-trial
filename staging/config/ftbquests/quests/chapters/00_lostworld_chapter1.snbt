@@ -1,0 +1,322 @@
+{
+  "id": "DA0FF97AED39E75E",
+  "filename": "00_lostworld_chapter1",
+  "order_index": -1,
+  "icon": {
+    "id": "evolvingblade:star_eater"
+  },
+  "quests": [
+    {
+      "id": "4B61DD93ABC703EA",
+      "x": 0,
+      "y": 0,
+      "icon": {
+        "id": "minecraft:red_bed"
+      },
+      "min_width": 300,
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "EF62D75B394904D5",
+          "type": "advancement",
+          "advancement": "world_progression_core:arrive",
+          "criterion": "done"
+        }
+      ],
+      "rewards": []
+    },
+    {
+      "id": "8464CA606F343573",
+      "x": 2,
+      "y": 0,
+      "icon": {
+        "id": "minecraft:compass"
+      },
+      "min_width": 300,
+      "dependencies": [
+        "4B61DD93ABC703EA"
+      ],
+      "tasks": [
+        {
+          "id": "E55C55209275056E",
+          "type": "advancement",
+          "advancement": "world_progression_core:explore",
+          "criterion": "done"
+        }
+      ],
+      "rewards": []
+    },
+    {
+      "id": "9991EA50DCDCE562",
+      "x": 4,
+      "y": 0,
+      "icon": {
+        "id": "minecraft:stone_pickaxe"
+      },
+      "min_width": 300,
+      "dependencies": [
+        "8464CA606F343573"
+      ],
+      "tasks": [
+        {
+          "id": "E9969EFADB557A46",
+          "type": "item",
+          "item": {
+            "id": "minecraft:stone_pickaxe",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "rewards": []
+    },
+    {
+      "id": "36C3A881016E5E96",
+      "x": 6,
+      "y": 0,
+      "icon": {
+        "id": "minecraft:raw_iron"
+      },
+      "min_width": 300,
+      "dependencies": [
+        "9991EA50DCDCE562"
+      ],
+      "tasks": [
+        {
+          "id": "6AF8F0E1473C07D3",
+          "type": "advancement",
+          "advancement": "world_progression_core:first_mine",
+          "criterion": "done"
+        },
+        {
+          "id": "C606BB8226C92CD2",
+          "type": "item",
+          "item": {
+            "id": "minecraft:cobblestone",
+            "count": 1
+          },
+          "count": 32,
+          "consume_items": false
+        },
+        {
+          "id": "472266CDC28435B7",
+          "type": "item",
+          "item": {
+            "id": "minecraft:coal",
+            "count": 1
+          },
+          "count": 8,
+          "consume_items": false
+        },
+        {
+          "id": "89A1EB8B6A78795B",
+          "type": "item",
+          "item": {
+            "id": "minecraft:raw_iron",
+            "count": 1
+          },
+          "count": 6,
+          "consume_items": false
+        }
+      ],
+      "rewards": []
+    },
+    {
+      "id": "C500C181673A4FB3",
+      "x": 8,
+      "y": -1,
+      "icon": {
+        "id": "infinitecore:template_dirt"
+      },
+      "min_width": 300,
+      "dependencies": [
+        "36C3A881016E5E96"
+      ],
+      "tasks": [
+        {
+          "id": "92B4551E91979393",
+          "type": "item",
+          "item": {
+            "id": "infinitecore:template_dirt",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "rewards": []
+    },
+    {
+      "id": "A039A0EE2EAB186F",
+      "x": 10,
+      "y": -1,
+      "icon": {
+        "id": "infinitecore:dirt_generator"
+      },
+      "min_width": 300,
+      "dependencies": [
+        "C500C181673A4FB3"
+      ],
+      "tasks": [
+        {
+          "id": "CC086D2D749528D2",
+          "type": "advancement",
+          "advancement": "world_progression_core:craft_dirt_generator",
+          "criterion": "done"
+        }
+      ],
+      "rewards": []
+    },
+    {
+      "id": "49639F9E7F91B628",
+      "x": 8,
+      "y": 1,
+      "icon": {
+        "id": "create:andesite_alloy"
+      },
+      "min_width": 300,
+      "dependencies": [
+        "36C3A881016E5E96"
+      ],
+      "tasks": [
+        {
+          "id": "AC0B6BD6983424B6",
+          "type": "item",
+          "item": {
+            "id": "create:andesite_alloy",
+            "count": 1
+          },
+          "count": 4,
+          "consume_items": false
+        }
+      ],
+      "rewards": []
+    },
+    {
+      "id": "93DACF956E61E42F",
+      "x": 10,
+      "y": 1,
+      "icon": {
+        "id": "create:hand_crank"
+      },
+      "min_width": 300,
+      "dependencies": [
+        "49639F9E7F91B628"
+      ],
+      "tasks": [
+        {
+          "id": "BEE6DE5260EADCD5",
+          "type": "item",
+          "item": {
+            "id": "create:shaft",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        },
+        {
+          "id": "99CF50764B93B905",
+          "type": "item",
+          "item": {
+            "id": "create:cogwheel",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        },
+        {
+          "id": "B67A7C1679231F41",
+          "type": "item",
+          "item": {
+            "id": "create:hand_crank",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        },
+        {
+          "id": "C1E0F7B9BA91A7EC",
+          "type": "item",
+          "item": {
+            "id": "create:andesite_casing",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "rewards": []
+    },
+    {
+      "id": "04E0645E6BC170B0",
+      "x": 12,
+      "y": 0,
+      "icon": {
+        "id": "beyonddimensions:net_creater"
+      },
+      "min_width": 300,
+      "dependencies": [
+        "A039A0EE2EAB186F",
+        "93DACF956E61E42F"
+      ],
+      "tasks": [
+        {
+          "id": "6BDAE420BDABAFF2",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "2D4D8D954F07BA98",
+          "type": "item",
+          "item": {
+            "id": "beyonddimensions:net_creater",
+            "count": 1
+          },
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "C41D1DEFF4C0B58E",
+      "x": 14,
+      "y": 0,
+      "icon": {
+        "id": "minecraft:slime_block"
+      },
+      "min_width": 300,
+      "dependencies": [
+        "04E0645E6BC170B0"
+      ],
+      "tasks": [
+        {
+          "id": "32C62F6D89B0ED7D",
+          "type": "advancement",
+          "advancement": "world_progression_core:unlock_evil",
+          "criterion": "done"
+        }
+      ],
+      "rewards": []
+    },
+    {
+      "id": "259C64DF4D981F3C",
+      "x": 16,
+      "y": 0,
+      "icon": {
+        "id": "minecraft:map"
+      },
+      "min_width": 300,
+      "dependencies": [
+        "C41D1DEFF4C0B58E"
+      ],
+      "tasks": [
+        {
+          "id": "051137D7251B899F",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": []
+    }
+  ]
+}

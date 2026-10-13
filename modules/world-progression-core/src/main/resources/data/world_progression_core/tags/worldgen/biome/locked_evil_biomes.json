@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "confluence:the_corruption",
+      "required": false
+    },
+    {
+      "id": "confluence:the_corruption_desert",
+      "required": false
+    },
+    {
+      "id": "confluence:the_corruption_tundra",
+      "required": false
+    },
+    {
+      "id": "confluence:the_crimson",
+      "required": false
+    },
+    {
+      "id": "confluence:the_crimson_desert",
+      "required": false
+    },
+    {
+      "id": "confluence:the_crimson_tundra",
+      "required": false
+    }
+  ]
+}

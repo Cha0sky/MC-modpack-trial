@@ -28,7 +28,11 @@ def allowed(rules):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--java", type=Path, default=JAVA)
+    parser.add_argument("--receipt-prefix", default="development-client")
     args = parser.parse_args()
+    if not re.fullmatch(r"[a-z0-9-]+", args.receipt_prefix):
+        raise RuntimeError("Invalid evidence filename prefix")
     doc = json.loads((INSTANCE / (INSTANCE.name + ".json")).read_text("utf-8-sig"))
     cp = []
     for library in doc["libraries"]:
@@ -65,16 +69,16 @@ def main():
                 value = entry["value"]
                 output.extend(expand(x) for x in (value if isinstance(value, list) else [value]))
         return output
-    command = [str(JAVA), "-Xmx6G", "-Dfile.encoding=UTF-8"] + arguments(doc["arguments"]["jvm"]) + [doc["mainClass"]] + arguments(doc["arguments"]["game"])
+    command = [str(args.java), "-Xmx6G", "-Dfile.encoding=UTF-8"] + arguments(doc["arguments"]["jvm"]) + [doc["mainClass"]] + arguments(doc["arguments"]["game"])
     if len(subprocess.list2cmdline(command)) > 32000:
         raise RuntimeError("Command too long")
     if args.dry_run:
         print(json.dumps({"libraries_present": len(cp), "instance": str(INSTANCE), "qa_name": name, "launches": False}, ensure_ascii=False))
         return
-    log_path = ROOT / "evidence" / "development-client-console.log"
+    log_path = ROOT / "evidence" / (args.receipt_prefix + "-console.log")
     with log_path.open("wb") as log:
         process = subprocess.Popen(command, cwd=INSTANCE, stdout=log, stderr=subprocess.STDOUT, creationflags=subprocess.CREATE_NO_WINDOW)
-    (ROOT / "evidence" / "development-client-launch.json").write_text(json.dumps({"pid": process.pid, "instance": str(INSTANCE), "qa_profile": name, "log": str(log_path), "opens_existing_save": False}, ensure_ascii=False, indent=2), encoding="utf-8")
+    (ROOT / "evidence" / (args.receipt_prefix + "-launch.json")).write_text(json.dumps({"pid": process.pid, "instance": str(INSTANCE), "java": str(args.java), "qa_profile": name, "log": str(log_path), "opens_existing_save": False}, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps({"pid": process.pid, "log": str(log_path)}))
 
 

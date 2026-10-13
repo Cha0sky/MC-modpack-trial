@@ -1,0 +1,32 @@
+{
+  "instance": "D:\\PCL 正式版 2.10.6 (1)\\.minecraft\\versions\\星庭远征-开发版",
+  "approved_scope": "first chapter prototype",
+  "applied": true,
+  "files": [
+    {
+      "path": "mods\\world-progression-core-0.1.0.jar",
+      "before_sha256": "2c1f0c7374d00c29f6c64c58bf1a25a6f9a964d328428ba2a12bd13466525e4d",
+      "after_sha256": "31a29ce8336f6c67387e3a325272459e20ed4a99699f61734c012c78a44ebff1",
+      "existed": true
+    },
+    {
+      "path": "config\\ftbquests\\quests\\chapters\\00_lostworld_chapter1.snbt",
+      "before_sha256": "f35cc86931e9149cfad47495803454faa7bc559963bb83d3ac0d18f86f8f297a",
+      "after_sha256": "f35cc86931e9149cfad47495803454faa7bc559963bb83d3ac0d18f86f8f297a",
+      "existed": true
+    },
+    {
+      "path": "config\\ftbquests\\quests\\lang\\zh_cn.snbt",
+      "before_sha256": "7cfc037103a769f9d59e1b01c378e0ffedee235459a0a6858f1abc699f8120b7",
+      "after_sha256": "7cfc037103a769f9d59e1b01c378e0ffedee235459a0a6858f1abc699f8120b7",
+      "existed": true
+    },
+    {
+      "path": "config\\ftbquests\\quests\\lang\\en_us.snbt",
+      "before_sha256": "7cfc037103a769f9d59e1b01c378e0ffedee235459a0a6858f1abc699f8120b7",
+      "after_sha256": "7cfc037103a769f9d59e1b01c378e0ffedee235459a0a6858f1abc699f8120b7",
+      "existed": true
+    }
+  ],
+  "backup": "D:\\PCL 正式版 2.10.6 (1)\\codex\\modpack-project\\backups\\chapter1-20261013-233236"
+}

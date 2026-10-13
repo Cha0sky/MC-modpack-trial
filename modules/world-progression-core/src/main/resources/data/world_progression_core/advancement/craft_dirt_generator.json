@@ -1,0 +1,10 @@
+{
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "infinitecore:dirt_generator"
+      }
+    }
+  }
+}
