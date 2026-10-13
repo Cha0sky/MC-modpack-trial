@@ -19,30 +19,36 @@ import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.Heightmap;
+import net.minecraft.world.level.biome.Biomes;
 
-/** Places our vanilla blueprint; automatic callers must be inside CreateSpawnPosition. */
+/** Places our blueprint only in a marked new world, after vanilla spawn preparation. */
 public final class SettlementBuilder {
     public record Result(BlockPos origin, BlockPos home, BlockPos bed, int blocks) {}
     private SettlementBuilder() {}
 
-    public static Result createForFreshWorld(ServerLevel level) {
+    public static Result createForMarkedWorld(ServerLevel level) {
         ChapterData existing = ChapterData.find(level);
-        if (existing != null && existing.hasSettlement()) return null;
-        ChunkPos spawn = new ChunkPos(level.getChunkSource().randomState().sampler().findSpawnPosition());
+        if (existing == null || !existing.settlementPending() || existing.hasSettlement()) return null;
+        BlockPos spawn = level.getSharedSpawnPos();
         java.util.Map<String,Integer> rejected=new java.util.TreeMap<>();
         int terrainSites=0;
-        // Spiral-like rings near the game's own climate-selected spawn, bounded search.
-        search: for (int ring = 0; ring <= 32; ring++) {
+        // Prefer flat biome candidates. Noise probes do not generate chunks; at most 8 sites do.
+        for (int pass=0;pass<2;pass++) {
+        int passSites=0;
+        search: for (int ring = 0; ring <= 16; ring++) {
             for (int dx = -ring; dx <= ring; dx++) {
                 for (int dz = -ring; dz <= ring; dz++) {
                     if (Math.max(Math.abs(dx), Math.abs(dz)) != ring) continue;
-                    int x = spawn.getMinBlockX() + dx * 96;
-                    int z = spawn.getMinBlockZ() + dz * 96;
+                    int x = spawn.getX()-22 + dx * 64;
+                    int z = spawn.getZ()-19 + dz * 64;
                     // Climate/noise query does not generate a chunk. Skip oceans before terrain work.
                     var biome=level.getChunkSource().getGenerator().getBiomeSource().getNoiseBiome(
                             (x+22)>>2,(level.getSeaLevel()+8)>>2,(z+19)>>2,level.getChunkSource().randomState().sampler());
                     if (biome.is(BiomeTags.IS_OCEAN) || biome.is(BiomeTags.IS_RIVER) || biome.is(EvilBoundary.LOCKED)) continue;
-                    if (terrainSites++>=32) break search;
+                    boolean flatBiome=biome.is(Biomes.PLAINS) || biome.is(Biomes.SUNFLOWER_PLAINS) || biome.is(Biomes.SAVANNA);
+                    if (flatBiome!=(pass==0)) continue;
+                    if (passSites>=4) break search;
+                    passSites++; terrainSites++;
                     BlockPos origin = suitableSite(level, x, z,rejected);
                     if (origin != null) {
                         Result result = place(level, origin);
@@ -53,7 +59,8 @@ public final class SettlementBuilder {
                 }
             }
         }
-        LostWorld.LOG.error("附近未找到安全的聚落地块：{}；保留原生出生点。",rejected);
+        }
+        LostWorld.LOG.error("有限检查 {} 处后未找到安全聚落地块：{}；保留原版出生点，聚落尚未生成。",terrainSites,rejected);
         return null;
     }
 
@@ -73,7 +80,7 @@ public final class SettlementBuilder {
                 if (!ground.isSolidRender(level,surface)) return reject(reasons,"non-solid:"+ground.getBlock());
                 if (EvilBoundary.evil(level,surface)) return reject(reasons,"evil");
                 min = Math.min(min,y); max = Math.max(max,y); sum += y; count++;
-                if (max-min > 8) return reject(reasons,"slope");
+                if (max-min > 12) return reject(reasons,"slope");
             }
         }
         int floor = sum/count;
@@ -82,7 +89,7 @@ public final class SettlementBuilder {
             for (int cz = z>>4; cz <= (z+38)>>4; cz++) {
                 for (var start : level.structureManager().startsForStructure(new ChunkPos(cx,cz),s->true)) {
                     var bounds=start.getBoundingBox();
-                    if (bounds.intersects(x,z,x+44,z+38) && bounds.maxY()>=floor-6 && bounds.minY()<=floor+32) return reject(reasons,"structure");
+                    if (bounds.intersects(x,z,x+44,z+38) && bounds.maxY()>=floor-8 && bounds.minY()<=floor+32) return reject(reasons,"structure");
                 }
             }
         }
@@ -90,11 +97,11 @@ public final class SettlementBuilder {
             for (int dz = 0; dz < 39; dz++) {
                 int surfaceY = groundHeight(level,x+dx,z+dz);
                 BlockPos surface = new BlockPos(x+dx,surfaceY,z+dz);
-                if (surfaceY<level.getSeaLevel()-1 || Math.abs(surfaceY-floor)>6 || EvilBoundary.evil(level,surface)
+                if (surfaceY<level.getSeaLevel()-1 || Math.abs(surfaceY-floor)>8 || EvilBoundary.evil(level,surface)
                         || !level.getFluidState(surface).isEmpty()) return reject(reasons,"full-footprint-ground");
                 int top=Math.max(floor+12,surfaceHeight(level,x+dx,z+dz));
                 if (top>floor+32) return reject(reasons,"tall-tree");
-                for (int y = Math.min(surfaceY,floor)-3; y <= top; y++) {
+                for (int y = floor-8; y <= top; y++) {
                     if (level.getBlockState(new BlockPos(x+dx,y,z+dz)).hasBlockEntity()) return reject(reasons,"block-entity");
                 }
             }
@@ -131,7 +138,7 @@ public final class SettlementBuilder {
             // A shallow natural foundation and air clearance; no loot-table containers.
             for (int x=0;x<45;x++) for (int z=0;z<39;z++) {
                 int surface = groundHeight(level,origin.getX()+x,origin.getZ()+z);
-                for (int y=Math.max(-6,surface-origin.getY());y<0;y++)
+                for (int y=Math.max(-8,surface-origin.getY());y<0;y++)
                     level.setBlock(origin.offset(x,y,z),Blocks.DIRT.defaultBlockState(),2);
                 int clearTop=Math.min(32,Math.max(12,surfaceHeight(level,origin.getX()+x,origin.getZ()+z)-origin.getY()));
                 for (int y=1;y<=clearTop;y++) level.setBlock(origin.offset(x,y,z),Blocks.AIR.defaultBlockState(),2);

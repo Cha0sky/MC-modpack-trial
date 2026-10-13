@@ -19,6 +19,7 @@ import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 import net.neoforged.neoforge.event.level.BlockEvent;
 import net.neoforged.neoforge.event.level.LevelEvent;
 import net.neoforged.neoforge.event.server.ServerStoppedEvent;
+import net.neoforged.neoforge.event.server.ServerStartedEvent;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 import net.neoforged.neoforge.event.tick.ServerTickEvent;
 
@@ -29,10 +30,18 @@ public final class ChapterEvents {
     public static void newWorld(LevelEvent.CreateSpawnPosition event) {
         if (event.isCanceled() || Boolean.getBoolean("lostworld.disableAutomaticSettlement")
                 || !(event.getLevel() instanceof ServerLevel level) || level.dimension()!=Level.OVERWORLD) return;
-        SettlementBuilder.Result result = SettlementBuilder.createForFreshWorld(level);
+        // No terrain generation here: the vanilla progress listener is already counting chunks.
+        ChapterData.create(level).requestSettlement();
+    }
+    @SubscribeEvent(priority=EventPriority.HIGHEST)
+    public static void started(ServerStartedEvent event) {
+        ServerLevel level=event.getServer().overworld();
+        ChapterData data=ChapterData.find(level);
+        if (data==null || !data.settlementPending() || data.hasSettlement()) return;
+        LostWorld.LOG.info("原版出生区已准备完成，开始有限范围的启程聚落生成");
+        SettlementBuilder.Result result = SettlementBuilder.createForMarkedWorld(level);
         if (result != null) {
             level.setDefaultSpawnPos(result.home(),180);
-            event.setCanceled(true);
         }
     }
     @SubscribeEvent(priority=EventPriority.HIGHEST)

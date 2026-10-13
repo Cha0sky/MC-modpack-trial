@@ -18,6 +18,7 @@ public final class ChapterData extends SavedData {
     private ChapterState state = new ChapterState(false, false);
     private BlockPos settlement;
     private BlockPos home;
+    private boolean settlementPending;
     private final Set<UUID> arrivals = new HashSet<>();
 
     public static ChapterData find(ServerLevel level) {
@@ -30,16 +31,19 @@ public final class ChapterData extends SavedData {
     public BlockPos settlement() { return settlement; }
     public BlockPos home() { return home; }
     public boolean hasSettlement() { return settlement != null && home != null; }
+    public boolean settlementPending() { return settlementPending; }
+    public void requestSettlement() { if (!hasSettlement()) { settlementPending=true; setDirty(); } }
     public boolean arrived(UUID player) { return arrivals.contains(player); }
     public void markArrival(UUID player) { if (arrivals.add(player)) setDirty(); }
     public void settlementBuilt(BlockPos origin, BlockPos spawn) {
-        settlement = origin.immutable(); home = spawn.immutable(); state.activate(); setDirty();
+        settlement = origin.immutable(); home = spawn.immutable(); settlementPending=false; state.activate(); setDirty();
     }
     public boolean recordBoss(String id) { boolean changed = state.defeat(id); if (changed) setDirty(); return changed; }
     public void setDefeated(boolean value) { state.setDefeated(value); setDirty(); }
     public static ChapterData load(CompoundTag tag, HolderLookup.Provider provider) {
         ChapterData data = new ChapterData();
         data.state = new ChapterState(tag.getBoolean("active"), tag.getBoolean("king_slime_defeated"));
+        data.settlementPending = tag.getBoolean("settlement_pending");
         if (tag.contains("settlement", Tag.TAG_LONG)) data.settlement = BlockPos.of(tag.getLong("settlement"));
         if (tag.contains("home", Tag.TAG_LONG)) data.home = BlockPos.of(tag.getLong("home"));
         ListTag players = tag.getList("arrivals", Tag.TAG_STRING);
@@ -50,7 +54,8 @@ public final class ChapterData extends SavedData {
         return data;
     }
     @Override public CompoundTag save(CompoundTag tag, HolderLookup.Provider provider) {
-        tag.putInt("schema_version", 1);
+        tag.putInt("schema_version", 2);
+        tag.putBoolean("settlement_pending", settlementPending);
         tag.putBoolean("active", state.active()); tag.putBoolean("king_slime_defeated", state.defeated());
         if (settlement != null) tag.putLong("settlement", settlement.asLong());
         if (home != null) tag.putLong("home", home.asLong());

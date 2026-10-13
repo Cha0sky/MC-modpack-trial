@@ -1,0 +1,47 @@
+{
+  "analysis_started": "2026-10-13",
+  "completed": "2026-10-14",
+  "baseline_commit": "9956816",
+  "observed_log_sha256": "96dfb8f45ccb2823fff05e4c5a49cbf45ec81c4f2790463ebad80e3794e40c85",
+  "log_excerpt": [
+    "[1310月2026 23:41:16.202] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.21.1",
+    "[1310月2026 23:41:58.506] [Server thread/ERROR] [local.lostworld.LostWorld/]: 附近未找到安全的聚落地块：{block-entity=1, slope=24, water=7}；保留原生出生点。",
+    "[1310月2026 23:41:58.648] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld",
+    "[1310月2026 23:41:58.698] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: 准备生成区域中：100%",
+    "[1310月2026 23:42:01.115] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 2456 ms",
+    "[1310月2026 23:42:01.172] [Server thread/INFO] [FTB Quests/]: Loaded 1 chapter groups, 6 chapters, 82 quests, 0 reward tables",
+    "[1310月2026 23:42:01.718] [Netty Local Client IO #1/INFO] [dev.ryanhcode.sable.Sable/]: Client UDP channel active",
+    "[1310月2026 23:42:01.788] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!"
+  ],
+  "confirmed_issue": {
+    "candidate_sites": 32,
+    "rejected": {
+      "slope": 24,
+      "water": 7,
+      "block_entity": 1
+    },
+    "selection_seconds_approx": 42,
+    "early_generated_chunks_counted_by_vanilla_listener": true
+  },
+  "full_hang_root_cause": "unconfirmed; server startup completed and then client stopped before a player-login record",
+  "thread_snapshot_taken": false,
+  "thread_snapshot_reason": "no running game process at diagnosis time",
+  "changes": [
+    "mark fresh worlds without loading terrain or canceling native spawn selection",
+    "build only after vanilla spawn preparation at ServerStartedEvent",
+    "at most 4 flat-biome and 4 other-biome terrain probes around actual vanilla spawn",
+    "adjust slope acceptance, foundation depth and block-entity protection together"
+  ],
+  "checks": {
+    "java21_compile": "passed",
+    "existing_chapter_state_logic": "passed",
+    "deployment_python_syntax": "passed",
+    "deployment_manifest_files": 1,
+    "deployed_jar_sha256": "31e92ae4c336765c9e22ad1ee610c0eb14cfad165ca221c608b67d1b8784903c"
+  },
+  "client_launched": false,
+  "server_or_gametest_launched": false,
+  "saves_written": false,
+  "gameplay_retest_owner": "user",
+  "gameplay_fix_verified": false
+}
