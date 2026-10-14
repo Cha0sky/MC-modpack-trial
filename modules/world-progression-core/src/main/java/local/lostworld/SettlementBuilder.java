@@ -32,9 +32,11 @@ public final class SettlementBuilder {
         BlockPos spawn = level.getSharedSpawnPos();
         java.util.Map<String,Integer> rejected=new java.util.TreeMap<>();
         int terrainSites=0;
+        int previews=0;
         // Prefer flat biome candidates. Noise probes do not generate chunks; at most 8 sites do.
         for (int pass=0;pass<2;pass++) {
         int passSites=0;
+        int passPreviews=0;
         search: for (int ring = 0; ring <= 16; ring++) {
             for (int dx = -ring; dx <= ring; dx++) {
                 for (int dz = -ring; dz <= ring; dz++) {
@@ -47,21 +49,40 @@ public final class SettlementBuilder {
                     if (biome.is(BiomeTags.IS_OCEAN) || biome.is(BiomeTags.IS_RIVER) || biome.is(EvilBoundary.LOCKED)) continue;
                     boolean flatBiome=biome.is(Biomes.PLAINS) || biome.is(Biomes.SUNFLOWER_PLAINS) || biome.is(Biomes.SAVANNA);
                     if (flatBiome!=(pass==0)) continue;
-                    if (passSites>=4) break search;
+                    if (passSites>=4 || passPreviews>=64) break search;
+                    passPreviews++; previews++;
+                    if (!previewDryFootprint(level,x,z)) continue;
                     passSites++; terrainSites++;
                     BlockPos origin = suitableSite(level, x, z,rejected);
                     if (origin != null) {
                         Result result = place(level, origin);
                         ChapterData.create(level).settlementBuilt(result.origin(), result.home());
-                        LostWorld.LOG.info("启程聚落已生成：{}, 玩家之家：{}, 实际选址检查 {} 次", result.origin(), result.home(),terrainSites);
+                        LostWorld.LOG.info("启程聚落已生成：{}, 玩家之家：{}, 地形预筛 {} 次、实际选址检查 {} 次", result.origin(), result.home(),previews,terrainSites);
                         return result;
                     }
                 }
             }
         }
         }
-        LostWorld.LOG.error("有限检查 {} 处后未找到安全聚落地块：{}；保留原版出生点，聚落尚未生成。",terrainSites,rejected);
+        LostWorld.LOG.error("地形预筛 {} 次、实际检查 {} 处后未找到安全聚落地块：{}；保留原版出生点，聚落尚未生成。",previews,terrainSites,rejected);
         return null;
+    }
+
+    private static boolean previewDryFootprint(ServerLevel level,int x,int z) {
+        var generator=level.getChunkSource().getGenerator();
+        var random=level.getChunkSource().randomState();
+        int[] heights=new int[9];
+        int index=0;
+        for (int dx:new int[]{0,22,44}) {
+            for (int dz:new int[]{0,19,38}) {
+                var biome=generator.getBiomeSource().getNoiseBiome((x+dx)>>2,(level.getSeaLevel()+8)>>2,(z+dz)>>2,random.sampler());
+                if (biome.is(BiomeTags.IS_OCEAN) || biome.is(BiomeTags.IS_RIVER) || biome.is(EvilBoundary.LOCKED)) return false;
+                int height=generator.getBaseHeight(x+dx,z+dz,Heightmap.Types.OCEAN_FLOOR_WG,level,random);
+                if (height<=level.getSeaLevel()) return false;
+                heights[index++]=height;
+            }
+        }
+        return SettlementTerrainPreview.dryAndWithinSlope(heights,level.getSeaLevel());
     }
 
     private static BlockPos reject(java.util.Map<String,Integer> reasons,String reason) {

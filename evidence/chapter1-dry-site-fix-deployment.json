@@ -1,0 +1,14 @@
+{
+  "instance": "D:\\PCL 正式版 2.10.6 (1)\\.minecraft\\versions\\星庭远征-开发版",
+  "approved_scope": "chapter1 core generation repair",
+  "applied": true,
+  "files": [
+    {
+      "path": "mods\\world-progression-core-0.1.0.jar",
+      "before_sha256": "31e92ae4c336765c9e22ad1ee610c0eb14cfad165ca221c608b67d1b8784903c",
+      "after_sha256": "0d75bfae4218eda04343e5f4a62d02c2cbd74cef340243a841515eb826f374e9",
+      "existed": true
+    }
+  ],
+  "backup": "D:\\PCL 正式版 2.10.6 (1)\\codex\\modpack-project\\backups\\chapter1-dry-site-fix-20261014-235934"
+}

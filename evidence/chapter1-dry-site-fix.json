@@ -1,0 +1,33 @@
+{
+  "feedback_date": "2026-10-14",
+  "baseline_commit": "f23d81c",
+  "user_confirmed_world_entry": true,
+  "settlement_generated_before_fix": false,
+  "confirmed_rejections": {
+    "water": 6,
+    "slope": 1,
+    "structure": 1
+  },
+  "log_sha256": "5b2de00e34ba91c6f5c490f0408b722038f794442f2c401eb6ed6d1dbf68130c",
+  "log_excerpt": [
+    "[1410月2026 23:50:51.644] [Server thread/INFO] [local.lostworld.LostWorld/]: 原版出生区已准备完成，开始有限范围的启程聚落生成",
+    "[1410月2026 23:50:52.034] [Server thread/ERROR] [local.lostworld.LostWorld/]: 有限检查 8 处后未找到安全聚落地块：{slope=1, structure=1, water=6}；保留原版出生点，聚落尚未生成。",
+    "[1410月2026 23:50:57.469] [Render thread/WARN] [ModernFix/]: Time from main menu to in-game was 6.9639864 seconds"
+  ],
+  "change": "Nine-point biome and ocean-floor height preview before loading candidate chunks",
+  "budgets": {
+    "actual_sites_max": 8,
+    "height_previews_max": 128
+  },
+  "checks": {
+    "java21_build": "passed",
+    "dry_terrain_boundary_cases": 6,
+    "dry_terrain_boundary_checks": "passed",
+    "existing_chapter_state_checks": "passed",
+    "game_started_by_assistant": false,
+    "save_modified_by_assistant": false
+  },
+  "deployed_jar_sha256": "0d75bfae4218eda04343e5f4a62d02c2cbd74cef340243a841515eb826f374e9",
+  "gameplay_retest_owner": "user",
+  "settlement_after_fix_verified": false
+}
