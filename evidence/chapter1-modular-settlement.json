@@ -1,0 +1,115 @@
+{
+  "date": "2026-10-15",
+  "rollback_commit": "0479d1d666e506922a1f663ec9774e2830044df2",
+  "architecture": "independent terraces and bounded graded roads; primary player home before optional parts",
+  "templates": [
+    {
+      "id": "player_home",
+      "size": [
+        15,
+        9,
+        15
+      ],
+      "entry": [
+        7,
+        0,
+        -1
+      ]
+    },
+    {
+      "id": "villager_west",
+      "size": [
+        11,
+        8,
+        12
+      ],
+      "entry": [
+        5,
+        0,
+        -1
+      ]
+    },
+    {
+      "id": "villager_east",
+      "size": [
+        11,
+        8,
+        12
+      ],
+      "entry": [
+        5,
+        0,
+        -1
+      ]
+    },
+    {
+      "id": "well",
+      "size": [
+        5,
+        5,
+        5
+      ],
+      "entry": [
+        2,
+        0,
+        -1
+      ]
+    },
+    {
+      "id": "farm",
+      "size": [
+        12,
+        5,
+        13
+      ],
+      "entry": [
+        6,
+        0,
+        -1
+      ]
+    },
+    {
+      "id": "expansion_plot",
+      "size": [
+        11,
+        5,
+        8
+      ],
+      "entry": [
+        5,
+        0,
+        -1
+      ]
+    },
+    {
+      "id": "player_compact",
+      "size": [
+        9,
+        8,
+        11
+      ],
+      "entry": [
+        4,
+        0,
+        -1
+      ]
+    }
+  ],
+  "checks": {
+    "java21_build": "passed",
+    "terrace_floor_cut_fill_limits": "passed",
+    "road_endpoints_step_height_and_junction_pins": "passed",
+    "legacy_bed_coordinate_roundtrip": "passed",
+    "template_beds_empty_storage_arrival_and_villager_clearance": "passed",
+    "game_or_server_or_gametest_launched": false,
+    "save_files_written_by_assistant": false
+  },
+  "data_schema": 3,
+  "jar_sha256": "e92fa092fb63d7aebb1e2e395647ed8799543623c8fd7f70a378cca080f217ff",
+  "partial_safe_placement": "unreachable optional parts may be skipped; primary home requires an exit path",
+  "gameplay_verified": false,
+  "gameplay_retest_owner": "user",
+  "deployed": true,
+  "backup": "D:\\PCL 正式版 2.10.6 (1)\\codex\\modpack-project\\backups\\chapter1-modular-settlement-20261015-012348",
+  "rollback_jar_sha256": "0d75bfae4218eda04343e5f4a62d02c2cbd74cef340243a841515eb826f374e9"
+}

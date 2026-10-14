@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="700" viewBox="0 0 900 700">
+<rect width="900" height="700" fill="#eef1df"/>
+<text x="35" y="40" font-size="24" font-family="Microsoft YaHei">分栋聚落 · 各部件独立定高（布局示意，非游戏截图）</text>
+<rect x="270" y="330" width="180" height="150" fill="#c6a575" stroke="#55483c" stroke-width="3"/>
+<text x="360" y="405" text-anchor="middle" font-size="16" font-family="Microsoft YaHei">玩家房屋 · H0</text>
+<rect x="54" y="140" width="132" height="120" fill="#c6a575" stroke="#55483c" stroke-width="3"/>
+<text x="120" y="200" text-anchor="middle" font-size="16" font-family="Microsoft YaHei">村民房屋 · H1</text>
+<rect x="522" y="150" width="132" height="120" fill="#c6a575" stroke="#55483c" stroke-width="3"/>
+<text x="588" y="210" text-anchor="middle" font-size="16" font-family="Microsoft YaHei">村民房屋 · H2</text>
+<rect x="306" y="200" width="60" height="50" fill="#a7c78e" stroke="#55483c" stroke-width="3"/>
+<text x="336" y="225" text-anchor="middle" font-size="16" font-family="Microsoft YaHei">水井 · H3</text>
+<rect x="546" y="500" width="144" height="130" fill="#a7c78e" stroke="#55483c" stroke-width="3"/>
+<text x="618" y="565" text-anchor="middle" font-size="16" font-family="Microsoft YaHei">公共农田 · H4</text>
+<rect x="486" y="350" width="132" height="80" fill="#a7c78e" stroke="#55483c" stroke-width="3"/>
+<text x="552" y="390" text-anchor="middle" font-size="16" font-family="Microsoft YaHei">扩建地块 · H5</text>
+<text x="35" y="625" font-size="18" font-family="Microsoft YaHei">H0–H5 分别由当地地形决定，连接路以台阶/短桥适应高差。</text>
+<text x="35" y="657" font-size="17" font-family="Microsoft YaHei">优先玩家房屋，陡坡采用小屋后备；床、两只空箱、工作台保留。</text></svg>

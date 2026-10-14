@@ -54,7 +54,7 @@ public final class ChapterEvents {
         if (!data.arrived(player.getUUID())) {
             var home = data.home();
             player.teleportTo(player.server.overworld(),home.getX()+0.5,home.getY(),home.getZ()+0.5,180,0);
-            player.setRespawnPosition(Level.OVERWORLD,data.settlement().offset(6,1,32),180,false,false);
+            player.setRespawnPosition(Level.OVERWORLD,data.bed(),180,false,false);
             gift(player);
             data.markArrival(player.getUUID());
             player.sendSystemMessage(Component.literal("你在一间小屋里醒来。村民说，找到你时，你身边只有这把剑。这里可以成为你的第一个家。"));

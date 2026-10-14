@@ -104,6 +104,7 @@ def main():
     dest = MODULE / "src/main/resources/data/world_progression_core/settlement/starter.json"
     dest.parent.mkdir(parents=True,exist_ok=True)
     dest.write_text(json.dumps(doc,ensure_ascii=False,separators=(",",":"))+"\n",encoding="utf-8")
+    build_modules()
     # A plan illustration, deliberately labelled as a blueprint rather than a game screenshot.
     svg = ['<svg xmlns="http://www.w3.org/2000/svg" width="900" height="840" viewBox="0 0 900 840">',
            '<rect width="900" height="840" fill="#eef1df"/>',
@@ -122,6 +123,64 @@ def main():
     preview = ROOT / "docs/design/chapter1-settlement-plan.svg"
     preview.write_text("\n".join(svg)+"\n",encoding="utf-8")
     print(f"Blueprint: {len(blocks)} blocks, {len(palette)} states, 45 x 39 footprint")
+
+
+def build_modules():
+    """Extract separate terraces from the existing authored buildings; compact house fallback."""
+    modules=[]
+    def extract(name,x,z,w,d,entry,desired,villagers=(),home=None,bed=None):
+        selected={(bx-x,y,bz-z):s for (bx,y,bz),s in blocks.items() if x<=bx<x+w and z<=bz<z+d}
+        states=sorted(set(selected.values()))
+        part={"id":name,"size":[w,max(p[1] for p in selected)+1,d],"entry":entry,"desired":desired,
+              "villagers":list(villagers),"palette":states,
+              "blocks":[[*p,states.index(s)] for p,s in sorted(selected.items(),key=lambda v:(v[0][1],v[0][2],v[0][0]))]}
+        if home is not None:part["home"]=home
+        if bed is not None:part["bed"]=bed
+        modules.append(part)
+    extract("player_home",3,21,15,15,[7,0,-1],[0,0],home=[7,1,7],bed=[3,1,11])
+    extract("villager_west",4,3,11,12,[5,0,-1],[-18,-19],villagers=[[5,1,6]])
+    extract("villager_east",29,4,11,12,[5,0,-1],[21,-18],villagers=[[5,1,6],[6,1,5]])
+    extract("well",25,17,5,5,[2,0,-1],[3,-13])
+    extract("farm",31,23,12,13,[6,0,-1],[23,17])
+    extract("expansion_plot",19,26,11,8,[5,0,-1],[18,2])
+    old=blocks.copy()
+    blocks.clear(); box(0,0,0,8,0,10,"grass_block"); house(1,1,7,9,player=True)
+    extract("player_compact",0,0,9,11,[4,0,-1],[0,0],home=[4,1,5],bed=[3,1,7])
+    blocks.clear(); blocks.update(old)
+    for part in modules:
+        w,_,d=part["size"]
+        lookup={tuple(b[:3]):part["palette"][b[3]] for b in part["blocks"]}
+        for point in part.get("villagers",[])+[part[k] for k in ("home","bed") if k in part]:
+            assert 0<=point[0]<w and 0<=point[2]<d
+        for point in part["villagers"]:
+            assert tuple(point) not in lookup and tuple([point[0],point[1]+1,point[2]]) not in lookup
+        if "home" in part:
+            assert tuple(part["home"]) not in lookup and tuple([part["home"][0],2,part["home"][2]]) not in lookup
+            assert lookup[tuple(part["bed"])].startswith("minecraft:red_bed")
+            assert sum(s.startswith("minecraft:chest") for s in lookup.values())==2
+    dest=MODULE/"src/main/resources/data/world_progression_core/settlement/modules.json"
+    dest.write_text(json.dumps({"schema":1,"modules":modules},ensure_ascii=False,separators=(",",":"))+"\n",encoding="utf-8")
+    draw_modular_plan(modules)
+    print("Independent templates: 6 village parts and 1 compact player-house fallback")
+
+
+def draw_modular_plan(modules):
+    # Distances/grades are adapted in game. This is only a layout reference.
+    names={"player_home":"玩家房屋 · H0","villager_west":"村民房屋 · H1","villager_east":"村民房屋 · H2",
+           "well":"水井 · H3","farm":"公共农田 · H4","expansion_plot":"扩建地块 · H5"}
+    parts=[m for m in modules if m["id"] in names]
+    svg=['<svg xmlns="http://www.w3.org/2000/svg" width="900" height="700" viewBox="0 0 900 700">',
+         '<rect width="900" height="700" fill="#eef1df"/>',
+         '<text x="35" y="40" font-size="24" font-family="Microsoft YaHei">分栋聚落 · 各部件独立定高（布局示意，非游戏截图）</text>']
+    def pixel(x,z):return 270+x*12,330+z*10
+    for m in parts:
+        x,z=m['desired'];w,_,d=m['size']; px,pz=pixel(x,z)
+        color='#c6a575' if 'home' in m['id'] or 'villager' in m['id'] else '#a7c78e'
+        svg.append(f'<rect x="{px}" y="{pz}" width="{w*12}" height="{d*10}" fill="{color}" stroke="#55483c" stroke-width="3"/>')
+        svg.append(f'<text x="{px+w*6}" y="{pz+d*5}" text-anchor="middle" font-size="16" font-family="Microsoft YaHei">{names[m["id"]]}</text>')
+    svg.append('<text x="35" y="625" font-size="18" font-family="Microsoft YaHei">H0–H5 分别由当地地形决定，连接路以台阶/短桥适应高差。</text>')
+    svg.append('<text x="35" y="657" font-size="17" font-family="Microsoft YaHei">优先玩家房屋，陡坡采用小屋后备；床、两只空箱、工作台保留。</text></svg>')
+    (ROOT/"docs/design/chapter1-modular-settlement-plan.svg").write_text('\n'.join(svg)+'\n',encoding='utf-8')
 
 
 if __name__ == "__main__":

@@ -15,7 +15,7 @@ public final class WorldGenerationSmoke {
         var data=ChapterData.find(level);
         if (data==null || !data.hasSettlement() || !data.state().active())
             throw new AssertionError("Fresh-world settlement did not generate");
-        if (!level.getBlockState(data.settlement().offset(6,1,32)).is(Blocks.RED_BED)
+        if (data.bed()==null || !level.getBlockState(data.bed()).is(Blocks.RED_BED)
                 || !level.getSharedSpawnPos().equals(data.home()) || EvilBoundary.evil(level,data.home()))
             throw new AssertionError("Invalid generated player home/spawn");
         LostWorld.LOG.info("CHAPTER_TEST_NORMAL_WORLD_GENERATION_PASS origin={} home={}",data.settlement(),data.home());

@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "#minecraft:dirt", "#minecraft:base_stone_overworld", "#minecraft:sand", "#minecraft:terracotta",
+    "#minecraft:logs", "#minecraft:leaves", "#minecraft:flowers", "#minecraft:replaceable_by_trees",
+    {"id":"#c:ores","required":false},
+    "minecraft:brown_mushroom_block", "minecraft:red_mushroom_block", "minecraft:mushroom_stem",
+    "minecraft:snow", "minecraft:snow_block", "minecraft:gravel", "minecraft:clay",
+    "minecraft:moss_block", "minecraft:moss_carpet", "minecraft:water", "minecraft:ice",
+    "minecraft:packed_ice", "minecraft:blue_ice",
+    {"id":"goety:red_moss_dirt","required":false},
+    {"id":"confluence:silt_block","required":false}
+  ]
+}
