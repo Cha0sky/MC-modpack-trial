@@ -1,0 +1,44 @@
+{
+  "version": "1.1.2",
+  "sha256": "99074A8242313CA813ABB452484236ADB9AB088EBB1B56FBD63A101240DE2AE0",
+  "bytes": 85121,
+  "sdk_builds": [
+    "21.1.1",
+    "21.1.248"
+  ],
+  "sdk_unpacked_outputs_identical": true,
+  "changed_vs_1_1_1": [
+    "META-INF/neoforge.mods.toml",
+    "com/infinite/core/block/GeneratorBlock.class"
+  ],
+  "added": [
+    "data/infinitecore/loot_table/blocks/copper_generator.json",
+    "data/infinitecore/loot_table/blocks/diamond_generator.json",
+    "data/infinitecore/loot_table/blocks/dirt_generator.json",
+    "data/infinitecore/loot_table/blocks/gold_generator.json",
+    "data/infinitecore/loot_table/blocks/iron_generator.json",
+    "data/infinitecore/loot_table/blocks/netherite_generator.json",
+    "data/infinitecore/loot_table/blocks/stone_generator.json",
+    "data/infinitecore/loot_table/blocks/wood_generator.json"
+  ],
+  "removed": [],
+  "resource_checks": {
+    "jar_crc": "pass",
+    "machine_recipes_byte_identical": 8,
+    "approved_direct_template_recipes": 8,
+    "recipe_count": 17,
+    "blank_recipes": 0,
+    "legacy_item_models_retained": 8,
+    "generator_self_drop_tables": 8,
+    "mining_tags_byte_identical": 2,
+    "json_parsed": 69,
+    "png_decoded": 42,
+    "local_model_texture_references": "pass",
+    "locale_keys_and_literal_source_keys": "pass",
+    "java_21_class_versions": "pass",
+    "metadata_expansion": "pass",
+    "no_verification_classes_in_jar": "pass"
+  },
+  "game_launched": false,
+  "in_game_drops_verified": false
+}

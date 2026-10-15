@@ -128,6 +128,18 @@ def gui(io_page=False):
     return image
 
 
+def generator_loot(tier):
+    return {
+        "type": "minecraft:block",
+        "pools": [{
+            "rolls": 1.0,
+            "bonus_rolls": 0.0,
+            "conditions": [{"condition": "minecraft:survives_explosion"}],
+            "entries": [{"type": "minecraft:item", "name": f"infinitecore:{tier}_generator"}]
+        }]
+    }
+
+
 def main():
     with zipfile.ZipFile(BASELINE) as baseline:
         # Preserve eight machine recipes and both mining tags byte-for-byte.
@@ -141,6 +153,7 @@ def main():
             path.write_bytes(baseline.read(relative))
         languages = {locale: json.loads(baseline.read(f"assets/infinitecore/lang/{locale}.json")) for locale in ("zh_cn", "en_us")}
     for index, (tier, color, material) in enumerate(zip(TIERS, COLORS, MATERIALS)):
+        write_json(f"data/infinitecore/loot_table/blocks/{tier}_generator.json", generator_loot(tier))
         for face, suffix in (("side", ""), ("top", "_top"), ("bottom", "_bottom")):
             save(machine(color, index, face), f"assets/infinitecore/textures/block/{tier}_generator{suffix}.png")
         save(template(color, index), f"assets/infinitecore/textures/item/template_{tier}.png")
@@ -192,7 +205,7 @@ def main():
     for key, values in translations.items():
         for locale, value in zip(("zh_cn", "en_us"), values): languages[locale][key] = value
     for locale, values in languages.items(): write_json(f"assets/infinitecore/lang/{locale}.json", values)
-    print("Generated 24 machine faces, 8 template cards, 2 GUI backgrounds, 17 recipes and retained legacy icons.")
+    print("Generated 24 machine faces, 8 template cards, 2 GUI backgrounds, 17 recipes, 8 block loot tables and retained legacy icons.")
 
 
 if __name__ == "__main__":

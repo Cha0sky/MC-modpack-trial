@@ -8,6 +8,7 @@ import io
 import json
 import re
 import zipfile
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from PIL import Image
 from build_assets import MODULE, BASELINE, TIERS, MATERIALS
@@ -76,14 +77,31 @@ def main():
         registration = new.read("com/infinite/core/registry/ModContent.class")
         for symbol in (b"blank_template_", b"template_", b"_generator", b"target_item", b"template_customize", b"infinite_core"):
             require(symbol in registration, f"Missing registration pattern {symbol}")
-        require(not any("loot_table/" in p for p in paths), "Unapproved loot rules introduced")
+        loot_paths = {p for p in paths if "/loot_table/" in p and p.endswith(".json")}
+        require(loot_paths == {f"data/infinitecore/loot_table/blocks/{tier}_generator.json" for tier in TIERS},
+                "Missing or unexpected block loot tables")
+        for tier in TIERS:
+            loot = json.loads(new.read(f"data/infinitecore/loot_table/blocks/{tier}_generator.json"))
+            require(loot == {
+                "type": "minecraft:block", "pools": [{
+                    "rolls": 1.0, "bonus_rolls": 0.0,
+                    "conditions": [{"condition": "minecraft:survives_explosion"}],
+                    "entries": [{"type": "minecraft:item", "name": f"infinitecore:{tier}_generator"}]
+                }]
+            }, f"Incorrect self-drop or unexpected data copying: {tier}")
+        for tag in ("mineable/pickaxe", "needs_stone_tool"):
+            path = f"data/minecraft/tags/block/{tag}.json"
+            require(new.read(path) == old.read(path), f"Mining requirements changed: {tag}")
+            require({f"infinitecore:{tier}_generator" for tier in TIERS} <= set(json.loads(new.read(path))["values"]),
+                    f"Missing mining tag entries: {tag}")
         require(not any("world_progress" in p for p in paths), "Unapproved stage integration introduced")
     report = {
-        "date": "2026-10-10", "version": version, "artifact": str(artifact.relative_to(MODULE)),
+        "date": datetime.now(timezone(timedelta(hours=8))).date().isoformat(), "version": version, "artifact": str(artifact.relative_to(MODULE)),
         "artifact_sha256": hashlib.sha256(artifact.read_bytes()).hexdigest(), "artifact_bytes": artifact.stat().st_size,
         "baseline_sha256": baseline_hash, "checks": {
             "jar_crc": "pass", "machine_recipes_byte_identical": 8, "approved_direct_template_recipes": 8,
             "recipe_count": 17, "blank_recipes": 0, "legacy_item_models_retained": 8,
+            "generator_self_drop_tables": 8, "mining_tags_byte_identical": 2,
             "json_parsed": json_count, "png_decoded": png_count,
             "local_model_texture_references": "pass", "locale_keys_and_literal_source_keys": "pass",
             "java_21_class_versions": "pass", "metadata_expansion": "pass", "no_verification_classes_in_jar": "pass"
