@@ -46,7 +46,7 @@
     "fixed": false,
     "third_party_mod_or_launcher_changed": false
   },
-  "deployment_applied": false,
+  "deployment_applied": true,
   "deployment_preview": {
     "instance": "D:\\PCL 正式版 2.10.6 (1)\\.minecraft\\versions\\星庭远征-开发版",
     "approved_scope": "first chapter prototype",
@@ -79,5 +79,8 @@
     ]
   },
   "gameplay_verified": false,
-  "gameplay_verifier": "user"
+  "gameplay_verifier": "user",
+  "deployment_receipt": "evidence/chapter1-playtest-fixes-deployment.json",
+  "backup": "D:\\PCL 正式版 2.10.6 (1)\\codex\\modpack-project\\backups\\chapter1-playtest-fixes-20261015-212622",
+  "implementation_commit": "63c73aa"
 }
