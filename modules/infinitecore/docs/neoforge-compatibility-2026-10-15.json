@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-15",
+  "timezone": "Asia/Shanghai",
+  "task_start_commit": "83d45dcabefdd8cc0b955af2bceb14dba6011fe7",
+  "minecraft": "1.21.1",
+  "oldest_official_21_1_release": "21.1.1",
+  "oldest_release_fml": "4.0.24",
+  "development_sdk_default": "21.1.248",
+  "declared_neoforge_range": "[21.1.1,21.2)",
+  "declared_minecraft_range": "[1.21.1]",
+  "release_version": "1.1.1-compat",
+  "release_build_sdk": "21.1.1",
+  "artifact": "build/libs/infinitecore-1.1.1-compat.jar",
+  "artifact_bytes": 81507,
+  "artifact_sha256": "b1e8095c98b6810614dd02e76334ee016798625fa397d6720d664f2ab4e9f9a6",
+  "original_1_1_0_sha256": "afefc4bbf0d1c3eb41a9db82e58a35d882494c1f3a9de1c8e2a586372366c338",
+  "builds": [
+    {
+      "neoforge": "21.1.1",
+      "result": "PASS",
+      "java": "Temurin 21.0.12+8",
+      "neoforge_sdk_compiler": "javac",
+      "verifyLogic_pairs": 64,
+      "log": "work/infinitecore-neoforge-compat-2026-10-15/compat-final-21.1.1.log"
+    },
+    {
+      "neoforge": "21.1.248",
+      "result": "PASS",
+      "java": "Temurin 21.0.12+8",
+      "neoforge_sdk_compiler": "javac",
+      "verifyLogic_pairs": 64,
+      "log": "work/infinitecore-neoforge-compat-2026-10-15/compat-final-21.1.248.log"
+    }
+  ],
+  "binary_comparison": {
+    "production_classes": 18,
+    "identical_across_minimum_default_and_original": true,
+    "changed_unpacked_paths_vs_1_1_0": [
+      "META-INF/neoforge.mods.toml"
+    ]
+  },
+  "resource_checks": {
+    "jar_crc": "pass",
+    "machine_recipes_byte_identical": 8,
+    "approved_direct_template_recipes": 8,
+    "recipe_count": 17,
+    "blank_recipes": 0,
+    "legacy_item_models_retained": 8,
+    "json_parsed": 61,
+    "png_decoded": 42,
+    "local_model_texture_references": "pass",
+    "locale_keys_and_literal_source_keys": "pass",
+    "java_21_class_versions": "pass",
+    "metadata_expansion": "pass",
+    "no_verification_classes_in_jar": "pass"
+  },
+  "earliest_sdk_artifacts": [
+    {
+      "name": "neoforge-21.1.1.pom",
+      "sha256": "48e6a4f0c3bae40c51572aa381c8757a1657bf2780b4f186714f1a5247eb52da"
+    },
+    {
+      "name": "neoforge-21.1.1-sources.jar",
+      "sha256": "e190c5ccec2c9e65020eefbef46cf6a986ea8206be204952ae9e6b1d8d1f8b07"
+    },
+    {
+      "name": "neoforge-21.1.1-universal.jar",
+      "sha256": "112a0e2376dd6c1954e684f897ca44380a7778422db1b63e32cf58b9a67d944e"
+    },
+    {
+      "name": "loader-4.0.24.jar",
+      "sha256": "c76d1e7c27b40dcb4ba9f376766a95845647dff21f5e3a77d32858461f109ca1"
+    }
+  ],
+  "tooling_note": "The Eclipse-generated 21.1.1 dev SDK had invalid RuntimeInvisibleParameterAnnotations; standard javac SDK generation succeeded. Not classified as an API incompatibility.",
+  "sources": [
+    "https://maven.neoforged.net/releases/net/neoforged/neoforge/maven-metadata.xml",
+    "https://maven.neoforged.net/releases/net/neoforged/neoforge/21.1.1/neoforge-21.1.1.pom",
+    "https://docs.neoforged.net/docs/1.21.1/gettingstarted/modfiles/"
+  ],
+  "preservation": {
+    "production_java_sources_unchanged": true,
+    "prior_staged_and_untracked_work_unchanged": true,
+    "original_jar_preserved": true,
+    "instances_modified": false,
+    "game_started": false,
+    "saves_modified": false
+  },
+  "conclusion": "21.1.1 is the earliest released 21.1.x and passes API, source compilation, binary equality and resources checks; in-game runtime compatibility not tested."
+}

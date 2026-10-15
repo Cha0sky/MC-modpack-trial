@@ -15,13 +15,13 @@ Direct template crafting, unified mechanical textures and clear GUI.
 [[dependencies.infinitecore]]
 modId="neoforge"
 type="required"
-versionRange="[21.1.248,)"
+versionRange="${neo_version_range}"
 ordering="NONE"
 side="BOTH"
 
 [[dependencies.infinitecore]]
 modId="minecraft"
 type="required"
-versionRange="[1.21.1,1.22)"
+versionRange="${minecraft_version_range}"
 ordering="NONE"
 side="BOTH"
