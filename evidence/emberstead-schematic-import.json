@@ -1,0 +1,105 @@
+{
+  "schema": 1,
+  "source": {
+    "kind": "sponge_schematic",
+    "schematic": "assets/settlement/emberstead/emberstead.schem",
+    "layout": "assets/settlement/emberstead/layout.json",
+    "schematic_sha256": "f8e2910976213aa80d70ab9302645aab8fca4efa1d5063e6ff04ff3fdeba4a15",
+    "layout_sha256": "2ecc5c1a9cdd5dba205fdc1ee066a57f787ca704ea1e3031067ca6b611be26b3",
+    "format": "Sponge",
+    "version": 2,
+    "data_version": 3955,
+    "size": [
+      43,
+      14,
+      40
+    ],
+    "non_air_blocks": 2096,
+    "empty_block_entities_omitted": 0,
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  },
+  "warnings": [],
+  "modules": [
+    {
+      "id": "player_home",
+      "size": [
+        15,
+        14,
+        17
+      ],
+      "non_air_blocks": 716,
+      "palette_states": 34,
+      "villagers": 0
+    },
+    {
+      "id": "villager_west",
+      "size": [
+        11,
+        11,
+        13
+      ],
+      "non_air_blocks": 375,
+      "palette_states": 29,
+      "villagers": 2
+    },
+    {
+      "id": "villager_east",
+      "size": [
+        11,
+        11,
+        13
+      ],
+      "non_air_blocks": 383,
+      "palette_states": 33,
+      "villagers": 2
+    },
+    {
+      "id": "well",
+      "size": [
+        7,
+        8,
+        7
+      ],
+      "non_air_blocks": 129,
+      "palette_states": 10,
+      "villagers": 0
+    },
+    {
+      "id": "farm",
+      "size": [
+        13,
+        4,
+        15
+      ],
+      "non_air_blocks": 363,
+      "palette_states": 11,
+      "villagers": 0
+    },
+    {
+      "id": "expansion_plot",
+      "size": [
+        11,
+        4,
+        9
+      ],
+      "non_air_blocks": 130,
+      "palette_states": 7,
+      "villagers": 0
+    }
+  ],
+  "preserved_compact_modules": [
+    "player_compact",
+    "villager_west_compact",
+    "villager_east_compact"
+  ],
+  "validation": "offline NBT, complete voxel coverage, anchors, bed pair, empty containers; game test not run",
+  "entry_routes_with_openable_wooden_doors": {
+    "player_home": 10,
+    "villager_west": 8,
+    "villager_east": 8
+  }
+}

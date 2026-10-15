@@ -12,6 +12,8 @@
 
 2026-10-16 更新：用户已确认此前村民住宅、任务书断点/解锁和启动问题全部修复，见[用户验收](docs/feedback/2026-10-16-chapter1-accepted.md)。开发实例新装模组的[版本与改动说明](docs/mods/2026-10-16-instance-changes.md)、[完整哈希清单](evidence/development-mods-2026-10-16.json)已归档；Mowzie 生物的[任务候选](docs/design/mowziesmobs-quest-candidates.md)待确认，建筑外观按用户要求暂不处理。新增模组的兼容性与全部玩法未因此自动验收。
 
+2026-10-16 的[建筑 MCP 聚落重构](docs/design/emberstead-integration.md)已部署；[提示词](docs/design/emberstead-build-prompt.md)、原始 `.schem`、操作源、模块布局和真实预览均已归档。新建世界使用新版建筑，旧聚落不自动覆盖；落地效果待用户查看。
+
 ## 目录
 
 | 位置 | 内容 |

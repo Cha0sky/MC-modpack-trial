@@ -6,6 +6,7 @@ import json
 import re
 from pathlib import Path
 import shutil
+import subprocess
 
 ROOT=Path(__file__).resolve().parents[1]
 INSTANCE=Path(r"D:\PCL 正式版 2.10.6 (1)\.minecraft\versions\星庭远征-开发版")
@@ -20,13 +21,15 @@ def main():
     parser.add_argument("--apply",action="store_true")
     parser.add_argument("--core-only",action="store_true")
     parser.add_argument("--receipt-prefix",default="chapter1")
+    parser.add_argument("--skip-chapter",action="store_true",help="Update core/languages without rewriting quest definitions")
+    parser.add_argument("--language-base-ref",help="Allow language changes only when deployed values match this Git baseline")
     args=parser.parse_args()
     if not re.fullmatch(r"[a-z0-9-]+",args.receipt_prefix): raise RuntimeError("Invalid receipt filename prefix")
     jar=ROOT/"modules/world-progression-core/build/libs/world-progression-core-0.1.0.jar"
     quests=ROOT/"staging/config/ftbquests/quests"
     chapter=quests/"chapters/00_lostworld_chapter1.snbt"
     manifest=[(jar,Path("mods")/jar.name,None)]
-    if not args.core_only:
+    if not args.core_only and not args.skip_chapter:
         manifest.append((chapter,Path("config/ftbquests/quests/chapters")/chapter.name,None))
     language=json.loads((quests/"lang/zh_cn.snbt").read_text("utf-8-sig"))
     chapterdoc=json.loads(chapter.read_text("utf-8-sig"))
@@ -37,9 +40,15 @@ def main():
         relative=Path(f"config/ftbquests/quests/lang/{locale}.snbt")
         target=INSTANCE/relative
         existing=json.loads(target.read_text("utf-8-sig")) if target.exists() else {}
+        baseline={}
+        if args.language_base_ref:
+            if not re.fullmatch(r"[0-9a-fA-F]{7,40}",args.language_base_ref):
+                raise RuntimeError("Language baseline must be a Git commit hash")
+            baseline=json.loads(subprocess.check_output(["git","show",args.language_base_ref+":"+
+                (Path("staging")/relative).as_posix()],cwd=ROOT).decode("utf-8-sig"))
         # Fail if a customized deployed version would be overwritten silently.
         for k,v in keys.items():
-            if k in existing and existing[k]!=v:
+            if k in existing and existing[k]!=v and (k not in baseline or existing[k]!=baseline[k]):
                 raise RuntimeError("Instance has a customized chapter language key: "+k)
         merged={**existing,**keys}
         manifest.append((quests/f"lang/{locale}.snbt",relative,
@@ -48,6 +57,8 @@ def main():
     conflicts=[p.name for p in (INSTANCE/"mods").glob("world-progression-core*.jar") if p.name!=jar.name]
     if conflicts: raise RuntimeError("Other chapter-core jar already installed: "+", ".join(conflicts))
     receipt={"instance":str(INSTANCE),"approved_scope":"chapter1 core generation repair" if args.core_only else "first chapter prototype", "applied":args.apply,"files":[]}
+    if args.language_base_ref: receipt["language_base_commit"]=args.language_base_ref
+    receipt["quest_definitions_skipped"]=args.skip_chapter or args.core_only
     backup=ROOT/"backups"/(args.receipt_prefix+"-"+datetime.now().strftime("%Y%m%d-%H%M%S"))
     # Preflight everything before the first external write.
     for src,rel,payload in manifest:

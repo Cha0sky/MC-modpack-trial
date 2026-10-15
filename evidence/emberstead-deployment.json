@@ -1,0 +1,28 @@
+{
+  "instance": "D:\\PCL 正式版 2.10.6 (1)\\.minecraft\\versions\\星庭远征-开发版",
+  "approved_scope": "first chapter prototype",
+  "applied": true,
+  "files": [
+    {
+      "path": "mods\\world-progression-core-0.1.0.jar",
+      "before_sha256": "0a5b0998f6a349190db08095cf83398eb3672a472eb4c63c853a79f4113841d2",
+      "after_sha256": "2ca44b0e8acf1deb0dbd12501fe7be7dd7ff2dec60a1b9d8d9e5fcbeba75bb9d",
+      "existed": true
+    },
+    {
+      "path": "config\\ftbquests\\quests\\lang\\zh_cn.snbt",
+      "before_sha256": "b4e442cab4c5fcc0661383068fd1e16d810e511cd0844224899527cbd4c1437e",
+      "after_sha256": "85c4b50ec94482caa3bff30b9e9eec72165286eb8b1ccc5393dea647a4e0aa5e",
+      "existed": true
+    },
+    {
+      "path": "config\\ftbquests\\quests\\lang\\en_us.snbt",
+      "before_sha256": "b4e442cab4c5fcc0661383068fd1e16d810e511cd0844224899527cbd4c1437e",
+      "after_sha256": "85c4b50ec94482caa3bff30b9e9eec72165286eb8b1ccc5393dea647a4e0aa5e",
+      "existed": true
+    }
+  ],
+  "language_base_commit": "5741baf",
+  "quest_definitions_skipped": true,
+  "backup": "D:\\PCL 正式版 2.10.6 (1)\\codex\\modpack-project\\backups\\emberstead-20261016-020305"
+}

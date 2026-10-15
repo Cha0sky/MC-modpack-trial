@@ -1,0 +1,35 @@
+{
+  "schema": 1,
+  "name": "emberstead",
+  "display_name": "余烬驿",
+  "created_on": "2026-10-16",
+  "generator": "mcp__mc_builder_d_test",
+  "source": "operations.json",
+  "layout": "layout.json",
+  "schematic": "emberstead.schem",
+  "minecraft_version": "1.21.1",
+  "strict": true,
+  "dimensions": [43, 14, 40],
+  "explicit_blocks": 2487,
+  "solid_blocks": 2096,
+  "explicit_air": 391,
+  "operation_count": 280,
+  "preview_rounds": 2,
+  "previews": ["emberstead-preview-northwest.png", "emberstead-preview-southeast.png"],
+  "visual_review": {
+    "silhouette": "Three separate steep-roof cottages, a lower copper-roof well, an open fenced plot and farm. Player house has a forward wing and covered porch, with the tallest capped chimney as a focal point.",
+    "palette": "Dark roofs contrast with pale walls; spruce frames tie buildings together and weathered copper is limited to low porch/wing/well roofs. Ground and farm inflate the whole-scene palette count.",
+    "depth": "Roof overhangs, low stone plinths, porch posts, window boxes and shutters are visible. Main side wall was the longest pale panel; one timber pier was inserted during the single revision.",
+    "roofline": "Steep paired stair slopes and dark capped ridges are visible. Lower copper roof sections distinguish the entrance wing and porches from the main volume.",
+    "light": "Visible warm lanterns mark front porches, farm corners, well and expansion gate; interior lanterns hang below real beams.",
+    "grounding": "Dark raised plinths, moss and shrub details soften the walls. Preview is level for asset review; runtime grades each module independently and creates connecting roads.",
+    "limits": "This is the MCP renderer, not a game screenshot. Crop geometry appears as flat color patches in this renderer. Exterior roads are deliberately excluded from the schematic because runtime generates them on terrain."
+  },
+  "style_notes": [
+    "MCP warns that the entire six-module scene is nearly square. This is a village layout, not a square building; the player house itself has asymmetric projecting volumes.",
+    "MCP counts eight materials above five percent across all modules including farm/ground. Residential palette remains spruce, calcite, dark stone, copper accents."
+  ],
+  "entities": "none",
+  "loot": "none",
+  "game_launched": false
+}

@@ -2,7 +2,14 @@
 
 更新：2026-10-16（Asia/Shanghai）。玩法/技术以 PLAN.md 为准，叙事按作者世界观与状态标记约束；正式开发按 AGENTS.md 的逐任务批准与 Git 流程进行。
 
-## 2026-10-16：第一章用户验收与模组新增归档
+## 2026-10-16：建筑 MCP 初始聚落重构并部署
+
+- 用户已批准使用 subagent 重构、看预览后实装并提交。建筑工作名“余烬驿”，六组件采用木骨架、浅色墙、深色坡屋顶和风化铜门廊；实际双角度 PNG 已展示并归档。
+- 归档 `assets/settlement/emberstead/emberstead.schem`（Sponge v2、DataVersion3955）及操作源/布局，离线导入为分栋 JSON，运行时无需 WorldEdit。沿用已修复加载时机、选址和道路；旧小型后备保留，现有存档不自动覆盖。
+- 实际导入、出生/床/空箱/工作台、住宅入口通路、Java 21 打包及模板一致性关键检查通过。核心 JAR 与两份语言已备份部署；任务定义和进度不改。没有启动游戏或 GameTest，新版外观待用户新建世界查看。
+- 说明见 `docs/design/emberstead-integration.md`，提示词为 `docs/design/emberstead-build-prompt.md`，回执为 `evidence/emberstead-deployment.json`。回滚起点 `5741baf`。
+
+## 2026-10-16：第一章用户验收与模组新增归档（此前记录）
 
 - 用户明确反馈前面的问题全部修复：村民住宅、任务书断点/解锁和启动表现按其本次反馈记录为验收通过；启动异常的技术根因仍未确证。本轮没有重新启动游戏。验收原话见 `docs/feedback/2026-10-16-chapter1-accepted.md`。
 - 房屋外观不满意，用户正在寻找建筑生成工具并要求暂不处理，不开启建筑改造。
