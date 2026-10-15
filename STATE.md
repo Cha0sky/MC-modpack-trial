@@ -2,7 +2,14 @@
 
 更新：2026-10-16（Asia/Shanghai）。玩法/技术以 PLAN.md 为准，叙事按作者世界观与状态标记约束；正式开发按 AGENTS.md 的逐任务批准与 Git 流程进行。
 
-## 2026-10-16：建筑 MCP 初始聚落重构并部署
+## 2026-10-16：按预览完整生成聚落，禁用旧屋后备
+
+- 用户反馈主屋仍旧、农田未见，要求按图生成。日志确认旧逻辑选择 `player_compact` 并将农田放到距出生点约44格处，分散生成不符合预览。
+- 改为六个正式 MCP 部件按固定相对坐标、同一地坪完整生成；禁用旧小屋后备、逐栋搬迁和跳过部件。整村选址先49个纯预览候选，实际地块最多8处，整村和出口规划齐全后才放置，沿用原有安全保护及世界启动时机。
+- Java 21 构建和固定布局/六入口道路关键检查通过；核心 JAR 已备份部署，未启动游戏或写存档。用户须新建世界查看，新版完成日志为 `Complete MCP settlement 6/6`。
+- 详见 `docs/fixes/emberstead-complete-layout-2026-10-16.md` 与 `evidence/emberstead-complete-fix.json`。部署回执为 `evidence/emberstead-complete-deployment.json`，回滚起点 `04c3fc9`。
+
+## 2026-10-16：建筑 MCP 初始聚落重构并部署（旧接入方式）
 
 - 用户已批准使用 subagent 重构、看预览后实装并提交。建筑工作名“余烬驿”，六组件采用木骨架、浅色墙、深色坡屋顶和风化铜门廊；实际双角度 PNG 已展示并归档。
 - 归档 `assets/settlement/emberstead/emberstead.schem`（Sponge v2、DataVersion3955）及操作源/布局，离线导入为分栋 JSON，运行时无需 WorldEdit。沿用已修复加载时机、选址和道路；旧小型后备保留，现有存档不自动覆盖。

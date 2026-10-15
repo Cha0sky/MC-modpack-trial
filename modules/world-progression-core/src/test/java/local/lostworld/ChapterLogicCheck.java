@@ -4,6 +4,7 @@ public final class ChapterLogicCheck {
     private static void check(boolean value,String message) { if (!value) throw new AssertionError(message); }
     public static void main(String[] args) {
         SettlementGeometryCheck.run();
+        SettlementLayoutCheck.run();
         ChapterState old = new ChapterState(false,false);
         check(!old.blocksEvil(true,false),"Old worlds remain passive");
         check(!old.defeat(ChapterState.KING_SLIME),"Old-world deaths do not activate a chapter");

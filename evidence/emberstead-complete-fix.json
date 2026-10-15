@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-16",
+  "rollback_commit": "04c3fc9ddda496181af28fac9947670b55b36ce5",
+  "reported_problem": "old player hut and scattered village did not match MCP preview; farm not visible to user",
+  "log_evidence": {
+    "old_player_template": "player_compact",
+    "old_home": [
+      80,
+      65,
+      -32
+    ],
+    "old_farm": [
+      54,
+      65,
+      -68
+    ],
+    "old_components_logged": "6/6 despite visual layout mismatch"
+  },
+  "change": {
+    "mode": "complete_fixed_layout_prefab",
+    "required_components": [
+      "player_home",
+      "villager_west",
+      "villager_east",
+      "well",
+      "farm",
+      "expansion_plot"
+    ],
+    "old_hut_fallback_enabled": false,
+    "per_component_relocation_enabled": false,
+    "optional_component_skip_enabled": false,
+    "common_terrace": true,
+    "source_scene_size": [
+      43,
+      14,
+      40
+    ],
+    "terrace_footprint_including_margin": [
+      47,
+      44
+    ],
+    "generator_preview_candidates_max": 49,
+    "actual_terrain_sites_max": 8,
+    "max_cut": 6,
+    "max_fill": 18,
+    "placement_only_after_full_site_and_exit_planned": true,
+    "minecraft_spawn_event_timing_changed": false
+  },
+  "checks": {
+    "java21_offline_build_verifyLogic": "passed",
+    "fixed_six_doorway_routes": "passed",
+    "paths_avoid_building_rectangles": "passed",
+    "uniform_path_floor_and_bounded_search": "passed",
+    "game_client_server_or_gametest_launched": false,
+    "existing_saves_written": false
+  },
+  "deployment_receipt": "evidence/emberstead-complete-deployment.json",
+  "backup": "D:\\PCL 正式版 2.10.6 (1)\\codex\\modpack-project\\backups\\emberstead-complete-20261016-022331",
+  "jar_sha256": "28cc98ae7288c6ea11b89e5eb092d874d643a1b24f82d8c2c9b14844c1751d6c",
+  "deployment_applied": true,
+  "gameplay_verified": false,
+  "gameplay_verifier": "user"
+}
