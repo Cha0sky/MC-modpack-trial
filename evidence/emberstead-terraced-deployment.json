@@ -1,0 +1,15 @@
+{
+  "instance": "D:\\PCL 正式版 2.10.6 (1)\\.minecraft\\versions\\星庭远征-开发版",
+  "approved_scope": "chapter1 core generation repair",
+  "applied": true,
+  "files": [
+    {
+      "path": "mods\\world-progression-core-0.1.0.jar",
+      "before_sha256": "28cc98ae7288c6ea11b89e5eb092d874d643a1b24f82d8c2c9b14844c1751d6c",
+      "after_sha256": "0e5d28343f70ec1eeb647cd2fc30aa0662857549aca24ede85c1e06ff22b35e4",
+      "existed": true
+    }
+  ],
+  "quest_definitions_skipped": true,
+  "backup": "D:\\PCL 正式版 2.10.6 (1)\\codex\\modpack-project\\backups\\emberstead-terraced-20261016-024050"
+}

@@ -14,6 +14,11 @@ public final class SettlementLayout {
 
     private SettlementLayout() {}
 
+    public static boolean complete(List<String> parts) {
+        return parts.size()==6 && new java.util.HashSet<>(parts).equals(java.util.Set.of(
+                "player_home","villager_west","villager_east","well","farm","expansion_plot"));
+    }
+
     public static Rect bounds(List<Rect> plots,int margin) {
         if (plots.isEmpty() || margin<0) throw new IllegalArgumentException("Bounds need plots and a nonnegative margin");
         long minX=Long.MAX_VALUE,minZ=Long.MAX_VALUE,maxX=Long.MIN_VALUE,maxZ=Long.MIN_VALUE;

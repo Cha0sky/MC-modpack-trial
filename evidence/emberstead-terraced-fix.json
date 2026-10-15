@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-16",
+  "rollback_commit": "d69fe97624c4f0e73faf32916b0fe2c244ef5727",
+  "reported_regression": [
+    "no initial buildings",
+    "growth mode selectable again"
+  ],
+  "confirmed_coupling": "ChapterEvents.arrive returned before gift when hasSettlement was false",
+  "old_generation_failures": [
+    {
+      "previews": 49,
+      "actual_sites": 3,
+      "rejections": {
+        "protected-site-column": 3
+      }
+    },
+    {
+      "previews": 49,
+      "actual_sites": 8,
+      "rejections": {
+        "site-water-or-evil": 7,
+        "protected-site-column": 1
+      }
+    }
+  ],
+  "placement_policy": {
+    "independent_building_floors": true,
+    "six_authored_components_mandatory": true,
+    "legacy_hut_fallback": false,
+    "farm_planned_first_after_home": true,
+    "placement_before_all_six_planned": false,
+    "max_home_previews": 56,
+    "max_actual_home_sites": 12,
+    "max_total_plot_checks": 320,
+    "per_building_candidate_limit": 30,
+    "building_max_cut": 6,
+    "building_max_fill": 18,
+    "detailed_column_rejections": true
+  },
+  "starter_policy": {
+    "standard_mode_before_hasSettlement_check": true,
+    "uses_existing_GrowthService_gift_API": true,
+    "preserves_existing_modes_and_counters": true,
+    "unmarked_old_worlds_untouched": true,
+    "chapter_gates_active_while_pending": true,
+    "arrival_teleport_and_advancement_require_actual_house": true
+  },
+  "checks": {
+    "java21_offline_build_verifyLogic": "passed",
+    "six_component_and_mandatory_farm_home_checks": "passed",
+    "independent_terrain_levels": "passed",
+    "gift_call_order_and_EvolvingBlade_api": "source_reviewed",
+    "game_client_server_or_gametest_launched": false,
+    "existing_saves_written_by_assistant": false
+  },
+  "deployment_applied": true,
+  "deployment_receipt": "evidence/emberstead-terraced-deployment.json",
+  "backup": "D:\\PCL 正式版 2.10.6 (1)\\codex\\modpack-project\\backups\\emberstead-terraced-20261016-024050",
+  "jar_sha256": "0e5d28343f70ec1eeb647cd2fc30aa0662857549aca24ede85c1e06ff22b35e4",
+  "gameplay_verified": false,
+  "gameplay_verifier": "user"
+}

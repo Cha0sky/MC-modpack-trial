@@ -34,7 +34,13 @@ public final class ChapterData extends SavedData {
     public BlockPos bed() { return bed!=null ? bed : settlement==null ? null : settlement.offset(6,1,32); }
     public boolean hasSettlement() { return settlement != null && home != null; }
     public boolean settlementPending() { return settlementPending; }
-    public void requestSettlement() { if (!hasSettlement()) { settlementPending=true; setDirty(); } }
+    public void requestSettlement() {
+        // Chapter gates begin when this world is marked, even if terrain planning needs a retry.
+        boolean changed=!state.active();
+        state.activate();
+        if (!hasSettlement() && !settlementPending) { settlementPending=true; changed=true; }
+        if (changed) setDirty();
+    }
     public boolean arrived(UUID player) { return arrivals.contains(player); }
     public void markArrival(UUID player) { if (arrivals.add(player)) setDirty(); }
     public void settlementBuilt(BlockPos origin, BlockPos spawn) {

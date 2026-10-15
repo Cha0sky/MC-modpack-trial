@@ -9,6 +9,18 @@ final class SettlementLayoutCheck {
     private static void check(boolean condition,String message) { if (!condition) throw new AssertionError(message); }
 
     static void run() {
+        var required=List.of("player_home","farm","villager_west","villager_east","well","expansion_plot");
+        check(SettlementLayout.complete(required),"All six authored parts may be planned in terrain-friendly order");
+        check(!SettlementLayout.complete(List.of("player_home","villager_west","villager_east","well","expansion_plot")),
+                "Missing farm cannot be committed as a complete village");
+        check(!SettlementLayout.complete(List.of("player_compact","farm","villager_west","villager_east","well","expansion_plot")),
+                "Old player hut cannot stand in for the authored player home");
+        int[][] localTerrain={{64,65,66},{78,79,80},{91,92,93},{61,62,63},{50,51,52},{96,97,98}};
+        for (int[] ground:localTerrain) check(SettlementGeometry.terraceFloor(ground,6,18).isPresent(),
+                "Each building can independently fit local terrain");
+        check(SettlementGeometry.terraceFloor(new int[]{50,66,80,93,98},6,18).isEmpty(),
+                "Different valid building terraces need not fit a single village-wide floor");
+        System.out.println("PASS: mandatory MCP home and farm, complete six-part plan and independent terrace heights");
         var plots=List.of(new Rect(0,0,15,17),new Rect(-14,-6,11,13),new Rect(18,-3,11,13),
                 new Rect(4,-15,7,7),new Rect(-14,-23,13,15),new Rect(17,-19,11,9));
         Rect area=SettlementLayout.bounds(plots,2);

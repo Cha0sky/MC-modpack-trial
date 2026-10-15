@@ -46,16 +46,21 @@ public final class ChapterEvents {
     }
     @SubscribeEvent(priority=EventPriority.HIGHEST)
     public static void login(PlayerEvent.PlayerLoggedInEvent event) {
+        // Lock the chapter's default before EvolvingBlade's NORMAL-priority login snapshot.
         if (event.getEntity() instanceof ServerPlayer player) arrive(player);
     }
     public static void arrive(ServerPlayer player) {
         ChapterData data = ChapterData.find(player.serverLevel());
-        if (data == null || !data.hasSettlement()) return;
+        if (data == null || !(data.settlementPending() || data.hasSettlement())) return;
+        // Upgrade older failed-generation worlds without touching unmarked existing worlds.
+        if (data.settlementPending()) data.requestSettlement();
+        // The sword and chapter gates must not depend on whether a house could be placed.
+        if (!data.arrived(player.getUUID())) gift(player);
+        if (!data.hasSettlement()) { EvilBoundary.enforce(player); return; }
         if (!data.arrived(player.getUUID())) {
             var home = data.home();
             player.teleportTo(player.server.overworld(),home.getX()+0.5,home.getY(),home.getZ()+0.5,180,0);
             player.setRespawnPosition(Level.OVERWORLD,data.bed(),180,false,false);
-            gift(player);
             data.markArrival(player.getUUID());
             player.sendSystemMessage(Component.literal("你在一间小屋里醒来。村民说，找到你时，你身边只有这把剑。这里可以成为你的第一个家。"));
         }
