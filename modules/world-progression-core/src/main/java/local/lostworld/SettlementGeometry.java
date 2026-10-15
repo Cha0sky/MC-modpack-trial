@@ -17,6 +17,18 @@ public final class SettlementGeometry {
     private SettlementGeometry() {}
     public static Point legacyAnchor(Point bed) { return new Point(bed.x-6,bed.y-1,bed.z-32); }
 
+    /** Six authored positions, then bounded rings around the home on all eight bearings. */
+    public static List<Point> partCandidates(Rect home,int width,int depth,int desiredX,int desiredZ) {
+        var points=new java.util.LinkedHashSet<Point>();
+        for (int[] offset:new int[][]{{0,0},{-8,0},{0,-8},{8,0},{0,8},{-8,-8}})
+            points.add(new Point(desiredX+offset[0],0,desiredZ+offset[1]));
+        int cx=home.x+home.width/2,cz=home.z+home.depth/2;
+        for (int radius:new int[]{20,32,44})
+            for (int[] direction:new int[][]{{-1,0},{1,0},{0,1},{0,-1},{-1,1},{1,1},{-1,-1},{1,-1}})
+                points.add(new Point(cx+direction[0]*radius-width/2,0,cz+direction[1]*radius-depth/2));
+        return List.copyOf(points);
+    }
+
     public static OptionalInt terraceFloor(int[] ground,int maxCut,int maxFill) {
         if (ground.length==0 || maxCut<0 || maxFill<0) throw new IllegalArgumentException("Invalid terrace input");
         int low=Integer.MIN_VALUE,high=Integer.MAX_VALUE;

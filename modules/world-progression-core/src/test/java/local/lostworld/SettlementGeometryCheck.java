@@ -18,6 +18,12 @@ final class SettlementGeometryCheck {
         Rect a=new Rect(-12,-9,15,15),b=new Rect(5,-9,11,12);
         check(!a.overlaps(b,2) && a.overlaps(new Rect(4,-9,11,12),2),"Plot spacing includes eaves and a two-block gap");
         check(a.contains(-12,-9) && !a.contains(3,6),"Negative-coordinate bounds are half-open");
+        var candidates=SettlementGeometry.partCandidates(new Rect(0,0,15,15),11,12,-18,-19);
+        check(candidates.size()<=30 && new java.util.HashSet<>(candidates).size()==candidates.size(),
+                "Village search stays bounded without duplicate terrain probes");
+        check(candidates.stream().anyMatch(p->p.x()>15) && candidates.stream().anyMatch(p->p.x()+11<0)
+                && candidates.stream().anyMatch(p->p.z()>15) && candidates.stream().anyMatch(p->p.z()+12<0),
+                "A blocked northern village position can relocate south, east or west of the home");
         Point actualBed=new Point(-24,132,19),legacy=SettlementGeometry.legacyAnchor(actualBed);
         check(legacy.x()+6==actualBed.x() && legacy.y()+1==actualBed.y() && legacy.z()+32==actualBed.z(),
                 "The old schema bed-offset contract remains valid after rollback");

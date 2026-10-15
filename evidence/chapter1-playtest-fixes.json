@@ -1,0 +1,83 @@
+{
+  "date": "2026-10-15",
+  "rollback_commit": "62a9809fb286d985552dc71971591214a0f61e02",
+  "scope": "chapter-one quest dependencies and bounded village-house placement; diagnose startup error",
+  "quest_fix": {
+    "signed_positive_ids": true,
+    "chapter_and_quest_progression_mode": "linear",
+    "dependencies": "all_completed",
+    "nodes": 11,
+    "old_save_progress_migrated": false,
+    "other_chapters_changed": false
+  },
+  "settlement_fix": {
+    "part_candidates_max": 30,
+    "villager_candidates_with_compact_fallback_max": 60,
+    "compact_villager_footprint": [
+      9,
+      9
+    ],
+    "directions": 8,
+    "radii": [
+      20,
+      32,
+      44
+    ],
+    "terrain_and_structure_protection_preserved": true,
+    "existing_settlements_rebuilt": false
+  },
+  "checks": {
+    "java_21_offline_build_and_verifyLogic": "passed",
+    "template_arrival_and_villager_clearance": "passed",
+    "quest_positive_long_unique_ids_and_dependency_graph": "passed",
+    "bounded_search_four_sides_and_no_duplicates": "passed",
+    "terrain_road_and_chapter_state_logic": "passed",
+    "deployment_preflight": "passed",
+    "game_server_or_gametest_launched": false,
+    "save_files_written": false
+  },
+  "jar_sha256": "0a5b0998f6a349190db08095cf83398eb3672a472eb4c63c853a79f4113841d2",
+  "startup_issue": {
+    "report": "crash-2026-10-15_01.30.28-fml.txt",
+    "first_blocker": "Terra Entity 1.2.1 EntityAttributeCreationEvent: unbound terra_entity:devourer",
+    "crashed_java": "Microsoft 25.0.1",
+    "subsequent_successful_log_java": "Microsoft 25.0.1",
+    "java_version_causality_established": false,
+    "fixed": false,
+    "third_party_mod_or_launcher_changed": false
+  },
+  "deployment_applied": false,
+  "deployment_preview": {
+    "instance": "D:\\PCL 正式版 2.10.6 (1)\\.minecraft\\versions\\星庭远征-开发版",
+    "approved_scope": "first chapter prototype",
+    "applied": false,
+    "files": [
+      {
+        "path": "mods\\world-progression-core-0.1.0.jar",
+        "before_sha256": "e92fa092fb63d7aebb1e2e395647ed8799543623c8fd7f70a378cca080f217ff",
+        "after_sha256": "0a5b0998f6a349190db08095cf83398eb3672a472eb4c63c853a79f4113841d2",
+        "existed": true
+      },
+      {
+        "path": "config\\ftbquests\\quests\\chapters\\00_lostworld_chapter1.snbt",
+        "before_sha256": "ef509e8a9a219abce9552a119328cfbd21d0b97ee2a138b591ca51e7ecb014bf",
+        "after_sha256": "5cf9634796e358d9ce7844d6f29858e059a7ea12328f9fe3bba0871a4576b5a5",
+        "existed": true
+      },
+      {
+        "path": "config\\ftbquests\\quests\\lang\\zh_cn.snbt",
+        "before_sha256": "7cfc037103a769f9d59e1b01c378e0ffedee235459a0a6858f1abc699f8120b7",
+        "after_sha256": "b4e442cab4c5fcc0661383068fd1e16d810e511cd0844224899527cbd4c1437e",
+        "existed": true
+      },
+      {
+        "path": "config\\ftbquests\\quests\\lang\\en_us.snbt",
+        "before_sha256": "7cfc037103a769f9d59e1b01c378e0ffedee235459a0a6858f1abc699f8120b7",
+        "after_sha256": "b4e442cab4c5fcc0661383068fd1e16d810e511cd0844224899527cbd4c1437e",
+        "existed": true
+      }
+    ]
+  },
+  "gameplay_verified": false,
+  "gameplay_verifier": "user"
+}

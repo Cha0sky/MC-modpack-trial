@@ -36,7 +36,6 @@ public final class ModularSettlementBuilder {
     private static final TagKey<Block> NATURAL=TagKey.create(Registries.BLOCK,
             ResourceLocation.fromNamespaceAndPath(LostWorld.ID,"replaceable_terrain"));
     private static final int[][] HOUSE_OFFSETS={{0,0},{-16,0},{0,-16},{16,0},{0,16},{-16,-16},{16,-16},{-16,16}};
-    private static final int[][] PART_OFFSETS={{0,0},{-8,0},{0,-8},{8,0},{0,8},{-8,-8}};
     private record Voxel(int x,int y,int z,BlockState state) {}
     private record Template(String id,int width,int height,int depth,Point entry,Point desired,
                             Point home,Point bed,List<Point> villagers,List<Voxel> blocks) {}
@@ -85,18 +84,20 @@ public final class ModularSettlementBuilder {
         }
         plots.add(home.plot); addRoad(home.exit);
         for (String id:List.of("villager_west","villager_east","well","farm","expansion_plot")) {
-            Template template=templates.get(id);
-            int desiredX=home.plot.rect.x()+template.desired.x(),desiredZ=home.plot.rect.z()+template.desired.z();
-            boolean accepted=false;
-            for (int[] offset:PART_OFFSETS) {
-                Plot candidate=planPlot(template,desiredX+offset[0],desiredZ+offset[1]);
-                if (candidate==null) continue;
-                List<Plot> obstacles=new ArrayList<>(plots); obstacles.add(candidate);
-                Road road=planRoad(home.plot.entry(),candidate.entry(),obstacles);
-                if (road==null) { rejected("part-road"); continue; }
-                plots.add(candidate); addRoad(road); accepted=true; break;
+            Map<String,Integer> before=new LinkedHashMap<>(rejects);
+            int checkedBefore=checkedPlots;
+            boolean accepted=planPart(templates.get(id),home.plot);
+            if (!accepted && id.startsWith("villager_")) {
+                Template compact=templates.get(id+"_compact");
+                accepted=planPart(compact,home.plot);
             }
-            if (!accepted) LostWorld.LOG.warn("玩家房屋可建，本次跳过尚无安全地块/连接路的部件：{}",id);
+            Map<String,Integer> reasons=new LinkedHashMap<>();
+            rejects.forEach((reason,count)->{
+                int delta=count-before.getOrDefault(reason,0);
+                if (delta>0) reasons.put(reason,delta);
+            });
+            if (!accepted) LostWorld.LOG.warn("聚落部件 {} 未找到安全地块/连接路；检查 {} 处，原因 {}",
+                    id,checkedPlots-checkedBefore,reasons);
         }
         int blocks=0;
         for (Plot plot:plots) blocks+=placePlot(plot);
@@ -113,20 +114,43 @@ public final class ModularSettlementBuilder {
         return new SettlementBuilder.Result(data.settlement(),arrival,bed,blocks);
     }
 
+    private boolean planPart(Template template,Plot home) {
+        int desiredX=home.rect.x()+template.desired.x(),desiredZ=home.rect.z()+template.desired.z();
+        for (Point point:SettlementGeometry.partCandidates(home.rect,template.width,template.depth,desiredX,desiredZ)) {
+            Plot candidate=planPlot(template,point.x(),point.z());
+            if (candidate==null) continue;
+            List<Plot> obstacles=new ArrayList<>(plots); obstacles.add(candidate);
+            List<Plot> connections=new ArrayList<>(plots);
+            connections.sort(java.util.Comparator.comparingInt(p->Math.abs(p.entry().x()-candidate.entry().x())
+                    +Math.abs(p.entry().z()-candidate.entry().z())));
+            for (Plot connection:connections) {
+                Road road=planRoad(connection.entry(),candidate.entry(),obstacles);
+                if (road==null) continue;
+                plots.add(candidate); addRoad(road);
+                LostWorld.LOG.info("聚落部件 {} 已选址：{}，地面高度 {}，连接 {}",
+                        template.id,candidate.origin(),candidate.floor,connection.template.id);
+                return true;
+            }
+            rejected("part-road");
+        }
+        return false;
+    }
+
     private Plot planPlot(Template template,int x,int z) {
         checkedPlots++;
         Rect rect=new Rect(x,z,template.width,template.depth);
         for (Plot plot:plots) if (rect.overlaps(plot.rect,2)) return fail("overlap");
+        // Reject obvious water/evil corners before touching every column or loading more chunks.
+        for (int dx:new int[]{0,template.width/2,template.width-1})
+            for (int dz:new int[]{0,template.depth/2,template.depth-1})
+                if (!dryGround(x+dx,z+dz)) return fail("ground");
         int[] terrain=new int[template.width*template.depth+1];
         int index=0;
         for (int dx=0;dx<template.width;dx++) for (int dz=0;dz<template.depth;dz++) {
             if (roadFloors.containsKey(key(x+dx,z+dz))) return fail("road-overlap");
             int y=ground(x+dx,z+dz);
             BlockPos pos=new BlockPos(x+dx,y,z+dz);
-            BlockState state=level.getBlockState(pos);
-            if (!level.getWorldBorder().isWithinBounds(pos) || y<level.getSeaLevel()-1
-                    || !state.getFluidState().isEmpty() || !state.isSolidRender(level,pos)
-                    || EvilBoundary.evil(level,pos)) return fail("ground");
+            if (!dryGround(pos.getX(),pos.getZ())) return fail("ground");
             terrain[index++]=y;
         }
         terrain[index]=ground(x+template.entry.x(),z+template.entry.z());
@@ -139,6 +163,14 @@ public final class ModularSettlementBuilder {
         }
         if (!columnSafe(x+template.entry.x(),z+template.entry.z(),y,3,false)) return fail("entrance");
         return new Plot(template,rect,y);
+    }
+
+    private boolean dryGround(int x,int z) {
+        int y=ground(x,z);
+        BlockPos pos=new BlockPos(x,y,z);
+        BlockState state=level.getBlockState(pos);
+        return level.getWorldBorder().isWithinBounds(pos) && y>=level.getSeaLevel()-1
+                && state.getFluidState().isEmpty() && state.isSolidRender(level,pos) && !EvilBoundary.evil(level,pos);
     }
 
     private Road planExit(Plot home) {

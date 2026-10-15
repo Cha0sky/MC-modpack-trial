@@ -1,10 +1,11 @@
 {
-  "id": "DA0FF97AED39E75E",
+  "id": "5A0FF97AED39E75E",
   "filename": "00_lostworld_chapter1",
   "order_index": -1,
   "icon": {
     "id": "evolvingblade:star_eater"
   },
+  "progression_mode": "linear",
   "quests": [
     {
       "id": "4B61DD93ABC703EA",
@@ -15,9 +16,15 @@
       },
       "min_width": 300,
       "dependencies": [],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
       "tasks": [
         {
-          "id": "EF62D75B394904D5",
+          "id": "6F62D75B394904D5",
           "type": "advancement",
           "advancement": "world_progression_core:arrive",
           "criterion": "done"
@@ -26,7 +33,7 @@
       "rewards": []
     },
     {
-      "id": "8464CA606F343573",
+      "id": "0464CA606F343573",
       "x": 2,
       "y": 0,
       "icon": {
@@ -36,9 +43,15 @@
       "dependencies": [
         "4B61DD93ABC703EA"
       ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
       "tasks": [
         {
-          "id": "E55C55209275056E",
+          "id": "655C55209275056E",
           "type": "advancement",
           "advancement": "world_progression_core:explore",
           "criterion": "done"
@@ -47,7 +60,7 @@
       "rewards": []
     },
     {
-      "id": "9991EA50DCDCE562",
+      "id": "1991EA50DCDCE562",
       "x": 4,
       "y": 0,
       "icon": {
@@ -55,11 +68,17 @@
       },
       "min_width": 300,
       "dependencies": [
-        "8464CA606F343573"
+        "0464CA606F343573"
       ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
       "tasks": [
         {
-          "id": "E9969EFADB557A46",
+          "id": "69969EFADB557A46",
           "type": "item",
           "item": {
             "id": "minecraft:stone_pickaxe",
@@ -80,8 +99,14 @@
       },
       "min_width": 300,
       "dependencies": [
-        "9991EA50DCDCE562"
+        "1991EA50DCDCE562"
       ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
       "tasks": [
         {
           "id": "6AF8F0E1473C07D3",
@@ -90,7 +115,7 @@
           "criterion": "done"
         },
         {
-          "id": "C606BB8226C92CD2",
+          "id": "4606BB8226C92CD2",
           "type": "item",
           "item": {
             "id": "minecraft:cobblestone",
@@ -110,7 +135,7 @@
           "consume_items": false
         },
         {
-          "id": "89A1EB8B6A78795B",
+          "id": "09A1EB8B6A78795B",
           "type": "item",
           "item": {
             "id": "minecraft:raw_iron",
@@ -123,7 +148,7 @@
       "rewards": []
     },
     {
-      "id": "C500C181673A4FB3",
+      "id": "4500C181673A4FB3",
       "x": 8,
       "y": -1,
       "icon": {
@@ -133,9 +158,15 @@
       "dependencies": [
         "36C3A881016E5E96"
       ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
       "tasks": [
         {
-          "id": "92B4551E91979393",
+          "id": "12B4551E91979393",
           "type": "item",
           "item": {
             "id": "infinitecore:template_dirt",
@@ -148,7 +179,7 @@
       "rewards": []
     },
     {
-      "id": "A039A0EE2EAB186F",
+      "id": "2039A0EE2EAB186F",
       "x": 10,
       "y": -1,
       "icon": {
@@ -156,11 +187,17 @@
       },
       "min_width": 300,
       "dependencies": [
-        "C500C181673A4FB3"
+        "4500C181673A4FB3"
       ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
       "tasks": [
         {
-          "id": "CC086D2D749528D2",
+          "id": "4C086D2D749528D2",
           "type": "advancement",
           "advancement": "world_progression_core:craft_dirt_generator",
           "criterion": "done"
@@ -179,9 +216,15 @@
       "dependencies": [
         "36C3A881016E5E96"
       ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
       "tasks": [
         {
-          "id": "AC0B6BD6983424B6",
+          "id": "2C0B6BD6983424B6",
           "type": "item",
           "item": {
             "id": "create:andesite_alloy",
@@ -194,7 +237,7 @@
       "rewards": []
     },
     {
-      "id": "93DACF956E61E42F",
+      "id": "13DACF956E61E42F",
       "x": 10,
       "y": 1,
       "icon": {
@@ -204,9 +247,15 @@
       "dependencies": [
         "49639F9E7F91B628"
       ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
       "tasks": [
         {
-          "id": "BEE6DE5260EADCD5",
+          "id": "3EE6DE5260EADCD5",
           "type": "item",
           "item": {
             "id": "create:shaft",
@@ -216,7 +265,7 @@
           "consume_items": false
         },
         {
-          "id": "99CF50764B93B905",
+          "id": "19CF50764B93B905",
           "type": "item",
           "item": {
             "id": "create:cogwheel",
@@ -226,7 +275,7 @@
           "consume_items": false
         },
         {
-          "id": "B67A7C1679231F41",
+          "id": "367A7C1679231F41",
           "type": "item",
           "item": {
             "id": "create:hand_crank",
@@ -236,7 +285,7 @@
           "consume_items": false
         },
         {
-          "id": "C1E0F7B9BA91A7EC",
+          "id": "41E0F7B9BA91A7EC",
           "type": "item",
           "item": {
             "id": "create:andesite_casing",
@@ -257,9 +306,15 @@
       },
       "min_width": 300,
       "dependencies": [
-        "A039A0EE2EAB186F",
-        "93DACF956E61E42F"
+        "2039A0EE2EAB186F",
+        "13DACF956E61E42F"
       ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
       "tasks": [
         {
           "id": "6BDAE420BDABAFF2",
@@ -279,7 +334,7 @@
       ]
     },
     {
-      "id": "C41D1DEFF4C0B58E",
+      "id": "441D1DEFF4C0B58E",
       "x": 14,
       "y": 0,
       "icon": {
@@ -289,6 +344,12 @@
       "dependencies": [
         "04E0645E6BC170B0"
       ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
       "tasks": [
         {
           "id": "32C62F6D89B0ED7D",
@@ -308,8 +369,14 @@
       },
       "min_width": 300,
       "dependencies": [
-        "C41D1DEFF4C0B58E"
+        "441D1DEFF4C0B58E"
       ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
       "tasks": [
         {
           "id": "051137D7251B899F",

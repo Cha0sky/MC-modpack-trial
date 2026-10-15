@@ -9,7 +9,10 @@ RES = ROOT / "modules/world-progression-core/src/main/resources/data/world_progr
 
 
 def uid(name):
-    return hashlib.sha256(("lostworld.chapter1.v1/"+name).encode()).hexdigest()[:16].upper()
+    # FTB Quests 2101.1.27 uses Long.parseLong(hex, 16), not unsigned parsing.
+    # Out-of-range IDs are replaced on load and dependency references disappear.
+    value=int(hashlib.sha256(("lostworld.chapter1.v1/"+name).encode()).hexdigest()[:16],16)
+    return f"{value & 0x7FFFFFFFFFFFFFFF:016X}"
 
 
 def write(path, data):
@@ -19,12 +22,15 @@ def write(path, data):
 
 def main():
     chapter = {"id":uid("chapter"),"filename":"00_lostworld_chapter1","order_index":-1,
-               "icon":{"id":"evolvingblade:star_eater"},"quests":[]}
+               "icon":{"id":"evolvingblade:star_eater"},"progression_mode":"linear","quests":[]}
     lang = {"chapter."+uid("chapter")+".title":"第一章 · 从小屋出发"}
 
     def quest(name,title,desc,x,y,icon,needs=(),tasks=(),reward=False):
         q={"id":uid(name),"x":x,"y":y,"icon":{"id":icon},"min_width":300,
-           "dependencies":[uid(n) for n in needs],"tasks":[],"rewards":[]}
+           "dependencies":[uid(n) for n in needs],"dependency_requirement":"all_completed",
+           "progression_mode":"linear","hide_dependency_lines":False,
+           "hide_until_deps_visible":False,"hide_until_deps_complete":False,
+           "hide_lock_icon":False,"tasks":[],"rewards":[]}
         for i,t in enumerate(tasks):
             q["tasks"].append({"id":uid(name+"/task/"+str(i)),**t})
         if reward:
@@ -95,7 +101,27 @@ def main():
                 ids.extend(t["id"] for t in q.get(kind,[]))
     assert len(ids)==len(set(ids)),"Quest IDs collide"
     assert len(chapter["quests"])==11
+    verify_chapter(chapter)
     print("First chapter: 11 quests, unique IDs across all chapters, one network generator reward")
+
+
+def verify_chapter(chapter):
+    """Guard the real ID/parser failure and the branch join that gates the reward."""
+    objects=[chapter]+chapter["quests"]+[t for q in chapter["quests"] for k in ("tasks","rewards") for t in q[k]]
+    assert all(0<int(o["id"],16)<=0x7FFFFFFFFFFFFFFF for o in objects),"ID outside signed-positive FTB range"
+    nodes={q["id"]:q for q in chapter["quests"]}
+    assert chapter["progression_mode"]=="linear"
+    for q in nodes.values():
+        assert q["progression_mode"]=="linear" and q["dependency_requirement"]=="all_completed"
+        assert all(d in nodes for d in q["dependencies"]),"Dangling dependency"
+    reached=set()
+    for q in chapter["quests"]:
+        assert set(q["dependencies"])<=reached,"Cycle or disconnected ordering"
+        assert q["dependencies"] or q["id"]==uid("arrival"),"Unexpected unlocked root"
+        reached.add(q["id"])
+    assert nodes[uid("workshop")]["dependencies"]==[uid("generator"),uid("create")]
+    assert nodes[uid("king")]["dependencies"]==[uid("workshop")]
+    assert sum(len(q["rewards"]) for q in nodes.values())==1
 
 
 if __name__ == "__main__":

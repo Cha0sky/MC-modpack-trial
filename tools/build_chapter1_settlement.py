@@ -146,6 +146,9 @@ def build_modules():
     old=blocks.copy()
     blocks.clear(); box(0,0,0,8,0,10,"grass_block"); house(1,1,7,9,player=True)
     extract("player_compact",0,0,9,11,[4,0,-1],[0,0],home=[4,1,5],bed=[3,1,7])
+    blocks.clear(); box(0,0,0,8,0,8,"grass_block"); house(1,1,7,7)
+    extract("villager_west_compact",0,0,9,9,[4,0,-1],[-18,-19],villagers=[[4,1,3]])
+    extract("villager_east_compact",0,0,9,9,[4,0,-1],[21,-18],villagers=[[4,1,3],[4,1,4]])
     blocks.clear(); blocks.update(old)
     for part in modules:
         w,_,d=part["size"]
@@ -161,7 +164,7 @@ def build_modules():
     dest=MODULE/"src/main/resources/data/world_progression_core/settlement/modules.json"
     dest.write_text(json.dumps({"schema":1,"modules":modules},ensure_ascii=False,separators=(",",":"))+"\n",encoding="utf-8")
     draw_modular_plan(modules)
-    print("Independent templates: 6 village parts and 1 compact player-house fallback")
+    print("Independent templates: 6 village parts, player-house fallback and 2 compact villager houses")
 
 
 def draw_modular_plan(modules):
