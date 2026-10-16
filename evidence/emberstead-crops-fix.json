@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-16",
+  "rollback_commit": "1c37fc63bf3392386d5f5452fa17dcb14eaabbc4",
+  "failure": "IllegalStateException: Incomplete MCP component: farm",
+  "diagnosed_previous_world": {
+    "name": "初始聚落测试2",
+    "farm_origin": [
+      83,
+      70,
+      -287
+    ],
+    "expected_voxels": 363,
+    "matching_voxels": 333,
+    "structural_voxels_matching": 253,
+    "expected_crops": 110,
+    "missing_wheat": 12,
+    "missing_carrots": 18,
+    "brightness_at_construction_directly_observed": false
+  },
+  "fix": {
+    "crop_blocks_placed_after_all_structures_and_roads": true,
+    "crop_update_flags": 18,
+    "other_blocks_keep_normal_shape_updates": true,
+    "structural_validation_preserved": true,
+    "crop_changes_reported_without_fatal_exception": true,
+    "all_six_buildings_and_independent_terraces_unchanged": true,
+    "starter_standard_mode_unchanged": true
+  },
+  "checks": {
+    "java21_offline_build_and_verifyLogic": "passed",
+    "source_change_review": "passed",
+    "game_client_server_or_gametest_launched": false,
+    "existing_saves_written_by_assistant": false
+  },
+  "deployment_receipt": "evidence/emberstead-crops-deployment.json",
+  "deployment_applied": true,
+  "backup": "D:\\PCL 正式版 2.10.6 (1)\\codex\\modpack-project\\backups\\emberstead-crops-20261016-150639",
+  "jar_sha256": "071b656c12f3ca1d8dd8dbdc15dd1667076b027706eaaebbf9ede3289cc87efd",
+  "gameplay_verified": false,
+  "gameplay_verifier": "user"
+}

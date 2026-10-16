@@ -23,6 +23,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.Heightmap;
@@ -115,14 +116,37 @@ public final class ModularSettlementBuilder {
         int blocks=0;
         for (Plot plot:plots) blocks+=placePlot(plot);
         for (Road road:roads) placeRoad(road);
+        // Complete all support, water, fences and roads before planting. During
+        // server startup the light engine may still reflect the cleared terrain;
+        // construction-time neighbor shapes must not destroy otherwise valid crops.
+        for (Plot plot:plots) {
+            for (Voxel voxel:plot.template.blocks)
+                if (voxel.state.getBlock() instanceof CropBlock)
+                    set(plot.origin().offset(voxel.x,voxel.y,voxel.z),voxel.state,
+                            Block.UPDATE_CLIENTS | Block.UPDATE_KNOWN_SHAPE);
+        }
         BlockPos arrival=offset(home.origin(),player.home),bed=offset(home.origin(),player.bed);
         if (!level.getBlockState(bed).is(Blocks.RED_BED)
                 || !level.getBlockState(arrival).isAir() || !level.getBlockState(arrival.above()).isAir())
             throw new IllegalStateException("MCP player room was not placed");
         for (Plot plot:plots) {
-            for (Voxel voxel:plot.template.blocks)
-                if (!level.getBlockState(plot.origin().offset(voxel.x,voxel.y,voxel.z)).is(voxel.state.getBlock()))
-                    throw new IllegalStateException("Incomplete MCP component: "+plot.template.id);
+            int crops=0,missingCrops=0;
+            for (Voxel voxel:plot.template.blocks) {
+                BlockPos pos=plot.origin().offset(voxel.x,voxel.y,voxel.z);
+                BlockState actual=level.getBlockState(pos);
+                if (voxel.state.getBlock() instanceof CropBlock) {
+                    crops++;
+                    if (!actual.is(voxel.state.getBlock())) missingCrops++;
+                } else if (!actual.is(voxel.state.getBlock())) {
+                    throw new IllegalStateException("Missing structural block in "+plot.template.id+" at "+pos
+                            +": expected "+voxel.state+", actual "+actual);
+                }
+            }
+            // Harvestable plants are not building structure. A plant update must
+            // never turn a complete six-building settlement into a server crash.
+            if (crops>0) LostWorld.LOG.info("MCP crop placement {}: {}/{} present",plot.template.id,crops-missingCrops,crops);
+            if (missingCrops>0) LostWorld.LOG.warn("MCP crops changed during placement: {} missing {} plants; structural verification passed",
+                    plot.template.id,missingCrops);
             LostWorld.LOG.info("Terraced MCP component {} at {}, independent floor {}",plot.template.id,plot.origin(),plot.floor);
         }
         data.settlementBuilt(home.origin(),arrival,bed);
@@ -346,7 +370,9 @@ public final class ModularSettlementBuilder {
             fillFoundation(wx,wz,plot.floor,raw);
             for (int y=plot.floor+1;y<=top;y++) set(new BlockPos(wx,y,wz),Blocks.AIR.defaultBlockState());
         }
-        for (Voxel voxel:template.blocks) set(plot.origin().offset(voxel.x,voxel.y,voxel.z),voxel.state);
+        for (Voxel voxel:template.blocks)
+            if (!(voxel.state.getBlock() instanceof CropBlock))
+                set(plot.origin().offset(voxel.x,voxel.y,voxel.z),voxel.state);
         placeColumn(plot.entry().x(),plot.entry().z(),plot.floor,Blocks.COBBLESTONE.defaultBlockState());
         for (Point point:template.villagers) {
             BlockPos pos=offset(plot.origin(),point);
@@ -385,7 +411,10 @@ public final class ModularSettlementBuilder {
         for (int y=raw+1;y<floor;y++) set(new BlockPos(x,y,z),Blocks.COBBLESTONE.defaultBlockState());
     }
     private void set(BlockPos pos,BlockState state) {
-        if (!level.getBlockState(pos).equals(state) && !level.setBlock(pos,state,2))
+        set(pos,state,Block.UPDATE_CLIENTS);
+    }
+    private void set(BlockPos pos,BlockState state,int flags) {
+        if (!level.getBlockState(pos).equals(state) && !level.setBlock(pos,state,flags))
             throw new IllegalStateException("Settlement block placement refused at "+pos);
     }
     private Plot fail(String reason) { rejected(reason); return null; }
