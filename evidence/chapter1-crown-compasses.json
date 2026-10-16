@@ -44,7 +44,10 @@
     "existing_saves_written": false
   },
   "jar_sha256": "1f3333cefa2b335425d65134445feccfe0e61f12da90a7f0c1144aa59c3516cb",
-  "deployment_applied": false,
+  "deployment_applied": true,
   "gameplay_verified": false,
-  "gameplay_verifier": "user"
+  "gameplay_verifier": "user",
+  "deployment_receipt": "evidence/chapter1-crown-compasses-deployment.json",
+  "backup": "D:\\PCL 正式版 2.10.6 (1)\\codex\\modpack-project\\backups\\chapter1-crown-compasses-20261016-161449",
+  "implementation_commit": "dabc805"
 }
