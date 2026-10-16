@@ -384,6 +384,60 @@
         }
       ],
       "rewards": []
+    },
+    {
+      "id": "4E2E6DEF9B35CC9D",
+      "x": 18,
+      "y": -1,
+      "icon": {
+        "id": "naturescompass:naturescompass"
+      },
+      "min_width": 300,
+      "dependencies": [
+        "259C64DF4D981F3C"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "71283F712EFBBC34",
+          "type": "advancement",
+          "advancement": "world_progression_core:craft_natures_compass",
+          "criterion": "done"
+        }
+      ],
+      "rewards": []
+    },
+    {
+      "id": "280D401DA2351897",
+      "x": 18,
+      "y": 1,
+      "icon": {
+        "id": "explorerscompass:explorerscompass"
+      },
+      "min_width": 300,
+      "dependencies": [
+        "259C64DF4D981F3C"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "0B449D012C491AC9",
+          "type": "advancement",
+          "advancement": "world_progression_core:craft_explorers_compass",
+          "criterion": "done"
+        }
+      ],
+      "rewards": []
     }
   ]
 }

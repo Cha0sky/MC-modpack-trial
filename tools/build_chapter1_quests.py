@@ -38,7 +38,7 @@ def main():
                 "item":{"id":"beyonddimensions:net_creater","count":1},"count":1})
         chapter["quests"].append(q)
         lang["quest."+q["id"]+".title"]=title
-        lang["quest."+q["id"]+".quest_desc"]=desc
+        lang["quest."+q["id"]+".quest_desc"]=["【叙事占位："+title+"】",*desc]
 
     def adv(name):
         return {"type":"advancement","advancement":"world_progression_core:"+name,"criterion":"done"}
@@ -47,7 +47,7 @@ def main():
         return {"type":"item","item":{"id":name,"count":1},"count":count,"consume_items":False}
 
     quest("arrival","在小屋里醒来",[
-        "村民发现你时，你身边只有一把剑。你在他们为你留出的屋子里醒来。",
+        "开场剧情暂留占位，后续补写。",
         "这里有床、空箱和工作台。沿门廊出入聚落，屋外的空地可以继续扩建。",
         "成长剑已采用标准路线。先安顿下来，再踏上旅途。前言物资与完整玩法介绍将在后续制作。"],
         0,0,"minecraft:red_bed",tasks=[adv("arrive")])
@@ -72,13 +72,20 @@ def main():
     quest("workshop","为旅途建立后方",["泥土生成器和机械动力的基础已经准备就绪。把小屋发展成自己的第一处基地。",
         "完成两条分支后，领取 1 个维度网络发生器。它是本次试作唯一新增的物品奖励。"],
         12,0,"beyonddimensions:net_creater",needs=["generator","create"],tasks=[{"type":"checkmark"}],reward=True)
-    quest("king","第一次首领挑战：史莱姆王",["做好装备与补给，按汇流来世的原生方式召唤并击败史莱姆王。",
-        "召唤条件以当前模组实际玩法与 JEI 为准。本章不改写汇流来世原生首领进度。",
+    quest("king","第一次首领挑战：史莱姆王",["在工作台合成史莱姆皇冠，准备装备与补给后召唤并击败史莱姆王。",
+        "新增配方：8 个凝胶围绕 1 个金冠或铂金冠，产出 1 个史莱姆皇冠；皇冠本体沿用原生工作台配方。原祭坛配方保留。",
+        "本章不改写汇流来世原生首领进度。",
         "史莱姆王击败记录按整个存档共享。普通史莱姆、首领仆从和取消的死亡不会打开区域。"],
         14,0,"minecraft:slime_block",needs=["workshop"],tasks=[adv("unlock_evil")])
     quest("next","通往猩红与腐化的道路",["史莱姆王倒下后，整个世界的猩红与腐化区域解除进入限制，重新登录后仍保持开放。",
-        "第一章试作到这里结束。第二章的探索目标、敌人和进一步发展路线尚未制作。"],
+        "接下来合成自然罗盘与探险者指南针，为后续群系和遗迹探索做准备。后续剧情暂留占位。"],
         16,0,"minecraft:map",needs=["king"],tasks=[{"type":"checkmark"}])
+    quest("nature_compass","合成自然罗盘",["击败史莱姆王后，按 JEI 的原生配方亲手合成 1 个自然罗盘。",
+        "检测自然罗盘的首次制作配方；仅持有、拾取或修复已有罗盘不算。击败史莱姆王之前的合成不计入此节点。"],
+        18,-1,"naturescompass:naturescompass",needs=["next"],tasks=[adv("craft_natures_compass")])
+    quest("explorer_compass","合成探险者指南针",["击败史莱姆王后，按 JEI 的原生配方亲手合成 1 个探险者指南针。",
+        "检测指南针的首次制作配方；仅持有、拾取或修复已有指南针不算。击败史莱姆王之前的合成不计入此节点。"],
+        18,1,"explorerscompass:explorerscompass",needs=["next"],tasks=[adv("craft_explorers_compass")])
     write(QUESTS / "chapters/00_lostworld_chapter1.snbt",chapter)
     for locale in ("zh_cn","en_us"):
         dest=QUESTS / f"lang/{locale}.snbt"
@@ -89,6 +96,23 @@ def main():
         write(RES / f"advancement/{name}.json",{"criteria":{"done":{"trigger":"minecraft:impossible"}}})
     write(RES / "advancement/craft_dirt_generator.json",{"criteria":{"done":{
         "trigger":"minecraft:recipe_crafted","conditions":{"recipe_id":"infinitecore:dirt_generator"}}}})
+    for name,recipe in (("craft_natures_compass","naturescompass:natures_compass"),
+                        ("craft_explorers_compass","explorerscompass:explorers_compass")):
+        write(RES / f"advancement/{name}.json",{"criteria":{"done":{
+            "trigger":"minecraft:recipe_crafted","conditions":{"recipe_id":recipe,"player":[{
+                "condition":"minecraft:entity_properties","entity":"this","predicate":{
+                    "type_specific":{"type":"minecraft:player","advancements":{
+                        "world_progression_core:unlock_evil":True}}}}]}}}})
+    write(RES / "recipe/slime_crown_workbench.json",{
+        "neoforge:conditions":[{"type":"neoforge:mod_loaded","modid":"confluence"}],
+        "type":"minecraft:crafting_shaped","category":"misc","pattern":["GGG","GCG","GGG"],
+        "key":{"G":{"item":"confluence:gel"},"C":[{"item":"confluence:gold_crown"},{"item":"confluence:platinum_crown"}]},
+        "result":{"id":"confluence:slime_crown","count":1}})
+    write(RES / "advancement/recipes/slime_crown_workbench.json",{
+        "neoforge:conditions":[{"type":"neoforge:mod_loaded","modid":"confluence"}],
+        "parent":"minecraft:recipes/root","criteria":{"has_gel":{"trigger":"minecraft:inventory_changed",
+            "conditions":{"items":[{"items":["confluence:gel"]}]}}},
+        "requirements":[["has_gel"]],"rewards":{"recipes":["world_progression_core:slime_crown_workbench"]}})
     write(RES / "tags/worldgen/biome/locked_evil_biomes.json",{"replace":False,"values":[
         {"id":"confluence:"+b,"required":False} for b in
         ("the_corruption","the_corruption_desert","the_corruption_tundra","the_crimson","the_crimson_desert","the_crimson_tundra")]})
@@ -100,9 +124,9 @@ def main():
             for kind in ("tasks","rewards"):
                 ids.extend(t["id"] for t in q.get(kind,[]))
     assert len(ids)==len(set(ids)),"Quest IDs collide"
-    assert len(chapter["quests"])==11
+    assert len(chapter["quests"])==13
     verify_chapter(chapter)
-    print("First chapter: 11 quests, unique IDs across all chapters, one network generator reward")
+    print("First chapter: 13 quests, post-King crafting tasks, workbench slime crown; stable unique positive IDs")
 
 
 def verify_chapter(chapter):
@@ -121,6 +145,9 @@ def verify_chapter(chapter):
         reached.add(q["id"])
     assert nodes[uid("workshop")]["dependencies"]==[uid("generator"),uid("create")]
     assert nodes[uid("king")]["dependencies"]==[uid("workshop")]
+    for name in ("nature_compass","explorer_compass"):
+        assert nodes[uid(name)]["dependencies"]==[uid("next")]
+        assert nodes[uid(name)]["tasks"][0]["type"]=="advancement"
     assert sum(len(q["rewards"]) for q in nodes.values())==1
 
 

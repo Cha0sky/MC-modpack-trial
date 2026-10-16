@@ -1,0 +1,32 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "confluence"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GGG",
+    "GCG",
+    "GGG"
+  ],
+  "key": {
+    "G": {
+      "item": "confluence:gel"
+    },
+    "C": [
+      {
+        "item": "confluence:gold_crown"
+      },
+      {
+        "item": "confluence:platinum_crown"
+      }
+    ]
+  },
+  "result": {
+    "id": "confluence:slime_crown",
+    "count": 1
+  }
+}

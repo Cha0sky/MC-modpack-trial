@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-16",
+  "rollback_commit": "efd212f0f1b142609b38f7675c26d8a794aa9a23",
+  "native_altar_recipe": {
+    "output": "confluence:slime_crown",
+    "gel_count": 20,
+    "crowns": [
+      "confluence:gold_crown",
+      "confluence:platinum_crown"
+    ],
+    "modified": false
+  },
+  "new_workbench_recipe": {
+    "id": "world_progression_core:slime_crown_workbench",
+    "gel_count": 8,
+    "crowns": [
+      "confluence:gold_crown",
+      "confluence:platinum_crown"
+    ],
+    "output_count": 1
+  },
+  "quests": {
+    "count": 13,
+    "old_11_quest_ids_preserved": true,
+    "new_compass_quest_ids": [
+      "4E2E6DEF9B35CC9D",
+      "280D401DA2351897"
+    ],
+    "unlock_path": "king -> next -> nature_compass + explorer_compass",
+    "crafting_requires_advancement": "world_progression_core:unlock_evil",
+    "repair_or_pickup_counts": false,
+    "pre_boss_crafting_counts": false,
+    "extra_item_rewards": false,
+    "narrative_placeholders": true
+  },
+  "checks": {
+    "positive_unique_ids_and_dependency_graph": "passed",
+    "recipe_amount_and_two_crown_alternatives": "passed",
+    "exact_native_compass_recipe_ids": "passed",
+    "local_1_21_1_criterion_codec_fields": "reviewed",
+    "java21_offline_jar": "passed",
+    "packaged_json_matches_source": "passed",
+    "game_client_server_or_gametest_launched": false,
+    "existing_saves_written": false
+  },
+  "jar_sha256": "1f3333cefa2b335425d65134445feccfe0e61f12da90a7f0c1144aa59c3516cb",
+  "deployment_applied": false,
+  "gameplay_verified": false,
+  "gameplay_verifier": "user"
+}
