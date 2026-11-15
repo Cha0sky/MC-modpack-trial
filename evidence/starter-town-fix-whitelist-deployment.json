@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-16T04:03:50.555295+08:00",
+  "instance": "D:\\PCL 正式版 2.10.6 (1)\\.minecraft\\versions\\星庭远征-开发版",
+  "applied": true,
+  "approved_scope": "User requested starter town bug fix and Infinite Core whitelist deployment",
+  "source_commit": "207b45a409bbc5a7aa68ee0400d060ee04a4fdee",
+  "whitelist_source_commit": "a03ba0c",
+  "backup": "D:\\PCL 正式版 2.10.6 (1)\\codex\\modpack-project\\backups\\town-fix-whitelist-20261116-040350-555295",
+  "game_process_check": "No java/javaw process before backup or replacement",
+  "game_launched": false,
+  "game_test_run": false,
+  "saves_modified": false,
+  "quest_definitions_skipped": true,
+  "languages_unchanged": true,
+  "other_mod_files_unchanged": true,
+  "runtime_acceptance": "pending user playtest",
+  "files": [
+    {
+      "path": "mods/world-progression-core-0.1.0.jar",
+      "source_artifact": "modules/world-progression-core/build/libs/world-progression-core-0.1.0-starter-town-fix.jar",
+      "before_sha256": "fcd474f16dab3a7c217766cc85f8a3c6a500e0026289f7655ac550ddbff53a6f",
+      "after_sha256": "d48c0b3543906c87c98d78ece28ca349b2d9e5595adde97df17a8ae145ccacd9"
+    },
+    {
+      "path": "mods/infinitecore-1.1.2.jar",
+      "source_artifact": "modules/infinitecore/build/libs/infinitecore-1.1.2-whitelist.jar",
+      "before_sha256": "99074a8242313ca813abb452484236adb9ab088ebb1b56fbd63a101240de2ae0",
+      "after_sha256": "67f0b84a5918adac451f61a4cd15f5b4ba0ec28f56cd836bcc1ca05ad2c288ff"
+    }
+  ]
+}

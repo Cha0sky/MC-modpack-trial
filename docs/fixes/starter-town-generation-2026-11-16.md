@@ -17,4 +17,4 @@ Temurin Java 21.0.12+8、NeoForge 21.1.248 离线 `build` 与 `verifyLogic` 通�
 
 修复包为 `modules/world-progression-core/build/libs/world-progression-core-0.1.0-starter-town-fix.jar`。本任务还获准部署既有无限之核白名单包；其 SHA-256 与 `a03ba0c` 的历史产物一致，22 项资源标签匹配源码，无需重新构建。
 
-编译完成时尚未部署。未启动客户端、服务器或 GameTest，也未读取或修改存档。用户实机验收：新世界在自宅持剑醒来，13 处地块与道路、镇口可用；白名单下泥土默认产出正常，旧铁锭目标停产但库存/模板保留，重新绑定粗铁后恢复。
+修复提交 `207b45a`。按用户授权，确认无 Java 进程后已备份并部署修复核心与白名单包；两个安装件哈希匹配，其他模组文件保持原样，见[部署回执](../../evidence/starter-town-fix-whitelist-deployment.json)。未启动客户端、服务器或 GameTest，也未读取或修改存档。用户实机验收：新世界在自宅持剑醒来，13 处地块与道路、镇口可用；白名单下泥土默认产出正常，旧铁锭目标停产但库存/模板保留，重新绑定粗铁后恢复。
