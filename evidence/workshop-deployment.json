@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-16T04:43:28.424749+08:00",
+  "instance": "D:\\PCL 正式版 2.10.6 (1)\\.minecraft\\versions\\星庭远征-开发版",
+  "applied": true,
+  "scope": "workshop chapter core, Explorify, Exposure, new quest file and two merged languages",
+  "source_commit": "526a5ab4897afa8cadc851ed8524ef6790ecf13e",
+  "game_launched": false,
+  "game_test_run": false,
+  "saves_modified": false,
+  "file_hashes_computed": false,
+  "runtime_acceptance": "pending user playtest",
+  "files": [
+    {
+      "path": "mods/Explorify v1.6.6.mod.jar",
+      "existed": false,
+      "before_size": null,
+      "after_size": 775401
+    },
+    {
+      "path": "mods/exposure-neoforge-1.21.1-1.9.21.jar",
+      "existed": false,
+      "before_size": null,
+      "after_size": 2206630
+    },
+    {
+      "path": "mods/world-progression-core-0.1.0.jar",
+      "existed": true,
+      "before_size": 88872,
+      "after_size": 149111
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/01_workshop_rekindled.snbt",
+      "existed": false,
+      "before_size": null,
+      "after_size": 16963
+    },
+    {
+      "path": "config/ftbquests/quests/lang/zh_cn.snbt",
+      "existed": true,
+      "before_size": 28282,
+      "after_size": 35437
+    },
+    {
+      "path": "config/ftbquests/quests/lang/en_us.snbt",
+      "existed": true,
+      "before_size": 28282,
+      "after_size": 35437
+    }
+  ],
+  "backup": "D:\\PCL 正式版 2.10.6 (1)\\codex\\modpack-project\\backups\\workshop-20261116-044328-424749",
+  "game_process_check": "No java/javaw process before backup and replacement"
+}

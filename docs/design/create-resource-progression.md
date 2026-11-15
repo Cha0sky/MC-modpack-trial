@@ -2,7 +2,7 @@
 
 确认日期：2026-10-16（Asia/Shanghai）。状态：**用户已确认设计方向，待后续相关任务实施**。本次仅保存规划，不改代码、配方、任务或实例，不代表功能已经生效，也不自动授权下一项开发。
 
-2026-11-16 更新：首版白名单已在无限之核源码落地，未部署。原矿只允许粗铁、粗铜和粗金，不包含矿石方块或模组矿物。确切清单见[物品白名单](../../modules/infinitecore/src/main/resources/data/infinitecore/tags/item/replicable_resources.json)。机械动力关键配方仍待设计。
+2026-11-16 更新：首版白名单已部署，工坊第一章的磨石→无加热混合→调谐器工艺也已实现并部署，均以最新交接记录区分验收状态。原矿只允许粗铁、粗铜和粗金，不包含矿石方块或模组矿物。确切清单见[物品白名单](../../modules/infinitecore/src/main/resources/data/infinitecore/tags/item/replicable_resources.json)。首个关键道具现为粗制调谐器，见[第一章说明](workshop-rekindled.md)；后续高级工艺仍待设计。
 
 ## 已确定的方向
 
