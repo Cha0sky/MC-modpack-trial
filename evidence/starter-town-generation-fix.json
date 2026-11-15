@@ -1,0 +1,76 @@
+{
+  "date": "2026-11-16",
+  "baseline_commit": "36eefa6",
+  "user_feedback": "New world starts with sword but no town.",
+  "log": "development instance logs/latest.log:7539-7546; 2026-11-16 03:49:57-03:50:09 +08:00",
+  "failure": {
+    "home_candidates": 15,
+    "home_sites": 11,
+    "plot_checks": 384,
+    "overlap_rejections": 112,
+    "non_natural_block_rejections": 79,
+    "block_entity_rejections": 12,
+    "partial_buildings_placed": false
+  },
+  "changes": [
+    "Geometry overlaps no longer consume terrain probes",
+    "Each plot searches 33 bounded positions around its authored location",
+    "Preview all 13 plots; per-site terrain budget 104, global budget remains 384",
+    "Reserve one probe for each remaining plot and report plot-budget rejection separately",
+    "Allow only audited Confluence daybloom and pine_drooping_vine plants; preserve structural and other block-entity protection"
+  ],
+  "plant_evidence": {
+    "method": "Python zipfile and JDK javap on installed ConfluenceOtherworld-1.2.4-260226.jar; ordinary shell static evidence, no REA MCP session",
+    "worldgen_members": [
+      "data/confluence/worldgen/configured_feature/daybloom.json",
+      "data/confluence/worldgen/configured_feature/pine_tree.json",
+      "data/confluence/worldgen/configured_feature/chinese_pine_tree.json"
+    ],
+    "daybloom_block_entity": "org.confluence.mod.common.block.natural.herbs.BaseHerbBlock$BEntity directly extends BlockEntity; javap shows only a constructor and no declared fields or inventory interfaces"
+  },
+  "verification": {
+    "jdk": "Temurin 21.0.12+8",
+    "neoforge": "21.1.248",
+    "command": "gradlew.bat --offline --no-daemon --console plain -Pmod_version=0.1.0-starter-town-fix build -x createMinecraftArtifacts",
+    "result": "BUILD SUCCESSFUL; verifyLogic passed",
+    "sdk_artifacts": "Existing build/moddev/artifacts/neoforge-21.1.248 files reused",
+    "coverage": [
+      "local candidate symmetry and translation",
+      "overlap filtering and all 13 authored plots",
+      "door connections, terrace/road bounds and shared road heights",
+      "chapter state, boss identity, old worlds and preview boundaries",
+      "packaged plant tag and 13 plot assets"
+    ],
+    "game_launched": false,
+    "game_test_run": false,
+    "saves_modified": false,
+    "runtime_acceptance": "pending user playtest"
+  },
+  "artifact": {
+    "path": "modules/world-progression-core/build/libs/world-progression-core-0.1.0-starter-town-fix.jar",
+    "sha256": "d48c0b3543906c87c98d78ece28ca349b2d9e5595adde97df17a8ae145ccacd9",
+    "plots": [
+      "player_home",
+      "villager_west",
+      "villager_east",
+      "farm",
+      "expansion_plot",
+      "well",
+      "town_hall",
+      "clinic",
+      "general_store",
+      "restaurant",
+      "workshop",
+      "granary",
+      "town_gate"
+    ]
+  },
+  "whitelist": {
+    "source_commit": "a03ba0c",
+    "artifact": "modules/infinitecore/build/libs/infinitecore-1.1.2-whitelist.jar",
+    "sha256": "67f0b84a5918adac451f61a4cd15f5b4ba0ec28f56cd836bcc1ca05ad2c288ff",
+    "packaged_tag_matches_source": true,
+    "resource_count": 22,
+    "rebuilt": false
+  }
+}

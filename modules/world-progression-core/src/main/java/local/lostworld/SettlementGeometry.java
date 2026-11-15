@@ -17,15 +17,13 @@ public final class SettlementGeometry {
     private SettlementGeometry() {}
     public static Point legacyAnchor(Point bed) { return new Point(bed.x-6,bed.y-1,bed.z-32); }
 
-    /** Six authored positions, then bounded rings around the home on all eight bearings. */
+    /** Keep the authored position first, then search symmetric local rings around that plot. */
     public static List<Point> partCandidates(Rect home,int width,int depth,int desiredX,int desiredZ) {
-        var points=new java.util.LinkedHashSet<Point>();
-        for (int[] offset:new int[][]{{0,0},{-8,0},{0,-8},{8,0},{0,8},{-8,-8}})
-            points.add(new Point(desiredX+offset[0],0,desiredZ+offset[1]));
-        int cx=home.x+home.width/2,cz=home.z+home.depth/2;
-        for (int radius:new int[]{20,32,44})
-            for (int[] direction:new int[][]{{-1,0},{1,0},{0,1},{0,-1},{-1,1},{1,1},{-1,-1},{1,-1}})
-                points.add(new Point(cx+direction[0]*radius-width/2,0,cz+direction[1]*radius-depth/2));
+        var points=new ArrayList<Point>();
+        points.add(new Point(desiredX,0,desiredZ));
+        for (int radius:new int[]{4,8,16,24})
+            for (int[] direction:new int[][]{{1,0},{-1,0},{0,1},{0,-1},{1,1},{-1,-1},{1,-1},{-1,1}})
+                points.add(new Point(desiredX+direction[0]*radius,0,desiredZ+direction[1]*radius));
         return List.copyOf(points);
     }
 

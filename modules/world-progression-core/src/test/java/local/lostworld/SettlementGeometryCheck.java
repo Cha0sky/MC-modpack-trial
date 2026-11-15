@@ -18,12 +18,25 @@ final class SettlementGeometryCheck {
         Rect a=new Rect(-12,-9,15,15),b=new Rect(5,-9,11,12);
         check(!a.overlaps(b,2) && a.overlaps(new Rect(4,-9,11,12),2),"Plot spacing includes eaves and a two-block gap");
         check(a.contains(-12,-9) && !a.contains(3,6),"Negative-coordinate bounds are half-open");
-        var candidates=SettlementGeometry.partCandidates(new Rect(0,0,15,15),11,12,-18,-19);
-        check(candidates.size()<=30 && new java.util.HashSet<>(candidates).size()==candidates.size(),
-                "Village search stays bounded without duplicate terrain probes");
-        check(candidates.stream().anyMatch(p->p.x()>15) && candidates.stream().anyMatch(p->p.x()+11<0)
-                && candidates.stream().anyMatch(p->p.z()>15) && candidates.stream().anyMatch(p->p.z()+12<0),
-                "A blocked northern village position can relocate south, east or west of the home");
+        Rect home=new Rect(0,0,15,15);
+        Point authored=new Point(-18,0,-19);
+        var candidates=SettlementGeometry.partCandidates(home,11,12,authored.x(),authored.z());
+        check(candidates.size()<=33 && new java.util.HashSet<>(candidates).size()==candidates.size()
+                && candidates.getFirst().equals(authored),"Authored position remains first in a bounded, unique search");
+        for (Point point:candidates) {
+            int dx=point.x()-authored.x(),dz=point.z()-authored.z();
+            check(Math.abs(dx)<=24 && Math.abs(dz)<=24,"Alternatives stay near their own authored plot");
+            check(candidates.contains(new Point(authored.x()-dz,0,authored.z()+dx)),
+                    "Each alternative has its quarter-turn counterpart instead of a one-sided diagonal fallback");
+        }
+        var shifted=SettlementGeometry.partCandidates(home,11,12,authored.x()+80,authored.z()-65);
+        for (int i=0;i<candidates.size();i++) check(shifted.get(i).equals(
+                new Point(candidates.get(i).x()+80,0,candidates.get(i).z()-65)),
+                "Different authored plots do not fall back to shared positions around the player home");
+        Rect occupied=new Rect(authored.x(),authored.z(),11,12);
+        var available=candidates.stream().filter(p->!occupied.overlaps(new Rect(p.x(),p.z(),11,12),2)).toList();
+        check(!available.isEmpty() && available.size()<candidates.size(),
+                "Geometry can discard occupied candidates before terrain probes while retaining local alternatives");
         Point actualBed=new Point(-24,132,19),legacy=SettlementGeometry.legacyAnchor(actualBed);
         check(legacy.x()+6==actualBed.x() && legacy.y()+1==actualBed.y() && legacy.z()+32==actualBed.z(),
                 "The old schema bed-offset contract remains valid after rollback");

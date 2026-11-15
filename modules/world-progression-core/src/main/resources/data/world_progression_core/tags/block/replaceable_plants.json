@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    {"id": "confluence:daybloom", "required": false},
+    {"id": "confluence:pine_drooping_vine", "required": false}
+  ]
+}

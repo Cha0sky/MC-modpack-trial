@@ -36,8 +36,10 @@ public final class ModularSettlementBuilder {
     private static final int CUT=6,FILL=18;
     private static final TagKey<Block> NATURAL=TagKey.create(Registries.BLOCK,
             ResourceLocation.fromNamespaceAndPath(LostWorld.ID,"replaceable_terrain"));
+    private static final TagKey<Block> PLANTS=TagKey.create(Registries.BLOCK,
+            ResourceLocation.fromNamespaceAndPath(LostWorld.ID,"replaceable_plants"));
     private static final List<String> REQUIRED=SettlementLayout.TOWN_PARTS;
-    private static final int MAX_HOME_SITES=12,MAX_PLOT_CHECKS=384,MAX_PLOTS_PER_SITE=64;
+    private static final int MAX_HOME_SITES=12,MAX_PLOT_CHECKS=384,MAX_PLOTS_PER_SITE=REQUIRED.size()*8;
     private record Voxel(int x,int y,int z,BlockState state) {}
     private record Template(String id,int width,int height,int depth,Point entry,Point desired,
                             Point home,Point bed,List<Point> villagers,List<Voxel> blocks) {}
@@ -81,9 +83,9 @@ public final class ModularSettlementBuilder {
             if (!seen.add(key(x,z))) continue;
             int score=preview(new Rect(x,z,player.width,player.depth));
             if (score<0) continue;
-            // Score the large plots without loading their chunks or imposing one terrace.
+            // Score the entire authored town before spending the bounded terrain budget.
             int penalty=0;
-            for (String id:List.of("town_hall","well","restaurant","farm")) {
+            for (String id:REQUIRED.subList(1,REQUIRED.size())) {
                 Template part=templates.get(id);
                 if (preview(new Rect(x+part.desired.x(),z+part.desired.z(),part.width,part.depth))<0) penalty+=48;
             }
@@ -100,8 +102,11 @@ public final class ModularSettlementBuilder {
             if (candidate==null) continue;
             plots.add(candidate);
             boolean complete=true;
-            for (String id:REQUIRED.subList(1,REQUIRED.size())) {
-                if (!planPart(templates.get(id),candidate)) {
+            for (int index=1;index<REQUIRED.size();index++) {
+                String id=REQUIRED.get(index);
+                // Reserve a terrain probe for every later plot, including the town gate.
+                int partLimit=sitePlotLimit-(REQUIRED.size()-index-1);
+                if (!planPart(templates.get(id),candidate,partLimit)) {
                     rejected("missing-"+id);complete=false;break;
                 }
             }
@@ -178,10 +183,10 @@ public final class ModularSettlementBuilder {
         return SettlementTerrainPreview.dryAndWithinSlope(heights,level.getSeaLevel())?max-min:-1;
     }
 
-    private boolean planPart(Template template,Plot home) {
+    private boolean planPart(Template template,Plot home,int partLimit) {
         int desiredX=home.rect.x()+template.desired.x(),desiredZ=home.rect.z()+template.desired.z();
         for (Point point:SettlementGeometry.partCandidates(home.rect,template.width,template.depth,desiredX,desiredZ)) {
-            if (checkedPlots>=sitePlotLimit) return false;
+            if (checkedPlots>=partLimit) { rejected("plot-budget-"+template.id);return false; }
             Plot candidate=planPlot(template,point.x(),point.z());
             if (candidate==null) continue;
             plots.add(candidate);
@@ -192,9 +197,10 @@ public final class ModularSettlementBuilder {
 
     private Plot planPlot(Template template,int x,int z) {
         if (checkedPlots>=sitePlotLimit) return null;
-        checkedPlots++;
         Rect rect=new Rect(x,z,template.width,template.depth);
         for (Plot plot:plots) if (rect.overlaps(plot.rect,2)) return fail("overlap");
+        // A rectangle overlap needs no world access and must not consume a terrain probe.
+        checkedPlots++;
         // Reject obvious water/evil corners before touching every column or loading more chunks.
         for (int dx:new int[]{0,template.width/2,template.width-1})
             for (int dz:new int[]{0,template.depth/2,template.depth-1})
@@ -367,6 +373,9 @@ public final class ModularSettlementBuilder {
                 return rejectedColumn("structure",pos,null);
         for (int y=Math.min(raw+1,floor);y<=top;y++) {
             BlockState state=level.getBlockState(new BlockPos(x,y,z));
+            // Confluence's naturally generated daybloom has an empty BlockEntity.
+            // Only explicitly audited plants may bypass the general BlockEntity veto.
+            if (state.is(PLANTS)) continue;
             if (state.hasBlockEntity()) return rejectedColumn("block-entity",new BlockPos(x,y,z),state);
             if (!state.isAir() && !state.is(NATURAL)) return rejectedColumn("non-natural-block",new BlockPos(x,y,z),state);
         }

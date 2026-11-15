@@ -62,6 +62,19 @@ final class SettlementLayoutCheck {
             throw new AssertionError("Could not read packaged town layout",ex);
         }
         check(ids.size()==13 && SettlementLayout.complete(ids),"All 13 authored plots are required");
+        var selected=new ArrayList<Rect>();
+        Rect home=plots.get(ids.indexOf("player_home"));
+        selected.add(home);
+        for (String id:SettlementLayout.TOWN_PARTS.subList(1,SettlementLayout.TOWN_PARTS.size())) {
+            Rect authored=plots.get(ids.indexOf(id));
+            Rect planned=SettlementGeometry.partCandidates(home,authored.width(),authored.depth(),authored.x(),authored.z())
+                    .stream().map(p->new Rect(p.x(),p.z(),authored.width(),authored.depth()))
+                    .filter(candidate->selected.stream().noneMatch(old->old.overlaps(candidate,2)))
+                    .findFirst().orElseThrow(()->new AssertionError("No non-overlapping candidate for "+id));
+            check(planned.equals(authored),"The runtime plot order retains every available authored position: "+id);
+            selected.add(planned);
+        }
+        check(selected.size()==13,"Local candidate search preserves all 13 authored plots after overlap filtering");
         var missingFarm=new ArrayList<>(ids); missingFarm.remove("farm");
         check(!SettlementLayout.complete(missingFarm),"Missing farm cannot be committed as a complete town");
         var oldHome=new ArrayList<>(ids); oldHome.set(oldHome.indexOf("player_home"),"player_compact");
