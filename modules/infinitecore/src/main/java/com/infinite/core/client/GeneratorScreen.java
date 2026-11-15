@@ -97,8 +97,9 @@ public final class GeneratorScreen extends AbstractContainerScreen<GeneratorMenu
         }
         ItemStack target = menu.target();
         if (!target.isEmpty()) graphics.renderFakeItem(target, leftPos + 42, topPos + 26);
-        int filled = menu.status() == 1 ? Math.clamp((int) Math.round(78.0 * menu.progress() / menu.interval()), 0, 78) : 0;
-        if (menu.status() == 1 && menu.interval() == 1) filled = 78;
+        int filled = menu.status() == GeneratorMenu.RUNNING
+                ? Math.clamp((int) Math.round(78.0 * menu.progress() / menu.interval()), 0, 78) : 0;
+        if (menu.status() == GeneratorMenu.RUNNING && menu.interval() == 1) filled = 78;
         graphics.fill(leftPos + 83, topPos + 103, leftPos + 83 + filled, topPos + 107, accent);
     }
     @Override protected void renderLabels(GuiGraphics graphics, int mouseX, int mouseY) {
@@ -117,17 +118,25 @@ public final class GeneratorScreen extends AbstractContainerScreen<GeneratorMenu
             return;
         }
         ItemStack target = menu.target();
-        drawFit(graphics, target.isEmpty() ? Component.translatable("gui.infinitecore.status.no_template") : target.getHoverName(), 64, 27, 104, TEXT);
+        if (!target.isEmpty()) drawFit(graphics, target.getHoverName(), 64, 27, 104, TEXT);
         drawFit(graphics, Component.translatable("gui.infinitecore.inventory_slots", menu.occupiedSlots()), 83, 54, 80, MUTED);
         drawFit(graphics, Component.translatable("gui.infinitecore.interval", menu.interval()), 83, 67, 80, TEXT);
-        drawFit(graphics, Component.translatable("gui.infinitecore.rate", String.format(Locale.ROOT, "%.2f", 20.0 / menu.interval())), 83, 79, 80, MUTED);
+        if (!target.isEmpty()) drawFit(graphics,
+                Component.translatable("gui.infinitecore.rate", String.format(Locale.ROOT, "%.2f", 20.0 / menu.interval())), 83, 79, 80, MUTED);
         GeneratorTier templateTier = ModContent.templateTier(menu.template());
         if (templateTier != null) drawFit(graphics, Component.translatable("gui.infinitecore.template_tier",
                 Component.translatable("gui.infinitecore.tier." + templateTier.id())), 64, 38, 104, MUTED);
         double multiplier = templateTier == null ? 1.0 : GenerationMath.multiplier(menu.tier().ordinal(), templateTier.ordinal());
         drawFit(graphics, Component.translatable("gui.infinitecore.multiplier", String.format(Locale.ROOT, "%.1f", multiplier)), 83, 91, 80, MUTED);
-        String status = !menu.ready() ? "syncing" : switch (menu.status()) { case 1 -> "running"; case 2 -> "full"; default -> "no_template"; };
-        drawFit(graphics, Component.translatable("gui.infinitecore.status." + status), 12, 113, 152, menu.status() == 2 ? 0xE4B469 : 0xAFD2BD);
+        String status = !menu.ready() ? "syncing" : switch (menu.status()) {
+            case GeneratorMenu.RUNNING -> "running";
+            case GeneratorMenu.FULL -> "full";
+            case GeneratorMenu.BIND_TARGET -> "bind_target";
+            case GeneratorMenu.TARGET_NOT_ALLOWED -> "target_not_allowed";
+            default -> "no_template";
+        };
+        drawFit(graphics, Component.translatable("gui.infinitecore.status." + status), 12, 113, 152,
+                menu.status() >= GeneratorMenu.FULL ? 0xE4B469 : 0xAFD2BD);
         drawFit(graphics, playerInventoryTitle, 8, 123, 160, MUTED);
     }
     private void drawFit(GuiGraphics graphics, Component text, int x, int y, int width, int color) {

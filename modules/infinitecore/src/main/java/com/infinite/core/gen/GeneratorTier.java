@@ -8,11 +8,11 @@ public enum GeneratorTier {
     DIRT("dirt", 360, Items.DIRT, 0x876044),
     WOOD("wood", 180, Items.OAK_LOG, 0xBA8852),
     STONE("stone", 72, Items.STONE, 0x727F89),
-    COPPER("copper", 36, Items.COPPER_INGOT, 0xC87546),
-    IRON("iron", 24, Items.IRON_INGOT, 0xC8D2DA),
-    GOLD("gold", 12, Items.GOLD_INGOT, 0xD9B447),
-    DIAMOND("diamond", 6, Items.DIAMOND, 0x43C8CB),
-    NETHERITE("netherite", 1, Items.NETHERITE_INGOT, 0x65596D);
+    COPPER("copper", 36, Items.AIR, 0xC87546),
+    IRON("iron", 24, Items.AIR, 0xC8D2DA),
+    GOLD("gold", 12, Items.AIR, 0xD9B447),
+    DIAMOND("diamond", 6, Items.AIR, 0x43C8CB),
+    NETHERITE("netherite", 1, Items.AIR, 0x65596D);
 
     private final String id;
     private final int baseTicks;
@@ -28,7 +28,7 @@ public enum GeneratorTier {
 
     public String id() { return id; }
     public int baseTicks() { return baseTicks; }
-    public Item output() { return output; }
+    public Item defaultOutput() { return output; }
     public int color() { return color; }
     public int interval(GeneratorTier template) {
         return template == null ? baseTicks : GenerationMath.interval(baseTicks, ordinal(), template.ordinal());

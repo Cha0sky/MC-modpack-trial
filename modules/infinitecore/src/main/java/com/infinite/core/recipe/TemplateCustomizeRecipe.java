@@ -1,5 +1,6 @@
 package com.infinite.core.recipe;
 
+import com.infinite.core.gen.GenerationTargets;
 import com.infinite.core.registry.ModContent;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.world.item.ItemStack;
@@ -20,7 +21,8 @@ public final class TemplateCustomizeRecipe extends CustomRecipe {
             ItemStack stack = input.getItem(i);
             if (stack.isEmpty()) continue;
             if (ModContent.isTemplate(stack)) templates++;
-            else targets++;
+            else if (GenerationTargets.allows(stack)) targets++;
+            else return false;
         }
         return templates == 1 && targets == 1;
     }
@@ -42,7 +44,7 @@ public final class TemplateCustomizeRecipe extends CustomRecipe {
                 target = stack;
             }
         }
-        if (occupied != 2 || template.isEmpty() || target.isEmpty()) return ItemStack.EMPTY;
+        if (occupied != 2 || template.isEmpty() || !GenerationTargets.allows(target)) return ItemStack.EMPTY;
         ItemStack result = template.copyWithCount(1);
         result.set(ModContent.TARGET_ITEM.get(), target.copyWithCount(1));
         return result;

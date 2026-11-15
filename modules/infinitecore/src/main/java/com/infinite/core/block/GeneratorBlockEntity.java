@@ -1,5 +1,6 @@
 package com.infinite.core.block;
 
+import com.infinite.core.gen.GenerationTargets;
 import com.infinite.core.gen.GeneratorTier;
 import com.infinite.core.menu.GeneratorMenu;
 import com.infinite.core.registry.ModContent;
@@ -60,14 +61,9 @@ public final class GeneratorBlockEntity extends BlockEntity implements MenuProvi
     }
 
     public ItemStack target() {
-        ItemStack template = inventory.getStackInSlot(TEMPLATE_SLOT);
-        if (template.isEmpty()) return ItemStack.EMPTY;
-        ItemStack stored = template.get(ModContent.TARGET_ITEM.get());
-        return stored != null && !stored.isEmpty() ? stored.copyWithCount(1) : new ItemStack(tier().output());
+        return GenerationTargets.resolve(inventory.getStackInSlot(TEMPLATE_SLOT), tier());
     }
-    public boolean hasRoomForTarget() {
-        ItemStack output = target();
-        if (output.isEmpty()) return false;
+    public boolean hasRoomFor(ItemStack output) {
         for (int slot = 0; slot < RESOURCE_SLOTS; slot++) {
             if (inventory.insertItem(slot, output, true).isEmpty()) return true;
         }

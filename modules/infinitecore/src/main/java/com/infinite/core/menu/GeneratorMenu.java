@@ -2,6 +2,7 @@ package com.infinite.core.menu;
 
 import com.infinite.core.block.GeneratorBlockEntity;
 import com.infinite.core.block.IoMode;
+import com.infinite.core.gen.GenerationTargets;
 import com.infinite.core.gen.GeneratorTier;
 import com.infinite.core.registry.ModContent;
 import net.minecraft.core.BlockPos;
@@ -17,6 +18,12 @@ import net.neoforged.neoforge.items.ItemStackHandler;
 import net.neoforged.neoforge.items.SlotItemHandler;
 
 public final class GeneratorMenu extends AbstractContainerMenu {
+    public static final int NO_TEMPLATE = 0;
+    public static final int RUNNING = 1;
+    public static final int FULL = 2;
+    public static final int BIND_TARGET = 3;
+    public static final int TARGET_NOT_ALLOWED = 4;
+
     private final BlockPos pos;
     private final GeneratorBlockEntity generator;
     private final ItemStackHandler inventory;
@@ -67,13 +74,21 @@ public final class GeneratorMenu extends AbstractContainerMenu {
         boolean initial = data.get(1) == 0;
         data.set(0, generator.progress());
         data.set(1, generator.interval());
-        data.set(2, inventory.getStackInSlot(9).isEmpty() ? 0 : generator.hasRoomForTarget() ? 1 : 2);
+        data.set(2, productionStatus());
         int modes = 0;
         for (int face = 0; face < 6; face++) modes |= generator.ioMode(face).id() << (face * 2);
         data.set(3, modes);
         // Only query capabilities while a menu is open; not every idle machine tick.
         if (initial || (generator.getLevel().getGameTime() % 10) == 0) data.set(4, generator.neighborCapabilityMask());
         data.set(5, generator.tier().ordinal());
+    }
+    private int productionStatus() {
+        ItemStack template = template();
+        if (template.isEmpty()) return NO_TEMPLATE;
+        ItemStack output = generator.target();
+        if (!output.isEmpty()) return generator.hasRoomFor(output) ? RUNNING : FULL;
+        ItemStack stored = template.get(ModContent.TARGET_ITEM.get());
+        return stored == null || stored.isEmpty() ? BIND_TARGET : TARGET_NOT_ALLOWED;
     }
     @Override public void broadcastChanges() { updateData(); super.broadcastChanges(); }
     public BlockPos pos() { return pos; }
@@ -89,9 +104,7 @@ public final class GeneratorMenu extends AbstractContainerMenu {
     public GeneratorTier tier() { return GeneratorTier.values()[Math.clamp(data.get(5), 0, 7)]; }
     public ItemStack template() { return inventory.getStackInSlot(9); }
     public ItemStack target() {
-        if (template().isEmpty()) return ItemStack.EMPTY;
-        ItemStack stored = template().get(ModContent.TARGET_ITEM.get());
-        return stored != null && !stored.isEmpty() ? stored.copyWithCount(1) : new ItemStack(tier().output());
+        return GenerationTargets.resolve(template(), tier());
     }
     public int occupiedSlots() {
         int count = 0;
