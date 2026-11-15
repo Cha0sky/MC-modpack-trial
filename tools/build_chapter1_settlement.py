@@ -163,19 +163,22 @@ def build_modules():
             assert sum(s.startswith("minecraft:chest") for s in lookup.values())==2
     dest=MODULE/"src/main/resources/data/world_progression_core/settlement/modules.json"
     document={"schema":1,"modules":modules}
-    source=ROOT/"assets/settlement/emberstead"
+    source=ROOT/"assets/settlement/starter-town"
+    if not (source/"layout.json").is_file():
+        source=ROOT/"assets/settlement/emberstead"
     if (source/"layout.json").is_file():
         # Keep the original small footprints as terrain fallbacks, but never replace
         # the authored MCP buildings with the historical procedural houses on rebuild.
         from import_settlement_schem import convert
-        base=ROOT/"work/emberstead-generated-legacy.json"
+        base=ROOT/"work/settlement-generated-legacy.json"
         base.parent.mkdir(parents=True,exist_ok=True)
         base.write_text(json.dumps(document,ensure_ascii=False),encoding="utf-8")
-        document,_=convert(source/"emberstead.schem",source/"layout.json",base)
+        document,_=convert(source/(source.name+".schem"),source/"layout.json",base)
         modules=document["modules"]
     dest.write_text(json.dumps(document,ensure_ascii=False,separators=(",",":"))+"\n",encoding="utf-8")
-    draw_modular_plan(modules)
-    print("Independent templates: 6 village parts, player-house fallback and 2 compact villager houses; source="+
+    if source.name!="starter-town":
+        draw_modular_plan(modules)
+    print(f"Independent templates: {len(modules)-3} main plots, 3 historical compact templates; source="+
           document.get("source",{}).get("kind","historical blueprint"))
 
 

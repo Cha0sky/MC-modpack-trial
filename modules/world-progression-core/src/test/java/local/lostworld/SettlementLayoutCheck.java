@@ -1,5 +1,10 @@
 package local.lostworld;
 
+import com.google.gson.JsonParser;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import local.lostworld.SettlementGeometry.Point;
@@ -9,36 +14,12 @@ final class SettlementLayoutCheck {
     private static void check(boolean condition,String message) { if (!condition) throw new AssertionError(message); }
 
     static void run() {
-        var required=List.of("player_home","farm","villager_west","villager_east","well","expansion_plot");
-        check(SettlementLayout.complete(required),"All six authored parts may be planned in terrain-friendly order");
-        check(!SettlementLayout.complete(List.of("player_home","villager_west","villager_east","well","expansion_plot")),
-                "Missing farm cannot be committed as a complete village");
-        check(!SettlementLayout.complete(List.of("player_compact","farm","villager_west","villager_east","well","expansion_plot")),
-                "Old player hut cannot stand in for the authored player home");
         int[][] localTerrain={{64,65,66},{78,79,80},{91,92,93},{61,62,63},{50,51,52},{96,97,98}};
         for (int[] ground:localTerrain) check(SettlementGeometry.terraceFloor(ground,6,18).isPresent(),
                 "Each building can independently fit local terrain");
         check(SettlementGeometry.terraceFloor(new int[]{50,66,80,93,98},6,18).isEmpty(),
                 "Different valid building terraces need not fit a single village-wide floor");
-        System.out.println("PASS: mandatory MCP home and farm, complete six-part plan and independent terrace heights");
-        var plots=List.of(new Rect(0,0,15,17),new Rect(-14,-6,11,13),new Rect(18,-3,11,13),
-                new Rect(4,-15,7,7),new Rect(-14,-23,13,15),new Rect(17,-19,11,9));
-        Rect area=SettlementLayout.bounds(plots,2);
-        check(area.equals(new Rect(-16,-25,47,44)),"Whole settlement retains the authored footprint and two-block border");
-        var entrances=List.of(new Point(8,91,-1),new Point(-9,91,-7),new Point(23,91,-4),
-                new Point(7,91,-16),new Point(-8,91,-24),new Point(22,91,-20));
-        for (Point entrance:entrances) {
-            var route=SettlementLayout.path(area,plots,entrances.getFirst(),entrance);
-            check(!route.isEmpty() && route.getFirst().equals(entrances.getFirst()) && route.getLast().equals(entrance),
-                    "Every authored doorway connects without relocating a building");
-            for (int i=0;i<route.size();i++) {
-                Point point=route.get(i);
-                check(point.y()==91 && area.contains(point.x(),point.z()),"Road stays inside the fixed, level village site");
-                check(plots.stream().noneMatch(plot->plot.contains(point.x(),point.z())),"Road never cuts through a building footprint");
-                if (i>0) check(Math.abs(point.x()-route.get(i-1).x())+Math.abs(point.z()-route.get(i-1).z())==1,
-                        "Every road step has a traversable four-neighbor connection");
-            }
-        }
+        verifyAuthoredTown();
         var detour=SettlementLayout.path(new Rect(0,0,5,5),List.of(new Rect(2,0,1,4)),
                 new Point(0,70,0),new Point(4,999,0));
         check(detour.size()==13 && detour.getLast().equals(new Point(4,70,0)),
@@ -51,6 +32,46 @@ final class SettlementLayoutCheck {
         check(offsets.stream().allMatch(p->p.y()==0 && Math.abs(p.x())<=512 && Math.abs(p.z())<=512)
                 && offsets.contains(new Point(512,0,512)) && offsets.contains(new Point(-512,0,-512)),
                 "Site probes stay bounded and diagonal bearings retain the unnormalized radius");
-        System.out.println("PASS: fixed six-building footprint, all doorway roads, bounded BFS and 49 whole-village site offsets");
+        System.out.println("PASS: 13 authored town plots, connected doorways, independent terraces and bounded site search");
+    }
+
+    private static void verifyAuthoredTown() {
+        var plots=new ArrayList<Rect>();
+        var entrances=new ArrayList<Point>();
+        var ids=new ArrayList<String>();
+        Point square=null;
+        try (var stream=SettlementLayoutCheck.class.getResourceAsStream(
+                "/data/world_progression_core/settlement/modules.json")) {
+            check(stream!=null,"Packaged town layout must exist");
+            var modules=JsonParser.parseReader(new InputStreamReader(stream,StandardCharsets.UTF_8))
+                    .getAsJsonObject().getAsJsonArray("modules");
+            for (var value:modules) {
+                var module=value.getAsJsonObject();
+                String id=module.get("id").getAsString();
+                if (id.endsWith("_compact")) continue;
+                var pos=module.getAsJsonArray("desired");
+                var size=module.getAsJsonArray("size");
+                var entry=module.getAsJsonArray("entry");
+                Rect plot=new Rect(pos.get(0).getAsInt(),pos.get(1).getAsInt(),size.get(0).getAsInt(),size.get(2).getAsInt());
+                check(plots.stream().noneMatch(old->old.overlaps(plot,2)),"Authored plots leave room for streets: "+id);
+                Point doorway=new Point(plot.x()+entry.get(0).getAsInt(),91,plot.z()+entry.get(2).getAsInt());
+                if (id.equals("well")) square=doorway;
+                ids.add(id); plots.add(plot); entrances.add(doorway);
+            }
+        } catch (IOException ex) {
+            throw new AssertionError("Could not read packaged town layout",ex);
+        }
+        check(ids.size()==13 && SettlementLayout.complete(ids),"All 13 authored plots are required");
+        var missingFarm=new ArrayList<>(ids); missingFarm.remove("farm");
+        check(!SettlementLayout.complete(missingFarm),"Missing farm cannot be committed as a complete town");
+        var oldHome=new ArrayList<>(ids); oldHome.set(oldHome.indexOf("player_home"),"player_compact");
+        check(!SettlementLayout.complete(oldHome),"Old hut cannot stand in for the authored player home");
+        check(square!=null,"The central square is a road hub");
+        Rect area=SettlementLayout.bounds(plots,2);
+        check(area.width()==84 && area.depth()==69,"The authored town has an 80×65 block footprint");
+        for (int i=0;i<entrances.size();i++) {
+            check(!SettlementLayout.path(area,plots,square,entrances.get(i)).isEmpty(),
+                    "Every authored doorway connects to the square without crossing a building: "+ids.get(i));
+        }
     }
 }

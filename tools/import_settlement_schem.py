@@ -18,6 +18,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 RESOURCE = ROOT / "modules/world-progression-core/src/main/resources/data/world_progression_core/settlement/modules.json"
 MAIN_IDS = {"player_home", "villager_west", "villager_east", "well", "farm", "expansion_plot"}
+TOWN_IDS = MAIN_IDS | {"town_hall", "clinic", "general_store", "restaurant", "workshop", "granary", "town_gate"}
 FALLBACK_IDS = {"player_compact", "villager_west_compact", "villager_east_compact"}
 AIR = {"minecraft:air", "minecraft:cave_air", "minecraft:void_air"}
 MAX_BYTES = 64 * 1024 * 1024
@@ -196,7 +197,7 @@ def support_block(state):
             or block.endswith(("_planks", "_log", "_wood", "_bricks", "_tiles")))
 
 
-def validate_module(module):
+def validate_module(module, schema):
     width, height, depth = module["size"]
     states = {(x, y, z): module["palette"][p] for x, y, z, p in module["blocks"]}
 
@@ -226,17 +227,26 @@ def validate_module(module):
         require(sum(state_parts(s)[0] == "minecraft:chest" for s in states.values()) == 2, "Player room needs exactly two empty chests")
         require(any(state_parts(s)[0] == "minecraft:crafting_table" for s in states.values()), "Player room needs crafting table")
     entry = module["entry"]
-    require(isinstance(entry, list) and len(entry) == 3 and all(type(n) is int for n in entry)
-            and 0 <= entry[0] < width and entry[1:] == [0, -1], f"{module['id']}: entry must be [localX,0,-1]")
+    require(isinstance(entry, list) and len(entry) == 3 and all(type(n) is int for n in entry),
+            f"{module['id']}: invalid entry")
+    x, y, z = entry
+    north = 0 <= x < width and z == -1
+    other = 0 <= x < width and z == depth or 0 <= z < depth and x in (-1, width)
+    require(y == 0 and (north or schema == 2 and other), f"{module['id']}: entry must be just outside the plot")
+    if schema == 2:
+        doorstep = (min(max(x, 0), width - 1), 0, min(max(z, 0), depth - 1))
+        require(support_block(states.get(doorstep, "minecraft:air")), f"{module['id']}: entry has no walkable doorstep")
 
 
 def convert(schematic, layout_path, base_path):
     layout = json.loads(layout_path.read_text(encoding="utf-8-sig"))
-    require(layout.get("schema") == 1, "Layout schema must be 1")
+    schema = layout.get("schema")
+    require(schema in (1, 2), "Layout schema must be 1 (village) or 2 (town)")
     require(Path(layout.get("schematic", "")).name == schematic.name, "Layout references a different schematic")
     specs = layout.get("modules", [])
-    require(len(specs) == len(MAIN_IDS) and {s.get("id") for s in specs} == MAIN_IDS,
-            "Layout must contain exactly the six main module IDs")
+    required = MAIN_IDS if schema == 1 else TOWN_IDS
+    require(len(specs) == len(required) and {s.get("id") for s in specs} == required,
+            "Layout must contain each required module exactly once")
     voxels, metadata = read_schematic(schematic)
     width, _, depth = metadata["size"]
     bounds = []
@@ -275,7 +285,7 @@ def convert(schematic, layout_path, base_path):
                 module[key] = spec[key]
         require(isinstance(module["desired"], list) and len(module["desired"]) == 2
                 and all(type(n) is int for n in module["desired"]), "desired must be [dx,dz]")
-        validate_module(module)
+        validate_module(module, schema)
         imported.append(module)
     base = json.loads(base_path.read_text(encoding="utf-8-sig"))
     require(base.get("schema") == 1, "Existing modules schema must be 1")
@@ -310,7 +320,7 @@ def main():
         if args.report:
             args.report.parent.mkdir(parents=True, exist_ok=True)
             args.report.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-        print(json.dumps({"output": relative(args.output), "imported_modules": len(MAIN_IDS),
+        print(json.dumps({"output": relative(args.output), "imported_modules": len(report["modules"]),
                           "preserved_fallbacks": 3, "warnings": report["warnings"]}, ensure_ascii=False))
     except (ValueError, KeyError, TypeError, OSError, struct.error) as exc:
         parser.exit(1, f"Import rejected: {exc}\n")

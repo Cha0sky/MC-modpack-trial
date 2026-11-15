@@ -31,14 +31,13 @@ import net.minecraft.world.level.levelgen.structure.BoundingBox;
 import local.lostworld.SettlementGeometry.Point;
 import local.lostworld.SettlementGeometry.Rect;
 
-/** Plan six mandatory authored buildings on independent terraces before any placement. */
+/** Plan every authored town plot and connector before any placement. */
 public final class ModularSettlementBuilder {
     private static final int CUT=6,FILL=18;
     private static final TagKey<Block> NATURAL=TagKey.create(Registries.BLOCK,
             ResourceLocation.fromNamespaceAndPath(LostWorld.ID,"replaceable_terrain"));
-    private static final List<String> REQUIRED=List.of("player_home","villager_west","villager_east","well","farm","expansion_plot");
-    private static final int MAX_HOME_SITES=12,MAX_PLOT_CHECKS=320;
-    private static final List<String> PLAN_ORDER=List.of("farm","villager_west","villager_east","well","expansion_plot");
+    private static final List<String> REQUIRED=SettlementLayout.TOWN_PARTS;
+    private static final int MAX_HOME_SITES=12,MAX_PLOT_CHECKS=384,MAX_PLOTS_PER_SITE=64;
     private record Voxel(int x,int y,int z,BlockState state) {}
     private record Template(String id,int width,int height,int depth,Point entry,Point desired,
                             Point home,Point bed,List<Point> villagers,List<Voxel> blocks) {}
@@ -56,7 +55,9 @@ public final class ModularSettlementBuilder {
     private final Map<String,Integer> rejects=new LinkedHashMap<>();
     private final List<Plot> plots=new ArrayList<>();
     private final List<Road> roads=new ArrayList<>();
+    private final List<Road> mainStreets=new ArrayList<>();
     private int checkedPlots;
+    private int sitePlotLimit;
     private final HashSet<String> loggedColumnReasons=new HashSet<>();
 
     private ModularSettlementBuilder(ServerLevel level) { this.level=level; }
@@ -78,31 +79,33 @@ public final class ModularSettlementBuilder {
         for (Point offset:offsets) {
             int x=spawn.getX()-player.width/2+offset.x(),z=spawn.getZ()-player.depth/2+offset.z();
             if (!seen.add(key(x,z))) continue;
-            // Preview only the house footprint. Gaps, courtyards and other buildings
-            // no longer have to share dry ground, a single elevation or clearance.
             int score=preview(new Rect(x,z,player.width,player.depth));
-            if (score>=0) candidates.add(new Site(x,z,score*64+(Math.abs(offset.x())+Math.abs(offset.z()))/8));
+            if (score<0) continue;
+            // Score the large plots without loading their chunks or imposing one terrace.
+            int penalty=0;
+            for (String id:List.of("town_hall","well","restaurant","farm")) {
+                Template part=templates.get(id);
+                if (preview(new Rect(x+part.desired.x(),z+part.desired.z(),part.width,part.depth))<0) penalty+=48;
+            }
+            candidates.add(new Site(x,z,penalty+score*4+(Math.abs(offset.x())+Math.abs(offset.z()))/8));
         }
         candidates.sort(java.util.Comparator.comparingInt(Site::score));
         Plot home=null;int homeSites=0;
         for (Site site:candidates) {
             if (homeSites>=MAX_HOME_SITES || checkedPlots>=MAX_PLOT_CHECKS) break;
             homeSites++;
-            plots.clear();roads.clear();roadFloors.clear();placedRoads.clear();
+            plots.clear();roads.clear();mainStreets.clear();roadFloors.clear();
+            sitePlotLimit=Math.min(MAX_PLOT_CHECKS,checkedPlots+MAX_PLOTS_PER_SITE);
             Plot candidate=planPlot(player,site.homeX,site.homeZ);
             if (candidate==null) continue;
-            Road exit=planExit(candidate);
-            if (exit==null) { rejected("home-exit");continue; }
-            plots.add(candidate);addRoad(exit);
+            plots.add(candidate);
             boolean complete=true;
-            // Reserve the larger, mandatory farm before smaller optional-looking
-            // furnishings can occupy all usable terrain. Nothing is actually optional.
-            for (String id:PLAN_ORDER) {
+            for (String id:REQUIRED.subList(1,REQUIRED.size())) {
                 if (!planPart(templates.get(id),candidate)) {
                     rejected("missing-"+id);complete=false;break;
                 }
             }
-            if (complete && SettlementLayout.complete(plots.stream().map(p->p.template.id).toList())) {
+            if (complete && planStreets()) {
                 home=candidate;break;
             }
         }
@@ -112,10 +115,12 @@ public final class ModularSettlementBuilder {
             return null;
         }
         if (!SettlementLayout.complete(plots.stream().map(p->p.template.id).toList()))
-            throw new IllegalStateException("Six required MCP buildings must be planned before any placement");
+            throw new IllegalStateException("All required town plots must be planned before placement");
+        List<Point> shoulders=planStreetShoulders();
         int blocks=0;
         for (Plot plot:plots) blocks+=placePlot(plot);
         for (Road road:roads) placeRoad(road);
+        for (Point shoulder:shoulders) placeColumn(shoulder.x(),shoulder.z(),shoulder.y(),paving(shoulder));
         // Complete all support, water, fences and roads before planting. During
         // server startup the light engine may still reflect the cleared terrain;
         // construction-time neighbor shapes must not destroy otherwise valid crops.
@@ -143,14 +148,15 @@ public final class ModularSettlementBuilder {
                 }
             }
             // Harvestable plants are not building structure. A plant update must
-            // never turn a complete six-building settlement into a server crash.
+            // never turn a complete settlement into a server crash.
             if (crops>0) LostWorld.LOG.info("MCP crop placement {}: {}/{} present",plot.template.id,crops-missingCrops,crops);
             if (missingCrops>0) LostWorld.LOG.warn("MCP crops changed during placement: {} missing {} plants; structural verification passed",
                     plot.template.id,missingCrops);
             LostWorld.LOG.info("Terraced MCP component {} at {}, independent floor {}",plot.template.id,plot.origin(),plot.floor);
         }
         data.settlementBuilt(home.origin(),arrival,bed);
-        LostWorld.LOG.info("Terraced MCP settlement 6/6; player_home {}, {} home sites, {} plot checks. No legacy huts or omitted buildings.",arrival,homeSites,checkedPlots);
+        LostWorld.LOG.info("Terraced starter town {}/{}; player_home {}, {} home sites, {} plot checks.",
+                plots.size(),REQUIRED.size(),arrival,homeSites,checkedPlots);
         return new SettlementBuilder.Result(data.settlement(),arrival,bed,blocks);
     }
 
@@ -175,28 +181,17 @@ public final class ModularSettlementBuilder {
     private boolean planPart(Template template,Plot home) {
         int desiredX=home.rect.x()+template.desired.x(),desiredZ=home.rect.z()+template.desired.z();
         for (Point point:SettlementGeometry.partCandidates(home.rect,template.width,template.depth,desiredX,desiredZ)) {
-            if (checkedPlots>=MAX_PLOT_CHECKS) return false;
+            if (checkedPlots>=sitePlotLimit) return false;
             Plot candidate=planPlot(template,point.x(),point.z());
             if (candidate==null) continue;
-            List<Plot> obstacles=new ArrayList<>(plots); obstacles.add(candidate);
-            List<Plot> connections=new ArrayList<>(plots);
-            connections.sort(java.util.Comparator.comparingInt(p->Math.abs(p.entry().x()-candidate.entry().x())
-                    +Math.abs(p.entry().z()-candidate.entry().z())));
-            for (Plot connection:connections) {
-                Road road=planRoad(connection.entry(),candidate.entry(),obstacles);
-                if (road==null) continue;
-                plots.add(candidate); addRoad(road);
-                LostWorld.LOG.debug("聚落部件 {} 已选址：{}，地面高度 {}，连接 {}",
-                        template.id,candidate.origin(),candidate.floor,connection.template.id);
-                return true;
-            }
-            rejected("part-road");
+            plots.add(candidate);
+            return true;
         }
         return false;
     }
 
     private Plot planPlot(Template template,int x,int z) {
-        if (checkedPlots>=MAX_PLOT_CHECKS) return null;
+        if (checkedPlots>=sitePlotLimit) return null;
         checkedPlots++;
         Rect rect=new Rect(x,z,template.width,template.depth);
         for (Plot plot:plots) if (rect.overlaps(plot.rect,2)) return fail("overlap");
@@ -207,7 +202,6 @@ public final class ModularSettlementBuilder {
         int[] terrain=new int[template.width*template.depth+1];
         int index=0;
         for (int dx=0;dx<template.width;dx++) for (int dz=0;dz<template.depth;dz++) {
-            if (roadFloors.containsKey(key(x+dx,z+dz))) return fail("road-overlap");
             int y=ground(x+dx,z+dz);
             BlockPos pos=new BlockPos(x+dx,y,z+dz);
             if (!dryGround(pos.getX(),pos.getZ())) return fail("ground");
@@ -233,14 +227,41 @@ public final class ModularSettlementBuilder {
                 && state.getFluidState().isEmpty() && state.isSolidRender(level,pos) && !EvilBoundary.evil(level,pos);
     }
 
-    private Road planExit(Plot home) {
-        Point start=home.entry();
-        int[][] exits={{0,-24},{-24,-8},{24,-8},{0,-40},{-32,-24},{32,-24}};
+    private boolean planStreets() {
+        Plot square=plots.stream().filter(p->p.template.id.equals("well")).findFirst().orElseThrow();
+        List<Plot> connected=new ArrayList<>(List.of(square));
+        for (Plot part:plots) {
+            if (part==square) continue;
+            List<Plot> nearest=new ArrayList<>(connected);
+            nearest.sort(java.util.Comparator.comparingInt(p->Math.abs(p.entry().x()-part.entry().x())
+                    +Math.abs(p.entry().z()-part.entry().z())));
+            Road road=null;
+            for (Plot other:nearest) {
+                road=planRoad(other.entry(),part.entry(),plots);
+                if (road!=null) break;
+            }
+            if (road==null) { rejected("street-"+part.template.id);return false; }
+            addRoad(road);
+            if (List.of("player_home","town_hall","town_gate").contains(part.template.id)) mainStreets.add(road);
+            connected.add(part);
+        }
+        Plot gate=plots.stream().filter(p->p.template.id.equals("town_gate")).findFirst().orElseThrow();
+        Road exit=planExit(gate);
+        if (exit==null) { rejected("town-exit");return false; }
+        addRoad(exit);
+        mainStreets.add(exit);
+        return true;
+    }
+
+    private Road planExit(Plot gate) {
+        // The gate faces north and is open all the way to its south apron.
+        Point start=new Point(gate.entry().x(),gate.floor,gate.rect.z()+gate.rect.depth());
+        int[][] exits={{0,14},{10,14},{-10,14},{0,24}};
         for (int[] offset:exits) {
             int x=start.x()+offset[0],z=start.z()+offset[1],y=ground(x,z);
             BlockPos pos=new BlockPos(x,y,z);
             if (!level.getFluidState(pos).isEmpty() || EvilBoundary.evil(level,pos)) continue;
-            Road road=planRoad(start,new Point(x,y,z),List.of(home));
+            Road road=planRoad(start,new Point(x,y,z),plots);
             if (road!=null) return road;
         }
         return null;
@@ -262,7 +283,11 @@ public final class ModularSettlementBuilder {
             options.add(SettlementGeometry.route(start,new Point(x,0,start.z()),new Point(x,0,end.z()),end));
         for (int z:new int[]{north-extra,south+extra})
             options.add(SettlementGeometry.route(start,new Point(start.x(),0,z),new Point(end.x(),0,z),end));
-        for (List<Point> option:options) {
+        for (int attempt=0;attempt<=options.size();attempt++) {
+            // Four door orientations can require a tighter detour than the simple L-shaped routes.
+            List<Point> option=attempt<options.size()?options.get(attempt):SettlementLayout.path(
+                    new Rect(left-extra,north-extra,right-left+2*extra+1,south-north+2*extra+1),
+                    obstacles.stream().map(Plot::rect).toList(),start,end);
             if (option.size()<2 || option.size()>192) continue;
             var visited=new HashSet<Long>();
             boolean blocked=false;
@@ -303,6 +328,26 @@ public final class ModularSettlementBuilder {
         for (int i=0;i<road.points.size();i++) {
             Point point=road.points.get(i); roadFloors.put(key(point.x(),point.z()),road.heights[i]);
         }
+    }
+
+    private List<Point> planStreetShoulders() {
+        List<Point> shoulders=new ArrayList<>();
+        HashSet<Long> used=new HashSet<>(roadFloors.keySet());
+        for (Road road:mainStreets) for (int i=1;i<road.points.size()-1;i++) {
+            int floor=road.heights[i];
+            if (road.heights[i-1]!=floor || road.heights[i+1]!=floor) continue;
+            Point before=road.points.get(i-1),point=road.points.get(i),after=road.points.get(i+1);
+            int dx=after.x()-before.x(),dz=after.z()-before.z();
+            if (dx!=0 && dz!=0) continue;
+            for (int side:new int[]{-1,1}) {
+                int x=point.x()+side*Integer.signum(dz),z=point.z()+side*Integer.signum(dx);
+                if (used.contains(key(x,z)) || plots.stream().anyMatch(p->p.rect.contains(x,z))) continue;
+                if (!columnSafe(x,z,floor,3,false)) continue;
+                used.add(key(x,z));
+                shoulders.add(new Point(x,floor,z));
+            }
+        }
+        return shoulders;
     }
 
     private boolean columnSafe(int x,int z,int floor,int clearance,boolean clearTree) {
@@ -389,7 +434,7 @@ public final class ModularSettlementBuilder {
         for (int i=0;i<road.points.size();i++) {
             Point point=road.points.get(i);
             if (!placedRoads.add(key(point.x(),point.z()))) continue;
-            BlockState state=Blocks.COBBLESTONE.defaultBlockState();
+            BlockState state=paving(point);
             boolean previousLower=i>0 && road.heights[i-1]<road.heights[i];
             boolean nextLower=i+1<road.points.size() && road.heights[i+1]<road.heights[i];
             if (previousLower && nextLower) state=Blocks.COBBLESTONE_SLAB.defaultBlockState();
@@ -400,6 +445,10 @@ public final class ModularSettlementBuilder {
             }
             placeColumn(point.x(),point.z(),road.heights[i],state);
         }
+    }
+
+    private static BlockState paving(Point point) {
+        return (Math.floorMod(point.x()+point.z(),5)==0?Blocks.COBBLESTONE:Blocks.ANDESITE).defaultBlockState();
     }
     private void placeColumn(int x,int z,int floor,BlockState surface) {
         int raw=ground(x,z);

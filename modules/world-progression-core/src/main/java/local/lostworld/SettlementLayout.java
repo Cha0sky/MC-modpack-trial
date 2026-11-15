@@ -11,12 +11,13 @@ import local.lostworld.SettlementGeometry.Rect;
 /** Pure fixed-village footprint and bounded connector planning; never loads chunks. */
 public final class SettlementLayout {
     private static final int[][] DIRECTIONS={{0,-1},{1,0},{0,1},{-1,0}};
+    static final List<String> TOWN_PARTS=List.of("player_home","town_hall","well","restaurant","farm",
+            "clinic","general_store","workshop","granary","villager_west","villager_east","expansion_plot","town_gate");
 
     private SettlementLayout() {}
 
     public static boolean complete(List<String> parts) {
-        return parts.size()==6 && new java.util.HashSet<>(parts).equals(java.util.Set.of(
-                "player_home","villager_west","villager_east","well","farm","expansion_plot"));
+        return parts.size()==TOWN_PARTS.size() && parts.containsAll(TOWN_PARTS);
     }
 
     public static Rect bounds(List<Rect> plots,int margin) {

@@ -43,6 +43,7 @@ configurations {
 }
 dependencies {
     implementation files('../evolvingblade/build/libs/evolvingblade-1.1.0.jar')
+    testImplementation 'com.google.code.gson:gson:2.10.1' // Same version as the Minecraft 1.21.1 SDK.
     if (project.hasProperty('chapterIntegrationMods')) {
         localRuntime fileTree('../../work/chapter1/integration-mods') { include '*.jar' }
     }

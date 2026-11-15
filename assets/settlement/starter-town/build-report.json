@@ -1,0 +1,177 @@
+{
+  "schema": 1,
+  "source": {
+    "kind": "sponge_schematic",
+    "schematic": "assets/settlement/starter-town/starter-town.schem",
+    "layout": "assets/settlement/starter-town/layout.json",
+    "schematic_sha256": "c18c75be29e2e1873f4ef41bac8bcb9b48876e8ebef5689f0afd18db65f54af4",
+    "layout_sha256": "fa68c090c2ee2107e555731e2346228ff53e1c55a986c98da646041ce4defb56",
+    "format": "Sponge",
+    "version": 2,
+    "data_version": 3955,
+    "size": [
+      80,
+      21,
+      65
+    ],
+    "non_air_blocks": 7394,
+    "empty_block_entities_omitted": 0,
+    "offset": [
+      0,
+      0,
+      0
+    ]
+  },
+  "warnings": [],
+  "modules": [
+    {
+      "id": "player_home",
+      "size": [
+        15,
+        14,
+        17
+      ],
+      "non_air_blocks": 716,
+      "palette_states": 34,
+      "villagers": 0
+    },
+    {
+      "id": "villager_west",
+      "size": [
+        11,
+        11,
+        13
+      ],
+      "non_air_blocks": 375,
+      "palette_states": 29,
+      "villagers": 2
+    },
+    {
+      "id": "villager_east",
+      "size": [
+        11,
+        11,
+        13
+      ],
+      "non_air_blocks": 383,
+      "palette_states": 33,
+      "villagers": 2
+    },
+    {
+      "id": "farm",
+      "size": [
+        15,
+        4,
+        13
+      ],
+      "non_air_blocks": 363,
+      "palette_states": 11,
+      "villagers": 0
+    },
+    {
+      "id": "expansion_plot",
+      "size": [
+        11,
+        4,
+        9
+      ],
+      "non_air_blocks": 130,
+      "palette_states": 7,
+      "villagers": 0
+    },
+    {
+      "id": "well",
+      "size": [
+        21,
+        8,
+        15
+      ],
+      "non_air_blocks": 474,
+      "palette_states": 21,
+      "villagers": 0
+    },
+    {
+      "id": "town_hall",
+      "size": [
+        21,
+        21,
+        19
+      ],
+      "non_air_blocks": 1286,
+      "palette_states": 24,
+      "villagers": 0
+    },
+    {
+      "id": "clinic",
+      "size": [
+        15,
+        13,
+        12
+      ],
+      "non_air_blocks": 567,
+      "palette_states": 28,
+      "villagers": 0
+    },
+    {
+      "id": "general_store",
+      "size": [
+        15,
+        13,
+        13
+      ],
+      "non_air_blocks": 597,
+      "palette_states": 22,
+      "villagers": 0
+    },
+    {
+      "id": "restaurant",
+      "size": [
+        19,
+        15,
+        17
+      ],
+      "non_air_blocks": 1097,
+      "palette_states": 31,
+      "villagers": 0
+    },
+    {
+      "id": "workshop",
+      "size": [
+        13,
+        13,
+        15
+      ],
+      "non_air_blocks": 664,
+      "palette_states": 24,
+      "villagers": 0
+    },
+    {
+      "id": "granary",
+      "size": [
+        13,
+        12,
+        11
+      ],
+      "non_air_blocks": 432,
+      "palette_states": 18,
+      "villagers": 0
+    },
+    {
+      "id": "town_gate",
+      "size": [
+        11,
+        12,
+        10
+      ],
+      "non_air_blocks": 310,
+      "palette_states": 15,
+      "villagers": 0
+    }
+  ],
+  "preserved_compact_modules": [
+    "player_compact",
+    "villager_west_compact",
+    "villager_east_compact"
+  ],
+  "validation": "offline NBT, complete voxel coverage, anchors, bed pair, empty containers; game test not run"
+}
