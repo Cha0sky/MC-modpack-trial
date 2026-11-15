@@ -1,0 +1,35 @@
+{
+  "structure_id": "world_progression_core:abandoned_workshop",
+  "size": [
+    24,
+    17,
+    20
+  ],
+  "blocks_with_air": 8160,
+  "palette_states": 49,
+  "device_positions": [
+    [
+      10,
+      2,
+      8
+    ],
+    [
+      19,
+      2,
+      10
+    ],
+    [
+      12,
+      2,
+      14
+    ],
+    [
+      19,
+      6,
+      7
+    ]
+  ],
+  "source": "assets/workshop-rekindled/abandoned-workshop.schem",
+  "runtime": "vanilla jigsaw template in new chunks only",
+  "game_launched": false
+}

@@ -1,0 +1,15 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "tag": "world_progression_core:workshop_samples"
+    }
+  ],
+  "processing_time": 150,
+  "results": [
+    {
+      "id": "world_progression_core:tainted_fiber",
+      "count": 2
+    }
+  ]
+}

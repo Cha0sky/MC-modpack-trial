@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "confluence:ebony_log",
+      "required": false
+    },
+    {
+      "id": "confluence:shadow_log",
+      "required": false
+    }
+  ]
+}

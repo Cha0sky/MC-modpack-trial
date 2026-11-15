@@ -1,0 +1,623 @@
+{
+  "id": "6BFCB3A5A742DFD0",
+  "filename": "01_workshop_rekindled",
+  "order_index": 0,
+  "icon": {
+    "id": "world_progression_core:rough_tuner"
+  },
+  "progression_mode": "linear",
+  "quests": [
+    {
+      "id": "69B3711BF25E107B",
+      "x": 0,
+      "y": 0,
+      "icon": {
+        "id": "minecraft:book"
+      },
+      "min_width": 320,
+      "dependencies": [
+        "259C64DF4D981F3C"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "6917A2B06E82F649",
+          "type": "advancement",
+          "advancement": "world_progression_core:workshop/commission",
+          "criterion": "done"
+        }
+      ],
+      "rewards": []
+    },
+    {
+      "id": "49A552499965E073",
+      "x": 2,
+      "y": -1,
+      "icon": {
+        "id": "confluence:ebony_log"
+      },
+      "min_width": 320,
+      "dependencies": [
+        "69B3711BF25E107B"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "4EE0D422CEEDC21A",
+          "type": "advancement",
+          "advancement": "world_progression_core:workshop/survey",
+          "criterion": "done"
+        }
+      ],
+      "rewards": []
+    },
+    {
+      "id": "599B7AB467C23AF0",
+      "x": 2,
+      "y": 1,
+      "icon": {
+        "id": "create:water_wheel"
+      },
+      "min_width": 320,
+      "dependencies": [
+        "69B3711BF25E107B"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "4EFF076B6BE86E8C",
+          "type": "advancement",
+          "advancement": "world_progression_core:workshop/power",
+          "criterion": "done"
+        }
+      ],
+      "rewards": []
+    },
+    {
+      "id": "6E074E85FED06EAC",
+      "x": 4,
+      "y": 1,
+      "icon": {
+        "id": "create:mechanical_press"
+      },
+      "min_width": 320,
+      "dependencies": [
+        "599B7AB467C23AF0"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "059CEE46ADD13EEE",
+          "type": "advancement",
+          "advancement": "world_progression_core:workshop/plates",
+          "criterion": "done"
+        }
+      ],
+      "rewards": []
+    },
+    {
+      "id": "6B8E22D501AC0EA9",
+      "x": 4,
+      "y": -1,
+      "icon": {
+        "id": "world_progression_core:tainted_fiber"
+      },
+      "min_width": 320,
+      "dependencies": [
+        "49A552499965E073",
+        "599B7AB467C23AF0"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "5724577993853B61",
+          "type": "advancement",
+          "advancement": "world_progression_core:workshop/fiber",
+          "criterion": "done"
+        }
+      ],
+      "rewards": []
+    },
+    {
+      "id": "136EB0CDAD110108",
+      "x": 6,
+      "y": 0,
+      "icon": {
+        "id": "world_progression_core:resonant_binder"
+      },
+      "min_width": 320,
+      "dependencies": [
+        "6E074E85FED06EAC",
+        "6B8E22D501AC0EA9"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "373A9E44DC857BB3",
+          "type": "advancement",
+          "advancement": "world_progression_core:workshop/binder",
+          "criterion": "done"
+        }
+      ],
+      "rewards": []
+    },
+    {
+      "id": "228109ABBD3E71FA",
+      "x": 8,
+      "y": 0,
+      "icon": {
+        "id": "world_progression_core:rough_tuner"
+      },
+      "min_width": 320,
+      "dependencies": [
+        "136EB0CDAD110108"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "7D3AC8DBDE907F42",
+          "type": "advancement",
+          "advancement": "world_progression_core:workshop/tuner",
+          "criterion": "done"
+        }
+      ],
+      "rewards": []
+    },
+    {
+      "id": "24BD52ACFB3E6BD0",
+      "x": 10,
+      "y": 0,
+      "icon": {
+        "id": "minecraft:filled_map"
+      },
+      "min_width": 320,
+      "dependencies": [
+        "228109ABBD3E71FA"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "5CAD06A145BDDBF6",
+          "type": "advancement",
+          "advancement": "world_progression_core:workshop/arrival",
+          "criterion": "done"
+        }
+      ],
+      "rewards": []
+    },
+    {
+      "id": "7A22062328908A03",
+      "x": 12,
+      "y": 0,
+      "icon": {
+        "id": "world_progression_core:workshop_relay"
+      },
+      "min_width": 320,
+      "dependencies": [
+        "24BD52ACFB3E6BD0"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "7F05D07DA2EA5846",
+          "type": "advancement",
+          "advancement": "world_progression_core:workshop/calibrate",
+          "criterion": "done"
+        }
+      ],
+      "rewards": []
+    },
+    {
+      "id": "4FB59596BCAF8408",
+      "x": 14,
+      "y": 0,
+      "icon": {
+        "id": "world_progression_core:workshop_console"
+      },
+      "min_width": 320,
+      "dependencies": [
+        "7A22062328908A03"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "586CCC7C7D9B3775",
+          "type": "advancement",
+          "advancement": "world_progression_core:workshop/restore",
+          "criterion": "done"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "26C79BEC8C2F4501",
+          "type": "item",
+          "item": {
+            "id": "create:andesite_alloy",
+            "count": 1
+          },
+          "count": 8
+        },
+        {
+          "id": "1609F05359CE5D4D",
+          "type": "item",
+          "item": {
+            "id": "create:shaft",
+            "count": 1
+          },
+          "count": 16
+        },
+        {
+          "id": "69D7B1891A9E2264",
+          "type": "item",
+          "item": {
+            "id": "create:cogwheel",
+            "count": 1
+          },
+          "count": 8
+        }
+      ]
+    },
+    {
+      "id": "5B7CF06798316864",
+      "x": 4,
+      "y": -3,
+      "icon": {
+        "id": "confluence:shadow_log"
+      },
+      "min_width": 320,
+      "dependencies": [
+        "49A552499965E073"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "03C111376928EE16",
+          "type": "advancement",
+          "advancement": "world_progression_core:workshop/both_regions",
+          "criterion": "done"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "7FA09131A470176A",
+          "type": "item",
+          "item": {
+            "id": "world_progression_core:resonant_binder",
+            "count": 1
+          },
+          "count": 2
+        },
+        {
+          "id": "34524603E0BC283D",
+          "type": "item",
+          "item": {
+            "id": "minecraft:purple_dye",
+            "count": 1,
+            "components": {
+              "minecraft:custom_name": "{\"text\": \"腐化原木标本牌\", \"italic\": false}",
+              "minecraft:lore": [
+                "{\"text\": \"边境调查纪念\", \"italic\": false, \"color\": \"gray\"}",
+                "{\"text\": \"可放入展示框陈列。\", \"italic\": false, \"color\": \"gray\"}"
+              ]
+            }
+          },
+          "count": 1
+        },
+        {
+          "id": "554B13768DCF9EE7",
+          "type": "item",
+          "item": {
+            "id": "minecraft:red_dye",
+            "count": 1,
+            "components": {
+              "minecraft:custom_name": "{\"text\": \"猩红原木标本牌\", \"italic\": false}",
+              "minecraft:lore": [
+                "{\"text\": \"边境调查纪念\", \"italic\": false, \"color\": \"gray\"}",
+                "{\"text\": \"可放入展示框陈列。\", \"italic\": false, \"color\": \"gray\"}"
+              ]
+            }
+          },
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "0712DF7A63B058CE",
+      "x": 6,
+      "y": 3,
+      "icon": {
+        "id": "create:andesite_funnel"
+      },
+      "min_width": 320,
+      "dependencies": [
+        "6E074E85FED06EAC"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "3CC97C3EEAF5784C",
+          "type": "advancement",
+          "advancement": "world_progression_core:workshop/batch_copper",
+          "criterion": "done"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "1C547D73A54C52D9",
+          "type": "item",
+          "item": {
+            "id": "create:andesite_funnel",
+            "count": 1
+          },
+          "count": 4
+        },
+        {
+          "id": "5875FE033565636C",
+          "type": "item",
+          "item": {
+            "id": "create:belt_connector",
+            "count": 1
+          },
+          "count": 4
+        }
+      ]
+    },
+    {
+      "id": "2AB221424C3AB34C",
+      "x": 8,
+      "y": -3,
+      "icon": {
+        "id": "minecraft:spyglass"
+      },
+      "min_width": 320,
+      "dependencies": [
+        "69B3711BF25E107B"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "00FCA4A0E987FE92",
+          "type": "advancement",
+          "advancement": "world_progression_core:workshop/field_notes",
+          "criterion": "done"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "14C2DE730B289B4E",
+          "type": "item",
+          "item": {
+            "id": "minecraft:anvil",
+            "count": 1
+          },
+          "count": 1
+        },
+        {
+          "id": "55882F164F2AC619",
+          "type": "item",
+          "item": {
+            "id": "minecraft:experience_bottle",
+            "count": 1
+          },
+          "count": 8
+        }
+      ]
+    },
+    {
+      "id": "1A2D41F3F0565916",
+      "x": 10,
+      "y": 3,
+      "icon": {
+        "id": "minecraft:glow_item_frame"
+      },
+      "min_width": 320,
+      "dependencies": [
+        "69B3711BF25E107B"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "5597957E3082DF8F",
+          "type": "advancement",
+          "advancement": "world_progression_core:workshop/photography",
+          "criterion": "done"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "3567ADD4FF802313",
+          "type": "item",
+          "item": {
+            "id": "minecraft:glow_item_frame",
+            "count": 1
+          },
+          "count": 4
+        },
+        {
+          "id": "0F76273A7AEB8D1D",
+          "type": "item",
+          "item": {
+            "id": "minecraft:white_banner",
+            "count": 1
+          },
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": "01646532D249D22F",
+      "x": 12,
+      "y": -3,
+      "icon": {
+        "id": "minecraft:iron_axe"
+      },
+      "min_width": 320,
+      "dependencies": [
+        "69B3711BF25E107B"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "17943CB9CFCA69AA",
+          "type": "advancement",
+          "advancement": "world_progression_core:workshop/wroughtnaut",
+          "criterion": "done"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "0E849F208BBB8147",
+          "type": "choice",
+          "table_id": 0,
+          "table_data": {
+            "loot_size": 1,
+            "rewards": [
+              {
+                "id": "6EA512BB95AE757A",
+                "type": "item",
+                "item": {
+                  "id": "minecraft:enchanted_book",
+                  "count": 1,
+                  "components": {
+                    "minecraft:stored_enchantments": {
+                      "levels": {
+                        "minecraft:unbreaking": 3
+                      }
+                    }
+                  }
+                },
+                "count": 1,
+                "weight": 1.0
+              },
+              {
+                "id": "54E261BE4EE2C4BA",
+                "type": "item",
+                "item": {
+                  "id": "minecraft:enchanted_book",
+                  "count": 1,
+                  "components": {
+                    "minecraft:stored_enchantments": {
+                      "levels": {
+                        "minecraft:efficiency": 3
+                      }
+                    }
+                  }
+                },
+                "count": 1,
+                "weight": 1.0
+              },
+              {
+                "id": "371CEB08ABD25362",
+                "type": "item",
+                "item": {
+                  "id": "minecraft:enchanted_book",
+                  "count": 1,
+                  "components": {
+                    "minecraft:stored_enchantments": {
+                      "levels": {
+                        "minecraft:feather_falling": 3
+                      }
+                    }
+                  }
+                },
+                "count": 1,
+                "weight": 1.0
+              }
+            ]
+          }
+        },
+        {
+          "id": "1E4C05A6E077FC28",
+          "type": "item",
+          "item": {
+            "id": "minecraft:iron_nugget",
+            "count": 1,
+            "components": {
+              "minecraft:custom_name": "{\"text\": \"沉睡铁甲纪念牌\", \"italic\": false}",
+              "minecraft:lore": [
+                "{\"text\": \"一次自愿的遗迹挑战\", \"italic\": false, \"color\": \"gray\"}",
+                "{\"text\": \"可放入展示框陈列。\", \"italic\": false, \"color\": \"gray\"}"
+              ]
+            }
+          },
+          "count": 1
+        }
+      ]
+    }
+  ]
+}

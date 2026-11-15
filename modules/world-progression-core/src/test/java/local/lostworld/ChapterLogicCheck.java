@@ -3,6 +3,7 @@ package local.lostworld;
 public final class ChapterLogicCheck {
     private static void check(boolean value,String message) { if (!value) throw new AssertionError(message); }
     public static void main(String[] args) {
+        WorkshopProgressCheck.run();
         SettlementGeometryCheck.run();
         SettlementLayoutCheck.run();
         ChapterState old = new ChapterState(false,false);

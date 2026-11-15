@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-16",
+  "target": {
+    "minecraft": "1.21.1",
+    "loader": "NeoForge",
+    "installed_loader_version": "21.1.248"
+  },
+  "verification": "Read actual JAR metadata and relevant resources; no hashes, game launch, compile, or deployment performed.",
+  "files": [
+    {
+      "filename": "Explorify v1.6.6.mod.jar",
+      "size": 775401,
+      "mod_id": "explorify",
+      "version": "1.6.6",
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "source_url": "https://cdn.modrinth.com/data/HSfsxuTo/versions/oyrAnNG8/Explorify%20v1.6.6.mod.jar",
+      "version_url": "https://modrinth.com/mod/explorify/version/oyrAnNG8",
+      "required_dependencies": {
+        "minecraft": "[1.20,)"
+      },
+      "optional_dependencies": {},
+      "jar_metadata": "META-INF/neoforge.mods.toml: lowcodefml [1,); data pack with overlays supporting Minecraft 1.21.1"
+    },
+    {
+      "filename": "exposure-neoforge-1.21.1-1.9.21.jar",
+      "size": 2206630,
+      "mod_id": "exposure",
+      "version": "1.9.21",
+      "game_versions": [
+        "1.21.1"
+      ],
+      "loaders": [
+        "neoforge"
+      ],
+      "source_url": "https://cdn.modrinth.com/data/hB899VmG/versions/tjX0GpFW/exposure-neoforge-1.21.1-1.9.21.jar",
+      "version_url": "https://modrinth.com/mod/exposure/version/tjX0GpFW",
+      "required_dependencies": {
+        "minecraft": "[1.21,)",
+        "neoforge": "[21,)"
+      },
+      "optional_dependencies": {
+        "create": "[6.0.7,)",
+        "jei": "Modrinth version metadata optional; already installed"
+      },
+      "jar_metadata": "META-INF/neoforge.mods.toml: javafml [4,); current Create 6.0.10 meets optional compatibility requirement"
+    }
+  ]
+}

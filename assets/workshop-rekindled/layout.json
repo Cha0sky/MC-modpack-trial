@@ -1,0 +1,134 @@
+{
+  "structure_id": "world_progression_core:abandoned_workshop",
+  "size": [
+    24,
+    17,
+    20
+  ],
+  "entrance": [
+    8,
+    1,
+    3
+  ],
+  "side_entrance": [
+    2,
+    1,
+    11
+  ],
+  "relays": [
+    {
+      "kind": "power",
+      "pos": [
+        19,
+        2,
+        10
+      ],
+      "facing": "south",
+      "connection": [
+        19,
+        2,
+        11
+      ]
+    },
+    {
+      "kind": "direction",
+      "pos": [
+        12,
+        2,
+        14
+      ],
+      "facing": "west",
+      "connection": [
+        11,
+        2,
+        14
+      ]
+    },
+    {
+      "kind": "signal",
+      "pos": [
+        19,
+        6,
+        7
+      ],
+      "facing": "north",
+      "connection": [
+        19,
+        6,
+        6
+      ]
+    }
+  ],
+  "console": {
+    "pos": [
+      10,
+      2,
+      8
+    ],
+    "facing": "south"
+  },
+  "supply_barrel": [
+    7,
+    6,
+    8
+  ],
+  "guard_spawner": [
+    5,
+    1,
+    7
+  ],
+  "signs": [
+    {
+      "pos": [
+        10,
+        3,
+        8
+      ],
+      "lines": [
+        "旧工坊控制台",
+        "三处继电器就绪后",
+        "在此重新启动",
+        "普通建筑可以修复"
+      ]
+    },
+    {
+      "pos": [
+        19,
+        3,
+        10
+      ],
+      "lines": [
+        "动力继电器",
+        "彩色正面接轴",
+        "输入至少 8 RPM",
+        "再用调谐器校准"
+      ]
+    },
+    {
+      "pos": [
+        12,
+        3,
+        14
+      ],
+      "lines": [
+        "传动继电器",
+        "彩色正面接轴",
+        "正转至少 8 RPM",
+        "齿轮啮合可反向"
+      ]
+    },
+    {
+      "pos": [
+        18,
+        6,
+        8
+      ],
+      "lines": [
+        "信号继电器",
+        "彩色正面接轴",
+        "输入至少 8 RPM",
+        "用调谐器持续校准"
+      ]
+    }
+  ]
+}

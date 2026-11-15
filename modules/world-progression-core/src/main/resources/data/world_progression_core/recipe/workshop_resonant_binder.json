@@ -1,0 +1,23 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "world_progression_core:tainted_fiber"
+    },
+    {
+      "item": "world_progression_core:tainted_fiber"
+    },
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "tag": "world_progression_core:workshop_binders"
+    }
+  ],
+  "results": [
+    {
+      "id": "world_progression_core:resonant_binder",
+      "count": 1
+    }
+  ]
+}

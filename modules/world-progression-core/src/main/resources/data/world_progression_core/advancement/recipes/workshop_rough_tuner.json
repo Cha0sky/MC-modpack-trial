@@ -1,0 +1,27 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_binder": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "world_progression_core:resonant_binder"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_binder"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "world_progression_core:workshop_rough_tuner"
+    ]
+  }
+}

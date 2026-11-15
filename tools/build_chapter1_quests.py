@@ -23,7 +23,7 @@ def write(path, data):
 def main():
     chapter = {"id":uid("chapter"),"filename":"00_lostworld_chapter1","order_index":-1,
                "icon":{"id":"evolvingblade:star_eater"},"progression_mode":"linear","quests":[]}
-    lang = {"chapter."+uid("chapter")+".title":"第一章 · 从小屋出发"}
+    lang = {"chapter."+uid("chapter")+".title":"序章 · 从小屋出发"}
 
     def quest(name,title,desc,x,y,icon,needs=(),tasks=(),reward=False):
         q={"id":uid(name),"x":x,"y":y,"icon":{"id":icon},"min_width":300,
