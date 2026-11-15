@@ -1,0 +1,18 @@
+{
+  "instance": "D:\\PCL 正式版 2.10.6 (1)\\.minecraft\\versions\\星庭远征-开发版",
+  "approved_scope": "starter town core only",
+  "applied": true,
+  "source_commit": "8b70bc7",
+  "source_artifact": "modules/world-progression-core/build/libs/world-progression-core-0.1.0-starter-town.jar",
+  "backup": "D:\\PCL 正式版 2.10.6 (1)\\codex\\modpack-project\\backups\\starter-town-20261116-033315-498",
+  "quest_definitions_skipped": true,
+  "game_launched": false,
+  "files": [
+    {
+      "path": "mods/world-progression-core-0.1.0.jar",
+      "existed": true,
+      "before_sha256": "1f3333cefa2b335425d65134445feccfe0e61f12da90a7f0c1144aa59c3516cb",
+      "after_sha256": "fcd474f16dab3a7c217766cc85f8a3c6a500e0026289f7655ac550ddbff53a6f"
+    }
+  ]
+}
