@@ -8,6 +8,7 @@ import subprocess
 import tomllib
 import zipfile
 from deploy_workshop import ROOT, INSTANCE, QUESTS, closed
+from quest_language import read_language
 
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--apply',action='store_true');args=parser.parse_args()
@@ -22,7 +23,7 @@ def main():
         (QUESTS/'chapters/02_heritage_survey.snbt',Path('config/ftbquests/quests/chapters/02_heritage_survey.snbt'),None)]
     for locale in ('zh_cn','en_us'):
         relative=Path('config/ftbquests/quests/lang')/(locale+'.snbt')
-        existing=json.loads((INSTANCE/relative).read_text('utf-8-sig'))
+        existing=read_language(INSTANCE/relative)
         source=json.loads((QUESTS/'lang'/(locale+'.snbt')).read_text('utf-8-sig'))
         changes={key:value for key,value in source.items() if any(key.startswith(prefix) for prefix in prefixes)}
         payload=(json.dumps({**existing,**changes},ensure_ascii=False,indent=2)+'\n').encode('utf-8')

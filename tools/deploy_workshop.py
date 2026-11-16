@@ -7,6 +7,7 @@ import shutil
 import subprocess
 import tomllib
 import zipfile
+from quest_language import read_language
 
 ROOT=Path(__file__).resolve().parents[1]
 INSTANCE=Path(r"D:\PCL 正式版 2.10.6 (1)\.minecraft\versions\星庭远征-开发版")
@@ -43,7 +44,7 @@ def main():
     for locale in ('zh_cn','en_us'):
         relative=Path('config/ftbquests/quests/lang')/(locale+'.snbt')
         target=INSTANCE/relative
-        existing=json.loads(target.read_text('utf-8-sig'))
+        existing=read_language(target)
         source=json.loads((QUESTS/'lang'/(locale+'.snbt')).read_text('utf-8-sig'))
         changes={key:value for key,value in source.items() if key==title or any(key.startswith(prefix) for prefix in prefixes)}
         if existing.get(title) not in (None,'第一章 · 从小屋出发','序章 · 从小屋出发'):
