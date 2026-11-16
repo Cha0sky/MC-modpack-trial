@@ -111,3 +111,5 @@ P R P
 构建沿用现有JDK/SDK与 `-Pmod_version=0.3.0-heritage build -x createMinecraftArtifacts`。`tools/build_heritage_quests.py` 管本章数据，`HeritageEvents` 管玩家事实，`HeritageWorldData` 管共享记录，`HeritageArchive` 管书与地图；`tools/deploy_heritage.py` 只更新核心、新章节和两份合并语言。
 
 实现提交 `9685e01`；部署语言兼容修复 `e96e9c2`。当前FTB语言已自动改写为SNBT，共享读取器保留其全部语言键后合并本章文本，未重新编译无改动的核心。已备份部署到开发版，见[部署回执](../../evidence/heritage-deployment.json)。
+
+2026-11-16 依赖热修：Iron模组实际注册版本为 `1.21.1-3.16.3`，核心现准确要求 `[1.21.1-3.16.3]`。原 `[3.16.3,4)` 会拒绝该安装件，已修正并部署；只重打包资源，未改Java逻辑或升级其他模组。见[回执](../../evidence/heritage-iron-dependency-deployment.json)，待用户重启验证。

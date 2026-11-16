@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-16T20:28:18.225184+08:00",
+  "baseline_commit": "bddbdb75f99a6aa0e58b68f2fae84a8963149c00",
+  "instance": "D:\\PCL 正式版 2.10.6 (1)\\.minecraft\\versions\\星庭远征-开发版",
+  "applied": true,
+  "backup": "D:\\PCL 正式版 2.10.6 (1)\\codex\\modpack-project\\backups\\iron-dependency-20261116-202818",
+  "file": "mods/world-progression-core-0.1.0.jar",
+  "source_artifact": "modules/world-progression-core/build/libs/world-progression-core-0.3.0-heritage.jar",
+  "core_version": "0.3.0-heritage",
+  "dependency_before": "[3.16.3,4)",
+  "dependency_after": "[1.21.1-3.16.3]",
+  "game_process_check": "No java/javaw process before backup and replacement",
+  "game_launched": false,
+  "saves_modified": false,
+  "other_mods_changed": false,
+  "quests_changed": false,
+  "file_hashes_computed": false
+}
