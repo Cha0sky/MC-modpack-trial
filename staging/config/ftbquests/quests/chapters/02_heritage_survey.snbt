@@ -1,0 +1,534 @@
+{
+  "id": "08D219867E4DF589",
+  "filename": "02_heritage_survey",
+  "order_index": 1,
+  "icon": {
+    "id": "world_progression_core:heritage_archive"
+  },
+  "progression_mode": "linear",
+  "quests": [
+    {
+      "id": "1697E0EFFE71246B",
+      "x": 0,
+      "y": 0,
+      "icon": {
+        "id": "minecraft:written_book"
+      },
+      "min_width": 340,
+      "dependencies": [
+        "4FB59596BCAF8408"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "optional": false,
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "7A402DA612669129",
+          "type": "advancement",
+          "advancement": "world_progression_core:heritage/welcome",
+          "criterion": "done"
+        }
+      ],
+      "rewards": []
+    },
+    {
+      "id": "1C2F30D09583F848",
+      "x": 2,
+      "y": -3,
+      "icon": {
+        "id": "create:blaze_burner"
+      },
+      "min_width": 340,
+      "dependencies": [
+        "1697E0EFFE71246B"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "optional": true,
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "5D18D3AD436AD44F",
+          "type": "advancement",
+          "advancement": "world_progression_core:heritage/engineering_heat",
+          "criterion": "done"
+        }
+      ],
+      "rewards": []
+    },
+    {
+      "id": "2D5031EB24DB5DB1",
+      "x": 4,
+      "y": -3,
+      "icon": {
+        "id": "create:precision_mechanism"
+      },
+      "min_width": 340,
+      "dependencies": [
+        "1C2F30D09583F848"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "optional": true,
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "7096C1794CC7E609",
+          "type": "advancement",
+          "advancement": "world_progression_core:heritage/engineering_assembly",
+          "criterion": "done"
+        }
+      ],
+      "rewards": []
+    },
+    {
+      "id": "377BDBD8E94E1CD6",
+      "x": 6,
+      "y": -3,
+      "icon": {
+        "id": "create:brass_ingot"
+      },
+      "min_width": 340,
+      "dependencies": [
+        "2D5031EB24DB5DB1"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "optional": true,
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "1B28A265D751EB84",
+          "type": "advancement",
+          "advancement": "world_progression_core:heritage/engineering_record",
+          "criterion": "done"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "02CEDCA25AF54E75",
+          "type": "item",
+          "item": {
+            "id": "create:brass_ingot",
+            "count": 1
+          },
+          "count": 8
+        },
+        {
+          "id": "6C3680580B2FA90F",
+          "type": "item",
+          "item": {
+            "id": "create:shaft",
+            "count": 1
+          },
+          "count": 16
+        }
+      ]
+    },
+    {
+      "id": "7D0AC0F11F02C768",
+      "x": 2,
+      "y": 0,
+      "icon": {
+        "id": "minecraft:enchanting_table"
+      },
+      "min_width": 340,
+      "dependencies": [
+        "1697E0EFFE71246B"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "optional": true,
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "3711F67013F5E2F2",
+          "type": "advancement",
+          "advancement": "world_progression_core:heritage/arcane_foundation",
+          "criterion": "done"
+        }
+      ],
+      "rewards": []
+    },
+    {
+      "id": "00A2188434EF341F",
+      "x": 4,
+      "y": 0,
+      "icon": {
+        "id": "minecraft:enchanted_book"
+      },
+      "min_width": 340,
+      "dependencies": [
+        "7D0AC0F11F02C768"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "optional": true,
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "6F7DD7BC432B2DBB",
+          "type": "advancement",
+          "advancement": "world_progression_core:heritage/arcane_practice",
+          "criterion": "done"
+        }
+      ],
+      "rewards": []
+    },
+    {
+      "id": "271A129FAC02FC2C",
+      "x": 6,
+      "y": 0,
+      "icon": {
+        "id": "minecraft:book"
+      },
+      "min_width": 340,
+      "dependencies": [
+        "00A2188434EF341F"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "optional": true,
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "60997A004DBDCA80",
+          "type": "advancement",
+          "advancement": "world_progression_core:heritage/arcane_record",
+          "criterion": "done"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "0773316AE15C5AE5",
+          "type": "item",
+          "item": {
+            "id": "minecraft:experience_bottle",
+            "count": 1
+          },
+          "count": 8
+        },
+        {
+          "id": "55119622C41CCC65",
+          "type": "item",
+          "item": {
+            "id": "minecraft:paper",
+            "count": 1
+          },
+          "count": 16
+        },
+        {
+          "id": "61E6D23BFA8233EF",
+          "type": "item",
+          "item": {
+            "id": "minecraft:lapis_lazuli",
+            "count": 1
+          },
+          "count": 8
+        }
+      ]
+    },
+    {
+      "id": "3D8234164AB33DB0",
+      "x": 2,
+      "y": 3,
+      "icon": {
+        "id": "minecraft:compass"
+      },
+      "min_width": 340,
+      "dependencies": [
+        "1697E0EFFE71246B"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "optional": true,
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "0224B939DA3081F4",
+          "type": "advancement",
+          "advancement": "world_progression_core:heritage/expedition_sites",
+          "criterion": "done"
+        }
+      ],
+      "rewards": []
+    },
+    {
+      "id": "2A804883BB0B2318",
+      "x": 4,
+      "y": 3,
+      "icon": {
+        "id": "minecraft:iron_axe"
+      },
+      "min_width": 340,
+      "dependencies": [
+        "3D8234164AB33DB0"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "optional": true,
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "525C3D931FC9331D",
+          "type": "advancement",
+          "advancement": "world_progression_core:heritage/expedition_challenge",
+          "criterion": "done"
+        }
+      ],
+      "rewards": []
+    },
+    {
+      "id": "7FB7517299ACEB24",
+      "x": 6,
+      "y": 3,
+      "icon": {
+        "id": "minecraft:map"
+      },
+      "min_width": 340,
+      "dependencies": [
+        "2A804883BB0B2318"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "optional": true,
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "4F6F584FEA70ED98",
+          "type": "advancement",
+          "advancement": "world_progression_core:heritage/expedition_record",
+          "criterion": "done"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "66D3AEC08679DF62",
+          "type": "item",
+          "item": {
+            "id": "minecraft:ender_pearl",
+            "count": 1
+          },
+          "count": 4
+        },
+        {
+          "id": "682549B4EFF9644C",
+          "type": "item",
+          "item": {
+            "id": "minecraft:experience_bottle",
+            "count": 1
+          },
+          "count": 12
+        }
+      ]
+    },
+    {
+      "id": "2892644A45456FAE",
+      "x": 8,
+      "y": 0,
+      "icon": {
+        "id": "minecraft:written_book"
+      },
+      "min_width": 340,
+      "dependencies": [
+        "377BDBD8E94E1CD6",
+        "271A129FAC02FC2C",
+        "7FB7517299ACEB24"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "optional": false,
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "0BC7FC74C5825D05",
+          "type": "advancement",
+          "advancement": "world_progression_core:heritage/convergence",
+          "criterion": "done"
+        }
+      ],
+      "rewards": [],
+      "min_required_dependencies": 2
+    },
+    {
+      "id": "760440CC9AACAC51",
+      "x": 10,
+      "y": 0,
+      "icon": {
+        "id": "world_progression_core:heritage_archive"
+      },
+      "min_width": 340,
+      "dependencies": [
+        "2892644A45456FAE"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "optional": false,
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "375E6A9148BE1C81",
+          "type": "advancement",
+          "advancement": "world_progression_core:heritage/archive_craft",
+          "criterion": "done"
+        }
+      ],
+      "rewards": []
+    },
+    {
+      "id": "76FC61C7DB7BD176",
+      "x": 12,
+      "y": 0,
+      "icon": {
+        "id": "world_progression_core:heritage_archive"
+      },
+      "min_width": 340,
+      "dependencies": [
+        "760440CC9AACAC51"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "optional": false,
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "07B72DB853FBDAA8",
+          "type": "advancement",
+          "advancement": "world_progression_core:heritage/archive_open",
+          "criterion": "done"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "2D4D43400C94B80C",
+          "type": "item",
+          "item": {
+            "id": "minecraft:item_frame",
+            "count": 1
+          },
+          "count": 8
+        },
+        {
+          "id": "7E098E1DE7EC77E2",
+          "type": "item",
+          "item": {
+            "id": "minecraft:lantern",
+            "count": 1
+          },
+          "count": 4
+        }
+      ]
+    },
+    {
+      "id": "26D9E56E31143A19",
+      "x": 10,
+      "y": 4,
+      "icon": {
+        "id": "minecraft:globe_banner_pattern"
+      },
+      "min_width": 340,
+      "dependencies": [
+        "377BDBD8E94E1CD6",
+        "271A129FAC02FC2C",
+        "7FB7517299ACEB24"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "optional": true,
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "323701A45F894461",
+          "type": "advancement",
+          "advancement": "world_progression_core:heritage/all_three",
+          "criterion": "done"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "50389D56D90F9E03",
+          "type": "choice",
+          "table_id": 0,
+          "table_data": {
+            "loot_size": 1,
+            "rewards": [
+              {
+                "id": "42D4049B1828B0EF",
+                "type": "item",
+                "item": {
+                  "id": "create:item_vault",
+                  "count": 1
+                },
+                "count": 4,
+                "weight": 1.0
+              },
+              {
+                "id": "76D7E13B37629E4A",
+                "type": "item",
+                "item": {
+                  "id": "minecraft:golden_apple",
+                  "count": 1
+                },
+                "count": 4,
+                "weight": 1.0
+              },
+              {
+                "id": "15FE2C8518F2A320",
+                "type": "item",
+                "item": {
+                  "id": "minecraft:experience_bottle",
+                  "count": 1
+                },
+                "count": 24,
+                "weight": 1.0
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

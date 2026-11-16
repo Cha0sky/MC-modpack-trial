@@ -25,6 +25,9 @@ public final class WorkshopContent {
                     .sound(SoundType.COPPER).noLootTable().lightLevel(s->s.getValue(WorkshopConsoleBlock.ACTIVE)?12:0)));
     public static final DeferredItem<BlockItem> RELAY_ITEM=ITEMS.registerSimpleBlockItem(RELAY);
     public static final DeferredItem<BlockItem> CONSOLE_ITEM=ITEMS.registerSimpleBlockItem(CONSOLE);
+    public static final DeferredBlock<HeritageArchiveBlock> ARCHIVE=BLOCKS.register("heritage_archive",
+            ()->new HeritageArchiveBlock(BlockBehaviour.Properties.of().strength(2.5F).sound(SoundType.WOOD)));
+    public static final DeferredItem<BlockItem> ARCHIVE_ITEM=ITEMS.registerSimpleBlockItem(ARCHIVE);
     private WorkshopContent() {}
     public static void register(IEventBus bus) { BLOCKS.register(bus);ITEMS.register(bus); }
 }

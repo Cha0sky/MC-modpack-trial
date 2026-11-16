@@ -1,0 +1,38 @@
+package local.lostworld;
+
+import java.util.Set;
+
+/** Route-completion rules shared by runtime observations and lightweight JVM checks. */
+public final class HeritageProgress {
+    public static final int ENGINEERING=1,ARCANE=2,EXPEDITION=4;
+    private static final Set<String> EXPEDITION_STRUCTURES=Set.of(
+            "mowziesmobs:wrought_chamber","confluence:enchanted_sword_shrine",
+            "cataclysm:desert_site","cataclysm:ancient_factory");
+    private static final Set<String> CHALLENGES=Set.of(
+            "mowziesmobs:ferrous_wroughtnaut","mowziesmobs:frostmaw",
+            "terra_entity:eye_of_cthulhu","terra_entity:eater_of_worlds","terra_entity:brain_of_cthulhu");
+
+    private HeritageProgress() {}
+
+    public static int contribute(int routes,int bit) {
+        if (bit!=ENGINEERING && bit!=ARCANE && bit!=EXPEDITION)
+            throw new IllegalArgumentException("One recognized heritage route is required");
+        return routes|bit;
+    }
+
+    public static boolean ready(int routes) { return Integer.bitCount(routes&7)>=2; }
+
+    public static boolean arcaneComplete(boolean ironFoundation,boolean ironCast,
+                                         boolean goetyFoundation,boolean goetySummon,boolean goetyKill) {
+        return ironFoundation && ironCast || goetyFoundation && goetySummon && goetyKill;
+    }
+
+    public static boolean expeditionStructure(String id) { return EXPEDITION_STRUCTURES.contains(id); }
+    public static boolean acceptedChallenge(String id) { return CHALLENGES.contains(id); }
+
+    public static String siteKind(String id) {
+        if (expeditionStructure(id)) return id;
+        String explorify=WorkshopProgress.explorationKind(id);
+        return explorify.isEmpty()?"":"explorify:"+explorify;
+    }
+}

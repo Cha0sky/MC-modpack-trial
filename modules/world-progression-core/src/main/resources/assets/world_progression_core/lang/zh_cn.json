@@ -4,5 +4,6 @@
   "item.world_progression_core.rough_tuner": "粗制调谐器",
   "block.world_progression_core.workshop_relay": "旧工坊继电器",
   "block.world_progression_core.workshop_console": "旧工坊控制台",
-  "itemGroup.world_progression_core": "失落世界 · 工坊遗产"
+  "itemGroup.world_progression_core": "失落世界 · 工坊遗产",
+  "block.world_progression_core.heritage_archive": "遗产档案台"
 }

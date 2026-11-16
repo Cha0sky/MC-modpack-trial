@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "world_progression_core:block/heritage_archive",
+      "y": 0
+    },
+    "facing=east": {
+      "model": "world_progression_core:block/heritage_archive",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "world_progression_core:block/heritage_archive",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "world_progression_core:block/heritage_archive",
+      "y": 270
+    }
+  }
+}
