@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-16T12:03:14.806937+08:00",
+  "instance": "D:\\PCL 正式版 2.10.6 (1)\\.minecraft\\versions\\星庭远征-开发版",
+  "applied": true,
+  "scope": "heritage chapter core, new quest and two merged language files",
+  "source_commit": "e96e9c2f04a3e9536cf55f109ed5fe6716d9a783",
+  "game_launched": false,
+  "game_test_run": false,
+  "saves_modified": false,
+  "file_hashes_computed": false,
+  "new_mods_installed": false,
+  "runtime_acceptance": "pending user playtest",
+  "files": [
+    {
+      "path": "mods/world-progression-core-0.1.0.jar",
+      "existed": true,
+      "before_size": 149111,
+      "after_size": 178518
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/02_heritage_survey.snbt",
+      "existed": false,
+      "before_size": null,
+      "after_size": 13939
+    },
+    {
+      "path": "config/ftbquests/quests/lang/zh_cn.snbt",
+      "existed": true,
+      "before_size": 34104,
+      "after_size": 42697
+    },
+    {
+      "path": "config/ftbquests/quests/lang/en_us.snbt",
+      "existed": true,
+      "before_size": 35437,
+      "after_size": 42644
+    }
+  ],
+  "backup": "D:\\PCL 正式版 2.10.6 (1)\\codex\\modpack-project\\backups\\heritage-20261116-120314-806937",
+  "game_process_check": "No java/javaw process before backup and replacement"
+}
