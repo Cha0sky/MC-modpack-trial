@@ -89,7 +89,9 @@ def main():
             'location':'world_progression_core:abandoned_workshop','processors':{'processors':[]},'projection':'rigid'}}]})
     write_json('worldgen/structure/abandoned_workshop.json',{
         'type':'minecraft:jigsaw','biomes':'#world_progression_core:has_structure/workshop',
-        'start_pool':'world_progression_core:abandoned_workshop','size':0,
+        # In 1.21.1 the start piece is only added to the saved structure when depth > 0.
+        # This template has no jigsaw connectors, so depth 1 still places just one piece.
+        'start_pool':'world_progression_core:abandoned_workshop','size':1,
         'start_height':{'absolute':0},'project_start_to_heightmap':'WORLD_SURFACE_WG',
         'max_distance_from_center':32,'use_expansion_hack':False,
         'terrain_adaptation':'beard_thin','step':'surface_structures','spawn_overrides':{}})

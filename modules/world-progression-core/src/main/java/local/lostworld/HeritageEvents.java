@@ -143,8 +143,9 @@ public final class HeritageEvents {
         boolean goetyFoundation=nativeDone(player,GOETY_ADV+"craft_dark_wand");
         boolean goetySummon=nativeDone(player,GOETY_ADV+"summon_zombie");
         boolean goetyKill=nativeDone(player,GOETY_ADV+"servant_kill_mob");
+        boolean arcane=HeritageProgress.arcaneComplete(ironFoundation,ironCast,goetyFoundation,goetySummon,goetyKill);
         if (ironFoundation || goetyFoundation) mark(player,"arcane_foundation");
-        if (ironCast || goetySummon && goetyKill) mark(player,"arcane_practice");
+        if (arcane) mark(player,"arcane_practice");
 
         boolean sites=strings(progress,"expedition_sites").size()>=2;
         boolean challenge=progress.getBoolean("challenge");
@@ -154,8 +155,7 @@ public final class HeritageEvents {
         HeritageWorldData world=HeritageWorldData.get(player.serverLevel());
         boolean changed=false;
         if (heat && assembly) changed|=world.contribute(HeritageProgress.ENGINEERING);
-        if (HeritageProgress.arcaneComplete(ironFoundation,ironCast,goetyFoundation,goetySummon,goetyKill))
-            changed|=world.contribute(HeritageProgress.ARCANE);
+        if (arcane) changed|=world.contribute(HeritageProgress.ARCANE);
         if (sites && challenge) changed|=world.contribute(HeritageProgress.EXPEDITION);
         if (changed) for (ServerPlayer online:player.server.getPlayerList().getPlayers()) sync(online);
         else sync(player);

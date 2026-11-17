@@ -1,11 +1,12 @@
-"""Generate original Chinese FTB quest content; recommendation, not hard gates."""
+"""Reproduce the retired prototype quest book under work/legacy-quests."""
 from pathlib import Path
 import hashlib
 import json
 from quest_expansion import EXTRA_CHAPTERS
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "staging" / "config" / "ftbquests" / "quests"
+ARCHIVE_OUTPUT = ROOT / "work" / "legacy-quests"
+OUT = ARCHIVE_OUTPUT / "quests"
 
 
 def uid(value):
@@ -88,11 +89,11 @@ def main():
     save(OUT / "chapter_groups.snbt", {"chapter_groups": []})
     for locale in ["zh_cn", "en_us"]:
         save(OUT / "lang" / (locale + ".snbt"), languages)
-    save(ROOT / "evidence" / "quest-content.json", content)
+    save(ARCHIVE_OUTPUT / "quest-content.json", content)
     lines = ["# 任务内容 v0.2", "", "五章初中期内容；未配置强制配方或装备门槛。物品任务检查背包持有，不消耗物品，不证明机器已经工作；击杀任务采用 FTB KillTask。建筑、养成与体验目标由玩家手动确认。远航与终局仍待制作。", ""]
     for row in content:
         lines.extend(["## " + row["chapter"] + " · " + row["title"], "", "完成条件：" + row["completion"], "", row["description"], ""])
-    (ROOT / "QUESTS-v0.2.md").write_text("\n".join(lines), encoding="utf-8")
+    (ARCHIVE_OUTPUT / "QUESTS-v0.2.md").write_text("\n".join(lines), encoding="utf-8")
     print(json.dumps({"chapters": len(chapters), "quests": len(content), "automatic_item": sum(row["completion"].startswith("背包") for row in content), "automatic_kill": sum(row["completion"].startswith("有效击杀") for row in content), "manual": sum(row["completion"] == "玩家手动确认" for row in content)}, ensure_ascii=False))
 
 

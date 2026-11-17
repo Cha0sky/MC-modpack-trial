@@ -2,7 +2,7 @@
   "type": "minecraft:jigsaw",
   "biomes": "#world_progression_core:has_structure/workshop",
   "start_pool": "world_progression_core:abandoned_workshop",
-  "size": 0,
+  "size": 1,
   "start_height": {
     "absolute": 0
   },

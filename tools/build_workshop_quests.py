@@ -55,6 +55,31 @@ def named_reward(name, item, title, lore):
     })
 
 
+def milestone_supplies(name):
+    # New rewards are always appended after legacy entries, including choice tables.
+    packs = {
+        "commission": [("minecraft:cooked_beef", 32), ("minecraft:torch", 64), ("minecraft:cobblestone", 128)],
+        "power": [("minecraft:copper_ingot", 32), ("minecraft:iron_ingot", 32), ("minecraft:redstone", 32), ("minecraft:coal", 64)],
+        "plates": [("create:goggles", 1), ("create:andesite_alloy", 16)],
+        "tuner": [("create:wrench", 1), ("minecraft:water_bucket", 2), ("create:water_wheel", 3),
+                  ("create:shaft", 32), ("create:large_cogwheel", 8), ("create:cogwheel", 16), ("minecraft:cobblestone", 128)],
+        "restore": [("minecraft:diamond_pickaxe", 1), ("minecraft:oak_log", 128), ("minecraft:glass", 64),
+                    ("minecraft:iron_ingot", 64), ("minecraft:cooked_beef", 32), (MOD + "resonant_binder", 2)],
+        "both_regions": [("minecraft:oak_log", 64), ("minecraft:coal", 32)],
+        "batch_copper": [("create:andesite_tunnel", 8), ("minecraft:hopper", 8), ("create:chute", 16), ("create:shaft", 64)],
+        "field_notes": [("minecraft:bow", 1), ("minecraft:arrow", 64), ("minecraft:cooked_beef", 32)],
+        "photography": [("minecraft:writable_book", 1), ("minecraft:item_frame", 16), ("minecraft:paper", 64)],
+        "wroughtnaut": [("minecraft:diamond", 4), ("minecraft:golden_apple", 4), ("minecraft:experience_bottle", 16)],
+    }
+    enchantments = {
+        "minecraft:diamond_pickaxe": {"minecraft:efficiency": 3, "minecraft:unbreaking": 2},
+        "minecraft:bow": {"minecraft:power": 3, "minecraft:unbreaking": 2},
+    }
+    return [item_reward(name + "/supplies_v1/" + item, item, count,
+                        {"minecraft:enchantments": {"levels": enchantments[item]}} if item in enchantments else None)
+            for item, count in packs.get(name, [])]
+
+
 def chapter():
     prologue_next = uid("next", "lostworld.chapter1.v1/")
     doc = {"id": uid("chapter"), "filename": "01_workshop_rekindled", "order_index": 0,
@@ -64,12 +89,12 @@ def chapter():
     def quest(name, title, desc, x, y, icon, needs, rewards=(), optional=False):
         q = {"id": uid(name), "x": x, "y": y, "icon": {"id": icon}, "min_width": 320,
              "dependencies": [uid(n) for n in needs] if name != "commission" else [prologue_next],
-             "dependency_requirement": "all_completed", "progression_mode": "linear",
+             "dependency_requirement": "all_completed", "progression_mode": "linear", "optional": optional,
              "hide_dependency_lines": False, "hide_until_deps_visible": False,
              "hide_until_deps_complete": False, "hide_lock_icon": False,
              "tasks": [{"id": uid(name + "/task"), "type": "advancement",
                         "advancement": MOD + "workshop/" + name, "criterion": "done"}],
-             "rewards": list(rewards)}
+             "rewards": [*rewards, *milestone_supplies(name)]}
         doc["quests"].append(q)
         lang["quest." + q["id"] + ".title"] = ("支线 · " if optional else "") + title
         lang["quest." + q["id"] + ".quest_desc"] = desc
@@ -78,7 +103,8 @@ def chapter():
         "一份残缺的维修记录提到了边境旧工坊：那里曾为附近的居民维修工具、制造零件。",
         "击败史莱姆王后，腐化与猩红已经可以进入。取得当地原木，尝试恢复记录中的复合材料工艺。",
         "采样与建设可以自由安排先后。自然罗盘帮助找群系，探险者指南针帮助找遗迹；不必重新完成已经做过的序章。",
-        "这一章的核心是制造工具并亲手修复旧设施，五条支线均可自由选择。"],
+        "这一章的核心是制造工具并亲手修复旧设施，五条支线均可自由选择，完成主线即可进入第二章。",
+        "先领取熟牛排、火把和搭路石料。采样出发前检查工具、背包空位与回家的路线。"],
         0, 0, "minecraft:book", ())
     quest("survey", "越过边境", [
         "到腐化或猩红地区调查，准备共 4 个乌木原木或暗影原木。两种可以混合使用。",
@@ -86,18 +112,20 @@ def chapter():
         "带在身上的样本会被记录，任务不会收走材料。之后把这 4 个原木送进磨石。"],
         2, -1, "confluence:ebony_log", ("commission",))
     quest("power", "让动力持续运转", [
-        "让机械压机、磨石或搅拌器接上实际运转的动力，并走到设备旁观察。",
+        "让机械压机、磨石或搅拌器接上实际运转的动力，并走到设备旁累计观察约 10 秒。",
         "教学推荐小水车。压机与磨石可走 8 RPM 低速支路；搅拌器通过两级齿轮增速到 32 RPM。",
-        "可采用其他动力方案。若系统过载，增加动力容量或分开运行设备；不需要把所有设备都加速。"],
+        "可采用其他动力方案。若系统过载，增加动力容量或分开运行设备；不需要把所有设备都加速。",
+        "领取铁铜锭、红石和燃料，接下来由你亲自把原料加工成板材与共振胶。"],
         2, 1, "create:water_wheel", ("commission",))
     quest("plates", "第一批精密零件", [
         "准备 7 个铁板和 2 个铜板：原生压机把 1 个金属锭压成 1 个对应板材。",
         "5 个铁板与 2 个安山合金先做搅拌头，再按 JEI 制作搅拌器和工作盆；另外 2 个铁板与 2 个铜板留给调谐器。",
-        "取得的成果允许提前准备和同伴分工；放入机器前让需要的板材在背包中被记录。普通熔炉照常可以冶炼原料。"],
+        "取得的成果允许提前准备和同伴分工。先放进背包让成果记录，再投入后续工艺；已用于搅拌头和调谐器的板材也会计入。普通熔炉照常可以冶炼原料。",
+        "领取工程师护目镜与安山合金，用护目镜观察设备的转速和应力，继续扩展你的工坊。"],
         4, 1, "create:mechanical_press", ("power",))
     quest("fiber", "异常材料的用途", [
         "将乌木原木或暗影原木放进磨石：每个原木稳定产出 2 份浸染纤维。",
-        "让背包中记录到 8 份纤维，再投入下一步混合。4 个原木正好够用，不需要赌稀有掉落。"],
+        "共需 8 份纤维，4 个原木正好够用。可以放进背包记录，也可以直接送入自动混合；已经制成的共振胶会计入其消耗的纤维。"],
         4, -1, MOD + "tainted_fiber", ("survey", "power"))
     quest("binder", "稳定的共振胶", [
         "在工作盆内投入 2 份浸染纤维、1 份红石粉与 1 个黏液球或汇流凝胶，由机械搅拌器产出 1 份共振胶。",
@@ -107,10 +135,11 @@ def chapter():
     quest("tuner", "粗制调谐器", [
         "工作台组装：上排 铜板／玻璃／铜板；中排 铁板／共振胶／铁板；下排 空／传动杆／空。",
         "调谐器可以诊断古代设备的动力、方向和校准状态。它不消耗自身、不需要燃料；成功修复一处设备时消耗 1 份共振胶。",
-        "在主世界手持调谐器对空气右键，领取指向废弃工坊的勘测地图；地图丢失后可再次操作补领，有短暂冷却。任务解锁顺序不影响已经取得的材料记录。"],
+        "在主世界手持调谐器对空气右键，领取指向废弃工坊的勘测地图；地图丢失后可再次操作补领，有短暂冷却。任务解锁顺序不影响已经取得的材料记录。",
+        "领取扳手、水桶、3 台小水车、传动件和垫脚石料作为现场维修包。水车可给三处节点分别供能；出发前确认背包里还留有 3 份共振胶。"],
         8, 0, MOD + "rough_tuner", ("binder",))
     quest("arrival", "找到旧址", [
-        "沿工坊地图抵达旧址。新遗迹分布在尚未探索的区域；探险者指南针也可以辅助寻找。",
+        "沿工坊地图抵达旧址。在已有存档中请向未生成过的区块探索；更新后重用调谐器即可领取勘测图，探险者指南针也可以辅助寻找。",
         "正门、侧面、自己搭出的桥或挖出的通路都可以。先查看动力室、传动装置与屋顶信号装置。",
         "推荐带水车、水桶、传动杆、大小齿轮、扳手和 3 份共振胶，现场也可采用自己的传动方案。"],
         10, 0, "minecraft:filled_map", ("tuner",))
@@ -123,7 +152,8 @@ def chapter():
     quest("restore", "工坊重新亮起", [
         "三处设备就绪后，使用中央控制台，让旧工坊重新启动。档案和章节成果在启动成功后开放。",
         "这里留下的工艺记录介绍普通工匠如何为周边居民服务，并指向机械、奥术与远征三类遗产。下一章将继续这些调查。",
-        "这座工坊可以成为继续改造的野外据点。领取一份工程补给，带着新能力回家。"],
+        "这座工坊可以成为继续改造的野外据点。领取工程补给和效率Ⅲ、耐久Ⅱ钻石镐，带着新能力回家。",
+        "第二章“遗产调查”会从这里接续。奖励中的 2 份共振胶可留给档案台，五条支线可以随时回来完成。"],
         14, 0, MOD + "workshop_console", ("calibrate",), rewards=[
             item_reward("restore/alloy", "create:andesite_alloy", 8),
             item_reward("restore/shaft", "create:shaft", 16),
@@ -131,29 +161,31 @@ def chapter():
         ])
     quest("both_regions", "另一种异常", [
         "分别进入腐化与猩红，并让背包记录到乌木原木和暗影原木各 4 个。主线只要求任一路线，这里是自选的第二份调查。",
-        "奖励两份备用共振胶与两件可放入展示框的区域标本纪念牌。任务不收走你的原木。"],
+        "奖励两份备用共振胶、两件可放入展示框的区域标本纪念牌，以及木材与燃料补给。任务不收走你的原木。"],
         4, -3, "confluence:shadow_log", ("survey",), optional=True, rewards=[
             item_reward("both_regions/binder", MOD + "resonant_binder", 2),
             named_reward("both_regions/ebony", "minecraft:purple_dye", "腐化原木标本牌", ["边境调查纪念", "可放入展示框陈列。"]),
             named_reward("both_regions/shadow", "minecraft:red_dye", "猩红原木标本牌", ["边境调查纪念", "可放入展示框陈列。"]),
         ])
     quest("batch_copper", "从手作到量产", [
-        "准备 16 个铜板，让背包记录到这批加工成果。推荐尝试自动输入与收取，也允许手动完成。",
-        "任务不收走铜板。领取安山漏斗与传送带，继续把小工坊连成自己的生产线。"],
+        "准备并记录 16 个铜板，已经用于调谐器的铜板也会计入。推荐尝试自动输入与收取，也允许手动完成。",
+        "任务不收走铜板。奖励安山漏斗、传送带，再加安山隧道、漏斗、溜槽和一组传动杆，足够把几台机器真正连成一条线。"],
         6, 3, "create:andesite_funnel", ("plates",), optional=True, rewards=[
             item_reward("batch_copper/funnel", "create:andesite_funnel", 4),
             item_reward("batch_copper/belt", "create:belt_connector", 4),
         ])
     quest("field_notes", "野外见闻录", [
         "在本章开启后走入三种不同的 Explorify 小型遗迹或营地。相同类型重复发现不会代替新的见闻。",
-        "探索方向由你选择，不要求主线清空这些遗迹。已记录的发现会保留，之后回来交任务即可。"],
+        "探索方向由你选择，不要求主线清空这些遗迹。已记录的发现会保留，之后回来交任务即可。",
+        "领取铁砧、经验补给，以及力量Ⅲ、耐久Ⅱ弓和箭矢、熟食，为更远的冒险做准备。"],
         8, -3, "minecraft:spyglass", ("commission",), optional=True, rewards=[
             item_reward("field_notes/anvil", "minecraft:anvil"),
             item_reward("field_notes/experience", "minecraft:experience_bottle", 8),
         ])
     quest("photography", "第一次远征纪念", [
         "用拾光定影的相机记录自己的远征，完成胶片冲洗和打印，保存三张不同的照片。",
-        "风景、同伴、遗迹或自己的工坊都可以，不对照片内容打分。把记录带回家，做成自己的照片墙。"],
+        "风景、同伴、遗迹或自己的工坊都可以，不对照片内容打分。自己拍摄的三张不同照片需要完成打印，复制同一张不会重复计数。",
+        "领取展示框、横幅、书与笔和纸，把记录带回家，做成自己的照片墙或远征日志。"],
         10, 3, "minecraft:glow_item_frame", ("commission",), optional=True, rewards=[
             item_reward("photography/frame", "minecraft:glow_item_frame", 4),
             item_reward("photography/banner", "minecraft:white_banner", 2),
@@ -167,7 +199,7 @@ def chapter():
         options.append(reward)
     quest("wroughtnaut", "沉睡的铁甲", [
         "准备充分后，自愿挑战 Mowzie 的钢铁守护者。它位于地下的守护者室，是本章较难的技巧型支线。",
-        "保留模组原生掉落。额外领取一枚纪念牌，并从耐久Ⅲ、效率Ⅲ、摔落保护Ⅲ附魔书中选择一本。",
+        "保留模组原生掉落。额外领取一枚纪念牌，并从耐久Ⅲ、效率Ⅲ、摔落保护Ⅲ附魔书中选择一本。另有钻石、金苹果和经验瓶作为挑战补给。",
         "这里的模组称号不代表它已经被设定为主线封印守护者；不完成此支线也能重启工坊。"],
         12, -3, "minecraft:iron_axe", ("commission",), optional=True, rewards=[
             {"id": uid("wroughtnaut/book_choice"), "type": "choice", "table_id": 0,
@@ -356,6 +388,7 @@ def verify(doc, external_dependency):
         visited.add(q["id"])
     assert nodes[uid("binder")]["dependencies"] == [uid("plates"), uid("fiber")]
     assert nodes[uid("restore")]["dependencies"] == [uid("calibrate")]
+    assert all(nodes[uid(name)]["optional"] for name in ("both_regions", "batch_copper", "field_notes", "photography", "wroughtnaut"))
     choices = nodes[uid("wroughtnaut")]["rewards"][0]["table_data"]["rewards"]
     assert len(choices) == 3
     assert set(ADVANCEMENTS) == {q["tasks"][0]["advancement"].split("/")[-1] for q in doc["quests"]}

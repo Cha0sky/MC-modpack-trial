@@ -18,6 +18,7 @@
       "dependencies": [],
       "dependency_requirement": "all_completed",
       "progression_mode": "linear",
+      "optional": false,
       "hide_dependency_lines": false,
       "hide_until_deps_visible": false,
       "hide_until_deps_complete": false,
@@ -30,7 +31,35 @@
           "criterion": "done"
         }
       ],
-      "rewards": []
+      "rewards": [
+        {
+          "id": "496CF186F08CF940",
+          "type": "item",
+          "item": {
+            "id": "minecraft:bread",
+            "count": 1
+          },
+          "count": 32
+        },
+        {
+          "id": "1BE5AF4159460303",
+          "type": "item",
+          "item": {
+            "id": "minecraft:torch",
+            "count": 1
+          },
+          "count": 64
+        },
+        {
+          "id": "4EC4A9DF1058DCC5",
+          "type": "item",
+          "item": {
+            "id": "minecraft:oak_log",
+            "count": 1
+          },
+          "count": 64
+        }
+      ]
     },
     {
       "id": "0464CA606F343573",
@@ -45,6 +74,7 @@
       ],
       "dependency_requirement": "all_completed",
       "progression_mode": "linear",
+      "optional": false,
       "hide_dependency_lines": false,
       "hide_until_deps_visible": false,
       "hide_until_deps_complete": false,
@@ -72,6 +102,7 @@
       ],
       "dependency_requirement": "all_completed",
       "progression_mode": "linear",
+      "optional": false,
       "hide_dependency_lines": false,
       "hide_until_deps_visible": false,
       "hide_until_deps_complete": false,
@@ -103,6 +134,7 @@
       ],
       "dependency_requirement": "all_completed",
       "progression_mode": "linear",
+      "optional": false,
       "hide_dependency_lines": false,
       "hide_until_deps_visible": false,
       "hide_until_deps_complete": false,
@@ -145,7 +177,44 @@
           "consume_items": false
         }
       ],
-      "rewards": []
+      "rewards": [
+        {
+          "id": "2667E35F0464AC21",
+          "type": "item",
+          "item": {
+            "id": "minecraft:cobblestone",
+            "count": 1
+          },
+          "count": 128
+        },
+        {
+          "id": "20FFB94ADDE12757",
+          "type": "item",
+          "item": {
+            "id": "minecraft:coal",
+            "count": 1
+          },
+          "count": 32
+        },
+        {
+          "id": "7A453780FA34093C",
+          "type": "item",
+          "item": {
+            "id": "minecraft:iron_ingot",
+            "count": 1
+          },
+          "count": 16
+        },
+        {
+          "id": "5E1C2F4C66C3CFA9",
+          "type": "item",
+          "item": {
+            "id": "minecraft:copper_ingot",
+            "count": 1
+          },
+          "count": 24
+        }
+      ]
     },
     {
       "id": "4500C181673A4FB3",
@@ -160,6 +229,7 @@
       ],
       "dependency_requirement": "all_completed",
       "progression_mode": "linear",
+      "optional": false,
       "hide_dependency_lines": false,
       "hide_until_deps_visible": false,
       "hide_until_deps_complete": false,
@@ -191,6 +261,7 @@
       ],
       "dependency_requirement": "all_completed",
       "progression_mode": "linear",
+      "optional": false,
       "hide_dependency_lines": false,
       "hide_until_deps_visible": false,
       "hide_until_deps_complete": false,
@@ -203,7 +274,35 @@
           "criterion": "done"
         }
       ],
-      "rewards": []
+      "rewards": [
+        {
+          "id": "0C02CF27FC59D815",
+          "type": "item",
+          "item": {
+            "id": "minecraft:dirt",
+            "count": 1
+          },
+          "count": 128
+        },
+        {
+          "id": "14863F613A95929E",
+          "type": "item",
+          "item": {
+            "id": "minecraft:oak_log",
+            "count": 1
+          },
+          "count": 64
+        },
+        {
+          "id": "65837A4544EA3B15",
+          "type": "item",
+          "item": {
+            "id": "minecraft:stone",
+            "count": 1
+          },
+          "count": 64
+        }
+      ]
     },
     {
       "id": "49639F9E7F91B628",
@@ -218,6 +317,7 @@
       ],
       "dependency_requirement": "all_completed",
       "progression_mode": "linear",
+      "optional": false,
       "hide_dependency_lines": false,
       "hide_until_deps_visible": false,
       "hide_until_deps_complete": false,
@@ -249,6 +349,7 @@
       ],
       "dependency_requirement": "all_completed",
       "progression_mode": "linear",
+      "optional": false,
       "hide_dependency_lines": false,
       "hide_until_deps_visible": false,
       "hide_until_deps_complete": false,
@@ -311,6 +412,7 @@
       ],
       "dependency_requirement": "all_completed",
       "progression_mode": "linear",
+      "optional": false,
       "hide_dependency_lines": false,
       "hide_until_deps_visible": false,
       "hide_until_deps_complete": false,
@@ -330,6 +432,51 @@
             "count": 1
           },
           "count": 1
+        },
+        {
+          "id": "532E2A11BECFE7DE",
+          "type": "item",
+          "item": {
+            "id": "minecraft:chest",
+            "count": 1
+          },
+          "count": 8
+        },
+        {
+          "id": "151BEBE07B718A16",
+          "type": "item",
+          "item": {
+            "id": "minecraft:barrel",
+            "count": 1
+          },
+          "count": 8
+        },
+        {
+          "id": "3E05967BE6D04758",
+          "type": "item",
+          "item": {
+            "id": "minecraft:oak_log",
+            "count": 1
+          },
+          "count": 128
+        },
+        {
+          "id": "61FBF816B0B495C6",
+          "type": "item",
+          "item": {
+            "id": "minecraft:stone_bricks",
+            "count": 1
+          },
+          "count": 128
+        },
+        {
+          "id": "1918446B25A4CABF",
+          "type": "item",
+          "item": {
+            "id": "minecraft:cooked_beef",
+            "count": 1
+          },
+          "count": 32
         }
       ]
     },
@@ -346,6 +493,7 @@
       ],
       "dependency_requirement": "all_completed",
       "progression_mode": "linear",
+      "optional": false,
       "hide_dependency_lines": false,
       "hide_until_deps_visible": false,
       "hide_until_deps_complete": false,
@@ -358,7 +506,43 @@
           "criterion": "done"
         }
       ],
-      "rewards": []
+      "rewards": [
+        {
+          "id": "6D202A6C864997EE",
+          "type": "item",
+          "item": {
+            "id": "minecraft:iron_chestplate",
+            "count": 1,
+            "components": {
+              "minecraft:enchantments": {
+                "levels": {
+                  "minecraft:protection": 2,
+                  "minecraft:unbreaking": 2
+                }
+              }
+            }
+          },
+          "count": 1
+        },
+        {
+          "id": "7E8C421BAD888C12",
+          "type": "item",
+          "item": {
+            "id": "minecraft:golden_apple",
+            "count": 1
+          },
+          "count": 4
+        },
+        {
+          "id": "5EC8FF16C9BF31A3",
+          "type": "item",
+          "item": {
+            "id": "minecraft:experience_bottle",
+            "count": 1
+          },
+          "count": 8
+        }
+      ]
     },
     {
       "id": "259C64DF4D981F3C",
@@ -373,6 +557,7 @@
       ],
       "dependency_requirement": "all_completed",
       "progression_mode": "linear",
+      "optional": false,
       "hide_dependency_lines": false,
       "hide_until_deps_visible": false,
       "hide_until_deps_complete": false,
@@ -398,6 +583,7 @@
       ],
       "dependency_requirement": "all_completed",
       "progression_mode": "linear",
+      "optional": true,
       "hide_dependency_lines": false,
       "hide_until_deps_visible": false,
       "hide_until_deps_complete": false,
@@ -410,7 +596,26 @@
           "criterion": "done"
         }
       ],
-      "rewards": []
+      "rewards": [
+        {
+          "id": "02E4863999965483",
+          "type": "item",
+          "item": {
+            "id": "minecraft:spyglass",
+            "count": 1
+          },
+          "count": 1
+        },
+        {
+          "id": "505FC434A7AFF369",
+          "type": "item",
+          "item": {
+            "id": "minecraft:lead",
+            "count": 1
+          },
+          "count": 4
+        }
+      ]
     },
     {
       "id": "280D401DA2351897",
@@ -425,6 +630,7 @@
       ],
       "dependency_requirement": "all_completed",
       "progression_mode": "linear",
+      "optional": true,
       "hide_dependency_lines": false,
       "hide_until_deps_visible": false,
       "hide_until_deps_complete": false,
@@ -437,7 +643,26 @@
           "criterion": "done"
         }
       ],
-      "rewards": []
+      "rewards": [
+        {
+          "id": "497499BDEA8B70BF",
+          "type": "item",
+          "item": {
+            "id": "minecraft:map",
+            "count": 1
+          },
+          "count": 8
+        },
+        {
+          "id": "3EFA1CC2DDCC3339",
+          "type": "item",
+          "item": {
+            "id": "minecraft:scaffolding",
+            "count": 1
+          },
+          "count": 64
+        }
+      ]
     }
   ]
 }

@@ -33,7 +33,35 @@
           "criterion": "done"
         }
       ],
-      "rewards": []
+      "rewards": [
+        {
+          "id": "549FD1CFFF819BD2",
+          "type": "item",
+          "item": {
+            "id": "minecraft:cooked_beef",
+            "count": 1
+          },
+          "count": 32
+        },
+        {
+          "id": "4430FCCB31EC56DF",
+          "type": "item",
+          "item": {
+            "id": "minecraft:torch",
+            "count": 1
+          },
+          "count": 64
+        },
+        {
+          "id": "1F1CDB01340CAA3C",
+          "type": "item",
+          "item": {
+            "id": "minecraft:scaffolding",
+            "count": 1
+          },
+          "count": 128
+        }
+      ]
     },
     {
       "id": "1C2F30D09583F848",
@@ -61,7 +89,44 @@
           "criterion": "done"
         }
       ],
-      "rewards": []
+      "rewards": [
+        {
+          "id": "56D48BA2CE0CDCBA",
+          "type": "item",
+          "item": {
+            "id": "create:zinc_ingot",
+            "count": 1
+          },
+          "count": 16
+        },
+        {
+          "id": "486B83F9A2E2AC6D",
+          "type": "item",
+          "item": {
+            "id": "minecraft:copper_ingot",
+            "count": 1
+          },
+          "count": 32
+        },
+        {
+          "id": "299C54CD013C0805",
+          "type": "item",
+          "item": {
+            "id": "minecraft:redstone",
+            "count": 1
+          },
+          "count": 32
+        },
+        {
+          "id": "37EB77497D3F787A",
+          "type": "item",
+          "item": {
+            "id": "minecraft:quartz",
+            "count": 1
+          },
+          "count": 8
+        }
+      ]
     },
     {
       "id": "2D5031EB24DB5DB1",
@@ -135,6 +200,42 @@
             "count": 1
           },
           "count": 16
+        },
+        {
+          "id": "1B0B23E5382E5836",
+          "type": "item",
+          "item": {
+            "id": "create:mechanical_arm",
+            "count": 1
+          },
+          "count": 1
+        },
+        {
+          "id": "697F6AEE10858FA9",
+          "type": "item",
+          "item": {
+            "id": "create:brass_funnel",
+            "count": 1
+          },
+          "count": 8
+        },
+        {
+          "id": "3D02E49B1E1E3ED7",
+          "type": "item",
+          "item": {
+            "id": "create:belt_connector",
+            "count": 1
+          },
+          "count": 16
+        },
+        {
+          "id": "756FB959DA4841D2",
+          "type": "item",
+          "item": {
+            "id": "create:iron_sheet",
+            "count": 1
+          },
+          "count": 32
         }
       ]
     },
@@ -247,6 +348,42 @@
             "count": 1
           },
           "count": 8
+        },
+        {
+          "id": "3D0F75130CDF4753",
+          "type": "item",
+          "item": {
+            "id": "minecraft:enchanting_table",
+            "count": 1
+          },
+          "count": 1
+        },
+        {
+          "id": "7F9531EA3F6CAB70",
+          "type": "item",
+          "item": {
+            "id": "minecraft:bookshelf",
+            "count": 1
+          },
+          "count": 16
+        },
+        {
+          "id": "289858DBD936D9B7",
+          "type": "item",
+          "item": {
+            "id": "minecraft:lapis_lazuli",
+            "count": 1
+          },
+          "count": 32
+        },
+        {
+          "id": "305C240CF79267FC",
+          "type": "item",
+          "item": {
+            "id": "minecraft:experience_bottle",
+            "count": 1
+          },
+          "count": 24
         }
       ]
     },
@@ -276,7 +413,35 @@
           "criterion": "done"
         }
       ],
-      "rewards": []
+      "rewards": [
+        {
+          "id": "6316E7FC1E93E64B",
+          "type": "item",
+          "item": {
+            "id": "minecraft:golden_apple",
+            "count": 1
+          },
+          "count": 4
+        },
+        {
+          "id": "725C284522CA9C53",
+          "type": "item",
+          "item": {
+            "id": "minecraft:cooked_beef",
+            "count": 1
+          },
+          "count": 64
+        },
+        {
+          "id": "61E64F19EB9DB6CE",
+          "type": "item",
+          "item": {
+            "id": "minecraft:arrow",
+            "count": 1
+          },
+          "count": 64
+        }
+      ]
     },
     {
       "id": "2A804883BB0B2318",
@@ -350,6 +515,42 @@
             "count": 1
           },
           "count": 12
+        },
+        {
+          "id": "60FC39907F2AE92C",
+          "type": "item",
+          "item": {
+            "id": "minecraft:diamond_boots",
+            "count": 1,
+            "components": {
+              "minecraft:enchantments": {
+                "levels": {
+                  "minecraft:protection": 3,
+                  "minecraft:feather_falling": 4,
+                  "minecraft:unbreaking": 2
+                }
+              }
+            }
+          },
+          "count": 1
+        },
+        {
+          "id": "0BE7EB4FA8C58E4D",
+          "type": "item",
+          "item": {
+            "id": "minecraft:golden_carrot",
+            "count": 1
+          },
+          "count": 64
+        },
+        {
+          "id": "38797792FDF9D24A",
+          "type": "item",
+          "item": {
+            "id": "minecraft:arrow",
+            "count": 1
+          },
+          "count": 64
         }
       ]
     },
@@ -381,7 +582,35 @@
           "criterion": "done"
         }
       ],
-      "rewards": [],
+      "rewards": [
+        {
+          "id": "18ED3224DDD187F0",
+          "type": "item",
+          "item": {
+            "id": "minecraft:stone_bricks",
+            "count": 1
+          },
+          "count": 128
+        },
+        {
+          "id": "61EF72A5CAF598E8",
+          "type": "item",
+          "item": {
+            "id": "minecraft:smooth_stone",
+            "count": 1
+          },
+          "count": 128
+        },
+        {
+          "id": "6DFC65AF62FB98FB",
+          "type": "item",
+          "item": {
+            "id": "minecraft:oak_log",
+            "count": 1
+          },
+          "count": 128
+        }
+      ],
       "min_required_dependencies": 2
     },
     {
@@ -456,6 +685,41 @@
             "count": 1
           },
           "count": 4
+        },
+        {
+          "id": "32413D648C2F2AFA",
+          "type": "item",
+          "item": {
+            "id": "create:item_vault",
+            "count": 1
+          },
+          "count": 8
+        },
+        {
+          "id": "1C55AB76ED953E33",
+          "type": "item",
+          "item": {
+            "id": "minecraft:diamond_axe",
+            "count": 1,
+            "components": {
+              "minecraft:enchantments": {
+                "levels": {
+                  "minecraft:efficiency": 4,
+                  "minecraft:unbreaking": 3
+                }
+              }
+            }
+          },
+          "count": 1
+        },
+        {
+          "id": "080F68CB26C5817A",
+          "type": "item",
+          "item": {
+            "id": "minecraft:golden_carrot",
+            "count": 1
+          },
+          "count": 64
         }
       ]
     },
@@ -527,6 +791,40 @@
               }
             ]
           }
+        },
+        {
+          "id": "3506664860161A15",
+          "type": "item",
+          "item": {
+            "id": "minecraft:enchanted_book",
+            "count": 1,
+            "components": {
+              "minecraft:stored_enchantments": {
+                "levels": {
+                  "minecraft:mending": 1
+                }
+              }
+            }
+          },
+          "count": 1
+        },
+        {
+          "id": "77A4F3F08C274DFC",
+          "type": "item",
+          "item": {
+            "id": "minecraft:diamond",
+            "count": 1
+          },
+          "count": 8
+        },
+        {
+          "id": "3EB99DB8E6A2F960",
+          "type": "item",
+          "item": {
+            "id": "minecraft:experience_bottle",
+            "count": 1
+          },
+          "count": 32
         }
       ]
     }
