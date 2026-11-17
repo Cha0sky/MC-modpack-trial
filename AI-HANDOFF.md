@@ -1,10 +1,10 @@
 # 星庭远征整合包：开发交接文档
 
-更新时间：2026-11-16，Asia/Shanghai。用途：让新对话了解当前整合包状态并协助用户规划下一项开发。**本文件不是新任务、推送、启动游戏或修改存档的自动授权。**
+更新时间：2026-11-17，Asia/Shanghai。用途：让新对话了解当前整合包状态并协助用户规划下一项开发。**本文件不是新任务、推送、启动游戏或修改存档的自动授权。**
 
 ## 1. 接手时先看这里
 
-最新故障修正：用户报告铁魔法依赖不满足，已将核心声明从 `[3.16.3,4)` 改为真实注册版本 `[1.21.1-3.16.3]`，重新打包并只替换开发版核心，版本标识仍为0.3.0-heritage。最新回执为 [依赖修复部署](evidence/heritage-iron-dependency-deployment.json)，备份 `backups/iron-dependency-20261116-202818`。待用户重启验证；后续章节开发仍暂停。不要将文件名里的发行号3.16.3直接当成注册版本。
+当前开发版核心为 `0.3.1-heritage`。任务书保留序章和一、二章的 42 项正式任务，归档旧原型 71 项，追加 89 项奖励。工坊生成深度与奥术实践判定已修正，等用户实测。部署与备份见[本轮回执](evidence/quest-refresh-deployment.json)。铁魔法继续使用真实注册版本 `[1.21.1-3.16.3]`，上次热修后日志已记录成功进世界并加载任务书。
 
 用户认为**序章的玩法骨架基本完成**：玩家在聚落持剑醒来，探索、下矿，完成两条起步制作任务，击败史莱姆王后开放猩红与腐化。旧任务文件和代码中的 Chapter 1 指这一段序章；界面已改称“序章”，任务 ID、存档键和文件名保持。新的第一章是“重启第一座工坊”。
 
@@ -58,7 +58,7 @@
 
 仓库：`https://github.com/Cha0sky/MC-modpack-trial`，远端名 `MC`，分支 `main`。
 
-第二章实现 `9685e01` 及部署语言兼容修复 `e96e9c2` 已部署，当前核心内容为 **0.3.0-heritage**，安装文件名仍为 `world-progression-core-0.1.0.jar`。本轮未推送，本机远端跟踪引用仍为 `efd212f`；HEAD 与领先数量以接手时 Git 检查为准。
+任务书刷新实现 `22d2df8` 已部署，当前核心内容为 **0.3.1-heritage**，安装文件名仍为 `world-progression-core-0.1.0.jar`。本轮未推送，本机远端跟踪引用仍为 `efd212f`。
 
 | 内容 | 实现/记录 | 当前状态 |
 |---|---|---|
@@ -68,14 +68,15 @@
 | 13 地块集镇及生成修复 | `8b70bc7` / `207b45a` | 用户已确认正常生成 |
 | 工坊第一章 | `526a5ab` | 已部署，待实机验收 |
 | 遗产调查第二章 | `9685e01` / `e96e9c2` | 已部署，待实机验收 |
+| 任务书清理、奖励扩充、工坊与奥术修复 | `22d2df8` | 已部署，待实机验收 |
 
-本轮部署四个指定文件：核心、新章 `02_heritage_survey.snbt` 和两份合并语言。没有新增模组、改动第一章任务、存档或启动游戏。最新[部署回执](evidence/heritage-deployment.json)，备份为 `backups/heritage-20261116-120314-806937`；本轮未计算文件哈希。第一章及新模组的历史回执仍为 `evidence/workshop-deployment.json`。
+本轮备份并更新核心、三个正式章节与两份语言文件，移出五个旧原型文件。保留本地自定义的语言键，正式任务 ID 和已有奖励定义保持。最新[部署回执](evidence/quest-refresh-deployment.json)记录了备份目录和涉及路径。第二章初版、第一章及铁魔法热修都有各自的历史回执。
 
 首次部署预检发现 FTB 已把语言自动写回标准无逗号 SNBT，旧JSON读取器停止且未替换文件。`tools/quest_language.py` 现在同时读取JSON与FTB语言SNBT，第一、二章部署工具共用；当前语言键及转义字符串已定向检查并保留，不覆盖其他章节内容。
 
 本地产物（均未跟踪）：
 
-- `modules/world-progression-core/build/libs/world-progression-core-0.3.0-heritage.jar`：当前核心。
+- `modules/world-progression-core/build/libs/world-progression-core-0.3.1-heritage.jar`：当前核心。
 - `staging/mods/Explorify v1.6.6.mod.jar`、`staging/mods/exposure-neoforge-1.21.1-1.9.21.jar`：新增模组，官方来源和依赖见 `staging/mods/downloads-workshop.json`。
 - `modules/infinitecore/build/libs/infinitecore-1.1.2-whitelist.jar`：上一轮已部署的白名单，本轮未替换。
 
@@ -96,7 +97,7 @@
 
 | 目录 / 模块 | 版本与实现边界 |
 |---|---|
-| `modules/world-progression-core` | 源码默认 0.1.0，当前构建参数为 0.3.0-heritage；序章、工坊和遗产调查。当前运行依赖 Create 6.0.10、Exposure 1.9.21 和 Iron’s Spellbooks 3.16.3 |
+| `modules/world-progression-core` | 源码默认 0.1.0，当前构建参数为 0.3.1-heritage。内容包括序章、工坊和遗产调查，运行依赖 Create 6.0.10、Exposure 1.9.21 和 Iron’s Spellbooks 1.21.1-3.16.3 |
 | `modules/evolvingblade` | 1.1.0；成长剑、成长路线与幂等赠剑API。核心调用现有API，不另塞一把剑 |
 | `modules/rpgleveling` | 1.0.0；角色成长与属性加点。旧构建/数值检查是历史证据，不是本轮新测试 |
 | `modules/infinitecore` | 1.1.2；根据遗失源码模组重新实现，**不是恢复的原始源码**。直接模板、八阶生成器、主动IO、拆除掉落修正见模块README |
@@ -146,9 +147,9 @@
 - 探索：与家相距超过 96 格；下矿：在低于聚落地面至少 12 格处实际用镐开采，并持有 32 圆石、8 煤炭、6 粗铁。
 - 泥土模板为直接材料合成；泥土生成器检测真实合成记录，当前为8张泥土模板围绕橡木木板。
 - Create分支要求4安山合金，以及传动杆、齿轮、手摇曲柄、安山机壳各1个，当前主要检测持有。
-- 两制作分支汇合后，手动确认节点领取1个 `beyonddimensions:net_creater`。这是**本章**唯一物品奖励；没有新增前言食物/火把礼包。
+- 两制作分支汇合后可领取维度网络发生器与批量物资。醒来即可在任务书领取面包、火把与原木。王后道路节点直接接到第一章，两种指南针可选。
 - 全章显式 `linear` / `all_completed`。任务ID由固定种子hash并限制为正有符号long；过去未屏蔽高位会使FTB重分配ID、丢依赖，不能再直接用任意16位hex。
-- 旧五章原型仍保留，不应当作当前主线或新世界阶段已实现。
+- 旧五章原型已移出任务书，定义保存在 `docs/archive/legacy-quests`。
 
 ### 史莱姆王、世界门槛
 
@@ -225,6 +226,7 @@
 | `tools/build_heritage_quests.py` / `02_heritage_survey.snbt` | 第二章14节点、档案台配方与外观 |
 | 同Java目录 `Heritage*` | 世界两线汇合、玩家事实、原生动作、档案书与地图 |
 | `tools/deploy_heritage.py` / `tools/quest_language.py` | 第二章四文件部署；兼容JSON和FTB语言SNBT |
+| `tools/deploy_quest_refresh.py` | 本轮备份、更新三章任务书并移出五个旧原型 |
 | `modules/world-progression-core/src/main/resources/data/world_progression_core` | recipe、advancement、标签、settlement生产资源 |
 | `tools/import_settlement_schem.py` | Sponge v2/v3离线转模板、锚点/空箱/床检查，写路径限制仓库 |
 | `tools/build_chapter1_settlement.py` | 当前优先导入 `starter-town` 资产；旧整片样板仅用于历史工具兼容 |
@@ -238,7 +240,7 @@
 $env:JAVA_HOME = 'C:\Gradle\jdk-21-temurin'
 $env:GRADLE_USER_HOME = Join-Path (Get-Location) 'work\build-baseline\gradle-user-home'
 Push-Location '.\modules\world-progression-core'
-.\gradlew.bat --offline --no-daemon --console plain '-Pmod_version=0.3.0-heritage' build
+.\gradlew.bat --offline --no-daemon --console plain '-Pmod_version=0.3.1-heritage' jar verifyLogic -x createMinecraftArtifacts
 Pop-Location
 ```
 
