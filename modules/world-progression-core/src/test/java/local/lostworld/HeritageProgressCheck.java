@@ -21,8 +21,12 @@ final class HeritageProgressCheck {
                 HeritageProgress.siteKind("explorify:watchtower/taiga")),
                 "Archive sites group biome variants while retaining their actual structure IDs");
         check(HeritageProgress.acceptedChallenge("terra_entity:eater_of_worlds")
+                && HeritageProgress.acceptedChallenge("goety:skull_lord")
                 && !HeritageProgress.acceptedChallenge("terra_entity:eater_of_worlds_segment")
-                && !HeritageProgress.acceptedChallenge("minecraft:slime"),
+                && !HeritageProgress.acceptedChallenge("minecraft:slime")
+                && !HeritageProgress.acceptedChallenge("cataclysm:the_harbinger")
+                && !HeritageProgress.acceptedChallenge("cataclysm:ignis")
+                && !HeritageProgress.acceptedChallenge("goety:apostle"),
                 "Only a recognized root boss contributes an expedition challenge");
         System.out.println("PASS: heritage any-two convergence, same-school arcane completion, site categories and root-boss identity");
     }

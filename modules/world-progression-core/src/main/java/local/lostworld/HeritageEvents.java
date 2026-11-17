@@ -128,7 +128,8 @@ public final class HeritageEvents {
         if (nativeDone(player,"create:precision_mechanism")) precision=Math.max(precision,1);
         progress.putInt("precision_max",Math.max(precision,progress.getInt("precision_max")));
         observeStructures(player);
-        if (nativeDone(player,LostWorld.ID+":workshop/wroughtnaut")) progress.putBoolean("challenge",true);
+        if (nativeDone(player,LostWorld.ID+":workshop/wroughtnaut")
+                || nativeDone(player,"goety:goety/kill_a_skull_lord")) progress.putBoolean("challenge",true);
         if (!enabled(player)) return;
 
         boolean heat=nativeDone(player,"create:burner") && progress.getInt("brass_max")>=8;

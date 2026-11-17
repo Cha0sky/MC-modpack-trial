@@ -45,10 +45,15 @@ dependencies {
     implementation files('../evolvingblade/build/libs/evolvingblade-1.1.0.jar')
     compileOnly files('../../staging/mods/create-1.21.1-6.0.10.jar',
             '../../staging/mods/exposure-neoforge-1.21.1-1.9.21.jar',
-            '../../staging/mods/irons_spellbooks-1.21.1-3.16.3.jar')
+            '../../staging/mods/irons_spellbooks-1.21.1-3.16.3.jar',
+            '../../staging/mods/confluence-otherworld-1.2.4-260226.jar')
     // Create ships Ponder internally; use that exact copy for its public kinetic API.
     compileOnly zipTree('../../staging/mods/create-1.21.1-6.0.10.jar').matching {
         include 'META-INF/jarjar/*Ponder*.jar', 'META-INF/jarjar/*ponder*.jar'
+    }
+    // The native saved-data classes implement an interface from Confluence's bundled library.
+    compileOnly zipTree('../../staging/mods/confluence-otherworld-1.2.4-260226.jar').matching {
+        include 'META-INF/jarjar/org.confluence.lib.confluence_magic_lib-*.jar'
     }
     testImplementation 'com.google.code.gson:gson:2.10.1' // Same version as the Minecraft 1.21.1 SDK.
     if (project.hasProperty('chapterIntegrationMods')) {

@@ -1,0 +1,169 @@
+{
+  "id": "759CB26DEA732B94",
+  "filename": "03_world_turn",
+  "order_index": 2,
+  "icon": {
+    "id": "confluence:pwnhammer"
+  },
+  "progression_mode": "linear",
+  "quests": [
+    {
+      "id": "2B08699FB66C78B4",
+      "x": 0.0,
+      "y": 0,
+      "icon": {
+        "id": "confluence:guide_voodoo_doll"
+      },
+      "min_width": 340,
+      "dependencies": [
+        "76FC61C7DB7BD176"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "tasks": [
+        {
+          "id": "601DB0CBEA74E1F1",
+          "type": "checkmark"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "69F80BE4CE214BE3",
+          "type": "item",
+          "item": {
+            "id": "minecraft:golden_carrot",
+            "count": 1
+          },
+          "count": 32
+        },
+        {
+          "id": "5BD04A25AF09443F",
+          "type": "item",
+          "item": {
+            "id": "minecraft:potion",
+            "count": 1,
+            "components": {
+              "minecraft:potion_contents": {
+                "potion": "minecraft:long_fire_resistance"
+              }
+            }
+          },
+          "count": 2
+        },
+        {
+          "id": "0A0AF9AEC79AE100",
+          "type": "item",
+          "item": {
+            "id": "minecraft:cobblestone",
+            "count": 1
+          },
+          "count": 64
+        }
+      ]
+    },
+    {
+      "id": "6A44FF99927AF1BD",
+      "x": 2.5,
+      "y": 0,
+      "icon": {
+        "id": "confluence:wall_of_flesh_treasure_bag"
+      },
+      "min_width": 340,
+      "dependencies": [
+        "2B08699FB66C78B4"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "tasks": [
+        {
+          "id": "470924D243595FF1",
+          "type": "advancement",
+          "advancement": "world_progression_core:world_turn/flesh_defeated",
+          "criterion": "done"
+        }
+      ],
+      "rewards": []
+    },
+    {
+      "id": "70B98B2219093652",
+      "x": 5.0,
+      "y": 0,
+      "icon": {
+        "id": "confluence:pwnhammer"
+      },
+      "min_width": 340,
+      "dependencies": [
+        "6A44FF99927AF1BD"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "tasks": [
+        {
+          "id": "677C9EDDD6822CC0",
+          "type": "advancement",
+          "advancement": "world_progression_core:world_turn/hardmode_open",
+          "criterion": "done"
+        }
+      ],
+      "rewards": []
+    },
+    {
+      "id": "24BA016E81A9BDB9",
+      "x": 7.5,
+      "y": 0,
+      "icon": {
+        "id": "confluence:cobalt_ingot"
+      },
+      "min_width": 340,
+      "dependencies": [
+        "70B98B2219093652"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "tasks": [
+        {
+          "id": "65093ABADF4750B6",
+          "type": "advancement",
+          "advancement": "world_progression_core:world_turn/first_ingot",
+          "criterion": "done"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "0D877EE20DC45C7E",
+          "type": "item",
+          "item": {
+            "id": "minecraft:enchanted_book",
+            "count": 1,
+            "components": {
+              "minecraft:stored_enchantments": {
+                "levels": {
+                  "minecraft:mending": 1
+                }
+              }
+            }
+          },
+          "count": 1
+        },
+        {
+          "id": "1B451D8E9C9D43F1",
+          "type": "item",
+          "item": {
+            "id": "minecraft:experience_bottle",
+            "count": 1
+          },
+          "count": 32
+        },
+        {
+          "id": "7953F438EA7310BF",
+          "type": "item",
+          "item": {
+            "id": "minecraft:nether_bricks",
+            "count": 1
+          },
+          "count": 128
+        }
+      ]
+    }
+  ]
+}

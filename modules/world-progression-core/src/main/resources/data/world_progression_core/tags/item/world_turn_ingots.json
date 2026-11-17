@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "confluence:cobalt_ingot",
+      "required": false
+    },
+    {
+      "id": "confluence:palladium_ingot",
+      "required": false
+    }
+  ]
+}

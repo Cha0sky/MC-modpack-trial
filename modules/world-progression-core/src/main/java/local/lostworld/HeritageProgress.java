@@ -10,7 +10,8 @@ public final class HeritageProgress {
             "cataclysm:desert_site","cataclysm:ancient_factory");
     private static final Set<String> CHALLENGES=Set.of(
             "mowziesmobs:ferrous_wroughtnaut","mowziesmobs:frostmaw",
-            "terra_entity:eye_of_cthulhu","terra_entity:eater_of_worlds","terra_entity:brain_of_cthulhu");
+            "terra_entity:eye_of_cthulhu","terra_entity:eater_of_worlds","terra_entity:brain_of_cthulhu",
+            "goety:skull_lord");
 
     private HeritageProgress() {}
 

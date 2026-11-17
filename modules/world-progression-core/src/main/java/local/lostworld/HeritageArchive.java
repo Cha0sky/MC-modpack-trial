@@ -8,6 +8,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.network.Filterable;
@@ -76,13 +77,13 @@ public final class HeritageArchive {
             if (blank<0) { message(player,"把已有遗产档案书带在身上即可更新；若已遗失，带一本普通书补领。");return; }
             player.getInventory().getItem(blank).shrink(1);
         }
-        ItemStack book=book(world);
+        ItemStack book=book(world,player.server);
         if (existing>=0) player.getInventory().setItem(existing,book);else give(player,book);
         personal.putBoolean("book_received",true);
         HeritageEvents.mark(player,"archive_open");
         message(player,"遗产档案已整理。书中记录共享成果与已发现地点；潜行右键选择地点，手持空地图可制图。");
     }
-    private static ItemStack book(HeritageWorldData world) {
+    private static ItemStack book(HeritageWorldData world,MinecraftServer server) {
         List<Filterable<Component>> pages=new ArrayList<>();
         int mask=world.routes();
         pages.add(page("遗产调查档案\n\n工程："+((mask&1)!=0?"已汇集":"尚待调查")+"\n奥术："+((mask&2)!=0?"已汇集":"尚待调查")
@@ -92,6 +93,7 @@ public final class HeritageArchive {
         if ((mask&4)!=0) pages.add(page("远征记录\n\n到达遗迹、了解危险、完成一次挑战，为记录留下了可追溯的地点。记录保留了地点与遭遇；它们之间的联系，还需要更完整的史料来解释。"));
         for (var site:world.sites()) pages.add(page(name(site.structure())+"\n\n"+coordinates(site)+"\n\n记录该类遗迹的首个发现地点。回到档案台，可将它绘成地图。"));
         pages.add(page("继续整理\n\n带着这本书再次使用档案台，可更新共同的发现。\n\n这里尚有空白的篇页。你可以继续远征，或回到家园，把已掌握的工艺变成日常生活的一部分。"));
+        WorldTurnEvents.read(server).ifPresent(status -> pages.add(page(status.archivePage())));
         ItemStack book=new ItemStack(Items.WRITTEN_BOOK);
         book.set(DataComponents.WRITTEN_BOOK_CONTENT,new WrittenBookContent(Filterable.passThrough("遗产调查档案"),"聚落档案",0,pages,true));
         CompoundTag tag=new CompoundTag();tag.putBoolean(BOOK_MARKER,true);

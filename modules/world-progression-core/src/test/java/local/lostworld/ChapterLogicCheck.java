@@ -5,6 +5,13 @@ public final class ChapterLogicCheck {
     public static void main(String[] args) {
         WorkshopProgressCheck.run();
         HeritageProgressCheck.run();
+        check(new WorldTurnEvents.Status(true,true,WorldTurnEvents.Conversion.IN_PROGRESS).reachedWorldTurn(),
+                "A defeated flesh boss and active hardmode count while terrain conversion is underway");
+        check(!new WorldTurnEvents.Status(false,true,WorldTurnEvents.Conversion.COMPLETED).reachedWorldTurn(),
+                "Native hardmode conversion by itself is not a flesh-boss victory");
+        check(!new WorldTurnEvents.Status(true,false,WorldTurnEvents.Conversion.NOT_STARTED).reachedWorldTurn(),
+                "A recorded fight alone does not imply that native hardmode is enabled");
+        System.out.println("PASS: world turn gates, conversion status independent of the boss and mode flags");
         SettlementGeometryCheck.run();
         SettlementLayoutCheck.run();
         ChapterState old = new ChapterState(false,false);

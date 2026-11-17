@@ -16,5 +16,6 @@ public final class LostWorld {
         NeoForge.EVENT_BUS.register(WorkshopEvents.class);
         NeoForge.EVENT_BUS.register(HeritageEvents.class);
         NeoForge.EVENT_BUS.register(HeritageArchive.class);
+        NeoForge.EVENT_BUS.register(WorldTurnEvents.class);
     }
 }
