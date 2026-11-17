@@ -4,7 +4,7 @@
 
 ## 1. 接手时先看这里
 
-当前开发版核心为 `0.3.1-heritage`。任务书保留序章和一、二章的 42 项正式任务，归档旧原型 71 项，追加 89 项奖励。工坊生成深度与奥术实践判定已修正，等用户实测。部署与备份见[本轮回执](evidence/quest-refresh-deployment.json)。铁魔法继续使用真实注册版本 `[1.21.1-3.16.3]`，上次热修后日志已记录成功进世界并加载任务书。
+当前开发版核心为 `0.4.0-world-turn`。任务书新增第三章世界转折的四个节点，第二章自选挑战加入骷髅领主。原生困难模式由汇流来世管理。玩家可在档案台查看战果、困难模式标志和转换状态。[本轮部署回执](evidence/world-turn-deployment.json)。
 
 用户认为**序章的玩法骨架基本完成**：玩家在聚落持剑醒来，探索、下矿，完成两条起步制作任务，击败史莱姆王后开放猩红与腐化。旧任务文件和代码中的 Chapter 1 指这一段序章；界面已改称“序章”，任务 ID、存档键和文件名保持。新的第一章是“重启第一座工坊”。
 
@@ -16,7 +16,7 @@
 | 无限之核首版白名单 | `a03ba0c` 已实现，用户本轮明确要求部署，现已安装 | **已部署、未实机验收**；安装文件仍名为 1.1.2，包内版本为 `1.1.2-whitelist` |
 | 第一章“重启第一座工坊” | `526a5ab` 已实现并部署：10 主线＋5 支线、调谐器、机械加工与废弃工坊 | **待用户实机验收**；见[玩家说明](docs/design/workshop-rekindled.md) |
 | 第二章“遗产调查” | `9685e01` 已实现并部署：工程／奥术／远征三线任二，档案台与14节点 | **待用户实机验收**；见[玩家说明](docs/design/heritage-survey.md) |
-| 后续世界转折与下一关键 Boss | 方向已讨论，未实施 | 第三章与困难模式衔接另行细化 |
+| 第三章世界转折 | `9f22763`，四个任务节点，血肉墙或血肉山任选其一 | 已部署，待用户在备份档验收。先驱者、焰魔、使徒留作后期 |
 | 正式前言、补给和镇内服务机制 | 暂缓 | 只保留任务占位和公共建筑内装，不追加剧情、对白、专属交易或治疗 |
 
 推荐阅读顺序：本文件与 [AGENTS.md](AGENTS.md) → [STATE.md](STATE.md) 最新记录 → 对应部署回执和源码。玩法方向看 [PLAN.md](PLAN.md)；部分早期状态表和旧 `HANDOFF.md` 属于历史。叙事依据始终是作者世界观原文。
@@ -58,7 +58,7 @@
 
 仓库：`https://github.com/Cha0sky/MC-modpack-trial`，远端名 `MC`，分支 `main`。
 
-任务书刷新实现 `22d2df8` 已部署，当前核心内容为 **0.3.1-heritage**，安装文件名仍为 `world-progression-core-0.1.0.jar`。本轮未推送，本机远端跟踪引用仍为 `efd212f`。
+第三章实现 `9f22763` 已部署，当前核心内容为 **0.4.0-world-turn**，安装文件名为 `world-progression-core-0.1.0.jar`。本轮未推送，远端 `MC/main` 在 `6de29e2`。
 
 | 内容 | 实现/记录 | 当前状态 |
 |---|---|---|
@@ -69,14 +69,16 @@
 | 工坊第一章 | `526a5ab` | 已部署，待实机验收 |
 | 遗产调查第二章 | `9685e01` / `e96e9c2` | 已部署，待实机验收 |
 | 任务书清理、奖励扩充、工坊与奥术修复 | `22d2df8` | 已部署，待实机验收 |
+| 第三章世界转折、第二章骷髅领主选项 | `9f22763` | 已部署，待实机验收 |
 
-本轮备份并更新核心、三个正式章节与两份语言文件，移出五个旧原型文件。保留本地自定义的语言键，正式任务 ID 和已有奖励定义保持。最新[部署回执](evidence/quest-refresh-deployment.json)记录了备份目录和涉及路径。第二章初版、第一章及铁魔法热修都有各自的历史回执。
+本轮备份并更新核心、第三章任务文件与两份语言文件。旧章节 ID 保留。最新[部署回执](evidence/world-turn-deployment.json)记录备份目录和涉及路径。任务书清理的旧回执保存在 `evidence/quest-refresh-deployment.json`。
 
 首次部署预检发现 FTB 已把语言自动写回标准无逗号 SNBT，旧JSON读取器停止且未替换文件。`tools/quest_language.py` 现在同时读取JSON与FTB语言SNBT，第一、二章部署工具共用；当前语言键及转义字符串已定向检查并保留，不覆盖其他章节内容。
 
 本地产物（均未跟踪）：
 
-- `modules/world-progression-core/build/libs/world-progression-core-0.3.1-heritage.jar`：当前核心。
+- `modules/world-progression-core/build/libs/world-progression-core-0.4.0-world-turn.jar`：当前核心。
+- `staging/mods/confluence-otherworld-1.2.4-260226.jar`：从开发版复制的汇流来世编译依赖，Gradle 同时读取它内嵌的 Confluence Magic Lib。
 - `staging/mods/Explorify v1.6.6.mod.jar`、`staging/mods/exposure-neoforge-1.21.1-1.9.21.jar`：新增模组，官方来源和依赖见 `staging/mods/downloads-workshop.json`。
 - `modules/infinitecore/build/libs/infinitecore-1.1.2-whitelist.jar`：上一轮已部署的白名单，本轮未替换。
 
@@ -97,7 +99,7 @@
 
 | 目录 / 模块 | 版本与实现边界 |
 |---|---|
-| `modules/world-progression-core` | 源码默认 0.1.0，当前构建参数为 0.3.1-heritage。内容包括序章、工坊和遗产调查，运行依赖 Create 6.0.10、Exposure 1.9.21 和 Iron’s Spellbooks 1.21.1-3.16.3 |
+| `modules/world-progression-core` | 当前构建参数为 0.4.0-world-turn。第三章运行时读取汇流来世 1.2.4。其余依赖继续使用 Create 6.0.10、Exposure 1.9.21 和 Iron’s Spellbooks 1.21.1-3.16.3 |
 | `modules/evolvingblade` | 1.1.0；成长剑、成长路线与幂等赠剑API。核心调用现有API，不另塞一把剑 |
 | `modules/rpgleveling` | 1.0.0；角色成长与属性加点。旧构建/数值检查是历史证据，不是本轮新测试 |
 | `modules/infinitecore` | 1.1.2；根据遗失源码模组重新实现，**不是恢复的原始源码**。直接模板、八阶生成器、主动IO、拆除掉落修正见模块README |
@@ -173,7 +175,7 @@
 
 - 工程：装有烈焰人的燃烧室＋8黄铜；实际使用机械手和注液器＋取得精密构件。原生精密构件仍为5轮机械手、80%结果，注液是独立实践，不改其配方。
 - 奥术：Iron铭文台／铁质书／实际装备＋法术书释放一次，或Goety黑暗魔杖＋召唤僵尸仆从＋仆从击杀。两种方法只计同一奥术路线，不能交叉混凑。监听Iron非取消的实际释放事件，不声称命中证明。
-- 远征：钢铁守护者室／附魔剑冢／沙漠遗址／古代工厂任选两类，钢铁守护者／霜冻巨兽／克苏鲁之眼／世界吞噬怪／克苏鲁之脑任选一位根Boss。前章钢铁守护者记录可承认，不计体节或仆从。
+- 远征：钢铁守护者室、附魔剑冢、沙漠遗址、古代工厂任选两类。原有五位自选首领加上诡厄的骷髅领主，仍是任选一位。前章钢铁守护者记录和骷髅领主的原生击败成就均可接续。
 - 档案台用普通书、玻璃、铜板、安山机壳、木板和共振胶制作，无黄铜门槛。两线后右键整理／更新书，潜行右键选地点，主手空地图右键制图。只存每类已发现遗迹的首个坐标，不凭空定位未知结构；数据独立于可拆改的档案台。
 - 当前没有新增大结构、模组或困难模式改写。Java 21 build／verifyLogic及相关数据检查通过，实际界面、施法/战斗判定、档案与地图由用户测试。
 
@@ -227,6 +229,7 @@
 | 同Java目录 `Heritage*` | 世界两线汇合、玩家事实、原生动作、档案书与地图 |
 | `tools/deploy_heritage.py` / `tools/quest_language.py` | 第二章四文件部署；兼容JSON和FTB语言SNBT |
 | `tools/deploy_quest_refresh.py` | 本轮备份、更新三章任务书并移出五个旧原型 |
+| `tools/build_world_turn_quests.py` / `tools/deploy_world_turn.py` | 生成第三章和状态进度文件，并单独部署核心、新章与语言 |
 | `modules/world-progression-core/src/main/resources/data/world_progression_core` | recipe、advancement、标签、settlement生产资源 |
 | `tools/import_settlement_schem.py` | Sponge v2/v3离线转模板、锚点/空箱/床检查，写路径限制仓库 |
 | `tools/build_chapter1_settlement.py` | 当前优先导入 `starter-town` 资产；旧整片样板仅用于历史工具兼容 |
@@ -240,7 +243,7 @@
 $env:JAVA_HOME = 'C:\Gradle\jdk-21-temurin'
 $env:GRADLE_USER_HOME = Join-Path (Get-Location) 'work\build-baseline\gradle-user-home'
 Push-Location '.\modules\world-progression-core'
-.\gradlew.bat --offline --no-daemon --console plain '-Pmod_version=0.3.1-heritage' jar verifyLogic -x createMinecraftArtifacts
+.\gradlew.bat --offline --no-daemon --console plain '-Pmod_version=0.4.0-world-turn' jar verifyLogic -x createMinecraftArtifacts
 Pop-Location
 ```
 
@@ -256,13 +259,13 @@ Pop-Location
 
 叙事唯一作者基准：`docs/lore/失落世界_世界观设定_v1.0.md`。保留【已确定】【暂定】【建议】【待定】，不能把建议变正典；世界没有原初意志，不能改成世界意志选中勇者的故事。“薪火”来自人类文明积累。史莱姆王和Mowzie钢铁守护者都不自动等于设定中的封印守护者。当前用户要求文字暂缓，更不应借新任务补写设定。
 
-尚未实施或未定：第二章之后的世界转折主线和下一位关键 Boss、完整多阶段映射与配方阶段门槛、旧区块补矿、后续资源与科技平衡、其他 Mowzie 支线、正式前言物资和文字、诊所治疗与自定义商店、可导入安装包。
+第三章世界转折已部署。后续仍待确定困难模式之后的装备与远征节奏、阶段配方、旧区块补矿以及高阶首领的推荐时机。
 
 ### 接手后的建议顺序
 
 1. **接收第一、二章实测反馈。** 用户继续当前存档；先完成工坊，再看三线任选二、第三线可选、档案书和已发现地点地图。若有阻断，按具体反馈读相关日志并修复，不扩大测试矩阵。
 2. **保留已有验收边界。** 新集镇生成已通过，皇冠和指南针用户已试过。白名单已部署但未另获实机验收，不要求为本章重测全部历史内容。
-3. **后续另提一项计划。** 用户认可的长期方向是少量关键门槛、阶段内多路线，远征带回知识、工艺改善家园。机械／奥术／远征调查已落地。后续先细化世界转折与原生困难模式衔接，不因交接自动绑定新守护者或启动下一章。
+3. **验收第三章后再讨论下一段。** 世界转折同时读取原生首领记录和困难模式标志，档案台单独显示转换进度。先在备份存档测试四个新节点，再决定困难模式首轮配装的目标。先驱者、焰魔和使徒留作后期远征。
 4. **发布另开任务。** 当前没有制作PCL可导入安装包或发布Release；GitHub源码ZIP不是整合包安装包。
 
-接续摘要：“集镇生成已验收；第一章工坊与第二章遗产调查均已部署待实测；白名单已部署；后续世界转折待设计。”
+接续摘要：“集镇生成已验收。第一至第三章已部署待实测。下一段先研究困难模式配装。”

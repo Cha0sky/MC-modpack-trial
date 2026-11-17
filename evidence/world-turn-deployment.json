@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-17T23:29:24.205404+08:00",
+  "instance": "D:\\PCL 正式版 2.10.6 (1)\\.minecraft\\versions\\星庭远征-开发版",
+  "applied": true,
+  "source_commit": "9f22763d30d35747b210817a5abbf9944c40cc31",
+  "core_version": "0.4.0-world-turn",
+  "files": [
+    {
+      "path": "mods/world-progression-core-0.1.0.jar",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/03_world_turn.snbt",
+      "existed": false
+    },
+    {
+      "path": "config/ftbquests/quests/lang/zh_cn.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/lang/en_us.snbt",
+      "existed": true
+    }
+  ],
+  "runtime_acceptance": "pending user playtest",
+  "backup": "D:\\PCL 正式版 2.10.6 (1)\\codex\\modpack-project\\backups\\world-turn-20261117-232924-205404"
+}
