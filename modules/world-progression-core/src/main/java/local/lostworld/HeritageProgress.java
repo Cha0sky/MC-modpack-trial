@@ -31,8 +31,24 @@ public final class HeritageProgress {
     public static boolean expeditionStructure(String id) { return EXPEDITION_STRUCTURES.contains(id); }
     public static boolean acceptedChallenge(String id) { return CHALLENGES.contains(id); }
 
+    public static String surveyQuest(String structureId) {
+        return switch (structureId) {
+            case "irons_spellbooks:catacombs" -> "catacombs";
+            case "minecraft:mansion" -> "mansion";
+            default -> "";
+        };
+    }
+
+    public static String bossContract(String entityId) {
+        return switch (entityId) {
+            case "irons_spellbooks:dead_king" -> "dead_king";
+            case "goety:vizier" -> "vizier";
+            default -> "";
+        };
+    }
+
     public static String siteKind(String id) {
-        if (expeditionStructure(id)) return id;
+        if (expeditionStructure(id) || !surveyQuest(id).isEmpty()) return id;
         String explorify=WorkshopProgress.explorationKind(id);
         return explorify.isEmpty()?"":"explorify:"+explorify;
     }

@@ -69,6 +69,8 @@ public final class HeritageArchive {
             map.set(DataComponents.CUSTOM_NAME,Component.literal(name(site.structure())+" · 归档地图"));
             map.set(DataComponents.LORE,new ItemLore(List.of(Component.literal(coordinates(site)))));
             player.getMainHandItem().shrink(1);give(player,map);
+            if (!HeritageProgress.surveyQuest(site.structure()).isEmpty())
+                ChapterEvents.award(player, "relic_expeditions/chart");
             message(player,"已绘制 "+name(site.structure())+" 的地图。潜行右键可切换其他已发现地点。");return;
         }
         int existing=archiveSlot(player);
@@ -124,6 +126,8 @@ public final class HeritageArchive {
         if (id.startsWith("explorify:supply_cache/")) return "补给藏点";
         if (id.startsWith("explorify:guide_post_")) return "野外路标";
         return switch (id) {
+            case "irons_spellbooks:catacombs" -> "地下墓穴";
+            case "minecraft:mansion" -> "林地府邸";
             case "mowziesmobs:wrought_chamber"->"钢铁守护者地下房间";
             case "confluence:enchanted_sword_shrine"->"附魔剑冢";
             case "cataclysm:desert_site"->"沙漠遗址";

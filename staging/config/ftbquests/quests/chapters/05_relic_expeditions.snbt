@@ -1,0 +1,297 @@
+{
+  "id": "3ABD0124FB8AEDA1",
+  "filename": "05_relic_expeditions",
+  "order_index": 4,
+  "icon": {
+    "id": "minecraft:filled_map"
+  },
+  "progression_mode": "linear",
+  "quests": [
+    {
+      "id": "2A5C04757DCBFF09",
+      "x": 0,
+      "y": 0,
+      "min_width": 330,
+      "icon": {
+        "id": "world_progression_core:sealed_ration"
+      },
+      "optional": false,
+      "progression_mode": "linear",
+      "dependencies": [
+        "7E82D9E88152A714"
+      ],
+      "dependency_requirement": "all_completed",
+      "tasks": [
+        {
+          "id": "3336522F45B01FDB",
+          "type": "item",
+          "item": {
+            "id": "world_progression_core:sealed_ration",
+            "count": 1
+          },
+          "count": 2,
+          "consume_items": false
+        }
+      ],
+      "rewards": [
+        {
+          "id": "00380159ABAEC8BC",
+          "type": "item",
+          "item": {
+            "id": "minecraft:map",
+            "count": 1
+          },
+          "count": 4
+        },
+        {
+          "id": "71110DC129AA5860",
+          "type": "item",
+          "item": {
+            "id": "minecraft:soul_torch",
+            "count": 1
+          },
+          "count": 48
+        }
+      ]
+    },
+    {
+      "id": "4E12304BAD37FF5B",
+      "x": 2.5,
+      "y": -2,
+      "min_width": 330,
+      "icon": {
+        "id": "irons_spellbooks:wayward_compass"
+      },
+      "optional": true,
+      "progression_mode": "linear",
+      "dependencies": [
+        "2A5C04757DCBFF09"
+      ],
+      "dependency_requirement": "all_completed",
+      "tasks": [
+        {
+          "id": "468A0F6F528272AB",
+          "type": "advancement",
+          "advancement": "world_progression_core:relic_expeditions/catacombs"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "47670F4A2A7D0B30",
+          "type": "item",
+          "item": {
+            "id": "minecraft:ladder",
+            "count": 1
+          },
+          "count": 48
+        },
+        {
+          "id": "1E95C720B48B3129",
+          "type": "item",
+          "item": {
+            "id": "minecraft:golden_carrot",
+            "count": 1
+          },
+          "count": 24
+        }
+      ]
+    },
+    {
+      "id": "646D06C50CFE205B",
+      "x": 2.5,
+      "y": 2,
+      "min_width": 330,
+      "icon": {
+        "id": "minecraft:dark_oak_log"
+      },
+      "optional": true,
+      "progression_mode": "linear",
+      "dependencies": [
+        "2A5C04757DCBFF09"
+      ],
+      "dependency_requirement": "all_completed",
+      "tasks": [
+        {
+          "id": "645CB793ED3A7E0D",
+          "type": "advancement",
+          "advancement": "world_progression_core:relic_expeditions/mansion"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "30C5F34B2AD20CD3",
+          "type": "item",
+          "item": {
+            "id": "minecraft:scaffolding",
+            "count": 1
+          },
+          "count": 64
+        },
+        {
+          "id": "5DDC794A10899E7B",
+          "type": "item",
+          "item": {
+            "id": "minecraft:cooked_beef",
+            "count": 1
+          },
+          "count": 32
+        }
+      ]
+    },
+    {
+      "id": "33B054D584DD1602",
+      "x": 5,
+      "y": 0,
+      "min_width": 330,
+      "icon": {
+        "id": "minecraft:filled_map"
+      },
+      "optional": false,
+      "progression_mode": "linear",
+      "dependencies": [
+        "4E12304BAD37FF5B",
+        "646D06C50CFE205B"
+      ],
+      "dependency_requirement": "all_completed",
+      "tasks": [
+        {
+          "id": "11F2E14A6FA84DE7",
+          "type": "advancement",
+          "advancement": "world_progression_core:relic_expeditions/chart"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "38CB2ABF2B4309FD",
+          "type": "item",
+          "item": {
+            "id": "minecraft:compass",
+            "count": 1
+          },
+          "count": 2
+        },
+        {
+          "id": "2A3681379623A079",
+          "type": "item",
+          "item": {
+            "id": "minecraft:iron_block",
+            "count": 1
+          },
+          "count": 8
+        },
+        {
+          "id": "17C0B1DC70A29C6F",
+          "type": "item",
+          "item": {
+            "id": "minecraft:experience_bottle",
+            "count": 1
+          },
+          "count": 24
+        }
+      ],
+      "min_required_dependencies": 1
+    },
+    {
+      "id": "3E5955E508399D8A",
+      "x": 5,
+      "y": -3,
+      "min_width": 330,
+      "icon": {
+        "id": "irons_spellbooks:necronomicon_spell_book"
+      },
+      "optional": true,
+      "progression_mode": "linear",
+      "dependencies": [
+        "4E12304BAD37FF5B"
+      ],
+      "dependency_requirement": "all_completed",
+      "tasks": [
+        {
+          "id": "20B8E38F268EB854",
+          "type": "advancement",
+          "advancement": "world_progression_core:relic_expeditions/dead_king"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "502884AEB3F5779A",
+          "type": "item",
+          "item": {
+            "id": "irons_spellbooks:epic_ink",
+            "count": 1
+          },
+          "count": 1
+        },
+        {
+          "id": "48CEBEC091E2B836",
+          "type": "item",
+          "item": {
+            "id": "irons_spellbooks:arcane_essence",
+            "count": 1
+          },
+          "count": 32
+        },
+        {
+          "id": "309DA48169F413E2",
+          "type": "item",
+          "item": {
+            "id": "minecraft:experience_bottle",
+            "count": 1
+          },
+          "count": 32
+        }
+      ]
+    },
+    {
+      "id": "093F5AD1EFBF4A19",
+      "x": 5,
+      "y": 3,
+      "min_width": 330,
+      "icon": {
+        "id": "goety:dark_scroll"
+      },
+      "optional": true,
+      "progression_mode": "linear",
+      "dependencies": [
+        "646D06C50CFE205B"
+      ],
+      "dependency_requirement": "all_completed",
+      "tasks": [
+        {
+          "id": "6C5B2693492E47A8",
+          "type": "advancement",
+          "advancement": "world_progression_core:relic_expeditions/vizier"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "14083BDC97242D7F",
+          "type": "item",
+          "item": {
+            "id": "goety:magic_fabric",
+            "count": 1
+          },
+          "count": 8
+        },
+        {
+          "id": "0C17F5A30684A913",
+          "type": "item",
+          "item": {
+            "id": "minecraft:diamond",
+            "count": 1
+          },
+          "count": 4
+        },
+        {
+          "id": "3F2F71AC4C63C531",
+          "type": "item",
+          "item": {
+            "id": "minecraft:golden_apple",
+            "count": 1
+          },
+          "count": 6
+        }
+      ]
+    }
+  ]
+}

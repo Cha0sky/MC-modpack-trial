@@ -1,0 +1,66 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "goety"
+    }
+  ],
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    },
+    "earlier_kill": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type_specific": {
+            "type": "minecraft:player",
+            "stats": [
+              {
+                "type": "minecraft:killed",
+                "stat": "goety:vizier",
+                "value": {
+                  "min": 1
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "kill_a_vizier": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type_specific": {
+            "type": "minecraft:player",
+            "advancements": {
+              "goety:goety/kill_a_vizier": true
+            }
+          }
+        }
+      }
+    },
+    "servant_kill_vizier": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type_specific": {
+            "type": "minecraft:player",
+            "advancements": {
+              "goety:goety/servant_kill_vizier": true
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "done",
+      "earlier_kill",
+      "kill_a_vizier",
+      "servant_kill_vizier"
+    ]
+  ]
+}

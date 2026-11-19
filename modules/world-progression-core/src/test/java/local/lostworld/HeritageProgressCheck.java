@@ -28,6 +28,15 @@ final class HeritageProgressCheck {
                 && !HeritageProgress.acceptedChallenge("cataclysm:ignis")
                 && !HeritageProgress.acceptedChallenge("goety:apostle"),
                 "Only a recognized root boss contributes an expedition challenge");
-        System.out.println("PASS: heritage any-two convergence, same-school arcane completion, site categories and root-boss identity");
+        check(HeritageProgress.siteKind("minecraft:mansion").equals("minecraft:mansion")
+                && !HeritageProgress.expeditionStructure("minecraft:mansion"),
+                "The new survey sites are recorded without changing chapter two's site count");
+        check(HeritageProgress.bossContract("goety:vizier").equals("vizier")
+                && HeritageProgress.bossContract("irons_spellbooks:dead_king").equals("dead_king")
+                && HeritageProgress.bossContract("goety:vizier_clone").isEmpty()
+                && HeritageProgress.bossContract("irons_spellbooks:dead_king_corpse").isEmpty()
+                && !HeritageProgress.acceptedChallenge("goety:vizier"),
+                "Contracts credit the actual boss and keep their chapter independent");
+        System.out.println("PASS: heritage convergence, survey sites and expedition boss identities");
     }
 }

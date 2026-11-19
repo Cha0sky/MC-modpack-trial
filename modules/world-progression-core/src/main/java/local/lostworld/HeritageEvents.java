@@ -186,6 +186,8 @@ public final class HeritageEvents {
                 HeritageWorldData.get(level).discover(id,level.dimension().location().toString(),
                         start.getBoundingBox().getCenter());
                 if (HeritageProgress.expeditionStructure(id)) addString(data(player),"expedition_sites",id);
+                String survey = HeritageProgress.surveyQuest(id);
+                if (!survey.isEmpty()) ChapterEvents.award(player, "relic_expeditions/" + survey);
                 break;
             }
         }
@@ -193,8 +195,9 @@ public final class HeritageEvents {
 
     @SubscribeEvent(priority=EventPriority.LOWEST)
     public static void death(LivingDeathEvent event) {
-        if (!event.isCanceled() && event.getEntity().level() instanceof ServerLevel
-                && HeritageProgress.acceptedChallenge(BuiltInRegistries.ENTITY_TYPE.getKey(event.getEntity().getType()).toString()))
+        if (event.isCanceled() || !(event.getEntity().level() instanceof ServerLevel)) return;
+        String id = BuiltInRegistries.ENTITY_TYPE.getKey(event.getEntity().getType()).toString();
+        if (HeritageProgress.acceptedChallenge(id) || !HeritageProgress.bossContract(id).isEmpty())
             PENDING_DEATHS.add(event);
     }
 
@@ -208,7 +211,11 @@ public final class HeritageEvents {
                 if (!player.isSpectator() && player.distanceToSqr(boss)<=64*64) participants.add(player);
             if (death.getSource().getEntity() instanceof ServerPlayer player) participants.add(player);
             if (boss.getKillCredit() instanceof ServerPlayer player) participants.add(player);
-            for (ServerPlayer player:participants) data(player).putBoolean("challenge",true);
+            String contract = HeritageProgress.bossContract(BuiltInRegistries.ENTITY_TYPE.getKey(boss.getType()).toString());
+            for (ServerPlayer player:participants) {
+                if (contract.isEmpty()) data(player).putBoolean("challenge",true);
+                else ChapterEvents.award(player, "relic_expeditions/" + contract);
+            }
         }
         PENDING_DEATHS.clear();
     }
