@@ -1,0 +1,35 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "confluence"
+    }
+  ],
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "confluence:raw_cobalt"
+    },
+    {
+      "item": "confluence:raw_cobalt"
+    },
+    {
+      "item": "confluence:raw_cobalt"
+    },
+    {
+      "item": "confluence:raw_cobalt"
+    },
+    {
+      "item": "confluence:raw_cobalt"
+    },
+    {
+      "item": "confluence:raw_cobalt"
+    }
+  ],
+  "results": [
+    {
+      "id": "world_progression_core:cobalt_furnace_charge",
+      "count": 1
+    }
+  ]
+}

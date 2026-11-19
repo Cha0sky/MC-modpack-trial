@@ -62,15 +62,104 @@
       ]
     },
     {
-      "id": "6A44FF99927AF1BD",
+      "id": "65A8CA872474A532",
       "x": 2.5,
+      "y": -1,
+      "icon": {
+        "id": "world_progression_core:thermal_binder"
+      },
+      "min_width": 340,
+      "dependencies": [
+        "2B08699FB66C78B4"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "tasks": [
+        {
+          "id": "1421AF4843F94103",
+          "type": "advancement",
+          "advancement": "world_progression_core:world_turn/thermal_survey",
+          "criterion": "done"
+        }
+      ],
+      "rewards": []
+    },
+    {
+      "id": "6CF98D5A1B67EC4C",
+      "x": 2.5,
+      "y": 1,
+      "icon": {
+        "id": "farmersdelight:cooking_pot"
+      },
+      "min_width": 340,
+      "dependencies": [
+        "2B08699FB66C78B4"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "tasks": [
+        {
+          "id": "3019F2986D926677",
+          "type": "advancement",
+          "advancement": "world_progression_core:world_turn/field_kitchen",
+          "criterion": "done"
+        }
+      ],
+      "rewards": []
+    },
+    {
+      "id": "01CBB2DD4D43F373",
+      "x": 5,
+      "y": 0,
+      "icon": {
+        "id": "world_progression_core:sealed_ration"
+      },
+      "min_width": 340,
+      "dependencies": [
+        "65A8CA872474A532",
+        "6CF98D5A1B67EC4C"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "tasks": [
+        {
+          "id": "4E637F4C3729982C",
+          "type": "advancement",
+          "advancement": "world_progression_core:world_turn/pack_ration",
+          "criterion": "done"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "0D846A85AC5AF436",
+          "type": "item",
+          "item": {
+            "id": "minecraft:copper_ingot",
+            "count": 1
+          },
+          "count": 16
+        },
+        {
+          "id": "2316B68D7DFF3C74",
+          "type": "item",
+          "item": {
+            "id": "create:chute",
+            "count": 1
+          },
+          "count": 4
+        }
+      ]
+    },
+    {
+      "id": "6A44FF99927AF1BD",
+      "x": 7.5,
       "y": 0,
       "icon": {
         "id": "confluence:wall_of_flesh_treasure_bag"
       },
       "min_width": 340,
       "dependencies": [
-        "2B08699FB66C78B4"
+        "01CBB2DD4D43F373"
       ],
       "dependency_requirement": "all_completed",
       "progression_mode": "linear",
@@ -86,7 +175,7 @@
     },
     {
       "id": "70B98B2219093652",
-      "x": 5.0,
+      "x": 10,
       "y": 0,
       "icon": {
         "id": "confluence:pwnhammer"
@@ -108,15 +197,38 @@
       "rewards": []
     },
     {
+      "id": "4949B108C7E78A72",
+      "x": 12.5,
+      "y": 0,
+      "icon": {
+        "id": "world_progression_core:cobalt_furnace_charge"
+      },
+      "min_width": 340,
+      "dependencies": [
+        "70B98B2219093652"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "tasks": [
+        {
+          "id": "1375ADF70C33A517",
+          "type": "advancement",
+          "advancement": "world_progression_core:world_turn/batch_charge",
+          "criterion": "done"
+        }
+      ],
+      "rewards": []
+    },
+    {
       "id": "24BA016E81A9BDB9",
-      "x": 7.5,
+      "x": 15,
       "y": 0,
       "icon": {
         "id": "confluence:cobalt_ingot"
       },
       "min_width": 340,
       "dependencies": [
-        "70B98B2219093652"
+        "4949B108C7E78A72"
       ],
       "dependency_requirement": "all_completed",
       "progression_mode": "linear",

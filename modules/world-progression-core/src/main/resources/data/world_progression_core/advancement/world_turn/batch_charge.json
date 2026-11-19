@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "world_progression_core:cobalt_furnace_charge",
+              "world_progression_core:palladium_furnace_charge"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

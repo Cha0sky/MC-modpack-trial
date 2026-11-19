@@ -13,6 +13,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.phys.BlockHitResult;
 
 public final class WorkshopTunerItem extends Item {
@@ -20,6 +21,25 @@ public final class WorkshopTunerItem extends Item {
     public WorkshopTunerItem(Properties properties) { super(properties); }
     @Override public InteractionResult useOn(UseOnContext context) {
         Player player=context.getPlayer();
+        if (player != null && context.getHand() == InteractionHand.MAIN_HAND
+                && context.getLevel().dimension() == Level.NETHER
+                && context.getLevel().getBlockState(context.getClickedPos()).is(Blocks.MAGMA_BLOCK)) {
+            if (player instanceof ServerPlayer server) {
+                ItemStack binder = server.getOffhandItem();
+                if (!binder.is(WorkshopContent.BINDER.get())) {
+                    server.displayClientMessage(Component.literal("副手放 1 份共振胶，再用调谐器对岩浆块取样。"), true);
+                    return InteractionResult.FAIL;
+                }
+                binder.shrink(1);
+                WorkshopEvents.addSpent(server, LostWorld.ID + ":resonant_binder", 1);
+                ItemStack samples = new ItemStack(WorkshopContent.HEAT_SAMPLE.get(), 2);
+                if (!server.getInventory().add(samples)) server.drop(samples, false);
+                server.getCooldowns().addCooldown(this, 20);
+                ChapterEvents.award(server, "world_turn/thermal_survey");
+                server.displayClientMessage(Component.literal("已取得两份热样胶，可以带回工坊压封行军餐。"), true);
+            }
+            return InteractionResult.sidedSuccess(context.getLevel().isClientSide);
+        }
         if (player==null || !context.getLevel().getBlockState(context.getClickedPos()).is(WorkshopContent.RELAY.get())) return InteractionResult.PASS;
         if (player instanceof ServerPlayer server) {
             if (!WorkshopInteraction.ready(server,context.getClickedPos(),context.getLevel().getBlockState(context.getClickedPos()),true)) return InteractionResult.FAIL;

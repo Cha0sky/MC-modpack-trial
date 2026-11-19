@@ -2,6 +2,9 @@ package local.lostworld;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
@@ -16,6 +19,13 @@ public final class WorkshopContent {
     public static final DeferredItem<Item> BINDER=ITEMS.registerSimpleItem("resonant_binder");
     public static final DeferredItem<WorkshopTunerItem> TUNER=ITEMS.register("rough_tuner",
             ()->new WorkshopTunerItem(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> HEAT_SAMPLE = ITEMS.registerSimpleItem("thermal_binder");
+    public static final DeferredItem<Item> SEALED_RATION = ITEMS.register("sealed_ration", () ->
+            new Item(new Item.Properties().stacksTo(16).food(new FoodProperties.Builder()
+                    .nutrition(8).saturationModifier(0.6F).alwaysEdible()
+                    .effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 90 * 20), 1.0F).build())));
+    public static final DeferredItem<Item> COBALT_CHARGE = ITEMS.registerSimpleItem("cobalt_furnace_charge");
+    public static final DeferredItem<Item> PALLADIUM_CHARGE = ITEMS.registerSimpleItem("palladium_furnace_charge");
     // Only the four anchored devices are protected; the authored building stays editable.
     public static final DeferredBlock<WorkshopRelayBlock> RELAY=BLOCKS.register("workshop_relay",
             ()->new WorkshopRelayBlock(BlockBehaviour.Properties.of().strength(-1F,3600000F)

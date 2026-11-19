@@ -5,5 +5,9 @@
   "block.world_progression_core.workshop_relay": "Workshop Relay",
   "block.world_progression_core.workshop_console": "Workshop Console",
   "itemGroup.world_progression_core": "Lost World: Workshop Heritage",
-  "block.world_progression_core.heritage_archive": "Heritage Archive"
+  "block.world_progression_core.heritage_archive": "Heritage Archive",
+  "item.world_progression_core.thermal_binder": "Thermal Binder",
+  "item.world_progression_core.sealed_ration": "Sealed Field Ration",
+  "item.world_progression_core.cobalt_furnace_charge": "Cobalt Furnace Charge",
+  "item.world_progression_core.palladium_furnace_charge": "Palladium Furnace Charge"
 }

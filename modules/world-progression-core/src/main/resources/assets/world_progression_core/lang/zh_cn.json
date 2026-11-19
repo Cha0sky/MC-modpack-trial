@@ -5,5 +5,9 @@
   "block.world_progression_core.workshop_relay": "旧工坊继电器",
   "block.world_progression_core.workshop_console": "旧工坊控制台",
   "itemGroup.world_progression_core": "失落世界 · 工坊遗产",
-  "block.world_progression_core.heritage_archive": "遗产档案台"
+  "block.world_progression_core.heritage_archive": "遗产档案台",
+  "item.world_progression_core.thermal_binder": "热样胶",
+  "item.world_progression_core.sealed_ration": "热封行军餐",
+  "item.world_progression_core.cobalt_furnace_charge": "钴炉料",
+  "item.world_progression_core.palladium_furnace_charge": "钯金炉料"
 }

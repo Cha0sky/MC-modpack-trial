@@ -1,0 +1,14 @@
+{
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#world_progression_core:field_kitchen_proof"
+          }
+        ]
+      }
+    }
+  }
+}

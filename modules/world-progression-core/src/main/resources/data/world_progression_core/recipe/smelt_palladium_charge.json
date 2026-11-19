@@ -1,0 +1,20 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "confluence"
+    }
+  ],
+  "type": "confluence:hellforge",
+  "ingredients": [
+    {
+      "item": "world_progression_core:palladium_furnace_charge"
+    }
+  ],
+  "result": {
+    "id": "confluence:palladium_ingot",
+    "count": 2
+  },
+  "experience": 1.0,
+  "requires_fuel": true
+}

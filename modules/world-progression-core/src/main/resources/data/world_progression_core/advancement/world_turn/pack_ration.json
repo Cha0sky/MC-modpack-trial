@@ -1,0 +1,16 @@
+{
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "world_progression_core:sealed_ration"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

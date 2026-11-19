@@ -9,17 +9,13 @@ import subprocess
 import tomllib
 import zipfile
 
-from build_heritage_quests import uid
 from deploy_quest_refresh import BOOK_PATH, CORE_TARGET, language_prefixes
 from deploy_workshop import INSTANCE, QUESTS, ROOT, closed
 from quest_language import read_language
 
-VERSION = "0.4.0-world-turn"
-BASELINE = "6de29e2"
+VERSION = "0.5.1-expedition"
+BASELINE = "9442c74"
 CHAPTER = "03_world_turn.snbt"
-REVISED_KEYS = {
-    f"quest.{uid(name)}.quest_desc" for name in ("expedition_challenge", "archive_open")
-}
 
 
 def core_version(path):
@@ -43,7 +39,14 @@ def deploy_chapter(*, version, previous_version, chapter_name, revised_keys, bas
     payloads = {CORE_TARGET: core.read_bytes(), BOOK_PATH / "chapters" / chapter_name: chapter}
     chapter_target = instance / BOOK_PATH / "chapters" / chapter_name
     if chapter_target.exists() and chapter_target.read_bytes() != chapter:
-        raise RuntimeError(f"Review local edits to {chapter_name} before overwriting it")
+        old = subprocess.run(["git", "show", f"{baseline}:staging/{BOOK_PATH.as_posix()}/chapters/{chapter_name}"],
+                             cwd=ROOT, capture_output=True)
+        try:
+            matches_base = old.returncode == 0 and json.loads(old.stdout) == json.loads(chapter_target.read_bytes())
+        except ValueError:
+            matches_base = False
+        if not matches_base:
+            raise RuntimeError(f"Review local edits to {chapter_name} before overwriting it")
 
     for locale in ("zh_cn", "en_us"):
         relative = BOOK_PATH / "lang" / f"{locale}.snbt"
@@ -102,8 +105,8 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--apply", action="store_true")
     args = parser.parse_args()
-    deploy_chapter(version=VERSION, previous_version="0.3.1-heritage", chapter_name=CHAPTER,
-                   revised_keys=REVISED_KEYS, baseline=BASELINE, receipt_name="world-turn", apply=args.apply)
+    deploy_chapter(version=VERSION, previous_version="0.5.0-field-equipment", chapter_name=CHAPTER,
+                   revised_keys=(), baseline=BASELINE, receipt_name="world-turn-expedition", apply=args.apply)
 
 
 if __name__ == "__main__":

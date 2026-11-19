@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "#world_progression_core:field_meals",
+    "world_progression_core:sealed_ration"
+  ]
+}

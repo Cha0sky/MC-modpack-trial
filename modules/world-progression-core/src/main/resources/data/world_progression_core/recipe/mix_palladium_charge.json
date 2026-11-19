@@ -1,0 +1,35 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "confluence"
+    }
+  ],
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "confluence:raw_palladium"
+    },
+    {
+      "item": "confluence:raw_palladium"
+    },
+    {
+      "item": "confluence:raw_palladium"
+    },
+    {
+      "item": "confluence:raw_palladium"
+    },
+    {
+      "item": "confluence:raw_palladium"
+    },
+    {
+      "item": "confluence:raw_palladium"
+    }
+  ],
+  "results": [
+    {
+      "id": "world_progression_core:palladium_furnace_charge",
+      "count": 1
+    }
+  ]
+}
