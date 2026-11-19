@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-19T22:49:24.274081+08:00",
+  "instance": "D:\\PCL 正式版 2.10.6 (1)\\.minecraft\\versions\\星庭远征-开发版",
+  "applied": true,
+  "source_commit": "31905101d5c1876df09e613105420d635f965c56",
+  "core_version": "0.6.0-relic-expeditions",
+  "files": [
+    {
+      "path": "mods/world-progression-core-0.1.0.jar",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/05_relic_expeditions.snbt",
+      "existed": false
+    },
+    {
+      "path": "config/ftbquests/quests/lang/zh_cn.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/lang/en_us.snbt",
+      "existed": true
+    }
+  ],
+  "runtime_acceptance": "pending user playtest",
+  "backup": "D:\\PCL 正式版 2.10.6 (1)\\codex\\modpack-project\\backups\\relic-expeditions-20261119-224924-274081"
+}
