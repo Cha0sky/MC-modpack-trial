@@ -1,0 +1,47 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "confluence"
+    }
+  ],
+  "criteria": {
+    "obtained": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "confluence:mythril_anvil",
+              "confluence:orichalcum_anvil"
+            ]
+          }
+        ]
+      }
+    },
+    "placed": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "confluence:mythril_anvil",
+                  "confluence:orichalcum_anvil"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "obtained",
+      "placed"
+    ]
+  ]
+}

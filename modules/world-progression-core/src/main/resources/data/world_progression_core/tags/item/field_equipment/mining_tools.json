@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "confluence:cobalt_pickaxe",
+      "required": false
+    },
+    {
+      "id": "confluence:cobalt_drill",
+      "required": false
+    },
+    {
+      "id": "confluence:palladium_pickaxe",
+      "required": false
+    },
+    {
+      "id": "confluence:palladium_drill",
+      "required": false
+    }
+  ]
+}

@@ -28,34 +28,31 @@ def core_version(path):
     return next(mod["version"] for mod in metadata["mods"] if mod["modId"] == "world_progression_core")
 
 
-def main():
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--apply", action="store_true")
-    args = parser.parse_args()
+def deploy_chapter(*, version, previous_version, chapter_name, revised_keys, baseline, receipt_name, apply):
     instance = INSTANCE.resolve(strict=True)
     if instance != INSTANCE:
         raise RuntimeError("Unexpected development instance path")
 
-    core = ROOT / f"modules/world-progression-core/build/libs/world-progression-core-{VERSION}.jar"
+    core = ROOT / f"modules/world-progression-core/build/libs/world-progression-core-{version}.jar"
     installed = instance / CORE_TARGET
-    if core_version(core) != VERSION or core_version(installed) not in {"0.3.1-heritage", VERSION}:
+    if core_version(core) != version or core_version(installed) not in {previous_version, version}:
         raise RuntimeError("Unexpected core version in the source or development instance")
 
-    chapter = (QUESTS / "chapters" / CHAPTER).read_bytes()
+    chapter = (QUESTS / "chapters" / chapter_name).read_bytes()
     prefixes = language_prefixes(json.loads(chapter))
-    payloads = {CORE_TARGET: core.read_bytes(), BOOK_PATH / "chapters" / CHAPTER: chapter}
-    chapter_target = instance / BOOK_PATH / "chapters" / CHAPTER
+    payloads = {CORE_TARGET: core.read_bytes(), BOOK_PATH / "chapters" / chapter_name: chapter}
+    chapter_target = instance / BOOK_PATH / "chapters" / chapter_name
     if chapter_target.exists() and chapter_target.read_bytes() != chapter:
-        raise RuntimeError("Review the local edits to the third chapter before overwriting it")
+        raise RuntimeError(f"Review local edits to {chapter_name} before overwriting it")
 
     for locale in ("zh_cn", "en_us"):
         relative = BOOK_PATH / "lang" / f"{locale}.snbt"
         existing = read_language(instance / relative)
         previous = json.loads(subprocess.check_output(
-            ["git", "show", f"{BASELINE}:staging/{relative.as_posix()}"], cwd=ROOT, encoding="utf-8"))
+            ["git", "show", f"{baseline}:staging/{relative.as_posix()}"], cwd=ROOT, encoding="utf-8"))
         staged = read_language(QUESTS / "lang" / f"{locale}.snbt")
         for key, value in staged.items():
-            if key in REVISED_KEYS or key.startswith(prefixes):
+            if key in revised_keys or key.startswith(prefixes):
                 if key in existing and existing[key] not in (previous.get(key), value):
                     raise RuntimeError(f"Review the local translation change in {locale}: {key}")
                 existing[key] = value
@@ -66,16 +63,16 @@ def main():
             raise RuntimeError(f"Deployment path escapes instance: {relative}")
 
     now = datetime.now().astimezone()
-    backup = ROOT / "backups" / now.strftime("world-turn-%Y%m%d-%H%M%S-%f")
+    backup = ROOT / "backups" / (receipt_name + now.strftime("-%Y%m%d-%H%M%S-%f"))
     files = [{"path": relative.as_posix(), "existed": (instance / relative).is_file()}
              for relative in payloads]
     receipt = {
-        "date": now.isoformat(), "instance": str(instance), "applied": args.apply,
+        "date": now.isoformat(), "instance": str(instance), "applied": apply,
         "source_commit": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(),
-        "core_version": VERSION, "files": files,
+        "core_version": version, "files": files,
         "runtime_acceptance": "pending user playtest",
     }
-    if args.apply:
+    if apply:
         closed()
         for entry in files:
             if entry["existed"]:
@@ -97,8 +94,16 @@ def main():
         receipt["backup"] = str(backup)
         output = json.dumps(receipt, ensure_ascii=False, indent=2) + "\n"
         (backup / "receipt.json").write_text(output, encoding="utf-8")
-        (ROOT / "evidence/world-turn-deployment.json").write_text(output, encoding="utf-8")
+        (ROOT / f"evidence/{receipt_name}-deployment.json").write_text(output, encoding="utf-8")
     print(json.dumps(receipt, ensure_ascii=False, indent=2))
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--apply", action="store_true")
+    args = parser.parse_args()
+    deploy_chapter(version=VERSION, previous_version="0.3.1-heritage", chapter_name=CHAPTER,
+                   revised_keys=REVISED_KEYS, baseline=BASELINE, receipt_name="world-turn", apply=args.apply)
 
 
 if __name__ == "__main__":

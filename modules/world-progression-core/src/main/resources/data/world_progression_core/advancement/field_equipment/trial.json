@@ -1,0 +1,102 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "confluence"
+    }
+  ],
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    },
+    "cobalt": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "equipment": {
+                "head": {
+                  "items": [
+                    "confluence:cobalt_helmet",
+                    "confluence:cobalt_hat",
+                    "confluence:cobalt_mask"
+                  ]
+                },
+                "chest": {
+                  "items": "confluence:cobalt_chestplate"
+                },
+                "legs": {
+                  "items": "confluence:cobalt_leggings"
+                },
+                "feet": {
+                  "items": "confluence:cobalt_boots"
+                }
+              }
+            }
+          }
+        ],
+        "entity": {
+          "type": [
+            "minecraft:zombie",
+            "minecraft:husk",
+            "minecraft:skeleton",
+            "minecraft:stray",
+            "minecraft:spider",
+            "minecraft:pillager"
+          ]
+        }
+      }
+    },
+    "palladium": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "equipment": {
+                "head": {
+                  "items": [
+                    "confluence:palladium_helmet",
+                    "confluence:palladium_headgear",
+                    "confluence:palladium_mask"
+                  ]
+                },
+                "chest": {
+                  "items": "confluence:palladium_chestplate"
+                },
+                "legs": {
+                  "items": "confluence:palladium_leggings"
+                },
+                "feet": {
+                  "items": "confluence:palladium_boots"
+                }
+              }
+            }
+          }
+        ],
+        "entity": {
+          "type": [
+            "minecraft:zombie",
+            "minecraft:husk",
+            "minecraft:skeleton",
+            "minecraft:stray",
+            "minecraft:spider",
+            "minecraft:pillager"
+          ]
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "done",
+      "cobalt",
+      "palladium"
+    ]
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "confluence"
+    }
+  ],
+  "criteria": {
+    "cobalt": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "equipment": {
+                "head": {
+                  "items": [
+                    "confluence:cobalt_helmet",
+                    "confluence:cobalt_hat",
+                    "confluence:cobalt_mask"
+                  ]
+                },
+                "chest": {
+                  "items": "confluence:cobalt_chestplate"
+                },
+                "legs": {
+                  "items": "confluence:cobalt_leggings"
+                },
+                "feet": {
+                  "items": "confluence:cobalt_boots"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "palladium": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "equipment": {
+                "head": {
+                  "items": [
+                    "confluence:palladium_helmet",
+                    "confluence:palladium_headgear",
+                    "confluence:palladium_mask"
+                  ]
+                },
+                "chest": {
+                  "items": "confluence:palladium_chestplate"
+                },
+                "legs": {
+                  "items": "confluence:palladium_leggings"
+                },
+                "feet": {
+                  "items": "confluence:palladium_boots"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "cobalt",
+      "palladium"
+    ]
+  ]
+}
