@@ -33,7 +33,7 @@
 | `vendor/infinitecore` | 无限之核 1.0.0 的运行 JAR 与来源说明；没有源码 |
 | `integration/src` | 旧版配方整合原型，保留待评估 |
 | `sanctuary/src/main` | 庇护石原型源码，保留待评估 |
-| `staging/config/ftbquests` | 正式任务书，含序章及第一至第四章 |
+| `staging/config/ftbquests` | 正式任务书，含序章及第一至第五章 |
 | `docs/archive/legacy-quests` | 退出正式任务书的五章早期任务原型 |
 | `tools` | 现有构建、清单、部署和启动工具；执行前必须检查写入范围 |
 | `evidence` | 版本、部署和验证记录；完整运行日志留在本机 |
