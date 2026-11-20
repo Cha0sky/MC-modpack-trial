@@ -1,10 +1,10 @@
 # 星庭远征整合包：开发交接文档
 
-更新时间：2026-11-19，Asia/Shanghai。用途：让新对话了解当前整合包状态并协助用户规划下一项开发。**本文件不是新任务、推送、启动游戏或修改存档的自动授权。**
+更新时间：2026-11-21，Asia/Shanghai。用途：让新对话了解当前整合包状态并协助用户规划下一项开发。**本文件不是新任务、推送、启动游戏或修改存档的自动授权。**
 
 ## 1. 接手时先看这里
 
-第五章「遗址远征」已提交 `89ab0e2`，构建版本 `0.6.0-relic-expeditions`。任务从第四章「把整备用起来」接续，地下墓穴、林地府邸任选一处勘察制图，两位首领各有自选讨伐。开发版已备份并升级至该版本，等待用户实机验收。[第五章玩法](docs/design/relic-expeditions.md) · [当前实例回执](evidence/relic-expeditions-deployment.json)。
+第六章「前线补给站」已部署，开发版核心为 `0.7.0-frontline`。完成第五章制图后，到遗址旁设站，行粮、救援与货运任选两项交班。Java 21 编译及离线检查已通过，等待用户实机验收。[第六章玩法](docs/design/frontline-depot.md) · [当前实例回执](evidence/frontline-depot-deployment.json)。
 
 用户认为**序章的玩法骨架基本完成**：玩家在聚落持剑醒来，探索、下矿，完成两条起步制作任务，击败史莱姆王后开放猩红与腐化。旧任务文件和代码中的 Chapter 1 指这一段序章；界面已改称“序章”，任务 ID、存档键和文件名保持。新的第一章是“重启第一座工坊”。
 
@@ -19,6 +19,7 @@
 | 第四章困难模式整备 | `c171919`，5 个任务节点、采掘或战斗整备、选修高级砧 | 已部署，待用户验收。见[玩家说明](docs/design/field-equipment.md) |
 | 第三章世界转折 | `b8779bc`，8 个节点，农夫乐事与机械动力支援远征及新矿处理 | 已部署，待用户实测。见[玩家说明](docs/design/world-turn.md) |
 | 第五章遗址远征 | `89ab0e2`，6 个节点、死者之王和灾厄宰相两项自选讨伐 | 已部署，待用户实测 |
+| 第六章前线补给站 | `fb4b50e`，14 个节点，含三项后勤业务与驻地支线 | 已部署，待用户实测 |
 | 正式前言、补给和镇内服务机制 | 暂缓 | 只保留任务占位和公共建筑内装，不追加剧情、对白、专属交易或治疗 |
 
 推荐阅读顺序：本文件与 [AGENTS.md](AGENTS.md) → [STATE.md](STATE.md) 最新记录 → 对应部署回执和源码。玩法方向看 [PLAN.md](PLAN.md)；部分早期状态表和旧 `HANDOFF.md` 属于历史。叙事依据始终是作者世界观原文。
@@ -60,7 +61,7 @@
 
 仓库：`https://github.com/Cha0sky/MC-modpack-trial`，远端名 `MC`，分支 `main`。
 
-当前核心为 **0.6.0-relic-expeditions**，安装文件名为 `world-progression-core-0.1.0.jar`。第三章扩充实现提交为 `b8779bc`。
+当前核心为 **0.7.0-frontline**，安装文件名为 `world-progression-core-0.1.0.jar`。第三章扩充实现提交为 `b8779bc`。
 
 | 内容 | 实现/记录 | 当前状态 |
 |---|---|---|
@@ -73,13 +74,13 @@
 | 任务书清理、奖励扩充、工坊与奥术修复 | `22d2df8` | 已部署，待实机验收 |
 | 第三章世界转折、第二章骷髅领主选项 | `9f22763` | 已部署，待实机验收 |
 
-本轮备份并更新核心、加入第五章任务文件，同时合并两份语言文件。涉及路径详见[部署回执](evidence/relic-expeditions-deployment.json)。
+本轮备份并更新核心、加入第六章任务文件，同时合并两份任务语言。涉及路径详见[部署回执](evidence/frontline-depot-deployment.json)。
 
 首次部署预检发现 FTB 已把语言自动写回标准无逗号 SNBT，旧JSON读取器停止且未替换文件。`tools/quest_language.py` 现在同时读取JSON与FTB语言SNBT，第一、二章部署工具共用；当前语言键及转义字符串已定向检查并保留，不覆盖其他章节内容。
 
 本地产物（均未跟踪）：
 
-- `modules/world-progression-core/build/libs/world-progression-core-0.6.0-relic-expeditions.jar`：当前核心。
+- `modules/world-progression-core/build/libs/world-progression-core-0.7.0-frontline.jar`：当前核心。
 - `staging/mods/confluence-otherworld-1.2.4-260226.jar`：从开发版复制的汇流来世编译依赖，Gradle 同时读取它内嵌的 Confluence Magic Lib。
 - `staging/mods/Explorify v1.6.6.mod.jar`、`staging/mods/exposure-neoforge-1.21.1-1.9.21.jar`：新增模组，官方来源和依赖见 `staging/mods/downloads-workshop.json`。
 - `modules/infinitecore/build/libs/infinitecore-1.1.2-whitelist.jar`：上一轮已部署的白名单，本轮未替换。
@@ -101,7 +102,7 @@
 
 | 目录 / 模块 | 版本与实现边界 |
 |---|---|
-| `modules/world-progression-core` | 当前构建参数为 0.6.0-relic-expeditions。第三章运行时读取汇流来世 1.2.4。其余依赖继续使用 Create 6.0.10、Exposure 1.9.21 和 Iron’s Spellbooks 1.21.1-3.16.3 |
+| `modules/world-progression-core` | 当前构建参数为 0.7.0-frontline。第三章运行时读取汇流来世 1.2.4。其余依赖继续使用 Create 6.0.10、Exposure 1.9.21 和 Iron’s Spellbooks 1.21.1-3.16.3 |
 | `modules/evolvingblade` | 1.1.0；成长剑、成长路线与幂等赠剑API。核心调用现有API，不另塞一把剑 |
 | `modules/rpgleveling` | 1.0.0；角色成长与属性加点。旧构建/数值检查是历史证据，不是本轮新测试 |
 | `modules/infinitecore` | 1.1.2；根据遗失源码模组重新实现，**不是恢复的原始源码**。直接模板、八阶生成器、主动IO、拆除掉落修正见模块README |
@@ -246,11 +247,13 @@
 $env:JAVA_HOME = 'C:\Gradle\jdk-21-temurin'
 $env:GRADLE_USER_HOME = Join-Path (Get-Location) 'work\build-baseline\gradle-user-home'
 Push-Location '.\modules\world-progression-core'
-.\gradlew.bat --offline --no-daemon --console plain '-Pmod_version=0.6.0-relic-expeditions' jar verifyLogic -x createMinecraftArtifacts
+.\gradlew.bat --offline --no-daemon --console plain '-Pmod_version=0.7.0-frontline' jar verifyLogic -x createMinecraftArtifacts
 Pop-Location
 ```
 
 离线依赖缓存已存在才能用 `--offline`。核心还依赖仓库内 `modules/evolvingblade/build/libs/evolvingblade-1.1.0.jar`，以及 `staging/mods` 中 Create 6.0.10、Exposure 1.9.21、irons_spellbooks-1.21.1-3.16.3.jar 作为编译类路径；Ponder直接复用Create内嵌包，不另安装。集镇构建用本机已有 NeoForge 21.1.248 开发产物；同 SDK 产物已核实时，可用 `-x createMinecraftArtifacts` 跳过重建，缺失时不可照抄。无限之核在自己的模块目录运行构建，白名单测试包的版本参数为 `'-Pmod_version=1.1.2-whitelist'`。这两个模块的 `verifyLogic` 都不启动游戏。不开新世界、不为了绕过缓存问题擅自升级工具链。
+
+本次编译发现旧的本地开发 SDK 在 javac 读取 ChatFormatting 时有无效的参数注解。已备份该构建缓存，复用同仓库 `modules/infinitecore/build/moddev/artifacts/neoforge-21.1.248.jar` 的同版本开发 SDK，编译及离线逻辑检查通过。
 
 部署前确认版本、目标和游戏退出，备份后定向复制即可；不例行运行哈希。当前语言包含第一、二章键，游戏可自动重写为标准SNBT；使用共享 `read_language`，不能假定外部语言仍是JSON。各章部署只合并对应键，保留其他键；不照抄旧皇冠/指南针语言基线。旧 `deploy_chapter1.py` 是历史工具，不用于当前章节。
 
@@ -271,4 +274,4 @@ Pop-Location
 3. **接收第三、四章实测反馈。** 第三章仍由汇流来世控制世界转折，用户使用备份存档实测。第四章在取得钴锭或钯金锭后开放，先检查两种整备路线任选其一及选修砧的体验，第五章已实现双线远征。先驱者、焰魔和使徒留作后期。
 4. **发布另开任务。** 当前没有制作PCL可导入安装包或发布Release；GitHub源码ZIP不是整合包安装包。
 
-接续摘要：集镇生成已验收；第一至第五章已部署待实测。第五章可从第四章「把整备用起来」接续。
+接续摘要：集镇生成已验收；第一至第六章已部署待实测。第六章从第五章「交回远征地图」接续。

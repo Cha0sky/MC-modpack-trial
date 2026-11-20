@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-21T02:47:16.088148+08:00",
+  "instance": "D:\\PCL 正式版 2.10.6 (1)\\.minecraft\\versions\\星庭远征-开发版",
+  "applied": true,
+  "source_commit": "fb4b50e1778cc340483ee08984b42e2e47297b2d",
+  "core_version": "0.7.0-frontline",
+  "files": [
+    {
+      "path": "mods/world-progression-core-0.1.0.jar",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/06_frontline_depot.snbt",
+      "existed": false
+    },
+    {
+      "path": "config/ftbquests/quests/lang/zh_cn.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/lang/en_us.snbt",
+      "existed": true
+    }
+  ],
+  "runtime_acceptance": "pending user playtest",
+  "backup": "D:\\PCL 正式版 2.10.6 (1)\\codex\\modpack-project\\backups\\frontline-depot-20261121-024716-088148"
+}
