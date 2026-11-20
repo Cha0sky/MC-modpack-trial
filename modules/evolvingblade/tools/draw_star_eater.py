@@ -1,129 +1,330 @@
-"""Draw the Star Eater's handheld sprites. Run from any working directory with Pillow."""
+"""Draw the Star Eater on Minecraft's 16-pixel item grid. Requires Pillow."""
+import json
+from math import cos, pi, sin
 from pathlib import Path
-from math import cos, sin, pi
 
-from PIL import Image, ImageDraw, ImageFilter
+from PIL import Image, ImageDraw
 
 
 MODULE = Path(__file__).resolve().parents[1]
 TEXTURES = MODULE / "src/main/resources/assets/evolvingblade/textures/item"
-SIZE = 48
-INK, LEATHER, BRAID = "#19212e", "#483841", "#a37959"
-BRONZE, BRASS, IVORY = "#946248", "#d4a663", "#ffe4a2"
-# Coordinates run from the crossguard along the spine. Width is perpendicular to the edge.
-BLADES = [
-    [(0,-2),(17,-2),(19,-1),(23,-1),(21,1),(24,1),(18,3),(1,3)],
-    [(0,-3),(16,-3),(27,-2),(33,0),(26,2),(7,3),(2,4)],
-    [(0,-3),(12,-3),(28,-2),(38,0),(29,2),(12,2),(6,4),(1,3)],
-    [(0,-3),(8,-5),(12,-2),(21,-3),(28,-6),(35,-8),(39,-7),(36,-3),(32,0),(24,3),(15,6),(8,5),(3,3)],
-    [(0,-4),(9,-5),(13,-3),(31,-3),(42,-1),(35,1),(24,2),(18,4),(9,3),(5,6)],
-    [(0,-5),(5,-7),(8,-4),(12,-7),(25,-7),(29,-9),(28,-5),(34,-6),(41,0),(30,5),(17,6),(11,3),(7,6),(1,5)],
-    [(0,-4),(7,-6),(12,-3),(21,-5),(26,-5),(24,-3),(37,-3),(43,-1),(39,2),(31,3),(27,5),(20,4),(12,6),(8,4),(2,6)],
-    [(0,-4),(7,-6),(12,-3),(23,-5),(20,-2),(32,-3),(39,-3),(44,0),(34,3),(30,3),(26,5),(15,5),(10,7),(5,5),(1,6)],
-]
-GUARDS = [
-    [(-2,-4),(0,-4),(1,4),(-1,4)],                       # Tang and a plain ferrule
-    [(2,-7),(3,-6),(1,-3),(1,4),(-1,7),(-3,7),(-1,3),(-1,-3)],
-    [(4,-8),(5,-7),(2,-4),(1,-2),(1,3),(4,7),(3,8),(-1,5),(-2,2),(-1,-4)],
-    [(4,-8),(3,-5),(1,-2),(1,3),(5,7),(3,9),(0,8),(1,6),(-3,4),(-2,-3)],
-    [(6,-9),(6,-7),(2,-3),(2,3),(6,7),(7,10),(2,8),(-2,4),(-2,-3),(1,-6)],
-    [(6,-10),(4,-7),(5,-6),(1,-2),(1,3),(5,5),(4,7),(6,9),(2,10),(-2,6),(-4,2),(-3,-4),(1,-8)],
-    [(6,-9),(5,-6),(2,-3),(2,3),(6,6),(7,10),(3,9),(0,6),(-3,5),(-4,0),(-2,-4),(2,-8)],
-    [(8,-10),(7,-6),(4,-6),(1,-2),(1,3),(5,5),(6,4),(8,10),(4,9),(0,7),(-2,4),(-4,2),(-2,-4),(0,-6),(4,-8)],
-]
-# Shadow, bevel, reflection, and luminous inlay.
-STEEL = [
-    ("#454c55","#707e84","#a6acad","#b49865"),
-    ("#324855","#69928f","#c6dabe","#ead07a"),
-    ("#264560","#438da2","#b4f4ea","#68f7f6"),
-    ("#39243f","#8b475d","#ffc0a6","#ff727d"),
-    ("#273754","#6a80b7","#d8eeff","#79e7ff"),
-    ("#553544","#b56e48","#ffeab2","#ffad45"),
-    ("#30254d","#655697","#e1c9ff","#c494ff"),
-    ("#20293b","#687689","#e4ebed","#ffe2a2"),
-]
+REPORTS = MODULE / "build/reports/art"
+SIZE = 16
+
+# Each row is a scanline at game resolution. The right margin is implicit.
+# O outline, S shadow, M face, E cutting edge, H tip, ~ moving enamel, g/i bronze.
+BLADES = (
+    # Blank: the blunt, unfinished end of a short iron bar.
+    """
+...........
+...........
+...........
+...........
+..........O.O
+.........OMES
+........OEMSO
+.......OEMSO
+......OEMSO
+.....OSMSO
+....OSSSO
+.....OOO
+""",
+    # Awakening: a narrow, pointed blade with a broad uninterrupted bevel.
+    """
+..............
+.............OO
+............OHO
+...........OEMO
+..........OEMSO
+.........OEMSO
+........OEMSO
+.......OEMSO
+......OEMSO
+.....OEMSO
+....OSMSO
+.....OOO
+""",
+    # Spirit edge: a long lancet. The single coloured flute is still.
+    """
+..............OO
+.............OHO
+............OEMO
+...........OE~SO
+..........OE~SO
+.........OE~SO
+........OE~SO
+.......OE~SO
+......OEMSO
+.....OEMSO
+....OSMSO
+.....OOO
+""",
+    # Soul drinker: a swept tip, red enamel and a small backward barb at the heel.
+    """
+...............O
+.............OEO
+............OHEO
+.........OOOEMSO
+.........OEMS~O
+........OEM~SO
+.......OEM~SO
+......OEM~~SO
+.....OEM~MSSO
+.....OS~MSOO
+....OSMSOO
+.....OOO
+""",
+    # Rift: the secondary prong rises from the right-hand edge of the blade.
+    """
+..............OO
+.............OHO
+............OEEO
+...........OE~SO
+..........OE~SO
+.........OE~SO.O
+........OE~SO.OE
+.......OE~SO.OEO
+......OE~~SOOEO
+.....OEM~SMSSO
+....OSMMSSOOO
+.....OOOOO
+""",
+    # Kingslayer: a heavy cleaver with three stepped teeth along the spine.
+    """
+..............OO
+............OOHO
+..........OOEEMO
+..........OEMS~O
+.......OOEEMS~SO
+........OEM~~SO
+......OOEM~~SSO
+......OEM~~MSO
+.....OEM~~MSO
+.....OSM~MSSO
+....OSMSSOOO
+.....OOOO
+""",
+    # Starfall: night-blue leaf blade, with one moon-shaped hollow.
+    """
+..............OO
+............OOHO
+...........OEMEO
+..........OE~~SO
+........OOE~~SSO
+.......OEM~~SOO
+......OES~~SO
+.....OES~MSO
+.....OES..EO
+.....OSS..EO
+....OEMSSEOO
+.....OOOOO
+""",
+    # Eventide: an ivory edge frames an ink-blue channel. A gilded recurved
+    # rib bridges the opening at the heel; the silhouette stays still.
+    """
+.............OOO
+............OEHO
+..........OOEMEO
+.........OHE~~SO
+........OEM~~SEO
+.......OEM~~SO.O
+......OEM~~SO.Oi
+.....OE~~MEO.OgO
+....OES@~SO..igO
+....OEg@gO..igO
+....OSggiOgggO
+.....OSSSOOO
+......OOO
+""",
+)
+
+# Grips grow around the same attachment pixel (5,10). Dots on a fitting
+# leave the underlying metal visible. The last hilt carries the opening,
+# with no halo or detached pixels around the icon.
+GRIP = """
+...OxO
+..OwxO
+.OxwO
+OgwO
+Oig
+OO
+"""
+GUARDS = (
+    (7, """
+...
+...OO
+..OggO
+...OpgO
+....OOpO
+......OO
+"""),
+    (7, """
+..OO
+..OgO
+...OigO
+....OgppO
+.....OOpgO
+.......OOO
+"""),
+    (6, """
+..OO
+..OgO
+...OgO
+...Og@O
+....OgppOO
+.....OOgpgO
+......OggO
+......OOO
+"""),
+    (6, """
+...OO
+..OgO
+..OgOO
+...Oi@O
+....OgppO
+......OgO
+......OpgO
+.......OO
+"""),
+    (6, """
+..OO
+..OiO
+..OgOO
+...Og@O
+....OgppOO
+.....OOggiO
+.......OggO
+........OO
+"""),
+    (5, """
+...O
+..OgO
+..OiO
+..OgOO
+...Og@O
+....OgppOO
+.....OOgigO
+.......OpgO
+........OgO
+.........O
+"""),
+    (6, """
+.OO
+.OgOO
+..OigO
+...Op@O
+....OgpgO
+.....OOgO.O
+.......OggO
+........OO
+"""),
+    (6, """
+.OOO
+.OigO
+..OggO
+...Oi@gO
+....OgigpO
+.....OOigiO
+.......OpgO
+........OO
+"""),
+)
+
+# The leather and brass repeat across the set. The dark edge is tinted
+# towards the metal. Colour bands are opaque and use nearest-neighbour pixels.
+FITTINGS = {"x": "#583b32", "w": "#ab7650", "p": "#855535",
+            "g": "#cb9151", "i": "#f6d58b"}
+METALS = (
+    ("#302e38", "#51515b", "#858389", "#b8b5aa", "#dfd9c4", "#a6754c"),
+    ("#273940", "#44595b", "#7a9992", "#bbd4ba", "#e7ebc9", "#e1b871"),
+    ("#203944", "#345966", "#54868d", "#a6ddd6", "#dcf6e6", "#53aebd"),
+    ("#382b3c", "#623c50", "#9a5862", "#e3a28a", "#ffe2b3", "#df766d"),
+    ("#222f49", "#395372", "#6a92a8", "#c2e0de", "#e5f5e7", "#6dbdc0"),
+    ("#3b2d3c", "#70494c", "#a66a4b", "#eab971", "#fff1b9", "#ffc46c"),
+    ("#28233e", "#473853", "#716681", "#b9b1c9", "#ede5ed", "#bca4db"),
+    ("#25263b", "#38445b", "#657586", "#cfddd9", "#fff3ce", "#ffe2a0"),
+)
+# One accent travels up the core, with adjacent cells sharing a colour. Dark
+# and middle values occupy most of the cycle, leaving a single light crest.
+ENAMEL = {
+    3: ("#623c50", "#98505e", "#cc7471", "#f4b18b"),
+    4: ("#354d70", "#466f93", "#69a6b8", "#addbd8"),
+    5: ("#70494c", "#ae6649", "#e49b55", "#ffe2a0"),
+    6: ("#413452", "#705685", "#a998ca", "#dbd9ee"),
+    7: ("#3a3456", "#52548b", "#67969d", "#b0efcf"),
+}
+CURRENT = (3, 2, 2, 1, 1, 0, 0, 0, 0, 1, 1, 2)
+FRAME_TICKS = {3: 5, 4: 4, 5: 4, 6: 4, 7: 4}
 
 
-def xy(s, w):
-    return round(13 + .72 * (s + w)), round(34.5 + .72 * (w - s))
+def paint(sprite, grid, start_y, palette, stage, frame):
+    for y, row in enumerate(grid.strip("\n").splitlines(), start_y):
+        if y >= SIZE or len(row) > SIZE:
+            raise ValueError(f"Stage {stage}: row {y} exceeds the item grid")
+        for x, mark in enumerate(row):
+            if mark == ".":
+                continue
+            if mark == "~" and stage in ENAMEL:
+                phase = ((x - y) // 2 - frame) % len(CURRENT)
+                color = ENAMEL[stage][CURRENT[phase]]
+            else:
+                color = palette[mark]
+            sprite.putpixel((x, y), (*bytes.fromhex(color[1:]), 255))
 
 
-def points(coords):
-    return [xy(s, w) for s, w in coords]
+def draw_blade(stage, frame):
+    palette = {**FITTINGS, **dict(zip("OSMEH@", METALS[stage]))}
+    palette["~"] = palette["@"]
+    sprite = Image.new("RGBA", (SIZE, SIZE))
+    paint(sprite, BLADES[stage], 0, palette, stage, frame)
+    paint(sprite, GRIP, 10, palette, stage, frame)
+    top, guard = GUARDS[stage]
+    paint(sprite, guard, top, palette, stage, frame)
+    return sprite
 
 
-def draw_blade(stage, frame, frames):
-    canvas = Image.new("RGBA", (SIZE, SIZE))
-    draw = ImageDraw.Draw(canvas)
-    shadow, bevel, edge, glow = STEEL[stage]
-    blade = BLADES[stage]
-    end = max(s for s, _ in blade)
-    mask = Image.new("L", canvas.size)
-    ImageDraw.Draw(mask).polygon(points(blade), fill=255)
-    metal = Image.new("RGBA", canvas.size, shadow)
-    face = ImageDraw.Draw(metal)
-    face.polygon(points([(0,-8),(end+2,-8),(end,0),(end-8,0),(10,-1),(5,1),(0,0)]), fill=bevel)
-    face.line(points(blade[:max(3, len(blade)//2)]), fill=edge, width=2)
-    face.line(points([(3,1),(9,0),(end-5,-1),(end,0)]), fill=bevel, width=1)
-    if stage >= 2:
-        face.line(points([(5,0),(11,-1),(14,0),(end-5,-1)]), fill=glow)
-        # A travelling glint stays inside the metal on every frame.
-        spot = 7 + round((end-13) * (.5-.5*cos(2*pi*frame/frames)))
-        face.line(points([(spot-1,1),(spot+2,-2)]), fill="#fff5dc", width=2)
-    canvas.paste(metal, mask=mask)
-    poly = lambda shape,color: draw.polygon(points(shape),fill=color)
-    line = lambda shape,color: draw.line(points(shape),fill=color)
-    if stage in (4,6,7):
-        cut_at = {4:19, 6:24, 7:26}[stage]
-        # A split edge, then two completely separated star-metal splinters on the final tiers.
-        poly([(cut_at-2,-5),(cut_at,-5),(cut_at+3,2),(cut_at+2,4)], (0,0,0,0))
-        if stage == 7:
-            poly([(34,-3),(36,-4),(36,2),(35,3)],(0,0,0,0))
-    # Counterweight, diagonal leather wrap, guard and the changing stone in the socket.
-    poly([(-14,0),(-12,-2),(-10,-2),(-8,-1),(-2,-1),(-1,2),(-10,2),(-12,3)],LEATHER)
-    for s in (-10,-7,-4):
-        line([(s,-1),(s+1,2)],BRAID)
-    poly([(-14,0),(-12,-2),(-10,0),(-12,2)],BRASS)
-    line([(-14,0),(-12,-2)],IVORY)
-    poly(GUARDS[stage], BRONZE)
-    line(GUARDS[stage][:max(3,len(GUARDS[stage])//2)],BRASS)
-    if stage:
-        poly([(-3,0),(0,-2),(3,0),(0,2)],BRASS)
-        line([(-1,0),(1,-1)],glow)
-    if stage >= 5:
-        line([(0,3),(3,6),(4,7)],IVORY)
-        line([(0,-4),(3,-7)],IVORY)
-    if stage == 2:
-        line([(-2,4),(-4,6),(-7,5),(-10,1)],BRASS)
-    if stage == 4:
-        poly([(8,4),(10,6),(21,6),(15,8),(9,8),(6,6)],bevel)
-        line([(10,6),(21,6)],edge)
-    if stage == 6:
-        poly([(22,8),(24,6),(29,6),(26,8)],bevel)
-        line([(23,7),(29,6)],edge)
-    if stage == 7:
-        for s,w in ((14,-8),(32,6)):
-            poly([(s-3,w),(s,w-1),(s+2,w),(s,w+1)],glow)
-    alpha = canvas.getchannel("A")
-    outline = Image.new("RGBA", canvas.size, INK)
-    outline.putalpha(alpha.filter(ImageFilter.MaxFilter(3)))
-    return Image.alpha_composite(outline,canvas)
+def plate(sprites, zoom=1):
+    """A dark hotbar and a light inventory, drawn at integer scale."""
+    width = 8 * 20 + 2
+    image = Image.new("RGB", (width, 42), "#191b21")
+    draw = ImageDraw.Draw(image)
+    for row, (border, well, lip) in enumerate((
+            ("#111318", "#393c43", "#62656a"), ("#656565", "#a4a4a4", "#e1e1e1"))):
+        for stage, sprite in enumerate(sprites):
+            x, y = 1 + stage * 20, 1 + row * 20
+            draw.rectangle((x, y, x+19, y+19), fill=lip)
+            draw.rectangle((x, y, x+18, y+18), fill=border)
+            draw.rectangle((x+1, y+1, x+18, y+18), fill=well)
+            image.paste(sprite, (x+2, y+2), sprite)
+    return image.resize((width*zoom, 42*zoom), Image.Resampling.NEAREST)
 
 
 def main():
-    preview = Image.new("RGB", (SIZE*8,SIZE), "#17252e")
+    frames = []
     for stage in range(8):
-        count = 1 if stage < 2 else 6 if stage < 5 else 8
-        sheet = Image.new("RGBA", (SIZE, SIZE*count))
-        for i in range(count):
-            sprite = draw_blade(stage,i,count)
-            sheet.paste(sprite,(0,SIZE*i))
-            if i == 0:
-                preview.paste(sprite,(stage*SIZE,0),sprite)
-        sheet.save(TEXTURES / f"star_eater_stage{stage}.png")
-    out = MODULE / "build/reports/art"
-    out.mkdir(parents=True, exist_ok=True)
-    preview.resize((SIZE*8*3,SIZE*3),Image.Resampling.NEAREST).save(out / "stage-gallery.png")
+        count = len(CURRENT) if stage in ENAMEL else 1
+        strip = Image.new("RGBA", (SIZE, SIZE * count))
+        for frame in range(count):
+            strip.paste(draw_blade(stage, frame), (0, SIZE * frame))
+        texture = TEXTURES / f"star_eater_stage{stage}.png"
+        strip.save(texture)
+        if stage in ENAMEL:
+            metadata = {"animation": {"frametime": FRAME_TICKS[stage], "interpolate": False}}
+            texture.with_suffix(".png.mcmeta").write_text(json.dumps(metadata, indent=2) + "\n", encoding="utf8")
+        frames.append(strip.crop((0, 0, SIZE, SIZE)))
+    REPORTS.mkdir(parents=True, exist_ok=True)
+    plate(frames, 4).save(REPORTS / "stage-gallery.png")
+    plate(frames).save(REPORTS / "stage-inventory.png")
+    # Both 48-tick and 60-tick cycles return to their first frame after 240 ticks.
+    ticks = sorted(set(range(0, 240, 4)) | set(range(0, 240, 5)))
+    sequence = [plate([draw_blade(s, t // FRAME_TICKS.get(s, 1)) for s in range(8)], 4) for t in ticks]
+    durations = [(end - start) * 50 for start, end in zip(ticks, ticks[1:] + [240])]
+    sequence[0].save(REPORTS / "stage-flow.gif", save_all=True, append_images=sequence[1:],
+                     duration=durations, loop=0, optimize=True)
+    draw_astrolabe()
+
+
+def draw_astrolabe():
     instrument = Image.new("RGB", (96,96), "#101f2b")
     dial = ImageDraw.Draw(instrument)
     for radius,color in ((42,"#2d4850"),(40,"#294149"),(33,"#233840"),(18,"#21333f")):

@@ -64,7 +64,7 @@ def deploy_chapter(*, version, previous_version, chapter_name, revised_keys, bas
     install_payloads(instance, payloads, receipt_name, version, apply)
 
 
-def install_payloads(instance, payloads, receipt_name, version, apply):
+def install_payloads(instance, payloads, receipt_name, version, apply, *, module_versions=None):
     """Back up and install only the prepared files, or display the same plan in a dry run."""
     for relative in payloads:
         if not (instance / relative).resolve().is_relative_to(instance):
@@ -80,6 +80,8 @@ def install_payloads(instance, payloads, receipt_name, version, apply):
         "core_version": version, "files": files,
         "runtime_acceptance": "pending user playtest",
     }
+    if module_versions:
+        receipt["module_versions"] = module_versions
     if apply:
         closed()
         for entry in files:

@@ -13,7 +13,7 @@ CHAPTERS = ("00_lostworld_chapter1", "01_workshop_rekindled", "02_heritage_surve
             "04_field_equipment", "05_relic_expeditions", "06_frontline_depot")
 BUILDS = (
     ("world-progression-core", "world_progression_core", "0.1.0", "0.7.0-frontline", "0.7.1-campaign"),
-    ("evolvingblade", "evolvingblade", "1.1.0", "1.1.0", "1.1.1-folio"),
+    ("evolvingblade", "evolvingblade", "1.1.0", "1.1.0", "1.1.2-pixels"),
     ("rpgleveling", "rpgleveling", "1.0.0", "1.0.0", "1.0.1-fieldguide"),
 )
 
@@ -29,17 +29,30 @@ def mod_version(path, mod_id):
     return next(mod["version"] for mod in meta["mods"] if mod["modId"] == mod_id)
 
 
-def main(apply):
+def main(apply, blade_only=False):
     instance = INSTANCE.resolve(strict=True)
     if instance != INSTANCE:
         raise RuntimeError("Unexpected development instance")
     payloads = {}
+    module_versions = {}
     for module, mod_id, filename_version, old, new in BUILDS:
+        if blade_only and mod_id != "evolvingblade":
+            continue
         path = Path("mods") / f"{module}-{filename_version}.jar"
         jar = ROOT / "modules" / module / "build/libs" / f"{module}-{new}.jar"
-        if mod_version(jar, mod_id) != new or mod_version(instance / path, mod_id) not in (old, new):
+        compatible = {old, new}
+        if mod_id == "evolvingblade":
+            compatible.add("1.1.1-folio")
+        if mod_version(jar, mod_id) != new or mod_version(instance / path, mod_id) not in compatible:
             raise RuntimeError(f"Review the version of {module}")
         payloads[path] = jar.read_bytes()
+        module_versions[mod_id] = new
+
+    if blade_only:
+        core = instance / "mods/world-progression-core-0.1.0.jar"
+        install_payloads(instance, payloads, "blade-pixels", mod_version(core, "world_progression_core"), apply,
+                         module_versions=module_versions)
+        return
 
     prefixes = ()
     for name in CHAPTERS:
@@ -65,10 +78,12 @@ def main(apply):
                 raise RuntimeError(f"Review the local translation in {locale}: {key}")
             current[key] = value
         payloads[path] = (json.dumps(current, ensure_ascii=False, indent=2) + "\n").encode("utf8")
-    install_payloads(instance, payloads, "campaign-refresh", BUILDS[0][-1], apply)
+    install_payloads(instance, payloads, "campaign-refresh", BUILDS[0][-1], apply, module_versions=module_versions)
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--apply", action="store_true")
-    main(parser.parse_args().apply)
+    parser.add_argument("--blade-only", action="store_true", help="Only replace the growth sword module")
+    args = parser.parse_args()
+    main(args.apply, args.blade_only)
