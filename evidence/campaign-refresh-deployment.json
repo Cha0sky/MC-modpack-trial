@@ -1,0 +1,59 @@
+{
+  "date": "2026-11-21T04:04:03.132892+08:00",
+  "instance": "D:\\PCL 正式版 2.10.6 (1)\\.minecraft\\versions\\星庭远征-开发版",
+  "applied": true,
+  "source_commit": "804276e9b0ecb8fc113202a8fa2cbf5026c4ee27",
+  "core_version": "0.7.1-campaign",
+  "files": [
+    {
+      "path": "mods/world-progression-core-0.1.0.jar",
+      "existed": true
+    },
+    {
+      "path": "mods/evolvingblade-1.1.0.jar",
+      "existed": true
+    },
+    {
+      "path": "mods/rpgleveling-1.0.0.jar",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/00_lostworld_chapter1.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/01_workshop_rekindled.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/02_heritage_survey.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/03_world_turn.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/04_field_equipment.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/05_relic_expeditions.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/06_frontline_depot.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/lang/en_us.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/lang/zh_cn.snbt",
+      "existed": true
+    }
+  ],
+  "runtime_acceptance": "pending user playtest",
+  "backup": "D:\\PCL 正式版 2.10.6 (1)\\codex\\modpack-project\\backups\\campaign-refresh-20261121-040403-132892"
+}
