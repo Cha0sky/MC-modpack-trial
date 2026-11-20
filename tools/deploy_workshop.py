@@ -1,7 +1,9 @@
 """Deploy the approved workshop chapter, preserving unrelated quest language keys."""
 import argparse
+import base64
 from datetime import datetime, timezone, timedelta
 import json
+import os
 from pathlib import Path
 import shutil
 import subprocess
@@ -14,10 +16,32 @@ INSTANCE=Path(r"D:\PCL 正式版 2.10.6 (1)\.minecraft\versions\星庭远征-开
 QUESTS=ROOT/'staging/config/ftbquests/quests'
 
 def closed():
-    result=subprocess.run([r'C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe',
-        '-NoProfile','-NonInteractive','-Command',
-        '$p=@(Get-Process -Name java,javaw -ErrorAction SilentlyContinue); if ($p.Count -gt 0) { exit 9 }; exit 0'])
-    if result.returncode: raise RuntimeError('Close the Java game before deployment; no files replaced')
+    # Match the instance that owns the files. Other version-isolated clients may stay open.
+    query = r"""
+$ErrorActionPreference = 'Stop'
+$ProgressPreference = 'SilentlyContinue'
+$target = [IO.Path]::GetFullPath($env:LOSTWORLD_DEPLOY_INSTANCE).TrimEnd('\','/')
+$processes = Get-CimInstance Win32_Process -Filter "Name='java.exe' OR Name='javaw.exe'"
+foreach ($proc in $processes) {
+    $line = $proc.CommandLine
+    if ($line -match '(?:^|\s)(?:org\.gradle\.launcher\.daemon\.bootstrap\.GradleDaemon|org\.gradle\.wrapper\.GradleWrapperMain)(?:\s|$)') { continue }
+    $dir = [regex]::Match($line, '(?i)(?:^|\s)--gameDir(?:\s+|=)(?:"([^"]+)"|([^\s"]+))')
+    if (!$dir.Success) { exit 10 }
+    $path = $dir.Groups[1].Value + $dir.Groups[2].Value
+    if (!([IO.Path]::IsPathRooted($path)) -or $path -notmatch '^(?:[a-zA-Z]:[\\/]|\\\\)') { exit 10 }
+    $path = [IO.Path]::GetFullPath($path).TrimEnd('\','/')
+    if ($path -ieq $target) { exit 9 }
+}
+exit 0
+"""
+    command = base64.b64encode(query.encode("utf-16-le")).decode("ascii")
+    result = subprocess.run([r"C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe",
+                             "-NoProfile", "-NonInteractive", "-EncodedCommand", command],
+                            env={**os.environ, "LOSTWORLD_DEPLOY_INSTANCE": str(INSTANCE)})
+    if result.returncode == 9:
+        raise RuntimeError("Close the Stargarden development instance before deployment")
+    if result.returncode:
+        raise RuntimeError(f"Could not confirm the development instance is closed ({result.returncode})")
 
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--apply',action='store_true');args=parser.parse_args()
