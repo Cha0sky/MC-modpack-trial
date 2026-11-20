@@ -6,6 +6,8 @@
 
 当前开发版包含序章至第六章，共 94 项任务。开局先领加点手册和卷轴、练噬星之刃，再自选泰拉武器与饰品备战史莱姆王。进度核心为 `0.7.1-campaign`，成长剑为 `1.1.1-folio`，加点手册为 `1.0.1-fieldguide`。任务、资源及版本已从实例读回，实机由用户验收。[玩法指引](docs/design/campaign-field-guide.md) · [部署回执](evidence/campaign-refresh-deployment.json)。
 
+噬星之刃另有 16×16 材质版 `1.1.2-pixels`（`22ebabf`），已打包。用户先看动图，暂缓部署；开发版仍使用 `1.1.1-folio`。预览在 `modules/evolvingblade/build/reports/art/stage-flow.gif`。
+
 用户认为**序章的玩法骨架基本完成**：玩家在聚落持剑醒来，探索、下矿，完成两条起步制作任务，击败史莱姆王后开放猩红与腐化。旧任务文件和代码中的 Chapter 1 指这一段序章；界面已改称“序章”，任务 ID、存档键和文件名保持。新的第一章是“重启第一座工坊”。
 
 | 内容 | 当前状态 | 接手时怎么处理 |
