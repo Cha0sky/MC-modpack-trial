@@ -1,0 +1,714 @@
+{
+  "id": "2B9783ABBA2533ED",
+  "filename": "06_frontline_depot",
+  "order_index": 5,
+  "icon": {
+    "id": "minecraft:barrel"
+  },
+  "progression_mode": "linear",
+  "quests": [
+    {
+      "id": "50A0C915D6A748F0",
+      "x": 0,
+      "y": 0,
+      "icon": {
+        "id": "minecraft:compass"
+      },
+      "min_width": 350,
+      "dependencies": [
+        "33B054D584DD1602"
+      ],
+      "dependency_requirement": "all_completed",
+      "optional": false,
+      "tasks": [
+        {
+          "id": "3A9993D2F64011BE",
+          "type": "item",
+          "item": {
+            "id": "minecraft:compass",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "rewards": [
+        {
+          "id": "34CE82663855661E",
+          "type": "item",
+          "item": {
+            "id": "minecraft:barrel",
+            "count": 1
+          },
+          "count": 2
+        },
+        {
+          "id": "6B48AD3F1F392E18",
+          "type": "item",
+          "item": {
+            "id": "minecraft:campfire",
+            "count": 1
+          },
+          "count": 2
+        },
+        {
+          "id": "17B602E162AB6663",
+          "type": "item",
+          "item": {
+            "id": "minecraft:spruce_log",
+            "count": 1
+          },
+          "count": 48
+        }
+      ]
+    },
+    {
+      "id": "72AE6BEF433C5981",
+      "x": 2,
+      "y": 0,
+      "icon": {
+        "id": "minecraft:campfire"
+      },
+      "min_width": 350,
+      "dependencies": [
+        "50A0C915D6A748F0"
+      ],
+      "dependency_requirement": "all_completed",
+      "optional": false,
+      "tasks": [
+        {
+          "id": "1AF572B005A5B7F7",
+          "type": "advancement",
+          "advancement": "world_progression_core:frontline/station"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "647D7D179CFC6BEA",
+          "type": "item",
+          "item": {
+            "id": "minecraft:lantern",
+            "count": 1
+          },
+          "count": 12
+        },
+        {
+          "id": "00DE2A34EF0E85CA",
+          "type": "item",
+          "item": {
+            "id": "minecraft:stone_bricks",
+            "count": 1
+          },
+          "count": 64
+        }
+      ]
+    },
+    {
+      "id": "171905731D32BC2C",
+      "x": 2,
+      "y": -3,
+      "icon": {
+        "id": "world_progression_core:trail_supply_crate"
+      },
+      "min_width": 350,
+      "dependencies": [
+        "50A0C915D6A748F0"
+      ],
+      "dependency_requirement": "all_completed",
+      "optional": true,
+      "tasks": [
+        {
+          "id": "791803589056608D",
+          "type": "advancement",
+          "advancement": "world_progression_core:frontline/trail_prepared"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "1162E63941337A9E",
+          "type": "item",
+          "item": {
+            "id": "minecraft:paper",
+            "count": 1
+          },
+          "count": 32
+        },
+        {
+          "id": "00259969374C635C",
+          "type": "item",
+          "item": {
+            "id": "minecraft:copper_ingot",
+            "count": 1
+          },
+          "count": 24
+        }
+      ]
+    },
+    {
+      "id": "659C865DF9E619B4",
+      "x": 2,
+      "y": 3,
+      "icon": {
+        "id": "world_progression_core:rescue_supply_crate"
+      },
+      "min_width": 350,
+      "dependencies": [
+        "50A0C915D6A748F0"
+      ],
+      "dependency_requirement": "all_completed",
+      "optional": true,
+      "tasks": [
+        {
+          "id": "20C232C557B49D31",
+          "type": "advancement",
+          "advancement": "world_progression_core:frontline/rescue_prepared"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "00A35522DAF1D204",
+          "type": "item",
+          "item": {
+            "id": "minecraft:bamboo",
+            "count": 1
+          },
+          "count": 48
+        },
+        {
+          "id": "6C5059D5CEEFD507",
+          "type": "item",
+          "item": {
+            "id": "minecraft:string",
+            "count": 1
+          },
+          "count": 24
+        },
+        {
+          "id": "7FF0D97BCCB0E91D",
+          "type": "item",
+          "item": {
+            "id": "minecraft:gold_ingot",
+            "count": 1
+          },
+          "count": 8
+        }
+      ]
+    },
+    {
+      "id": "5E571ACF5BDFCC0D",
+      "x": 2,
+      "y": 6,
+      "icon": {
+        "id": "create:packager"
+      },
+      "min_width": 350,
+      "dependencies": [
+        "50A0C915D6A748F0"
+      ],
+      "dependency_requirement": "all_completed",
+      "optional": true,
+      "tasks": [
+        {
+          "id": "4518F12EAB39E908",
+          "type": "advancement",
+          "advancement": "create:packager"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "716A1FB217C386D9",
+          "type": "item",
+          "item": {
+            "id": "create:andesite_alloy",
+            "count": 1
+          },
+          "count": 24
+        },
+        {
+          "id": "660081128DF1F88F",
+          "type": "item",
+          "item": {
+            "id": "minecraft:chain",
+            "count": 1
+          },
+          "count": 24
+        },
+        {
+          "id": "1114A3BA9207398A",
+          "type": "item",
+          "item": {
+            "id": "minecraft:redstone",
+            "count": 1
+          },
+          "count": 32
+        }
+      ]
+    },
+    {
+      "id": "503397AB7E037027",
+      "x": 5,
+      "y": -2,
+      "icon": {
+        "id": "world_progression_core:trail_supply_crate"
+      },
+      "min_width": 350,
+      "dependencies": [
+        "72AE6BEF433C5981",
+        "171905731D32BC2C"
+      ],
+      "dependency_requirement": "all_completed",
+      "optional": true,
+      "tasks": [
+        {
+          "id": "31D29226582C4E09",
+          "type": "advancement",
+          "advancement": "world_progression_core:frontline/trail_delivery"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "12C06BF70488A935",
+          "type": "item",
+          "item": {
+            "id": "farmersdelight:cooking_pot",
+            "count": 1
+          },
+          "count": 1
+        },
+        {
+          "id": "724291A49116EB0B",
+          "type": "item",
+          "item": {
+            "id": "minecraft:golden_carrot",
+            "count": 1
+          },
+          "count": 48
+        }
+      ]
+    },
+    {
+      "id": "15DDC5E8C3DCBB88",
+      "x": 5,
+      "y": 2,
+      "icon": {
+        "id": "world_progression_core:rescue_supply_crate"
+      },
+      "min_width": 350,
+      "dependencies": [
+        "72AE6BEF433C5981",
+        "659C865DF9E619B4"
+      ],
+      "dependency_requirement": "all_completed",
+      "optional": true,
+      "tasks": [
+        {
+          "id": "67616F1FD8C1354A",
+          "type": "advancement",
+          "advancement": "world_progression_core:frontline/rescue_delivery"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "550F8DC148BAE1BF",
+          "type": "item",
+          "item": {
+            "id": "minecraft:gold_block",
+            "count": 1
+          },
+          "count": 2
+        },
+        {
+          "id": "7887B7CE2147CBE2",
+          "type": "item",
+          "item": {
+            "id": "minecraft:scaffolding",
+            "count": 1
+          },
+          "count": 64
+        }
+      ]
+    },
+    {
+      "id": "7881A417D597920F",
+      "x": 5,
+      "y": 6,
+      "icon": {
+        "id": "create:package_frogport"
+      },
+      "min_width": 350,
+      "dependencies": [
+        "5E571ACF5BDFCC0D"
+      ],
+      "dependency_requirement": "all_completed",
+      "optional": true,
+      "tasks": [
+        {
+          "id": "112C12A0A76BADAE",
+          "type": "advancement",
+          "advancement": "create:frogport"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "145BF8D51BD6FA0A",
+          "type": "item",
+          "item": {
+            "id": "create:item_vault",
+            "count": 1
+          },
+          "count": 8
+        },
+        {
+          "id": "22BC7CB3100541DD",
+          "type": "item",
+          "item": {
+            "id": "create:brass_funnel",
+            "count": 1
+          },
+          "count": 4
+        },
+        {
+          "id": "260672E91F70FE98",
+          "type": "item",
+          "item": {
+            "id": "minecraft:chain",
+            "count": 1
+          },
+          "count": 48
+        }
+      ]
+    },
+    {
+      "id": "77CBB65AB509D459",
+      "x": 8,
+      "y": 0,
+      "icon": {
+        "id": "minecraft:written_book"
+      },
+      "min_width": 350,
+      "dependencies": [
+        "503397AB7E037027",
+        "15DDC5E8C3DCBB88",
+        "7881A417D597920F"
+      ],
+      "dependency_requirement": "all_completed",
+      "optional": false,
+      "tasks": [
+        {
+          "id": "7130A6D1A3D143FF",
+          "type": "advancement",
+          "advancement": "world_progression_core:frontline/opened"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "64B38C2EC9780A34",
+          "type": "item",
+          "item": {
+            "id": "minecraft:iron_block",
+            "count": 1
+          },
+          "count": 8
+        },
+        {
+          "id": "1D2AD30987D62CB0",
+          "type": "item",
+          "item": {
+            "id": "minecraft:experience_bottle",
+            "count": 1
+          },
+          "count": 48
+        },
+        {
+          "id": "3B1381F75FB65570",
+          "type": "choice",
+          "table_id": 0,
+          "table_data": {
+            "loot_size": 1,
+            "rewards": [
+              {
+                "id": "74C8F1FDFFCAC326",
+                "type": "item",
+                "item": {
+                  "id": "minecraft:enchanted_book",
+                  "count": 1,
+                  "components": {
+                    "minecraft:stored_enchantments": {
+                      "levels": {
+                        "minecraft:feather_falling": 4
+                      }
+                    }
+                  }
+                },
+                "count": 1,
+                "weight": 1.0
+              },
+              {
+                "id": "6C2131298669518C",
+                "type": "item",
+                "item": {
+                  "id": "minecraft:enchanted_book",
+                  "count": 1,
+                  "components": {
+                    "minecraft:stored_enchantments": {
+                      "levels": {
+                        "minecraft:silk_touch": 1
+                      }
+                    }
+                  }
+                },
+                "count": 1,
+                "weight": 1.0
+              },
+              {
+                "id": "069B137CDFFEA846",
+                "type": "item",
+                "item": {
+                  "id": "minecraft:enchanted_book",
+                  "count": 1,
+                  "components": {
+                    "minecraft:stored_enchantments": {
+                      "levels": {
+                        "minecraft:looting": 3
+                      }
+                    }
+                  }
+                },
+                "count": 1,
+                "weight": 1.0
+              }
+            ]
+          }
+        }
+      ],
+      "min_required_dependencies": 2
+    },
+    {
+      "id": "5318074CD6C4F2D3",
+      "x": 4,
+      "y": -5,
+      "icon": {
+        "id": "farmersdelight:roast_chicken_block"
+      },
+      "min_width": 350,
+      "dependencies": [
+        "171905731D32BC2C"
+      ],
+      "dependency_requirement": "all_completed",
+      "optional": true,
+      "tasks": [
+        {
+          "id": "784BBF467BF056EE",
+          "type": "advancement",
+          "advancement": "farmersdelight:main/place_feast"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "26177E519CE5282C",
+          "type": "item",
+          "item": {
+            "id": "minecraft:emerald",
+            "count": 1
+          },
+          "count": 16
+        },
+        {
+          "id": "6F8EDBCB3AEBA70E",
+          "type": "item",
+          "item": {
+            "id": "minecraft:honey_bottle",
+            "count": 1
+          },
+          "count": 16
+        }
+      ]
+    },
+    {
+      "id": "32FB350E20090686",
+      "x": 4,
+      "y": 4,
+      "icon": {
+        "id": "confluence:greater_healing_potion"
+      },
+      "min_width": 350,
+      "dependencies": [
+        "659C865DF9E619B4"
+      ],
+      "dependency_requirement": "all_completed",
+      "optional": true,
+      "tasks": [
+        {
+          "id": "3EB469837731ED7F",
+          "type": "item",
+          "item": {
+            "id": "confluence:greater_healing_potion",
+            "count": 1
+          },
+          "count": 3,
+          "consume_items": false
+        }
+      ],
+      "rewards": [
+        {
+          "id": "69F0CC6E7959CF80",
+          "type": "item",
+          "item": {
+            "id": "minecraft:gold_ingot",
+            "count": 1
+          },
+          "count": 16
+        },
+        {
+          "id": "1AEC5ABEC4974625",
+          "type": "item",
+          "item": {
+            "id": "minecraft:ender_pearl",
+            "count": 1
+          },
+          "count": 12
+        }
+      ]
+    },
+    {
+      "id": "638007FFF663A3AD",
+      "x": 5,
+      "y": -7,
+      "icon": {
+        "id": "exposure:camera"
+      },
+      "min_width": 350,
+      "dependencies": [
+        "72AE6BEF433C5981"
+      ],
+      "dependency_requirement": "all_completed",
+      "optional": true,
+      "tasks": [
+        {
+          "id": "30BE70FC5BFD6FBB",
+          "type": "advancement",
+          "advancement": "world_progression_core:frontline/night_watch"
+        },
+        {
+          "id": "688DCD79A7CAD928",
+          "type": "advancement",
+          "advancement": "exposure:adventure/moment_in_time"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "6B6B1F50DCD715D4",
+          "type": "item",
+          "item": {
+            "id": "minecraft:glow_item_frame",
+            "count": 1
+          },
+          "count": 8
+        },
+        {
+          "id": "47C6B679DB60BBBB",
+          "type": "item",
+          "item": {
+            "id": "minecraft:glow_ink_sac",
+            "count": 1
+          },
+          "count": 24
+        }
+      ]
+    },
+    {
+      "id": "4DE233CFEF449102",
+      "x": 8,
+      "y": -3,
+      "icon": {
+        "id": "minecraft:shield"
+      },
+      "min_width": 350,
+      "dependencies": [
+        "72AE6BEF433C5981"
+      ],
+      "dependency_requirement": "all_completed",
+      "optional": true,
+      "tasks": [
+        {
+          "id": "35FE6DA5E2D9AD11",
+          "type": "advancement",
+          "advancement": "world_progression_core:frontline/patrol"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "2BC88643E1F65A5D",
+          "type": "item",
+          "item": {
+            "id": "minecraft:diamond",
+            "count": 1
+          },
+          "count": 8
+        },
+        {
+          "id": "12CB896F960504B7",
+          "type": "item",
+          "item": {
+            "id": "minecraft:golden_apple",
+            "count": 1
+          },
+          "count": 8
+        }
+      ]
+    },
+    {
+      "id": "48F94E85B08F7E71",
+      "x": 8,
+      "y": 4,
+      "icon": {
+        "id": "create:item_vault"
+      },
+      "min_width": 350,
+      "dependencies": [
+        "77CBB65AB509D459",
+        "503397AB7E037027",
+        "15DDC5E8C3DCBB88",
+        "7881A417D597920F"
+      ],
+      "dependency_requirement": "all_completed",
+      "optional": true,
+      "tasks": [
+        {
+          "id": "00A8EAF26EB8C74D",
+          "type": "advancement",
+          "advancement": "world_progression_core:frontline/mixed_reserve"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "45C6A0329202DD5A",
+          "type": "item",
+          "item": {
+            "id": "create:item_vault",
+            "count": 1
+          },
+          "count": 16
+        },
+        {
+          "id": "1B9888BA56F92BDB",
+          "type": "item",
+          "item": {
+            "id": "create:brass_funnel",
+            "count": 1
+          },
+          "count": 8
+        },
+        {
+          "id": "3D05CB234978349E",
+          "type": "item",
+          "item": {
+            "id": "minecraft:powered_rail",
+            "count": 1
+          },
+          "count": 48
+        }
+      ]
+    }
+  ]
+}

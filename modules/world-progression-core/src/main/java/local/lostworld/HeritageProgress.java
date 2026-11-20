@@ -39,6 +39,12 @@ public final class HeritageProgress {
         };
     }
 
+    static boolean inDepotRange(int x, int z, int siteX, int siteZ) {
+        long dx = (long) x - siteX;
+        long dz = (long) z - siteZ;
+        return dx * dx + dz * dz <= 128 * 128;
+    }
+
     public static String bossContract(String entityId) {
         return switch (entityId) {
             case "irons_spellbooks:dead_king" -> "dead_king";

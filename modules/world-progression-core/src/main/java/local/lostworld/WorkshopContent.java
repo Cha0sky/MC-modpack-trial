@@ -1,7 +1,10 @@
 package local.lostworld;
 
+import java.util.List;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
@@ -26,6 +29,12 @@ public final class WorkshopContent {
                     .effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 90 * 20), 1.0F).build())));
     public static final DeferredItem<Item> COBALT_CHARGE = ITEMS.registerSimpleItem("cobalt_furnace_charge");
     public static final DeferredItem<Item> PALLADIUM_CHARGE = ITEMS.registerSimpleItem("palladium_furnace_charge");
+    public static final DeferredItem<SupplyCrateItem> TRAIL_SUPPLY_CRATE = ITEMS.register("trail_supply_crate",
+            () -> new SupplyCrateItem(() -> List.of(
+                    new ItemStack(SEALED_RATION.get(), 2), new ItemStack(Items.TORCH, 8))));
+    public static final DeferredItem<SupplyCrateItem> RESCUE_SUPPLY_CRATE = ITEMS.register("rescue_supply_crate",
+            () -> new SupplyCrateItem(() -> List.of(
+                    new ItemStack(Items.GOLDEN_APPLE), new ItemStack(Items.SCAFFOLDING, 6))));
     // Only the four anchored devices are protected; the authored building stays editable.
     public static final DeferredBlock<WorkshopRelayBlock> RELAY=BLOCKS.register("workshop_relay",
             ()->new WorkshopRelayBlock(BlockBehaviour.Properties.of().strength(-1F,3600000F)

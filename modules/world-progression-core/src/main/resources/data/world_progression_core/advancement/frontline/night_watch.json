@@ -1,0 +1,59 @@
+{
+  "criteria": {
+    "zombie": {
+      "trigger": "exposure:frame_exposed",
+      "conditions": {
+        "frame": {
+          "day_time": {
+            "min": 13000,
+            "max": 23000
+          },
+          "entities_in_frame": [
+            {
+              "type": "minecraft:zombie"
+            }
+          ]
+        }
+      }
+    },
+    "skeleton": {
+      "trigger": "exposure:frame_exposed",
+      "conditions": {
+        "frame": {
+          "day_time": {
+            "min": 13000,
+            "max": 23000
+          },
+          "entities_in_frame": [
+            {
+              "type": "minecraft:skeleton"
+            }
+          ]
+        }
+      }
+    },
+    "pillager": {
+      "trigger": "exposure:frame_exposed",
+      "conditions": {
+        "frame": {
+          "day_time": {
+            "min": 13000,
+            "max": 23000
+          },
+          "entities_in_frame": [
+            {
+              "type": "minecraft:pillager"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "zombie",
+      "skeleton",
+      "pillager"
+    ]
+  ]
+}

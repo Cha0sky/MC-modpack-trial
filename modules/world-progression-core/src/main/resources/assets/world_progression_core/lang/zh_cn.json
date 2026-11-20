@@ -9,5 +9,9 @@
   "item.world_progression_core.thermal_binder": "热样胶",
   "item.world_progression_core.sealed_ration": "热封行军餐",
   "item.world_progression_core.cobalt_furnace_charge": "钴炉料",
-  "item.world_progression_core.palladium_furnace_charge": "钯金炉料"
+  "item.world_progression_core.palladium_furnace_charge": "钯金炉料",
+  "item.world_progression_core.trail_supply_crate": "野外补给包",
+  "item.world_progression_core.trail_supply_crate.contents": "右键拆包：2 份热封行军餐、8 支火把。",
+  "item.world_progression_core.rescue_supply_crate": "救援补给包",
+  "item.world_progression_core.rescue_supply_crate.contents": "右键拆包：1 个金苹果、6 个脚手架。"
 }

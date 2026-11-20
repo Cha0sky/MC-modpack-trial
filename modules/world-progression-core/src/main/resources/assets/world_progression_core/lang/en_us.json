@@ -9,5 +9,9 @@
   "item.world_progression_core.thermal_binder": "Thermal Binder",
   "item.world_progression_core.sealed_ration": "Sealed Field Ration",
   "item.world_progression_core.cobalt_furnace_charge": "Cobalt Furnace Charge",
-  "item.world_progression_core.palladium_furnace_charge": "Palladium Furnace Charge"
+  "item.world_progression_core.palladium_furnace_charge": "Palladium Furnace Charge",
+  "item.world_progression_core.trail_supply_crate": "Trail Supply Crate",
+  "item.world_progression_core.trail_supply_crate.contents": "Open to unpack 2 sealed field rations and 8 torches.",
+  "item.world_progression_core.rescue_supply_crate": "Rescue Supply Crate",
+  "item.world_progression_core.rescue_supply_crate.contents": "Open to unpack 1 golden apple and 6 scaffolding."
 }

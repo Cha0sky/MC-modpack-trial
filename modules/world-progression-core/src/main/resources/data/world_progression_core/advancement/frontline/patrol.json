@@ -1,0 +1,36 @@
+{
+  "criteria": {
+    "dead_king": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type_specific": {
+            "type": "minecraft:player",
+            "advancements": {
+              "world_progression_core:relic_expeditions/dead_king": true
+            }
+          }
+        }
+      }
+    },
+    "vizier": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type_specific": {
+            "type": "minecraft:player",
+            "advancements": {
+              "world_progression_core:relic_expeditions/vizier": true
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "dead_king",
+      "vizier"
+    ]
+  ]
+}
