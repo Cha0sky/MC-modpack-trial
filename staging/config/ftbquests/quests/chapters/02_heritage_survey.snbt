@@ -827,6 +827,53 @@
           "count": 32
         }
       ]
+    },
+    {
+      "id": "1AE60BE61CDFB7AE",
+      "x": 12,
+      "y": 3,
+      "icon": {
+        "id": "minecraft:glow_item_frame"
+      },
+      "min_width": 340,
+      "dependencies": [
+        "76FC61C7DB7BD176"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "optional": true,
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "638C2E52A4877124",
+          "type": "advancement",
+          "advancement": "world_progression_core:heritage/map_wall",
+          "criterion": "done"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "2156E72C2CAB12F1",
+          "type": "item",
+          "item": {
+            "id": "minecraft:glow_item_frame",
+            "count": 1
+          },
+          "count": 6
+        },
+        {
+          "id": "64647957A1A2859E",
+          "type": "item",
+          "item": {
+            "id": "minecraft:map",
+            "count": 1
+          },
+          "count": 16
+        }
+      ]
     }
   ]
 }

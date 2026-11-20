@@ -1,0 +1,26 @@
+{
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    },
+    "previous_calibration": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type_specific": {
+            "type": "minecraft:player",
+            "advancements": {
+              "world_progression_core:workshop/calibrate": true
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "done",
+      "previous_calibration"
+    ]
+  ]
+}

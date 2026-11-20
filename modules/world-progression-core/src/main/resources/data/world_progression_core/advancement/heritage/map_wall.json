@@ -1,0 +1,19 @@
+{
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "item": {
+          "items": "minecraft:filled_map"
+        },
+        "entity": {
+          "type": [
+            "minecraft:item_frame",
+            "minecraft:glow_item_frame"
+          ],
+          "nbt": "{Item:{id:\"minecraft:filled_map\",components:{\"minecraft:map_decorations\":{heritage:{}}}}}"
+        }
+      }
+    }
+  }
+}

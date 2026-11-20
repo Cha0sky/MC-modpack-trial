@@ -6,27 +6,14 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "title": "What it does",
-      "text": [
-        "Right-click to gain 1 allocatable point without gaining a level and without touching your experience.",
-        "One point per scroll by default (items.skill_scroll.points = 1, configurable).",
-        "Stacks to 16."
-      ]
+      "title": "Use",
+      "text": "Use the scroll to gain one unspent stat point, then open the point-buy screen."
     },
     {
       "type": "patchouli:crafting",
-      "recipe": "rpgleveling:skill_scroll",
       "title": "Crafting",
-      "text": [
-        "Gold ingot + lapis lazuli + paper, shaped."
-      ]
-    },
-    {
-      "type": "patchouli:text",
-      "title": "When to use it",
-      "text": [
-        "When you want points ahead of schedule, or want to gift some to a friend. Points are persisted, so a disconnect cannot eat them."
-      ]
+      "recipe": "rpgleveling:skill_scroll",
+      "text": "Arrange the ingredients as shown."
     }
   ]
 }

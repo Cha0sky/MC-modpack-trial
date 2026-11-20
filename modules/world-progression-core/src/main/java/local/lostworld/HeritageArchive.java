@@ -83,18 +83,18 @@ public final class HeritageArchive {
         if (existing>=0) player.getInventory().setItem(existing,book);else give(player,book);
         personal.putBoolean("book_received",true);
         HeritageEvents.mark(player,"archive_open");
-        message(player,"遗产档案已整理。书中记录共享成果与已发现地点；潜行右键选择地点，手持空地图可制图。");
+        message(player,"档案书已更新。潜行右键选地点，手持空地图右键制图。");
     }
     private static ItemStack book(HeritageWorldData world,MinecraftServer server) {
         List<Filterable<Component>> pages=new ArrayList<>();
         int mask=world.routes();
         pages.add(page("遗产调查档案\n\n工程："+((mask&1)!=0?"已汇集":"尚待调查")+"\n奥术："+((mask&2)!=0?"已汇集":"尚待调查")
-                +"\n远征："+((mask&4)!=0?"已汇集":"尚待调查")+"\n\n任意两类成果已足以建立共同档案。第三条路线仍可自由继续。"));
-        if ((mask&1)!=0) pages.add(page("工程记录\n\n热源、黄铜、机械手与流体加工，让旧工坊具备了更完整的生产能力。精密构件沿用原生装配工艺；取得成果，也意味着掌握了可继续扩展的工具。"));
-        if ((mask&2)!=0) pages.add(page("奥术记录\n\n亲自施法与仪式召唤，是两种可以选择的研究实践。记录保留方法差异，成果共同进入档案。它们曾与机械一样，服务于同一个文明的求知与生活。"));
-        if ((mask&4)!=0) pages.add(page("远征记录\n\n到达遗迹、了解危险、完成一次挑战，为记录留下了可追溯的地点。记录保留了地点与遭遇；它们之间的联系，还需要更完整的史料来解释。"));
+                +"\n远征："+((mask&4)!=0?"已汇集":"尚待调查")+"\n\n完成两类调查，即可整理地点并制图。"));
+        if ((mask&1)!=0) pages.add(page("工程记录\n\n工坊已能冶炼黄铜、灌装流体、装配精密构件。金板依次经过小齿轮、大齿轮、铁粒三道工序，循环五轮。"));
+        if ((mask&2)!=0) pages.add(page("奥术记录\n\n已完成一次术式实践。铁魔法师从佩戴的法术书施法；诡厄术士指挥僵尸仆从迎敌。"));
+        if ((mask&4)!=0) pages.add(page("远征记录\n\n调查队已踏入两类遗迹并赢下一场首领战。已发现地点的坐标附在后页。"));
         for (var site:world.sites()) pages.add(page(name(site.structure())+"\n\n"+coordinates(site)+"\n\n记录该类遗迹的首个发现地点。回到档案台，可将它绘成地图。"));
-        pages.add(page("继续整理\n\n带着这本书再次使用档案台，可更新共同的发现。\n\n这里尚有空白的篇页。你可以继续远征，或回到家园，把已掌握的工艺变成日常生活的一部分。"));
+        pages.add(page("档案台用法\n\n带着本书右键档案台可更新记录。潜行右键选择地点，松开潜行，再拿空地图右键绘图。"));
         WorldTurnEvents.read(server).ifPresent(status -> pages.add(page(status.archivePage())));
         ItemStack book=new ItemStack(Items.WRITTEN_BOOK);
         book.set(DataComponents.WRITTEN_BOOK_CONTENT,new WrittenBookContent(Filterable.passThrough("遗产调查档案"),"聚落档案",0,pages,true));

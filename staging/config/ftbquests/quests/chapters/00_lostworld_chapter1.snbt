@@ -58,6 +58,27 @@
             "count": 1
           },
           "count": 64
+        },
+        {
+          "id": "581A133BAEB43F91",
+          "type": "item",
+          "item": {
+            "id": "rpgleveling:skill_scroll",
+            "count": 1
+          },
+          "count": 1
+        },
+        {
+          "id": "70C7A8E90B9EA58D",
+          "type": "item",
+          "item": {
+            "id": "patchouli:guide_book",
+            "count": 1,
+            "components": {
+              "patchouli:book": "rpgleveling:guide"
+            }
+          },
+          "count": 1
         }
       ]
     },
@@ -481,6 +502,320 @@
       ]
     },
     {
+      "id": "5456B1A0E7DA4FB1",
+      "x": 3,
+      "y": -3,
+      "icon": {
+        "id": "rpgleveling:skill_scroll"
+      },
+      "min_width": 320,
+      "optional": true,
+      "dependencies": [
+        "4B61DD93ABC703EA"
+      ],
+      "progression_mode": "linear",
+      "dependency_requirement": "all_completed",
+      "tasks": [
+        {
+          "id": "18A1840E6AFFEF09",
+          "type": "advancement",
+          "advancement": "world_progression_core:prologue_training/allocate"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "4CA103DA5EF86FF8",
+          "type": "item",
+          "item": {
+            "id": "minecraft:string",
+            "count": 1
+          },
+          "count": 6
+        },
+        {
+          "id": "3E875A2799AB50A3",
+          "type": "item",
+          "item": {
+            "id": "minecraft:arrow",
+            "count": 1
+          },
+          "count": 32
+        }
+      ]
+    },
+    {
+      "id": "7BDB69CBFB808984",
+      "x": 3,
+      "y": -5,
+      "icon": {
+        "id": "evolvingblade:star_eater"
+      },
+      "min_width": 320,
+      "optional": true,
+      "dependencies": [
+        "4B61DD93ABC703EA"
+      ],
+      "progression_mode": "linear",
+      "dependency_requirement": "all_completed",
+      "tasks": [
+        {
+          "id": "616B6C7D258D4778",
+          "type": "advancement",
+          "advancement": "world_progression_core:prologue_training/blade"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "676A3B3D8F0F0E02",
+          "type": "choice",
+          "table_id": 0,
+          "table_data": {
+            "loot_size": 1,
+            "rewards": [
+              {
+                "id": "389B0E4DB12143E7",
+                "type": "item",
+                "item": {
+                  "id": "terra_curio:cloud_in_a_bottle",
+                  "count": 1
+                },
+                "count": 1,
+                "weight": 1.0
+              },
+              {
+                "id": "6C85F1F158F70BF3",
+                "type": "item",
+                "item": {
+                  "id": "terra_curio:hermes_boots",
+                  "count": 1
+                },
+                "count": 1,
+                "weight": 1.0
+              },
+              {
+                "id": "5201CE14DD6EA2CF",
+                "type": "item",
+                "item": {
+                  "id": "terra_curio:band_of_regeneration",
+                  "count": 1
+                },
+                "count": 1,
+                "weight": 1.0
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "213A9A128CAD6BCE",
+      "x": 7,
+      "y": 4,
+      "icon": {
+        "id": "confluence:copper_broadsword"
+      },
+      "min_width": 320,
+      "optional": true,
+      "dependencies": [
+        "36C3A881016E5E96"
+      ],
+      "progression_mode": "linear",
+      "dependency_requirement": "all_completed",
+      "tasks": [
+        {
+          "id": "2EFEBEC4C0277B3A",
+          "type": "advancement",
+          "advancement": "world_progression_core:prologue_training/melee"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "7561F16185071F35",
+          "type": "item",
+          "item": {
+            "id": "minecraft:cooked_beef",
+            "count": 1
+          },
+          "count": 16
+        }
+      ]
+    },
+    {
+      "id": "29910F7881ADB6DA",
+      "x": 7,
+      "y": 6,
+      "icon": {
+        "id": "confluence:iron_bow"
+      },
+      "min_width": 320,
+      "optional": true,
+      "dependencies": [
+        "36C3A881016E5E96"
+      ],
+      "progression_mode": "linear",
+      "dependency_requirement": "all_completed",
+      "tasks": [
+        {
+          "id": "77D7F6808479E97A",
+          "type": "advancement",
+          "advancement": "world_progression_core:prologue_training/archery"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "110F3C9122347E58",
+          "type": "item",
+          "item": {
+            "id": "minecraft:arrow",
+            "count": 1
+          },
+          "count": 64
+        }
+      ]
+    },
+    {
+      "id": "71919EA229FC8120",
+      "x": 7,
+      "y": 8,
+      "icon": {
+        "id": "confluence:amethyst_staff"
+      },
+      "min_width": 320,
+      "optional": true,
+      "dependencies": [
+        "36C3A881016E5E96"
+      ],
+      "progression_mode": "linear",
+      "dependency_requirement": "all_completed",
+      "tasks": [
+        {
+          "id": "3491CDAA666C0B8A",
+          "type": "advancement",
+          "advancement": "world_progression_core:prologue_training/magic"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "5ACD1B90324C04AD",
+          "type": "item",
+          "item": {
+            "id": "minecraft:amethyst_shard",
+            "count": 1
+          },
+          "count": 12
+        }
+      ]
+    },
+    {
+      "id": "6B3AEF5579D1E440",
+      "x": 10,
+      "y": 5,
+      "icon": {
+        "id": "terra_curio:cloud_in_a_bottle"
+      },
+      "min_width": 320,
+      "optional": true,
+      "dependencies": [
+        "213A9A128CAD6BCE",
+        "29910F7881ADB6DA",
+        "71919EA229FC8120"
+      ],
+      "progression_mode": "linear",
+      "dependency_requirement": "all_completed",
+      "tasks": [
+        {
+          "id": "58819EF49DEDB1BE",
+          "type": "advancement",
+          "advancement": "world_progression_core:prologue_training/accessory"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "73FE2E7D67A027F6",
+          "type": "item",
+          "item": {
+            "id": "minecraft:golden_carrot",
+            "count": 1
+          },
+          "count": 12
+        }
+      ],
+      "min_required_dependencies": 1
+    },
+    {
+      "id": "4EE951BF8047A144",
+      "x": 12,
+      "y": 3,
+      "icon": {
+        "id": "confluence:slime_crown"
+      },
+      "min_width": 320,
+      "optional": true,
+      "dependencies": [
+        "04E0645E6BC170B0",
+        "5456B1A0E7DA4FB1",
+        "7BDB69CBFB808984",
+        "6B3AEF5579D1E440"
+      ],
+      "progression_mode": "linear",
+      "dependency_requirement": "all_completed",
+      "tasks": [
+        {
+          "id": "1670EF3556E8C412",
+          "type": "item",
+          "item": {
+            "id": "confluence:slime_crown",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "rewards": [
+        {
+          "id": "6F587E46C49D99AD",
+          "type": "item",
+          "item": {
+            "id": "minecraft:scaffolding",
+            "count": 1
+          },
+          "count": 32
+        },
+        {
+          "id": "341C87913537ED08",
+          "type": "item",
+          "item": {
+            "id": "minecraft:cooked_beef",
+            "count": 1
+          },
+          "count": 12
+        }
+      ]
+    },
+    {
+      "id": "1AD32E2C8ED462C4",
+      "x": 12,
+      "y": -3,
+      "icon": {
+        "id": "minecraft:map"
+      },
+      "min_width": 320,
+      "optional": true,
+      "dependencies": [
+        "04E0645E6BC170B0"
+      ],
+      "progression_mode": "linear",
+      "dependency_requirement": "all_completed",
+      "tasks": [
+        {
+          "id": "532C13C1DF891557",
+          "type": "advancement",
+          "advancement": "world_progression_core:prologue_training/veteran"
+        }
+      ],
+      "rewards": []
+    },
+    {
       "id": "441D1DEFF4C0B58E",
       "x": 14,
       "y": 0,
@@ -489,7 +824,8 @@
       },
       "min_width": 300,
       "dependencies": [
-        "04E0645E6BC170B0"
+        "4EE951BF8047A144",
+        "1AD32E2C8ED462C4"
       ],
       "dependency_requirement": "all_completed",
       "progression_mode": "linear",
@@ -542,7 +878,8 @@
           },
           "count": 8
         }
-      ]
+      ],
+      "min_required_dependencies": 1
     },
     {
       "id": "259C64DF4D981F3C",
@@ -661,6 +998,48 @@
             "count": 1
           },
           "count": 64
+        }
+      ]
+    },
+    {
+      "id": "0370187D6B231F81",
+      "x": 19,
+      "y": 3,
+      "icon": {
+        "id": "evolvingblade:star_eater"
+      },
+      "min_width": 320,
+      "optional": true,
+      "dependencies": [
+        "259C64DF4D981F3C"
+      ],
+      "progression_mode": "linear",
+      "dependency_requirement": "all_completed",
+      "tasks": [
+        {
+          "id": "61D8C7E66DED38C4",
+          "type": "advancement",
+          "advancement": "world_progression_core:prologue_training/wave"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "4820F6099F8D07EA",
+          "type": "item",
+          "item": {
+            "id": "minecraft:experience_bottle",
+            "count": 1
+          },
+          "count": 16
+        },
+        {
+          "id": "1052EDA3CD8AED62",
+          "type": "item",
+          "item": {
+            "id": "minecraft:golden_apple",
+            "count": 1
+          },
+          "count": 2
         }
       ]
     }

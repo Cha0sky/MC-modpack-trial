@@ -2,6 +2,7 @@
 from pathlib import Path
 import hashlib
 import json
+from build_prologue_training import add_training
 
 ROOT = Path(__file__).resolve().parents[1]
 QUESTS = ROOT / "staging/config/ftbquests/quests"
@@ -41,7 +42,7 @@ def milestone_supplies(name):
     return rewards
 
 
-def main():
+def main(write_languages=True):
     chapter = {"id":uid("chapter"),"filename":"00_lostworld_chapter1","order_index":-1,
                "icon":{"id":"evolvingblade:star_eater"},"progression_mode":"linear","quests":[]}
     lang = {"chapter."+uid("chapter")+".title":"序章 · 从小屋出发"}
@@ -60,7 +61,7 @@ def main():
         q["rewards"].extend(milestone_supplies(name))
         chapter["quests"].append(q)
         lang["quest."+q["id"]+".title"]=title
-        lang["quest."+q["id"]+".quest_desc"]=["【叙事占位："+title+"】",*desc]
+        lang["quest."+q["id"]+".quest_desc"]=desc
 
     def adv(name):
         return {"type":"advancement","advancement":"world_progression_core:"+name,"criterion":"done"}
@@ -69,53 +70,47 @@ def main():
         return {"type":"item","item":{"id":name,"count":1},"count":count,"consume_items":False}
 
     quest("arrival","在小屋里醒来",[
-        "开场剧情暂留占位，后续补写。",
-        "这里有床、空箱和工作台。沿门廊出入聚落，屋外的空地可以继续扩建。",
-        "成长剑已采用标准路线。先领取面包、火把和原木，安顿下来再出发；任务书中的物资需要手动领取。"],
+        "床边的箱子可以存东西。打开任务书领面包、火把和原木，带上成长剑出门。"],
         0,0,"minecraft:red_bed",tasks=[adv("arrive")])
-    quest("explore","走出聚落",["离开小屋，走到距离起点至少 96 格的地方，寻找树林、石头和矿洞。",
-        "猩红与腐化区域已经生成，但在击败史莱姆王之前无法进入；不必在边界上反复尝试。"],
+    quest("explore","走出聚落",[
+        "沿小镇外的路走出至少 96 格，找一处矿洞。猩红和腐化的边界会在史莱姆王倒下后打开。"],
         2,0,"minecraft:compass",needs=["arrival"],tasks=[adv("explore")])
-    quest("tools","准备下矿",["制作一把石镐。带上开局领取的食物与火把，再准备一些垫脚方块；多余物资可以先留在家里。"],
+    quest("tools","准备下矿",[
+        "做一把石镐。带上火把和垫脚石，把暂时用不到的东西留在家里。"],
         4,0,"minecraft:stone_pickaxe",needs=["explore"],tasks=[item("minecraft:stone_pickaxe")])
-    quest("mine","第一趟矿洞",["在低于聚落地面至少 12 格的主世界矿层，用镐实际挖掘石头或矿石。",
-        "带回 32 个圆石、8 个煤炭和 6 个粗铁。任务检测不会消耗这些材料。",
-        "完成后领取一批石料、燃料和铁铜锭，用来做工具与起步设备；不用为了每个基础零件反复跑矿洞。"],
+    quest("mine","第一趟矿洞",[
+        "从聚落地面往下至少 12 格，亲手挖一块石头或矿石。带回 32 圆石、8 煤炭和 6 粗铁。"],
         6,0,"minecraft:raw_iron",needs=["tools"],tasks=[adv("first_mine"),item("minecraft:cobblestone",32),item("minecraft:coal",8),item("minecraft:raw_iron",6)])
-    quest("template","材料的另一种用法",["查看 JEI，制作泥土模板。当前无限之核使用材料直接合成模板，不需要空白模板。"],
+    quest("template","材料的另一种用法",[
+        "在 JEI 中查看泥土模板的配方，先用泥土做出第一个模板。"],
         8,-1,"infinitecore:template_dirt",needs=["mine"],tasks=[item("infinitecore:template_dirt")])
-    quest("generator","第一个泥土生成器",["亲手合成一个泥土生成器：8 个泥土模板围绕 1 块橡木木板。",
-        "这一节点检测真实合成记录，单纯领取或捡到方块不算完成。",
-        "领取泥土、木材和石材作为第一批扩建物资，生成器负责后续持续供应。"],
+    quest("generator","第一个泥土生成器",[
+        "在工作台中间放橡木木板，周围摆满 8 个泥土模板。亲手做出的生成器可以持续供应泥土。"],
         10,-1,"infinitecore:dirt_generator",needs=["template"],tasks=[adv("craft_dirt_generator")])
-    quest("alloy","机械动力的起点",["制作并保留至少 4 个安山合金，按 JEI 配方准备 Create 基础材料。"],
+    quest("alloy","机械动力的起点",[
+        "制作 4 个安山合金，留给接下来的传动部件。"],
         8,1,"create:andesite_alloy",needs=["mine"],tasks=[item("create:andesite_alloy",4)])
-    quest("create","一套基础机械方块",["制作传动杆、齿轮、手摇曲柄和安山机壳各 1 个。先用手摇曲柄理解转动与传动。",
-        "本次试作检测持有这些部件；自动化规模、动力指标与配方调整后续再展开。"],
+    quest("create","一套基础机械方块",[
+        "备齐传动杆、齿轮、手摇曲柄和安山机壳各 1 个。把曲柄接到齿轮上，右键转动它。"],
         10,1,"create:hand_crank",needs=["alloy"],tasks=[item("create:shaft"),item("create:cogwheel"),item("create:hand_crank"),item("create:andesite_casing")])
-    quest("workshop","为旅途建立后方",["泥土生成器和机械动力的基础已经准备就绪。把小屋发展成自己的第一处基地。",
-        "完成两条分支后，领取 1 个维度网络发生器和一批储物、建筑、远征物资，把家整理成可以随时出发的后方。"],
+    quest("workshop","为旅途建立后方",[
+        "泥土生成器管原料，曲柄带动机械。领走维度网络发生器，把矿物和下一趟出门的行装分开收好。"],
         12,0,"beyonddimensions:net_creater",needs=["generator","create"],tasks=[{"type":"checkmark"}],reward=True)
-    quest("king","第一次首领挑战：史莱姆王",["在工作台合成史莱姆皇冠，准备装备与补给后召唤并击败史莱姆王。",
-        "新增配方：8 个凝胶围绕 1 个金冠或铂金冠，产出 1 个史莱姆皇冠；皇冠本体沿用原生工作台配方。原祭坛配方保留。",
-        "本章不改写汇流来世原生首领进度。",
-        "史莱姆王击败记录按整个存档共享。普通史莱姆、首领仆从和取消的死亡不会打开区域。",
-        "通关后领取保护Ⅱ、耐久Ⅱ铁胸甲，连同金苹果和经验瓶一起为边境调查做好准备。"],
+    quest("king","第一次首领挑战：史莱姆王",[
+        "选一处开阔地，使用史莱姆皇冠召唤史莱姆王。横向跑开它的落点，等它落地再还击。"],
         14,0,"minecraft:slime_block",needs=["workshop"],tasks=[adv("unlock_evil")])
-    quest("next","通往猩红与腐化的道路",["史莱姆王倒下后，整个世界的猩红与腐化区域解除进入限制，重新登录后仍保持开放。",
-        "第一章“重启第一座工坊”已可接续：调查腐化或猩红、完成机械加工、制造调谐器并修复旧工坊。",
-        "两种指南针是可自行补齐的探索工具；第一章从本节点接续，不要求先把两种指南针都做完。"],
+    quest("next","通往猩红与腐化的道路",[
+        "猩红和腐化的道路已经打开。去边境带一批木料回来，第一座工坊就有了开工的材料。"],
         16,0,"minecraft:map",needs=["king"],tasks=[{"type":"checkmark"}])
-    quest("nature_compass","合成自然罗盘",["击败史莱姆王后，按 JEI 的原生配方亲手合成 1 个自然罗盘。",
-        "检测自然罗盘的首次制作配方；仅持有、拾取或修复已有罗盘不算。击败史莱姆王之前的合成不计入此节点。",
-        "领取望远镜和拴绳，把沿途值得停留的地方与动物带进自己的生活。"],
+    quest("nature_compass","合成自然罗盘",[
+        "击败史莱姆王后，亲手做一个自然罗盘。用它搜索腐化或猩红，出发前记下回家的方向。"],
         18,-1,"naturescompass:naturescompass",needs=["next"],tasks=[adv("craft_natures_compass")])
-    quest("explorer_compass","合成探险者指南针",["击败史莱姆王后，按 JEI 的原生配方亲手合成 1 个探险者指南针。",
-        "检测指南针的首次制作配方；仅持有、拾取或修复已有指南针不算。击败史莱姆王之前的合成不计入此节点。",
-        "领取空地图与脚手架，为之后的遗迹测绘、攀爬和搭建准备工具。"],
+    quest("explorer_compass","合成探险者指南针",[
+        "击败史莱姆王后，亲手做一个探险者指南针。选择结构名称，它会指引你寻找遗迹。"],
         18,1,"explorerscompass:explorerscompass",needs=["next"],tasks=[adv("craft_explorers_compass")])
+    add_training(chapter, lang, uid)
     write(QUESTS / "chapters/00_lostworld_chapter1.snbt",chapter)
-    for locale in ("zh_cn","en_us"):
+    for locale in (("zh_cn","en_us") if write_languages else ()):
         dest=QUESTS / f"lang/{locale}.snbt"
         existing=json.loads(dest.read_text("utf-8-sig"))
         existing.update(lang)
@@ -152,9 +147,9 @@ def main():
             for kind in ("tasks","rewards"):
                 ids.extend(t["id"] for t in q.get(kind,[]))
     assert len(ids)==len(set(ids)),"Quest IDs collide"
-    assert len(chapter["quests"])==13
+    assert len(chapter["quests"])==22
     verify_chapter(chapter)
-    print("First chapter: 13 quests, post-King crafting tasks, workbench slime crown; stable unique positive IDs")
+    print("Prologue: 22 quests; three weapon drills, field kit, shared-world catch-up and post-King sword practice")
 
 
 def verify_chapter(chapter):
@@ -172,7 +167,11 @@ def verify_chapter(chapter):
         assert q["dependencies"] or q["id"]==uid("arrival"),"Unexpected unlocked root"
         reached.add(q["id"])
     assert nodes[uid("workshop")]["dependencies"]==[uid("generator"),uid("create")]
-    assert nodes[uid("king")]["dependencies"]==[uid("workshop")]
+    assert nodes[uid("king")]["dependencies"]==[uid("crown"),uid("campaign")]
+    assert nodes[uid("king")]["min_required_dependencies"]==1
+    assert nodes[uid("crown")]["dependencies"]==[uid(n) for n in ("workshop","allocate","blade","loadout")]
+    assert nodes[uid("loadout")]["dependencies"]==[uid(n) for n in ("melee","archery","magic")]
+    assert nodes[uid("loadout")]["min_required_dependencies"]==1
     for name in ("nature_compass","explorer_compass"):
         assert nodes[uid(name)]["dependencies"]==[uid("next")]
         assert nodes[uid(name)]["tasks"][0]["type"]=="advancement"

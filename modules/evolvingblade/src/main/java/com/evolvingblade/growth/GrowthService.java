@@ -48,19 +48,24 @@ public final class GrowthService {
 
     /** 记一次普通敌对击杀。 */
     public static GrowthData creditHostileKill(ServerPlayer player) {
-        GrowthData updated = data(player).creditHostileKill(EBConfig.settings().hostilePointWeight());
-        set(player, updated);
-        // 计数**任何**变化都要立刻同步 + 立刻协调属性：
-        // 否则用别的武器拿到的击杀会让仪表盘计数过期，直到下一次升阶才刷新。
-        syncAfterChange(player);
-        return updated;
+        GrowthData before = data(player);
+        return credit(player, before, before.creditHostileKill(EBConfig.settings().hostilePointWeight()));
     }
 
     /** 记一次 Boss 击杀（不会同时算普通击杀）。 */
     public static GrowthData creditBossKill(ServerPlayer player) {
-        GrowthData updated = data(player).creditBossKill(EBConfig.settings().bossPointWeight());
+        GrowthData before = data(player);
+        return credit(player, before, before.creditBossKill(EBConfig.settings().bossPointWeight()));
+    }
+
+    private static GrowthData credit(ServerPlayer player, GrowthData before, GrowthData updated) {
         set(player, updated);
         syncAfterChange(player);
+        GrowthSettings settings = EBConfig.settings();
+        int stage = updated.stage(settings);
+        if (stage > before.stage(settings)) {
+            com.evolvingblade.combat.AbilityVisuals.evolve(player, stage);
+        }
         return updated;
     }
 

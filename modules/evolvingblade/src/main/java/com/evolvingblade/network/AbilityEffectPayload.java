@@ -49,6 +49,7 @@ public record AbilityEffectPayload(
     public static final int KIND_SLAYER = 3;
     /** 吸血点流向施法者。 */
     public static final int KIND_LIFESTEAL = 4;
+    public static final int KIND_EVOLUTION = 5;
 
     /** 观察者可见距离上限（方块）；超出者收不到包，事件本身也因此有界。 */
     public static final double MAX_VIEW_DISTANCE = 64.0D;
@@ -110,7 +111,7 @@ public record AbilityEffectPayload(
         double clampedMagnitude = Double.isFinite(magnitude)
                 ? Math.max(0.0D, Math.min(MAX_MAGNITUDE, magnitude))
                 : 0.0D;
-        return new AbilityEffectPayload(Math.max(0, Math.min(KIND_LIFESTEAL, kind)),
+        return new AbilityEffectPayload(Math.max(0, Math.min(KIND_EVOLUTION, kind)),
                 safeOrigin.x, safeOrigin.y, safeOrigin.z,
                 (float) safeDirection.x, (float) safeDirection.y, (float) safeDirection.z,
                 clampedMagnitude, Math.max(0, Math.min(MAX_TIER, tier)));

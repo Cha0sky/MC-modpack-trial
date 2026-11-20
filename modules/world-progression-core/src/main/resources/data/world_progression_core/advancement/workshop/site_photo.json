@@ -1,0 +1,14 @@
+{
+  "criteria": {
+    "done": {
+      "trigger": "exposure:frame_exposed",
+      "conditions": {
+        "player": {
+          "location": {
+            "structures": "world_progression_core:abandoned_workshop"
+          }
+        }
+      }
+    }
+  }
+}

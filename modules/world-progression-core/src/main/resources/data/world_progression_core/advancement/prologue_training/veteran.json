@@ -1,0 +1,29 @@
+{
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:impossible"
+    },
+    "three_styles": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type_specific": {
+            "type": "minecraft:player",
+            "advancements": {
+              "world_progression_core:prologue_training/melee": true,
+              "world_progression_core:prologue_training/archery": true,
+              "world_progression_core:prologue_training/magic": true,
+              "world_progression_core:unlock_evil": true
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "done",
+      "three_styles"
+    ]
+  ]
+}

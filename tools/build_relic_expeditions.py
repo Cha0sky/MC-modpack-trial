@@ -56,38 +56,46 @@ def main():
         lang[f"quest.{qid}.quest_desc"] = lines
 
     add("provisions", "工坊配给 · 整装出发", [
-        "完成第四章的实地检验后，从工坊带上两份热封行军餐。热样胶、铜板和厨锅料理在压机下的工作盆里装成一份餐。",
-        "领取空地图和照明，选择地下墓穴或林地府邸。只勘察一个地点并把地图带回家，也能完成本章。"],
+        "装上 2 份热封行军餐，领取空地图和照明。选地下墓穴或林地府邸出发，带一份现场记录回来。"],
         "world_progression_core:sealed_ration", (0, 0), [equipment_id("trial")],
         [("minecraft:map", 4), ("minecraft:soul_torch", 48)])
     add("catacombs", "墓穴线 · 找到地下墓穴", [
-        "铁魔法的归途指南针可以寻找地下墓穴，也可用探险者指南针搜索 irons_spellbooks:catacombs。",
-        "进入结构范围稍作停留，世界档案会记下此类遗迹的首个坐标。可以先撤出制图，日后再进深处挑战。"],
+        "用归途指南针找铁魔法地下墓穴，或搜 irons_spellbooks:catacombs。走进结构稍作停留，档案台会记下坐标。"],
         "irons_spellbooks:wayward_compass", (2.5, -2), [uid("provisions")],
         [("minecraft:ladder", 48), ("minecraft:golden_carrot", 24)], optional=True)
     add("mansion", "府邸线 · 查明林地据点", [
-        "用林地探险家地图，或用探险者指南针搜索 minecraft:mansion，进入原版林地府邸的建筑范围并稍作停留。",
-        "府邸地点会写入档案，空手调查即可。要邀战灾厄宰相，再准备诡厄的黑暗卷轴。"],
+        "跟随林地探险家地图，或用指南针搜 minecraft:mansion。进入府邸稍作停留，记下第一个发现地点。"],
         "minecraft:dark_oak_log", (2.5, 2), [uid("provisions")],
         [("minecraft:scaffolding", 64), ("minecraft:cooked_beef", 32)], optional=True)
-    add("chart", "交回远征地图", [
-        "任意一条勘察线完成后，返回遗产档案台。空手潜行右键选中地下墓穴或林地府邸，再主手持空地图、松开潜行右键制图。",
-        "一张空地图换一张带有目标标记与坐标的地图。这份地图可以交给队友，也可以留给下一次讨伐使用。"],
-        "minecraft:filled_map", (5, 0), [uid("catacombs"), uid("mansion")],
-        [("minecraft:compass", 2), ("minecraft:iron_block", 8), ("minecraft:experience_bottle", 24)], any_one=True)
     add("dead_king", "自选讨伐 · 死者之王", [
-        "回到地下墓穴深处，与沉睡的遗骸互动可唤醒死者之王。先找到退路，再决定是否开战。",
-        "击败现身的死者之王本体。原生掉落照常取得。曾有玩家击杀统计的旧战果同样可以登记。"],
+        "深入墓穴，与沉睡的遗骸互动，唤醒并击败死者之王。先记住来路，再进内室。"],
         "irons_spellbooks:necronomicon_spell_book", (5, -3), [uid("catacombs")],
         [("irons_spellbooks:epic_ink", 1), ("irons_spellbooks:arcane_essence", 32),
          ("minecraft:experience_bottle", 32)], optional=True)
     add("vizier", "自选讨伐 · 灾厄宰相", [
-        "在工作台上竖排放黑色染料、魔法布料和不死图腾，制作诡厄的黑暗卷轴。在林地府邸内长按使用卷轴召唤宰相。",
-        "留意剑击、尖刺与怒鬼。击败宰相本体即可完成，分身不计。诡厄原生的亲自击败或仆从击败成就都可接续。"],
+        "把黑色染料、魔法布料、不死图腾从上到下竖排，做成黑暗卷轴。在府邸内长按使用，击败现身的灾厄宰相。"],
         "goety:dark_scroll", (5, 3), [uid("mansion")],
         [("goety:magic_fabric", 8), ("minecraft:diamond", 4), ("minecraft:golden_apple", 6)], optional=True)
 
-    for name in ("catacombs", "mansion", "chart"):
+    add("notebook", "测绘员 · 写一页现场手记", [
+        "主手拿羽毛，副手放纸。走进地下墓穴或林地府邸，潜行右键遗址中的方块，留下一张带实地坐标的手记。"],
+        "minecraft:writable_book", (5, -1), [uid("catacombs"), uid("mansion")],
+        [("minecraft:paper", 24), ("minecraft:glow_ink_sac", 8)], optional=True, any_one=True)
+    add("field_photo", "摄影师 · 遗址里的第一帧", [
+        "带装好胶片的拾光定影相机，站在地下墓穴或林地府邸内部按下快门。带一帧照片回来，也算调查凭据。"],
+        "exposure:camera", (5, 1), [uid("catacombs"), uid("mansion")],
+        [("minecraft:glow_item_frame", 4), ("minecraft:amethyst_shard", 16)], optional=True, any_one=True)
+    add("chart", "交回远征地图", [
+        "现场手记、遗址照片或当地首领战果，带回任意一种。回档案台，空手潜行右键选中墓穴或府邸。松开潜行，用空地图右键绘出返程图，下一章就靠它选址。"],
+        "minecraft:filled_map", (8, 0), [uid("notebook"), uid("field_photo"), uid("dead_king"), uid("vizier")],
+        [("minecraft:compass", 2), ("minecraft:iron_block", 8), ("minecraft:experience_bottle", 24)], any_one=True)
+    ruins = "world_progression_core:survey_ruins"
+    write(DATA / "tags/worldgen/structure/survey_ruins.json", {"replace": False,
+          "values": ["minecraft:mansion", "irons_spellbooks:catacombs"]})
+    write(DATA / "advancement/relic_expeditions/field_photo.json", {"criteria": {"shutter": {
+        "trigger": "exposure:frame_exposed", "conditions": {"player": {"location": {"structures": "#" + ruins}}}
+    }}})
+    for name in ("catacombs", "mansion", "chart", "notebook"):
         write(DATA / f"advancement/relic_expeditions/{name}.json", {"criteria": {"done": {"trigger": "minecraft:impossible"}}})
     boss_advancement("dead_king", "irons_spellbooks:dead_king")
     boss_advancement("vizier", "goety:vizier", ("goety:goety/kill_a_vizier", "goety:goety/servant_kill_vizier"))

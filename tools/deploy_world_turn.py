@@ -61,6 +61,11 @@ def deploy_chapter(*, version, previous_version, chapter_name, revised_keys, bas
                 existing[key] = value
         payloads[relative] = (json.dumps(existing, ensure_ascii=False, indent=2) + "\n").encode("utf-8")
 
+    install_payloads(instance, payloads, receipt_name, version, apply)
+
+
+def install_payloads(instance, payloads, receipt_name, version, apply):
+    """Back up and install only the prepared files, or display the same plan in a dry run."""
     for relative in payloads:
         if not (instance / relative).resolve().is_relative_to(instance):
             raise RuntimeError(f"Deployment path escapes instance: {relative}")

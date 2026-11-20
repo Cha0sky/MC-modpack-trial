@@ -139,59 +139,6 @@
       ]
     },
     {
-      "id": "33B054D584DD1602",
-      "x": 5,
-      "y": 0,
-      "min_width": 330,
-      "icon": {
-        "id": "minecraft:filled_map"
-      },
-      "optional": false,
-      "progression_mode": "linear",
-      "dependencies": [
-        "4E12304BAD37FF5B",
-        "646D06C50CFE205B"
-      ],
-      "dependency_requirement": "all_completed",
-      "tasks": [
-        {
-          "id": "11F2E14A6FA84DE7",
-          "type": "advancement",
-          "advancement": "world_progression_core:relic_expeditions/chart"
-        }
-      ],
-      "rewards": [
-        {
-          "id": "38CB2ABF2B4309FD",
-          "type": "item",
-          "item": {
-            "id": "minecraft:compass",
-            "count": 1
-          },
-          "count": 2
-        },
-        {
-          "id": "2A3681379623A079",
-          "type": "item",
-          "item": {
-            "id": "minecraft:iron_block",
-            "count": 1
-          },
-          "count": 8
-        },
-        {
-          "id": "17C0B1DC70A29C6F",
-          "type": "item",
-          "item": {
-            "id": "minecraft:experience_bottle",
-            "count": 1
-          },
-          "count": 24
-        }
-      ],
-      "min_required_dependencies": 1
-    },
-    {
       "id": "3E5955E508399D8A",
       "x": 5,
       "y": -3,
@@ -292,6 +239,149 @@
           "count": 6
         }
       ]
+    },
+    {
+      "id": "506301D381EF9278",
+      "x": 5,
+      "y": -1,
+      "min_width": 330,
+      "icon": {
+        "id": "minecraft:writable_book"
+      },
+      "optional": true,
+      "progression_mode": "linear",
+      "dependencies": [
+        "4E12304BAD37FF5B",
+        "646D06C50CFE205B"
+      ],
+      "dependency_requirement": "all_completed",
+      "tasks": [
+        {
+          "id": "67A6F8F6FF1F8009",
+          "type": "advancement",
+          "advancement": "world_progression_core:relic_expeditions/notebook"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "2C69574BAE2CC872",
+          "type": "item",
+          "item": {
+            "id": "minecraft:paper",
+            "count": 1
+          },
+          "count": 24
+        },
+        {
+          "id": "63A1A22D4AFC4396",
+          "type": "item",
+          "item": {
+            "id": "minecraft:glow_ink_sac",
+            "count": 1
+          },
+          "count": 8
+        }
+      ],
+      "min_required_dependencies": 1
+    },
+    {
+      "id": "6D5B56E25E848D5C",
+      "x": 5,
+      "y": 1,
+      "min_width": 330,
+      "icon": {
+        "id": "exposure:camera"
+      },
+      "optional": true,
+      "progression_mode": "linear",
+      "dependencies": [
+        "4E12304BAD37FF5B",
+        "646D06C50CFE205B"
+      ],
+      "dependency_requirement": "all_completed",
+      "tasks": [
+        {
+          "id": "7681C7AEF47773EC",
+          "type": "advancement",
+          "advancement": "world_progression_core:relic_expeditions/field_photo"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "70C8721AAAC7A87B",
+          "type": "item",
+          "item": {
+            "id": "minecraft:glow_item_frame",
+            "count": 1
+          },
+          "count": 4
+        },
+        {
+          "id": "64D6B31E030B3E79",
+          "type": "item",
+          "item": {
+            "id": "minecraft:amethyst_shard",
+            "count": 1
+          },
+          "count": 16
+        }
+      ],
+      "min_required_dependencies": 1
+    },
+    {
+      "id": "33B054D584DD1602",
+      "x": 8,
+      "y": 0,
+      "min_width": 330,
+      "icon": {
+        "id": "minecraft:filled_map"
+      },
+      "optional": false,
+      "progression_mode": "linear",
+      "dependencies": [
+        "506301D381EF9278",
+        "6D5B56E25E848D5C",
+        "3E5955E508399D8A",
+        "093F5AD1EFBF4A19"
+      ],
+      "dependency_requirement": "all_completed",
+      "tasks": [
+        {
+          "id": "11F2E14A6FA84DE7",
+          "type": "advancement",
+          "advancement": "world_progression_core:relic_expeditions/chart"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "38CB2ABF2B4309FD",
+          "type": "item",
+          "item": {
+            "id": "minecraft:compass",
+            "count": 1
+          },
+          "count": 2
+        },
+        {
+          "id": "2A3681379623A079",
+          "type": "item",
+          "item": {
+            "id": "minecraft:iron_block",
+            "count": 1
+          },
+          "count": 8
+        },
+        {
+          "id": "17C0B1DC70A29C6F",
+          "type": "item",
+          "item": {
+            "id": "minecraft:experience_bottle",
+            "count": 1
+          },
+          "count": 24
+        }
+      ],
+      "min_required_dependencies": 1
     }
   ]
 }

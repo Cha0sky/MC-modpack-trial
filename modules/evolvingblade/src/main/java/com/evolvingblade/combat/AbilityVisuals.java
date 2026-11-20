@@ -28,6 +28,14 @@ public final class AbilityVisuals {
 
     private AbilityVisuals() {}
 
+    public static void evolve(ServerPlayer player, int stage) {
+        Vec3 center = torsoCenter(player);
+        AbilityEffectPayload.broadcast(player.serverLevel(), center, AbilityEffectPayload.of(
+                AbilityEffectPayload.KIND_EVOLUTION, center, player.getLookAngle(), 1.0D, stage));
+        player.displayClientMessage(net.minecraft.network.chat.Component.translatable("message.evolvingblade.evolved",
+                net.minecraft.network.chat.Component.translatable("evolvingblade.stage." + stage)), true);
+    }
+
     /** 命中点（生命值真的下降过的目标中心）：交叉星芒。 */
     public static void hit(ServerLevel level, ServerPlayer caster, Vec3 point, int stage) {
         if (level == null || point == null) {

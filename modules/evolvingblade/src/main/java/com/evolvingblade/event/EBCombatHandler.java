@@ -179,6 +179,8 @@ public final class EBCombatHandler {
         if (charged && before != null) {
             GrowthSettings settings = EBConfig.settings();
             int stage = GrowthService.stage(player);
+            com.evolvingblade.combat.AbilityVisuals.hit(player.serverLevel(), player,
+                    victim.position().add(0, victim.getBbHeight() * 0.52D, 0), stage);
             if (com.evolvingblade.growth.Abilities.unlocked(stage, settings.abilities().lifestealUnlockStage())) {
                 double heal = CombatMath.lifestealAmount(settings, stage, before, victim.getHealth());
                 if (heal > 0.0D) {

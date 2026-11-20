@@ -41,6 +41,13 @@ def advancements():
             "player": equipment({"mainhand": "#" + TOOL_TAG})}}},
         "suit": {metal: {"trigger": "minecraft:location", "conditions": {"player": equipment(slots)}}
                  for metal, slots in suits.items()},
+        "prospect": {"done": {"trigger": "minecraft:impossible"}},
+        "patrol": {
+            group + "_" + metal: {"trigger": "minecraft:player_killed_entity", "conditions": {
+                "player": equipment(slots), "entity": {"type": ["minecraft:" + mob for mob in mobs]}}}
+            for group, mobs in (("melee", ("zombie", "husk", "spider")), ("ranged", ("skeleton", "stray", "pillager")))
+            for metal, slots in suits.items()
+        },
         "trial": {
             "done": {"trigger": "minecraft:impossible"},  # A successful ore harvest, awarded by FieldEquipmentEvents.
             **{metal: {"trigger": "minecraft:player_killed_entity",
@@ -78,39 +85,33 @@ def main():
         lang[f"quest.{qid}.quest_desc"] = lines
 
     quest("bench", "把新矿带上工作台", [
-        "取得第三章的第一份新锭后，准备重型工作台。普通工作台中竖排放入工作台、铁砧或铅砧、工作台即可制作。",
-        "拿到重型工作台或空手右键打开已放好的工作台，都能留下记录。",
-        "接下来任选采掘或战斗路线。只有最后的下一阶锻造任务会涉及秘银或山铜。"
-    ], BENCH, 0, 0, [world_turn_id("first_ingot")], [("minecraft:coal", 32), ("minecraft:oak_log", 64)])
+        "在工作台里竖排叠放工作台、铁砧或铅砧、工作台，做成重型工作台。家里已经有的话，空手右键打开。"], BENCH, 0, 0, [world_turn_id("first_ingot")], [("minecraft:coal", 32), ("minecraft:oak_log", 64)])
     quest("tool", "采掘 · 换上新工具", [
-        "在重型工作台制作钴镐、钴钻头、钯金镐或钯金钻头。把其中一件拿在主手，稍等片刻即可记录。",
-        "钴镐需要 15 个钴锭、3 根珍珠木棍；钴钻头用 12 个钴锭。钯金镐需要 18 个钯金锭、3 根珍珠木棍，钯金钻头用 18 个钯金锭。",
-        "镐柄用的珍珠木棍可在重型工作台用 3 块珍珠木板制成 6 根。钻头路线可以直接使用金属锭。"
-    ], "confluence:cobalt_drill", 2, -1, [uid("bench")],
+        "选一件拿到主手。钴镐用 15 锭、钴钻头用 12 锭；钯金镐和钻头各用 18 锭。做镐另备 3 根珍珠木棍。"], "confluence:cobalt_drill", 2, -1, [uid("bench")],
           [("minecraft:torch", 64), ("minecraft:rail", 48)], optional=True)
     quest("suit", "战斗 · 选一套合身的盔甲", [
-        "在重型工作台制作钴或钯金护甲。穿上同一材质的头部、胸甲、护腿、靴子四件，稍等片刻即可登记。",
-        "头部按流派选。钴可用头盔、钴帽或面具，钯金可用头盔、头饰或面具。一整套钴甲共 45 锭，钯金甲共 54 锭。",
-        "按你原有的战斗习惯搭配成长剑、弓或法术。想继续使用其他护甲也可以走采掘路线。"
-    ], "confluence:palladium_chestplate", 2, 1, [uid("bench")],
+        "穿齐同一种金属的头、胸、腿、靴。钴套共 45 锭，钯金套共 54 锭；头部款式可按职业选。"], "confluence:palladium_chestplate", 2, 1, [uid("bench")],
           [("minecraft:golden_carrot", 32), ("minecraft:arrow", 64)], optional=True)
+    quest("prospect", "采掘队 · 探到第二层矿脉", [
+        "主手用钴或钯金镐钻，从深板岩中采出一块秘银矿或山铜矿。神锤敲开更多祭坛，可以显出下一层矿脉。"],
+        "confluence:raw_mythril", 4, -2, [uid("tool")], [("minecraft:rail", 64), ("minecraft:diamond", 3)], optional=True)
+    quest("patrol", "护卫队 · 两种交锋", [
+        "穿齐钴甲或钯金甲。击败一只近敌（僵尸、尸壳、蜘蛛）和一只射手（骷髅、流浪者、掠夺者），两场可换武器。"],
+        "minecraft:shield", 4, 2, [uid("suit")], [("minecraft:golden_apple", 3), ("minecraft:experience_bottle", 24)], optional=True)
     quest("trial", "把整备用起来", [
-        "任选一种实际行动。采掘路线在生存模式用上述镐或钻头挖一块有矿物掉落的矿石，例如铁矿。",
-        "战斗路线穿齐上述任一套装，击败一只僵尸、尸壳、骷髅、流浪者、蜘蛛或掠夺者。可自由选择武器。",
-        "完成一条路线即可领取扩建与远征补给。其他路线和下一阶锻造可以随后继续。"
-    ], "minecraft:golden_apple", 4, 0, [uid("tool"), uid("suit")],
+        "采掘队带新镐或钻头下矿，护卫队穿整套新甲巡夜。完成其中一队的实地工作，就能领物资准备遗址远征。"], "minecraft:golden_apple", 6, 0, [uid("prospect"), uid("patrol")],
           [("minecraft:iron_block", 8), ("minecraft:experience_bottle", 32), ("minecraft:golden_apple", 6)], either=True)
     quest("anvil", "选修 · 下一阶锻造", [
-        "继续按原生祭坛线索寻找下一层矿物，准备秘银砧或山铜砧。取得或放置其中一座即可记录。",
-        "重型工作台配方分别需要 10 个秘银锭或 12 个山铜锭，另加 3 块珍珠木板。查看 JEI 安排采集与熔炼。"
-    ], "confluence:mythril_anvil", 6, -1, [uid("trial")],
+        "用重型工作台把 10 秘银锭或 12 山铜锭，搭配 3 块珍珠木板，做成对应的困难砧。"], "confluence:mythril_anvil", 8, -1, [uid("trial")],
           [("minecraft:anvil", 2), ("minecraft:obsidian", 32)], optional=True)
 
     resources = advancements()
     for name, criteria in resources.items():
+        requirements = ([["melee_cobalt", "melee_palladium"], ["ranged_cobalt", "ranged_palladium"]]
+                        if name == "patrol" else [list(criteria)])
         write(DATA / f"advancement/field_equipment/{name}.json", {
             "neoforge:conditions": [{"type": "neoforge:mod_loaded", "modid": "confluence"}],
-            "criteria": criteria, "requirements": [list(criteria)],
+            "criteria": criteria, "requirements": requirements,
         })
     write(DATA / "tags/item/field_equipment/mining_tools.json", {"replace": False, "values": [
         {"id": f"confluence:{metal}_{tool}", "required": False}

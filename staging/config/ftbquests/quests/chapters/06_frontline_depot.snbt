@@ -398,6 +398,11 @@
           "id": "7130A6D1A3D143FF",
           "type": "advancement",
           "advancement": "world_progression_core:frontline/opened"
+        },
+        {
+          "id": "208855A63DC60E46",
+          "type": "advancement",
+          "advancement": "world_progression_core:frontline/field_use"
         }
       ],
       "rewards": [
@@ -654,6 +659,47 @@
             "count": 1
           },
           "count": 8
+        }
+      ]
+    },
+    {
+      "id": "1BABC98BEF700C36",
+      "x": 8,
+      "y": -6,
+      "icon": {
+        "id": "evolvingblade:star_eater"
+      },
+      "min_width": 350,
+      "dependencies": [
+        "72AE6BEF433C5981"
+      ],
+      "dependency_requirement": "all_completed",
+      "optional": true,
+      "tasks": [
+        {
+          "id": "10C54E9736419390",
+          "type": "advancement",
+          "advancement": "world_progression_core:prologue_training/burst"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "406242291913EBD9",
+          "type": "item",
+          "item": {
+            "id": "minecraft:diamond",
+            "count": 1
+          },
+          "count": 4
+        },
+        {
+          "id": "178022A15CB9CAE9",
+          "type": "item",
+          "item": {
+            "id": "minecraft:golden_carrot",
+            "count": 1
+          },
+          "count": 32
         }
       ]
     },

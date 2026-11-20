@@ -382,6 +382,81 @@
       "rewards": []
     },
     {
+      "id": "73D976C55BE9E545",
+      "x": 11,
+      "y": -1.5,
+      "icon": {
+        "id": "world_progression_core:rough_tuner"
+      },
+      "min_width": 320,
+      "dependencies": [
+        "24BD52ACFB3E6BD0"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "optional": true,
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "048C20B6ABDE4180",
+          "type": "advancement",
+          "advancement": "world_progression_core:workshop/diagnose"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "72EE910AB38746DC",
+          "type": "item",
+          "item": {
+            "id": "create:belt_connector",
+            "count": 1
+          },
+          "count": 4
+        }
+      ]
+    },
+    {
+      "id": "7E1885917CDC8351",
+      "x": 11,
+      "y": 1.5,
+      "icon": {
+        "id": "exposure:camera"
+      },
+      "min_width": 320,
+      "dependencies": [
+        "24BD52ACFB3E6BD0"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "optional": true,
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "5903818DC997E756",
+          "type": "advancement",
+          "advancement": "world_progression_core:workshop/site_photo",
+          "criterion": "done"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "4E1BBF5B0BB1E32D",
+          "type": "item",
+          "item": {
+            "id": "minecraft:item_frame",
+            "count": 1
+          },
+          "count": 4
+        }
+      ]
+    },
+    {
       "id": "7A22062328908A03",
       "x": 12,
       "y": 0,
@@ -390,7 +465,8 @@
       },
       "min_width": 320,
       "dependencies": [
-        "24BD52ACFB3E6BD0"
+        "73D976C55BE9E545",
+        "7E1885917CDC8351"
       ],
       "dependency_requirement": "all_completed",
       "progression_mode": "linear",
@@ -407,7 +483,8 @@
           "criterion": "done"
         }
       ],
-      "rewards": []
+      "rewards": [],
+      "min_required_dependencies": 1
     },
     {
       "id": "4FB59596BCAF8408",

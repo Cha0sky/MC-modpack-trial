@@ -23,12 +23,10 @@ def generate():
     }
     lang = {"chapter." + chapter["id"] + ".title": "第三章 · 世界转折"}
 
-    def add(name, title, description, icon, dependency, advancement=None, rewards=(), pos=None):
+    def add(name, title, description, icon, dependency, advancement=None, rewards=(), pos=None, optional=False, either=False):
         qid = uid(name)
-        task = {"id": uid(name + "/task"), "type": "checkmark"}
-        if advancement:
-            task.update(type="advancement", advancement="world_progression_core:world_turn/" + advancement,
-                        criterion="done")
+        record = "world_progression_core:world_turn/" + advancement if advancement else "minecraft:story/enter_the_nether"
+        task = {"id": uid(name + "/task"), "type": "advancement", "advancement": record}
         x, y = pos or (len(chapter["quests"]) * 2.5, 0)
         chapter["quests"].append({
             "id": qid, "x": x, "y": y,
@@ -36,60 +34,51 @@ def generate():
             "dependencies": [dependency] if isinstance(dependency, str) else dependency,
             "dependency_requirement": "all_completed",
             "progression_mode": "linear", "tasks": [task],
+            "optional": optional,
             "rewards": [{"id": uid(name + "/reward/" + key), "type": "item", "item": stack, "count": count}
                         for key, stack, count in rewards],
         })
+        if either:
+            chapter["quests"][-1]["min_required_dependencies"] = 1
         lang["quest." + qid + ".title"] = title
         lang["quest." + qid + ".quest_desc"] = description
 
     add("prepare", "去往下界之前", [
-        "从遗产档案继续远征，准备好装备、照明和可返回的下界通道。勾选后可以领取金胡萝卜、抗火药水和搭路石料。",
-        "击败血肉首领会开启汇流来世的困难模式，随后部分主世界地形会发生变化。想先试打时，请使用备份存档。",
-        "先分头勘察下界热源、在厨房备餐，再回工坊压封补给。勘察时带上粗制调谐器和至少 1 份共振胶。",
-    ], "confluence:guide_voodoo_doll", previous, rewards=[
+        "带粗制调谐器和 1 份共振胶进入下界，领好远征石料。血肉首领倒下后，世界将进入困难模式，部分地形会随之转化。"], "confluence:guide_voodoo_doll", previous, rewards=[
         ("food", {"id": "minecraft:golden_carrot", "count": 1}, 32),
         ("fire_resistance", {"id": "minecraft:potion", "count": 1,
                              "components": {"minecraft:potion_contents": {"potion": "minecraft:long_fire_resistance"}}}, 2),
         ("path_blocks", {"id": "minecraft:cobblestone", "count": 1}, 64),
     ])
     add("survey", "下界 · 从岩浆块取样", [
-        "先去下界走一趟，选好传送门和返回路线。主手拿粗制调谐器，副手放共振胶，右键下界的岩浆块。",
-        "1 份共振胶可采到 2 份热样胶，足够压封两餐。岩浆块保留，可以再次取样。",
-    ], "world_progression_core:thermal_binder", uid("prepare"), "thermal_survey", pos=(2.5, -1))
+        "在下界主手持调谐器、副手放共振胶，右键岩浆块。1 份胶能取到 2 份热样胶。"], "world_progression_core:thermal_binder", uid("prepare"), "thermal_survey", pos=(2.5, -1))
     add("cook", "后方 · 备一锅饭", [
-        "在热源上架起农夫乐事的厨锅，任选蔬菜汤、鸡汤、炖牛肉或炒饭，盛碗后带到压机旁。",
-        "炖牛肉可用生牛肉、胡萝卜和马铃薯；也可以按 JEI 用自家农产做蔬菜汤。取得其中一份即可记入，队友可以负责厨房。",
-    ], "farmersdelight:cooking_pot", uid("prepare"), "field_kitchen", pos=(2.5, 1))
+        "在热源上架厨锅，煮蔬菜汤、鸡汤、炖牛肉或炒饭，盛出一份。炖牛肉可用生牛肉、胡萝卜和马铃薯。"], "farmersdelight:cooking_pot", uid("prepare"), "field_kitchen", pos=(2.5, 1))
     add("pack", "工坊 · 压封行军餐", [
-        "在机械压机下方放工作盆。每次投入 1 份热样胶、1 张铜板和 1 份备好的料理，压出 1 份热封行军餐。可以手动投料，也可以用漏斗或传送带接入。",
-        "将成品拿到背包里。吃一餐恢复 8 点饥饿值并获得 90 秒抗火，饱食时也能使用。另一份热样胶可以留给下次远征。",
-    ], "world_progression_core:sealed_ration", [uid("survey"), uid("cook")], "pack_ration",
+        "给压机下的工作盆放入 1 份料理、1 张铜板和 1 份热样胶。把压好的行军餐带到前线；吃下恢复 8 点饥饿值，并获得 90 秒抗火。"], "world_progression_core:sealed_ration", [uid("survey"), uid("cook")], "pack_ration",
         rewards=[("copper", {"id": "minecraft:copper_ingot", "count": 1}, 16),
                  ("chute", {"id": "create:chute", "count": 1}, 4)], pos=(5, 0))
+    add("beacons", "工兵 · 给退路点灯", [
+        "沿下界退路放三盏灯笼，可混用灵魂灯笼。手持调谐器依次右键，每两站相隔 12～32 格，终点距起点至少 24 格。三盏都留在原位。"],
+        "minecraft:lantern", uid("pack"), "beacons",
+        rewards=[("road", {"id": "minecraft:polished_blackstone_bricks", "count": 1}, 64)], pos=(7.5, -1.5), optional=True)
+    add("vanguard", "先锋 · 耐火试战", [
+        "在下界吃一份热封行军餐，趁这 90 秒抗火时间击败烈焰人或岩浆怪。"],
+        "minecraft:blaze_rod", uid("pack"), "vanguard",
+        rewards=[("supply", {"id": "minecraft:golden_carrot", "count": 1}, 24)], pos=(7.5, 1.5), optional=True)
     add("flesh", "击败血肉首领", [
-        "按向导巫毒玩偶的提示选择形态，再把玩偶投入下界岩浆。击败血肉墙或血肉山中的任意一位。",
-        "任务读取汇流来世的世界通关记录，你可以和同伴一起打。过去已经完成的挑战也会计入。",
-        "查看原生战利品并收好神锤，下一步可以用它显现新矿。",
-    ], "confluence:wall_of_flesh_treasure_bag", uid("pack"), "flesh_defeated", pos=(7.5, 0))
+        "看向导巫毒玩偶的提示选择形态，把玩偶投入下界岩浆。击败血肉墙或血肉山，收好掉落的神锤。"], "confluence:wall_of_flesh_treasure_bag", [uid("beacons"), uid("vanguard")], "flesh_defeated", pos=(10, 0), either=True)
     add("transition", "世界已进入困难模式", [
-        "当血肉首领的战果和困难模式状态都已记录，本节点会自动完成。",
-        "世界可能还在分批转换地形。带着遗产档案书使用档案台，可以分别查看首领战果、困难模式状态和地形转换进度。",
-        "准备神锤和采矿装备，就可以开始寻找新材料。",
-    ], "confluence:pwnhammer", uid("flesh"), "hardmode_open", pos=(10, 0))
+        "世界进入困难模式后，带档案书回档案台查看地形转化进度。下一趟带神锤去找祭坛。"], "confluence:pwnhammer", uid("flesh"), "hardmode_open", pos=(12.5, 0))
     add("charge", "回程 · 给地狱熔炉配料", [
-        "拿神锤敲祭坛显现新矿，带回 6 份粗钴或 6 份粗钯金。在基地把这批矿交给机械搅拌器与工作盆。",
-        "6 份同种粗矿一次混成 1 块对应炉料，无需加热或注液。首批先拿到背包里登记，再送进地狱熔炉；以后可以直接连续供料。",
-    ], "world_progression_core:cobalt_furnace_charge", uid("transition"), "batch_charge", pos=(12.5, 0))
+        "用神锤敲祭坛显出矿物。把 6 份同种粗钴或粗钯金放入工作盆，用机械搅拌器冷拌成一块炉料。"], "world_progression_core:cobalt_furnace_charge", uid("transition"), "batch_charge", pos=(15, 0))
     add("first_ingot", "第一炉新矿", [
-        "把搅拌好的炉料和燃料送入地狱熔炉。一块炉料一次熔出 2 个对应金属锭。原生散矿配方仍可用，3 粗矿出 1 锭。",
-        "把钴锭或钯金锭收进背包，下一章从重型工作台继续。已有原生战果和新锭的玩家可以使用原有物资补做前面的工序。",
-        "把新材料带回基地，开始准备下一轮完整配装。可领取经验修补书、经验瓶和地狱砖。",
-    ], "confluence:cobalt_ingot", uid("charge"), "first_ingot", rewards=[
+        "把炉料送入有燃料的地狱熔炉，一炉出 2 个对应金属锭。拿到成品，就可以铸造第一套困难模式装备。"], "confluence:cobalt_ingot", uid("charge"), "first_ingot", rewards=[
         ("mending", {"id": "minecraft:enchanted_book", "count": 1,
                      "components": {"minecraft:stored_enchantments": {"levels": {"minecraft:mending": 1}}}}, 1),
         ("experience", {"id": "minecraft:experience_bottle", "count": 1}, 32),
         ("nether_bricks", {"id": "minecraft:nether_bricks", "count": 1}, 128),
-    ], pos=(15, 0))
+    ], pos=(17.5, 0))
     return chapter, lang
 
 
@@ -122,7 +111,7 @@ def main():
     write(QUESTS / f"chapters/{FILENAME}.snbt", chapter)
     for locale in ("zh_cn", "en_us"):
         merge(QUESTS / f"lang/{locale}.snbt", lang)
-    for name in ("thermal_survey", "flesh_defeated", "hardmode_open", "first_ingot"):
+    for name in ("thermal_survey", "flesh_defeated", "hardmode_open", "first_ingot", "beacons", "vanguard"):
         write(DATA / f"advancement/world_turn/{name}.json",
               {"criteria": {"done": {"trigger": "minecraft:impossible"}}})
     write(DATA / "tags/item/world_turn_ingots.json", {"replace": False, "values": [
@@ -130,7 +119,7 @@ def main():
         {"id": "confluence:palladium_ingot", "required": False},
     ]})
     supply_resources()
-    print("World Turn: 8 quests, archive prerequisite and reward IDs verified")
+    print(f"World Turn: {len(chapter['quests'])} quests")
 
 
 def supply_resources():

@@ -1,6 +1,7 @@
 package local.lostworld;
 
 import net.minecraft.core.registries.Registries;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.tags.TagKey;
@@ -20,9 +21,14 @@ public final class FieldEquipmentEvents {
     public static void onOreHarvest(BlockDropsEvent event) {
         if (!event.isCanceled() && event.getBreaker() instanceof ServerPlayer player
                 && !player.isCreative() && !player.isSpectator() && event.getTool().is(MINING_TOOLS)
-                && event.getState().is(Tags.Blocks.ORES) && !event.getDrops().isEmpty()) {
+                && !event.getDrops().isEmpty()) {
+            ResourceLocation ore = BuiltInRegistries.BLOCK.getKey(event.getState().getBlock());
+            boolean secondTier = ore.getNamespace().equals("confluence")
+                    && (ore.getPath().equals("deepslate_mythril_ore") || ore.getPath().equals("deepslate_orichalcum_ore"));
+            if (!secondTier && !event.getState().is(Tags.Blocks.ORES)) return;
             ChapterEvents.award(player, "field_equipment/tool");
             ChapterEvents.award(player, "field_equipment/trial");
+            if (secondTier) ChapterEvents.award(player, "field_equipment/prospect");
         }
     }
 }

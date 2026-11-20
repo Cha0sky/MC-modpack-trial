@@ -1,0 +1,66 @@
+{
+  "criteria": {
+    "hit": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "mainhand": {
+              "items": [
+                "confluence:copper_bow",
+                "confluence:copper_short_bow",
+                "confluence:tin_bow",
+                "confluence:tin_short_bow",
+                "confluence:iron_bow",
+                "confluence:iron_short_bow",
+                "confluence:lead_bow",
+                "confluence:lead_short_bow",
+                "confluence:silver_bow",
+                "confluence:silver_short_bow",
+                "confluence:tungsten_bow",
+                "confluence:tungsten_short_bow",
+                "confluence:golden_bow",
+                "confluence:golden_short_bow",
+                "confluence:platinum_bow",
+                "confluence:platinum_short_bow",
+                "confluence:wooden_short_bow"
+              ]
+            }
+          }
+        },
+        "entity": {
+          "type": [
+            "minecraft:zombie",
+            "minecraft:husk",
+            "minecraft:drowned",
+            "minecraft:skeleton",
+            "minecraft:stray",
+            "minecraft:bogged",
+            "minecraft:spider",
+            "minecraft:cave_spider",
+            "minecraft:creeper",
+            "minecraft:slime",
+            "minecraft:pillager"
+          ]
+        },
+        "damage": {
+          "dealt": {
+            "min": 1
+          },
+          "blocked": false,
+          "type": {
+            "direct_entity": {
+              "type": [
+                "minecraft:arrow",
+                "minecraft:spectral_arrow",
+                "confluence:arrow_projectile",
+                "confluence:bee_arrow_projectile",
+                "confluence:hell_bat_arrow_projectile"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

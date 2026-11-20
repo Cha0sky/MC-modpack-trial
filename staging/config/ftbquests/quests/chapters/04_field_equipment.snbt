@@ -134,8 +134,92 @@
       ]
     },
     {
-      "id": "7E82D9E88152A714",
+      "id": "05C3B5ABE28C81AC",
       "x": 4,
+      "y": -2,
+      "icon": {
+        "id": "confluence:raw_mythril"
+      },
+      "min_width": 330,
+      "progression_mode": "linear",
+      "dependency_requirement": "all_completed",
+      "dependencies": [
+        "5C52AA144E887000"
+      ],
+      "optional": true,
+      "tasks": [
+        {
+          "id": "326DA48C7B764C11",
+          "type": "advancement",
+          "advancement": "world_progression_core:field_equipment/prospect"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "5AC6C16CA14B9400",
+          "type": "item",
+          "item": {
+            "id": "minecraft:rail",
+            "count": 1
+          },
+          "count": 64
+        },
+        {
+          "id": "119BA8C8EFC5125A",
+          "type": "item",
+          "item": {
+            "id": "minecraft:diamond",
+            "count": 1
+          },
+          "count": 3
+        }
+      ]
+    },
+    {
+      "id": "3E7102F7DAA60E52",
+      "x": 4,
+      "y": 2,
+      "icon": {
+        "id": "minecraft:shield"
+      },
+      "min_width": 330,
+      "progression_mode": "linear",
+      "dependency_requirement": "all_completed",
+      "dependencies": [
+        "60BCE50D3F42F766"
+      ],
+      "optional": true,
+      "tasks": [
+        {
+          "id": "3F1407C83F4BCDF0",
+          "type": "advancement",
+          "advancement": "world_progression_core:field_equipment/patrol"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "481535712CC41569",
+          "type": "item",
+          "item": {
+            "id": "minecraft:golden_apple",
+            "count": 1
+          },
+          "count": 3
+        },
+        {
+          "id": "12D3CD902B619A6C",
+          "type": "item",
+          "item": {
+            "id": "minecraft:experience_bottle",
+            "count": 1
+          },
+          "count": 24
+        }
+      ]
+    },
+    {
+      "id": "7E82D9E88152A714",
+      "x": 6,
       "y": 0,
       "icon": {
         "id": "minecraft:golden_apple"
@@ -144,8 +228,8 @@
       "progression_mode": "linear",
       "dependency_requirement": "all_completed",
       "dependencies": [
-        "5C52AA144E887000",
-        "60BCE50D3F42F766"
+        "05C3B5ABE28C81AC",
+        "3E7102F7DAA60E52"
       ],
       "optional": false,
       "tasks": [
@@ -188,7 +272,7 @@
     },
     {
       "id": "003111937F6E15CC",
-      "x": 6,
+      "x": 8,
       "y": -1,
       "icon": {
         "id": "confluence:mythril_anvil"

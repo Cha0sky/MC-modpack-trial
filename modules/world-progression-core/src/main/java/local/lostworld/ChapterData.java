@@ -20,6 +20,7 @@ public final class ChapterData extends SavedData {
     private BlockPos home;
     private BlockPos bed;
     private boolean settlementPending;
+    private boolean kingDefeatedBeforeTraining;
     private final Set<UUID> arrivals = new HashSet<>();
 
     public static ChapterData find(ServerLevel level) {
@@ -29,6 +30,7 @@ public final class ChapterData extends SavedData {
         return level.getServer().overworld().getDataStorage().computeIfAbsent(FACTORY, KEY);
     }
     public ChapterState state() { return state; }
+    public boolean kingDefeatedBeforeTraining() { return kingDefeatedBeforeTraining; }
     public BlockPos settlement() { return settlement; }
     public BlockPos home() { return home; }
     public BlockPos bed() { return bed!=null ? bed : settlement==null ? null : settlement.offset(6,1,32); }
@@ -57,6 +59,8 @@ public final class ChapterData extends SavedData {
     public static ChapterData load(CompoundTag tag, HolderLookup.Provider provider) {
         ChapterData data = new ChapterData();
         data.state = new ChapterState(tag.getBoolean("active"), tag.getBoolean("king_slime_defeated"));
+        data.kingDefeatedBeforeTraining = tag.getInt("schema_version") < 4
+                ? data.state.defeated() : tag.getBoolean("king_defeated_before_training");
         data.settlementPending = tag.getBoolean("settlement_pending");
         if (tag.contains("settlement", Tag.TAG_LONG)) data.settlement = BlockPos.of(tag.getLong("settlement"));
         if (tag.contains("home", Tag.TAG_LONG)) data.home = BlockPos.of(tag.getLong("home"));
@@ -69,7 +73,8 @@ public final class ChapterData extends SavedData {
         return data;
     }
     @Override public CompoundTag save(CompoundTag tag, HolderLookup.Provider provider) {
-        tag.putInt("schema_version", 3);
+        tag.putInt("schema_version", 4);
+        tag.putBoolean("king_defeated_before_training", kingDefeatedBeforeTraining);
         tag.putBoolean("settlement_pending", settlementPending);
         tag.putBoolean("active", state.active()); tag.putBoolean("king_slime_defeated", state.defeated());
         if (settlement != null) tag.putLong("settlement", settlement.asLong());

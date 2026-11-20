@@ -10,6 +10,7 @@ import com.mojang.blaze3d.platform.InputConstants;
 
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
+import net.minecraft.commands.Commands;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.api.distmarker.Dist;
@@ -19,6 +20,7 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.ClientPlayerNetworkEvent;
 import net.neoforged.neoforge.client.event.ClientTickEvent;
+import net.neoforged.neoforge.client.event.RegisterClientCommandsEvent;
 import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
 import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
@@ -39,12 +41,14 @@ public final class EBClient {
             InputConstants.Type.KEYSYM,
             InputConstants.KEY_G,
             "key.categories.evolvingblade");
+    private static boolean journalRequested;
 
     public EBClient(IEventBus modEventBus, ModContainer container) {
         container.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
         modEventBus.addListener(EBClient::onRegisterKeyMappings);
         modEventBus.addListener(EBClient::onClientSetup);
         NeoForge.EVENT_BUS.addListener(EBClient::onClientTick);
+        NeoForge.EVENT_BUS.addListener(EBClient::onClientCommands);
         NeoForge.EVENT_BUS.addListener(EBClient::onGatherTooltip);
         NeoForge.EVENT_BUS.addListener(EBClient::onLoggingIn);
         NeoForge.EVENT_BUS.addListener(EBClient::onLoggingOut);
@@ -94,6 +98,8 @@ public final class EBClient {
         if (snapshot == null || !snapshot.hasMode()) {
             elements.add(com.mojang.datafixers.util.Either.left(
                     Component.translatable("tooltip.evolvingblade.star_eater.awaiting")));
+            elements.add(com.mojang.datafixers.util.Either.left(Component.translatable(
+                    "tooltip.evolvingblade.star_eater.open", OPEN_DASHBOARD.getTranslatedKeyMessage())));
             return;
         }
         elements.add(com.mojang.datafixers.util.Either.left(Component.translatable(
@@ -106,15 +112,11 @@ public final class EBClient {
             elements.add(com.mojang.datafixers.util.Either.left(Component.translatable(
                     "tooltip.evolvingblade.star_eater.effective_attack",
                     format(snapshot.effectiveHeldAttack()))));
-            elements.add(com.mojang.datafixers.util.Either.left(Component.translatable(
-                    "tooltip.evolvingblade.star_eater.effective_note")));
-        } else {
-            // 未持剑：绝不显示"有效攻击"，否则就是在借用别的武器的加成。
-            elements.add(com.mojang.datafixers.util.Either.left(
-                    Component.translatable("tooltip.evolvingblade.star_eater.not_held")));
         }
         elements.add(com.mojang.datafixers.util.Either.left(Component.translatable(
                 "tooltip.evolvingblade.star_eater.speed", format(snapshot.stageAttackSpeed()))));
+        elements.add(com.mojang.datafixers.util.Either.left(Component.translatable(
+                "tooltip.evolvingblade.star_eater.open", OPEN_DASHBOARD.getTranslatedKeyMessage())));
     }
 
     private static String format(double value) {
@@ -125,6 +127,14 @@ public final class EBClient {
         event.register(OPEN_DASHBOARD);
     }
 
+    private static void onClientCommands(RegisterClientCommandsEvent event) {
+        event.getDispatcher().register(Commands.literal("bladefolio").executes(context -> {
+            // Chat closes after command dispatch. Open the journal on the following client tick.
+            journalRequested = true;
+            return 1;
+        }));
+    }
+
     private static void onClientSetup(FMLClientSetupEvent event) {
         // 模型属性只读物品上的阶段快照组件（显示用，绝不参与结算）。
         net.minecraft.client.renderer.item.ItemProperties.register(EBItems.starEater(),
@@ -133,11 +143,13 @@ public final class EBClient {
     }
 
     private static void onLoggingIn(ClientPlayerNetworkEvent.LoggingIn event) {
+        journalRequested = false;
         EBClientState.resetOnLogin();
         EBAbilityClient.reset();
     }
 
     private static void onLoggingOut(ClientPlayerNetworkEvent.LoggingOut event) {
+        journalRequested = false;
         EBClientState.resetOnLogin();
         EBAbilityClient.reset();
     }
@@ -147,14 +159,14 @@ public final class EBClient {
         // 先推进技能特效脚本（纯客户端本地粒子，不产生网络流量）。
         EBAbilityClient.tick();
         while (OPEN_DASHBOARD.consumeClick()) {
-            if (minecraft.player == null || minecraft.level == null) {
-                continue;
-            }
+            journalRequested = true;
+        }
+        EBPayloads.StateSnapshot snapshot = EBClientState.snapshot();
+        if (journalRequested && snapshot != null && minecraft.player != null && minecraft.level != null
+                && minecraft.screen == null) {
+            journalRequested = false;
             EBClientState.allowManualOpen();
-            EBPayloads.StateSnapshot snapshot = EBClientState.snapshot();
-            minecraft.setScreen(snapshot != null && snapshot.hasMode()
-                    ? new DashboardScreen()
-                    : new ChoiceScreen());
+            minecraft.setScreen(snapshot.hasMode() ? new DashboardScreen() : new ChoiceScreen());
         }
         // 首次登录自动弹出一次：必须等世界/玩家就绪，且当前没有别的界面（例如原版加载界面）。
         if (minecraft.player != null && minecraft.level != null && minecraft.screen == null

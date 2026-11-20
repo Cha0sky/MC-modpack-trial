@@ -1,7 +1,7 @@
 {
   "name": "RPG 加点手册 / RPG Leveling Guide",
   "subtitle": "13 个维度 · 26 条加点线 / 13 stats · 26 lines",
-  "landing_text": "按 K 打开加点界面 / Press K to open the point-buy screen.\n本手册讲解 13 个维度、26 条加点线、等级经验、物品与全部指令。/ This book covers the 13 stats, the 26 point-buy lines, experience, items and every command.",
+  "landing_text": "第一次升级后，翻到「基础」分配第一点。战前可以再来换一套加点。 / Open Basics to spend your first point or change your build before a fight.",
   "use_resource_pack": true,
   "book_texture": "patchouli:textures/gui/book_blue.png",
   "model": "rpgleveling:guide_book",

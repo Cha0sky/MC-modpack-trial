@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.function.Supplier;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
@@ -31,6 +32,14 @@ public final class SupplyCrateItem extends Item {
                 player.getInventory().placeItemBackInInventory(stack);
             }
             player.awardStat(Stats.ITEM_USED.get(this));
+            if (player instanceof ServerPlayer server) {
+                String dimension = level.dimension().location().toString();
+                var pos = player.blockPosition();
+                boolean inField = HeritageWorldData.get(server.serverLevel()).sites().stream().anyMatch(site ->
+                        site.dimension().equals(dimension) && !HeritageProgress.surveyQuest(site.structure()).isEmpty()
+                        && HeritageProgress.inDepotRange(pos.getX(), pos.getZ(), site.pos().getX(), site.pos().getZ()));
+                if (inField) ChapterEvents.award(server, "frontline/field_use");
+            }
             player.getCooldowns().addCooldown(this, 8);
             level.playSound(null, player.blockPosition(), SoundEvents.BUNDLE_DROP_CONTENTS, SoundSource.PLAYERS, 0.8F, 1.0F);
         }

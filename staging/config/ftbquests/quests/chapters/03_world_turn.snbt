@@ -23,9 +23,11 @@
       "tasks": [
         {
           "id": "601DB0CBEA74E1F1",
-          "type": "checkmark"
+          "type": "advancement",
+          "advancement": "minecraft:story/enter_the_nether"
         }
       ],
+      "optional": false,
       "rewards": [
         {
           "id": "69F80BE4CE214BE3",
@@ -78,10 +80,10 @@
         {
           "id": "1421AF4843F94103",
           "type": "advancement",
-          "advancement": "world_progression_core:world_turn/thermal_survey",
-          "criterion": "done"
+          "advancement": "world_progression_core:world_turn/thermal_survey"
         }
       ],
+      "optional": false,
       "rewards": []
     },
     {
@@ -101,10 +103,10 @@
         {
           "id": "3019F2986D926677",
           "type": "advancement",
-          "advancement": "world_progression_core:world_turn/field_kitchen",
-          "criterion": "done"
+          "advancement": "world_progression_core:world_turn/field_kitchen"
         }
       ],
+      "optional": false,
       "rewards": []
     },
     {
@@ -125,10 +127,10 @@
         {
           "id": "4E637F4C3729982C",
           "type": "advancement",
-          "advancement": "world_progression_core:world_turn/pack_ration",
-          "criterion": "done"
+          "advancement": "world_progression_core:world_turn/pack_ration"
         }
       ],
+      "optional": false,
       "rewards": [
         {
           "id": "0D846A85AC5AF436",
@@ -151,11 +153,11 @@
       ]
     },
     {
-      "id": "6A44FF99927AF1BD",
+      "id": "4D04B92651DCACB9",
       "x": 7.5,
-      "y": 0,
+      "y": -1.5,
       "icon": {
-        "id": "confluence:wall_of_flesh_treasure_bag"
+        "id": "minecraft:lantern"
       },
       "min_width": 340,
       "dependencies": [
@@ -165,17 +167,85 @@
       "progression_mode": "linear",
       "tasks": [
         {
-          "id": "470924D243595FF1",
+          "id": "1DDEF42FAF0A9F28",
           "type": "advancement",
-          "advancement": "world_progression_core:world_turn/flesh_defeated",
-          "criterion": "done"
+          "advancement": "world_progression_core:world_turn/beacons"
         }
       ],
-      "rewards": []
+      "optional": true,
+      "rewards": [
+        {
+          "id": "0676E2973DF1A178",
+          "type": "item",
+          "item": {
+            "id": "minecraft:polished_blackstone_bricks",
+            "count": 1
+          },
+          "count": 64
+        }
+      ]
+    },
+    {
+      "id": "6A89A848189809CD",
+      "x": 7.5,
+      "y": 1.5,
+      "icon": {
+        "id": "minecraft:blaze_rod"
+      },
+      "min_width": 340,
+      "dependencies": [
+        "01CBB2DD4D43F373"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "tasks": [
+        {
+          "id": "6CE9C3E8464A8D2A",
+          "type": "advancement",
+          "advancement": "world_progression_core:world_turn/vanguard"
+        }
+      ],
+      "optional": true,
+      "rewards": [
+        {
+          "id": "6B4BE6C6645BEFFD",
+          "type": "item",
+          "item": {
+            "id": "minecraft:golden_carrot",
+            "count": 1
+          },
+          "count": 24
+        }
+      ]
+    },
+    {
+      "id": "6A44FF99927AF1BD",
+      "x": 10,
+      "y": 0,
+      "icon": {
+        "id": "confluence:wall_of_flesh_treasure_bag"
+      },
+      "min_width": 340,
+      "dependencies": [
+        "4D04B92651DCACB9",
+        "6A89A848189809CD"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "tasks": [
+        {
+          "id": "470924D243595FF1",
+          "type": "advancement",
+          "advancement": "world_progression_core:world_turn/flesh_defeated"
+        }
+      ],
+      "optional": false,
+      "rewards": [],
+      "min_required_dependencies": 1
     },
     {
       "id": "70B98B2219093652",
-      "x": 10,
+      "x": 12.5,
       "y": 0,
       "icon": {
         "id": "confluence:pwnhammer"
@@ -190,15 +260,15 @@
         {
           "id": "677C9EDDD6822CC0",
           "type": "advancement",
-          "advancement": "world_progression_core:world_turn/hardmode_open",
-          "criterion": "done"
+          "advancement": "world_progression_core:world_turn/hardmode_open"
         }
       ],
+      "optional": false,
       "rewards": []
     },
     {
       "id": "4949B108C7E78A72",
-      "x": 12.5,
+      "x": 15,
       "y": 0,
       "icon": {
         "id": "world_progression_core:cobalt_furnace_charge"
@@ -213,15 +283,15 @@
         {
           "id": "1375ADF70C33A517",
           "type": "advancement",
-          "advancement": "world_progression_core:world_turn/batch_charge",
-          "criterion": "done"
+          "advancement": "world_progression_core:world_turn/batch_charge"
         }
       ],
+      "optional": false,
       "rewards": []
     },
     {
       "id": "24BA016E81A9BDB9",
-      "x": 15,
+      "x": 17.5,
       "y": 0,
       "icon": {
         "id": "confluence:cobalt_ingot"
@@ -236,10 +306,10 @@
         {
           "id": "65093ABADF4750B6",
           "type": "advancement",
-          "advancement": "world_progression_core:world_turn/first_ingot",
-          "criterion": "done"
+          "advancement": "world_progression_core:world_turn/first_ingot"
         }
       ],
+      "optional": false,
       "rewards": [
         {
           "id": "0D877EE20DC45C7E",

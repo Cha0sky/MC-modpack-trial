@@ -17,7 +17,7 @@ ADVANCEMENTS = (
     "welcome", "engineering_heat", "engineering_assembly", "engineering_record",
     "arcane_foundation", "arcane_practice", "arcane_record",
     "expedition_sites", "expedition_challenge", "expedition_record",
-    "convergence", "archive_craft", "archive_open", "all_three",
+    "convergence", "archive_craft", "archive_open", "all_three", "map_wall",
 )
 ROUTE_RECORDS = ("engineering_record", "arcane_record", "expedition_record")
 
@@ -91,49 +91,31 @@ def chapter():
         lang["quest." + q["id"] + ".quest_desc"] = desc
 
     quest("welcome", "维修簿之外", [
-        "旧工坊已经重新运转。维修簿中提到的工业设施、奥术记录与偏远遗址，现在可以分别展开调查。",
-        "工程、奥术、远征三条路线同时开放，先后顺序由你选择。完成任意两条即可汇合；第三条保留为可选的继续探索。",
-        "路线完成记录与发现的遗迹坐标由世界共享。材料与设备可以提前准备，也允许同伴协作。",
-        "领取远征熟食、照明和脚手架再出发；三条路线分别提供工厂扩建、研究设施和探索装备奖励。"],
+        "工坊的维修簿里有三条线索。工程、奥术、远征任选两条完成，就能在档案台汇总发现。队友可分头调查。"],
         0, 0, "minecraft:written_book", ())
 
     quest("engineering_heat", "工程 · 让火进入工艺", [
-        "准备一个已经捕获烈焰人的燃烧室，以及至少 8 个黄铜锭。取得物品即可记录，允许同伴分工。",
-        "空燃烧室由 4 铁板围绕 1 下界岩制作；在下界捕获烈焰人，带回后为其提供普通燃料。",
-        "在加热工作盆中搅拌 1 铜锭与 1 锌锭，得到 2 黄铜锭。普通加热足够，不需要超级加热。",
-        "本章原生进度采用持有记录；它不要求你丢弃队友送来的材料。领取锌铜、红石和石英后，可继续制作电子管和机械手。"],
+        "用空燃烧室在下界捕获烈焰人。给燃烧室添燃料，在上方的工作盆搅拌铜锭和锌锭；每对出 2 黄铜锭，备齐 8 锭。"],
         2, -3, "create:blaze_burner", ("welcome",), optional=True)
     quest("engineering_assembly", "工程 · 可重复的精密工艺", [
-        "实际运行一次机械手、完成一次注液器加工，并取得 1 个精密构件。三项可以分开完成，不要求一口气建成大型流水线。",
-        "机械手由电子管、安山机壳和黄铜手制作。黄铜手需要 4 黄铜板与 1 安山合金；电子管由磨好的玫瑰石英与铁板制作，玫瑰石英需要 1 石英和 8 红石。",
-        "注液器用于学习流体加工，例如向玻璃瓶注入 250 mB 蜂蜜。任意一次有效的注液器加工都可记录，精密构件则按下一条的原生工序装配。",
-        "精密构件以金板起步，依次部署小齿轮、大齿轮和铁粒，重复 5 轮。原生成功率为 80%，请按 JEI 准备余量。",
-        "机械手和注液器使用其原生运行进度，精密构件采用取得记录；已完成的原生进度可以被承认。"],
+        "让机械手运行一次、用注液器加工一次，再取得 1 个精密构件。注液可试着给空玻璃瓶灌 250 mB 蜂蜜。",
+        "以金板起步，依次部署小齿轮、大齿轮、铁粒，重复 5 轮。构件成功率为 80%，给流水线留一点余料。"],
         4, -3, "create:precision_mechanism", ("engineering_heat",), optional=True)
     quest("engineering_record", "整理工程记录", [
-        "热工与精密加工的成果已经齐备，工程路线自动记入世界档案。不会收走设备或精密构件。",
-        "领取机械臂、黄铜漏斗、传送带和铁板，把刚掌握的工艺扩展成实际的自动供料与加工线。原有黄铜和传动杆奖励也照常保留。",
-        "把这份能力带回家园：继续扩展产线，或先去调查其他遗产，都由你决定。"],
+        "热工和装配记录齐了。把奖励里的机械臂和黄铜漏斗接到生产线，下一批零件就能自动上料。"],
         6, -3, "create:brass_ingot", ("engineering_assembly",), optional=True, rewards=[
             item_reward("engineering_record/brass", "create:brass_ingot", 8),
             item_reward("engineering_record/shaft", "create:shaft", 16),
         ])
 
     quest("arcane_foundation", "奥术 · 选择研究方法", [
-        "奥术路线有两种完整的研究方法，选择其中一种继续即可，完成两种也只算一条奥术路线。",
-        "铁魔法方法：准备铭文台和铁质法术书，将法术书实际装备到对应位置，为亲自施法做准备。",
-        "诡厄方法：准备黑暗魔杖，按模组手册学习召唤僵尸仆从。",
-        "两套方法保留各自的装备与操作方式，不要求先把另一套体系也做完。"],
+        "选一种研究方法。铁魔法用铭文台准备铁质法术书，再装备到法术书栏；诡厄巫法从黑暗魔杖入手。"],
         2, 0, "minecraft:enchanting_table", ("welcome",), optional=True)
     quest("arcane_practice", "奥术 · 让知识发挥作用", [
-        "沿你准备好的研究方法完成一次实际运用。",
-        "铁魔法方法：实际装备铁质法术书后，从法术书释放一次法术。",
-        "诡厄方法：用黑暗魔杖召唤僵尸仆从，再取得一次自己的仆从击败敌对生物的原生成就。",
-        "基础和实践须完整满足同一体系。铁魔法与诡厄任一体系完成即可登记奥术记录。"],
+        "继续同一种方法。铁魔法从装备好的法术书施放一次法术；诡厄巫法召出僵尸仆从，让它击败一个敌对生物。"],
         4, 0, "minecraft:enchanted_book", ("arcane_foundation",), optional=True)
     quest("arcane_record", "整理奥术记录", [
-        "实际的奥术实践已经完成，研究记录自动加入世界档案。法术书、魔杖与其他装备由你保留。",
-        "领取附魔台、16 个书架和研究耗材，在家里布置能长期使用的研究与附魔角。它不要求你补做另一套奥术方法。"],
+        "术式已经验证。用领到的附魔台和书架，在基地给法具留一间研究室。"],
         6, 0, "minecraft:book", ("arcane_practice",), optional=True, rewards=[
             item_reward("arcane_record/experience", "minecraft:experience_bottle", 8),
             item_reward("arcane_record/paper", "minecraft:paper", 16),
@@ -141,49 +123,34 @@ def chapter():
         ])
 
     quest("expedition_sites", "远征 · 走入两处遗产", [
-        "调查以下四类遗迹中的任意两类：Mowzie 钢铁守护者室、汇流来世附魔剑冢、灾变沙漠遗址、灾变古代工厂。",
-        "探险者指南针可使用结构 ID 搜索：mowziesmobs:wrought_chamber、confluence:enchanted_sword_shrine、cataclysm:desert_site、cataclysm:ancient_factory。",
-        "走入结构范围即可留下调查记录和该类首个地点的坐标，不需要在调查时击杀遗迹中的 Boss。同一类型的不同地点只算一类。",
-        "这些坐标稍后可以在遗产档案台中查询、制图。领取金苹果、熟食与箭矢，为下一次自选挑战补足后勤。"],
+        "走进两类遗迹，位置就会进入档案。可以选择钢铁守护者室、附魔剑冢、沙漠遗址或古代工厂。",
+        "指南针可搜 wrought_chamber、enchanted_sword_shrine、desert_site、ancient_factory。"],
         2, 3, "minecraft:compass", ("welcome",), optional=True)
     quest("expedition_challenge", "远征 · 一次自选挑战", [
-        "任选一位：钢铁守护者、霜冻巨兽、克苏鲁之眼、世界吞噬怪、克苏鲁之脑或诡厄巫法的骷髅领主。",
-        "骷髅领主会在诡厄的大坟墓中开罐时出现。用探险者指南针搜 goety:crypt，带好补给再进墓。",
-        "只记录首领本体。已完成的钢铁守护者支线和原生骷髅领主击败成就均可沿用。",
-        "先调查再挑战、先挑战再旅行都可以；不要求把这些 Boss 逐个清完。原生掉落照常保留。"],
+        "任选一位对手：钢铁守护者、霜冻巨兽、克苏鲁之眼、世界吞噬怪、克苏鲁之脑或骷髅领主。",
+        "想找骷髅领主，可用指南针搜 goety:crypt，到诡厄的大坟墓查看罐子。"],
         4, 3, "minecraft:iron_axe", ("expedition_sites",), optional=True)
     quest("expedition_record", "整理远征记录", [
-        "两类遗迹与一次自选挑战的记录已经齐备，远征路线自动加入世界档案。",
-        "保留找到的装备与战利品。领取保护Ⅲ、摔落保护Ⅳ、耐久Ⅱ钻石靴，以及金胡萝卜和箭矢，继续选择自己的路线。"],
+        "两类遗迹、一场首领战，足够整理第一份远征记录。领到的摔落保护靴适合接着下墓。"],
         6, 3, "minecraft:map", ("expedition_challenge",), optional=True, rewards=[
             item_reward("expedition_record/pearls", "minecraft:ender_pearl", 4),
             item_reward("expedition_record/experience", "minecraft:experience_bottle", 12),
         ])
 
     quest("convergence", "让两条线索相遇", [
-        "世界档案中已经有任意两条路线的完整记录，调查成果可以汇合。工程、奥术、远征三选二，第三条继续可选。",
-        "接下来制作遗产档案台，把共同发现的地点和已经掌握的能力保存成可以带走的记录。",
-        "档案台使用普通材料，不要求黄铜或精密构件；选择奥术与远征的玩家同样可以完成本章。",
-        "领取成批石砖、平滑石和原木，为档案室、工厂或新的远征据点准备建筑材料。"],
+        "任意两份调查齐备，就能建立共同档案。挑个回家经常路过的位置，给档案台留一格。"],
         8, 0, "minecraft:written_book", ROUTE_RECORDS, minimum=2)
     quest("archive_craft", "建一处保存知识的地方", [
-        "制作并放置遗产档案台。工作台上排：书／玻璃／书；中排：铜板／安山机壳／铜板；下排：木板／共振胶／木板。",
-        "可以放在自己的家、已修复的工坊或其他喜欢的位置。普通木板均可，档案台可以拆下搬走。",
-        "制作它不收走任何路线装备，也不要求工程路线的黄铜与装配设备。"],
+        "工作台上排摆书、玻璃、书；中排摆铜板、安山机壳、铜板；下排摆木板、共振胶、木板。做好遗产档案台并放下。"],
         10, 0, MOD + "heritage_archive", ("convergence",))
     quest("archive_open", "我们的遗产档案", [
-        "右键使用遗产档案台，取得或更新实体档案书，查看世界共享的三线进度与已经发现的遗迹地点。",
-        "潜行右键切换已记录的地点；主手拿空地图右键，将所选地点绘制成地图。每类遗迹保存最先发现的位置。",
-        "任意两条路线足以完成本章。领取物品保险库和效率Ⅳ、耐久Ⅲ钻石斧，连同展示与照明奖励一起，把调查成果安置进自己的基地。",
-        "接下来可在第三章准备下界远征。再次使用档案台会更新遗迹位置和世界转折进度。"],
+        "空手右键档案台领取档案书。潜行右键轮换已发现地点，松开潜行，主手持空地图右键制图。档案书带回来还能更新。"],
         12, 0, MOD + "heritage_archive", ("archive_craft",), rewards=[
             item_reward("archive_open/frames", "minecraft:item_frame", 8),
             item_reward("archive_open/lanterns", "minecraft:lantern", 4),
         ])
     quest("all_three", "可选 · 完整的三路调查", [
-        "工程、奥术和远征全部留下完整记录。这个额外目标不影响两线汇合与主线完成。",
-        "从 4 个物品保险库、4 个金苹果或 24 个经验瓶中选择一份纪念补给。",
-        "另可领取经验修补附魔书、8 个钻石与 32 个经验瓶，作为完成全部调查的额外奖励。"],
+        "把第三条线索也调查完，补齐工程、奥术和远征三份记录。"],
         10, 4, "minecraft:globe_banner_pattern", ROUTE_RECORDS, optional=True, rewards=[
             {"id": uid("all_three/choice"), "type": "choice", "table_id": 0, "table_data": {
                 "loot_size": 1, "rewards": [
@@ -193,6 +160,11 @@ def chapter():
                 ],
             }},
         ])
+    quest("map_wall", "远征档案室 · 地图上墙", [
+        "在档案台选一处已发现的遗迹，持空地图绘图。把带目标标记的归档地图放进普通或荧光展示框，给下一队人留下路线。"],
+        12, 3, "minecraft:glow_item_frame", ("archive_open",), optional=True,
+        rewards=[item_reward("map_wall/frames", "minecraft:glow_item_frame", 6),
+                 item_reward("map_wall/maps", "minecraft:map", 16)])
     return doc, lang, previous
 
 
@@ -201,6 +173,11 @@ def resources():
         write(DATA / ("advancement/heritage/" + name + ".json"), {
             "criteria": {"done": {"trigger": "minecraft:impossible"}},
         })
+    frame_map = '{Item:{id:"minecraft:filled_map",components:{"minecraft:map_decorations":{heritage:{}}}}}'
+    write(DATA / "advancement/heritage/map_wall.json", {"criteria": {"done": {
+        "trigger": "minecraft:player_interacted_with_entity", "conditions": {
+            "item": {"items": "minecraft:filled_map"}, "entity": {
+                "type": ["minecraft:item_frame", "minecraft:glow_item_frame"], "nbt": frame_map}}}}})
     write(DATA / "recipe/heritage_archive.json", {
         "type": "minecraft:crafting_shaped", "category": "misc", "pattern": ["BGB", "CAC", "PRP"],
         "key": {"B": {"item": "minecraft:book"}, "G": {"item": "minecraft:glass"},
@@ -243,7 +220,7 @@ def verify(doc, previous):
     ids = [o["id"] for o in objects]
     assert len(ids) == len(set(ids))
     assert all(0 < int(identifier, 16) <= 0x7FFFFFFFFFFFFFFF for identifier in ids)
-    assert len(doc["quests"]) == 14
+    assert len(doc["quests"]) == 15
     nodes = {q["id"]: q for q in doc["quests"]}
     reached = {previous}
     for quest in doc["quests"]:
@@ -277,7 +254,7 @@ def main():
     for locale in ("zh_cn", "en_us"):
         merge(QUESTS / ("lang/" + locale + ".snbt"), lang)
     resources()
-    print("Heritage: 14 quests; 3 optional routes; two-of-three convergence; 14 core advancements; portable archive recipe/loot/model")
+    print(f"Heritage: {len(doc['quests'])} quests; two-of-three convergence")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,14 @@
+{
+  "criteria": {
+    "shutter": {
+      "trigger": "exposure:frame_exposed",
+      "conditions": {
+        "player": {
+          "location": {
+            "structures": "#world_progression_core:survey_ruins"
+          }
+        }
+      }
+    }
+  }
+}

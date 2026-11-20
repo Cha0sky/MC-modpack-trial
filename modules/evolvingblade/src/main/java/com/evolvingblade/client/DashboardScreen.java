@@ -1,85 +1,138 @@
 package com.evolvingblade.client;
 
-import java.util.ArrayList;
 import java.util.List;
-
+import com.evolvingblade.network.EBPayloads.StateSnapshot;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.FormattedCharSequence;
 
-/**
- * 成长仪表盘（G 键）。
- *
- * <p>层序与三选一界面相同：{@link #renderBackground} 只画纯色遮罩（原版背景会高斯模糊，
- * 把已经画好的文字糊掉——这是 Codex 在隔离客户端确认过的真实缺陷），
- * {@link #render} 先 {@code super.render(...)} 画按钮，再画文字。
- *
- * <p>中文/英文长句按窗口宽度用 {@code font.split(...)} <b>换行</b>（不只是纵向滚动），
- * 所有数值来自服务器快照，因此 854×480（逻辑 427×240）与 1920×1080 都能读全。
- */
-public class DashboardScreen extends Screen {
+public final class DashboardScreen extends Screen {
+    private enum Tab { GROWTH, FORMS, SKILLS }
 
-    private static final int LINE = 10;
-    private int scroll;
+    private Tab tab = Tab.GROWTH;
+    private int preview, scroll, maxScroll;
 
     public DashboardScreen() {
         super(Component.translatable("screen.evolvingblade.dashboard.title"));
+        StateSnapshot snapshot = EBClientState.snapshot();
+        preview = snapshot == null ? 0 : snapshot.stage();
     }
 
     @Override
     protected void init() {
-        this.clearWidgets();
-        this.addRenderableWidget(Button.builder(Component.translatable("gui.done"), button -> this.onClose())
-                .bounds(this.width / 2 - 60, this.height - 24, 120, 20)
-                .build());
-    }
-
-    /** 滚动提示独占条带（在 Done 按钮之上），与内容区互不重叠。 */
-    private static final int HINT_BAND = 12;
-
-    @Override
-    public void renderBackground(GuiGraphics graphics, int mouseX, int mouseY, float partialTick) {
-        graphics.fill(0, 0, this.width, this.height, 0xF0101418);
-    }
-
-    @Override
-    public void render(GuiGraphics graphics, int mouseX, int mouseY, float partialTick) {
-        super.render(graphics, mouseX, mouseY, partialTick);
-
-        int wrapWidth = Math.max(80, this.width - 20);
-        List<FormattedCharSequence> visual = new ArrayList<>();
-        for (Component line : ModeCardText.dashboardLines(EBClientState.snapshot())) {
-            visual.addAll(this.font.split(line, wrapWidth));
+        var p = BladeFolio.page(width, height);
+        int gap = 3, buttonWidth = (p.width() - 20 - gap * 3) / 4;
+        int x = p.x() + 10;
+        for (Tab target : Tab.values()) {
+            var button = Button.builder(BladeFolio.title(target.name().toLowerCase(java.util.Locale.ROOT)), b -> {
+                tab = target;
+                scroll = 0;
+                rebuildWidgets();
+            }).bounds(x, p.footer(), buttonWidth, 19).build();
+            button.active = target != tab;
+            addRenderableWidget(button);
+            x += buttonWidth + gap;
         }
-        int top = 18;
-        int bottom = this.height - 30 - HINT_BAND; // 让出 Done 按钮与滚动提示两条带
-        int visible = Math.max(1, (bottom - top) / LINE);
-        int maxScroll = Math.max(0, visual.size() - visible);
-        this.scroll = Math.max(0, Math.min(this.scroll, maxScroll));
-
-        graphics.drawCenteredString(this.font, this.title, this.width / 2, 6, 0xFFF2D25C);
-        int y = top;
-        for (int i = this.scroll; i < visual.size() && i < this.scroll + visible; i++) {
-            graphics.drawString(this.font, visual.get(i), 10, y, 0xFFDCE6F2, false);
-            y += LINE;
-        }
-        if (maxScroll > 0) {
-            // 滚动提示放到独立底带，并按真实字体宽度居中（长中英文都不会越界）。
-            Component hint = Component.translatable("screen.evolvingblade.dashboard.scroll", this.scroll, maxScroll);
-            int hintY = this.height - 36;
-            for (FormattedCharSequence hintLine : this.font.split(hint, Math.max(60, this.width - 16))) {
-                graphics.drawString(this.font, hintLine, Math.max(4, (this.width - this.font.width(hintLine)) / 2),
-                        hintY, 0xFF8FA3BF, false);
-                hintY += LINE;
+        addRenderableWidget(Button.builder(Component.translatable("gui.done"), b -> onClose())
+                .bounds(x, p.footer(), buttonWidth, 19).build());
+        if (tab == Tab.FORMS) {
+            int cell = (p.width() - 20) / StateSnapshot.STAGES;
+            for (int i = 0; i < StateSnapshot.STAGES; i++) {
+                final int stage = i;
+                var button = Button.builder(Component.literal(Integer.toString(i)), b -> {
+                    preview = stage;
+                    rebuildWidgets();
+                }).bounds(p.x()+10+i*cell, p.footer()-28, cell-2, 18).build();
+                button.active = preview != stage;
+                addRenderableWidget(button);
             }
         }
     }
 
     @Override
-    public boolean mouseScrolled(double mouseX, double mouseY, double scrollX, double scrollY) {
-        this.scroll = Math.max(0, this.scroll - (int) Math.signum(scrollY) * 3);
+    public void renderBackground(GuiGraphics g, int mx, int my, float tick) {
+        BladeFolio.frame(g, BladeFolio.page(width,height), width, height);
+    }
+
+    @Override
+    public void render(GuiGraphics g, int mx, int my, float tick) {
+        super.render(g,mx,my,tick);
+        var p = BladeFolio.page(width,height);
+        int x = p.x()+11, top = p.y()+32;
+        g.drawString(font,title,x,p.y()+9,BladeFolio.GOLD,false);
+        var data = EBClientState.snapshot();
+        if (data == null) {
+            g.drawString(font, Component.translatable("screen.evolvingblade.dashboard.waiting"), x, top, BladeFolio.TEXT, false);
+            return;
+        }
+        Component route = Component.translatable("evolvingblade.mode."+data.modeId());
+        g.drawString(font,route,p.right()-11-font.width(route),p.y()+9,BladeFolio.QUIET,false);
+        if (tab == Tab.SKILLS) {
+            drawSkills(g, p, data);
+            return;
+        }
+
+        boolean gallery = tab == Tab.FORMS;
+        int stage = gallery ? preview : data.stage();
+        int bottom = p.footer() - (gallery ? 32 : 8);
+        int dial = Math.max(28, Math.min(Math.min(p.width()/3, bottom-top-2), 114));
+        BladeFolio.sword(g, stage, x, top, dial);
+        int tx = x+dial+10, w = p.right()-tx-11;
+        var stats = gallery ? List.<FormattedCharSequence>of() : BladeFolio.wrap(font,ModeCardText.stats(data),w);
+        maxScroll = Math.max(0,top + (gallery ? 78 : 83 + stats.size()*11) - bottom);
+        scroll = Math.min(scroll,maxScroll);
+        g.enableScissor(tx,top,p.right()-8,bottom);
+        top -= scroll;
+        g.drawString(font, Component.translatable("screen.evolvingblade.folio.stage",
+                stage, Component.translatable("evolvingblade.stage."+stage)), tx,top+2,BladeFolio.GOLD,false);
+        if (gallery) {
+            g.drawString(font,BladeFolio.title(stage <= data.stage() ? "unlocked" : "upcoming"),tx,top+16,BladeFolio.QUIET,false);
+            BladeFolio.meter(g,font,tx,top+37,w,BladeFolio.title("points"),data.growthPoints(),
+                    data.thresholdsPoints().get(stage),BladeFolio.AQUA);
+            BladeFolio.meter(g,font,tx,top+60,w,BladeFolio.title("bosses"),data.bossKills(),
+                    data.thresholdsBosses().get(stage),BladeFolio.GOLD);
+        } else {
+            int next = Math.min(stage+1,StateSnapshot.STAGES-1);
+            Component goal = stage == next ? BladeFolio.title("complete") :
+                    Component.translatable("screen.evolvingblade.folio.toward",Component.translatable("evolvingblade.stage."+next));
+            g.drawString(font,goal,tx,top+17,BladeFolio.TEXT,false);
+            BladeFolio.meter(g,font,tx,top+36,w,BladeFolio.title("points"),data.growthPoints(),
+                    data.thresholdsPoints().get(next),BladeFolio.AQUA);
+            BladeFolio.meter(g,font,tx,top+58,w,BladeFolio.title("bosses"),data.bossKills(),
+                    data.thresholdsBosses().get(next),BladeFolio.GOLD);
+            int y = top+83;
+            for (FormattedCharSequence line : stats) {
+                g.drawString(font,line,tx,y,BladeFolio.QUIET,false);
+                y += 11;
+            }
+        }
+        g.disableScissor();
+    }
+
+    private void drawSkills(GuiGraphics g, BladeFolio.Page p, StateSnapshot data) {
+        int x = p.x()+12, y = p.y()+32, bottom = p.footer()-9;
+        var lines = BladeFolio.wrap(font,ModeCardText.skills(data),p.width()-32);
+        int visible = Math.max(1,(bottom-y)/12);
+        maxScroll = Math.max(0,lines.size()-visible);
+        scroll = Math.min(scroll,maxScroll);
+        for (int i = scroll; i < Math.min(lines.size(),scroll+visible); i++) {
+            g.drawString(font,lines.get(i),x,y+(i-scroll)*12,BladeFolio.TEXT,false);
+        }
+        if (maxScroll > 0) {
+            int track = bottom-y, handle = Math.max(8,track*visible/lines.size());
+            int offset = (track-handle)*scroll/maxScroll;
+            g.fill(p.right()-10,y,p.right()-8,bottom,BladeFolio.RIM);
+            g.fill(p.right()-10,y+offset,p.right()-8,y+offset+handle,BladeFolio.GOLD);
+        }
+    }
+
+    @Override
+    public boolean mouseScrolled(double mx,double my,double horizontal,double vertical) {
+        if (maxScroll == 0) return super.mouseScrolled(mx,my,horizontal,vertical);
+        int step = tab == Tab.SKILLS ? 2 : 12;
+        scroll = Math.clamp(scroll - (int)Math.signum(vertical)*step,0,maxScroll);
         return true;
     }
 }
