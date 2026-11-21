@@ -1,5 +1,6 @@
-"""Resolve MC 1.21.1 NeoForge FTB releases from the public Modrinth API."""
+"""Stage the compatible FTB Quests release and resolve other FTB components."""
 from pathlib import Path
+from io import BytesIO
 import json
 import hashlib
 import urllib.request
@@ -8,6 +9,9 @@ import zipfile
 import tomllib
 
 ROOT = Path(__file__).resolve().parents[1]
+QUEST_VERSION = "2101.1.35"
+QUEST_FILENAME = f"ftb-quests-neoforge-{QUEST_VERSION}.jar"
+QUEST_URL = f"https://maven.ftb.dev/releases/dev/ftb/mods/ftb-quests-neoforge/{QUEST_VERSION}/{QUEST_FILENAME}"
 
 
 def request(url):
@@ -16,11 +20,24 @@ def request(url):
         return response.read()
 
 
+def stage_quests(out):
+    path = out / QUEST_FILENAME
+    data = path.read_bytes() if path.is_file() else request(QUEST_URL)
+    with zipfile.ZipFile(BytesIO(data)) as jar:
+        meta = tomllib.loads(jar.read("META-INF/neoforge.mods.toml").decode("utf-8-sig"))
+    if not any(mod["modId"] == "ftbquests" and mod["version"] == QUEST_VERSION for mod in meta["mods"]):
+        raise ValueError(f"Unexpected FTB Quests release: {path}")
+    if not path.exists():
+        path.write_bytes(data)
+    return {"project": "ftb-quests", "version": QUEST_VERSION, "filename": QUEST_FILENAME,
+            "url": QUEST_URL, "mods": meta["mods"], "dependencies_jar": meta["dependencies"]}
+
+
 def main():
     out = ROOT / "staging" / "mods"
     out.mkdir(parents=True, exist_ok=True)
-    records = []
-    for slug in ["ftb-teams", "ftb-quests", "ftb-xmod-compat"]:
+    records = [stage_quests(out)]
+    for slug in ["ftb-teams", "ftb-xmod-compat"]:
         query = urllib.parse.urlencode({"game_versions": '["1.21.1"]', "loaders": '["neoforge"]'})
         versions = json.loads(request("https://api.modrinth.com/v2/project/" + slug + "/version?" + query))
         releases = [v for v in versions if v["version_type"] == "release"]

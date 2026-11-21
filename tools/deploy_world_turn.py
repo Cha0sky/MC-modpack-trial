@@ -64,22 +64,29 @@ def deploy_chapter(*, version, previous_version, chapter_name, revised_keys, bas
     install_payloads(instance, payloads, receipt_name, version, apply)
 
 
-def install_payloads(instance, payloads, receipt_name, version, apply, *, module_versions=None):
+def install_payloads(instance, payloads, receipt_name, version, apply, *, module_versions=None, retire=()):
     """Back up and install only the prepared files, or display the same plan in a dry run."""
-    for relative in payloads:
+    paths = [*payloads, *retire]
+    if len(set(paths)) != len(paths):
+        raise ValueError("A deployment cannot both install and retire the same path")
+    for relative in paths:
         if not (instance / relative).resolve().is_relative_to(instance):
             raise RuntimeError(f"Deployment path escapes instance: {relative}")
 
     now = datetime.now().astimezone()
     backup = ROOT / "backups" / (receipt_name + now.strftime("-%Y%m%d-%H%M%S-%f"))
     files = [{"path": relative.as_posix(), "existed": (instance / relative).is_file()}
-             for relative in payloads]
+             for relative in paths]
     receipt = {
         "date": now.isoformat(), "instance": str(instance), "applied": apply,
         "source_commit": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(),
-        "core_version": version, "files": files,
+        "files": files,
         "runtime_acceptance": "pending user playtest",
     }
+    if version is not None:
+        receipt["core_version"] = version
+    if retire:
+        receipt["retired"] = [path.as_posix() for path in retire]
     if module_versions:
         receipt["module_versions"] = module_versions
     if apply:
@@ -93,6 +100,8 @@ def install_payloads(instance, payloads, receipt_name, version, apply, *, module
         try:
             for relative, content in payloads.items():
                 (instance / relative).write_bytes(content)
+            for relative in retire:
+                (instance / relative).unlink()
         except OSError:
             for entry in files:
                 target = instance / entry["path"]
