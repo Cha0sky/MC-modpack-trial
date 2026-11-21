@@ -1,0 +1,15 @@
+{
+  "parent": "minecraft:item/handheld",
+  "display": {
+    "firstperson_righthand": {
+      "rotation": [0, -52, 32],
+      "translation": [-0.25, 3.2, -0.65],
+      "scale": [0.68, 0.68, 0.38]
+    },
+    "firstperson_lefthand": {
+      "rotation": [0, 128, -32],
+      "translation": [-0.25, 3.2, -0.65],
+      "scale": [0.68, 0.68, 0.38]
+    }
+  }
+}

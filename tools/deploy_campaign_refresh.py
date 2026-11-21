@@ -13,7 +13,7 @@ CHAPTERS = ("00_lostworld_chapter1", "01_workshop_rekindled", "02_heritage_surve
             "04_field_equipment", "05_relic_expeditions", "06_frontline_depot")
 BUILDS = (
     ("world-progression-core", "world_progression_core", "0.1.0", "0.7.0-frontline", "0.7.1-campaign"),
-    ("evolvingblade", "evolvingblade", "1.1.0", "1.1.0", "1.1.3-longsword"),
+    ("evolvingblade", "evolvingblade", "1.1.0", "1.1.0", "1.1.4-longsword"),
     ("rpgleveling", "rpgleveling", "1.0.0", "1.0.0", "1.0.1-fieldguide"),
 )
 
@@ -42,7 +42,7 @@ def main(apply, blade_only=False):
         jar = ROOT / "modules" / module / "build/libs" / f"{module}-{new}.jar"
         compatible = {old, new}
         if mod_id == "evolvingblade":
-            compatible.update(("1.1.1-folio", "1.1.2-pixels"))
+            compatible.update(("1.1.1-folio", "1.1.2-pixels", "1.1.3-longsword"))
         if mod_version(jar, mod_id) != new or mod_version(instance / path, mod_id) not in compatible:
             raise RuntimeError(f"Review the version of {module}")
         payloads[path] = jar.read_bytes()

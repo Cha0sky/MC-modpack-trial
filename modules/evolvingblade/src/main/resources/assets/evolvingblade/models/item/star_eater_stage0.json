@@ -1,5 +1,5 @@
 {
-  "parent": "item/handheld",
+  "parent": "evolvingblade:item/star_eater_handheld",
   "textures": {
     "layer0": "evolvingblade:item/star_eater_stage0"
   }
