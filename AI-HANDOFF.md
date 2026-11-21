@@ -4,9 +4,9 @@
 
 ## 1. 接手时先看这里
 
-当前开发版包含序章至第六章，共 94 项任务。开局先领加点手册和卷轴、练噬星之刃，再自选泰拉武器与饰品备战史莱姆王。进度核心为 `0.7.1-campaign`，成长剑为 `1.1.1-folio`，加点手册为 `1.0.1-fieldguide`。任务、资源及版本已从实例读回，实机由用户验收。[玩法指引](docs/design/campaign-field-guide.md) · [部署回执](evidence/campaign-refresh-deployment.json)。
+当前开发版包含序章至第六章，共 94 项任务。开局先领加点手册和卷轴、练噬星之刃，再自选泰拉武器与饰品备战史莱姆王。进度核心为 `0.7.1-campaign`，成长剑为 `1.1.4-longsword`，加点手册为 `1.0.1-fieldguide`。任务、资源及版本已从实例读回，实机由用户验收。[玩法指引](docs/design/campaign-field-guide.md) · [部署回执](evidence/campaign-refresh-deployment.json)。
 
-噬星之刃的 16×16 长剑预览为 `1.1.3-longsword`。八阶共用一条笔直刃脊与单剑尖，流光收在刃内。用户选择先看动图，暂缓部署；开发版仍使用 `1.1.1-folio`。新预览位于 `modules/evolvingblade/build/reports/art/longsword/stage-flow.gif`。
+噬星之刃已换成玩家确认的 16×16 直身长剑。八种形态共用第一人称持握模型，左右手镜像露出刃面。已备份并更新开发实例，手持观感待用户实测。[成长剑部署回执](evidence/blade-pixels-deployment.json)。
 
 用户认为**序章的玩法骨架基本完成**：玩家在聚落持剑醒来，探索、下矿，完成两条起步制作任务，击败史莱姆王后开放猩红与腐化。旧任务文件和代码中的 Chapter 1 指这一段序章；界面已改称“序章”，任务 ID、存档键和文件名保持。新的第一章是“重启第一座工坊”。
 
@@ -105,7 +105,7 @@
 | 目录 / 模块 | 版本与实现边界 |
 |---|---|
 | `modules/world-progression-core` | 当前构建参数为 0.7.1-campaign。第三章运行时读取汇流来世 1.2.4。其余依赖继续使用 Create 6.0.10、Exposure 1.9.21 和 Iron’s Spellbooks 1.21.1-3.16.3 |
-| `modules/evolvingblade` | 1.1.1-folio；成长剑、成长路线与幂等赠剑API。核心调用现有API，不另塞一把剑 |
+| `modules/evolvingblade` | 1.1.4-longsword；成长剑、成长路线与幂等赠剑API。核心调用现有API，不另塞一把剑 |
 | `modules/rpgleveling` | 1.0.1-fieldguide；角色成长与属性加点。旧构建/数值检查是历史证据，不是本轮新测试 |
 | `modules/infinitecore` | 1.1.2；根据遗失源码模组重新实现，**不是恢复的原始源码**。直接模板、八阶生成器、主动IO、拆除掉落修正见模块README |
 | `vendor/infinitecore` | 保留原1.0.0二进制作为来源基准，不替换成重制版冒充原件 |
