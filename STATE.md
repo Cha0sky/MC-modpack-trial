@@ -4,6 +4,10 @@
 
 接续说明：[AI-HANDOFF.md](AI-HANDOFF.md) 是完整交接入口，含集镇生成已验收、工坊第一章与遗产调查第二章已部署待实测、实现入口、Git 与备份快照和后续规划。新对话优先阅读；交接不是新的实施或推送授权。
 
+## 2026-11-21 任务图 Ctrl＋滚轮缩放修复
+
+原 FTB Quests 2101.1.27 实现单参数滚轮接口，实例中的 FTB Library 2101.1.35 分派双参数事件。已备份旧包并安装 FTB 官方发布的 Quests 2101.1.35。已从实例读回版本，核对任务图在 Ctrl 分支调用缩放，普通滚轮滚动、Shift 横移；实机验收由用户负责。实现 `e8b7105`。[官方版本](https://www.curseforge.com/minecraft/mc-mods/ftb-quests-forge/files/8842729) · [部署回执](evidence/ftb-quest-zoom-deployment.json)。
+
 ## 2026-11-21 成长剑长剑材质及第一人称持握已部署
 
 用户确认直身长剑材质。实现 `9c96357`，已备份并安装成长剑 `1.1.4-longsword`。八阶共用第一人称左右手姿态，缩薄侧边并让刃面朝向视野。静态投影与实例内模型均已核对，游戏内持握及挥动效果待用户实测。[部署记录](evidence/blade-pixels-deployment.json)。

@@ -6,6 +6,8 @@
 
 当前开发版包含序章至第六章，共 94 项任务。开局先领加点手册和卷轴、练噬星之刃，再自选泰拉武器与饰品备战史莱姆王。进度核心为 `0.7.1-campaign`，成长剑为 `1.1.4-longsword`，加点手册为 `1.0.1-fieldguide`。任务、资源及版本已从实例读回，实机由用户验收。[玩法指引](docs/design/campaign-field-guide.md) · [部署回执](evidence/campaign-refresh-deployment.json)。
 
+任务图滚轮修复已部署。FTB Quests 与 FTB Library 均为 `2101.1.35`，可在章节任务图上用 Ctrl＋滚轮缩放。游戏内手感待用户确认。[部署回执](evidence/ftb-quest-zoom-deployment.json)。
+
 噬星之刃已换成玩家确认的 16×16 直身长剑。八种形态共用第一人称持握模型，左右手镜像露出刃面。已备份并更新开发实例，手持观感待用户实测。[成长剑部署回执](evidence/blade-pixels-deployment.json)。
 
 用户认为**序章的玩法骨架基本完成**：玩家在聚落持剑醒来，探索、下矿，完成两条起步制作任务，击败史莱姆王后开放猩红与腐化。旧任务文件和代码中的 Chapter 1 指这一段序章；界面已改称“序章”，任务 ID、存档键和文件名保持。新的第一章是“重启第一座工坊”。
