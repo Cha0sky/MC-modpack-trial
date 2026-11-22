@@ -1,0 +1,139 @@
+{
+  "date": "2026-11-23T06:00:25.728414+08:00",
+  "instance": "D:\\PCL 正式版 2.10.6 (1)\\.minecraft\\versions\\星庭远征-开发版",
+  "applied": true,
+  "source_commit": "fb00fb6efdb7f7d2160b4eccf05c25dd6f27bb63",
+  "files": [
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_armor_0.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_armor_1.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_armor_2.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_armor_3.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_armor_4.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_armor_5.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_pack_bhc_blade_of_vitality.snbt",
+      "existed": false
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_pack_celestial_artifacts_catastrophe_scroll.snbt",
+      "existed": false
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_pack_celestial_artifacts_chaotic_pendant.snbt",
+      "existed": false
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_pack_celestial_artifacts_cursed_talisman.snbt",
+      "existed": false
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_pack_celestial_artifacts_deer_inscribed_amulet.snbt",
+      "existed": false
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_pack_celestial_artifacts_ender_protector.snbt",
+      "existed": false
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_pack_celestial_artifacts_flight_ring.snbt",
+      "existed": false
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_pack_celestial_artifacts_sea_god_scroll.snbt",
+      "existed": false
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_pack_enigmaticlegacyplus_berserk_emblem.snbt",
+      "existed": false
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_pack_enigmaticlegacyplus_ethereal_forging_charm.snbt",
+      "existed": false
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_pack_enigmaticlegacyplus_redemption_ring.snbt",
+      "existed": false
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_pack_enigmaticlegacyplus_the_cube.snbt",
+      "existed": false
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_pack_enigmaticlegacyplus_thunder_scroll.snbt",
+      "existed": false
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_pack_relics_amphibian_boot.snbt",
+      "existed": false
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_routes_index.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/lang/zh_cn.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/lang/en_us.snbt",
+      "existed": true
+    },
+    {
+      "path": "mods/enigmaticlegacyplus-1.21.1-1.1.2.jar",
+      "existed": false
+    },
+    {
+      "path": "mods/baubley-heart-canisters-1.21.1-1.4.2.jar",
+      "existed": false
+    },
+    {
+      "path": "mods/caelus-neoforge-7.0.1+1.21.1.jar",
+      "existed": false
+    },
+    {
+      "path": "mods/relics-1.21.1-0.10.7.8.jar",
+      "existed": false
+    },
+    {
+      "path": "mods/OctoLib-NEOFORGE-0.6.3.2+1.21.jar",
+      "existed": false
+    },
+    {
+      "path": "mods/celestial_artifacts-2.0.4.jar",
+      "existed": false
+    },
+    {
+      "path": "mods/celestial_core-2.0.2.jar",
+      "existed": false
+    }
+  ],
+  "runtime_acceptance": "pending user playtest",
+  "module_versions": {
+    "enigmaticlegacyplus": "1.21.1-1.1.2",
+    "bhc": "1.21.1-1.4.2",
+    "caelus": "7.0.1+1.21.1",
+    "relics": "0.10.7.8",
+    "octolib": "0.6.3.2",
+    "celestial_artifacts": "2.0.4",
+    "celestial_core": "2.0.2"
+  },
+  "backup": "D:\\PCL 正式版 2.10.6 (1)\\codex\\modpack-project\\backups\\gear-expansion-20261123-060025-728414"
+}
