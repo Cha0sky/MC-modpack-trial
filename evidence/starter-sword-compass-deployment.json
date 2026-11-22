@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-23T03:42:09.879316+08:00",
+  "instance": "D:\\PCL 正式版 2.10.6 (1)\\.minecraft\\versions\\星庭远征-开发版",
+  "applied": true,
+  "source_commit": "eaa49734838ceece3ef055d2d6ec7268fd81c877",
+  "files": [
+    {
+      "path": "mods/world-progression-core-0.1.0.jar",
+      "existed": true
+    },
+    {
+      "path": "mods/evolvingblade-1.1.0.jar",
+      "existed": true
+    },
+    {
+      "path": "config/evolvingblade-server.toml",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/00_lostworld_chapter1.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/lang/en_us.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/lang/zh_cn.snbt",
+      "existed": true
+    }
+  ],
+  "runtime_acceptance": "pending user playtest",
+  "core_version": "0.8.2-playtest",
+  "module_versions": {
+    "world_progression_core": "0.8.2-playtest",
+    "evolvingblade": "1.1.5-playtest"
+  },
+  "backup": "D:\\PCL 正式版 2.10.6 (1)\\codex\\modpack-project\\backups\\starter-sword-compass-20261123-034209-879316"
+}
