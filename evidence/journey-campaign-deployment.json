@@ -1,0 +1,62 @@
+{
+  "date": "2026-11-22T18:00:41.030507+08:00",
+  "instance": "D:\\PCL 正式版 2.10.6 (1)\\.minecraft\\versions\\星庭远征-开发版",
+  "applied": true,
+  "source_commit": "31407015a7197523023f6f54004931decf8a772c",
+  "files": [
+    {
+      "path": "config/ftbquests/quests/chapters/00_lostworld_chapter1.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/01_workshop_rekindled.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/02_heritage_survey.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/03_world_turn.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/04_field_equipment.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/05_relic_expeditions.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/06_frontline_depot.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/gear_field_guide.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/journey_journal.snbt",
+      "existed": false
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/expedition_bestiary.snbt",
+      "existed": false
+    },
+    {
+      "path": "config/ftbquests/quests/chapter_groups.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/lang/en_us.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/lang/zh_cn.snbt",
+      "existed": true
+    }
+  ],
+  "runtime_acceptance": "pending user playtest",
+  "backup": "D:\\PCL 正式版 2.10.6 (1)\\codex\\modpack-project\\backups\\journey-campaign-20261122-180041-030507"
+}
