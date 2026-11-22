@@ -4,11 +4,13 @@
 
 ## 1. 接手时先看这里
 
+生命水晶、六档首领与恶意成长的第一轮平衡已部署到开发版，核心 `0.9.0-balance`。生命水晶上限 30 颗，旧档继续原计数。首档对玩家单击上限分别为史莱姆王 10、克苏鲁之眼 7、育母蜘蛛 8。莱特兰击杀、距离和维度增长按原来的四分之一计算。已读回配置与实际安装件，游戏体验待用户复验。[逐只平衡表](docs/design/首战数值平衡.md) · [部署记录](evidence/encounter-balance-deployment.json) · [饰品候选](docs/mods/饰品与装备扩展候选.md)。
+
 本轮实测反馈修复已部署。维度网络发生器在序章开局自动发给每位玩家，沿用原领奖编号。按 G 或输入 `/bladefolio` 打开成长页即可登记原剑谱任务，两种剑技冷却减半、距离翻倍，可命中范围内全部有效目标。探险者指南针支持中文搜索“废弃工坊”和“出生集镇”。当前版本待用户实机复验。[部署回执](evidence/starter-sword-compass-deployment.json)。
 
 出生集镇与自然生成工坊的地形优化（`bfc1c32`）已部署到「星庭远征-开发版」，该次部署读回版本为 `0.8.1-terrain`。[部署回执](evidence/structure-terrain-deployment.json)。集镇按全部 13 块地的起伏及街区落差选址，住宅空院角保留原地形。工坊最多试四个朝向，按主、侧门落脚处和楼体轮廓定高，只在实际底板下短距补基。新版本实机待用户验证。改造前的 13 地块集镇生成已有用户验收。[集镇选址](docs/design/starter-town.md) · [工坊生成](assets/workshop-rekindled/README.md)。
 
-开发版序章至第六章共 123 项任务（含支线），旅人手记有 11 页，随身手册含 14 页首领战册、27 页装备资料。史莱姆王开放边境，血肉墙或血肉山开启困难模式。进度核心为 `0.8.2-playtest`，成长剑为 `1.1.6-phaseblade`，加点手册为 `1.0.1-fieldguide`。
+开发版序章至第六章共 123 项任务（含支线），旅人手记有 11 页，随身手册含 14 页首领战册、27 页装备资料。史莱姆王开放边境，血肉墙或血肉山开启困难模式。进度核心为 `0.9.0-balance`，成长剑为 `1.1.6-phaseblade`，加点手册为 `1.0.1-fieldguide`。
 
 2026-11-23 的科技线从工坊送料、供水试装，接到困难矿的精炼与施工订单，前线可收机械动力货运回执。实现为 `eb17a3e`，已备份部署。旧任务与奖励 ID、各路线可达性及新配方已对实例检查，机器现场动作和服务器收件待用户实机验证。第七章草稿单独保存在工作区。[玩法指引](docs/design/campaign-field-guide.md) · [部署回执](evidence/production-campaign-deployment.json)。
 
@@ -73,7 +75,7 @@
 
 仓库：`https://github.com/Cha0sky/MC-modpack-trial`，远端名 `MC`，分支 `main`。
 
-当前核心为 **0.8.2-playtest**，安装文件名为 `world-progression-core-0.1.0.jar`。第三章扩充实现提交为 `b8779bc`。
+当前核心为 **0.9.0-balance**，安装文件名为 `world-progression-core-0.1.0.jar`。第三章扩充实现提交为 `b8779bc`。
 
 | 内容 | 实现/记录 | 当前状态 |
 |---|---|---|
@@ -114,7 +116,7 @@
 
 | 目录 / 模块 | 版本与实现边界 |
 |---|---|
-| `modules/world-progression-core` | 当前部署构建参数为 0.8.2-playtest。第三章运行时读取汇流来世 1.2.4。其余依赖继续使用 Create 6.0.10、Exposure 1.9.21 和 Iron’s Spellbooks 1.21.1-3.16.3 |
+| `modules/world-progression-core` | 当前部署构建参数为 0.9.0-balance。第三章运行时读取汇流来世 1.2.4。其余依赖继续使用 Create 6.0.10、Exposure 1.9.21 和 Iron’s Spellbooks 1.21.1-3.16.3 |
 | `modules/evolvingblade` | 1.1.4-longsword；成长剑、成长路线与幂等赠剑API。核心调用现有API，不另塞一把剑 |
 | `modules/rpgleveling` | 1.0.1-fieldguide；角色成长与属性加点。旧构建/数值检查是历史证据，不是本轮新测试 |
 | `modules/infinitecore` | 1.1.2；根据遗失源码模组重新实现，**不是恢复的原始源码**。直接模板、八阶生成器、主动IO、拆除掉落修正见模块README |

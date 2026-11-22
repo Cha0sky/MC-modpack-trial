@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-23T05:32:36.314285+08:00",
+  "instance": "D:\\PCL 正式版 2.10.6 (1)\\.minecraft\\versions\\星庭远征-开发版",
+  "applied": true,
+  "source_commit": "ee183ae417a6558f0af32b8f40c8a808449ed701",
+  "files": [
+    {
+      "path": "mods/world-progression-core-0.1.0.jar",
+      "existed": true
+    },
+    {
+      "path": "config/l2configs/l2hostility-server.toml",
+      "existed": true
+    },
+    {
+      "path": "config/touhou_little_maid_spell-common.toml",
+      "existed": true
+    }
+  ],
+  "runtime_acceptance": "pending user playtest",
+  "core_version": "0.9.0-balance",
+  "module_versions": {
+    "world_progression_core": "0.9.0-balance"
+  },
+  "backup": "D:\\PCL 正式版 2.10.6 (1)\\codex\\modpack-project\\backups\\encounter-balance-20261123-053236-314285"
+}
