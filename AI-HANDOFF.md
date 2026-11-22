@@ -12,7 +12,7 @@
 
 2026-11-23 的科技线从工坊送料、供水试装，接到困难矿的精炼与施工订单，前线可收机械动力货运回执。实现为 `eb17a3e`，已备份部署。旧任务与奖励 ID、各路线可达性及新配方已对实例检查，机器现场动作和服务器收件待用户实机验证。第七章草稿单独保存在工作区。[玩法指引](docs/design/campaign-field-guide.md) · [部署回执](evidence/production-campaign-deployment.json)。
 
-装备手册自开局即可查阅。序章领奖、兵器演练、佩戴饰品、备战以及第四章选甲共 7 处设有正文链接。手册共 27 页，收录 15 件饰品、4 种武器和 3 套护甲，已从开发版核对数据；游戏中点击体验待用户实测。[部署回执](evidence/equipment-guide-deployment.json)。
+原有 27 页装备手册和主线的 7 处入口继续可用。目录新增「护甲图鉴」与「饰品合成图」入口，收录 432 件盔甲和 500 件饰品。盔甲按单件护甲分七档，饰品按 261 组直接用料关系排图。实现 `567abe3` 已部署，已用实例中的 FTB Library 读回章节、翻页与分级，实机交互待用户验收。[部署回执](evidence/equipment-atlas-deployment.json)。
 
 任务图滚轮修复已部署。FTB Quests 与 FTB Library 均为 `2101.1.35`，可在章节任务图上用 Ctrl＋滚轮缩放。游戏内手感待用户确认。[部署回执](evidence/ftb-quest-zoom-deployment.json)。
 
