@@ -203,7 +203,8 @@
   ],
   "quest.60BCE50D3F42F766.title": "战斗 · 选一套合身的盔甲",
   "quest.60BCE50D3F42F766.quest_desc": [
-    "穿齐同一种金属的头、胸、腿、靴。钴套共 45 锭，钯金套共 54 锭；头部款式可按职业选。"
+    "穿齐钴甲或钯金甲的头、胸、腿、靴。想选头部款式，可先比较套装效果。",
+    "{\"text\":\"查手册 · 钴甲与钯金甲\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"46BAC8D6E3A42B63\"}}"
   ],
   "quest.7E82D9E88152A714.title": "把整备用起来",
   "quest.7E82D9E88152A714.quest_desc": [
@@ -321,32 +322,35 @@
   "quest.7BDB69CBFB808984.quest_desc": [
     "主手握噬星之刃，用剑身命中僵尸、骷髅、蜘蛛或普通史莱姆。按「打开噬星剑谱」查看当前阶段、成长点和下次进化条件。",
     "按 G 或输入 /bladefolio 打开剑谱。开发版的 G 也绑定了饰品栏，指令可以直接翻开剑谱。",
-    "从云朵瓶、赫尔墨斯靴、再生手环里挑一件带走。云朵瓶能在空中再跳一次，跑鞋适合拉开距离，手环会缓慢回复生命。"
+    "云朵瓶、赫尔墨斯靴、再生手环任选一件。领奖前可以翻开手册比较。",
+    "{\"text\":\"查手册 · 开荒饰品怎么选\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"45935826E246E542\"}}"
   ],
   "quest.213A9A128CAD6BCE.title": "兵器架 · 铜阔剑",
   "quest.213A9A128CAD6BCE.quest_desc": [
-    "把 2 个铜锭和 1 根木棍竖排做成铜阔剑。用它正面击中僵尸、骷髅、蜘蛛或史莱姆，打完一剑就退到落点外。",
-    "锡、铅、银、钨、金和铂金阔剑也能完成这一项。三种兵器练成一门即可备战。"
+    "主手用铜阔剑命中一只敌怪，打完一剑就退到落点外。锡、铅、银、钨、金、铂金阔剑也可练习。",
+    "{\"text\":\"查手册 · 铜阔剑的属性和配方\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"0110E6E4E3976E2C\"}}"
   ],
   "quest.29910F7881ADB6DA.title": "兵器架 · 金属弓",
   "quest.29910F7881ADB6DA.quest_desc": [
-    "3 个铁锭配 3 根线做铁弓，铜弓的摆法相同。带上箭，主手持弓，在箭命中僵尸、骷髅、蜘蛛或史莱姆前保持握弓。",
-    "木短弓或铜至铂金的金属长短弓均可。召王前找一段能边退边射的开阔地。"
+    "主手持泰拉弓射中僵尸、骷髅、蜘蛛或史莱姆，等箭命中再换手。木短弓和铜至铂金的金属长短弓均可。",
+    "{\"text\":\"查手册 · 铁弓的属性和配方\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"04D1B369E3B2319C\"}}"
   ],
   "quest.71919EA229FC8120.title": "兵器架 · 宝石法杖",
   "quest.71919EA229FC8120.quest_desc": [
-    "在重型工作台用 10 个铜锭和 5 个紫水晶碎片做紫晶法杖。重型工作台可用两个工作台夹一个铁砧或铅砧制作。",
-    "主手施法，命中僵尸、骷髅、蜘蛛或史莱姆。黄玉、蓝玉、红玉或钻石法杖也可，五颗坠落之星可以合成魔力水晶。"
+    "主手施法，让宝石弹命中僵尸、骷髅、蜘蛛或史莱姆。紫晶、黄玉、蓝玉、红玉和钻石法杖均可。",
+    "{\"text\":\"查手册 · 紫晶法杖与魔力准备\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"5C66D939EC5F1860\"}}"
   ],
   "quest.6B3AEF5579D1E440.title": "把饰品戴上",
   "quest.6B3AEF5579D1E440.quest_desc": [
-    "练好一门兵器后，打开背包里的饰品栏，把试剑时领到的瓶子、跑鞋或手环放进饰品格。已经戴在身上的旧饰品可取下再戴一次。",
-    "喜欢找宝箱的话，地下和洞穴宝箱能找到云朵瓶、赫尔墨斯靴、再生手环；地表宝箱还能找到鞋带束头。暴雪瓶、疾风雪靴和镣铐也算。"
+    "打开背包的饰品栏，戴上开荒饰品分册里的任意一件。已经戴过的可以取下再戴一次。",
+    "{\"text\":\"看七件开荒饰品 · 属性与获取\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"45935826E246E542\"}}",
+    "{\"text\":\"翻开整本装备手册\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"684C355CAD5A8963\"}}"
   ],
   "quest.4EE951BF8047A144.title": "王冠与退路",
   "quest.4EE951BF8047A144.quest_desc": [
     "备一顶金冠或铂金冠，在工作台用 8 个凝胶围住它，得到史莱姆皇冠。先把床和备用食物安顿在战场边。",
-    "清出一段可横移的平地，放两层错开的平台或脚手架。看到史莱姆王收拢或起跳，先离开原地，再回头输出。"
+    "清出一段可横移的平地，放两层错开的平台。看到史莱姆王起跳，先离开落点再还击。",
+    "{\"text\":\"战前翻阅 · 装备手册\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"684C355CAD5A8963\"}}"
   ],
   "quest.1AD32E2C8ED462C4.title": "老兵委托 · 三门兵器",
   "quest.1AD32E2C8ED462C4.quest_desc": [
@@ -397,5 +401,203 @@
   "quest.1BABC98BEF700C36.title": "守夜人的破围剑",
   "quest.1BABC98BEF700C36.quest_desc": [
     "噬星之刃达到四阶后，主手持剑，潜行右键施放爆发。守夜时留着这招，等敌人聚拢再出手。"
+  ],
+  "chapter.15833C8EAA8EC0A0.title": "装备手册 · 武器与饰品",
+  "quest.684C355CAD5A8963.title": "装备手册 · 目录",
+  "quest.684C355CAD5A8963.quest_desc": [
+    "点击下列分册查看装备。饰品放进背包的饰品栏，武器拿在主手，套装穿在四个护甲位。",
+    "{\"text\":\"开荒饰品\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"45935826E246E542\"}}",
+    "{\"text\":\"进阶饰品\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"381FDE4345973BC2\"}}",
+    "{\"text\":\"起手武器\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"1BDC6C3FD28BBFCD\"}}",
+    "{\"text\":\"护甲与套装\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"46BAC8D6E3A42B63\"}}",
+    "从主线点进来时，按退格键可以返回上一个条目。"
+  ],
+  "quest.45935826E246E542.title": "开荒饰品",
+  "quest.45935826E246E542.quest_desc": [
+    "想越过史莱姆就选云朵瓶，想在平地拉开距离就选赫尔墨斯靴，受伤后需要续航就选再生手环。试剑奖励可从这三件里挑一件。",
+    "{\"text\":\"云朵瓶\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"3B0614A0087841A0\"}}",
+    "{\"text\":\"赫尔墨斯靴\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"0B0B5F710FD5C53A\"}}",
+    "{\"text\":\"再生手环\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"13441AEDD6B820ED\"}}",
+    "{\"text\":\"鞋带束头\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2AB1120022BECD53\"}}",
+    "{\"text\":\"暴雪瓶\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"6132EE6DAB4FC629\"}}",
+    "{\"text\":\"疾风雪靴\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"357165204E3A2B92\"}}",
+    "{\"text\":\"镣铐\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"307923D131E42EC1\"}}",
+    "{\"text\":\"返回装备目录\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"684C355CAD5A8963\"}}"
+  ],
+  "quest.3B0614A0087841A0.title": "云朵瓶",
+  "quest.3B0614A0087841A0.quest_desc": [
+    "起跳后在空中再按一次跳跃，可踏云再跳一次。安全落差额外增加 3 格。",
+    "在地下或洞穴宝箱寻找。也可以在序章「噬星之刃 · 第一剑」的三件饰品中选它。",
+    "对付史莱姆王时，把第二跳留给它的落点，越过去后再回身攻击。",
+    "{\"text\":\"相关装备 · 云朵气球\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"0ECCBCC9C4D1E48C\"}}",
+    "{\"text\":\"返回「开荒饰品」\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"45935826E246E542\"}}"
+  ],
+  "quest.0B0B5F710FD5C53A.title": "赫尔墨斯靴",
+  "quest.0B0B5F710FD5C53A.quest_desc": [
+    "在地面持续向前移动会逐渐加速，这双靴子最高提供 40% 移速。碰墙或蹲行会打断加速。",
+    "可在地下或洞穴宝箱中找到，也可从序章试剑奖励三选一取得。召王前清出一段平地，让靴子有距离提速。",
+    "{\"text\":\"相关装备 · 幽灵靴\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"676445251ED4A6E3\"}}",
+    "{\"text\":\"返回「开荒饰品」\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"45935826E246E542\"}}"
+  ],
+  "quest.13441AEDD6B820ED.title": "再生手环",
+  "quest.13441AEDD6B820ED.quest_desc": [
+    "每秒恢复 0.2 点生命，相当于约 5 秒回半颗心。拉开距离绕场时也能回血。",
+    "探索地下或洞穴宝箱有机会取得。序章试剑后的三选一奖励也有这只手环。",
+    "{\"text\":\"返回「开荒饰品」\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"45935826E246E542\"}}"
+  ],
+  "quest.2AB1120022BECD53.title": "鞋带束头",
+  "quest.2AB1120022BECD53.quest_desc": [
+    "佩戴后移动速度提高 5%。在狭窄的平台上调整落点时也能用上。",
+    "探索地表宝箱或生命木箱有机会找到。以后制作闪电靴要用到它。",
+    "{\"text\":\"返回「开荒饰品」\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"45935826E246E542\"}}"
+  ],
+  "quest.6132EE6DAB4FC629.title": "暴雪瓶",
+  "quest.6132EE6DAB4FC629.quest_desc": [
+    "在空中再次按跳跃，借雪风向上跃起。安全落差额外增加 3 格。",
+    "去冰雪地区地下找冰冻箱；在雪地钓到的冰冻匣或针叶木匣中也有机会开出。",
+    "{\"text\":\"返回「开荒饰品」\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"45935826E246E542\"}}"
+  ],
+  "quest.357165204E3A2B92.title": "疾风雪靴",
+  "quest.357165204E3A2B92.quest_desc": [
+    "在地面持续向前移动会逐渐加速，最高提供 40% 移速。向前奔跑并转弯，可以绕过敌人。",
+    "在冰雪地区地下搜冰冻箱，或钓取冰冻匣、针叶木匣。以后可搭配火箭靴制作幽灵靴。",
+    "{\"text\":\"相关装备 · 幽灵靴\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"676445251ED4A6E3\"}}",
+    "{\"text\":\"返回「开荒饰品」\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"45935826E246E542\"}}"
+  ],
+  "quest.307923D131E42EC1.title": "镣铐",
+  "quest.307923D131E42EC1.quest_desc": [
+    "放进饰品格可增加 1 点护甲，可以和身上穿的盔甲一起使用。",
+    "击败普通僵尸有机会掉落。前期下矿遇到僵尸时就可以顺手找一件。",
+    "{\"text\":\"返回「开荒饰品」\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"45935826E246E542\"}}"
+  ],
+  "quest.381FDE4345973BC2.title": "进阶饰品",
+  "quest.381FDE4345973BC2.quest_desc": [
+    "想把跑鞋继续升级，先留着鞋带束头。击退哥布林军队后，留意来访的哥布林工匠，他出售工匠作坊和火箭靴。近战可看猛爪手套，法师可看魔力花。",
+    "{\"text\":\"云朵气球\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"0ECCBCC9C4D1E48C\"}}",
+    "{\"text\":\"疾风脚镯\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"6562867AEBEFA8E1\"}}",
+    "{\"text\":\"幽灵靴\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"676445251ED4A6E3\"}}",
+    "{\"text\":\"闪电靴\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"704B4A933A986722\"}}",
+    "{\"text\":\"猛爪手套\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"73288AAD7048444E\"}}",
+    "{\"text\":\"鲨牙项链\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"738D2FEEEC0D7797\"}}",
+    "{\"text\":\"大自然的恩赐\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"72C62BA4C4513481\"}}",
+    "{\"text\":\"魔力花\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"7B370C256A30CD5E\"}}",
+    "{\"text\":\"返回装备目录\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"684C355CAD5A8963\"}}"
+  ],
+  "quest.0ECCBCC9C4D1E48C.title": "云朵气球",
+  "quest.0ECCBCC9C4D1E48C.quest_desc": [
+    "兼有二段跳和跳跃高度加成，适合从一层平台跃到下一层。",
+    "搜空岛宝箱取得闪亮红气球；在哥布林工匠出售的工匠作坊中，将它与 1 个云朵瓶合成。",
+    "{\"text\":\"返回「进阶饰品」\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"381FDE4345973BC2\"}}"
+  ],
+  "quest.6562867AEBEFA8E1.title": "疾风脚镯",
+  "quest.6562867AEBEFA8E1.quest_desc": [
+    "佩戴后移动速度提高 10%，短距离走位也能受益。",
+    "在丛林寻找常春藤箱，或打开丛林匣。收好脚镯，制作闪电靴时需要它。",
+    "{\"text\":\"返回「进阶饰品」\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"381FDE4345973BC2\"}}"
+  ],
+  "quest.676445251ED4A6E3.title": "幽灵靴",
+  "quest.676445251ED4A6E3.quest_desc": [
+    "保留地面加速，并能在空中短暂推进。遇到矿洞断层时，可从跑道末端起跳再升高。",
+    "向哥布林工匠购买火箭靴和工匠作坊。在作坊里用 1 双火箭靴配 1 双赫尔墨斯靴或疾风雪靴合成。",
+    "{\"text\":\"相关装备 · 赫尔墨斯靴\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"0B0B5F710FD5C53A\"}}",
+    "{\"text\":\"相关装备 · 疾风雪靴\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"357165204E3A2B92\"}}",
+    "{\"text\":\"相关装备 · 闪电靴\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"704B4A933A986722\"}}",
+    "{\"text\":\"返回「进阶饰品」\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"381FDE4345973BC2\"}}"
+  ],
+  "quest.704B4A933A986722.title": "闪电靴",
+  "quest.704B4A933A986722.quest_desc": [
+    "继承幽灵靴的飞行和奔跑能力，另外提高 8% 移动速度。",
+    "在工匠作坊中合并幽灵靴、鞋带束头和疾风脚镯，各 1 件。先去地表找束头，再去丛林找脚镯。",
+    "{\"text\":\"相关装备 · 幽灵靴\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"676445251ED4A6E3\"}}",
+    "{\"text\":\"相关装备 · 鞋带束头\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2AB1120022BECD53\"}}",
+    "{\"text\":\"相关装备 · 疾风脚镯\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"6562867AEBEFA8E1\"}}",
+    "{\"text\":\"返回「进阶饰品」\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"381FDE4345973BC2\"}}"
+  ],
+  "quest.73288AAD7048444E.title": "猛爪手套",
+  "quest.73288AAD7048444E.quest_desc": [
+    "攻击速度提高 12%，按住攻击键能连续挥动近战武器。打出一轮后仍要给自己留退路。",
+    "可在丛林神庙的宝箱、丛林常春藤箱里寻找，也有机会从丛林匣开出。",
+    "{\"text\":\"返回「进阶饰品」\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"381FDE4345973BC2\"}}"
+  ],
+  "quest.738D2FEEEC0D7797.title": "鲨牙项链",
+  "quest.738D2FEEEC0D7797.quest_desc": [
+    "穿甲属性增加 5 点。适合在对付有护甲的敌人时换上。",
+    "血月期间寻找血腥僵尸或滴滴怪，击败它们有机会获得。出门前先点亮回营路线。",
+    "{\"text\":\"返回「进阶饰品」\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"381FDE4345973BC2\"}}"
+  ],
+  "quest.72C62BA4C4513481.title": "大自然的恩赐",
+  "quest.72C62BA4C4513481.quest_desc": [
+    "佩戴后魔力消耗降低 6%。连续用宝石法杖攻击时，每管魔力可以撑得更久。",
+    "在丛林或繁茂洞穴寻找并采下这种植物。可直接佩戴，也可留着制成魔力花。",
+    "{\"text\":\"相关装备 · 魔力花\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"7B370C256A30CD5E\"}}",
+    "{\"text\":\"返回「进阶饰品」\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"381FDE4345973BC2\"}}"
+  ],
+  "quest.7B370C256A30CD5E.title": "魔力花",
+  "quest.7B370C256A30CD5E.quest_desc": [
+    "佩戴后魔力消耗降低 8%，需要补充魔力时会自动使用随身的魔力药水。",
+    "在哥布林工匠出售的工匠作坊里，合并 1 个大自然的恩赐和 1 瓶魔力药水。炼药桌以 1 个发光蘑菇和 2 瓶弱效魔力药水可制成所需药水。",
+    "{\"text\":\"相关装备 · 大自然的恩赐\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"72C62BA4C4513481\"}}",
+    "{\"text\":\"返回「进阶饰品」\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"381FDE4345973BC2\"}}"
+  ],
+  "quest.1BDC6C3FD28BBFCD.title": "起手武器",
+  "quest.1BDC6C3FD28BBFCD.quest_desc": [
+    "练习铜阔剑、铁弓、紫晶法杖中的一门即可接上序章。噬星之刃能从开局带到后期，剑谱可随时查看。",
+    "{\"text\":\"铜阔剑\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"0110E6E4E3976E2C\"}}",
+    "{\"text\":\"铁弓\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"04D1B369E3B2319C\"}}",
+    "{\"text\":\"紫晶法杖\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"5C66D939EC5F1860\"}}",
+    "{\"text\":\"噬星之刃\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"7382B7F69F9F401E\"}}",
+    "{\"text\":\"返回装备目录\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"684C355CAD5A8963\"}}"
+  ],
+  "quest.0110E6E4E3976E2C.title": "铜阔剑",
+  "quest.0110E6E4E3976E2C.quest_desc": [
+    "近战 · 基础攻击伤害 5，攻击速度 1.6。对付跳起的史莱姆，先横移，等它落地再出剑。",
+    "制作 · 在普通工作台从上到下放铜锭、铜锭、木棍。序章首趟下矿的铜锭奖励就够用。",
+    "{\"text\":\"返回「起手武器」\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"1BDC6C3FD28BBFCD\"}}"
+  ],
+  "quest.04D1B369E3B2319C.title": "铁弓",
+  "quest.04D1B369E3B2319C.quest_desc": [
+    "远程 · 弓的基础伤害为 3.5，耐久 896。拉弓蓄力、松开发射，带上箭，在平台上边退边打。",
+    "制作 · 普通工作台用 3 铁锭和 3 根线。铁锭摆成弓背，线竖排作弦。序章的投点任务会给线和箭。",
+    "{\"text\":\"返回「起手武器」\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"1BDC6C3FD28BBFCD\"}}"
+  ],
+  "quest.5C66D939EC5F1860.title": "紫晶法杖",
+  "quest.5C66D939EC5F1860.quest_desc": [
+    "魔法 · 发射直行的宝石弹。基础伤害 13，每发耗 5 魔力，基础施法间隔 13 刻（约 0.65 秒）。",
+    "制作 · 在重型工作台用 10 铜锭和 5 紫水晶碎片制作。重型工作台用两个工作台上下夹一个铁砧或铅砧合成。",
+    "备战 · 紫水晶晶洞能找到碎片。夜间收集 5 颗坠落之星，可合成一颗魔力水晶来提高魔力上限。",
+    "{\"text\":\"相关装备 · 大自然的恩赐\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"72C62BA4C4513481\"}}",
+    "{\"text\":\"返回「起手武器」\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"1BDC6C3FD28BBFCD\"}}"
+  ],
+  "quest.7382B7F69F9F401E.title": "噬星之刃",
+  "quest.7382B7F69F9F401E.quest_desc": [
+    "成长 · 在新集镇醒来就能拿到。标准路线累计 50 成长点升到初醒，150 点升到灵锋。",
+    "用法 · 二阶主手右键发出剑气，四阶潜行右键释放范围爆发。按 G 或输入 /bladefolio 翻看各阶能力、成长点和首领战果。",
+    "{\"text\":\"返回「起手武器」\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"1BDC6C3FD28BBFCD\"}}"
+  ],
+  "quest.46BAC8D6E3A42B63.title": "护甲与套装",
+  "quest.46BAC8D6E3A42B63.quest_desc": [
+    "史莱姆王前先看铜甲。血肉首领战后，再比较钴甲的三种头部和钯金甲的回复效果。",
+    "{\"text\":\"铜盔甲\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"06EB25A4145F5400\"}}",
+    "{\"text\":\"钴盔甲\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"6E55C91A5A1CC598\"}}",
+    "{\"text\":\"钯金盔甲\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"3EECD32B70AE0A84\"}}",
+    "{\"text\":\"返回装备目录\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"684C355CAD5A8963\"}}"
+  ],
+  "quest.06EB25A4145F5400.title": "铜盔甲",
+  "quest.06EB25A4145F5400.quest_desc": [
+    "开荒 · 四件穿齐额外获得 1 点护甲。饰品和盔甲各占自己的槽位，穿齐铜甲也能戴云朵瓶。",
+    "制作 · 普通工作台做头盔、胸甲、护腿、靴子，分别用 5、8、7、4 铜锭，共 24 锭。打算练铜阔剑的话，多留 2 锭。",
+    "{\"text\":\"返回「护甲与套装」\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"46BAC8D6E3A42B63\"}}"
+  ],
+  "quest.6E55C91A5A1CC598.title": "钴盔甲",
+  "quest.6E55C91A5A1CC598.quest_desc": [
+    "困难模式 · 穿钴胸甲、护腿和靴子，按武器选第四件。钴头盔套装提高 15% 近战速度；钴帽套装降低 14% 魔力消耗；钴面具套装有 20% 几率省下弹药。",
+    "制作 · 击败血肉首领后，用神锤敲祭坛显矿。采得粗钴后在地狱熔炉熔锭；重型工作台做头、胸、腿、靴分别用 10、20、9、6 锭，共 45 锭。",
+    "{\"text\":\"返回「护甲与套装」\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"46BAC8D6E3A42B63\"}}"
+  ],
+  "quest.3EECD32B70AE0A84.title": "钯金盔甲",
+  "quest.3EECD32B70AE0A84.quest_desc": [
+    "困难模式 · 穿齐四件后，攻击敌人会提高生命再生速度。三种头部均可组成套装；其中钯金头饰还能增加 60 最大魔力。",
+    "制作 · 用神锤敲祭坛显出钯金矿，粗钯金在地狱熔炉熔锭。重型工作台做头、胸、腿、靴分别用 12、24、10、8 锭，共 54 锭。",
+    "{\"text\":\"返回「护甲与套装」\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"46BAC8D6E3A42B63\"}}"
   ]
 }

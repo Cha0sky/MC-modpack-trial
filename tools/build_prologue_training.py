@@ -1,6 +1,7 @@
 """Extend the prologue with equipment drills and its shared-world catch-up route."""
 
 from build_heritage_quests import DATA, write
+from build_gear_guide import guide_link
 
 PREFIX = "world_progression_core:prologue_training/"
 ACCESSORIES = ("aglet", "cloud_in_a_bottle", "blizzard_in_a_bottle", "hermes_boots",
@@ -79,7 +80,7 @@ def add_training(chapter, language, uid):
     blade = add("blade", "噬星之刃 · 第一剑", (3, -5), "evolvingblade:star_eater", ["arrival"], adv("blade"), [
         "主手握噬星之刃，用剑身命中僵尸、骷髅、蜘蛛或普通史莱姆。按「打开噬星剑谱」查看当前阶段、成长点和下次进化条件。",
         "按 G 或输入 /bladefolio 打开剑谱。开发版的 G 也绑定了饰品栏，指令可以直接翻开剑谱。",
-        "从云朵瓶、赫尔墨斯靴、再生手环里挑一件带走。云朵瓶能在空中再跳一次，跑鞋适合拉开距离，手环会缓慢回复生命。"
+        "云朵瓶、赫尔墨斯靴、再生手环任选一件。领奖前可以翻开手册比较。", guide_link("查手册 · 开荒饰品怎么选", "starter")
     ])
     offers = [item_reward("blade/choice", "terra_curio:" + name, 1)
               for name in ("cloud_in_a_bottle", "hermes_boots", "band_of_regeneration")]
@@ -87,27 +88,28 @@ def add_training(chapter, language, uid):
                              "table_data": {"loot_size": 1, "rewards": [dict(offer, weight=1.0) for offer in offers]}})
 
     add("melee", "兵器架 · 铜阔剑", (7, 4), "confluence:copper_broadsword", ["mine"], adv("melee"), [
-        "把 2 个铜锭和 1 根木棍竖排做成铜阔剑。用它正面击中僵尸、骷髅、蜘蛛或史莱姆，打完一剑就退到落点外。",
-        "锡、铅、银、钨、金和铂金阔剑也能完成这一项。三种兵器练成一门即可备战。"
+        "主手用铜阔剑命中一只敌怪，打完一剑就退到落点外。锡、铅、银、钨、金、铂金阔剑也可练习。",
+        guide_link("查手册 · 铜阔剑的属性和配方", "copper_broadsword")
     ], [("minecraft:cooked_beef", 16)])
     add("archery", "兵器架 · 金属弓", (7, 6), "confluence:iron_bow", ["mine"], adv("archery"), [
-        "3 个铁锭配 3 根线做铁弓，铜弓的摆法相同。带上箭，主手持弓，在箭命中僵尸、骷髅、蜘蛛或史莱姆前保持握弓。",
-        "木短弓或铜至铂金的金属长短弓均可。召王前找一段能边退边射的开阔地。"
+        "主手持泰拉弓射中僵尸、骷髅、蜘蛛或史莱姆，等箭命中再换手。木短弓和铜至铂金的金属长短弓均可。",
+        guide_link("查手册 · 铁弓的属性和配方", "iron_bow")
     ], [("minecraft:arrow", 64)])
     add("magic", "兵器架 · 宝石法杖", (7, 8), "confluence:amethyst_staff", ["mine"], adv("magic"), [
-        "在重型工作台用 10 个铜锭和 5 个紫水晶碎片做紫晶法杖。重型工作台可用两个工作台夹一个铁砧或铅砧制作。",
-        "主手施法，命中僵尸、骷髅、蜘蛛或史莱姆。黄玉、蓝玉、红玉或钻石法杖也可，五颗坠落之星可以合成魔力水晶。"
+        "主手施法，让宝石弹命中僵尸、骷髅、蜘蛛或史莱姆。紫晶、黄玉、蓝玉、红玉和钻石法杖均可。",
+        guide_link("查手册 · 紫晶法杖与魔力准备", "amethyst_staff")
     ], [("minecraft:amethyst_shard", 12)])
     add("loadout", "把饰品戴上", (10, 5), "terra_curio:cloud_in_a_bottle", ["melee", "archery", "magic"],
         adv("accessory"), [
-            "练好一门兵器后，打开背包里的饰品栏，把试剑时领到的瓶子、跑鞋或手环放进饰品格。已经戴在身上的旧饰品可取下再戴一次。",
-            "喜欢找宝箱的话，地下和洞穴宝箱能找到云朵瓶、赫尔墨斯靴、再生手环；地表宝箱还能找到鞋带束头。暴雪瓶、疾风雪靴和镣铐也算。"
+            "打开背包的饰品栏，戴上开荒饰品分册里的任意一件。已经戴过的可以取下再戴一次。",
+            guide_link("看七件开荒饰品 · 属性与获取", "starter"), guide_link("翻开整本装备手册", "index")
         ], [("minecraft:golden_carrot", 12)], minimum=1)
     add("crown", "王冠与退路", (12, 3), "confluence:slime_crown",
         ["workshop", "allocate", "blade", "loadout"], {"type": "item", "item": {"id": "confluence:slime_crown", "count": 1},
         "count": 1, "consume_items": False}, [
             "备一顶金冠或铂金冠，在工作台用 8 个凝胶围住它，得到史莱姆皇冠。先把床和备用食物安顿在战场边。",
-            "清出一段可横移的平地，放两层错开的平台或脚手架。看到史莱姆王收拢或起跳，先离开原地，再回头输出。"
+            "清出一段可横移的平地，放两层错开的平台。看到史莱姆王起跳，先离开落点再还击。",
+            guide_link("战前翻阅 · 装备手册", "index")
         ], [("minecraft:scaffolding", 32), ("minecraft:cooked_beef", 12)])
     add("campaign", "老兵委托 · 三门兵器", (12, -3), "minecraft:map", ["workshop"],
         adv("veteran"), [

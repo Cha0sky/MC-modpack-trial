@@ -2,6 +2,7 @@
 
 from build_heritage_quests import DATA, QUESTS, merge, uid as quest_id, write
 from build_world_turn_quests import uid as world_turn_id
+from build_gear_guide import guide_link
 
 MOD = "world_progression_core"
 FILENAME = "04_field_equipment"
@@ -90,7 +91,8 @@ def main():
         "选一件拿到主手。钴镐用 15 锭、钴钻头用 12 锭；钯金镐和钻头各用 18 锭。做镐另备 3 根珍珠木棍。"], "confluence:cobalt_drill", 2, -1, [uid("bench")],
           [("minecraft:torch", 64), ("minecraft:rail", 48)], optional=True)
     quest("suit", "战斗 · 选一套合身的盔甲", [
-        "穿齐同一种金属的头、胸、腿、靴。钴套共 45 锭，钯金套共 54 锭；头部款式可按职业选。"], "confluence:palladium_chestplate", 2, 1, [uid("bench")],
+        "穿齐钴甲或钯金甲的头、胸、腿、靴。想选头部款式，可先比较套装效果。",
+        guide_link("查手册 · 钴甲与钯金甲", "armor")], "confluence:palladium_chestplate", 2, 1, [uid("bench")],
           [("minecraft:golden_carrot", 32), ("minecraft:arrow", 64)], optional=True)
     quest("prospect", "采掘队 · 探到第二层矿脉", [
         "主手用钴或钯金镐钻，从深板岩中采出一块秘银矿或山铜矿。神锤敲开更多祭坛，可以显出下一层矿脉。"],
