@@ -12,7 +12,6 @@ package com.evolvingblade.growth;
  * @param waveDamageMultiplier     剑气伤害 = 该系数 × 阶段基础攻击
  * @param waveCooldownTicks        剑气冷却（tick）
  * @param waveFinalCooldownTicks   终阶剑气冷却（tick）
- * @param waveFinalPierce          终阶可穿透的父实体数上限
  * @param waveLifetimeTicks        射线/弹射物最长存活（tick），保证有限寿命
  * @param lifestealUnlockStage     解锁吸血的阶段（默认 3）
  * @param lifestealFraction        满蓄力主手近战吸血比例（占实际损失生命）
@@ -26,7 +25,6 @@ package com.evolvingblade.growth;
  * @param burstCooldownTicks       爆发冷却（tick）
  * @param burstFinalRadius         终阶爆发半径（方块）
  * @param burstFinalCooldownTicks  终阶爆发冷却（tick）
- * @param burstMaxTargets          爆发最多命中的有效目标数
  * @param bossBonusUnlockStage     解锁"斩 Boss 额外伤害"的阶段（默认 5）
  * @param bossBonusFraction        额外伤害 = 该比例 × Boss 最大生命
  * @param bossBonusCap             额外伤害上限
@@ -48,7 +46,6 @@ public record Abilities(
         double waveDamageMultiplier,
         int waveCooldownTicks,
         int waveFinalCooldownTicks,
-        int waveFinalPierce,
         int waveLifetimeTicks,
         int lifestealUnlockStage,
         double lifestealFraction,
@@ -62,7 +59,6 @@ public record Abilities(
         int burstCooldownTicks,
         double burstFinalRadius,
         int burstFinalCooldownTicks,
-        int burstMaxTargets,
         int bossBonusUnlockStage,
         double bossBonusFraction,
         double bossBonusCap,
@@ -81,10 +77,10 @@ public record Abilities(
     public static Abilities defaults() {
         return new Abilities(
                 2.0D,
-                2, 24.0D, 1.0D, 160, 80, 3, 200,
+                2, 48.0D, 1.0D, 80, 40, 200,
                 3, 0.05D, 4.0D,
                 6, 0.10D, 8.0D,
-                4, 6.0D, 1.5D, 400, 8.0D, 200, 32,
+                4, 12.0D, 1.5D, 200, 16.0D, 100,
                 5, 0.01D, 200.0D, 0.03D, 1000.0D, 20,
                 true);
     }

@@ -181,14 +181,15 @@ public final class WaveBurstAcceptanceGameTests {
     @GameTest(template = "boss_arena", timeoutTicks = 300)
     public static void waveMidStageBehindTargetRangeBoundaryAndCooldown(GameTestHelper helper) {
         LOG.reset();
-        ServerPlayer player = staged(helper, STAGE2_POINTS, 0L, 24, 4, 6);
+        ServerPlayer player = staged(helper, STAGE2_POINTS, 0L, 4, 4, 4);
         helper.assertTrue(stage(player) == 2, "sanity: stage 2 (stage=" + stage(player) + ")");
         // 故意先放远的、再放近的：命中顺序必须按"沿射线距离"，与世界实体插入顺序无关。
-        Husk farBoundary = huskAt(helper, 24, 4, 29, 500.0D);   // 23 格（射程 24 内）
-        Husk inside = huskAt(helper, 24, 4, 12, 500.0D);        // 6 格
-        Husk behindOne = huskAt(helper, 24, 4, 5, 500.0D);      // **玩家背后 1 格**
-        Husk outside = huskAt(helper, 24, 4, 31, 500.0D);       // 25 格（射程外）
-        face(helper, player, 24, 4, 12);
+        Husk farBoundary = huskAt(helper, 37, 4, 37, 500.0D);   // 对角线约 46.7 格
+        Husk inside = huskAt(helper, 9, 4, 9, 500.0D);        // 距离约 7 格
+        Husk behindOne = huskAt(helper, 3, 4, 3, 500.0D);      // **玩家背后 1 格**
+        Husk outside = huskAt(helper, 39, 4, 39, 500.0D);       // 对角线约 49.5 格
+        player.lookAt(net.minecraft.commands.arguments.EntityAnchorArgument.Anchor.EYES,
+                player.getEyePosition().add(1.0D, 0.0D, 1.0D));
 
         double insideHp = inside.getHealth();
         double boundaryHp = farBoundary.getHealth();
@@ -203,15 +204,15 @@ public final class WaveBurstAcceptanceGameTests {
                 "stage-2 wave raw damage must be exactly 24 (raw=" + LOG.first() + ")");
         helper.assertTrue(Math.abs(behindHp - behindOne.getHealth()) < 0.01D,
                 "a target 1 block BEHIND the player must never be hit (hp=" + behindOne.getHealth() + ")");
-        helper.assertTrue(Math.abs(boundaryHp - farBoundary.getHealth()) < 0.01D,
-                "stage 2 hits only ONE target: the 23-block target must stay untouched");
+        helper.assertTrue(farBoundary.getHealth() < boundaryHp,
+                "stage 2 must hit both the near target and the target near the new range boundary");
         helper.assertTrue(Math.abs(outsideHp - outside.getHealth()) < 0.01D,
-                "a target beyond the 24-block range must not be hit");
+                "a target beyond the 48-block range must not be hit");
 
         long remaining = waveRemaining(player);
-        helper.assertTrue(remaining == 160L, "stage-2 wave cooldown must be 160 ticks (got " + remaining + ")");
+        helper.assertTrue(remaining == 80L, "stage-2 wave cooldown must be 80 ticks (got " + remaining + ")");
         EBPayloads.StateSnapshot snapshot = EBPayloads.snapshotFor(player, false);
-        helper.assertTrue(Math.abs(snapshot.waveRemaining() - 160L) <= 1L,
+        helper.assertTrue(Math.abs(snapshot.waveRemaining() - 80L) <= 1L,
                 "the snapshot taken right after casting must show the cooldown (got "
                         + snapshot.waveRemaining() + ")");
         helper.assertFalse(StarEaterAbilities.tryWave(player), "the wave must be locked while cooling down");
@@ -220,7 +221,7 @@ public final class WaveBurstAcceptanceGameTests {
     }
 
     @GameTest(template = "boss_arena", timeoutTicks = 300)
-    public static void waveFinalHitsExactlyThreeNearestRegardlessOfSpawnOrder(GameTestHelper helper) {
+    public static void waveFinalHitsAllForwardTargetsRegardlessOfSpawnOrder(GameTestHelper helper) {
         LOG.reset();
         ServerPlayer player = staged(helper, FINAL_POINTS, FINAL_BOSSES, 24, 4, 6);
         helper.assertTrue(stage(player) == 7, "sanity: final stage (stage=" + stage(player) + ")");
@@ -240,13 +241,13 @@ public final class WaveBurstAcceptanceGameTests {
                         && third.getHealth() < before[2],
                 "the three NEAREST targets must be hit (hp=" + first.getHealth() + "/" + second.getHealth() + "/"
                         + third.getHealth() + ")");
-        helper.assertTrue(Math.abs(fourth.getHealth() - before[3]) < 0.01D,
-                "the 4th (farthest) target must stay untouched: at most 3 TOTAL targets");
+        helper.assertTrue(fourth.getHealth() < before[3],
+                "the fourth target on the same ray must also be hit");
         helper.assertTrue(Math.abs(behindHp - behind.getHealth()) < 0.01D, "the behind target must stay untouched");
         helper.assertTrue(Math.abs(LOG.first() - 1_500.0F) < 1.0F,
                 "final wave raw damage must be exactly 1500 (raw=" + LOG.first() + ")");
-        helper.assertTrue(waveRemaining(player) == 80L,
-                "final wave cooldown must be 80 ticks (got " + waveRemaining(player) + ")");
+        helper.assertTrue(waveRemaining(player) == 40L,
+                "final wave cooldown must be 40 ticks (got " + waveRemaining(player) + ")");
         LOG.reset();
         helper.succeed();
     }
@@ -361,24 +362,24 @@ public final class WaveBurstAcceptanceGameTests {
                         + (hp0 - boss.getHealth()) + ")");
         helper.assertTrue(boss.isAlive(), "the target must survive");
         helper.assertTrue(Math.abs(mid.getHealth() - playerHp0) < 0.01D, "the burst must not lifesteal");
-        helper.assertTrue(burstRemaining(mid) == 400L, "stage-4 burst cooldown must be 400 (got "
+        helper.assertTrue(burstRemaining(mid) == 200L, "stage-4 burst cooldown must be 200 (got "
                 + burstRemaining(mid) + ")");
 
         ServerPlayer fin = staged(helper, FINAL_POINTS, FINAL_BOSSES, 24, 4, 6);
-        // 与玩家同一 y、正东方 2 格，且不会被玩家自身包围盒包住（三维球心在躯干，水平距离 2 « 终阶半径 8）。
+        // 与玩家同一 y、正东方 2 格，且不会被玩家自身包围盒包住（三维球心在躯干，水平距离 2 « 终阶半径 16）。
         FixtureEntities.LargeHealthFixtureHusk boss2 = noArmorBoss(helper, 26, 4, 6, 10_000.0D);
         double hp1 = boss2.getHealth();
         helper.assertTrue(StarEaterAbilities.tryBurst(fin), "the final burst must fire");
         helper.assertTrue(Math.abs((hp1 - boss2.getHealth()) - 2_250.0D) < 1.0D,
                 "final burst must remove exactly 2250 health (loss=" + (hp1 - boss2.getHealth()) + ")");
         helper.assertTrue(boss2.isAlive(), "the target must survive (10000 > 2250)");
-        helper.assertTrue(burstRemaining(fin) == 200L, "final burst cooldown must be 200 (got "
+        helper.assertTrue(burstRemaining(fin) == 100L, "final burst cooldown must be 100 (got "
                 + burstRemaining(fin) + ")");
         helper.succeed();
     }
 
     @GameTest(template = "boss_arena", timeoutTicks = 600)
-    public static void burstFinalHitsExactlyThirtyTwoAndKeepsBlocks(GameTestHelper helper) {
+    public static void burstFinalHitsAllInRangeAndKeepsBlocks(GameTestHelper helper) {
         LOG.reset();
         ServerPlayer player = staged(helper, FINAL_POINTS, FINAL_BOSSES, 24, 4, 12);
         helper.assertTrue(stage(player) == 7, "sanity: final stage (stage=" + stage(player) + ")");
@@ -391,8 +392,8 @@ public final class WaveBurstAcceptanceGameTests {
             }
         }
         helper.assertTrue(inside.size() == 34, "sanity: 34 in-radius targets (got " + inside.size() + ")");
-        Husk outsideA = huskAt(helper, 24, 4, 25, 500.0D);
-        Husk outsideB = huskAt(helper, 24, 4, 2, 500.0D);
+        Husk outsideA = huskAt(helper, 24, 4, 32, 500.0D);
+        Husk outsideB = huskAt(helper, 42, 4, 12, 500.0D);
         helper.setBlock(new BlockPos(24, 4, 20), Blocks.STONE);
         helper.setBlock(new BlockPos(30, 4, 12), Blocks.STONE);
         BlockState beforeA = helper.getBlockState(new BlockPos(24, 4, 20));
@@ -409,13 +410,13 @@ public final class WaveBurstAcceptanceGameTests {
                 damaged++;
             }
         }
-        helper.assertTrue(damaged == 32, "exactly 32 of the 34 in-radius targets must be hit (damaged="
+        helper.assertTrue(damaged == inside.size(), "all 34 in-radius targets must be hit (damaged="
                 + damaged + ")");
         helper.assertTrue(Math.abs(LOG.first() - 2_250.0F) < 1.0F,
                 "the final burst raw damage must be exactly 2250 (raw=" + LOG.first() + ")");
         helper.assertTrue(outsideA.getHealth() == outsideA.getMaxHealth()
                         && outsideB.getHealth() == outsideB.getMaxHealth(),
-                "targets outside the radius (13 and 10 blocks) must be untouched");
+                "targets outside the radius (20 and 18 blocks) must be untouched");
         helper.assertTrue(helper.getBlockState(new BlockPos(24, 4, 20)).equals(beforeA)
                         && helper.getBlockState(new BlockPos(30, 4, 12)).equals(beforeB),
                 "the burst must not modify any block (no explosion)");
@@ -586,18 +587,18 @@ public final class WaveBurstAcceptanceGameTests {
         helper.runAfterDelay(1L, () -> {
             long start = StarEaterAbilities.clock(player);
             helper.assertTrue(StarEaterAbilities.tryWave(player), "the first cast must succeed");
-            helper.assertTrue(GrowthService.data(player).waveReadyAt() == start + 160L,
-                    "the stored deadline must be exactly now+160 (deadline="
+            helper.assertTrue(GrowthService.data(player).waveReadyAt() == start + 80L,
+                    "the stored deadline must be exactly now+80 (deadline="
                             + GrowthService.data(player).waveReadyAt() + ", start=" + start + ")");
-            helper.runAfterDelay(159L, () -> {
+            helper.runAfterDelay(79L, () -> {
                 long now = StarEaterAbilities.clock(player);
-                helper.assertTrue(now - start == 159L, "the world clock must have advanced 159 ticks (got "
+                helper.assertTrue(now - start == 79L, "the world clock must have advanced 79 ticks (got "
                         + (now - start) + ")");
                 helper.assertFalse(StarEaterAbilities.tryWave(player),
                         "the wave must still be locked one tick before the deadline");
                 helper.runAfterDelay(1L, () -> {
                     long later = StarEaterAbilities.clock(player);
-                    helper.assertTrue(later - start == 160L, "the world clock must have advanced 160 ticks (got "
+                    helper.assertTrue(later - start == 80L, "the world clock must have advanced 80 ticks (got "
                             + (later - start) + ")");
                     helper.assertTrue(StarEaterAbilities.tryWave(player),
                             "the wave must be accepted exactly at its deadline");
@@ -613,17 +614,17 @@ public final class WaveBurstAcceptanceGameTests {
         helper.runAfterDelay(1L, () -> {
             long start = StarEaterAbilities.clock(player);
             helper.assertTrue(StarEaterAbilities.tryBurst(player), "the first cast must succeed");
-            helper.assertTrue(GrowthService.data(player).burstReadyAt() == start + 400L,
-                    "the stored deadline must be exactly now+400");
-            helper.runAfterDelay(399L, () -> {
+            helper.assertTrue(GrowthService.data(player).burstReadyAt() == start + 200L,
+                    "the stored deadline must be exactly now+200");
+            helper.runAfterDelay(199L, () -> {
                 long now = StarEaterAbilities.clock(player);
-                helper.assertTrue(now - start == 399L, "the world clock must have advanced 399 ticks (got "
+                helper.assertTrue(now - start == 199L, "the world clock must have advanced 199 ticks (got "
                         + (now - start) + ")");
                 helper.assertFalse(StarEaterAbilities.tryBurst(player),
                         "the burst must still be locked one tick before the deadline");
                 helper.runAfterDelay(1L, () -> {
                     long later = StarEaterAbilities.clock(player);
-                    helper.assertTrue(later - start == 400L, "the world clock must have advanced 400 ticks (got "
+                    helper.assertTrue(later - start == 200L, "the world clock must have advanced 200 ticks (got "
                             + (later - start) + ")");
                     helper.assertTrue(StarEaterAbilities.tryBurst(player),
                             "the burst must be accepted exactly at its deadline");
@@ -639,18 +640,17 @@ public final class WaveBurstAcceptanceGameTests {
         helper.assertTrue(Math.abs(CombatMath.waveDamage(settings, 2) - 24.0D) < 0.001D
                         && Math.abs(CombatMath.waveDamage(settings, 7) - 1500.0D) < 0.001D,
                 "wave damage must be 24 / 1500");
-        helper.assertTrue(CombatMath.waveCooldownTicks(settings, 2) == 160
-                        && CombatMath.waveCooldownTicks(settings, 7) == 80, "wave cooldowns must be 160 / 80");
-        helper.assertTrue(CombatMath.waveMaxTargets(settings, 2) == 1
-                        && CombatMath.waveMaxTargets(settings, 7) == 3, "wave max targets must be 1 / 3");
+        helper.assertTrue(CombatMath.waveCooldownTicks(settings, 2) == 80
+                        && CombatMath.waveCooldownTicks(settings, 7) == 40, "wave cooldowns must be 80 / 40");
+        helper.assertTrue(settings.abilities().waveRange() == 48.0D, "wave reach must be 48 blocks");
         helper.assertTrue(Math.abs(CombatMath.burstDamage(settings, 4) - 180.0D) < 0.001D
                         && Math.abs(CombatMath.burstDamage(settings, 7) - 2250.0D) < 0.001D,
                 "burst damage must be 180 / 2250");
-        helper.assertTrue(CombatMath.burstCooldownTicks(settings, 4) == 400
-                        && CombatMath.burstCooldownTicks(settings, 7) == 200, "burst cooldowns must be 400 / 200");
-        helper.assertTrue(Math.abs(settings.abilities().burstRadiusFor(4) - 6.0D) < 0.001D
-                        && Math.abs(settings.abilities().burstRadiusFor(7) - 8.0D) < 0.001D,
-                "burst radii must be 6 / 8");
+        helper.assertTrue(CombatMath.burstCooldownTicks(settings, 4) == 200
+                        && CombatMath.burstCooldownTicks(settings, 7) == 100, "burst cooldowns must be 200 / 100");
+        helper.assertTrue(Math.abs(settings.abilities().burstRadiusFor(4) - 12.0D) < 0.001D
+                        && Math.abs(settings.abilities().burstRadiusFor(7) - 16.0D) < 0.001D,
+                "burst radii must be 12 / 16");
         helper.succeed();
     }
 }

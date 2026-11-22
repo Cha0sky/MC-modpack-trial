@@ -70,7 +70,6 @@ public final class EBConfig {
     private static final ModConfigSpec.DoubleValue WAVE_DAMAGE_MULTIPLIER;
     private static final ModConfigSpec.IntValue WAVE_COOLDOWN;
     private static final ModConfigSpec.IntValue WAVE_FINAL_COOLDOWN;
-    private static final ModConfigSpec.IntValue WAVE_FINAL_PIERCE;
     private static final ModConfigSpec.IntValue WAVE_LIFETIME;
     private static final ModConfigSpec.IntValue LIFESTEAL_UNLOCK_STAGE;
     private static final ModConfigSpec.DoubleValue LIFESTEAL_FRACTION;
@@ -84,7 +83,6 @@ public final class EBConfig {
     private static final ModConfigSpec.IntValue BURST_COOLDOWN;
     private static final ModConfigSpec.DoubleValue BURST_FINAL_RADIUS;
     private static final ModConfigSpec.IntValue BURST_FINAL_COOLDOWN;
-    private static final ModConfigSpec.IntValue BURST_MAX_TARGETS;
     private static final ModConfigSpec.IntValue BOSS_BONUS_UNLOCK_STAGE;
     private static final ModConfigSpec.DoubleValue BOSS_BONUS_FRACTION;
     private static final ModConfigSpec.DoubleValue BOSS_BONUS_CAP;
@@ -153,8 +151,6 @@ public final class EBConfig {
                 .defineInRange("wave_cooldown_ticks", defaults.waveCooldownTicks(), 0, Abilities.MAX_COOLDOWN_TICKS);
         WAVE_FINAL_COOLDOWN = BUILDER.comment("终阶剑气冷却（tick）。")
                 .defineInRange("wave_final_cooldown_ticks", defaults.waveFinalCooldownTicks(), 0, Abilities.MAX_COOLDOWN_TICKS);
-        WAVE_FINAL_PIERCE = BUILDER.comment("终阶剑气最多穿透的父实体数。")
-                .defineInRange("wave_final_pierce", defaults.waveFinalPierce(), 0, 64);
         WAVE_LIFETIME = BUILDER.comment("剑气射线/弹射物最长存活（tick），保证寿命有限。")
                 .defineInRange("wave_lifetime_ticks", defaults.waveLifetimeTicks(), 1, Abilities.MAX_COOLDOWN_TICKS);
         LIFESTEAL_UNLOCK_STAGE = BUILDER.comment("解锁吸血的阶段。")
@@ -181,8 +177,6 @@ public final class EBConfig {
                 .defineInRange("burst_final_radius", defaults.burstFinalRadius(), 1.0D, Abilities.MAX_RANGE);
         BURST_FINAL_COOLDOWN = BUILDER.comment("终阶爆发冷却（tick）。")
                 .defineInRange("burst_final_cooldown_ticks", defaults.burstFinalCooldownTicks(), 0, Abilities.MAX_COOLDOWN_TICKS);
-        BURST_MAX_TARGETS = BUILDER.comment("爆发最多命中的有效目标数（默认 32）。")
-                .defineInRange("burst_max_targets", defaults.burstMaxTargets(), 0, 256);
         BOSS_BONUS_UNLOCK_STAGE = BUILDER.comment("解锁斩 Boss 额外伤害的阶段。")
                 .defineInRange("boss_bonus_unlock_stage", defaults.bossBonusUnlockStage(), 0, GrowthMode.STAGE_COUNT - 1);
         BOSS_BONUS_FRACTION = BUILDER.comment("额外伤害 = 该比例 × Boss 最大生命。")
@@ -336,7 +330,6 @@ public final class EBConfig {
                 GrowthSettings.sanitizeDouble("abilities.wave_damage_multiplier", WAVE_DAMAGE_MULTIPLIER.get(), 0.0D, Abilities.MAX_FRACTION, d.waveDamageMultiplier(), problems),
                 GrowthSettings.sanitizeInt("abilities.wave_cooldown_ticks", WAVE_COOLDOWN.get(), 0, Abilities.MAX_COOLDOWN_TICKS, d.waveCooldownTicks(), problems),
                 GrowthSettings.sanitizeInt("abilities.wave_final_cooldown_ticks", WAVE_FINAL_COOLDOWN.get(), 0, Abilities.MAX_COOLDOWN_TICKS, d.waveFinalCooldownTicks(), problems),
-                GrowthSettings.sanitizeInt("abilities.wave_final_pierce", WAVE_FINAL_PIERCE.get(), 0, 64, d.waveFinalPierce(), problems),
                 GrowthSettings.sanitizeInt("abilities.wave_lifetime_ticks", WAVE_LIFETIME.get(), 1, Abilities.MAX_COOLDOWN_TICKS, d.waveLifetimeTicks(), problems),
                 GrowthSettings.sanitizeInt("abilities.lifesteal_unlock_stage", LIFESTEAL_UNLOCK_STAGE.get(), 0, 7, d.lifestealUnlockStage(), problems),
                 GrowthSettings.sanitizeDouble("abilities.lifesteal_fraction", LIFESTEAL_FRACTION.get(), 0.0D, Abilities.MAX_FRACTION, d.lifestealFraction(), problems),
@@ -350,7 +343,6 @@ public final class EBConfig {
                 GrowthSettings.sanitizeInt("abilities.burst_cooldown_ticks", BURST_COOLDOWN.get(), 0, Abilities.MAX_COOLDOWN_TICKS, d.burstCooldownTicks(), problems),
                 GrowthSettings.sanitizeDouble("abilities.burst_final_radius", BURST_FINAL_RADIUS.get(), 1.0D, Abilities.MAX_RANGE, d.burstFinalRadius(), problems),
                 GrowthSettings.sanitizeInt("abilities.burst_final_cooldown_ticks", BURST_FINAL_COOLDOWN.get(), 0, Abilities.MAX_COOLDOWN_TICKS, d.burstFinalCooldownTicks(), problems),
-                GrowthSettings.sanitizeInt("abilities.burst_max_targets", BURST_MAX_TARGETS.get(), 0, 256, d.burstMaxTargets(), problems),
                 GrowthSettings.sanitizeInt("abilities.boss_bonus_unlock_stage", BOSS_BONUS_UNLOCK_STAGE.get(), 0, 7, d.bossBonusUnlockStage(), problems),
                 GrowthSettings.sanitizeDouble("abilities.boss_bonus_fraction", BOSS_BONUS_FRACTION.get(), 0.0D, Abilities.MAX_FRACTION, d.bossBonusFraction(), problems),
                 GrowthSettings.sanitizeDouble("abilities.boss_bonus_cap", BOSS_BONUS_CAP.get(), 0.0D, 1_000_000.0D, d.bossBonusCap(), problems),

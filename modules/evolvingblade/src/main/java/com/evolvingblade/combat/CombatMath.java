@@ -99,19 +99,6 @@ public final class CombatMath {
     }
 
     /**
-     * 剑气最多可命中的<b>父实体总数</b>（不是"额外穿透数"）：
-     * 普通阶段 1 个（命中即停），终阶为配置的 {@code waveFinalPierce}（默认 3）。
-     *
-     * <p>调用方必须用 {@code hits >= maxTargets} 判定停止，否则会多命中一个目标。
-     */
-    public static int waveMaxTargets(GrowthSettings settings, int stage) {
-        if (stage >= com.evolvingblade.growth.GrowthMode.STAGE_COUNT - 1) {
-            return Math.max(1, settings.abilities().waveFinalPierce());
-        }
-        return 1;
-    }
-
-    /**
      * 沿射线采样：返回从近到远、间距为 {@code step} 的采样距离。
      *
      * <p>用于逐段做方块碰撞与目标检索，保证"墙壁阻挡、不穿墙"。
@@ -128,29 +115,5 @@ public final class CombatMath {
             distances.add(maxDistance);
         }
         return distances;
-    }
-
-    /**
-     * 按距离从近到远取前 {@code limit} 个目标（用于爆发的稳定上限）。
-     *
-     * @param distances 目标到中心的距离平方，{@code null} 视为不可用
-     */
-    public static int[] nearestWithinLimit(double[] distances, double radiusSqr, int limit) {
-        if (distances == null || limit <= 0) {
-            return new int[0];
-        }
-        List<Integer> candidates = new ArrayList<>();
-        for (int i = 0; i < distances.length; i++) {
-            if (Double.isFinite(distances[i]) && distances[i] <= radiusSqr) {
-                candidates.add(i);
-            }
-        }
-        candidates.sort((a, b) -> Double.compare(distances[a], distances[b]));
-        int size = Math.min(limit, candidates.size());
-        int[] result = new int[size];
-        for (int i = 0; i < size; i++) {
-            result[i] = candidates.get(i);
-        }
-        return result;
     }
 }

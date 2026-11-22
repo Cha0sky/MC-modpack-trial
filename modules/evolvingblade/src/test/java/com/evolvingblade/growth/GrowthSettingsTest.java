@@ -104,12 +104,13 @@ class GrowthSettingsTest {
     @DisplayName("能力旋钮：终阶冷却/半径/吸血与 Boss 加成按阶段切换")
     void abilityStageSwitches() {
         Abilities abilities = Abilities.defaults();
-        assertEquals(160, abilities.waveCooldownFor(5));
-        assertEquals(80, abilities.waveCooldownFor(7));
-        assertEquals(400, abilities.burstCooldownFor(6));
-        assertEquals(200, abilities.burstCooldownFor(7));
-        assertEquals(6.0D, abilities.burstRadiusFor(6), 1.0E-9D);
-        assertEquals(8.0D, abilities.burstRadiusFor(7), 1.0E-9D);
+        assertEquals(48.0D, abilities.waveRange());
+        assertEquals(80, abilities.waveCooldownFor(5));
+        assertEquals(40, abilities.waveCooldownFor(7));
+        assertEquals(200, abilities.burstCooldownFor(6));
+        assertEquals(100, abilities.burstCooldownFor(7));
+        assertEquals(12.0D, abilities.burstRadiusFor(6), 1.0E-9D);
+        assertEquals(16.0D, abilities.burstRadiusFor(7), 1.0E-9D);
         assertEquals(0.05D, abilities.lifestealFractionFor(5), 1.0E-9D);
         assertEquals(0.10D, abilities.lifestealFractionFor(6), 1.0E-9D);
         assertEquals(4.0D, abilities.lifestealCapFor(5), 1.0E-9D);

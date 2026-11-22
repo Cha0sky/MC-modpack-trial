@@ -2,11 +2,13 @@ package com.evolvingblade.client;
 
 import java.util.List;
 import com.evolvingblade.network.EBPayloads.StateSnapshot;
+import com.evolvingblade.network.EBPayloads.FolioOpened;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.FormattedCharSequence;
+import net.neoforged.neoforge.network.PacketDistributor;
 
 public final class DashboardScreen extends Screen {
     private enum Tab { GROWTH, FORMS, SKILLS }
@@ -18,6 +20,12 @@ public final class DashboardScreen extends Screen {
         super(Component.translatable("screen.evolvingblade.dashboard.title"));
         StateSnapshot snapshot = EBClientState.snapshot();
         preview = snapshot == null ? 0 : snapshot.stage();
+    }
+
+    @Override
+    public void added() {
+        super.added();
+        PacketDistributor.sendToServer(FolioOpened.INSTANCE);
     }
 
     @Override

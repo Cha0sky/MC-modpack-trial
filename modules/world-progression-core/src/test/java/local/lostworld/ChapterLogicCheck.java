@@ -16,6 +16,7 @@ public final class ChapterLogicCheck {
         System.out.println("PASS: world turn gates, conversion status independent of the boss and mode flags");
         SettlementGeometryCheck.run();
         SettlementLayoutCheck.run();
+        StructureCompassCheck.run();
         ChapterState old = new ChapterState(false,false);
         check(!old.blocksEvil(true,false),"Old worlds remain passive");
         check(!old.defeat(ChapterState.KING_SLIME),"Old-world deaths do not activate a chapter");

@@ -39,7 +39,7 @@ import net.minecraft.world.damagesource.DamageType;
  *   <li>全部判定在服务器主线程执行；冷却来自玩家 attachment 的<b>绝对到期 tick</b>，
  *       因此换剑/重连/死亡都无法绕过；</li>
  *   <li>剑气用逐段射线做方块碰撞与目标检索，<b>严格不穿墙</b>；</li>
- *   <li>爆发按距离取最近的有限目标（默认 32），并做视线检查，不破坏地形；</li>
+ *   <li>爆发命中球内所有可见的合法目标，不破坏地形；</li>
  *   <li>斩 Boss 加成使用自定义伤害类型：写进 {@code bypasses_armor} 与 {@code bypasses_cooldown} 标签
  *       （只绕过护甲与受击冷却），<b>不</b>绕过无敌/抗性/模组事件取消，也不直接 setHealth/kill；
  *       也绝不修改实体的 {@code invulnerableTime} 等可观察状态；</li>
@@ -199,7 +199,6 @@ public final class StarEaterAbilities {
         double range = settings.abilities().waveRange();
         boolean inherit = settings.abilities().abilityDamageFromAttack();
         double damage = CombatMath.waveDamage(settings, stage, effectiveAttackDamage(player), inherit);
-        int maxTargets = CombatMath.waveMaxTargets(settings, stage);
         Vec3 eye = player.getEyePosition();
         Vec3 direction = player.getLookAngle().normalize();
         DamageSource source = abilitySource(level, player, SWORD_ABILITY);
@@ -218,7 +217,7 @@ public final class StarEaterAbilities {
 
         // 2) 一次性收集整条（被截断的）射线上的合法候选，按"沿射线的投影距离"稳定排序。
         //    这样近处目标一定先于远处目标命中，且**前向投影 < 0（玩家背后）的目标永远不会被命中**——
-        //    它们即使落在某个采样球里也不再抢占命中位。
+        //    它们即使落在某个采样球里也不受伤。
         AABB sweep = player.getBoundingBox().expandTowards(direction.scale(reach)).inflate(WAVE_HIT_RADIUS + 1.0D);
         List<LivingEntity> candidates = level.getEntitiesOfClass(LivingEntity.class, sweep,
                 entity -> isValidTarget(player, entity));
@@ -261,9 +260,6 @@ public final class StarEaterAbilities {
                     firstHit = hit.target().position().add(0.0D, hit.target().getBbHeight() * 0.5D, 0.0D);
                 }
             }
-            if (hits >= maxTargets) {
-                break;
-            }
         }
         if (firstHit != null) {
             AbilityVisuals.hit(level, player, firstHit, stage);
@@ -283,7 +279,7 @@ public final class StarEaterAbilities {
      * <p>判定语义（1.1.0 明确化）：
      * <ul>
      *   <li>球心＝施法者<b>躯干中心</b>（脚底 + 身高的一半），不是脚底；</li>
-     *   <li>半径＝配置的 6（终阶 8），<b>三轴</b>都参与；</li>
+     *   <li>半径＝配置的 12（终阶 16），<b>三轴</b>都参与；</li>
      *   <li>命中判据＝目标<b>包围盒</b>到球心的最近点距离平方 <b>严格 ≤ r²</b>
      *       （{@link EffectiveDamage#sphereIntersectsAabb}），
      *       因此正上方/正下方、斜上方、贴边的大型实体都能命中；
@@ -312,7 +308,6 @@ public final class StarEaterAbilities {
         boolean inherit = settings.abilities().abilityDamageFromAttack();
         // ready() 已经协调过持有者属性，这里读到的是服务端权威有效攻击。
         double damage = CombatMath.burstDamage(settings, stage, effectiveAttackDamage(player), inherit);
-        int cap = settings.abilities().burstMaxTargets();
         Vec3 center = AbilityVisuals.torsoCenter(player);
         // 粗筛包围盒：球心 ± 半径，再向外扩一个"最大实体半宽"的余量，
         // 保证"包围盒与球相交"的大型实体不会被提前筛掉（贴边命中必须可达）。
@@ -324,19 +319,9 @@ public final class StarEaterAbilities {
                                 entity.getBoundingBox().minZ, entity.getBoundingBox().maxX,
                                 entity.getBoundingBox().maxY, entity.getBoundingBox().maxZ));
 
-        double[] distances = new double[candidates.size()];
-        for (int i = 0; i < candidates.size(); i++) {
-            // 排序键＝最近点距离（与命中判据同一口径），保证"最近优先"与"贴边可命中"一致。
-            AABB targetBox = candidates.get(i).getBoundingBox();
-            distances[i] = EffectiveDamage.distanceSqrToAabb(center.x, center.y, center.z,
-                    targetBox.minX, targetBox.minY, targetBox.minZ, targetBox.maxX, targetBox.maxY,
-                    targetBox.maxZ);
-        }
-        int[] chosen = CombatMath.nearestWithinLimit(distances, radius * radius, cap);
         DamageSource source = abilitySource(level, player, SWORD_ABILITY);
         Vec3 firstHit = null;
-        for (int index : chosen) {
-            LivingEntity target = candidates.get(index);
+        for (LivingEntity target : candidates) {
             // 不触碰 invulnerableTime：爆发是普通技能伤害，必须遵守原版受击冷却。
             float before = target.getHealth();
             target.hurt(source, (float) damage);

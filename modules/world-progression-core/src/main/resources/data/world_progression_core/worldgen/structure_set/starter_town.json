@@ -1,0 +1,12 @@
+{
+  "structures": [
+    {"structure": "world_progression_core:starter_town", "weight": 1}
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 128,
+    "separation": 64,
+    "salt": 20261123,
+    "frequency": 0.0
+  }
+}

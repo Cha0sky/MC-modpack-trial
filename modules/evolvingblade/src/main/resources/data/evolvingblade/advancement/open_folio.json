@@ -1,0 +1,5 @@
+{
+  "criteria": {
+    "opened": { "trigger": "minecraft:impossible" }
+  }
+}

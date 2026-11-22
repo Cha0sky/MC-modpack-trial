@@ -7,6 +7,11 @@ group = 'local.lostworld'
 base { archivesName = 'world-progression-core' }
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 sourceSets {
+    test {
+        // The saved-town lookup check reads the actual 1.21.1 position and NBT types.
+        compileClasspath += sourceSets.main.compileClasspath
+        runtimeClasspath += sourceSets.main.compileClasspath
+    }
     gametest {
         compileClasspath += sourceSets.main.output + sourceSets.main.compileClasspath
         runtimeClasspath += sourceSets.main.output + sourceSets.main.runtimeClasspath

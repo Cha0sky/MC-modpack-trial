@@ -25,7 +25,7 @@ import net.neoforged.neoforge.network.handling.IPayloadContext;
 /**
  * 网络包定义与注册。
  *
- * <p>安全边界（SPEC）：客户端只能发送<b>一个枚举意图</b>；所有计数、阶段、伤害、赠剑标记、
+ * <p>客户端报告模式选择或剑谱已打开；所有计数、阶段、伤害、赠剑标记、
  * 配置数值一律由服务器推导并下发。服务器在收到意图时校验"是否已锁定"与"是否重复"，
  * 并在<b>主线程</b>原子地完成"选择 + 发剑"。
  */
@@ -36,7 +36,7 @@ public final class EBPayloads {
     public static final ResourceLocation STATE_ID =
             ResourceLocation.fromNamespaceAndPath(EvolvingBlade.MODID, "state");
 
-    /** C2S：唯一的合法意图——选择 quick/standard/long。 */
+    /** C2S：选择 quick/standard/long。 */
     public record ChooseMode(GrowthMode mode) implements CustomPacketPayload {
         public static final CustomPacketPayload.Type<ChooseMode> TYPE = new CustomPacketPayload.Type<>(CHOOSE_MODE_ID);
         public static final StreamCodec<RegistryFriendlyByteBuf, ChooseMode> CODEC = StreamCodec.of(
@@ -47,6 +47,17 @@ public final class EBPayloads {
         public CustomPacketPayload.Type<? extends CustomPacketPayload> type() {
             return TYPE;
         }
+    }
+
+    public enum FolioOpened implements CustomPacketPayload {
+        INSTANCE;
+
+        public static final Type<FolioOpened> TYPE = new Type<>(
+                ResourceLocation.fromNamespaceAndPath(EvolvingBlade.MODID, "open_folio"));
+        public static final StreamCodec<RegistryFriendlyByteBuf, FolioOpened> CODEC = StreamCodec.unit(INSTANCE);
+
+        @Override
+        public Type<FolioOpened> type() { return TYPE; }
     }
 
     /**
@@ -106,25 +117,23 @@ public final class EBPayloads {
         /** 每个模式 8 个阶段。 */
         public static final int STAGES = 8;
         /** {@link #ability} 的长度与索引定义。 */
-        public static final int ABILITY_COUNT = 18;
+        public static final int ABILITY_COUNT = 16;
         public static final int A_WAVE_DAMAGE = 0;
         public static final int A_WAVE_RANGE = 1;
         public static final int A_WAVE_COOLDOWN = 2;
         public static final int A_WAVE_FINAL_COOLDOWN = 3;
-        public static final int A_WAVE_MAX_TARGETS = 4;
-        public static final int A_LIFESTEAL_FRACTION = 5;
-        public static final int A_LIFESTEAL_CAP = 6;
-        public static final int A_LIFESTEAL_HIGH_FRACTION = 7;
-        public static final int A_LIFESTEAL_HIGH_CAP = 8;
-        public static final int A_BURST_DAMAGE = 9;
-        public static final int A_BURST_COOLDOWN = 10;
-        public static final int A_BURST_FINAL_COOLDOWN = 11;
-        public static final int A_BURST_FINAL_RADIUS = 12;
-        public static final int A_BURST_MAX_TARGETS = 13;
-        public static final int A_BOSS_FRACTION = 14;
-        public static final int A_BOSS_CAP = 15;
-        public static final int A_BOSS_FINAL_FRACTION = 16;
-        public static final int A_BOSS_FINAL_CAP = 17;
+        public static final int A_LIFESTEAL_FRACTION = 4;
+        public static final int A_LIFESTEAL_CAP = 5;
+        public static final int A_LIFESTEAL_HIGH_FRACTION = 6;
+        public static final int A_LIFESTEAL_HIGH_CAP = 7;
+        public static final int A_BURST_DAMAGE = 8;
+        public static final int A_BURST_COOLDOWN = 9;
+        public static final int A_BURST_FINAL_COOLDOWN = 10;
+        public static final int A_BURST_FINAL_RADIUS = 11;
+        public static final int A_BOSS_FRACTION = 12;
+        public static final int A_BOSS_CAP = 13;
+        public static final int A_BOSS_FINAL_FRACTION = 14;
+        public static final int A_BOSS_FINAL_CAP = 15;
 
         /** 某个能力数值（越界返回 0，客户端永远不会因此崩溃）。 */
         public double abilityValue(int index) {
@@ -318,7 +327,6 @@ public final class EBPayloads {
         ability.add(abilities.waveRange());
         ability.add((double) abilities.waveCooldownFor(stage));
         ability.add((double) abilities.waveFinalCooldownTicks());
-        ability.add((double) CombatMath.waveMaxTargets(settings, stage));
         ability.add(abilities.lifestealFraction());
         ability.add(abilities.lifestealCap());
         ability.add(abilities.lifestealHighFraction());
@@ -327,7 +335,6 @@ public final class EBPayloads {
         ability.add((double) abilities.burstCooldownFor(stage));
         ability.add((double) abilities.burstFinalCooldownTicks());
         ability.add(abilities.burstFinalRadius());
-        ability.add((double) abilities.burstMaxTargets());
         ability.add(abilities.bossBonusFraction());
         ability.add(abilities.bossBonusCap());
         ability.add(abilities.bossBonusFinalFraction());
@@ -384,12 +391,15 @@ public final class EBPayloads {
 
     /** 注册处理器（在 mod 事件总线上调用）。客户端处理器只在真正收到包时才会触达客户端类。 */
     public static void registerPayloads(net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent event) {
-        // 协议版本：1.1.0 给 StateSnapshot 增加了 4 个字段（stageBaseAttack / effectiveHeldAttack /
-        // holdingStarEater / abilityDamageFromAttack），并新增了 evolvingblade:ability_effect 载荷。
-        // 版本号必须一起提升，否则 1.0.0 客户端与服务端通过握手后会按旧布局解码而抛异常。
-        // 存档兼容 ≠ 网络协议兼容：双方必须是同一版本。
-        net.neoforged.neoforge.network.registration.PayloadRegistrar registrar = event.registrar("2");
+        // Version 3 adds the journal-open event and removes the two target caps from the skill snapshot.
+        net.neoforged.neoforge.network.registration.PayloadRegistrar registrar = event.registrar("3");
         registrar.playToServer(ChooseMode.TYPE, ChooseMode.CODEC, EBPayloads::handleChooseOnServer);
+        registrar.playToServer(FolioOpened.TYPE, FolioOpened.CODEC, (payload, context) -> context.enqueueWork(() -> {
+            if (context.player() instanceof ServerPlayer player && GrowthService.data(player).hasMode()) {
+                var entry = player.server.getAdvancements().get(FolioOpened.TYPE.id());
+                if (entry != null) player.getAdvancements().award(entry, "opened");
+            }
+        }));
         registrar.playToClient(StateSnapshot.TYPE, StateSnapshot.CODEC, EBPayloads::handleStateOnClient);
         // 有界施法视觉事件：与数值无关，客户端只在真正收到包时才会触达客户端类。
         registrar.playToClient(AbilityEffectPayload.TYPE, AbilityEffectPayload.CODEC,

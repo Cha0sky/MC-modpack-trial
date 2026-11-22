@@ -8,6 +8,8 @@ displayName="失落世界 · 启程"
 description="起始集镇、世界共享进度、邪恶区域边界，以及重启第一座工坊的探索与机械修复。"
 [[mixins]]
 config="lostworld-frontline.mixins.json"
+[[mixins]]
+config="lostworld-compass.mixins.json"
 [[dependencies.world_progression_core]]
 modId="neoforge"
 type="required"

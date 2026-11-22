@@ -33,8 +33,7 @@ final class ModeCardText {
                 format(snapshot.abilityValue(EBPayloads.StateSnapshot.A_WAVE_DAMAGE)),
                 format(snapshot.abilityValue(EBPayloads.StateSnapshot.A_WAVE_RANGE)),
                 seconds(snapshot.abilityValue(EBPayloads.StateSnapshot.A_WAVE_COOLDOWN)),
-                seconds(snapshot.abilityValue(EBPayloads.StateSnapshot.A_WAVE_FINAL_COOLDOWN)),
-                (long) snapshot.abilityValue(EBPayloads.StateSnapshot.A_WAVE_MAX_TARGETS)));
+                seconds(snapshot.abilityValue(EBPayloads.StateSnapshot.A_WAVE_FINAL_COOLDOWN))));
         lines.add(abilityLine("lifesteal", snapshot.lifestealUnlockStage(), snapshot.stage(), -1L));
         lines.add(Component.translatable("screen.evolvingblade.dashboard.lifesteal_value",
                 percent(snapshot.abilityValue(EBPayloads.StateSnapshot.A_LIFESTEAL_FRACTION)),
@@ -48,8 +47,7 @@ final class ModeCardText {
                 format(snapshot.burstRadius()),
                 format(snapshot.abilityValue(EBPayloads.StateSnapshot.A_BURST_FINAL_RADIUS)),
                 seconds(snapshot.abilityValue(EBPayloads.StateSnapshot.A_BURST_COOLDOWN)),
-                seconds(snapshot.abilityValue(EBPayloads.StateSnapshot.A_BURST_FINAL_COOLDOWN)),
-                (long) snapshot.abilityValue(EBPayloads.StateSnapshot.A_BURST_MAX_TARGETS)));
+                seconds(snapshot.abilityValue(EBPayloads.StateSnapshot.A_BURST_FINAL_COOLDOWN))));
         lines.add(abilityLine("boss_bonus", snapshot.bossBonusUnlockStage(), snapshot.stage(), -1L));
         lines.add(Component.translatable("screen.evolvingblade.dashboard.boss_bonus_value",
                 percent(snapshot.abilityValue(EBPayloads.StateSnapshot.A_BOSS_FRACTION)),

@@ -7,7 +7,6 @@ PREFIX = "world_progression_core:prologue_training/"
 ACCESSORIES = ("aglet", "cloud_in_a_bottle", "blizzard_in_a_bottle", "hermes_boots",
                "flurry_boots", "band_of_regeneration", "shackle")
 DRILLS = {
-    "blade": ["evolvingblade:star_eater"],
     "melee": ["confluence:" + metal + "_broadsword" for metal in
               ("copper", "tin", "lead", "silver", "tungsten", "golden", "platinum")],
     "archery": ["confluence:" + metal + style for metal in
@@ -18,6 +17,14 @@ DRILLS = {
 
 
 def build_records():
+    # Keep the old "hit" criterion for players who already finished this same quest.
+    # New completions follow the sword module's persistent record of opening its UI.
+    write(DATA / "advancement/prologue_training/blade.json", {
+        "criteria": {
+            "hit": {"trigger": "minecraft:impossible"},
+            "opened": {"trigger": "minecraft:location", "conditions": {"player": {"type_specific": {
+                "type": "minecraft:player", "advancements": {"evolvingblade:open_folio": True}}}}},
+        }, "requirements": [["hit", "opened"]]})
     for name in ("allocate", "wave", "burst"):
         write(DATA / f"advancement/prologue_training/{name}.json", {"criteria": {"done": {"trigger": "minecraft:impossible"}}})
     write(DATA / "advancement/prologue_training/veteran.json", {"criteria": {
@@ -32,7 +39,7 @@ def build_records():
                "bogged", "spider", "cave_spider", "creeper", "slime", "pillager")]
     for name, weapons in DRILLS.items():
         damage = {"dealt": {"min": 1}, "blocked": False}
-        if name in ("blade", "melee"):
+        if name == "melee":
             damage["type"] = {"direct_entity": {"type": "minecraft:player"}}
         if name == "archery":
             # Confluence converts even ordinary arrows into its own projectile when shot from a Terra bow.
@@ -77,9 +84,9 @@ def add_training(chapter, language, uid):
         "领取小屋任务的加点卷轴，右键得到 1 点。打开「加点界面」，在一条数值属性上按 +1。生命上限适合第一次出门，也可以投资移速或伤害。",
         "开发版按 N，模组默认 K。挖矿、首次合成和打怪都能积攒角色经验；想比较属性，翻开与卷轴一起领到的加点手册。"
     ], [("minecraft:string", 6), ("minecraft:arrow", 32)])
-    blade = add("blade", "噬星之刃 · 第一剑", (3, -5), "evolvingblade:star_eater", ["arrival"], adv("blade"), [
-        "你还记不起这把剑的来历，先试试它的分量。主手持剑，近身命中僵尸、骷髅、蜘蛛或普通史莱姆。",
-        "按 G 或输入 /bladefolio 翻开剑谱，看离下一阶还差多少成长点。",
+    blade = add("blade", "噬星之刃 · 打开成长剑谱", (3, -5), "evolvingblade:star_eater", ["arrival"], adv("blade"), [
+        "你还记不起这把剑的来历，先翻开它的剑谱。按成长菜单键（默认 G），或输入 /bladefolio。",
+        "翻到「成长」就会登记。看看离下一阶还差多少成长点，再带上剑去镇外试试。",
         "云朵瓶、赫尔墨斯靴、再生手环任选一件。领奖前可以翻开手册比较。", guide_link("查手册 · 开荒饰品怎么选", "starter")
     ])
     offers = [item_reward("blade/choice", "terra_curio:" + name, 1)

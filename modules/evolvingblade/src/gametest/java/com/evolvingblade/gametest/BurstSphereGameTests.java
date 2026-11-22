@@ -76,10 +76,10 @@ public final class BurstSphereGameTests {
         Husk above = husk(helper, 24, 8, 12, 5_000.0D);
         // 正下方 4 格。
         Husk below = husk(helper, 24, 0, 12, 5_000.0D);
-        // 空中斜上（水平 3、垂直 4 → 距离 5 < 8）。
+        // 空中斜上（水平 3、垂直 4 → 距离 5 < 16）。
         Husk airborne = husk(helper, 27, 8, 12, 5_000.0D);
-        // 对照组：空中但距离 9 > 8（水平 3、垂直 8.5）。
-        Husk outsideAir = husk(helper, 27, 13, 12, 5_000.0D);
+        // 对照组：高度超过终阶半径。
+        Husk outsideAir = husk(helper, 27, 23, 12, 5_000.0D);
 
         float aboveHp = above.getHealth();
         float belowHp = below.getHealth();
@@ -97,34 +97,23 @@ public final class BurstSphereGameTests {
         helper.succeed();
     }
 
-    /**
-     * <b>包围盒最近点</b>判定的关键对照：中心在球外、但包围盒最近点进球 → 必须命中。
-     *
-     * <p>手算（球心＝玩家躯干 {@code c}，半径 r＝8；Husk 宽 0.6 → 半宽 h＝0.3）：
-     * 把 Husk 精确放在 {@code c.z + 8.2}（用 {@code moveTo} 给精确小数坐标）：
-     * <pre>
-     *   中心距离   = 8.2  &gt; r = 8      → “中心在球外”成立
-     *   最近点距离 = 8.2 − 0.3 = 7.9 ≤ 8 → 必须命中
-     *   对照目标放在 c.z + 9.0：中心 9.0、最近点 8.7 &gt; 8 → 必须 miss
-     * </pre>
-     * 两条一起证明"用的是包围盒最近点，不是中心距离"。
-     */
+    /** A target centre may be outside the sphere while its hitbox overlaps. */
     @GameTest(template = "boss_arena", timeoutTicks = 300)
     public static void burstHitsBoxNearestPointInsideSphereEvenWhenCentreIsOutside(GameTestHelper helper) {
         ServerPlayer player = staged(helper, 24, 4, 12);
         double sphereRadius = com.evolvingblade.config.EBConfig.settings().abilities().burstRadiusFor(7);
-        helper.assertTrue(Math.abs(sphereRadius - 8.0D) < 1.0E-6D,
-                "sanity: the final-stage burst radius must be 8 (got " + sphereRadius + ")");
+        helper.assertTrue(Math.abs(sphereRadius - 16.0D) < 1.0E-6D,
+                "sanity: the final-stage burst radius must be 16 (got " + sphereRadius + ")");
         net.minecraft.world.phys.Vec3 centre = new net.minecraft.world.phys.Vec3(
                 player.getX(), player.getY() + player.getBbHeight() * 0.5D, player.getZ());
-        // 精确小数坐标：中心 8.2（球外）、最近点 7.9（球内）。
+        // 脚下取精确坐标，让目标中心在球外、包围盒在球内。
         Husk edge = husk(helper, 24, 4, 20, 5_000.0D);
         edge.setNoGravity(true);
-        edge.moveTo(centre.x, player.getY(), centre.z + 8.2D, 0.0F, 0.0F);
-        // 对照：中心 9.0（球外）、最近点 8.7（球外）。
+        edge.moveTo(centre.x, player.getY(), centre.z + sphereRadius + 0.2D, 0.0F, 0.0F);
+        // 对照：包围盒也在球外。
         Husk outside = husk(helper, 24, 4, 21, 5_000.0D);
         outside.setNoGravity(true);
-        outside.moveTo(centre.x, player.getY(), centre.z + 9.0D, 0.0F, 0.0F);
+        outside.moveTo(centre.x, player.getY(), centre.z + sphereRadius + 1.0D, 0.0F, 0.0F);
 
         double edgeCentre = Math.hypot(edge.getX() - centre.x, edge.getZ() - centre.z);
         double edgeNearest = edgeCentre - edge.getBbWidth() * 0.5D;
@@ -155,9 +144,9 @@ public final class BurstSphereGameTests {
      */
     @GameTest(template = "boss_arena", timeoutTicks = 500)
     public static void burstHitsLargeBoxWhoseCornerEntersTheSphere(GameTestHelper helper) {
-        // 用例 A：龙宽 16（半宽 8），放在 +14 格 → 最近面 = 14 − 8 = 6 < 8，必须命中。
+        // 用例 A：龙宽 16（半宽 8），放在 +22 格 → 最近面 = 22 − 8 = 14 < 16，必须命中。
         ServerPlayer first = staged(helper, 24, 4, 12);
-        LivingEntity hugeInside = hugeBox(helper, 38, 4, 12);
+        LivingEntity hugeInside = hugeBox(helper, 46, 4, 12);
         float insideHp = hugeInside.getHealth();
         helper.assertTrue(StarEaterAbilities.tryBurst(first), "the final burst must fire (inside case)");
         helper.assertTrue(hugeInside.getHealth() < insideHp,
@@ -167,11 +156,11 @@ public final class BurstSphereGameTests {
         hugeInside.discard();
         helper.runAfterDelay(3L, () -> {
             ServerPlayer second = staged(helper, 24, 4, 12);
-            LivingEntity hugeOutside = hugeBox(helper, 44, 4, 12);
+            LivingEntity hugeOutside = hugeBox(helper, 4, 4, 32);
             float outsideHp = hugeOutside.getHealth();
             helper.assertTrue(StarEaterAbilities.tryBurst(second), "the final burst must fire (outside case)");
             helper.assertTrue(hugeOutside.getHealth() == outsideHp,
-                    "a large box whose nearest face is 12+ blocks away must not be hit (hp="
+                    "a large box whose nearest point is more than 16 blocks away must not be hit (hp="
                             + hugeOutside.getHealth() + ")");
             hugeOutside.discard();
             helper.succeed();
@@ -234,9 +223,9 @@ public final class BurstSphereGameTests {
                 == net.minecraft.world.phys.HitResult.Type.MISS;
     }
 
-    /** 32 个上限在三维球下依然精确（34 个在球内 → 只有最近的 32 个受伤）。 */
+    /** 超过旧上限时，球内的每个目标仍可受到伤害。 */
     @GameTest(template = "boss_arena", timeoutTicks = 600)
-    public static void burstStillCapsAtThirtyTwoInThreeDimensions(GameTestHelper helper) {
+    public static void burstHitsEveryEligibleTargetInThreeDimensions(GameTestHelper helper) {
         ServerPlayer player = staged(helper, 24, 4, 12);
         List<Husk> targets = new ArrayList<>();
         // 3x3x3 的近距网格（水平 ±2、垂直 −2..+2），共 27 个；再加 7 个水平稍远但仍然在球内的目标。
@@ -266,8 +255,8 @@ public final class BurstSphereGameTests {
                 damaged++;
             }
         }
-        helper.assertTrue(damaged == 32,
-                "exactly 32 targets must be hit in the 3D sphere (damaged=" + damaged + ")");
+        helper.assertTrue(damaged == targets.size(),
+                "all in-range targets must be hit in the 3D sphere (damaged=" + damaged + ")");
         // 方块未被破坏（不是爆炸）。
         helper.assertTrue(helper.getBlockState(new BlockPos(24, 4, 12)).isAir()
                         || !helper.getBlockState(new BlockPos(24, 4, 12)).is(Blocks.FIRE),

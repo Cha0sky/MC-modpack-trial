@@ -23,7 +23,6 @@ def write(path, data):
 
 
 def milestone_supplies(name):
-    # Append-only reward IDs: never rename or replace the existing network reward.
     packs={
         "arrival":[("minecraft:bread",32),("minecraft:torch",64),("minecraft:oak_log",64)],
         "mine":[("minecraft:cobblestone",128),("minecraft:coal",32),("minecraft:iron_ingot",16),("minecraft:copper_ingot",24)],
@@ -36,6 +35,11 @@ def milestone_supplies(name):
         "explorer_compass":[("minecraft:map",8),("minecraft:scaffolding",64)],
     }
     rewards=[]
+    if name=="arrival":
+        # FTB stores each player's claim by reward ID. Moving the old reward
+        # lets returning players receive it on login only if it was never claimed.
+        rewards.append({"id":uid("workshop/network"),"type":"item","auto":"enabled","team_reward":False,
+                        "item":{"id":"beyonddimensions:net_creater","count":1},"count":1})
     for item,count in packs.get(name,[]):
         stack={"id":item,"count":1}
         if item=="minecraft:iron_chestplate":
@@ -50,7 +54,7 @@ def main(write_languages=True):
                "icon":{"id":"evolvingblade:star_eater"},"progression_mode":"linear","quests":[]}
     lang = {"chapter."+uid("chapter")+".title":"序章 · 从小屋出发"}
 
-    def quest(name,title,desc,x,y,icon,needs=(),tasks=(),reward=False,minimum=0,subtitle=None):
+    def quest(name,title,desc,x,y,icon,needs=(),tasks=(),minimum=0,subtitle=None):
         q={"id":uid(name),"x":x,"y":y,"icon":{"id":icon},"min_width":300,
            "dependencies":[uid(n) for n in needs],"dependency_requirement":"all_completed",
            "progression_mode":"linear","optional":name in ("nature_compass","explorer_compass","gear_trial","belt_trial"),"hide_dependency_lines":False,
@@ -58,9 +62,6 @@ def main(write_languages=True):
            "hide_lock_icon":False,"tasks":[],"rewards":[]}
         for i,t in enumerate(tasks):
             q["tasks"].append({"id":uid(name+"/task/"+str(i)),**t})
-        if reward:
-            q["rewards"].append({"id":uid(name+"/network"),"type":"item",
-                "item":{"id":"beyonddimensions:net_creater","count":1},"count":1})
         if minimum:
             q["min_required_dependencies"]=minimum
         q["rewards"].extend(milestone_supplies(name))
@@ -77,7 +78,7 @@ def main(write_languages=True):
         return {"type":"item","item":{"id":name,"count":1},"count":count,"consume_items":False}
 
     quest("arrival","在小屋里醒来",[
-        "你想不起自己的来处。镇上的村民留给你一张床，身边还有一把剑。先领面包、火把和原木，记住回小屋的路。",
+        "你想不起自己的来处。身边有一把剑，行囊里还有一个维度网络发生器，进世界时会自动发给你。再领些面包、火把和原木，记住回小屋的路。",
         "小屋外有两件事可先做：去找矿洞，或带噬星之刃试一剑。两边都准备好，再去挑战史莱姆王。"],
         0,0,"minecraft:red_bed",tasks=[adv("arrive")])
     quest("explore","走出聚落",[
@@ -110,9 +111,9 @@ def main(write_languages=True):
         "放两根平行的传动杆，用传送带依次右键两端连接。手摇一侧，放一块圆石试试去向。这条短带以后能给压机送料。"],
         12,1.5,"create:belt_connector",needs=["generator","create"],tasks=[{"type":"advancement","advancement":"create:belt"}])
     quest("workshop","为旅途建立后方",[
-        "试车后领取木桶，放在回家顺路的位置，打开它存放行装。取用过已有木桶也算。领走维度网络发生器，再去整备兵器和饰品。"],
-        14,0,"beyonddimensions:net_creater",needs=["gear_trial","belt_trial"],
-        tasks=[{"type":"stat","stat":"minecraft:open_barrel","value":1}],reward=True,minimum=1,
+        "试车后领取木桶，放在回家顺路的位置，打开它存放行装。取用过已有木桶也算。把下一趟要用的兵器和饰品留在手边。"],
+        14,0,"minecraft:barrel",needs=["gear_trial","belt_trial"],
+        tasks=[{"type":"stat","stat":"minecraft:open_barrel","value":1}],minimum=1,
         subtitle="变速或送件，任选一项试车")
     quest("king","第一次首领挑战：史莱姆王",[
         "选一处开阔地，使用史莱姆皇冠召唤史莱姆王。横向跑开它的落点，等它落地再还击。"],
@@ -198,8 +199,10 @@ def verify_chapter(chapter):
         assert nodes[uid(name)]["dependencies"]==[uid("next")]
         assert nodes[uid(name)]["tasks"][0]["type"]=="advancement"
         assert nodes[uid(name)]["optional"]
-    assert nodes[uid("workshop")]["rewards"][0]=={"id":uid("workshop/network"),"type":"item",
-        "item":{"id":"beyonddimensions:net_creater","count":1},"count":1}
+    network=[(q["id"],reward) for q in nodes.values() for reward in q["rewards"]
+             if reward.get("item",{}).get("id")=="beyonddimensions:net_creater"]
+    assert network==[(uid("arrival"),{"id":uid("workshop/network"),"type":"item","auto":"enabled","team_reward":False,
+                      "item":{"id":"beyonddimensions:net_creater","count":1},"count":1})]
 
 
 if __name__ == "__main__":

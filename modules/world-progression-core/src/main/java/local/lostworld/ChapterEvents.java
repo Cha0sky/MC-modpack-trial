@@ -60,7 +60,12 @@ public final class ChapterEvents {
         if (data.settlementPending()) data.requestSettlement();
         // The sword and chapter gates must not depend on whether a house could be placed.
         if (!data.arrived(player.getUUID())) gift(player);
-        if (!data.hasSettlement()) { EvilBoundary.enforce(player); return; }
+        if (!data.hasSettlement()) {
+            // The arrival kit is due on first login even if the town is still pending.
+            award(player,"arrive");
+            EvilBoundary.enforce(player);
+            return;
+        }
         if (!data.arrived(player.getUUID())) {
             ServerLevel town = player.server.overworld();
             Vec3 landing = homeLanding(town,data.home());

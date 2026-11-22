@@ -33,6 +33,17 @@
       ],
       "rewards": [
         {
+          "id": "2D4D8D954F07BA98",
+          "type": "item",
+          "auto": "enabled",
+          "team_reward": false,
+          "item": {
+            "id": "beyonddimensions:net_creater",
+            "count": 1
+          },
+          "count": 1
+        },
+        {
           "id": "496CF186F08CF940",
           "type": "item",
           "item": {
@@ -518,7 +529,7 @@
       "x": 14,
       "y": 0,
       "icon": {
-        "id": "beyonddimensions:net_creater"
+        "id": "minecraft:barrel"
       },
       "min_width": 300,
       "dependencies": [
@@ -541,15 +552,6 @@
         }
       ],
       "rewards": [
-        {
-          "id": "2D4D8D954F07BA98",
-          "type": "item",
-          "item": {
-            "id": "beyonddimensions:net_creater",
-            "count": 1
-          },
-          "count": 1
-        },
         {
           "id": "532E2A11BECFE7DE",
           "type": "item",

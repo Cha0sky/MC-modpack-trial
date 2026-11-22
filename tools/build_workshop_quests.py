@@ -370,6 +370,8 @@ def build_assets():
     write(ASSETS / "blockstates/workshop_console.json", {"variants": console})
     write(ASSETS / "models/item/workshop_console.json", {"parent": MOD + "block/workshop_console_off"})
     merge(ASSETS / "lang/zh_cn.json", {
+        "structure.world_progression_core.abandoned_workshop": "废弃工坊",
+        "structure.world_progression_core.starter_town": "出生集镇",
         "item.world_progression_core.tainted_fiber": "浸染纤维",
         "item.world_progression_core.resonant_binder": "共振胶",
         "item.world_progression_core.rough_tuner": "粗制调谐器",
@@ -378,6 +380,8 @@ def build_assets():
         "itemGroup.world_progression_core": "失落世界 · 工坊遗产",
     })
     merge(ASSETS / "lang/en_us.json", {
+        "structure.world_progression_core.abandoned_workshop": "Abandoned Workshop",
+        "structure.world_progression_core.starter_town": "Starter Town",
         "item.world_progression_core.tainted_fiber": "Tainted Fiber",
         "item.world_progression_core.resonant_binder": "Resonant Binder",
         "item.world_progression_core.rough_tuner": "Rough Tuner",

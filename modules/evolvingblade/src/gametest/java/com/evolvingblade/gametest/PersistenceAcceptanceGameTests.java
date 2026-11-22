@@ -219,8 +219,8 @@ public final class PersistenceAcceptanceGameTests {
         helper.assertTrue(snapshot.modePoints().size() == 3 * 8 && snapshot.modeBosses().size() == 3 * 8,
                 "all three modes must ship 8 thresholds each (size=" + snapshot.modePoints().size() + ")");
         helper.assertTrue(snapshot.ability().size() == EBPayloads.StateSnapshot.ABILITY_COUNT
-                        && EBPayloads.StateSnapshot.ABILITY_COUNT == 18,
-                "the ability array must carry exactly the declared 18 values");
+                        && EBPayloads.StateSnapshot.ABILITY_COUNT == 16,
+                "the ability array must carry exactly the declared 16 values");
         helper.assertTrue(snapshot.hasMode() && snapshot.modeId().equals(GrowthMode.STANDARD.id()),
                 "the snapshot must carry the authoritative mode");
 

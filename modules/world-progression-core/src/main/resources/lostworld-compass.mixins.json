@@ -1,0 +1,7 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "local.lostworld.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": ["StarterTownCompassMixin", "StarterTownCompassDimensionMixin"]
+}

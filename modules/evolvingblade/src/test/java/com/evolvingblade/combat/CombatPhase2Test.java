@@ -10,42 +10,12 @@ import java.util.UUID;
 import org.junit.jupiter.api.Test;
 
 /**
- * PHASE 2 纯 JVM 回归：剑气"父实体总数"语义、来源窗口哨兵、每目标速率限制。
+ * PHASE 2 纯 JVM 回归：来源窗口哨兵、每目标速率限制。
  *
- * <p>这些规则曾经写错过（穿透数语义、null 默认值、限速表过期），因此每条都固定一个断言。
+ * <p>这些规则曾经写错过（null 默认值、限速表过期），因此每条都固定一个断言。
  */
 class CombatPhase2Test {
 
-    // ------------------------------------------------------------------
-    // 剑气最多命中的父实体数（不是"额外穿透数"）
-    // ------------------------------------------------------------------
-
-    @Test
-    void waveMaxTargetsIsInclusiveCount() {
-        // 普通阶段：只能命中 1 个，命中即停。
-        assertEquals(1, CombatMath.waveMaxTargets(TestSettings.stage2(), 2));
-        assertEquals(1, CombatMath.waveMaxTargets(TestSettings.finalStage(), 6));
-        // 终阶：配置值就是"总目标数"（默认 3），不是"额外目标数"。
-        assertEquals(3, CombatMath.waveMaxTargets(TestSettings.finalStage(), 7));
-    }
-
-    @Test
-    void stoppingRuleNeverExceedsMaxTargets() {
-        int maxTargets = CombatMath.waveMaxTargets(TestSettings.finalStage(), 7);
-        int hits = 0;
-        int damaged = 0;
-        // 模拟 10 个候选依次命中：必须在达到 maxTargets 时立刻停止。
-        for (int i = 0; i < 10; i++) {
-            damaged++;
-            hits++;
-            if (hits >= maxTargets) {
-                break;
-            }
-        }
-        assertEquals(maxTargets, damaged, "最多只能命中 waveMaxTargets 个父实体");
-    }
-
-    // ------------------------------------------------------------------
     // 来源窗口哨兵
     // ------------------------------------------------------------------
 
@@ -101,16 +71,5 @@ class CombatPhase2Test {
         assertTrue(AbilityState.tryConsumeRate(table, UUID.randomUUID(), 130L, 20, 2),
                 "过期条目被回收后，新目标可以被接受");
         assertEquals(1, table.size(), "回收+插入后仍然有界");
-    }
-
-    /** 测试用的最小配置桩：复用真实默认门槛，避免在测试里硬编码数值。 */
-    private static final class TestSettings {
-        private static com.evolvingblade.growth.GrowthSettings stage2() {
-            return com.evolvingblade.growth.GrowthSettings.defaults();
-        }
-
-        private static com.evolvingblade.growth.GrowthSettings finalStage() {
-            return com.evolvingblade.growth.GrowthSettings.defaults();
-        }
     }
 }
