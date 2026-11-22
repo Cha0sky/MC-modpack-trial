@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-23T04:06:07.795521+08:00",
+  "instance": "D:\\PCL 正式版 2.10.6 (1)\\.minecraft\\versions\\星庭远征-开发版",
+  "applied": true,
+  "source_commit": "d72f10b36379868a3028af77b1b9011e42a2c6e5",
+  "files": [
+    {
+      "path": "mods/evolvingblade-1.1.0.jar",
+      "existed": true
+    }
+  ],
+  "runtime_acceptance": "pending user playtest",
+  "core_version": "0.8.2-playtest",
+  "module_versions": {
+    "evolvingblade": "1.1.6-phaseblade"
+  },
+  "backup": "D:\\PCL 正式版 2.10.6 (1)\\codex\\modpack-project\\backups\\blade-through-walls-20261123-040607-795521"
+}
