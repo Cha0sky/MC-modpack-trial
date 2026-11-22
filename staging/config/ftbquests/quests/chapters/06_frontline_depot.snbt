@@ -100,6 +100,15 @@
             "count": 1
           },
           "count": 64
+        },
+        {
+          "id": "4C7997A72686B9AC",
+          "type": "item",
+          "item": {
+            "id": "minecraft:paper",
+            "count": 1
+          },
+          "count": 16
         }
       ]
     },
@@ -379,6 +388,48 @@
       ]
     },
     {
+      "id": "1C116574FE92217F",
+      "x": 7.5,
+      "y": 6,
+      "icon": {
+        "id": "create:package_frogport"
+      },
+      "min_width": 350,
+      "dependencies": [
+        "72AE6BEF433C5981",
+        "7881A417D597920F"
+      ],
+      "dependency_requirement": "all_completed",
+      "optional": true,
+      "tasks": [
+        {
+          "id": "7339053698CCCC81",
+          "type": "advancement",
+          "advancement": "world_progression_core:frontline/freight_delivery"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "2D11A9FE1939D147",
+          "type": "item",
+          "item": {
+            "id": "create:packager",
+            "count": 1
+          },
+          "count": 1
+        },
+        {
+          "id": "00779D8C416F933B",
+          "type": "item",
+          "item": {
+            "id": "create:chute",
+            "count": 1
+          },
+          "count": 8
+        }
+      ]
+    },
+    {
       "id": "77CBB65AB509D459",
       "x": 8,
       "y": 0,
@@ -389,7 +440,7 @@
       "dependencies": [
         "503397AB7E037027",
         "15DDC5E8C3DCBB88",
-        "7881A417D597920F"
+        "1C116574FE92217F"
       ],
       "dependency_requirement": "all_completed",
       "optional": false,
@@ -403,6 +454,11 @@
           "id": "208855A63DC60E46",
           "type": "advancement",
           "advancement": "world_progression_core:frontline/field_use"
+        },
+        {
+          "id": "261F95ABA9AA85D3",
+          "type": "advancement",
+          "advancement": "world_progression_core:frontline/issued"
         }
       ],
       "rewards": [
@@ -800,7 +856,7 @@
         "77CBB65AB509D459",
         "503397AB7E037027",
         "15DDC5E8C3DCBB88",
-        "7881A417D597920F"
+        "1C116574FE92217F"
       ],
       "dependency_requirement": "all_completed",
       "optional": true,
@@ -838,6 +894,47 @@
             "count": 1
           },
           "count": 48
+        }
+      ]
+    },
+    {
+      "id": "2EAE55106F9758BD",
+      "x": 10,
+      "y": 6,
+      "icon": {
+        "id": "create:brass_funnel"
+      },
+      "min_width": 350,
+      "dependencies": [
+        "1C116574FE92217F"
+      ],
+      "dependency_requirement": "all_completed",
+      "optional": true,
+      "tasks": [
+        {
+          "id": "78EDE10223D1D9FA",
+          "type": "advancement",
+          "advancement": "world_progression_core:frontline/mixed_freight"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "2C0749875A65C7A0",
+          "type": "item",
+          "item": {
+            "id": "create:brass_tunnel",
+            "count": 1
+          },
+          "count": 4
+        },
+        {
+          "id": "59AF70F5F8BA6550",
+          "type": "item",
+          "item": {
+            "id": "create:item_vault",
+            "count": 1
+          },
+          "count": 8
         }
       ]
     }

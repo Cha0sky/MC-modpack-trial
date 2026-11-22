@@ -13,5 +13,17 @@
   "item.world_progression_core.trail_supply_crate": "野外补给包",
   "item.world_progression_core.trail_supply_crate.contents": "右键拆包：2 份热封行军餐、8 支火把。",
   "item.world_progression_core.rescue_supply_crate": "救援补给包",
-  "item.world_progression_core.rescue_supply_crate.contents": "右键拆包：1 个金苹果、6 个脚手架。"
+  "item.world_progression_core.rescue_supply_crate.contents": "右键拆包：1 个金苹果、6 个脚手架。",
+  "item.world_progression_core.refined_cobalt_charge": "精炼钴炉料",
+  "item.world_progression_core.refined_palladium_charge": "精炼钯金炉料",
+  "item.world_progression_core.cobalt_bloom": "钴连铸坯",
+  "item.world_progression_core.palladium_bloom": "钯金连铸坯",
+  "item.world_progression_core.hardmetal_offcut": "硬质边料",
+  "item.world_progression_core.unfinished_field_die": "未完工的夹模",
+  "item.world_progression_core.field_press_die": "施工夹模",
+  "item.world_progression_core.rail_stock": "轨料坯",
+  "item.world_progression_core.lamp_stock": "灯座坯",
+  "item.world_progression_core.stamped_rail": "工坊钢轨",
+  "item.world_progression_core.stamped_lamp": "工坊提灯",
+  "item.world_progression_core.incomplete_trial_controller": "待封装的调速器"
 }

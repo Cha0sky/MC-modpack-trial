@@ -1,0 +1,20 @@
+{
+  "type": "confluence:hellforge",
+  "ingredients": [
+    {
+      "item": "world_progression_core:refined_cobalt_charge"
+    }
+  ],
+  "result": {
+    "id": "world_progression_core:cobalt_bloom",
+    "count": 1
+  },
+  "experience": 1.0,
+  "requires_fuel": true,
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "confluence"
+    }
+  ]
+}

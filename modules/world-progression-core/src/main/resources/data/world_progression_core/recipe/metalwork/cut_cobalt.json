@@ -1,0 +1,25 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "item": "world_progression_core:cobalt_bloom"
+    }
+  ],
+  "results": [
+    {
+      "id": "confluence:cobalt_ingot",
+      "count": 3
+    },
+    {
+      "id": "world_progression_core:hardmetal_offcut",
+      "count": 1
+    }
+  ],
+  "processing_time": 80,
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "confluence"
+    }
+  ]
+}

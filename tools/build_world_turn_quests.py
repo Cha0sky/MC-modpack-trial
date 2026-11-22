@@ -4,6 +4,7 @@ import json
 from build_heritage_quests import ASSETS, DATA, QUESTS, merge, uid as quest_id, write
 from build_workshop_quests import sprite
 from campaign_navigation import finish_chapter
+from build_hardmode_metalwork import main as build_metalwork
 
 FILENAME = "03_world_turn"
 
@@ -100,14 +101,29 @@ def generate():
         "上次归档的坐标还在，地图外的土地却已经开始变化。带档案书回档案台查看转化进度，再拿神锤去找祭坛。"],
         "confluence:pwnhammer", uid("flesh"), "hardmode_open", pos=(12.5, 0), subtitle="战后归档 · 困难模式开启")
     add("charge", "回程 · 给地狱熔炉配料", [
-        "用神锤敲祭坛显出矿物。把 6 份同种粗钴或粗钯金放入工作盆，用机械搅拌器冷拌成一块炉料。"], "world_progression_core:cobalt_furnace_charge", uid("transition"), "batch_charge", pos=(15, 0))
+        "用神锤敲祭坛显出矿物。把 6 份同种粗钴或粗钯金放入工作盆，用机械搅拌器冷拌成一块炉料。给下一炉做精炼，可多出一锭，还能留下一片制模边料。"],
+        "world_progression_core:cobalt_furnace_charge", uid("transition"), "batch_charge", pos=(15, 0))
+    add("refine", "选料 · 用水洗还是用胶压", [
+        "湿法：把炉料放在水流后方的鼓风机气流里洗选，不用添胶。干法：炉料加 1 份第一章的共振胶，在压机下的工作盆里压团。",
+        "两种方法都得到精炼炉料，钴与钯金各走自己的线路。选工坊里最容易连续供料的一种。"],
+        "world_progression_core:refined_cobalt_charge", uid("charge"), "refine_charge", pos=(17.5, 0),
+        subtitle="鼓风洗选或工作盆压团，任选一种")
+    add("fire", "熔炼 · 留住整块铸坯", [
+        "将精炼炉料送进有燃料的地狱熔炉。出炉的是一整块连铸坯，给它留一个出料口，送往水平朝上的动力锯。"],
+        "world_progression_core:palladium_bloom", uid("refine"), "fire_bloom", pos=(20, 0))
+    add("cut", "开坯 · 金属锭与边料分走两路", [
+        "把连铸坯交给锯面朝上的动力锯，每坯切出 3 个同种金属锭和 1 片硬质边料。金属锭留给配装，边料留给下一章做夹模。",
+        "手工试车可把两种出料都拾起。接了漏斗或传送带，可以在末端取边料补记整条精炼线。"],
+        "world_progression_core:hardmetal_offcut", uid("fire"), "cut_batch", pos=(22.5, 0),
+        rewards=[("funnels", {"id": "create:andesite_funnel", "count": 1}, 4)], subtitle="同一炉分出金属锭与工装料")
     add("first_ingot", "第一炉新矿", [
-        "把炉料送入有燃料的地狱熔炉，一炉出 2 个对应金属锭。拿到成品，就可以铸造第一套困难模式装备。"], "confluence:cobalt_ingot", uid("charge"), "first_ingot", rewards=[
+        "首批产品带一锭到手里，把硬质边料收在工坊；下一班要做能反复铆合轨料和灯座的施工夹模。普通炉料仍可直接熔 2 锭。"],
+        "confluence:cobalt_ingot", uid("cut"), "first_ingot", rewards=[
         ("mending", {"id": "minecraft:enchanted_book", "count": 1,
                      "components": {"minecraft:stored_enchantments": {"levels": {"minecraft:mending": 1}}}}, 1),
         ("experience", {"id": "minecraft:experience_bottle", "count": 1}, 32),
         ("nether_bricks", {"id": "minecraft:nether_bricks", "count": 1}, 128),
-    ], pos=(17.5, 0))
+    ], pos=(25, 0))
     return chapter, lang
 
 
@@ -149,6 +165,7 @@ def main():
         {"id": "confluence:palladium_ingot", "required": False},
     ]})
     supply_resources()
+    build_metalwork()
     print(f"World Turn: {len(chapter['quests'])} quests")
 
 
@@ -175,8 +192,7 @@ def supply_resources():
             "type": "confluence:hellforge", "ingredients": [{"item": charge}],
             "result": {"id": "confluence:" + metal + "_ingot", "count": 2}, "experience": 1.0, "requires_fuel": True,
         })
-    for adv, items in (("field_kitchen", "#" + mod + "field_kitchen_proof"), ("pack_ration", [mod + "sealed_ration"]),
-                       ("batch_charge", [mod + "cobalt_furnace_charge", mod + "palladium_furnace_charge"])):
+    for adv, items in (("field_kitchen", "#" + mod + "field_kitchen_proof"), ("pack_ration", [mod + "sealed_ration"])):
         predicate = {"items": items}
         write(DATA / f"advancement/world_turn/{adv}.json", {"criteria": {"done": {
             "trigger": "minecraft:inventory_changed", "conditions": {"items": [predicate]}}}})

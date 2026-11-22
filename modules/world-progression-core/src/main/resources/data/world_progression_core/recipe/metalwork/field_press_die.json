@@ -1,0 +1,84 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "world_progression_core:hardmetal_offcut"
+  },
+  "loops": 1,
+  "transitional_item": {
+    "id": "world_progression_core:unfinished_field_die",
+    "count": 1
+  },
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "world_progression_core:unfinished_field_die"
+        },
+        {
+          "item": "create:andesite_alloy"
+        }
+      ],
+      "results": [
+        {
+          "id": "world_progression_core:unfinished_field_die",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "type": "create:cutting",
+      "ingredients": [
+        {
+          "item": "world_progression_core:unfinished_field_die"
+        }
+      ],
+      "results": [
+        {
+          "id": "world_progression_core:unfinished_field_die",
+          "count": 1
+        }
+      ],
+      "processing_time": 50
+    },
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "world_progression_core:unfinished_field_die"
+        },
+        {
+          "type": "neoforge:single",
+          "fluid": "minecraft:water",
+          "amount": 250
+        }
+      ],
+      "results": [
+        {
+          "id": "world_progression_core:unfinished_field_die",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "world_progression_core:unfinished_field_die"
+        }
+      ],
+      "results": [
+        {
+          "id": "world_progression_core:unfinished_field_die",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "id": "world_progression_core:field_press_die",
+      "count": 1
+    }
+  ]
+}

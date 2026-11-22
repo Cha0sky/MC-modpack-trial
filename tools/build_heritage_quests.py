@@ -19,6 +19,7 @@ ADVANCEMENTS = (
     "arcane_foundation", "arcane_practice", "arcane_record",
     "expedition_sites", "expedition_challenge", "expedition_record",
     "convergence", "archive_craft", "archive_open", "all_three", "map_wall",
+    "pump_station", "source_intake", "recovery_intake", "spout_station", "controller_built", "controller_regulated",
 )
 ROUTE_RECORDS = ("engineering_record", "arcane_record", "expedition_record")
 
@@ -99,19 +100,46 @@ def chapter():
 
     quest("welcome", "维修簿之外", [
         "旧工坊复工了，维修簿里的做法还有多少能用？工匠可以重新装配精密构件，术士可以重做一次施法，探路的人去查遗迹与守敌。",
-        "工程、奥术、远征任选两份成果即可建档。可以与同伴分头，各交一份。"],
+        "工程、奥术、远征任选两份成果即可建档。工程队可分成两班：一班烧黄铜、备构件，一班架泵、铺管道，最后合装一台真正能用的调速器。"],
         0, 0, "minecraft:written_book", (), subtitle="工程、奥术、远征三路任选两路")
 
     quest("engineering_heat", "工程 · 让火进入工艺", [
         "用空燃烧室在下界捕获烈焰人。给燃烧室添燃料，在上方的工作盆搅拌铜锭和锌锭；每对出 2 黄铜锭，备齐 8 锭。"],
-        2, -3, "create:blaze_burner", ("welcome",), optional=True)
+        2, -2, "create:blaze_burner", ("welcome",), optional=True)
+    quest("pump_station", "工程 · 水从哪儿来", [
+        "两张铜板夹一枚铜锭，做出四根流体管道。用管道和齿轮做机械泵，接上动力让它转起来。用扳手调好泵的方向，将水推往注液器。",
+        "管网可以固定在河边，也可以用桶供料。下两格任选一种，整座工坊只需交一份供水记录。"],
+        1, -4, "create:mechanical_pump", ("welcome",), optional=True)
+    quest("source_intake", "取水方案 · 河岸泵房", [
+        "把开口管正对水源方块，另一端经泵接注液器或储罐。让系统确实抽到水。留出能补水的水源，下一批就可以连续开工。"],
+        3, -5, "create:fluid_pipe", ("pump_station",), optional=True,
+        rewards=[item_reward("source_intake/pipes", "create:fluid_pipe", 8)])
+    quest("recovery_intake", "取水方案 · 厂内倒桶", [
+        "铁栏杆放在铜机壳上方合成分液池。往池面放一桶水，等空桶被送出。给分液池接管，将水泵到注液器，厂房从此不必紧邻河岸。"],
+        3, -3.5, "create:item_drain", ("pump_station",), optional=True,
+        rewards=[item_reward("recovery_intake/buckets", "minecraft:bucket", 3)])
+    quest("spout_station", "工程 · 开阀试灌", [
+        "用铜机壳和干海带做注液器，接在泵的出水管上。下方放置物台，放一块泥土，实际注入 500 mB 水得到草方块。也可以直接用下一步的黄铜机壳试灌。"],
+        5, -4, "create:spout", ("source_intake", "recovery_intake"), minimum=1, optional=True)
     quest("engineering_assembly", "工程 · 可重复的精密工艺", [
-        "让机械手运行一次、用注液器加工一次，再取得 1 个精密构件。注液可试着给空玻璃瓶灌 250 mB 蜂蜜。",
+        "让机械手真正加工一次，注液器也完成一次灌装。两个岗位可以交给不同的人，取得的精密构件留给调速器。",
         "以金板起步，依次部署小齿轮、大齿轮、铁粒，重复 5 轮。构件成功率为 80%，给流水线留一点余料。"],
-        4, -3, "create:precision_mechanism", ("engineering_heat",), optional=True)
+        4, -2, "create:precision_mechanism", ("engineering_heat",), optional=True)
+    quest("controller_built", "工程委托 · 试装一台调速器", [
+        "干净的黄铜机壳先在注液器下注入 250 mB 水。把湿润的试装件移到机械手下，给机械手一个精密构件；再交给压机封壳。一遍就能得到工坊试装调速器。",
+        "用置物台逐站转移，或把三台机器沿传送带排开都行。拿起成品登记，再把它装回传动轴。"],
+        6.5, -3, "create:rotation_speed_controller", ("engineering_assembly", "spout_station"), optional=True)
+    quest("controller_regulated", "工程委托 · 带载调速", [
+        "把调速器接上动力，顶面安一枚竖直的大齿轮，让齿轮轴与调速器的轴交叉。准星对着调速器，用滚轮改变设定，让大齿轮带动输出轴。",
+        "可把这段轴接回工作盆，以 32 RPM 带动搅拌器。试车读的是调速器在转、齿轮已接好且改过设定。"],
+        8, -3, "create:large_cogwheel", ("controller_built",), optional=True)
+    quest("engineering_copy", "工程档案 · 领取已签的记录", [
+        "世界共用一本工程总档。有同伴签过调速器试车单，或旧版工坊已登记工程调查，就能在这里抄一份记录。刚开工的队伍沿上方两班施工。"],
+        7.5, -6, "minecraft:paper", ("welcome",), optional=True,
+        native=MOD + "heritage/engineering_record")
     quest("engineering_record", "整理工程记录", [
-        "你已经复做了黄铜和精密构件。领走机械臂、黄铜漏斗，等档案台建好，试着给样本做一条分拣线。"],
-        6, -3, "create:brass_ingot", ("engineering_assembly",), optional=True, rewards=[
+        "工程总档收下了试车记录。试装的调速器留给基地，用机械臂和黄铜漏斗给归来的样本做一条分拣线。"],
+        9.5, -2, "create:brass_ingot", ("controller_regulated", "engineering_copy"), minimum=1, optional=True, rewards=[
             item_reward("engineering_record/brass", "create:brass_ingot", 8),
             item_reward("engineering_record/shaft", "create:shaft", 16),
         ])
@@ -204,6 +232,28 @@ def resources():
         write(DATA / ("advancement/heritage/" + name + ".json"), {
             "criteria": {"done": {"trigger": "minecraft:impossible"}},
         })
+    prototype = {"id": "create:rotation_speed_controller", "components": {
+        "minecraft:custom_data": "{lostworld_trial_controller:1b}",
+        "minecraft:item_name": json.dumps({"text": "工坊试装调速器"}, ensure_ascii=False)}}
+    transitional = {"id": MOD + "incomplete_trial_controller"}
+    steps = [("filling", [{"type": "neoforge:single", "fluid": "minecraft:water", "amount": 250}]),
+             ("deploying", [{"item": "create:precision_mechanism"}]), ("pressing", [])]
+    write(DATA / "recipe/heritage_trial_controller.json", {
+        "type": "create:sequenced_assembly", "ingredient": {"item": "create:brass_casing"},
+        "transitional_item": transitional, "loops": 1, "results": [prototype],
+        "sequence": [{"type": "create:" + kind, "ingredients": [{"item": transitional["id"]}, *supplies],
+                      "results": [transitional]} for kind, supplies in steps],
+    })
+    for name, item in {
+        "brass_stock": {"items": "create:brass_ingot", "count": {"min": 8}},
+        "controller_prototype": {"items": prototype["id"], "predicates": {
+            "minecraft:custom_data": "{lostworld_trial_controller:1b}"}},
+    }.items():
+        write(DATA / ("advancement/heritage/" + name + ".json"), {"criteria": {"done": {
+            "trigger": "minecraft:inventory_changed", "conditions": {"items": [item]}}}})
+    write(ASSETS / "models/item/incomplete_trial_controller.json", {
+        "parent": "create:block/brass_casing",
+    })
     frame_map = '{Item:{id:"minecraft:filled_map",components:{"minecraft:map_decorations":{heritage:{}}}}}'
     write(DATA / "advancement/heritage/map_wall.json", {"criteria": {"done": {
         "trigger": "minecraft:player_interacted_with_entity", "conditions": {
@@ -238,8 +288,10 @@ def resources():
         "facing=" + facing: {"model": MOD + "block/heritage_archive", "y": rotation}
         for facing, rotation in (("north", 0), ("east", 90), ("south", 180), ("west", 270))
     }})
-    merge(ASSETS / "lang/zh_cn.json", {"block.world_progression_core.heritage_archive": "遗产档案台"})
-    merge(ASSETS / "lang/en_us.json", {"block.world_progression_core.heritage_archive": "Heritage Archive"})
+    merge(ASSETS / "lang/zh_cn.json", {"block.world_progression_core.heritage_archive": "遗产档案台",
+                                        "item.world_progression_core.incomplete_trial_controller": "待封装的调速器"})
+    merge(ASSETS / "lang/en_us.json", {"block.world_progression_core.heritage_archive": "Heritage Archive",
+                                        "item.world_progression_core.incomplete_trial_controller": "Unsealed Speed Controller"})
 
 
 def verify(doc, previous):
@@ -251,7 +303,7 @@ def verify(doc, previous):
     ids = [o["id"] for o in objects]
     assert len(ids) == len(set(ids))
     assert all(0 < int(identifier, 16) <= 0x7FFFFFFFFFFFFFFF for identifier in ids)
-    assert len(doc["quests"]) == 18
+    assert len(doc["quests"]) == 25
     nodes = {q["id"]: q for q in doc["quests"]}
     reached = {previous}
     for quest in doc["quests"]:
@@ -263,6 +315,8 @@ def verify(doc, previous):
     assert convergence["dependencies"] == [uid(n) for n in ROUTE_RECORDS]
     assert convergence["min_required_dependencies"] == 2
     assert nodes[uid("all_three")]["optional"]
+    assert nodes[uid("spout_station")]["min_required_dependencies"] == 1
+    assert nodes[uid("engineering_record")]["min_required_dependencies"] == 1
     assert nodes[uid("archive_open")]["dependencies"] == [uid("archive_craft")]
     assert nodes[uid("expedition_challenge")]["dependencies"] == [uid("welcome")]
     assert nodes[uid("expedition_record")]["dependencies"] == [uid("expedition_sites"), uid("expedition_challenge")]

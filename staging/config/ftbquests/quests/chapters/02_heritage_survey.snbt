@@ -66,7 +66,7 @@
     {
       "id": "1C2F30D09583F848",
       "x": 2,
-      "y": -3,
+      "y": -2,
       "icon": {
         "id": "create:blaze_burner"
       },
@@ -129,9 +129,143 @@
       ]
     },
     {
+      "id": "671B6C089B024E32",
+      "x": 1,
+      "y": -4,
+      "icon": {
+        "id": "create:mechanical_pump"
+      },
+      "min_width": 340,
+      "dependencies": [
+        "1697E0EFFE71246B"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "optional": true,
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "4DF686E7F8AA9EA9",
+          "type": "advancement",
+          "advancement": "world_progression_core:heritage/pump_station",
+          "criterion": "done"
+        }
+      ],
+      "rewards": []
+    },
+    {
+      "id": "131AF244F974A9FE",
+      "x": 3,
+      "y": -5,
+      "icon": {
+        "id": "create:fluid_pipe"
+      },
+      "min_width": 340,
+      "dependencies": [
+        "671B6C089B024E32"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "optional": true,
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "041A414F1EB8A451",
+          "type": "advancement",
+          "advancement": "world_progression_core:heritage/source_intake",
+          "criterion": "done"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "4C7F79028CB431E4",
+          "type": "item",
+          "item": {
+            "id": "create:fluid_pipe",
+            "count": 1
+          },
+          "count": 8
+        }
+      ]
+    },
+    {
+      "id": "24418B0A0F79F2FE",
+      "x": 3,
+      "y": -3.5,
+      "icon": {
+        "id": "create:item_drain"
+      },
+      "min_width": 340,
+      "dependencies": [
+        "671B6C089B024E32"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "optional": true,
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "391D012950012FD7",
+          "type": "advancement",
+          "advancement": "world_progression_core:heritage/recovery_intake",
+          "criterion": "done"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "50B5D90FF1E05223",
+          "type": "item",
+          "item": {
+            "id": "minecraft:bucket",
+            "count": 1
+          },
+          "count": 3
+        }
+      ]
+    },
+    {
+      "id": "0AC95E4E0F16B2A6",
+      "x": 5,
+      "y": -4,
+      "icon": {
+        "id": "create:spout"
+      },
+      "min_width": 340,
+      "dependencies": [
+        "131AF244F974A9FE",
+        "24418B0A0F79F2FE"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "optional": true,
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "283EB26D1856B6CC",
+          "type": "advancement",
+          "advancement": "world_progression_core:heritage/spout_station",
+          "criterion": "done"
+        }
+      ],
+      "rewards": [],
+      "min_required_dependencies": 1
+    },
+    {
       "id": "2D5031EB24DB5DB1",
       "x": 4,
-      "y": -3,
+      "y": -2,
       "icon": {
         "id": "create:precision_mechanism"
       },
@@ -157,15 +291,100 @@
       "rewards": []
     },
     {
-      "id": "377BDBD8E94E1CD6",
-      "x": 6,
+      "id": "0E28128EF3B16622",
+      "x": 6.5,
       "y": -3,
+      "icon": {
+        "id": "create:rotation_speed_controller"
+      },
+      "min_width": 340,
+      "dependencies": [
+        "2D5031EB24DB5DB1",
+        "0AC95E4E0F16B2A6"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "optional": true,
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "216737E1881679B9",
+          "type": "advancement",
+          "advancement": "world_progression_core:heritage/controller_built",
+          "criterion": "done"
+        }
+      ],
+      "rewards": []
+    },
+    {
+      "id": "0667CA7E4B3258D0",
+      "x": 8,
+      "y": -3,
+      "icon": {
+        "id": "create:large_cogwheel"
+      },
+      "min_width": 340,
+      "dependencies": [
+        "0E28128EF3B16622"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "optional": true,
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "4AAA175EC16FD9D5",
+          "type": "advancement",
+          "advancement": "world_progression_core:heritage/controller_regulated",
+          "criterion": "done"
+        }
+      ],
+      "rewards": []
+    },
+    {
+      "id": "427754DFB7DEB775",
+      "x": 7.5,
+      "y": -6,
+      "icon": {
+        "id": "minecraft:paper"
+      },
+      "min_width": 340,
+      "dependencies": [
+        "1697E0EFFE71246B"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "optional": true,
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "43F9917CAD04565E",
+          "type": "advancement",
+          "advancement": "world_progression_core:heritage/engineering_record"
+        }
+      ],
+      "rewards": []
+    },
+    {
+      "id": "377BDBD8E94E1CD6",
+      "x": 9.5,
+      "y": -2,
       "icon": {
         "id": "create:brass_ingot"
       },
       "min_width": 340,
       "dependencies": [
-        "2D5031EB24DB5DB1"
+        "0667CA7E4B3258D0",
+        "427754DFB7DEB775"
       ],
       "dependency_requirement": "all_completed",
       "progression_mode": "linear",
@@ -237,7 +456,8 @@
           },
           "count": 32
         }
-      ]
+      ],
+      "min_required_dependencies": 1
     },
     {
       "id": "7D0AC0F11F02C768",

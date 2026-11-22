@@ -201,6 +201,26 @@
       "hide_details_until_startable": true,
       "dependency_requirement": "all_completed",
       "hide_dependency_lines": true
+    },
+    {
+      "id": "2B26B21A518D11B1",
+      "x": 5.5,
+      "y": 4,
+      "min_width": 310,
+      "icon": {
+        "id": "world_progression_core:field_press_die"
+      },
+      "optional": true,
+      "dependencies": [
+        "70B98B2219093652"
+      ],
+      "tasks": [],
+      "rewards": [],
+      "progression_mode": "linear",
+      "hide_until_deps_complete": true,
+      "hide_details_until_startable": true,
+      "dependency_requirement": "all_completed",
+      "hide_dependency_lines": true
     }
   ]
 }

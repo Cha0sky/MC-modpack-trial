@@ -50,9 +50,117 @@
       ]
     },
     {
+      "id": "52CA60EB8641FDB7",
+      "x": 2,
+      "y": 0,
+      "icon": {
+        "id": "world_progression_core:field_press_die"
+      },
+      "min_width": 330,
+      "progression_mode": "linear",
+      "dependency_requirement": "all_completed",
+      "dependencies": [
+        "6BEB2BDDDE4B91BF"
+      ],
+      "optional": false,
+      "tasks": [
+        {
+          "id": "71C1BCD1B78043F7",
+          "type": "advancement",
+          "advancement": "world_progression_core:field_equipment/die_ready"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "7FC4326BF0048159",
+          "type": "item",
+          "item": {
+            "id": "create:iron_sheet",
+            "count": 1
+          },
+          "count": 8
+        },
+        {
+          "id": "3E7A0C90D61A8D7F",
+          "type": "item",
+          "item": {
+            "id": "minecraft:glass_pane",
+            "count": 1
+          },
+          "count": 8
+        }
+      ]
+    },
+    {
+      "id": "6D41DE3990F793C3",
+      "x": 4,
+      "y": -1,
+      "icon": {
+        "id": "minecraft:rail"
+      },
+      "min_width": 330,
+      "progression_mode": "linear",
+      "dependency_requirement": "all_completed",
+      "dependencies": [
+        "52CA60EB8641FDB7"
+      ],
+      "optional": true,
+      "tasks": [
+        {
+          "id": "6A664160248D3470",
+          "type": "advancement",
+          "advancement": "world_progression_core:field_equipment/lay_rails"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "4BD1959366991D48",
+          "type": "item",
+          "item": {
+            "id": "minecraft:powered_rail",
+            "count": 1
+          },
+          "count": 12
+        }
+      ]
+    },
+    {
+      "id": "75F243820EA01204",
+      "x": 4,
+      "y": 1,
+      "icon": {
+        "id": "minecraft:lantern"
+      },
+      "min_width": 330,
+      "progression_mode": "linear",
+      "dependency_requirement": "all_completed",
+      "dependencies": [
+        "52CA60EB8641FDB7"
+      ],
+      "optional": true,
+      "tasks": [
+        {
+          "id": "16D668211A239DBD",
+          "type": "advancement",
+          "advancement": "world_progression_core:field_equipment/hang_lamp"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "7D80B9471200EAD8",
+          "type": "item",
+          "item": {
+            "id": "minecraft:chain",
+            "count": 1
+          },
+          "count": 24
+        }
+      ]
+    },
+    {
       "id": "5C52AA144E887000",
       "x": 2,
-      "y": -1,
+      "y": -2.5,
       "icon": {
         "id": "confluence:cobalt_drill"
       },
@@ -94,7 +202,7 @@
     {
       "id": "60BCE50D3F42F766",
       "x": 2,
-      "y": 1,
+      "y": 2.5,
       "icon": {
         "id": "confluence:palladium_chestplate"
       },
@@ -135,7 +243,7 @@
     },
     {
       "id": "05C3B5ABE28C81AC",
-      "x": 4,
+      "x": 6,
       "y": -2,
       "icon": {
         "id": "confluence:raw_mythril"
@@ -144,7 +252,8 @@
       "progression_mode": "linear",
       "dependency_requirement": "all_completed",
       "dependencies": [
-        "5C52AA144E887000"
+        "5C52AA144E887000",
+        "6D41DE3990F793C3"
       ],
       "optional": true,
       "tasks": [
@@ -177,7 +286,7 @@
     },
     {
       "id": "3E7102F7DAA60E52",
-      "x": 4,
+      "x": 6,
       "y": 2,
       "icon": {
         "id": "minecraft:shield"
@@ -186,7 +295,8 @@
       "progression_mode": "linear",
       "dependency_requirement": "all_completed",
       "dependencies": [
-        "60BCE50D3F42F766"
+        "60BCE50D3F42F766",
+        "75F243820EA01204"
       ],
       "optional": true,
       "tasks": [
@@ -219,7 +329,7 @@
     },
     {
       "id": "7E82D9E88152A714",
-      "x": 6,
+      "x": 8,
       "y": 0,
       "icon": {
         "id": "minecraft:golden_apple"
@@ -272,7 +382,7 @@
     },
     {
       "id": "003111937F6E15CC",
-      "x": 8,
+      "x": 10,
       "y": -1,
       "icon": {
         "id": "confluence:mythril_anvil"

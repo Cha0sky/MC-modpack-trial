@@ -1,0 +1,42 @@
+{
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "world_progression_core:cobalt_bloom",
+              "world_progression_core:palladium_bloom",
+              "world_progression_core:hardmetal_offcut",
+              "world_progression_core:unfinished_field_die",
+              "world_progression_core:field_press_die"
+            ]
+          }
+        ]
+      }
+    },
+    "stamped": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:rail",
+              "minecraft:lantern"
+            ],
+            "predicates": {
+              "minecraft:custom_data": "{lostworld_field_press:1b}"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "done",
+      "stamped"
+    ]
+  ]
+}

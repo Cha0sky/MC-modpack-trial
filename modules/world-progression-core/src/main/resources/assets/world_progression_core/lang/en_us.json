@@ -13,5 +13,17 @@
   "item.world_progression_core.trail_supply_crate": "Trail Supply Crate",
   "item.world_progression_core.trail_supply_crate.contents": "Open to unpack 2 sealed field rations and 8 torches.",
   "item.world_progression_core.rescue_supply_crate": "Rescue Supply Crate",
-  "item.world_progression_core.rescue_supply_crate.contents": "Open to unpack 1 golden apple and 6 scaffolding."
+  "item.world_progression_core.rescue_supply_crate.contents": "Open to unpack 1 golden apple and 6 scaffolding.",
+  "item.world_progression_core.refined_cobalt_charge": "Refined Cobalt Charge",
+  "item.world_progression_core.refined_palladium_charge": "Refined Palladium Charge",
+  "item.world_progression_core.cobalt_bloom": "Cobalt Bloom",
+  "item.world_progression_core.palladium_bloom": "Palladium Bloom",
+  "item.world_progression_core.hardmetal_offcut": "Hardmetal Offcut",
+  "item.world_progression_core.unfinished_field_die": "Incomplete Field Die",
+  "item.world_progression_core.field_press_die": "Field Press Die",
+  "item.world_progression_core.rail_stock": "Rail Stock",
+  "item.world_progression_core.lamp_stock": "Lantern Stock",
+  "item.world_progression_core.stamped_rail": "Workshop Rail",
+  "item.world_progression_core.stamped_lamp": "Workshop Lantern",
+  "item.world_progression_core.incomplete_trial_controller": "Unsealed Speed Controller"
 }

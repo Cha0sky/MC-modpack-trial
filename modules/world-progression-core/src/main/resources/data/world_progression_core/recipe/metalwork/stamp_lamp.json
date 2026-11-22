@@ -1,0 +1,22 @@
+{
+  "type": "create:deploying",
+  "ingredients": [
+    {
+      "item": "world_progression_core:lamp_stock"
+    },
+    {
+      "item": "world_progression_core:field_press_die"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:lantern",
+      "count": 2,
+      "components": {
+        "minecraft:custom_data": "{lostworld_field_press:1b}",
+        "minecraft:item_name": "{\"translate\": \"item.world_progression_core.stamped_lamp\"}"
+      }
+    }
+  ],
+  "keep_held_item": true
+}

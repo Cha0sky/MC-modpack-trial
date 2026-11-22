@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "create:rotation_speed_controller",
+            "predicates": {
+              "minecraft:custom_data": "{lostworld_trial_controller:1b}"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

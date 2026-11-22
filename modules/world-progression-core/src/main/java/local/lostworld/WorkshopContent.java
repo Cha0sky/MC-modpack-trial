@@ -1,6 +1,7 @@
 package local.lostworld;
 
 import java.util.List;
+import com.simibubi.create.content.processing.sequenced.SequencedAssemblyItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -29,6 +30,15 @@ public final class WorkshopContent {
                     .effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 90 * 20), 1.0F).build())));
     public static final DeferredItem<Item> COBALT_CHARGE = ITEMS.registerSimpleItem("cobalt_furnace_charge");
     public static final DeferredItem<Item> PALLADIUM_CHARGE = ITEMS.registerSimpleItem("palladium_furnace_charge");
+    static {
+        for (String item : List.of("refined_cobalt_charge", "refined_palladium_charge", "cobalt_bloom", "palladium_bloom",
+                "hardmetal_offcut", "rail_stock", "lamp_stock")) {
+            ITEMS.registerSimpleItem(item);
+        }
+        ITEMS.register("unfinished_field_die", () -> new SequencedAssemblyItem(new Item.Properties()));
+        ITEMS.register("incomplete_trial_controller", () -> new SequencedAssemblyItem(new Item.Properties()));
+        ITEMS.registerSimpleItem("field_press_die", new Item.Properties().stacksTo(1));
+    }
     public static final DeferredItem<SupplyCrateItem> TRAIL_SUPPLY_CRATE = ITEMS.register("trail_supply_crate",
             () -> new SupplyCrateItem(() -> List.of(
                     new ItemStack(SEALED_RATION.get(), 2), new ItemStack(Items.TORCH, 8))));

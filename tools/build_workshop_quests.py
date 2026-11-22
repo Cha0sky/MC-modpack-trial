@@ -87,7 +87,7 @@ def chapter():
            "icon": {"id": MOD + "rough_tuner"}, "progression_mode": "linear", "quests": []}
     lang = {"chapter." + uid("chapter") + ".title": "第一章 · 重启第一座工坊"}
 
-    def quest(name, title, desc, x, y, icon, needs, rewards=(), optional=False, alternative=False, minimum=0, native=None, subtitle=None):
+    def quest(name, title, desc, x, y, icon, needs, rewards=(), optional=False, alternative=False, minimum=0, native=None, subtitle=None, operation=None):
         q = {"id": uid(name), "x": x, "y": y, "icon": {"id": icon}, "min_width": 320,
              "dependencies": [uid(n) for n in needs] if name != "commission" else [prologue_next],
              "dependency_requirement": "all_completed", "progression_mode": "linear", "optional": optional or alternative,
@@ -104,6 +104,9 @@ def chapter():
         elif name == "diagnose":
             # A previously completed calibration also proves the relay was inspected.
             del q["tasks"][0]["criterion"]
+        if operation:
+            q["tasks"].append({"id": uid(name + "/operation"), "type": "advancement",
+                               "advancement": "create:" + operation})
         doc["quests"].append(q)
         lang["quest." + q["id"] + ".title"] = ("支线 · " if optional else "") + title
         lang["quest." + q["id"] + ".quest_desc"] = desc
@@ -112,7 +115,7 @@ def chapter():
 
     quest("commission", "旧工坊的委托", [
         "镇上流传着古代英雄封住受侵蚀土地的故事。边境那座工坊究竟是怎样停下来的？先做一把能读出旧设备状态的工具，再进去看看。",
-        "两路可以同时开工。采样的人带斧子去猩红或腐化，留守的人备水车和板材。等木样磨成纤维，两边回到工作盆会合。"],
+        "两路可以同时开工。采样的人带斧子取木样，留守的人架水车、压板材。等纤维磨好，选侧送或下料，把原料送上生产线，再开搅拌器。"],
         0, 0, "minecraft:book", (), subtitle="边境取样与家中供能，可分头开工")
     quest("survey", "越过边境", [
         "走进腐化或猩红，收集 4 个乌木原木或暗影原木，两种可以混用。把木样送进磨石。"],
@@ -121,14 +124,23 @@ def chapter():
         "让压机、磨石或搅拌器转起来，在旁边累计观察 10 秒。小水车可带动 8 RPM 的支路；用大小齿轮分两级增速，把搅拌器提到 32 RPM。"],
         2, 1, "create:water_wheel", ("commission",))
     quest("plates", "第一批精密零件", [
-        "用压机把锭压成 7 张铁板和 2 张铜板。5 张铁板和 2 个安山合金做搅拌头，其余板材留给调谐器。"],
-        4, 1, "create:mechanical_press", ("power",))
+        "接好压机，把锭放到压头正下方的置物台上试压。备 7 张铁板和 2 张铜板，先拿起整批板材再用。5 张铁板和 2 个安山合金做搅拌头，其余留给调谐器。"],
+        4, 1, "create:mechanical_press", ("power",), operation="mechanical_press")
     quest("fiber", "异常材料的用途", [
         "剖开边境木样之前，先把磨石转起来。4 个原木磨出 8 份浸染纤维，正好是下一锅共振胶的原料。"],
-        4, -1, MOD + "tainted_fiber", ("survey", "power"))
+        4, -1, MOD + "tainted_fiber", ("survey", "power"), operation="millstone")
+    quest("side_feed", "送料方案 · 侧面出库", [
+        "原料库和搅拌间在同一层？用干海带和安山合金做安山漏斗，贴在原料桶侧面，下面接传送带或置物台。把纤维放进桶，看着漏斗实际送出一份。",
+        "两种送料方式任选一种。把试送的纤维取回，连同其余原料一起送进工作盆。"],
+        5.5, -1, "create:andesite_funnel", ("plates", "fiber"), alternative=True, native="create:funnel",
+        rewards=[item_reward("side_feed/belts", "create:belt_connector", 4)])
+    quest("gravity_feed", "送料方案 · 从楼上投料", [
+        "原料库在压机上方？另备 2 张铁板和 1 个铁锭做溜槽。上接原料桶，下接收料箱，投入一份纤维，看它落进下层。两种送料方式任选一种。"],
+        5.5, 1, "create:chute", ("plates", "fiber"), alternative=True, native="create:chute",
+        rewards=[item_reward("gravity_feed/hoppers", "minecraft:hopper", 4)])
     quest("binder", "稳定的共振胶", [
-        "每份胶用 2 份纤维、1 红石粉、1 黏液球或凝胶，在工作盆里用搅拌器冷拌。做 4 份，调谐器用 1 份，修设备用 3 份。"],
-        6, 0, MOD + "resonant_binder", ("plates", "fiber"))
+        "把试送过的纤维送进工作盆，每锅下 2 份纤维、1 红石粉和 1 黏液球或凝胶。接上达到 32 RPM 的搅拌器，开机冷拌。取出 4 份装进背包，1 份粘调谐器，3 份带去修继电器。"],
+        7, 0, MOD + "resonant_binder", ("side_feed", "gravity_feed"), minimum=1, operation="mechanical_mixer")
     quest("tuner", "粗制调谐器", [
         "工作台上排摆铜板、玻璃、铜板；中排摆铁板、共振胶、铁板；下排中央放传动杆。",
         "在主世界用调谐器对空气右键领地图。带上 3 份胶、水车和传动件再出发。"],
@@ -165,14 +177,6 @@ def chapter():
             named_reward("both_regions/ebony", "minecraft:purple_dye", "腐化原木标本牌", ["边境调查纪念", "可放入展示框陈列。"]),
             named_reward("both_regions/shadow", "minecraft:red_dye", "猩红原木标本牌", ["边境调查纪念", "可放入展示框陈列。"]),
         ])
-    quest("side_feed", "侧线送料", [
-        "把安山漏斗贴在容器侧面，留好接料位置，让一件物品经漏斗进出。送铜锭去压机、收板材入库都可以。"],
-        5, 3, "create:andesite_funnel", ("plates",), optional=True, native="create:funnel",
-        rewards=[item_reward("side_feed/belts", "create:belt_connector", 4)])
-    quest("gravity_feed", "让矿料自己下楼", [
-        "在木桶下方接机械动力的溜槽，把一件物资从上层送到下层。可以把矿箱架高，给压机旁腾出操作位置。"],
-        5, 5, "create:chute", ("plates",), optional=True, native="create:chute",
-        rewards=[item_reward("gravity_feed/hoppers", "minecraft:hopper", 4)])
     quest("batch_copper", "从手作到量产", [
         "侧送和下落任选一种完成试车，再把铜板产量做到 16 张。调谐器用掉的铜板也算。领回隧道、漏斗和传送带，给下一批留出进出料的位置。"],
         7, 4, "create:andesite_funnel", ("side_feed", "gravity_feed"), minimum=1, optional=True, rewards=[
@@ -398,7 +402,10 @@ def verify(doc, external_dependency):
     for q in doc["quests"]:
         assert set(q["dependencies"]) <= visited, "Missing or cyclic quest dependency"
         visited.add(q["id"])
-    assert nodes[uid("binder")]["dependencies"] == [uid("plates"), uid("fiber")]
+    assert all(nodes[uid(name)]["dependencies"] == [uid("plates"), uid("fiber")]
+               for name in ("side_feed", "gravity_feed"))
+    assert nodes[uid("binder")]["dependencies"] == [uid("side_feed"), uid("gravity_feed")]
+    assert nodes[uid("binder")]["min_required_dependencies"] == 1
     assert nodes[uid("restore")]["dependencies"] == [uid("calibrate")]
     assert all(nodes[uid(name)]["optional"] and nodes[uid(name)]["dependencies"] == [uid("arrival")]
                for name in ("diagnose", "site_photo"))

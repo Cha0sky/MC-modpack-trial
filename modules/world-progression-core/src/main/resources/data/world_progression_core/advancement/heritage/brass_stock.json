@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "done": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "create:brass_ingot",
+            "count": {
+              "min": 8
+            }
+          }
+        ]
+      }
+    }
+  }
+}

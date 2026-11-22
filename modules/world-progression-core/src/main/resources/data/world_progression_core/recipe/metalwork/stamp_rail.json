@@ -1,0 +1,22 @@
+{
+  "type": "create:deploying",
+  "ingredients": [
+    {
+      "item": "world_progression_core:rail_stock"
+    },
+    {
+      "item": "world_progression_core:field_press_die"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:rail",
+      "count": 8,
+      "components": {
+        "minecraft:custom_data": "{lostworld_field_press:1b}",
+        "minecraft:item_name": "{\"translate\": \"item.world_progression_core.stamped_rail\"}"
+      }
+    }
+  ],
+  "keep_held_item": true
+}

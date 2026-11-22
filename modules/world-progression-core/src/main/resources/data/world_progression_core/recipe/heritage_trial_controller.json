@@ -1,0 +1,68 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "create:brass_casing"
+  },
+  "transitional_item": {
+    "id": "world_progression_core:incomplete_trial_controller"
+  },
+  "loops": 1,
+  "results": [
+    {
+      "id": "create:rotation_speed_controller",
+      "components": {
+        "minecraft:custom_data": "{lostworld_trial_controller:1b}",
+        "minecraft:item_name": "{\"text\": \"工坊试装调速器\"}"
+      }
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "world_progression_core:incomplete_trial_controller"
+        },
+        {
+          "type": "neoforge:single",
+          "fluid": "minecraft:water",
+          "amount": 250
+        }
+      ],
+      "results": [
+        {
+          "id": "world_progression_core:incomplete_trial_controller"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "world_progression_core:incomplete_trial_controller"
+        },
+        {
+          "item": "create:precision_mechanism"
+        }
+      ],
+      "results": [
+        {
+          "id": "world_progression_core:incomplete_trial_controller"
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "world_progression_core:incomplete_trial_controller"
+        }
+      ],
+      "results": [
+        {
+          "id": "world_progression_core:incomplete_trial_controller"
+        }
+      ]
+    }
+  ]
+}

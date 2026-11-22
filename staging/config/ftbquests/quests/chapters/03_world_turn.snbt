@@ -367,15 +367,94 @@
       "rewards": []
     },
     {
-      "id": "24BA016E81A9BDB9",
+      "id": "1A6130BA7811B24A",
       "x": 17.5,
+      "y": 0,
+      "icon": {
+        "id": "world_progression_core:refined_cobalt_charge"
+      },
+      "min_width": 340,
+      "dependencies": [
+        "4949B108C7E78A72"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "tasks": [
+        {
+          "id": "5DE4203055929168",
+          "type": "advancement",
+          "advancement": "world_progression_core:world_turn/refine_charge"
+        }
+      ],
+      "optional": false,
+      "rewards": []
+    },
+    {
+      "id": "5A6AC6C32B011E4F",
+      "x": 20,
+      "y": 0,
+      "icon": {
+        "id": "world_progression_core:palladium_bloom"
+      },
+      "min_width": 340,
+      "dependencies": [
+        "1A6130BA7811B24A"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "tasks": [
+        {
+          "id": "1DCC034FB3248865",
+          "type": "advancement",
+          "advancement": "world_progression_core:world_turn/fire_bloom"
+        }
+      ],
+      "optional": false,
+      "rewards": []
+    },
+    {
+      "id": "70BEECC308A5979C",
+      "x": 22.5,
+      "y": 0,
+      "icon": {
+        "id": "world_progression_core:hardmetal_offcut"
+      },
+      "min_width": 340,
+      "dependencies": [
+        "5A6AC6C32B011E4F"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "tasks": [
+        {
+          "id": "53D4723B7FFDE528",
+          "type": "advancement",
+          "advancement": "world_progression_core:world_turn/cut_batch"
+        }
+      ],
+      "optional": false,
+      "rewards": [
+        {
+          "id": "5D79FDF5FF8AA496",
+          "type": "item",
+          "item": {
+            "id": "create:andesite_funnel",
+            "count": 1
+          },
+          "count": 4
+        }
+      ]
+    },
+    {
+      "id": "24BA016E81A9BDB9",
+      "x": 25,
       "y": 0,
       "icon": {
         "id": "confluence:cobalt_ingot"
       },
       "min_width": 340,
       "dependencies": [
-        "4949B108C7E78A72"
+        "70BEECC308A5979C"
       ],
       "dependency_requirement": "all_completed",
       "progression_mode": "linear",

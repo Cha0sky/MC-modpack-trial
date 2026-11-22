@@ -44,6 +44,12 @@ def journal():
         "旧人曾用精密的仪器望向群星。我只拍了一面墙，回来却分不清暗下来的是纹样，还是提灯挪开了一步。把站立的位置也写下来，下次请同伴从那里再看一眼。",
         turn_page("再去现场记一笔", LEGS[5].quest("notebook")), turn_page("把记录绘成回访图", LEGS[5].quest("chart")),
     ], after=(LEGS[5].quest("field_photo"), LEGS[5].quest("notebook")))
+    page(book, lang, "shop_drawing", "夹在炉边的工艺单", "车间查阅 · 从六块粗矿到一副夹模", "world_progression_core:field_press_die", (5.5, 4), [
+        "六块同种粗矿拌成一块炉料。要给镐钻或盔甲攒锭，就把炉料洗过或加胶压实，再进地狱熔炉。锯一块坯，取三锭和一片边料。",
+        "边料交给机械手装合金，再锯槽、浇水、压合。把成模留在机械手里，换轨料坯或灯座坯就能转产。只做一单时，可以自己搬半成品。",
+        turn_page("看两种精炼法", LEGS[3].quest("refine")), turn_page("查夹模的工序", LEGS[4].quest("die_ready")),
+        turn_page("矿班的轨料单", LEGS[4].quest("lay_rails")), turn_page("护卫的灯座单", LEGS[4].quest("hang_lamp")),
+    ], after=(LEGS[3].quest("transition"),))
     return book, lang
 
 

@@ -57,6 +57,7 @@ public final class FrontlineDepot {
         recordStock(player, "trail", trail);
         recordStock(player, "rescue", rescue);
         if (trail >= 4 && rescue >= 4) ChapterEvents.award(player, "frontline/mixed_reserve");
+        if (FrontlineFreight.checkReceipt(player, barrel)) return;
         tell(player, "营地盘点完成。野外补给包 " + trail + " / 2，救援补给包 " + rescue + " / 2。物资可随时取用。");
     }
 

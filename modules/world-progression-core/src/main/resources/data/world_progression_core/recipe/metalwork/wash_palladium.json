@@ -1,0 +1,14 @@
+{
+  "type": "create:splashing",
+  "ingredients": [
+    {
+      "item": "world_progression_core:palladium_furnace_charge"
+    }
+  ],
+  "results": [
+    {
+      "id": "world_progression_core:refined_palladium_charge",
+      "count": 1
+    }
+  ]
+}

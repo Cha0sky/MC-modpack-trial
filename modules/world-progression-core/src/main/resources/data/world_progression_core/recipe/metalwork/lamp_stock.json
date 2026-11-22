@@ -1,0 +1,23 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "create:iron_sheet"
+    },
+    {
+      "item": "minecraft:glass_pane"
+    },
+    {
+      "item": "minecraft:torch"
+    },
+    {
+      "item": "minecraft:torch"
+    }
+  ],
+  "results": [
+    {
+      "id": "world_progression_core:lamp_stock",
+      "count": 1
+    }
+  ]
+}

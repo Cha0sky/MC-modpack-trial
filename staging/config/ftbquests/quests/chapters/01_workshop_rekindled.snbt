@@ -180,6 +180,11 @@
           "type": "advancement",
           "advancement": "world_progression_core:workshop/plates",
           "criterion": "done"
+        },
+        {
+          "id": "17D6614D1C368361",
+          "type": "advancement",
+          "advancement": "create:mechanical_press"
         }
       ],
       "rewards": [
@@ -228,21 +233,102 @@
           "type": "advancement",
           "advancement": "world_progression_core:workshop/fiber",
           "criterion": "done"
+        },
+        {
+          "id": "6B71EF8E34DA9042",
+          "type": "advancement",
+          "advancement": "create:millstone"
         }
       ],
       "rewards": []
     },
     {
+      "id": "639520F140798DD7",
+      "x": 5.5,
+      "y": -1,
+      "icon": {
+        "id": "create:andesite_funnel"
+      },
+      "min_width": 320,
+      "dependencies": [
+        "6E074E85FED06EAC",
+        "6B8E22D501AC0EA9"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "optional": true,
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "63B4F60DB04A2978",
+          "type": "advancement",
+          "advancement": "create:funnel"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "174F50337D6E644B",
+          "type": "item",
+          "item": {
+            "id": "create:belt_connector",
+            "count": 1
+          },
+          "count": 4
+        }
+      ]
+    },
+    {
+      "id": "75D5D64B85ED67C5",
+      "x": 5.5,
+      "y": 1,
+      "icon": {
+        "id": "create:chute"
+      },
+      "min_width": 320,
+      "dependencies": [
+        "6E074E85FED06EAC",
+        "6B8E22D501AC0EA9"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "optional": true,
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "2DF26AD517D022F4",
+          "type": "advancement",
+          "advancement": "create:chute"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "319EC6FBBC3C252E",
+          "type": "item",
+          "item": {
+            "id": "minecraft:hopper",
+            "count": 1
+          },
+          "count": 4
+        }
+      ]
+    },
+    {
       "id": "136EB0CDAD110108",
-      "x": 6,
+      "x": 7,
       "y": 0,
       "icon": {
         "id": "world_progression_core:resonant_binder"
       },
       "min_width": 320,
       "dependencies": [
-        "6E074E85FED06EAC",
-        "6B8E22D501AC0EA9"
+        "639520F140798DD7",
+        "75D5D64B85ED67C5"
       ],
       "dependency_requirement": "all_completed",
       "progression_mode": "linear",
@@ -257,9 +343,15 @@
           "type": "advancement",
           "advancement": "world_progression_core:workshop/binder",
           "criterion": "done"
+        },
+        {
+          "id": "229E7CF5B083D0EC",
+          "type": "advancement",
+          "advancement": "create:mechanical_mixer"
         }
       ],
-      "rewards": []
+      "rewards": [],
+      "min_required_dependencies": 1
     },
     {
       "id": "228109ABBD3E71FA",
@@ -689,80 +781,6 @@
             "count": 1
           },
           "count": 32
-        }
-      ]
-    },
-    {
-      "id": "639520F140798DD7",
-      "x": 5,
-      "y": 3,
-      "icon": {
-        "id": "create:andesite_funnel"
-      },
-      "min_width": 320,
-      "dependencies": [
-        "6E074E85FED06EAC"
-      ],
-      "dependency_requirement": "all_completed",
-      "progression_mode": "linear",
-      "optional": true,
-      "hide_dependency_lines": false,
-      "hide_until_deps_visible": false,
-      "hide_until_deps_complete": false,
-      "hide_lock_icon": false,
-      "tasks": [
-        {
-          "id": "63B4F60DB04A2978",
-          "type": "advancement",
-          "advancement": "create:funnel"
-        }
-      ],
-      "rewards": [
-        {
-          "id": "174F50337D6E644B",
-          "type": "item",
-          "item": {
-            "id": "create:belt_connector",
-            "count": 1
-          },
-          "count": 4
-        }
-      ]
-    },
-    {
-      "id": "75D5D64B85ED67C5",
-      "x": 5,
-      "y": 5,
-      "icon": {
-        "id": "create:chute"
-      },
-      "min_width": 320,
-      "dependencies": [
-        "6E074E85FED06EAC"
-      ],
-      "dependency_requirement": "all_completed",
-      "progression_mode": "linear",
-      "optional": true,
-      "hide_dependency_lines": false,
-      "hide_until_deps_visible": false,
-      "hide_until_deps_complete": false,
-      "hide_lock_icon": false,
-      "tasks": [
-        {
-          "id": "2DF26AD517D022F4",
-          "type": "advancement",
-          "advancement": "create:chute"
-        }
-      ],
-      "rewards": [
-        {
-          "id": "319EC6FBBC3C252E",
-          "type": "item",
-          "item": {
-            "id": "minecraft:hopper",
-            "count": 1
-          },
-          "count": 4
         }
       ]
     },

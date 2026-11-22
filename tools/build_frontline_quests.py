@@ -17,7 +17,8 @@ def uid(key):
 
 def records():
     done = {"trigger": "minecraft:impossible"}
-    entries = {key: {"done": done} for key in ("station", "trail_delivery", "rescue_delivery", "mixed_reserve")}
+    entries = {key: {"done": done} for key in (
+        "station", "trail_delivery", "rescue_delivery", "mixed_reserve", "freight_delivery", "mixed_freight", "issued")}
     opened = {}
     for lane, crate in (("trail", TRAIL), ("rescue", RESCUE)):
         entries[lane + "_prepared"] = {"done": done, "carried": {
@@ -83,13 +84,14 @@ def main():
 
     add("dispatch", "地图的另一端", (0, 0), "minecraft:compass", (), [item("minecraft:compass")], [
         "归档图上多了一个你亲自走过的地方。下一班人可没走过这趟。拿普通指南针领木桶和营火，沿图再走一次。",
-        "营地缺三样：能吃的、能救急的、能接下一箱货的。挑两项办妥，在遗址旁拆一包补给就能交班。"],
+        "营地缺三样：能吃的、能救急的、能把货送来的。给厨房和救援队各送两包，或替其中一队送货，再把货运线修到前线。最后凭纸在桶里领一包，到遗址旁拆用。"],
         [("minecraft:barrel", 2), ("minecraft:campfire", 2), ("minecraft:spruce_log", 48)], mainline=True,
         subtitle="沿归档图重访遗址，行粮、救援、货运任选两项")
     add("station", "把木桶留在遗址旁", (2, 0), "minecraft:campfire", ("dispatch",), [adv(RECORD + "station")], [
         "靠近归档标记找一块平地，水平半径 128 格内都可设站。墓穴深处难扎营，就到它正上方的地表。",
-        "在木桶任意一侧同高紧贴点燃营火，主手持普通指南针，潜行右键木桶盘点。看到库存数字，站址就定了。"],
-        [("minecraft:lantern", 12), ("minecraft:stone_bricks", 64)], mainline=True)
+        "在木桶任意一侧同高紧贴点燃营火，主手持普通指南针，潜行右键木桶盘点。看到库存数字，站址就定了。先把纸收在背包里，领用时再换到副手。",
+        "矿班压过的铁轨可铺向站口，护卫备的灯笼能照亮卸货处。收件蛙港以后要坐在木桶正上方，先给它留个位置。"],
+        [("minecraft:lantern", 12), ("minecraft:stone_bricks", 64), ("minecraft:paper", 16)], mainline=True)
     add("trail", "厨房排班 · 装一包行粮", (2, -3), TRAIL, ("dispatch",), [adv(RECORD + "trail_prepared")], [
         "用第三章的生产线接第一单。压机下的工作盆放 2 份热封行军餐、2 煤炭、2 木棍、1 纸，冷压一包。备齐两包就可送到营地。"],
         [("minecraft:paper", 32), ("minecraft:copper_ingot", 24)])
@@ -105,16 +107,24 @@ def main():
     add("rescue_delivery", "救援物资到站", (5, 2), RESCUE, ("station", "rescue"), [adv(RECORD + "rescue_delivery")], [
         "在营地同一只木桶存 2 个救援补给包，用指南针盘点。每包能拆出 1 个金苹果和 6 个脚手架。"],
         [("minecraft:gold_block", 2), ("minecraft:scaffolding", 64)])
-    add("freight", "货运通线 · 蛙港签收", (5, 6), "create:package_frogport", ("pack",), [adv("create:frogport")], [
-        "用锁链连接两个传动轮并供能。手持蛙港右键锁链，再放到链旁。给发件打包机贴地址牌，收件蛙港填同名地址。",
-        "亲自放置收件蛙港，等它从链上取货。手持收到的纸箱潜行右键，取出内层补给包。"],
+    add("freight", "货运试车 · 空线走一趟", (5, 6), "create:package_frogport", ("pack",), [adv("create:frogport")], [
+        "工坊先做一小段试车线：用锁链连接两个锁链传动轮并供能。手持货物蛙港右键锁链，再放在链旁。发件蛙港坐在打包机上，把连着另一段链的收件蛙港放到空桶上。",
+        "给发件打包机贴写有收件地址的告示牌，把收件蛙港设为同名地址。亲自放置收件蛙港，发一箱试车货，等它从链上取箱，再领修长线的材料。"],
         [("create:item_vault", 8), ("create:brass_funnel", 4), ("minecraft:chain", 48)])
-    end = add("handover", "交班 · 打开第一份储备", (8, 0), "minecraft:written_book",
-        ("trail_delivery", "rescue_delivery", "freight"), [adv(RECORD + "opened"), adv(RECORD + "field_use")], [
-        "三项业务有两项运转，补给站就能换班。带一包行粮或救援物资，到归档遗址水平 128 格内，对空气右键亲手拆包。",
+    add("signed_freight", "货运到站 · 第一张回执", (7.5, 6), "create:package_frogport", ("station", "freight"),
+        [adv(RECORD + "freight_delivery")], [
+        "把收件蛙港装在营地木桶正上方，接上锁链，打开收件并填地址。让营火一直亮着，给蛙港和桶都留点空位。",
+        "在发件端把至少 1 个野外或救援补给包封进写有该地址的纸箱，通过锁链发往营地。收件成功后，主手指南针潜行点桶即可读回执，同伴也能来核对。",
+        "从桶里取出外箱，手持它潜行对空气右键，把拆出的补给包存回桶里。愿意常跑这条线的话，领到的第二台打包机可以用来拆箱。"],
+        [("create:packager", 1), ("create:chute", 8)])
+    end = add("handover", "交班 · 签领一份储备", (8, 0), "minecraft:written_book",
+        ("trail_delivery", "rescue_delivery", "signed_freight"),
+        [adv(RECORD + "opened"), adv(RECORD + "field_use"), adv(RECORD + "issued")], [
+        "行粮、救援、货运办妥两项，值守的人就能交班。木桶里至少留 1 个拆掉外箱、仍未使用的补给包，背包腾出收货的位置。",
+        "副手拿普通纸、主手持指南针，潜行右键营地木桶。账房收走一张纸，从桶中按格子顺序取出第一包补给交到你手里。站在遗址水平 128 格内，手持补给包对空气右键拆用。",
         "锅还可以接着煮，桶里的东西也留给下一趟。收下交班配给，再选一本适合自己的附魔书。"],
         [("minecraft:iron_block", 8), ("minecraft:experience_bottle", 48)], mainline=True, minimum=2,
-        subtitle="三单择二 · 回到前线拆包交班")
+        subtitle="三单择二 · 向营地签领一包储备，再在前线拆用")
     end["rewards"].append(field_manual())
     add("banquet", "驻地餐桌 · 摆一桌盛宴", (4, -5), "farmersdelight:roast_chicken_block", ("trail",),
         [adv("farmersdelight:main/place_feast")], [
@@ -149,9 +159,14 @@ def main():
         "噬星之刃达到四阶后，主手持剑，潜行右键施放爆发。守夜时留着这招，等敌人聚拢再出手。"],
         [("minecraft:diamond", 4), ("minecraft:golden_carrot", 32)])
     add("reserve", "扩建验收 · 两套常备库存", (8, 4), "create:item_vault",
-        ("handover", "trail_delivery", "rescue_delivery", "freight"), [adv(RECORD + "mixed_reserve")], [
+        ("handover", "trail_delivery", "rescue_delivery", "signed_freight"), [adv(RECORD + "mixed_reserve")], [
         "开通全部三项业务后，把两种补给各 4 包同时存进一只营地木桶，持指南针盘点。"],
         [("create:item_vault", 16), ("create:brass_funnel", 8), ("minecraft:powered_rail", 48)])
+    add("mixed_waybill", "合单发运 · 同一箱里的两份委托", (10, 6), "create:brass_funnel", ("signed_freight",),
+        [adv(RECORD + "mixed_freight")], [
+        "厨房和救援队的订单正好同路。在发件库存放入两种补给各至少 1 包，再触发打包机，合装成一只寄往营地的外箱。两只单品箱分开发不会取得合单回执。",
+        "到营地持指南针潜行点桶读回执。要让拆箱也能连班，可用过滤漏斗从桶中只抽外箱，送入背靠库存的第二台打包机，让拆出的补给包回到库存。"],
+        [("create:brass_tunnel", 4), ("create:item_vault", 8)])
     previous_bosses = {boss: player_record({"advancements": {MOD + "relic_expeditions/" + boss: True}})
                        for boss in ("dead_king", "vizier")}
     write(DATA / "advancement/frontline/patrol.json", {"criteria": previous_bosses, "requirements": [list(previous_bosses)]})

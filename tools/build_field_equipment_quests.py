@@ -94,28 +94,41 @@ def main():
         "第一炉钴或钯金该给谁？矿班用它追下一层矿脉，护卫用它把人平安带回来。先选一班，另一班的委托也会留着。",
         "在工作台里竖排叠放工作台、铁砧或铅砧、工作台。做出的重型工作台放在炉边，已有的空手打开即可。"],
         BENCH, 0, 0, [world_turn_id("first_ingot")], [("minecraft:coal", 32), ("minecraft:oak_log", 64)],
-        subtitle="矿班、护卫任选一班，检验合格就能出队")
+        subtitle="同一副夹模，矿班铺轨或护卫点灯")
+    quest("die_ready", "工装 · 从锯边料到施工夹模", [
+        "取第三章的硬质边料。让机械手加 1 份安山合金，动力锯开槽，注液器浇 250 mB 水，最后用机械压机定型。按此顺序各过一遍。",
+        "小工坊可手搬同一件半成品，大工坊可用传送带串起来。成模装进机械手后选一个订单试产，两类订单都能用同一副模。"],
+        "world_progression_core:field_press_die", 2, 0, [uid("bench")],
+        [("create:iron_sheet", 8), ("minecraft:glass_pane", 8)], subtitle="一轮四道工序，夹模可以反复用")
+    quest("lay_rails", "矿班首件 · 压轨铺路", [
+        "在工作盆用压机把 2 张铁板、1 根木棍压成轨料坯。机械手握施工夹模，在坯上压出 8 段工坊钢轨，模具留在手里。",
+        "用这批带工坊标记的钢轨铺下第一段。剩余钢轨可以接进运矿线。"],
+        "minecraft:rail", 4, -1, [uid("die_ready")], [("minecraft:powered_rail", 12)], optional=True)
+    quest("hang_lamp", "护卫首件 · 压灯布哨", [
+        "工作盆内放 1 张铁板、1 块玻璃板和 2 支普通火把，用压机压成灯座坯。让握着施工夹模的机械手铆合，一坯出 2 盏工坊提灯。",
+        "用这批带工坊标记的提灯点亮一处岗哨。以后同一条线也能给前线补灯。"],
+        "minecraft:lantern", 4, 1, [uid("die_ready")], [("minecraft:chain", 24)], optional=True)
     quest("tool", "采掘 · 换上新工具", [
         "在重型工作台做好一把镐或钻头，拿到主手。钴镐要 15 锭、钴钻头 12 锭，钯金两种工具各要 18 锭。做镐另备 3 根珍珠木棍。"],
-        "confluence:cobalt_drill", 2, -1, [uid("bench")],
+        "confluence:cobalt_drill", 2, -2.5, [uid("bench")],
           [("minecraft:torch", 64), ("minecraft:rail", 48)], optional=True)
     quest("suit", "战斗 · 选一套合身的盔甲", [
         "穿齐同种材料的头、胸、腿、靴。护卫可以带惯用的武器去巡夜，钴甲的头部最好按兵器来选。",
-        guide_link("查手册 · 钴甲与钯金甲", "armor")], "confluence:palladium_chestplate", 2, 1, [uid("bench")],
+        guide_link("查手册 · 钴甲与钯金甲", "armor")], "confluence:palladium_chestplate", 2, 2.5, [uid("bench")],
           [("minecraft:golden_carrot", 32), ("minecraft:arrow", 64)], optional=True)
     quest("prospect", "采掘队 · 探到第二层矿脉", [
         "主手用钴或钯金镐钻，从深板岩中采出一块秘银矿或山铜矿。神锤敲开更多祭坛，可以显出下一层矿脉。"],
-        "confluence:raw_mythril", 4, -2, [uid("tool")], [("minecraft:rail", 64), ("minecraft:diamond", 3)], optional=True)
+        "confluence:raw_mythril", 6, -2, [uid("tool"), uid("lay_rails")], [("minecraft:rail", 64), ("minecraft:diamond", 3)], optional=True)
     quest("patrol", "护卫队 · 两种交锋", [
         "穿齐钴甲或钯金甲。击败一只近敌（僵尸、尸壳、蜘蛛）和一只射手（骷髅、流浪者、掠夺者），两场可换武器。"],
-        "minecraft:shield", 4, 2, [uid("suit")], [("minecraft:golden_apple", 3), ("minecraft:experience_bottle", 24)], optional=True)
+        "minecraft:shield", 6, 2, [uid("suit"), uid("hang_lamp")], [("minecraft:golden_apple", 3), ("minecraft:experience_bottle", 24)], optional=True)
     quest("trial", "把整备用起来", [
         "采到第二层矿，或穿新甲挡过近敌和射手，就能接遗址远征。回工坊带上两份热封行军餐，别把压机和厨锅留到临行才开。"],
-        "minecraft:golden_apple", 6, 0, [uid("prospect"), uid("patrol")],
+        "minecraft:golden_apple", 8, 0, [uid("prospect"), uid("patrol")],
           [("minecraft:iron_block", 8), ("minecraft:experience_bottle", 32), ("minecraft:golden_apple", 6)],
           either=True, subtitle="带两份热封行军餐去领下一张图")
     quest("anvil", "选修 · 下一阶锻造", [
-        "用重型工作台把 10 秘银锭或 12 山铜锭，搭配 3 块珍珠木板，做成对应的困难砧。"], "confluence:mythril_anvil", 8, -1, [uid("trial")],
+        "用重型工作台把 10 秘银锭或 12 山铜锭，搭配 3 块珍珠木板，做成对应的困难砧。"], "confluence:mythril_anvil", 10, -1, [uid("trial")],
           [("minecraft:anvil", 2), ("minecraft:obsidian", 32)], optional=True)
     quest("ore_train", "矿班联勤 · 第一趟运矿车", [
         "矿工留下铁轨，护卫清过沿途的敌人。备一辆运输矿车（箱子加矿车），再用可乘坐的普通矿车累计行驶 32 格，亲自试一趟线路。",
