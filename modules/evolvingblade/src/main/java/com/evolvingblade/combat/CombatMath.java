@@ -100,8 +100,6 @@ public final class CombatMath {
 
     /**
      * 沿射线采样：返回从近到远、间距为 {@code step} 的采样距离。
-     *
-     * <p>用于逐段做方块碰撞与目标检索，保证"墙壁阻挡、不穿墙"。
      */
     public static List<Double> raySampleDistances(double maxDistance, double step) {
         List<Double> distances = new ArrayList<>();

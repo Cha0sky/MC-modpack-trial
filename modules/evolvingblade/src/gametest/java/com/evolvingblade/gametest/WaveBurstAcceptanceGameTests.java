@@ -128,16 +128,13 @@ public final class WaveBurstAcceptanceGameTests {
         return player;
     }
 
-    /**
-     * 对准某个相对坐标，并抬高到实体眼睛高度（+1.6）：射线与目标眼睛齐平，
-     * 既不会被地板提前截断，也不需要假设结构朝向。
-     */
+    /** 对准相对坐标的眼睛高度，使用模板旋转后的世界坐标。 */
     private static void face(GameTestHelper helper, ServerPlayer player, int relX, int relY, int relZ) {
         Vec3 target = Vec3.atCenterOf(helper.absolutePos(new BlockPos(relX, relY, relZ))).add(0.0D, 1.6D, 0.0D);
         player.lookAt(net.minecraft.commands.arguments.EntityAnchorArgument.Anchor.EYES, target);
     }
 
-    /** 对准某个实体的**眼睛**：保证射线水平，不会被地板/台阶提前截断。 */
+    /** 对准目标实体的眼睛。 */
     private static void faceEntity(ServerPlayer player, LivingEntity target) {
         player.lookAt(net.minecraft.commands.arguments.EntityAnchorArgument.Anchor.EYES, target.getEyePosition());
     }
@@ -253,7 +250,7 @@ public final class WaveBurstAcceptanceGameTests {
     }
 
     @GameTest(template = "boss_arena", timeoutTicks = 300)
-    public static void waveWallBlocksIncludingNearCorner(GameTestHelper helper) {
+    public static void waveHitsThroughWallWithinItsWidth(GameTestHelper helper) {
         LOG.reset();
         ServerPlayer player = staged(helper, STAGE2_POINTS, 0L, 24, 4, 6);
         for (int x = 22; x <= 26; x++) {
@@ -263,16 +260,17 @@ public final class WaveBurstAcceptanceGameTests {
         }
         Husk behindWall = huskAt(helper, 24, 4, 12, 500.0D);
         Husk nearCorner = huskAt(helper, 26, 4, 10, 500.0D);
+        Husk offAxis = huskAt(helper, 28, 4, 10, 500.0D);
         face(helper, player, 24, 4, 9);
         double behindHp = behindWall.getHealth();
         double cornerHp = nearCorner.getHealth();
+        double offAxisHp = offAxis.getHealth();
         helper.assertTrue(StarEaterAbilities.tryWave(player), "the wave must fire");
-        helper.assertTrue(Math.abs(behindHp - behindWall.getHealth()) < 0.01D,
-                "a wall must stop the wave (target behind wall hp=" + behindWall.getHealth() + ")");
-        helper.assertTrue(Math.abs(cornerHp - nearCorner.getHealth()) < 0.01D,
-                "a target behind the wall corner must not be hit");
-        helper.assertTrue(helper.getBlockState(new BlockPos(24, 4, 9)).is(Blocks.STONE),
-                "the wave must not modify terrain");
+        helper.assertTrue(behindWall.getHealth() < behindHp, "the wave must hit the target behind the wall");
+        helper.assertTrue(nearCorner.getHealth() < cornerHp, "the wave must hit the in-width target behind the corner");
+        helper.assertTrue(offAxis.getHealth() == offAxisHp, "a target outside the wave width must stay unharmed");
+        helper.assertTrue(helper.getBlockState(new BlockPos(24, 6, 9)).is(Blocks.STONE),
+                "the stone on the wave path must remain");
         LOG.reset();
         helper.succeed();
     }
@@ -500,7 +498,7 @@ public final class WaveBurstAcceptanceGameTests {
     }
 
     @GameTest(template = "boss_arena", timeoutTicks = 300)
-    public static void burstWallBlocksAndLockedStagesCannotCast(GameTestHelper helper) {
+    public static void burstHitsThroughWallOnlyWithinUnlockedRadius(GameTestHelper helper) {
         LOG.reset();
         ServerPlayer player = staged(helper, STAGE4_POINTS, STAGE4_BOSSES, 24, 4, 6);
         for (int x = 22; x <= 26; x++) {
@@ -509,10 +507,14 @@ public final class WaveBurstAcceptanceGameTests {
             }
         }
         Husk behindWall = huskAt(helper, 24, 4, 10, 500.0D);
+        Husk beyondRadius = huskAt(helper, 24, 4, 20, 500.0D);
         double wallHp = behindWall.getHealth();
+        double farHp = beyondRadius.getHealth();
         helper.assertTrue(StarEaterAbilities.tryBurst(player), "the burst must fire");
-        helper.assertTrue(Math.abs(behindWall.getHealth() - wallHp) < 0.01D,
-                "a wall must stop the burst (no line of sight)");
+        helper.assertTrue(behindWall.getHealth() < wallHp, "the burst must reach the target behind the wall");
+        helper.assertTrue(beyondRadius.getHealth() == farHp, "a target beyond the stage-four radius must stay unharmed");
+        helper.assertTrue(helper.getBlockState(new BlockPos(24, 5, 8)).is(Blocks.STONE),
+                "the burst must leave the wall in place");
 
         for (long[] points : new long[][] {{0L, 0L}, {50L, 0L}, {150L, 0L}, {350L, 1L}}) {
             ServerPlayer locked = staged(helper, points[0], points[1], 24, 4, 6);

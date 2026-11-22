@@ -391,7 +391,7 @@ public final class EBAbilityClient {
                         (i + 1) * 0.42D);
                 level.addParticle(i == 0 ? CORE_DUST : STAR_DUST, point.x, point.y, point.z, 0.0D, 0.0D, 0.0D);
             } else if (effect.kind == AbilityEffectPayload.KIND_WAVE) {
-                // 与弧刃共用同一条行进函数与同一个真实（非负）reach，避免粒子跑到墙后或与弧刃脱节。
+                // 粒子和弧刃按同一进度沿服务端给定的完整射程移动。
                 double reach = effect.magnitude;
                 if (!Double.isFinite(reach) || reach <= 0.05D) {
                     continue;

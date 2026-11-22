@@ -67,7 +67,7 @@ public final class AbilityGeometry {
                 oz + direction[2] * along + side[2] * cos + up[2] * sin};
     }
 
-    /** 弧刃沿射线的行进距离：从 {@value #WAVE_START_ALONG} 格开始，随进度到真实（被墙截断的）reach。 */
+    /** 弧刃从 {@value #WAVE_START_ALONG} 格处出发，随动画进度到达本次剑气的射程。 */
     public static double waveAlong(double progress, double reach) {
         if (!Double.isFinite(reach) || reach <= 0.0D) {
             return 0.0D;

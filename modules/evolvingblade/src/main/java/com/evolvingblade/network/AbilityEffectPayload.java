@@ -94,7 +94,7 @@ public record AbilityEffectPayload(
      * <p><b>方向向量的语义随 kind 而定</b>，这里刻意保持"归一化"与"保留长度"两种模式：
      * <ul>
      *   <li>{@code normalizeDirection = true}：刀光/爆发/命中/斩痕只需要方向与幅度，
-     *       幅度单独由 {@code magnitude} 携带（剑气就是被墙截断后的 reach）；</li>
+     *       {@code magnitude} 携带本次剑气的射程或爆发的半径。</li>
      *   <li>{@code normalizeDirection = false}：吸血需要<b>真实距离</b>（目标 → 施法者），
      *       归一化会把距离抹成 1，导致轨迹只飞 1 格。</li>
      * </ul>

@@ -81,18 +81,21 @@
 
 ## 6. 剑气 / 爆发
 
+本节列出现行技能的回归用例。页首通过记录属于当时的交付版本，隔墙命中由新版实机复验。
+
 | 验收要求 | 测试方法 |
 |---|---|
-| 阶段 2 伤害 24、背后目标不中、射程 23/25 边界、冷却 160 | `WaveBurstAcceptanceGameTests.waveMidStageBehindTargetRangeBoundaryAndCooldown` |
-| 终阶 1500、最近 3 个命中（乱序生成）、冷却 80 | `WaveBurstAcceptanceGameTests.waveFinalHitsExactlyThreeNearestRegardlessOfSpawnOrder` |
-| 墙体阻挡（含墙角） | `WaveBurstAcceptanceGameTests.waveWallBlocksIncludingNearCorner`、`StageAndWaveGameTests.waveStopsAtWallAndNeverHitsWhatIsBehindIt` |
+| 二阶伤害 24，射程 48 格，背后和超距目标不受伤，冷却 80 刻 | `WaveBurstAcceptanceGameTests.waveMidStageBehindTargetRangeBoundaryAndCooldown` |
+| 终阶命中全部范围内前向目标，冷却 40 刻 | `WaveBurstAcceptanceGameTests.waveFinalHitsAllForwardTargetsRegardlessOfSpawnOrder` |
+| 剑气命中墙前和墙后目标，受原有宽度限制，射线路径上的墙保持完整 | `WaveBurstAcceptanceGameTests.waveHitsThroughWallWithinItsWidth`、`StageAndWaveGameTests.waveHitsBothSidesAndLeavesWallIntact` |
+| 弧刃特效沿完整射程推进 | `AbilityGeometryTest.waveTravelsFromNearToReach` |
 | 阶段 0/1 未解锁不消耗冷却 | `WaveBurstAcceptanceGameTests.waveLockedAtStageZeroAndOne` |
 | 换栈不重置冷却 | `WaveBurstAcceptanceGameTests.waveCooldownIsPerPlayerNotPerItemStack` |
 | 真实生命差 24 / 1500 | `WaveBurstAcceptanceGameTests.waveRealHealthDamageOnLivingVictim` |
-| 爆发 180 / 2250、半径 6/8、冷却 400/200 | `WaveBurstAcceptanceGameTests.burstRealHealthDamageRadiusAndCooldown` |
-| ≥33 目标恰好 32 个命中、半径外安全、方块不变 | `WaveBurstAcceptanceGameTests.burstFinalHitsExactlyThirtyTwoAndKeepsBlocks` |
+| 爆发伤害 180 / 2250、半径 12 / 16 格、冷却 200 / 100 刻 | `WaveBurstAcceptanceGameTests.burstRealHealthDamageRadiusAndCooldown` |
+| 超过 32 个目标时覆盖球内全部有效目标，球外安全，方块保持完整 | `WaveBurstAcceptanceGameTests.burstFinalHitsAllInRangeAndKeepsBlocks` |
 | 排除玩家/队友/各类宠物（含 owner=null 已驯服） | `WaveBurstAcceptanceGameTests.burstExcludesPlayersAlliesAndAllKindsOfPets` |
-| 墙体阻挡 / 未解锁 | `WaveBurstAcceptanceGameTests.burstWallBlocksAndLockedStagesCannotCast` |
+| 爆发穿墙、穿天花板，仍受半径和解锁阶段限制 | `WaveBurstAcceptanceGameTests.burstHitsThroughWallOnlyWithinUnlockedRadius`、`BurstSphereGameTests.burstHitsThroughCeilingInThreeDimensions` |
 | 取消技能伤害、不清 `invulnerableTime` | `WaveBurstAcceptanceGameTests.skillCancellationAndInvulnerableTimeRespected` |
 | 真实冷却边界（真实世界 tick） | `WaveBurstAcceptanceGameTests.waveCooldownDeadlineUsesRealWorldTicks`、`burstCooldownDeadlineUsesRealWorldTicks` |
 | 末影龙父实体只命中一次 | `WaveBurstAcceptanceGameTests.waveHitsDragonParentExactlyOnce` |

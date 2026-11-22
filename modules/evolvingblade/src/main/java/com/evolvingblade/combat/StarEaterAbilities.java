@@ -24,9 +24,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.OwnableEntity;
 import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.phys.AABB;
-import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.damagesource.DamageType;
@@ -38,8 +36,7 @@ import net.minecraft.world.damagesource.DamageType;
  * <ul>
  *   <li>全部判定在服务器主线程执行；冷却来自玩家 attachment 的<b>绝对到期 tick</b>，
  *       因此换剑/重连/死亡都无法绕过；</li>
- *   <li>剑气用逐段射线做方块碰撞与目标检索，<b>严格不穿墙</b>；</li>
- *   <li>爆发命中球内所有可见的合法目标，不破坏地形；</li>
+ *   <li>剑气沿瞄准方向命中整段射程内的目标，爆发命中球形范围内的目标。两者均可穿墙。</li>
  *   <li>斩 Boss 加成使用自定义伤害类型：写进 {@code bypasses_armor} 与 {@code bypasses_cooldown} 标签
  *       （只绕过护甲与受击冷却），<b>不</b>绕过无敌/抗性/模组事件取消，也不直接 setHealth/kill；
  *       也绝不修改实体的 {@code invulnerableTime} 等可观察状态；</li>
@@ -55,8 +52,6 @@ public final class StarEaterAbilities {
     public static final ResourceKey<DamageType> BOSS_SLAYER = ResourceKey.create(Registries.DAMAGE_TYPE,
             ResourceLocation.fromNamespaceAndPath(EvolvingBlade.MODID, "boss_slayer"));
 
-    /** 剑气采样步长（方块）：越小越精确，0.5 已足够避免穿墙。 */
-    private static final double WAVE_STEP = 0.5D;
     /** 剑气命中判定半径（方块）。 */
     private static final double WAVE_HIT_RADIUS = 1.6D;
     /**
@@ -112,14 +107,6 @@ public final class StarEaterAbilities {
                 || BossClassifier.classify(target, settings.bossRules()).boss();
     }
 
-    private static boolean hasLineOfSight(ServerPlayer player, LivingEntity target) {
-        ServerLevel level = (ServerLevel) player.level();
-        Vec3 from = player.getEyePosition();
-        Vec3 to = target.getEyePosition();
-        HitResult hit = level.clip(new ClipContext(from, to, ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, player));
-        return hit.getType() == HitResult.Type.MISS;
-    }
-
     // ------------------------------------------------------------------
     // 剑气（stage2+，右键）
     // ------------------------------------------------------------------
@@ -141,7 +128,7 @@ public final class StarEaterAbilities {
      * <p>为什么要在这里再协调一次：技能伤害按"服务端有效持剑 ATTACK_DAMAGE"取值，
      * 而该属性的协调可能还没在本 tick 跑过（原版装备 tick 与本模组周期协调都可能在之后）。
      * 少了这一步，技能会读到裸 base（实测 burst 1.5 / wave 1.0）。
-     * 协调只写本模组自己的两个 id，不伪造近战事件、不绕过取消/无敌/墙壁/友军、不触发递归。
+     * 协调只写本模组自己的两个属性 ID。技能照常检查目标资格与伤害事件。
      *
      * @return 已就绪的施法上下文；不满足条件返回 {@code null}
      */
@@ -203,22 +190,10 @@ public final class StarEaterAbilities {
         Vec3 direction = player.getLookAngle().normalize();
         DamageSource source = abilitySource(level, player, SWORD_ABILITY);
 
-        // 1) 先求出射线被墙截断的位置：剑气绝不穿墙。
-        HitResult obstacle = level.clip(new ClipContext(eye, eye.add(direction.scale(range)),
-                ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, player));
-        double reach = range;
-        Vec3 end = eye.add(direction.scale(range));
-        if (obstacle.getType() != HitResult.Type.MISS) {
-            reach = Math.max(0.0D, obstacle.getLocation().distanceTo(eye));
-            end = obstacle.getLocation();
-        }
-        // 视觉：把"被墙截断后的真实 reach"交给客户端，观察到玩家自己铺刀光。
-        AbilityVisuals.wave(level, player, eye, direction, reach, stage);
+        AbilityVisuals.wave(level, player, eye, direction, range, stage);
 
-        // 2) 一次性收集整条（被截断的）射线上的合法候选，按"沿射线的投影距离"稳定排序。
-        //    这样近处目标一定先于远处目标命中，且**前向投影 < 0（玩家背后）的目标永远不会被命中**——
-        //    它们即使落在某个采样球里也不受伤。
-        AABB sweep = player.getBoundingBox().expandTowards(direction.scale(reach)).inflate(WAVE_HIT_RADIUS + 1.0D);
+        // 收集射线沿途的目标，按投影距离从近到远结算。
+        AABB sweep = player.getBoundingBox().expandTowards(direction.scale(range)).inflate(WAVE_HIT_RADIUS + 1.0D);
         List<LivingEntity> candidates = level.getEntitiesOfClass(LivingEntity.class, sweep,
                 entity -> isValidTarget(player, entity));
         record WaveHit(LivingEntity target, double along) {}
@@ -230,18 +205,14 @@ public final class StarEaterAbilities {
             }
             Vec3 toTarget = target.position().add(0.0D, target.getBbHeight() * 0.5D, 0.0D).subtract(eye);
             double along = toTarget.dot(direction);
-            if (along < 0.0D || along > reach) {
-                // 背后目标或超出（被墙截断的）射程：绝不命中。
+            if (along < 0.0D || along > range) {
                 continue;
             }
             double perpendicular = toTarget.subtract(direction.scale(along)).length();
-            // 保留原采样球的"横向容差"语义（含实体自身尺寸），但前向投影必须为正且不超过被墙截断的射程。
+            // 横向命中宽度包含目标自身尺寸。
             double tolerance = WAVE_HIT_RADIUS
                     + Math.max(target.getBbWidth(), target.getBbHeight()) * 0.5D;
             if (perpendicular > tolerance) {
-                continue;
-            }
-            if (!hasLineOfSight(player, target)) {
                 continue;
             }
             ordered.add(new WaveHit(target, along));
@@ -313,7 +284,7 @@ public final class StarEaterAbilities {
         // 保证"包围盒与球相交"的大型实体不会被提前筛掉（贴边命中必须可达）。
         AABB box = new AABB(center, center).inflate(radius + BURST_BROAD_PHASE_MARGIN);
         List<LivingEntity> candidates = level.getEntitiesOfClass(LivingEntity.class, box,
-                entity -> isValidTarget(player, entity) && hasLineOfSight(player, entity)
+                entity -> isValidTarget(player, entity)
                         && EffectiveDamage.sphereIntersectsAabb(center.x, center.y, center.z, radius,
                                 entity.getBoundingBox().minX, entity.getBoundingBox().minY,
                                 entity.getBoundingBox().minZ, entity.getBoundingBox().maxX,

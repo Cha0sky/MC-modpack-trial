@@ -15,8 +15,7 @@ import net.minecraft.world.phys.Vec3;
  * <ul>
  *   <li>每次施法对每个观察者最多 1 个包，与粒子数量无关（不会数以千计）；</li>
  *   <li>只有同维度、距离 ≤ {@link AbilityEffectPayload#MAX_VIEW_DISTANCE} 的玩家收得到；</li>
- *   <li>所有幅度都由真实判定值夹紧（射程被墙截断多少就发多少），
- *       客户端因此不可能画出与判定不一致的刀光。</li>
+ *   <li>剑气刀光与爆发球壳使用服务端判定的射程与半径。</li>
  * </ul>
  *
  * <p>本类不改变任何游戏状态：不发爆炸、不破坏方块、不改实体字段。
@@ -47,14 +46,10 @@ public final class AbilityVisuals {
     }
 
     /**
-     * 剑气刀光：沿<b>真实被墙截断后的</b>射线前进。
-     *
-     * <p>{@code origin} 必须是<b>眼睛位置本身</b>，{@code reach} 必须是截断后的真实距离——
-     * 客户端画的是 {@code origin + dir × reach}，可见终点与判定终点严格一致
-     * （既不穿墙，也不会比判定短一截）。
+     * 剑气刀光沿瞄准方向行进至本次施法的完整射程。
      *
      * @param eye   施法者眼睛位置（起点，不做任何后退偏移）
-     * @param reach 实际可达距离（已被方块截断）
+     * @param reach 本次剑气射程
      */
     public static void wave(ServerLevel level, ServerPlayer caster, Vec3 eye, Vec3 direction, double reach,
             int stage) {
@@ -69,7 +64,7 @@ public final class AbilityVisuals {
      * 三维球壳爆发：球心＝玩家躯干中心。
      *
      * @param center 球心（躯干中心，不是脚底）
-     * @param radius 真实判定半径（6 / 终阶 8）
+     * @param radius 本次爆发的判定半径
      */
     public static void burst(ServerLevel level, ServerPlayer caster, Vec3 center, double radius, int stage) {
         if (level == null || center == null || caster == null) {

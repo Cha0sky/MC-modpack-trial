@@ -141,16 +141,17 @@ class AbilityGeometryTest {
     }
 
     @Test
-    @DisplayName("剑气从近处开始（0.7 格）并在寿命末抵达真实截断点")
+    @DisplayName("剑气弧刃从 0.7 格推进到配置的完整射程")
     void waveTravelsFromNearToReach() {
-        assertEquals(0.7D, AbilityGeometry.waveAlong(0.0D, 24.0D), 1.0E-9D,
+        double reach = 48.0D;
+        assertEquals(0.7D, AbilityGeometry.waveAlong(0.0D, reach), 1.0E-9D,
                 "the arc must appear at 0.7 blocks, not at 0.30 x reach");
-        assertEquals(24.0D, AbilityGeometry.waveAlong(1.0D, 24.0D), 1.0E-9D,
-                "the arc must end exactly at the real wall-clipped reach");
+        assertEquals(reach, AbilityGeometry.waveAlong(1.0D, reach), 1.0E-9D,
+                "the wave arc must reach the end of its full range");
         assertEquals(0.5D, AbilityGeometry.waveAlong(0.0D, 1.0D), 1.0E-9D,
                 "a very short reach (1.0) must clamp the start to half the reach, never behind the player");
-        assertTrue(AbilityGeometry.waveAlong(0.5D, 24.0D) > 0.7D
-                        && AbilityGeometry.waveAlong(0.5D, 24.0D) < 24.0D,
+        assertTrue(AbilityGeometry.waveAlong(0.5D, reach) > 0.7D
+                        && AbilityGeometry.waveAlong(0.5D, reach) < reach,
                 "the arc must move monotonically along the ray");
         assertEquals(0.0D, AbilityGeometry.waveAlong(0.5D, 0.0D), 1.0E-9D);
     }

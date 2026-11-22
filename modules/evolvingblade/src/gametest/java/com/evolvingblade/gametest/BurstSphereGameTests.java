@@ -28,11 +28,11 @@ import net.neoforged.neoforge.gametest.PrefixGameTestTemplate;
  *
  * <p>明确断言的不是"粒子画成了球"，而是<b>真实受伤判定</b>：
  * <ul>
- *   <li>球心＝玩家躯干中心，半径 6 / 终阶 8，三轴都参与；</li>
+ *   <li>球心＝玩家躯干中心，半径 12 / 终阶 16，三轴都参与；</li>
  *   <li>正上方、正下方、空中的目标必须能命中（旧的 X/Z 圆柱或"只算脚底距离"会漏掉它们）；</li>
  *   <li>"中心在球外但包围盒最近点进球"的贴边大型实体必须命中；</li>
  *   <li>三轴距离的最近点严格 {@code <= r²}：刚好贴边算命中，再多一点就不算；</li>
- *   <li>墙(LOS)、cap 32、友军/玩家/所有驯服生物排除仍然保留。</li>
+ *   <li>实体间有墙时仍能命中，整层石块保持原状。</li>
  * </ul>
  */
 @GameTestHolder(EvolvingBlade.MODID)
@@ -140,7 +140,7 @@ public final class BurstSphereGameTests {
     /**
      * 大型包围盒（原版末影龙：宽 16、高 8）的贴边命中 / 球外不命中。
      *
-     * <p>两具包围盒<b>依次</b>单独施法（中间 discard + 延迟），避免其中一具遮挡另一具的视线。
+     * <p>两具包围盒依次放置，各用一次独立施法检验球面边界。
      */
     @GameTest(template = "boss_arena", timeoutTicks = 500)
     public static void burstHitsLargeBoxWhoseCornerEntersTheSphere(GameTestHelper helper) {
@@ -152,7 +152,7 @@ public final class BurstSphereGameTests {
         helper.assertTrue(hugeInside.getHealth() < insideHp,
                 "a large box whose nearest face is inside the sphere must be hit (hp="
                         + hugeInside.getHealth() + ")");
-        // 移除后换一个位置再验证"最近面严格在球外"的负向对照，保证两次判定互不遮挡。
+        // 换一个位置验证最近面严格在球外的对照。
         hugeInside.discard();
         helper.runAfterDelay(3L, () -> {
             ServerPlayer second = staged(helper, 24, 4, 12);
@@ -168,15 +168,10 @@ public final class BurstSphereGameTests {
     }
 
     /**
-     * 墙体遮挡在<b>三维</b>下同样生效，而且不是"被地板挡住"的假象。
-     *
-     * <p>先把整列空间显式清成空气（模板地板/残块都不参与），再在空中搭天花板：
-     * 玩家与两个目标都 NoGravity，天花板挡住向上，向下完全通畅作为对照。
-     * 两条 LOS 都用与技能内部<b>同一个</b> {@code ClipContext.Block.COLLIDER} 实测，
-     * 先证明"上面被挡、下面通畅"，再断言只有下方受伤。
+     * 实测上方目标隔着石质天花板、下方目标前方通畅。同一次爆发应命中两者。
      */
     @GameTest(template = "boss_arena", timeoutTicks = 300)
-    public static void burstRespectsWallsInThreeDimensions(GameTestHelper helper) {
+    public static void burstHitsThroughCeilingInThreeDimensions(GameTestHelper helper) {
         // 显式清空整列（x 22..26, y 3..14, z 10..14），排除模板地板/残块影响。
         for (int x = 22; x <= 26; x++) {
             for (int y = 3; y <= 14; y++) {
@@ -199,7 +194,7 @@ public final class BurstSphereGameTests {
         belowOpen.setNoGravity(true);
         helper.assertTrue(helper.getBlockState(new BlockPos(24, 11, 12)).is(Blocks.STONE),
                 "sanity: the ceiling block must exist");
-        // 实测 LOS：与技能内部同一个 clip 调用。
+        // 用方块射线确认上、下对照的地形。
         boolean aboveVisible = clearLineOfSight(helper, player, aboveWall);
         boolean belowVisible = clearLineOfSight(helper, player, belowOpen);
         helper.assertFalse(aboveVisible, "measured sanity: the ceiling must block the LOS upward");
@@ -207,14 +202,16 @@ public final class BurstSphereGameTests {
         float aboveHp = aboveWall.getHealth();
         float belowHp = belowOpen.getHealth();
         helper.assertTrue(StarEaterAbilities.tryBurst(player), "the burst must fire");
-        helper.assertTrue(aboveWall.getHealth() == aboveHp,
-                "a ceiling must block the burst upward (hp=" + aboveWall.getHealth() + ")");
+        helper.assertTrue(aboveWall.getHealth() < aboveHp,
+                "the burst must hit the target above the ceiling (hp=" + aboveWall.getHealth() + ")");
         helper.assertTrue(belowOpen.getHealth() < belowHp,
                 "the same burst must still hit the unobstructed target below (control)");
+        helper.assertTrue(helper.getBlockState(new BlockPos(24, 11, 12)).is(Blocks.STONE),
+                "the burst must preserve the ceiling");
         helper.succeed();
     }
 
-    /** 与技能内部同一个 {@code ClipContext.Block.COLLIDER} 的视线测量。 */
+    /** 实测测试场景中的方块遮挡。 */
     private static boolean clearLineOfSight(GameTestHelper helper, ServerPlayer player, Husk target) {
         return helper.getLevel().clip(new net.minecraft.world.level.ClipContext(
                 player.getEyePosition(), target.getEyePosition(),

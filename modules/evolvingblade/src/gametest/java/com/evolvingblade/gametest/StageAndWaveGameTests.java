@@ -24,7 +24,7 @@ import net.neoforged.neoforge.gametest.GameTestHolder;
 import net.neoforged.neoforge.gametest.PrefixGameTestTemplate;
 
 /**
- * 实体级回归：剑气的<b>真实墙体阻挡</b>，以及"同一把剑在不同持有者手上用谁的阶段" +
+ * 实体级回归：剑气穿墙命中，以及"同一把剑在不同持有者手上用谁的阶段" +
  * "卸下剑只移除本模组的修饰符"。
  */
 @GameTestHolder(EvolvingBlade.MODID)
@@ -82,8 +82,8 @@ public final class StageAndWaveGameTests {
     }
 
     @GameTest(template = "empty", timeoutTicks = 200)
-    public static void waveStopsAtWallAndNeverHitsWhatIsBehindIt(GameTestHelper helper) {
-        ServerPlayer player = swordPlayerAt(helper, 4, 2, 1);
+    public static void waveHitsBothSidesAndLeavesWallIntact(GameTestHelper helper) {
+        ServerPlayer player = swordPlayerAt(helper, 4, 1, 1);
         // 一堵 5x3 的实心墙，位于玩家正前方（z=3）。
         for (int x = 2; x <= 6; x++) {
             for (int y = 1; y <= 3; y++) {
@@ -109,20 +109,20 @@ public final class StageAndWaveGameTests {
                             + ", front=" + inFront.getHealth() + ")");
             helper.assertTrue(!behindWall.isOnFire() && behindWall.getRemainingFireTicks() == 0,
                     "sanity: the fixture must not be burning (fireTicks=" + behindWall.getRemainingFireTicks() + ")");
-            TRACE.victim = inFront.getUUID();
+            TRACE.victim = behindWall.getUUID();
             TRACE.source = null;
             helper.assertTrue(StarEaterAbilities.tryWave(player), "sanity: the wave must actually fire");
             helper.runAfterDelay(2L, () -> {
                 helper.assertTrue(!inFront.isAlive() || inFront.getHealth() < inFront.getMaxHealth(),
                         "the wave must damage the target in front of the player (hp=" + inFront.getHealth() + ")");
                 helper.assertTrue("evolvingblade:sword_ability".equals(TRACE.source),
-                        "the only damage source on the front target must be our wave ability (source="
+                        "the target behind the wall must receive wave ability damage (source="
                                 + TRACE.source + ", amount=" + TRACE.amount + ")");
-                helper.assertTrue(Math.abs(behindWall.getHealth() - 500.0F) < 0.01F,
-                        "a wall must stop the wave: the target behind it must be untouched (hp="
+                helper.assertTrue(behindWall.getHealth() < 500.0F,
+                        "the wave must damage the target behind the wall (hp="
                                 + behindWall.getHealth() + ")");
                 // 墙体本身不被破坏。
-                helper.assertTrue(helper.getBlockState(new BlockPos(4, 2, 3)).is(Blocks.STONE),
+                helper.assertTrue(helper.getBlockState(new BlockPos(4, 3, 3)).is(Blocks.STONE),
                         "the wave must not modify terrain");
                 TRACE.victim = null;
                 helper.succeed();

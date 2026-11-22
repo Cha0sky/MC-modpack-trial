@@ -620,8 +620,6 @@ public final class ThirdPartyDamageGameTests {
         helper.assertTrue(dot > 0.999D,
                 "the cast direction must point at the target (dot=" + dot + ", look=" + player.getLookAngle()
                         + ", toTarget=" + toTarget + ")");
-        helper.assertTrue(clearSight(helper, player, victim),
-                "sanity: the line of sight to the wave target must be clear");
         helper.assertTrue(StarEaterAbilities.isValidTarget(player, victim),
                 "sanity: the fixture must be a valid ability target (hostile/boss classification)");
         double before = victim.getHealth();
@@ -674,16 +672,6 @@ public final class ThirdPartyDamageGameTests {
         player.setXRot(pitch);
         player.setOldPosAndRot();
         player.setYHeadRot(yaw);
-    }
-
-    /** 与技能内部同一套 {@code ClipContext.Block.COLLIDER} 的视线测量。 */
-    private static boolean clearSight(GameTestHelper helper, ServerPlayer player,
-            net.minecraft.world.entity.LivingEntity target) {
-        return helper.getLevel().clip(new net.minecraft.world.level.ClipContext(
-                player.getEyePosition(), target.getEyePosition(),
-                net.minecraft.world.level.ClipContext.Block.COLLIDER,
-                net.minecraft.world.level.ClipContext.Fluid.NONE, player)).getType()
-                == net.minecraft.world.phys.HitResult.Type.MISS;
     }
 
     /** 无甲、超大生命的活体目标（走真实受伤路径，不覆写 hurt/setHealth）。 */
