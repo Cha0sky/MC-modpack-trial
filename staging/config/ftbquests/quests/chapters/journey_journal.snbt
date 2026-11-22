@@ -1,0 +1,206 @@
+{
+  "id": "30BF0ECE49E4C122",
+  "filename": "journey_journal",
+  "group": "529379A5653E5792",
+  "order_index": 6,
+  "icon": {
+    "id": "minecraft:writable_book"
+  },
+  "quests": [
+    {
+      "id": "342CE32A04725ED3",
+      "x": 0,
+      "y": 0,
+      "min_width": 310,
+      "icon": {
+        "id": "minecraft:writable_book"
+      },
+      "optional": true,
+      "dependencies": [],
+      "tasks": [],
+      "rewards": []
+    },
+    {
+      "id": "20D18D2D7DDD7624",
+      "x": 0.0,
+      "y": 2,
+      "min_width": 310,
+      "icon": {
+        "id": "minecraft:red_bed"
+      },
+      "optional": true,
+      "dependencies": [
+        "259C64DF4D981F3C"
+      ],
+      "tasks": [],
+      "rewards": [],
+      "progression_mode": "linear",
+      "hide_until_deps_complete": true,
+      "hide_details_until_startable": true,
+      "dependency_requirement": "all_completed",
+      "hide_dependency_lines": true
+    },
+    {
+      "id": "22B7534252384322",
+      "x": 1.8,
+      "y": 2,
+      "min_width": 310,
+      "icon": {
+        "id": "world_progression_core:rough_tuner"
+      },
+      "optional": true,
+      "dependencies": [
+        "4FB59596BCAF8408"
+      ],
+      "tasks": [],
+      "rewards": [],
+      "progression_mode": "linear",
+      "hide_until_deps_complete": true,
+      "hide_details_until_startable": true,
+      "dependency_requirement": "all_completed",
+      "hide_dependency_lines": true
+    },
+    {
+      "id": "491818F96E80FB22",
+      "x": 3.6,
+      "y": 2,
+      "min_width": 310,
+      "icon": {
+        "id": "world_progression_core:heritage_archive"
+      },
+      "optional": true,
+      "dependencies": [
+        "76FC61C7DB7BD176"
+      ],
+      "tasks": [],
+      "rewards": [],
+      "progression_mode": "linear",
+      "hide_until_deps_complete": true,
+      "hide_details_until_startable": true,
+      "dependency_requirement": "all_completed",
+      "hide_dependency_lines": true
+    },
+    {
+      "id": "0A08588D8827B1D6",
+      "x": 5.4,
+      "y": 2,
+      "min_width": 310,
+      "icon": {
+        "id": "confluence:pwnhammer"
+      },
+      "optional": true,
+      "dependencies": [
+        "24BA016E81A9BDB9"
+      ],
+      "tasks": [],
+      "rewards": [],
+      "progression_mode": "linear",
+      "hide_until_deps_complete": true,
+      "hide_details_until_startable": true,
+      "dependency_requirement": "all_completed",
+      "hide_dependency_lines": true
+    },
+    {
+      "id": "740C87BDE3458FD6",
+      "x": 7.2,
+      "y": 2,
+      "min_width": 310,
+      "icon": {
+        "id": "confluence:cobalt_ingot"
+      },
+      "optional": true,
+      "dependencies": [
+        "7E82D9E88152A714"
+      ],
+      "tasks": [],
+      "rewards": [],
+      "progression_mode": "linear",
+      "hide_until_deps_complete": true,
+      "hide_details_until_startable": true,
+      "dependency_requirement": "all_completed",
+      "hide_dependency_lines": true
+    },
+    {
+      "id": "7CD0AE54FACE540B",
+      "x": 9.0,
+      "y": 2,
+      "min_width": 310,
+      "icon": {
+        "id": "minecraft:filled_map"
+      },
+      "optional": true,
+      "dependencies": [
+        "33B054D584DD1602"
+      ],
+      "tasks": [],
+      "rewards": [],
+      "progression_mode": "linear",
+      "hide_until_deps_complete": true,
+      "hide_details_until_startable": true,
+      "dependency_requirement": "all_completed",
+      "hide_dependency_lines": true
+    },
+    {
+      "id": "6CBF4D2D6EFF6D3B",
+      "x": 10.8,
+      "y": 2,
+      "min_width": 310,
+      "icon": {
+        "id": "minecraft:campfire"
+      },
+      "optional": true,
+      "dependencies": [
+        "77CBB65AB509D459"
+      ],
+      "tasks": [],
+      "rewards": [],
+      "progression_mode": "linear",
+      "hide_until_deps_complete": true,
+      "hide_details_until_startable": true,
+      "dependency_requirement": "all_completed",
+      "hide_dependency_lines": true
+    },
+    {
+      "id": "7E2C4B05D19FA504",
+      "x": 2,
+      "y": 4,
+      "min_width": 310,
+      "icon": {
+        "id": "world_progression_core:tainted_fiber"
+      },
+      "optional": true,
+      "dependencies": [
+        "5B7CF06798316864",
+        "136EB0CDAD110108"
+      ],
+      "tasks": [],
+      "rewards": [],
+      "progression_mode": "linear",
+      "hide_until_deps_complete": true,
+      "hide_details_until_startable": true,
+      "dependency_requirement": "all_completed",
+      "hide_dependency_lines": true
+    },
+    {
+      "id": "7EE73780E77D801B",
+      "x": 9,
+      "y": 4,
+      "min_width": 310,
+      "icon": {
+        "id": "exposure:camera"
+      },
+      "optional": true,
+      "dependencies": [
+        "6D5B56E25E848D5C",
+        "506301D381EF9278"
+      ],
+      "tasks": [],
+      "rewards": [],
+      "progression_mode": "linear",
+      "hide_until_deps_complete": true,
+      "hide_details_until_startable": true,
+      "dependency_requirement": "all_completed",
+      "hide_dependency_lines": true
+    }
+  ]
+}

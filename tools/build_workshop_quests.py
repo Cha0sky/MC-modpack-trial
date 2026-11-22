@@ -5,6 +5,7 @@ prologue IDs, rewards and translations are kept. This is functional quest text,
 not an expansion of the author's still-unwritten full story or outer-god lore.
 """
 from pathlib import Path
+from campaign_navigation import finish_chapter
 import hashlib
 import json
 import struct
@@ -86,7 +87,7 @@ def chapter():
            "icon": {"id": MOD + "rough_tuner"}, "progression_mode": "linear", "quests": []}
     lang = {"chapter." + uid("chapter") + ".title": "第一章 · 重启第一座工坊"}
 
-    def quest(name, title, desc, x, y, icon, needs, rewards=(), optional=False, alternative=False, minimum=0):
+    def quest(name, title, desc, x, y, icon, needs, rewards=(), optional=False, alternative=False, minimum=0, native=None, subtitle=None):
         q = {"id": uid(name), "x": x, "y": y, "icon": {"id": icon}, "min_width": 320,
              "dependencies": [uid(n) for n in needs] if name != "commission" else [prologue_next],
              "dependency_requirement": "all_completed", "progression_mode": "linear", "optional": optional or alternative,
@@ -97,16 +98,22 @@ def chapter():
              "rewards": [*rewards, *milestone_supplies(name)]}
         if minimum:
             q["min_required_dependencies"] = minimum
-        if name == "diagnose":
+        if native:
+            q["tasks"][0]["advancement"] = native
+            del q["tasks"][0]["criterion"]
+        elif name == "diagnose":
             # A previously completed calibration also proves the relay was inspected.
             del q["tasks"][0]["criterion"]
         doc["quests"].append(q)
         lang["quest." + q["id"] + ".title"] = ("支线 · " if optional else "") + title
         lang["quest." + q["id"] + ".quest_desc"] = desc
+        if subtitle:
+            lang["quest." + q["id"] + ".quest_subtitle"] = subtitle
 
     quest("commission", "旧工坊的委托", [
-        "边境有座停转的旧工坊。先去腐化或猩红取木样，也可以留在家里先搭传动。自然罗盘能帮你找群系。"],
-        0, 0, "minecraft:book", ())
+        "镇上流传着古代英雄封住受侵蚀土地的故事。边境那座工坊究竟是怎样停下来的？先做一把能读出旧设备状态的工具，再进去看看。",
+        "两路可以同时开工。采样的人带斧子去猩红或腐化，留守的人备水车和板材。等木样磨成纤维，两边回到工作盆会合。"],
+        0, 0, "minecraft:book", (), subtitle="边境取样与家中供能，可分头开工")
     quest("survey", "越过边境", [
         "走进腐化或猩红，收集 4 个乌木原木或暗影原木，两种可以混用。把木样送进磨石。"],
         2, -1, "confluence:ebony_log", ("commission",))
@@ -117,7 +124,7 @@ def chapter():
         "用压机把锭压成 7 张铁板和 2 张铜板。5 张铁板和 2 个安山合金做搅拌头，其余板材留给调谐器。"],
         4, 1, "create:mechanical_press", ("power",))
     quest("fiber", "异常材料的用途", [
-        "把 4 个边境原木送进磨石，每个产出 2 份浸染纤维。收下 8 份纤维，也可以直接送去制胶。"],
+        "剖开边境木样之前，先把磨石转起来。4 个原木磨出 8 份浸染纤维，正好是下一锅共振胶的原料。"],
         4, -1, MOD + "tainted_fiber", ("survey", "power"))
     quest("binder", "稳定的共振胶", [
         "每份胶用 2 份纤维、1 红石粉、1 黏液球或凝胶，在工作盆里用搅拌器冷拌。做 4 份，调谐器用 1 份，修设备用 3 份。"],
@@ -127,7 +134,8 @@ def chapter():
         "在主世界用调谐器对空气右键领地图。带上 3 份胶、水车和传动件再出发。"],
         8, 0, MOD + "rough_tuner", ("binder",))
     quest("arrival", "找到旧址", [
-        "顺地图找到废弃工坊，认清动力室、换向装置和屋顶信号台。旧存档可往新生成的区块找，地图遗失可用调谐器补领。"],
+        "顺勘测图进工坊，先找原料经过的动力室，再找换向装置和屋顶信号台。可以读一台继电器，也可以先拍下现场。",
+        "旧存档可往新生成的区块找。地图遗失时，在主世界用调谐器对空气右键补领。"],
         10, 0, "minecraft:filled_map", ("tuner",))
     quest("diagnose", "开工勘测 · 读继电器", [
         "拿粗制调谐器右键旧工坊里的一台继电器，读出接口故障。记下需要接轴的那一面，先布置水车和齿轮。",
@@ -141,9 +149,10 @@ def chapter():
     quest("calibrate", "三处故障", [
         "把轴端对准节点正面的彩色接口，三个节点都要达到 8 RPM，换向节点还要正转。用调谐器右键读转速，反向时加一对齿轮换向。",
         "每处达标后长按右键约 3 秒，用掉 1 份共振胶。在同一座工坊修好三处。"],
-        12, 0, MOD + "workshop_relay", ("diagnose", "site_photo"), minimum=1)
+        12, 0, MOD + "workshop_relay", ("diagnose", "site_photo"), minimum=1, subtitle="读数、实拍任选一项，再修同一座工坊的三处接口")
     quest("restore", "工坊重新亮起", [
-        "三处节点亮起后，使用中央控制台重启工坊。收起奖励中的 2 份共振胶，下一章造档案台要用。"],
+        "三处都亮起后，保持供能，再操作中央控制台。曾经有人靠这套传动修工具，如今你也可以把它交给下一个来修理的人。",
+        "维修簿通向三项新的调查。把奖励中的共振胶留给档案台。"],
         14, 0, MOD + "workshop_console", ("calibrate",), rewards=[
             item_reward("restore/alloy", "create:andesite_alloy", 8),
             item_reward("restore/shaft", "create:shaft", 16),
@@ -156,9 +165,17 @@ def chapter():
             named_reward("both_regions/ebony", "minecraft:purple_dye", "腐化原木标本牌", ["边境调查纪念", "可放入展示框陈列。"]),
             named_reward("both_regions/shadow", "minecraft:red_dye", "猩红原木标本牌", ["边境调查纪念", "可放入展示框陈列。"]),
         ])
+    quest("side_feed", "侧线送料", [
+        "把安山漏斗贴在容器侧面，留好接料位置，让一件物品经漏斗进出。送铜锭去压机、收板材入库都可以。"],
+        5, 3, "create:andesite_funnel", ("plates",), optional=True, native="create:funnel",
+        rewards=[item_reward("side_feed/belts", "create:belt_connector", 4)])
+    quest("gravity_feed", "让矿料自己下楼", [
+        "在木桶下方接机械动力的溜槽，把一件物资从上层送到下层。可以把矿箱架高，给压机旁腾出操作位置。"],
+        5, 5, "create:chute", ("plates",), optional=True, native="create:chute",
+        rewards=[item_reward("gravity_feed/hoppers", "minecraft:hopper", 4)])
     quest("batch_copper", "从手作到量产", [
-        "把铜板产量做到 16 张。调谐器用掉的板材也算；领到的漏斗和传送带正好能给压机接上进出料。"],
-        6, 3, "create:andesite_funnel", ("plates",), optional=True, rewards=[
+        "侧送和下落任选一种完成试车，再把铜板产量做到 16 张。调谐器用掉的铜板也算。领回隧道、漏斗和传送带，给下一批留出进出料的位置。"],
+        7, 4, "create:andesite_funnel", ("side_feed", "gravity_feed"), minimum=1, optional=True, rewards=[
             item_reward("batch_copper/funnel", "create:andesite_funnel", 4),
             item_reward("batch_copper/belt", "create:belt_connector", 4),
         ])
@@ -375,7 +392,7 @@ def verify(doc, external_dependency):
     ids = [o["id"] for o in objects]
     assert len(ids) == len(set(ids))
     assert all(0 < int(identifier, 16) <= 0x7FFFFFFFFFFFFFFF for identifier in ids)
-    assert len(doc["quests"]) == 17
+    assert len(doc["quests"]) == 19
     nodes = {q["id"]: q for q in doc["quests"]}
     visited = {external_dependency}
     for q in doc["quests"]:
@@ -391,7 +408,10 @@ def verify(doc, external_dependency):
     assert all(nodes[uid(name)]["optional"] for name in ("both_regions", "batch_copper", "field_notes", "photography", "wroughtnaut"))
     choices = nodes[uid("wroughtnaut")]["rewards"][0]["table_data"]["rewards"]
     assert len(choices) == 3
-    assert set(ADVANCEMENTS) == {q["tasks"][0]["advancement"].split("/")[-1] for q in doc["quests"]}
+    assert nodes[uid("batch_copper")]["dependencies"] == [uid("side_feed"), uid("gravity_feed")]
+    assert nodes[uid("batch_copper")]["min_required_dependencies"] == 1
+    records = [q["tasks"][0]["advancement"] for q in doc["quests"]]
+    assert {MOD + "workshop/" + name for name in ADVANCEMENTS} | {"create:funnel", "create:chute"} == set(records)
     for path in (QUESTS / "chapters").glob("*.snbt"):
         if path.name == "01_workshop_rekindled.snbt":
             continue
@@ -406,12 +426,13 @@ def verify(doc, external_dependency):
 def main():
     doc, lang, external = chapter()
     verify(doc, external)
+    finish_chapter(doc, lang)
     write(QUESTS / "chapters/01_workshop_rekindled.snbt", doc)
     for locale in ("zh_cn", "en_us"):
         merge(QUESTS / ("lang/" + locale + ".snbt"), lang)
     build_recipes()
     build_assets()
-    print("Workshop: 17 quests, two site survey routes, 3 recipes and native choice rewards")
+    print("Workshop: 19 quests, two site survey routes and two delivery trials")
 
 
 if __name__ == "__main__":

@@ -4,6 +4,7 @@ The core owns route facts and the two-of-three milestone. FTB shows the same
 dependency threshold and keeps every route optional for chapter completion.
 """
 from pathlib import Path
+from campaign_navigation import finish_chapter
 import hashlib
 import json
 
@@ -75,7 +76,7 @@ def chapter():
            "icon": {"id": MOD + "heritage_archive"}, "progression_mode": "linear", "quests": []}
     lang = {"chapter." + uid("chapter") + ".title": "第二章 · 遗产调查"}
 
-    def quest(name, title, desc, x, y, icon, needs, rewards=(), optional=False, minimum=0):
+    def quest(name, title, desc, x, y, icon, needs, rewards=(), optional=False, minimum=0, native=None, subtitle=None):
         q = {"id": uid(name), "x": x, "y": y, "icon": {"id": icon}, "min_width": 340,
              "dependencies": [previous] if name == "welcome" else [uid(n) for n in needs],
              "dependency_requirement": "all_completed", "progression_mode": "linear", "optional": optional,
@@ -86,13 +87,20 @@ def chapter():
              "rewards": [*rewards, *milestone_supplies(name)]}
         if minimum:
             q["min_required_dependencies"] = minimum
+        if native:
+            q["tasks"][0]["advancement"] = native
+            del q["tasks"][0]["criterion"]
         doc["quests"].append(q)
         lang["quest." + q["id"] + ".title"] = title
         lang["quest." + q["id"] + ".quest_desc"] = desc
+        if subtitle:
+            lang["quest." + q["id"] + ".quest_subtitle"] = subtitle
+        return q
 
     quest("welcome", "维修簿之外", [
-        "工坊的维修簿里有三条线索。工程、奥术、远征任选两条完成，就能在档案台汇总发现。队友可分头调查。"],
-        0, 0, "minecraft:written_book", ())
+        "旧工坊复工了，维修簿里的做法还有多少能用？工匠可以重新装配精密构件，术士可以重做一次施法，探路的人去查遗迹与守敌。",
+        "工程、奥术、远征任选两份成果即可建档。可以与同伴分头，各交一份。"],
+        0, 0, "minecraft:written_book", (), subtitle="工程、奥术、远征三路任选两路")
 
     quest("engineering_heat", "工程 · 让火进入工艺", [
         "用空燃烧室在下界捕获烈焰人。给燃烧室添燃料，在上方的工作盆搅拌铜锭和锌锭；每对出 2 黄铜锭，备齐 8 锭。"],
@@ -102,7 +110,7 @@ def chapter():
         "以金板起步，依次部署小齿轮、大齿轮、铁粒，重复 5 轮。构件成功率为 80%，给流水线留一点余料。"],
         4, -3, "create:precision_mechanism", ("engineering_heat",), optional=True)
     quest("engineering_record", "整理工程记录", [
-        "热工和装配记录齐了。把奖励里的机械臂和黄铜漏斗接到生产线，下一批零件就能自动上料。"],
+        "你已经复做了黄铜和精密构件。领走机械臂、黄铜漏斗，等档案台建好，试着给样本做一条分拣线。"],
         6, -3, "create:brass_ingot", ("engineering_assembly",), optional=True, rewards=[
             item_reward("engineering_record/brass", "create:brass_ingot", 8),
             item_reward("engineering_record/shaft", "create:shaft", 16),
@@ -123,28 +131,39 @@ def chapter():
         ])
 
     quest("expedition_sites", "远征 · 走入两处遗产", [
-        "走进两类遗迹，位置就会进入档案。可以选择钢铁守护者室、附魔剑冢、沙漠遗址或古代工厂。",
+        "远征队要交两样东西：两类遗迹的坐标，以及一场首领战果。两件事可按行程先后完成。钢铁守护者室、附魔剑冢、沙漠遗址、古代工厂任选两类走入。",
         "指南针可搜 wrought_chamber、enchanted_sword_shrine、desert_site、ancient_factory。"],
-        2, 3, "minecraft:compass", ("welcome",), optional=True)
+        3, 2, "minecraft:compass", ("welcome",), optional=True)
     quest("expedition_challenge", "远征 · 一次自选挑战", [
         "任选一位对手：钢铁守护者、霜冻巨兽、克苏鲁之眼、世界吞噬怪、克苏鲁之脑或骷髅领主。",
         "想找骷髅领主，可用指南针搜 goety:crypt，到诡厄的大坟墓查看罐子。"],
-        4, 3, "minecraft:iron_axe", ("expedition_sites",), optional=True)
+        3, 4, "minecraft:iron_axe", ("welcome",), optional=True)
     quest("expedition_record", "整理远征记录", [
-        "两类遗迹、一场首领战，足够整理第一份远征记录。领到的摔落保护靴适合接着下墓。"],
-        6, 3, "minecraft:map", ("expedition_challenge",), optional=True, rewards=[
+        "地点和战果都到手了，把这次远征写进总档。下一队就能从档案台绘图，循着你的坐标再来。"],
+        6, 3, "minecraft:map", ("expedition_sites", "expedition_challenge"), optional=True, subtitle="两类遗址与一场自选讨伐", rewards=[
             item_reward("expedition_record/pearls", "minecraft:ender_pearl", 4),
             item_reward("expedition_record/experience", "minecraft:experience_bottle", 12),
         ])
 
+    frost = quest("ice_recovery", "雪地悬赏 · 带回冰霜结晶", [
+        "雪地队要带回一件能继续研究的战利品。找到仍握着冰霜结晶的霜冻巨兽，亲自击败它，把结晶带在身上。",
+        "结晶留给出队的人，长按使用可吹出冰霜旋风。结账时另领取一双摔落保护靴和雪地铺路用的蓝冰。"],
+        5, 6, "mowziesmobs:ice_crystal", ("welcome",), optional=True, native="mowziesmobs:kill_frostmaw",
+        subtitle="雪地自选 · 本人击败记录与一枚结晶",
+        rewards=[item_reward("ice_recovery/ice", "minecraft:blue_ice", 24),
+                 item_reward("ice_recovery/boots", "minecraft:leather_boots", 1,
+                             {"minecraft:enchantments": {"levels": {"minecraft:feather_falling": 4}}})])
+    frost["tasks"].append({"id": uid("ice_recovery/sample"), "type": "item", "item": {
+        "id": "mowziesmobs:ice_crystal", "count": 1}, "count": 1, "consume_items": False})
     quest("convergence", "让两条线索相遇", [
-        "任意两份调查齐备，就能建立共同档案。挑个回家经常路过的位置，给档案台留一格。"],
+        "旧日的工程与术式曾在同一座文明里发展。如今散落的工艺、术式、遗址坐标，又有两份能摆回同一张桌上。找个队友都方便取用的位置建档。"],
         8, 0, "minecraft:written_book", ROUTE_RECORDS, minimum=2)
     quest("archive_craft", "建一处保存知识的地方", [
         "工作台上排摆书、玻璃、书；中排摆铜板、安山机壳、铜板；下排摆木板、共振胶、木板。做好遗产档案台并放下。"],
         10, 0, MOD + "heritage_archive", ("convergence",))
     quest("archive_open", "我们的遗产档案", [
-        "空手右键档案台领取档案书。潜行右键轮换已发现地点，松开潜行，主手持空地图右键制图。档案书带回来还能更新。"],
+        "空手右键档案台领取档案书，带回旧书可更新。潜行右键选地点，再松开潜行，持空地图右键绘图。",
+        "下次出队要往下界走。把调谐器、共振胶和档案书收在一起，出发时直接取走。"],
         12, 0, MOD + "heritage_archive", ("archive_craft",), rewards=[
             item_reward("archive_open/frames", "minecraft:item_frame", 8),
             item_reward("archive_open/lanterns", "minecraft:lantern", 4),
@@ -165,6 +184,18 @@ def chapter():
         12, 3, "minecraft:glow_item_frame", ("archive_open",), optional=True,
         rewards=[item_reward("map_wall/frames", "minecraft:glow_item_frame", 6),
                  item_reward("map_wall/maps", "minecraft:map", 16)])
+    quest("shelf_reader", "档案室 · 给书架接一盏灯", [
+        "摆一个雕纹书架，让红石比较器的输入端紧贴书架、输出端朝外。装入或取出不同格子的书，比较器强度会跟着变化。可在输出端接红石灯当借阅提示。"],
+        14, 2, "minecraft:chiseled_bookshelf", ("archive_open",), optional=True,
+        native="minecraft:adventure/read_power_of_chiseled_bookshelf",
+        rewards=[item_reward("shelf_reader/lamps", "minecraft:redstone_lamp", 4),
+                 item_reward("shelf_reader/shelves", "minecraft:chiseled_bookshelf", 4)])
+    quest("sample_sorting", "档案室 · 机械臂接班", [
+        "带上工程调查发给你的机械臂。用置物台作取件点、漏斗作交件点，手持机械臂标好输入和输出，再放下接轴供能。让它搬过一件样品。"],
+        14, -2, "create:mechanical_arm", ("engineering_record", "archive_open"), optional=True,
+        native="create:mechanical_arm",
+        rewards=[item_reward("sample_sorting/vault", "create:item_vault", 4),
+                 item_reward("sample_sorting/filters", "create:filter", 4)])
     return doc, lang, previous
 
 
@@ -220,7 +251,7 @@ def verify(doc, previous):
     ids = [o["id"] for o in objects]
     assert len(ids) == len(set(ids))
     assert all(0 < int(identifier, 16) <= 0x7FFFFFFFFFFFFFFF for identifier in ids)
-    assert len(doc["quests"]) == 15
+    assert len(doc["quests"]) == 18
     nodes = {q["id"]: q for q in doc["quests"]}
     reached = {previous}
     for quest in doc["quests"]:
@@ -233,7 +264,12 @@ def verify(doc, previous):
     assert convergence["min_required_dependencies"] == 2
     assert nodes[uid("all_three")]["optional"]
     assert nodes[uid("archive_open")]["dependencies"] == [uid("archive_craft")]
-    assert set(ADVANCEMENTS) == {q["tasks"][0]["advancement"].split("/")[-1] for q in doc["quests"]}
+    assert nodes[uid("expedition_challenge")]["dependencies"] == [uid("welcome")]
+    assert nodes[uid("expedition_record")]["dependencies"] == [uid("expedition_sites"), uid("expedition_challenge")]
+    records = {q["tasks"][0]["advancement"] for q in doc["quests"]}
+    assert records == ({MOD + "heritage/" + name for name in ADVANCEMENTS} |
+                       {"minecraft:adventure/read_power_of_chiseled_bookshelf", "create:mechanical_arm",
+                        "mowziesmobs:kill_frostmaw"})
     old_ids = set()
     for path in (QUESTS / "chapters").glob("*.snbt"):
         if path.name == "02_heritage_survey.snbt":
@@ -250,6 +286,7 @@ def verify(doc, previous):
 def main():
     doc, lang, previous = chapter()
     verify(doc, previous)
+    finish_chapter(doc, lang)
     write(QUESTS / "chapters/02_heritage_survey.snbt", doc)
     for locale in ("zh_cn", "en_us"):
         merge(QUESTS / ("lang/" + locale + ".snbt"), lang)

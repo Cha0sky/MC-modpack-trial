@@ -389,8 +389,8 @@
     },
     {
       "id": "3D8234164AB33DB0",
-      "x": 2,
-      "y": 3,
+      "x": 3,
+      "y": 2,
       "icon": {
         "id": "minecraft:compass"
       },
@@ -445,14 +445,14 @@
     },
     {
       "id": "2A804883BB0B2318",
-      "x": 4,
-      "y": 3,
+      "x": 3,
+      "y": 4,
       "icon": {
         "id": "minecraft:iron_axe"
       },
       "min_width": 340,
       "dependencies": [
-        "3D8234164AB33DB0"
+        "1697E0EFFE71246B"
       ],
       "dependency_requirement": "all_completed",
       "progression_mode": "linear",
@@ -480,6 +480,7 @@
       },
       "min_width": 340,
       "dependencies": [
+        "3D8234164AB33DB0",
         "2A804883BB0B2318"
       ],
       "dependency_requirement": "all_completed",
@@ -551,6 +552,69 @@
             "count": 1
           },
           "count": 64
+        }
+      ]
+    },
+    {
+      "id": "379A98862E2970D5",
+      "x": 5,
+      "y": 6,
+      "icon": {
+        "id": "mowziesmobs:ice_crystal"
+      },
+      "min_width": 340,
+      "dependencies": [
+        "1697E0EFFE71246B"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "optional": true,
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "12F961F45EFCC99E",
+          "type": "advancement",
+          "advancement": "mowziesmobs:kill_frostmaw"
+        },
+        {
+          "id": "337345C52EBE797D",
+          "type": "item",
+          "item": {
+            "id": "mowziesmobs:ice_crystal",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "rewards": [
+        {
+          "id": "6C755DE4F1875B4B",
+          "type": "item",
+          "item": {
+            "id": "minecraft:blue_ice",
+            "count": 1
+          },
+          "count": 24
+        },
+        {
+          "id": "4E6483B9C84A34F9",
+          "type": "item",
+          "item": {
+            "id": "minecraft:leather_boots",
+            "count": 1,
+            "components": {
+              "minecraft:enchantments": {
+                "levels": {
+                  "minecraft:feather_falling": 4
+                }
+              }
+            }
+          },
+          "count": 1
         }
       ]
     },
@@ -874,6 +938,100 @@
           "count": 16
         }
       ]
+    },
+    {
+      "id": "5FA8F40EDEF0CEE4",
+      "x": 14,
+      "y": 2,
+      "icon": {
+        "id": "minecraft:chiseled_bookshelf"
+      },
+      "min_width": 340,
+      "dependencies": [
+        "76FC61C7DB7BD176"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "optional": true,
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "32672C4E9140B132",
+          "type": "advancement",
+          "advancement": "minecraft:adventure/read_power_of_chiseled_bookshelf"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "51A7946E559D48B8",
+          "type": "item",
+          "item": {
+            "id": "minecraft:redstone_lamp",
+            "count": 1
+          },
+          "count": 4
+        },
+        {
+          "id": "22120972716AA344",
+          "type": "item",
+          "item": {
+            "id": "minecraft:chiseled_bookshelf",
+            "count": 1
+          },
+          "count": 4
+        }
+      ]
+    },
+    {
+      "id": "0A9DB7C97A0098E0",
+      "x": 14,
+      "y": -2,
+      "icon": {
+        "id": "create:mechanical_arm"
+      },
+      "min_width": 340,
+      "dependencies": [
+        "377BDBD8E94E1CD6",
+        "76FC61C7DB7BD176"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "optional": true,
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "151D22BE2062252D",
+          "type": "advancement",
+          "advancement": "create:mechanical_arm"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "04666798DA446F96",
+          "type": "item",
+          "item": {
+            "id": "create:item_vault",
+            "count": 1
+          },
+          "count": 4
+        },
+        {
+          "id": "5858292A0C4BBD2A",
+          "type": "item",
+          "item": {
+            "id": "create:filter",
+            "count": 1
+          },
+          "count": 4
+        }
+      ]
     }
-  ]
+  ],
+  "group": "529379A5653E5792"
 }

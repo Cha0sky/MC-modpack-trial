@@ -78,8 +78,8 @@ def add_training(chapter, language, uid):
         "开发版按 N，模组默认 K。挖矿、首次合成和打怪都能积攒角色经验；想比较属性，翻开与卷轴一起领到的加点手册。"
     ], [("minecraft:string", 6), ("minecraft:arrow", 32)])
     blade = add("blade", "噬星之刃 · 第一剑", (3, -5), "evolvingblade:star_eater", ["arrival"], adv("blade"), [
-        "主手握噬星之刃，用剑身命中僵尸、骷髅、蜘蛛或普通史莱姆。按「打开噬星剑谱」查看当前阶段、成长点和下次进化条件。",
-        "按 G 或输入 /bladefolio 打开剑谱。开发版的 G 也绑定了饰品栏，指令可以直接翻开剑谱。",
+        "你还记不起这把剑的来历，先试试它的分量。主手持剑，近身命中僵尸、骷髅、蜘蛛或普通史莱姆。",
+        "按 G 或输入 /bladefolio 翻开剑谱，看离下一阶还差多少成长点。",
         "云朵瓶、赫尔墨斯靴、再生手环任选一件。领奖前可以翻开手册比较。", guide_link("查手册 · 开荒饰品怎么选", "starter")
     ])
     offers = [item_reward("blade/choice", "terra_curio:" + name, 1)
@@ -101,17 +101,17 @@ def add_training(chapter, language, uid):
     ], [("minecraft:amethyst_shard", 12)])
     add("loadout", "把饰品戴上", (10, 5), "terra_curio:cloud_in_a_bottle", ["melee", "archery", "magic"],
         adv("accessory"), [
-            "打开背包的饰品栏，戴上开荒饰品分册里的任意一件。已经戴过的可以取下再戴一次。",
+            "练熟一门兵器，再选一件搭配它的饰品。想越过落点就带云朵瓶，想在平地放风筝就穿跑鞋。把开荒分册里任意一件戴进背包的饰品栏。",
             guide_link("看七件开荒饰品 · 属性与获取", "starter"), guide_link("翻开整本装备手册", "index")
         ], [("minecraft:golden_carrot", 12)], minimum=1)
-    add("crown", "王冠与退路", (12, 3), "confluence:slime_crown",
+    add("crown", "王冠与退路", (14, 3), "confluence:slime_crown",
         ["workshop", "allocate", "blade", "loadout"], {"type": "item", "item": {"id": "confluence:slime_crown", "count": 1},
         "count": 1, "consume_items": False}, [
             "备一顶金冠或铂金冠，在工作台用 8 个凝胶围住它，得到史莱姆皇冠。先把床和备用食物安顿在战场边。",
             "清出一段可横移的平地，放两层错开的平台。看到史莱姆王起跳，先离开落点再还击。",
             guide_link("战前翻阅 · 装备手册", "index")
         ], [("minecraft:scaffolding", 32), ("minecraft:cooked_beef", 12)])
-    add("campaign", "老兵委托 · 三门兵器", (12, -3), "minecraft:map", ["workshop"],
+    add("campaign", "老兵委托 · 三门兵器", (14, -3), "minecraft:map", ["generator", "create"],
         adv("veteran"), [
             "熟手可以用三种泰拉武器各命中一次敌人，再击败史莱姆王，直接提交战报。更新前已打通边境的世界可沿用原战果。"
         ])
@@ -123,7 +123,7 @@ def add_training(chapter, language, uid):
     before_king = quests.index(king)
     quests[before_king:before_king] = training
     training.clear()
-    add("wave", "剑谱 · 第一束剑气", (19, 3), "evolvingblade:star_eater", ["next"], adv("wave"), [
+    add("wave", "剑谱 · 第一束剑气", (21, 3), "evolvingblade:star_eater", ["next"], adv("wave"), [
         "噬星之刃到二阶后，主手持剑，对准前方按右键放出剑气。标准路线累计 150 成长点可到二阶，击败史莱姆王也是一笔成长。",
         "四阶时可潜行右键释放爆发。剑谱的「形态」页列出各阶所需的成长点和首领战果。"
     ], [("minecraft:experience_bottle", 16), ("minecraft:golden_apple", 2)])

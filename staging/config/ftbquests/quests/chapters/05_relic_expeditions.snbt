@@ -51,6 +51,24 @@
             "count": 1
           },
           "count": 48
+        },
+        {
+          "id": "0175704422DAE1C8",
+          "type": "item",
+          "item": {
+            "id": "minecraft:feather",
+            "count": 1
+          },
+          "count": 1
+        },
+        {
+          "id": "54344815E87FA531",
+          "type": "item",
+          "item": {
+            "id": "minecraft:paper",
+            "count": 1
+          },
+          "count": 4
         }
       ]
     },
@@ -241,6 +259,49 @@
       ]
     },
     {
+      "id": "40BC4833A91D03D1",
+      "x": 8,
+      "y": 4,
+      "min_width": 330,
+      "icon": {
+        "id": "minecraft:totem_of_undying"
+      },
+      "optional": true,
+      "progression_mode": "linear",
+      "dependencies": [
+        "093F5AD1EFBF4A19",
+        "00A2188434EF341F"
+      ],
+      "dependency_requirement": "all_completed",
+      "tasks": [
+        {
+          "id": "76B04021FFB30C9C",
+          "type": "advancement",
+          "advancement": "goety:goety/servant_kill_vizier"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "7D62FB42545C89B2",
+          "type": "item",
+          "item": {
+            "id": "minecraft:totem_of_undying",
+            "count": 1
+          },
+          "count": 1
+        },
+        {
+          "id": "03265AAD3213096C",
+          "type": "item",
+          "item": {
+            "id": "minecraft:experience_bottle",
+            "count": 1
+          },
+          "count": 32
+        }
+      ]
+    },
+    {
       "id": "506301D381EF9278",
       "x": 5,
       "y": -1,
@@ -329,6 +390,58 @@
       "min_required_dependencies": 1
     },
     {
+      "id": "4C762122353F6EE4",
+      "x": 5,
+      "y": 5,
+      "min_width": 330,
+      "icon": {
+        "id": "minecraft:cartography_table"
+      },
+      "optional": true,
+      "progression_mode": "linear",
+      "dependencies": [
+        "4E12304BAD37FF5B",
+        "646D06C50CFE205B"
+      ],
+      "dependency_requirement": "all_completed",
+      "tasks": [
+        {
+          "id": "2D86C4D5E1B25B92",
+          "type": "advancement",
+          "advancement": "world_progression_core:heritage/map_wall"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "42258A4B312EEAE8",
+          "type": "item",
+          "item": {
+            "id": "minecraft:lodestone",
+            "count": 1
+          },
+          "count": 1
+        },
+        {
+          "id": "15C3E2CC8892F9DD",
+          "type": "item",
+          "item": {
+            "id": "minecraft:compass",
+            "count": 1
+          },
+          "count": 2
+        },
+        {
+          "id": "2802EF353D84CA2E",
+          "type": "item",
+          "item": {
+            "id": "minecraft:glow_item_frame",
+            "count": 1
+          },
+          "count": 4
+        }
+      ]
+    },
+    {
       "id": "33B054D584DD1602",
       "x": 8,
       "y": 0,
@@ -342,7 +455,8 @@
         "506301D381EF9278",
         "6D5B56E25E848D5C",
         "3E5955E508399D8A",
-        "093F5AD1EFBF4A19"
+        "093F5AD1EFBF4A19",
+        "4C762122353F6EE4"
       ],
       "dependency_requirement": "all_completed",
       "tasks": [
@@ -383,5 +497,6 @@
       ],
       "min_required_dependencies": 1
     }
-  ]
+  ],
+  "group": "529379A5653E5792"
 }

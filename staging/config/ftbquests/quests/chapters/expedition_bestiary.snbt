@@ -1,0 +1,193 @@
+{
+  "id": "09226FAD78F877E5",
+  "filename": "expedition_bestiary",
+  "group": "1AD67844174FBD9C",
+  "order_index": 0,
+  "icon": {
+    "id": "confluence:slime_crown"
+  },
+  "quests": [
+    {
+      "id": "725098F959D2BC77",
+      "x": 0,
+      "y": 0,
+      "min_width": 310,
+      "icon": {
+        "id": "minecraft:map"
+      },
+      "optional": true,
+      "dependencies": [],
+      "tasks": [],
+      "rewards": []
+    },
+    {
+      "id": "0E3DE863E601BAF1",
+      "x": 0,
+      "y": 2,
+      "min_width": 310,
+      "icon": {
+        "id": "confluence:pwnhammer"
+      },
+      "optional": true,
+      "dependencies": [],
+      "tasks": [],
+      "rewards": []
+    },
+    {
+      "id": "35B312A8CFC0CEFF",
+      "x": 0.0,
+      "y": 4.0,
+      "min_width": 310,
+      "icon": {
+        "id": "confluence:slime_crown"
+      },
+      "optional": true,
+      "dependencies": [],
+      "tasks": [],
+      "rewards": []
+    },
+    {
+      "id": "29A906D9451C6C57",
+      "x": 1.4,
+      "y": 4.0,
+      "min_width": 310,
+      "icon": {
+        "id": "confluence:guide_voodoo_doll"
+      },
+      "optional": true,
+      "dependencies": [],
+      "tasks": [],
+      "rewards": []
+    },
+    {
+      "id": "6DC7AAD8E935A5D8",
+      "x": 4,
+      "y": 2,
+      "min_width": 310,
+      "icon": {
+        "id": "minecraft:spyglass"
+      },
+      "optional": true,
+      "dependencies": [],
+      "tasks": [],
+      "rewards": []
+    },
+    {
+      "id": "70C86B17DE824438",
+      "x": 4.0,
+      "y": 4.0,
+      "min_width": 310,
+      "icon": {
+        "id": "mowziesmobs:wrought_axe"
+      },
+      "optional": true,
+      "dependencies": [],
+      "tasks": [],
+      "rewards": []
+    },
+    {
+      "id": "703345080C40CC87",
+      "x": 5.4,
+      "y": 4.0,
+      "min_width": 310,
+      "icon": {
+        "id": "mowziesmobs:ice_crystal"
+      },
+      "optional": true,
+      "dependencies": [],
+      "tasks": [],
+      "rewards": []
+    },
+    {
+      "id": "7C38FB547B8946B5",
+      "x": 4.0,
+      "y": 5.5,
+      "min_width": 310,
+      "icon": {
+        "id": "confluence:suspicious_looking_eye"
+      },
+      "optional": true,
+      "dependencies": [],
+      "tasks": [],
+      "rewards": []
+    },
+    {
+      "id": "7B536B4679847DC8",
+      "x": 5.4,
+      "y": 5.5,
+      "min_width": 310,
+      "icon": {
+        "id": "confluence:worm_food"
+      },
+      "optional": true,
+      "dependencies": [],
+      "tasks": [],
+      "rewards": []
+    },
+    {
+      "id": "7733095C1A6E0486",
+      "x": 4.0,
+      "y": 7.0,
+      "min_width": 310,
+      "icon": {
+        "id": "confluence:bloody_spine"
+      },
+      "optional": true,
+      "dependencies": [],
+      "tasks": [],
+      "rewards": []
+    },
+    {
+      "id": "78A08FDC49D73D4E",
+      "x": 5.4,
+      "y": 7.0,
+      "min_width": 310,
+      "icon": {
+        "id": "goety:crypt_urn"
+      },
+      "optional": true,
+      "dependencies": [],
+      "tasks": [],
+      "rewards": []
+    },
+    {
+      "id": "6A397FA1121CD9FD",
+      "x": 8,
+      "y": 2,
+      "min_width": 310,
+      "icon": {
+        "id": "minecraft:filled_map"
+      },
+      "optional": true,
+      "dependencies": [],
+      "tasks": [],
+      "rewards": []
+    },
+    {
+      "id": "45966785EFF70FB9",
+      "x": 8.0,
+      "y": 4.0,
+      "min_width": 310,
+      "icon": {
+        "id": "irons_spellbooks:wayward_compass"
+      },
+      "optional": true,
+      "dependencies": [],
+      "tasks": [],
+      "rewards": []
+    },
+    {
+      "id": "69BAF0BABD7CB422",
+      "x": 9.4,
+      "y": 4.0,
+      "min_width": 310,
+      "icon": {
+        "id": "goety:dark_scroll"
+      },
+      "optional": true,
+      "dependencies": [],
+      "tasks": [],
+      "rewards": []
+    }
+  ]
+}

@@ -2,6 +2,8 @@
 
 from build_heritage_quests import DATA, MOD, QUESTS, merge, uid as stable_id, write
 from build_relic_expeditions import player_record, uid as expedition_id
+from build_world_turn_quests import uid as world_turn_id
+from campaign_navigation import finish_chapter
 
 FILENAME = "06_frontline_depot"
 RECORD = MOD + "frontline/"
@@ -61,11 +63,12 @@ def main():
                "progression_mode": "linear", "quests": []}
     lang = {f"chapter.{chapter['id']}.title": "第六章 · 前线补给站"}
 
-    def add(name, title, position, icon, deps, tasks, lines, rewards, *, mainline=False, minimum=0):
+    def add(name, title, position, icon, deps, tasks, lines, rewards, *, mainline=False, minimum=0,
+            other_chapters=(), subtitle=None):
         qid = uid(name)
         dependencies = [expedition_id("chart")] if name == "dispatch" else [uid(key) for key in deps]
         node = {"id": qid, "x": position[0], "y": position[1], "icon": {"id": icon}, "min_width": 350,
-                "dependencies": dependencies, "dependency_requirement": "all_completed", "optional": not mainline,
+                "dependencies": [*dependencies, *other_chapters], "dependency_requirement": "all_completed", "optional": not mainline,
                 "tasks": [{"id": uid(name + "/task/" + task.get("advancement", task["type"])), **task}
                           for task in tasks],
                 "rewards": [reward(name, key, amount) for key, amount in rewards]}
@@ -74,19 +77,24 @@ def main():
         chapter["quests"].append(node)
         lang[f"quest.{qid}.title"] = title
         lang[f"quest.{qid}.quest_desc"] = lines
+        if subtitle:
+            lang[f"quest.{qid}.quest_subtitle"] = subtitle
         return node
 
     add("dispatch", "地图的另一端", (0, 0), "minecraft:compass", (), [item("minecraft:compass")], [
-        "带普通指南针领木桶和营火，顺第五章的地图去设站。行粮、救援、蛙港货运，任选两项交班。"],
-        [("minecraft:barrel", 2), ("minecraft:campfire", 2), ("minecraft:spruce_log", 48)], mainline=True)
+        "归档图上多了一个你亲自走过的地方。下一班人可没走过这趟。拿普通指南针领木桶和营火，沿图再走一次。",
+        "营地缺三样：能吃的、能救急的、能接下一箱货的。挑两项办妥，在遗址旁拆一包补给就能交班。"],
+        [("minecraft:barrel", 2), ("minecraft:campfire", 2), ("minecraft:spruce_log", 48)], mainline=True,
+        subtitle="沿归档图重访遗址，行粮、救援、货运任选两项")
     add("station", "把木桶留在遗址旁", (2, 0), "minecraft:campfire", ("dispatch",), [adv(RECORD + "station")], [
-        "在归档标记水平半径 128 格内放木桶。任选一个侧面，在同高度紧贴放一堆点燃的营火。主手持普通指南针，潜行右键木桶盘点。"],
+        "靠近归档标记找一块平地，水平半径 128 格内都可设站。墓穴深处难扎营，就到它正上方的地表。",
+        "在木桶任意一侧同高紧贴点燃营火，主手持普通指南针，潜行右键木桶盘点。看到库存数字，站址就定了。"],
         [("minecraft:lantern", 12), ("minecraft:stone_bricks", 64)], mainline=True)
     add("trail", "厨房排班 · 装一包行粮", (2, -3), TRAIL, ("dispatch",), [adv(RECORD + "trail_prepared")], [
-        "把 2 份热封行军餐、2 煤炭、2 木棍、1 纸放入压机下的工作盆。冷压出野外补给包；两包够一单。"],
+        "用第三章的生产线接第一单。压机下的工作盆放 2 份热封行军餐、2 煤炭、2 木棍、1 纸，冷压一包。备齐两包就可送到营地。"],
         [("minecraft:paper", 32), ("minecraft:copper_ingot", 24)])
     add("rescue", "救援排班 · 扎紧吊绳", (2, 3), RESCUE, ("dispatch",), [adv(RECORD + "rescue_prepared")], [
-        "用压机和工作盆把 1 金苹果、6 竹子、1 线、1 纸包成一份救援物资。两包够一单。"],
+        "墓穴里要能止住伤势，也要有办法爬上来。在压机下用工作盆把 1 金苹果、6 竹子、1 线、1 纸压成一包。备齐两包交给营地。"],
         [("minecraft:bamboo", 48), ("minecraft:string", 24), ("minecraft:gold_ingot", 8)])
     add("pack", "货运试车 · 封上第一箱", (2, 6), "create:packager", ("dispatch",), [adv("create:packager")], [
         "把打包机贴住库存，给它红石信号封出第一箱。先用一箱圆石试车，再把正式货物送上运输线。"],
@@ -103,8 +111,10 @@ def main():
         [("create:item_vault", 8), ("create:brass_funnel", 4), ("minecraft:chain", 48)])
     end = add("handover", "交班 · 打开第一份储备", (8, 0), "minecraft:written_book",
         ("trail_delivery", "rescue_delivery", "freight"), [adv(RECORD + "opened"), adv(RECORD + "field_use")], [
-        "行粮到站、救援到站、蛙港收货，完成任意两项。带一包补给回到归档遗址附近，对空气右键拆开，供下一班队员取用。"],
-        [("minecraft:iron_block", 8), ("minecraft:experience_bottle", 48)], mainline=True, minimum=2)
+        "三项业务有两项运转，补给站就能换班。带一包行粮或救援物资，到归档遗址水平 128 格内，对空气右键亲手拆包。",
+        "锅还可以接着煮，桶里的东西也留给下一趟。收下交班配给，再选一本适合自己的附魔书。"],
+        [("minecraft:iron_block", 8), ("minecraft:experience_bottle", 48)], mainline=True, minimum=2,
+        subtitle="三单择二 · 回到前线拆包交班")
     end["rewards"].append(field_manual())
     add("banquet", "驻地餐桌 · 摆一桌盛宴", (4, -5), "farmersdelight:roast_chicken_block", ("trail",),
         [adv("farmersdelight:main/place_feast")], [
@@ -120,8 +130,20 @@ def main():
         [("minecraft:glow_item_frame", 8), ("minecraft:glow_ink_sac", 24)])
     add("patrol", "驻地委托 · 收回通行路线", (8, -3), "minecraft:shield", ("station",),
         [adv(RECORD + "patrol")], [
-        "死者之王和灾厄宰相任选一位讨伐，带回通行路线。第五章已经赢过的战斗会计入。"],
-        [("minecraft:diamond", 8), ("minecraft:golden_apple", 8)])
+        "回到墓穴挑战死者之王，或在府邸邀战灾厄宰相。第五章已带回一份战报，驻地就可以直接结算这笔赏金。"],
+        [("minecraft:diamond", 8), ("minecraft:golden_apple", 8)], subtitle="自选赏金 · 沿用第五章首领战果")
+    add("locker", "前后方联勤 · 随身库房", (2, -6), "minecraft:ender_chest", ("station",),
+        [{"type": "stat", "stat": "minecraft:open_enderchest", "value": 2}], [
+        "第三章后队的两只末影箱派上用场了。一只放工坊，一只放营地，把自己常换的工具存进去，两头都能取。",
+        "累计打开末影箱两次即可交差。营地木桶照常用来盘点全队的货。"],
+        [("minecraft:obsidian", 32), ("minecraft:ender_eye", 4)], other_chapters=(world_turn_id("rearguard"),),
+        subtitle="下界后队委托的后续 · 查两次个人库存")
+    add("return_bearing", "测绘联勤 · 标出站口", (2, -8), "minecraft:lodestone", ("station",),
+        [adv("minecraft:nether/use_lodestone")], [
+        "把双地踏勘领到的磁石安在站口，手持普通指南针对它右键。留一枚普通指南针盘货，把定过向的那枚带出门。",
+        "在同一维度，磁石指针会带你回到埋石的位置。已经学会校准磁石指南针的测绘员可以沿用原有进度。"],
+        [("minecraft:map", 16), ("minecraft:lantern", 16)], other_chapters=(expedition_id("map_exhibit"),),
+        subtitle="双地踏勘的后续 · 给返程留一枚磁石指针")
     add("blade_burst", "守夜人的破围剑", (8, -6), "evolvingblade:star_eater", ("station",),
         [adv(MOD + "prologue_training/burst")], [
         "噬星之刃达到四阶后，主手持剑，潜行右键施放爆发。守夜时留着这招，等敌人聚拢再出手。"],
@@ -133,6 +155,7 @@ def main():
     previous_bosses = {boss: player_record({"advancements": {MOD + "relic_expeditions/" + boss: True}})
                        for boss in ("dead_king", "vizier")}
     write(DATA / "advancement/frontline/patrol.json", {"criteria": previous_bosses, "requirements": [list(previous_bosses)]})
+    finish_chapter(chapter, lang)
     write(QUESTS / f"chapters/{FILENAME}.snbt", chapter)
     for locale in ("zh_cn", "en_us"):
         merge(QUESTS / f"lang/{locale}.snbt", lang)

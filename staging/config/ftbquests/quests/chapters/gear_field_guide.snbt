@@ -1,7 +1,8 @@
 {
   "id": "15833C8EAA8EC0A0",
   "filename": "gear_field_guide",
-  "order_index": 6,
+  "group": "1AD67844174FBD9C",
+  "order_index": 1,
   "icon": {
     "id": "terra_curio:cloud_in_a_bottle"
   },

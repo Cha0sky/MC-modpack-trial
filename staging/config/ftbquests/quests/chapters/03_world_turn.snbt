@@ -244,6 +244,83 @@
       "min_required_dependencies": 1
     },
     {
+      "id": "47E563F85E3DF8A9",
+      "x": 4.5,
+      "y": -3,
+      "icon": {
+        "id": "confluence:guide_voodoo_doll"
+      },
+      "min_width": 340,
+      "dependencies": [
+        "2B08699FB66C78B4"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "tasks": [
+        {
+          "id": "1CE7BAB42D7A57A8",
+          "type": "item",
+          "item": {
+            "id": "confluence:guide_voodoo_doll",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": true,
+      "rewards": [
+        {
+          "id": "2180073897DA36DB",
+          "type": "item",
+          "item": {
+            "id": "minecraft:lantern",
+            "count": 1
+          },
+          "count": 3
+        }
+      ]
+    },
+    {
+      "id": "60F201F11C0C8BC9",
+      "x": 10,
+      "y": 3,
+      "icon": {
+        "id": "minecraft:ender_chest"
+      },
+      "min_width": 340,
+      "dependencies": [
+        "4D04B92651DCACB9",
+        "6A89A848189809CD"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "tasks": [
+        {
+          "id": "112E56A0EF859E28",
+          "type": "item",
+          "item": {
+            "id": "world_progression_core:sealed_ration",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": true
+        }
+      ],
+      "optional": true,
+      "rewards": [
+        {
+          "id": "17AC7B5CB15E0B2D",
+          "type": "item",
+          "item": {
+            "id": "minecraft:ender_chest",
+            "count": 1
+          },
+          "count": 2
+        }
+      ]
+    },
+    {
       "id": "70B98B2219093652",
       "x": 12.5,
       "y": 0,
@@ -347,5 +424,6 @@
         }
       ]
     }
-  ]
+  ],
+  "group": "529379A5653E5792"
 }

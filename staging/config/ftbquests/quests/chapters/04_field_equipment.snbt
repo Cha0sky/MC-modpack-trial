@@ -311,6 +311,70 @@
           "count": 32
         }
       ]
+    },
+    {
+      "id": "190E463BF2347039",
+      "x": 6,
+      "y": 3,
+      "icon": {
+        "id": "minecraft:chest_minecart"
+      },
+      "min_width": 330,
+      "progression_mode": "linear",
+      "dependency_requirement": "all_completed",
+      "dependencies": [
+        "05C3B5ABE28C81AC",
+        "3E7102F7DAA60E52"
+      ],
+      "optional": true,
+      "tasks": [
+        {
+          "id": "4A5EB128B3C7190B",
+          "type": "item",
+          "item": {
+            "id": "minecraft:chest_minecart",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        },
+        {
+          "id": "53347FADAEDC036F",
+          "type": "stat",
+          "stat": "minecraft:minecart_one_cm",
+          "value": 3200
+        }
+      ],
+      "rewards": [
+        {
+          "id": "67C3BEC221FEC3DB",
+          "type": "item",
+          "item": {
+            "id": "minecraft:powered_rail",
+            "count": 1
+          },
+          "count": 24
+        },
+        {
+          "id": "3D5EAF75E02308DA",
+          "type": "item",
+          "item": {
+            "id": "minecraft:redstone_block",
+            "count": 1
+          },
+          "count": 4
+        },
+        {
+          "id": "19FC0F3067C54C76",
+          "type": "item",
+          "item": {
+            "id": "minecraft:hopper",
+            "count": 1
+          },
+          "count": 4
+        }
+      ]
     }
-  ]
+  ],
+  "group": "529379A5653E5792"
 }

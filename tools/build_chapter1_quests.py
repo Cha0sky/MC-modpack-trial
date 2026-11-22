@@ -3,6 +3,7 @@ from pathlib import Path
 import hashlib
 import json
 from build_prologue_training import add_training
+from campaign_navigation import finish_chapter
 
 ROOT = Path(__file__).resolve().parents[1]
 QUESTS = ROOT / "staging/config/ftbquests/quests"
@@ -27,6 +28,8 @@ def milestone_supplies(name):
         "arrival":[("minecraft:bread",32),("minecraft:torch",64),("minecraft:oak_log",64)],
         "mine":[("minecraft:cobblestone",128),("minecraft:coal",32),("minecraft:iron_ingot",16),("minecraft:copper_ingot",24)],
         "generator":[("minecraft:dirt",128),("minecraft:oak_log",64),("minecraft:stone",64)],
+        "gear_trial":[("minecraft:barrel",1),("create:cogwheel",4)],
+        "belt_trial":[("minecraft:barrel",1),("create:shaft",8)],
         "workshop":[("minecraft:chest",8),("minecraft:barrel",8),("minecraft:oak_log",128),("minecraft:stone_bricks",128),("minecraft:cooked_beef",32)],
         "king":[("minecraft:iron_chestplate",1),("minecraft:golden_apple",4),("minecraft:experience_bottle",8)],
         "nature_compass":[("minecraft:spyglass",1),("minecraft:lead",4)],
@@ -47,10 +50,10 @@ def main(write_languages=True):
                "icon":{"id":"evolvingblade:star_eater"},"progression_mode":"linear","quests":[]}
     lang = {"chapter."+uid("chapter")+".title":"序章 · 从小屋出发"}
 
-    def quest(name,title,desc,x,y,icon,needs=(),tasks=(),reward=False):
+    def quest(name,title,desc,x,y,icon,needs=(),tasks=(),reward=False,minimum=0,subtitle=None):
         q={"id":uid(name),"x":x,"y":y,"icon":{"id":icon},"min_width":300,
            "dependencies":[uid(n) for n in needs],"dependency_requirement":"all_completed",
-           "progression_mode":"linear","optional":name in ("nature_compass","explorer_compass"),"hide_dependency_lines":False,
+           "progression_mode":"linear","optional":name in ("nature_compass","explorer_compass","gear_trial","belt_trial"),"hide_dependency_lines":False,
            "hide_until_deps_visible":False,"hide_until_deps_complete":False,
            "hide_lock_icon":False,"tasks":[],"rewards":[]}
         for i,t in enumerate(tasks):
@@ -58,10 +61,14 @@ def main(write_languages=True):
         if reward:
             q["rewards"].append({"id":uid(name+"/network"),"type":"item",
                 "item":{"id":"beyonddimensions:net_creater","count":1},"count":1})
+        if minimum:
+            q["min_required_dependencies"]=minimum
         q["rewards"].extend(milestone_supplies(name))
         chapter["quests"].append(q)
         lang["quest."+q["id"]+".title"]=title
         lang["quest."+q["id"]+".quest_desc"]=desc
+        if subtitle:
+            lang["quest."+q["id"]+".quest_subtitle"]=subtitle
 
     def adv(name):
         return {"type":"advancement","advancement":"world_progression_core:"+name,"criterion":"done"}
@@ -70,7 +77,8 @@ def main(write_languages=True):
         return {"type":"item","item":{"id":name,"count":1},"count":count,"consume_items":False}
 
     quest("arrival","在小屋里醒来",[
-        "床边的箱子可以存东西。打开任务书领面包、火把和原木，带上成长剑出门。"],
+        "你想不起自己的来处。镇上的村民留给你一张床，身边还有一把剑。先领面包、火把和原木，记住回小屋的路。",
+        "小屋外有两件事可先做：去找矿洞，或带噬星之刃试一剑。两边都准备好，再去挑战史莱姆王。"],
         0,0,"minecraft:red_bed",tasks=[adv("arrive")])
     quest("explore","走出聚落",[
         "沿小镇外的路走出至少 96 格，找一处矿洞。猩红和腐化的边界会在史莱姆王倒下后打开。"],
@@ -79,8 +87,10 @@ def main(write_languages=True):
         "做一把石镐。带上火把和垫脚石，把暂时用不到的东西留在家里。"],
         4,0,"minecraft:stone_pickaxe",needs=["explore"],tasks=[item("minecraft:stone_pickaxe")])
     quest("mine","第一趟矿洞",[
-        "从聚落地面往下至少 12 格，亲手挖一块石头或矿石。带回 32 圆石、8 煤炭和 6 粗铁。"],
-        6,0,"minecraft:raw_iron",needs=["tools"],tasks=[adv("first_mine"),item("minecraft:cobblestone",32),item("minecraft:coal",8),item("minecraft:raw_iron",6)])
+        "从聚落地面往下至少 12 格，亲手挖一块石头或矿石。带回 32 圆石、8 煤炭和 6 粗铁。",
+        "工作台边要做原料生成器，空地上要搭传动。矿工补给里的铜铁也够你做第一把泰拉兵器。"],
+        6,0,"minecraft:raw_iron",needs=["tools"],tasks=[adv("first_mine"),item("minecraft:cobblestone",32),item("minecraft:coal",8),item("minecraft:raw_iron",6)],
+        subtitle="备好两处工位，再选一种接法试车")
     quest("template","材料的另一种用法",[
         "在 JEI 中查看泥土模板的配方，先用泥土做出第一个模板。"],
         8,-1,"infinitecore:template_dirt",needs=["mine"],tasks=[item("infinitecore:template_dirt")])
@@ -91,24 +101,33 @@ def main(write_languages=True):
         "制作 4 个安山合金，留给接下来的传动部件。"],
         8,1,"create:andesite_alloy",needs=["mine"],tasks=[item("create:andesite_alloy",4)])
     quest("create","一套基础机械方块",[
-        "备齐传动杆、齿轮、手摇曲柄和安山机壳各 1 个。把曲柄接到齿轮上，右键转动它。"],
+        "备齐传动杆、齿轮、手摇曲柄和安山机壳各 1 个。生成器与机械部件备好后，选变速齿轮或传送带试车。"],
         10,1,"create:hand_crank",needs=["alloy"],tasks=[item("create:shaft"),item("create:cogwheel"),item("create:hand_crank"),item("create:andesite_casing")])
+    quest("gear_trial","试车 · 借齿轮变速",[
+        "把大、小齿轮装在平行轴上，让它们沿对角咬合。转动大轮一侧的曲柄，观察小轮提速。这套接法以后能用来带搅拌器。"],
+        12,-1.5,"create:large_cogwheel",needs=["generator","create"],tasks=[{"type":"advancement","advancement":"create:shifting_gears"}])
+    quest("belt_trial","试车 · 把货送到另一头",[
+        "放两根平行的传动杆，用传送带依次右键两端连接。手摇一侧，放一块圆石试试去向。这条短带以后能给压机送料。"],
+        12,1.5,"create:belt_connector",needs=["generator","create"],tasks=[{"type":"advancement","advancement":"create:belt"}])
     quest("workshop","为旅途建立后方",[
-        "泥土生成器管原料，曲柄带动机械。领走维度网络发生器，把矿物和下一趟出门的行装分开收好。"],
-        12,0,"beyonddimensions:net_creater",needs=["generator","create"],tasks=[{"type":"checkmark"}],reward=True)
+        "试车后领取木桶，放在回家顺路的位置，打开它存放行装。取用过已有木桶也算。领走维度网络发生器，再去整备兵器和饰品。"],
+        14,0,"beyonddimensions:net_creater",needs=["gear_trial","belt_trial"],
+        tasks=[{"type":"stat","stat":"minecraft:open_barrel","value":1}],reward=True,minimum=1,
+        subtitle="变速或送件，任选一项试车")
     quest("king","第一次首领挑战：史莱姆王",[
         "选一处开阔地，使用史莱姆皇冠召唤史莱姆王。横向跑开它的落点，等它落地再还击。"],
-        14,0,"minecraft:slime_block",needs=["workshop"],tasks=[adv("unlock_evil")])
+        16,0,"minecraft:slime_block",needs=["workshop"],tasks=[adv("unlock_evil")])
     quest("next","通往猩红与腐化的道路",[
-        "猩红和腐化的道路已经打开。去边境带一批木料回来，第一座工坊就有了开工的材料。"],
-        16,0,"minecraft:map",needs=["king"],tasks=[{"type":"checkmark"}])
+        "史莱姆王倒下，镇外原本走不通的边境已经开放。带斧子去趟猩红或腐化，查查那里的木料能用来修什么。"],
+        18,0,"minecraft:map",needs=["king"],tasks=[adv("unlock_evil")])
     quest("nature_compass","合成自然罗盘",[
         "击败史莱姆王后，亲手做一个自然罗盘。用它搜索腐化或猩红，出发前记下回家的方向。"],
-        18,-1,"naturescompass:naturescompass",needs=["next"],tasks=[adv("craft_natures_compass")])
+        20,-1,"naturescompass:naturescompass",needs=["next"],tasks=[adv("craft_natures_compass")])
     quest("explorer_compass","合成探险者指南针",[
         "击败史莱姆王后，亲手做一个探险者指南针。选择结构名称，它会指引你寻找遗迹。"],
-        18,1,"explorerscompass:explorerscompass",needs=["next"],tasks=[adv("craft_explorers_compass")])
+        20,1,"explorerscompass:explorerscompass",needs=["next"],tasks=[adv("craft_explorers_compass")])
     add_training(chapter, lang, uid)
+    finish_chapter(chapter, lang)
     write(QUESTS / "chapters/00_lostworld_chapter1.snbt",chapter)
     for locale in (("zh_cn","en_us") if write_languages else ()):
         dest=QUESTS / f"lang/{locale}.snbt"
@@ -147,9 +166,9 @@ def main(write_languages=True):
             for kind in ("tasks","rewards"):
                 ids.extend(t["id"] for t in q.get(kind,[]))
     assert len(ids)==len(set(ids)),"Quest IDs collide"
-    assert len(chapter["quests"])==22
+    assert len(chapter["quests"])==24
     verify_chapter(chapter)
-    print("Prologue: 22 quests; three weapon drills, field kit, shared-world catch-up and post-King sword practice")
+    print("Prologue: 24 quests; two mechanical trials and three weapon schools")
 
 
 def verify_chapter(chapter):
@@ -166,7 +185,10 @@ def verify_chapter(chapter):
         assert set(q["dependencies"])<=reached,"Cycle or disconnected ordering"
         assert q["dependencies"] or q["id"]==uid("arrival"),"Unexpected unlocked root"
         reached.add(q["id"])
-    assert nodes[uid("workshop")]["dependencies"]==[uid("generator"),uid("create")]
+    for name in ("gear_trial","belt_trial"):
+        assert nodes[uid(name)]["dependencies"]==[uid("generator"),uid("create")] and nodes[uid(name)]["optional"]
+    assert nodes[uid("workshop")]["dependencies"]==[uid("gear_trial"),uid("belt_trial")]
+    assert nodes[uid("workshop")]["min_required_dependencies"]==1
     assert nodes[uid("king")]["dependencies"]==[uid("crown"),uid("campaign")]
     assert nodes[uid("king")]["min_required_dependencies"]==1
     assert nodes[uid("crown")]["dependencies"]==[uid(n) for n in ("workshop","allocate","blade","loadout")]

@@ -663,6 +663,91 @@
       ]
     },
     {
+      "id": "012D0526E5B8ACCB",
+      "x": 2,
+      "y": -6,
+      "icon": {
+        "id": "minecraft:ender_chest"
+      },
+      "min_width": 350,
+      "dependencies": [
+        "72AE6BEF433C5981",
+        "60F201F11C0C8BC9"
+      ],
+      "dependency_requirement": "all_completed",
+      "optional": true,
+      "tasks": [
+        {
+          "id": "447B53251DEEDA39",
+          "type": "stat",
+          "stat": "minecraft:open_enderchest",
+          "value": 2
+        }
+      ],
+      "rewards": [
+        {
+          "id": "28A61D513AEE9323",
+          "type": "item",
+          "item": {
+            "id": "minecraft:obsidian",
+            "count": 1
+          },
+          "count": 32
+        },
+        {
+          "id": "4DCF93E288087F84",
+          "type": "item",
+          "item": {
+            "id": "minecraft:ender_eye",
+            "count": 1
+          },
+          "count": 4
+        }
+      ]
+    },
+    {
+      "id": "3290EE38B2FFB48F",
+      "x": 2,
+      "y": -8,
+      "icon": {
+        "id": "minecraft:lodestone"
+      },
+      "min_width": 350,
+      "dependencies": [
+        "72AE6BEF433C5981",
+        "4C762122353F6EE4"
+      ],
+      "dependency_requirement": "all_completed",
+      "optional": true,
+      "tasks": [
+        {
+          "id": "1952EC5D93358DE5",
+          "type": "advancement",
+          "advancement": "minecraft:nether/use_lodestone"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "3932C26D46C5800B",
+          "type": "item",
+          "item": {
+            "id": "minecraft:map",
+            "count": 1
+          },
+          "count": 16
+        },
+        {
+          "id": "4E68493B409591CE",
+          "type": "item",
+          "item": {
+            "id": "minecraft:lantern",
+            "count": 1
+          },
+          "count": 16
+        }
+      ]
+    },
+    {
       "id": "1BABC98BEF700C36",
       "x": 8,
       "y": -6,
@@ -756,5 +841,6 @@
         }
       ]
     }
-  ]
+  ],
+  "group": "529379A5653E5792"
 }

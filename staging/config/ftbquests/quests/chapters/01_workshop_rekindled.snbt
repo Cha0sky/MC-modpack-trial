@@ -693,8 +693,8 @@
       ]
     },
     {
-      "id": "0712DF7A63B058CE",
-      "x": 6,
+      "id": "639520F140798DD7",
+      "x": 5,
       "y": 3,
       "icon": {
         "id": "create:andesite_funnel"
@@ -702,6 +702,81 @@
       "min_width": 320,
       "dependencies": [
         "6E074E85FED06EAC"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "optional": true,
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "63B4F60DB04A2978",
+          "type": "advancement",
+          "advancement": "create:funnel"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "174F50337D6E644B",
+          "type": "item",
+          "item": {
+            "id": "create:belt_connector",
+            "count": 1
+          },
+          "count": 4
+        }
+      ]
+    },
+    {
+      "id": "75D5D64B85ED67C5",
+      "x": 5,
+      "y": 5,
+      "icon": {
+        "id": "create:chute"
+      },
+      "min_width": 320,
+      "dependencies": [
+        "6E074E85FED06EAC"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "optional": true,
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "2DF26AD517D022F4",
+          "type": "advancement",
+          "advancement": "create:chute"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "319EC6FBBC3C252E",
+          "type": "item",
+          "item": {
+            "id": "minecraft:hopper",
+            "count": 1
+          },
+          "count": 4
+        }
+      ]
+    },
+    {
+      "id": "0712DF7A63B058CE",
+      "x": 7,
+      "y": 4,
+      "icon": {
+        "id": "create:andesite_funnel"
+      },
+      "min_width": 320,
+      "dependencies": [
+        "639520F140798DD7",
+        "75D5D64B85ED67C5"
       ],
       "dependency_requirement": "all_completed",
       "progression_mode": "linear",
@@ -773,7 +848,8 @@
           },
           "count": 64
         }
-      ]
+      ],
+      "min_required_dependencies": 1
     },
     {
       "id": "2AB221424C3AB34C",
@@ -1064,5 +1140,6 @@
         }
       ]
     }
-  ]
+  ],
+  "group": "529379A5653E5792"
 }

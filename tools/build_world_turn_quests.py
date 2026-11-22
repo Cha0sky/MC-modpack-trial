@@ -3,6 +3,7 @@
 import json
 from build_heritage_quests import ASSETS, DATA, QUESTS, merge, uid as quest_id, write
 from build_workshop_quests import sprite
+from campaign_navigation import finish_chapter
 
 FILENAME = "03_world_turn"
 
@@ -23,10 +24,16 @@ def generate():
     }
     lang = {"chapter." + chapter["id"] + ".title": "第三章 · 世界转折"}
 
-    def add(name, title, description, icon, dependency, advancement=None, rewards=(), pos=None, optional=False, either=False):
+    def add(name, title, description, icon, dependency, advancement=None, rewards=(), pos=None, optional=False,
+            either=False, subtitle=None, item_task=None):
         qid = uid(name)
-        record = "world_progression_core:world_turn/" + advancement if advancement else "minecraft:story/enter_the_nether"
-        task = {"id": uid(name + "/task"), "type": "advancement", "advancement": record}
+        if item_task:
+            item_id, count, consume = item_task
+            task = {"id": uid(name + "/task"), "type": "item", "item": {"id": item_id, "count": 1},
+                    "count": count, "consume_items": consume}
+        else:
+            record = "world_progression_core:world_turn/" + advancement if advancement else "minecraft:story/enter_the_nether"
+            task = {"id": uid(name + "/task"), "type": "advancement", "advancement": record}
         x, y = pos or (len(chapter["quests"]) * 2.5, 0)
         chapter["quests"].append({
             "id": qid, "x": x, "y": y,
@@ -42,20 +49,28 @@ def generate():
             chapter["quests"][-1]["min_required_dependencies"] = 1
         lang["quest." + qid + ".title"] = title
         lang["quest." + qid + ".quest_desc"] = description
+        if subtitle:
+            lang["quest." + qid + ".quest_subtitle"] = subtitle
 
     add("prepare", "去往下界之前", [
-        "带粗制调谐器和 1 份共振胶进入下界，领好远征石料。血肉首领倒下后，世界将进入困难模式，部分地形会随之转化。"], "confluence:guide_voodoo_doll", previous, rewards=[
+        "从档案台收好书，把修过工坊的粗制调谐器和 1 份共振胶带进下界。取样要靠前队，做饭可以留给灶边的人。",
+        "击败血肉首领会让世界进入困难模式，部分地形随之转化。准备动手时，先把退路或口粮试好。"],
+        "confluence:guide_voodoo_doll", previous, subtitle="从工坊带走工具，让厨房同时开火", rewards=[
         ("food", {"id": "minecraft:golden_carrot", "count": 1}, 32),
         ("fire_resistance", {"id": "minecraft:potion", "count": 1,
                              "components": {"minecraft:potion_contents": {"potion": "minecraft:long_fire_resistance"}}}, 2),
         ("path_blocks", {"id": "minecraft:cobblestone", "count": 1}, 64),
     ])
     add("survey", "下界 · 从岩浆块取样", [
-        "在下界主手持调谐器、副手放共振胶，右键岩浆块。1 份胶能取到 2 份热样胶。"], "world_progression_core:thermal_binder", uid("prepare"), "thermal_survey", pos=(2.5, -1))
+        "主手拿调谐器、副手放共振胶，右键下界的岩浆块。一次带回 2 份热样胶，够在压机下封两餐。"],
+        "world_progression_core:thermal_binder", uid("prepare"), "thermal_survey", pos=(2.5, -1))
     add("cook", "后方 · 备一锅饭", [
-        "在热源上架厨锅，煮蔬菜汤、鸡汤、炖牛肉或炒饭，盛出一份。炖牛肉可用生牛肉、胡萝卜和马铃薯。"], "farmersdelight:cooking_pot", uid("prepare"), "field_kitchen", pos=(2.5, 1))
+        "在热源上架起厨锅。蔬菜汤、鸡汤、炖牛肉、炒饭任选一道，盛出送到工坊。家里有生牛肉、胡萝卜和马铃薯，就做炖牛肉。"],
+        "farmersdelight:cooking_pot", uid("prepare"), "field_kitchen", pos=(2.5, 1))
     add("pack", "工坊 · 压封行军餐", [
-        "给压机下的工作盆放入 1 份料理、1 张铜板和 1 份热样胶。把压好的行军餐带到前线；吃下恢复 8 点饥饿值，并获得 90 秒抗火。"], "world_progression_core:sealed_ration", [uid("survey"), uid("cook")], "pack_ration",
+        "把 1 份料理、1 张铜板、1 份热样胶投入压机下的工作盆。压好行军餐，带一份出门；每份补充 8 点饥饿值，还能抗火 90 秒。",
+        "接下来任选一职。工兵留三盏引路灯，先锋吃下行军餐试战。两项都做，可以再接一单后队口粮。"],
+        "world_progression_core:sealed_ration", [uid("survey"), uid("cook")], "pack_ration", subtitle="两路物资在压机下汇合",
         rewards=[("copper", {"id": "minecraft:copper_ingot", "count": 1}, 16),
                  ("chute", {"id": "create:chute", "count": 1}, 4)], pos=(5, 0))
     add("beacons", "工兵 · 给退路点灯", [
@@ -67,9 +82,23 @@ def generate():
         "minecraft:blaze_rod", uid("pack"), "vanguard",
         rewards=[("supply", {"id": "minecraft:golden_carrot", "count": 1}, 24)], pos=(7.5, 1.5), optional=True)
     add("flesh", "击败血肉首领", [
-        "看向导巫毒玩偶的提示选择形态，把玩偶投入下界岩浆。击败血肉墙或血肉山，收好掉落的神锤。"], "confluence:wall_of_flesh_treasure_bag", [uid("beacons"), uid("vanguard")], "flesh_defeated", pos=(10, 0), either=True)
+        "在下界击败巫毒恶魔可拿到向导巫毒玩偶。看玩偶的提示选好形态，准备就绪再投进岩浆。",
+        "血肉墙或血肉山，击败其中一位。拿到宝藏袋就先开袋，收好下一趟敲祭坛要用的神锤。"],
+        "confluence:wall_of_flesh_treasure_bag", [uid("beacons"), uid("vanguard")], "flesh_defeated", pos=(10, 0),
+        either=True, subtitle="世界转折 · 血肉墙、血肉山任选一战")
+    add("doll", "拾回熔岩边的玩偶", [
+        "看准巫毒恶魔脚下的地面再交手，把掉落的向导巫毒玩偶收进背包。领走三盏灯笼，正好够替工兵标一条退路。"],
+        "confluence:guide_voodoo_doll", uid("prepare"), item_task=("confluence:guide_voodoo_doll", 1, False),
+        rewards=[("lanterns", {"id": "minecraft:lantern", "count": 1}, 3)], pos=(4.5, -3), optional=True)
+    add("rearguard", "留给后队的一餐", [
+        "沿灯走过、在火里试过，这条路才好交给下一班。再封一份行军餐，在任务书中提交给后队。",
+        "领到的两只末影箱可一只留在工坊、一只带到前线。同一个人的两只箱子相通，赶路时能随手换装备。"],
+        "minecraft:ender_chest", [uid("beacons"), uid("vanguard")], item_task=("world_progression_core:sealed_ration", 1, True),
+        rewards=[("field_chests", {"id": "minecraft:ender_chest", "count": 1}, 2)], pos=(10, 3), optional=True,
+        subtitle="双线委托 · 提交 1 份热封行军餐")
     add("transition", "世界已进入困难模式", [
-        "世界进入困难模式后，带档案书回档案台查看地形转化进度。下一趟带神锤去找祭坛。"], "confluence:pwnhammer", uid("flesh"), "hardmode_open", pos=(12.5, 0))
+        "上次归档的坐标还在，地图外的土地却已经开始变化。带档案书回档案台查看转化进度，再拿神锤去找祭坛。"],
+        "confluence:pwnhammer", uid("flesh"), "hardmode_open", pos=(12.5, 0), subtitle="战后归档 · 困难模式开启")
     add("charge", "回程 · 给地狱熔炉配料", [
         "用神锤敲祭坛显出矿物。把 6 份同种粗钴或粗钯金放入工作盆，用机械搅拌器冷拌成一块炉料。"], "world_progression_core:cobalt_furnace_charge", uid("transition"), "batch_charge", pos=(15, 0))
     add("first_ingot", "第一炉新矿", [
@@ -84,6 +113,7 @@ def generate():
 
 def main():
     chapter, lang = generate()
+    finish_chapter(chapter, lang)
     objects = [chapter]
     for quest in chapter["quests"]:
         objects.extend((quest, *quest["tasks"], *quest["rewards"]))

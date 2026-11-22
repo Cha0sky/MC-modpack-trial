@@ -1,7 +1,6 @@
 """Build the always-readable equipment section and the quest-book links into it."""
-import json
-
 from build_heritage_quests import QUESTS, merge, uid as stable_id, write
+from campaign_navigation import GUIDE_GROUP, turn_page
 from gear_accessories import ACCESSORIES
 
 FILENAME = "gear_field_guide"
@@ -13,9 +12,7 @@ def guide_id(key):
 
 def guide_link(label, key):
     # FTB Quests parses a serialized text component in each quest_desc line.
-    return json.dumps({"text": label, "color": "aqua", "underlined": True,
-                       "clickEvent": {"action": "change_page", "value": guide_id(key)}},
-                      ensure_ascii=False, separators=(",", ":"))
+    return turn_page(label, guide_id(key))
 
 
 WEAPONS = (
@@ -68,7 +65,7 @@ RELATED = {
 
 
 def main():
-    chapter = {"id": guide_id("chapter"), "filename": FILENAME, "order_index": 6,
+    chapter = {"id": guide_id("chapter"), "filename": FILENAME, "group": GUIDE_GROUP, "order_index": 1,
                "icon": {"id": "terra_curio:cloud_in_a_bottle"}, "quests": []}
     lang = {f"chapter.{chapter['id']}.title": "装备手册 · 武器与饰品"}
 

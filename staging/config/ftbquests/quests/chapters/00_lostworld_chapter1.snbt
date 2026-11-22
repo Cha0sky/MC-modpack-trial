@@ -420,16 +420,110 @@
       "rewards": []
     },
     {
-      "id": "04E0645E6BC170B0",
+      "id": "09E7B4F0FD881555",
       "x": 12,
+      "y": -1.5,
+      "icon": {
+        "id": "create:large_cogwheel"
+      },
+      "min_width": 300,
+      "dependencies": [
+        "2039A0EE2EAB186F",
+        "13DACF956E61E42F"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "optional": true,
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "11CDF659AE9C61B9",
+          "type": "advancement",
+          "advancement": "create:shifting_gears"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "00034D8352D0EE0F",
+          "type": "item",
+          "item": {
+            "id": "minecraft:barrel",
+            "count": 1
+          },
+          "count": 1
+        },
+        {
+          "id": "4EBD66F319439370",
+          "type": "item",
+          "item": {
+            "id": "create:cogwheel",
+            "count": 1
+          },
+          "count": 4
+        }
+      ]
+    },
+    {
+      "id": "242E1BEFBFEA54C9",
+      "x": 12,
+      "y": 1.5,
+      "icon": {
+        "id": "create:belt_connector"
+      },
+      "min_width": 300,
+      "dependencies": [
+        "2039A0EE2EAB186F",
+        "13DACF956E61E42F"
+      ],
+      "dependency_requirement": "all_completed",
+      "progression_mode": "linear",
+      "optional": true,
+      "hide_dependency_lines": false,
+      "hide_until_deps_visible": false,
+      "hide_until_deps_complete": false,
+      "hide_lock_icon": false,
+      "tasks": [
+        {
+          "id": "08CB12168128F21C",
+          "type": "advancement",
+          "advancement": "create:belt"
+        }
+      ],
+      "rewards": [
+        {
+          "id": "1AE729260E74815A",
+          "type": "item",
+          "item": {
+            "id": "minecraft:barrel",
+            "count": 1
+          },
+          "count": 1
+        },
+        {
+          "id": "0EAFD6DDFC70B376",
+          "type": "item",
+          "item": {
+            "id": "create:shaft",
+            "count": 1
+          },
+          "count": 8
+        }
+      ]
+    },
+    {
+      "id": "04E0645E6BC170B0",
+      "x": 14,
       "y": 0,
       "icon": {
         "id": "beyonddimensions:net_creater"
       },
       "min_width": 300,
       "dependencies": [
-        "2039A0EE2EAB186F",
-        "13DACF956E61E42F"
+        "09E7B4F0FD881555",
+        "242E1BEFBFEA54C9"
       ],
       "dependency_requirement": "all_completed",
       "progression_mode": "linear",
@@ -441,7 +535,9 @@
       "tasks": [
         {
           "id": "6BDAE420BDABAFF2",
-          "type": "checkmark"
+          "type": "stat",
+          "stat": "minecraft:open_barrel",
+          "value": 1
         }
       ],
       "rewards": [
@@ -499,7 +595,8 @@
           },
           "count": 32
         }
-      ]
+      ],
+      "min_required_dependencies": 1
     },
     {
       "id": "5456B1A0E7DA4FB1",
@@ -744,7 +841,7 @@
     },
     {
       "id": "4EE951BF8047A144",
-      "x": 12,
+      "x": 14,
       "y": 3,
       "icon": {
         "id": "confluence:slime_crown"
@@ -794,7 +891,7 @@
     },
     {
       "id": "1AD32E2C8ED462C4",
-      "x": 12,
+      "x": 14,
       "y": -3,
       "icon": {
         "id": "minecraft:map"
@@ -802,7 +899,8 @@
       "min_width": 320,
       "optional": true,
       "dependencies": [
-        "04E0645E6BC170B0"
+        "2039A0EE2EAB186F",
+        "13DACF956E61E42F"
       ],
       "progression_mode": "linear",
       "dependency_requirement": "all_completed",
@@ -817,7 +915,7 @@
     },
     {
       "id": "441D1DEFF4C0B58E",
-      "x": 14,
+      "x": 16,
       "y": 0,
       "icon": {
         "id": "minecraft:slime_block"
@@ -883,7 +981,7 @@
     },
     {
       "id": "259C64DF4D981F3C",
-      "x": 16,
+      "x": 18,
       "y": 0,
       "icon": {
         "id": "minecraft:map"
@@ -902,14 +1000,16 @@
       "tasks": [
         {
           "id": "051137D7251B899F",
-          "type": "checkmark"
+          "type": "advancement",
+          "advancement": "world_progression_core:unlock_evil",
+          "criterion": "done"
         }
       ],
       "rewards": []
     },
     {
       "id": "4E2E6DEF9B35CC9D",
-      "x": 18,
+      "x": 20,
       "y": -1,
       "icon": {
         "id": "naturescompass:naturescompass"
@@ -956,7 +1056,7 @@
     },
     {
       "id": "280D401DA2351897",
-      "x": 18,
+      "x": 20,
       "y": 1,
       "icon": {
         "id": "explorerscompass:explorerscompass"
@@ -1003,7 +1103,7 @@
     },
     {
       "id": "0370187D6B231F81",
-      "x": 19,
+      "x": 21,
       "y": 3,
       "icon": {
         "id": "evolvingblade:star_eater"
@@ -1043,5 +1143,6 @@
         }
       ]
     }
-  ]
+  ],
+  "group": "529379A5653E5792"
 }

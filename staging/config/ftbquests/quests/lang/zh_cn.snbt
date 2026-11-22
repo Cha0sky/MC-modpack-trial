@@ -1,11 +1,14 @@
 {
   "quest.4B61DD93ABC703EA.title": "在小屋里醒来",
   "quest.4B61DD93ABC703EA.quest_desc": [
-    "床边的箱子可以存东西。打开任务书领面包、火把和原木，带上成长剑出门。"
+    "你想不起自己的来处。镇上的村民留给你一张床，身边还有一把剑。先领面包、火把和原木，记住回小屋的路。",
+    "小屋外有两件事可先做：去找矿洞，或带噬星之刃试一剑。两边都准备好，再去挑战史莱姆王。",
+    "{\"text\":\"翻开旅人手记 · 我该从哪儿走\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"342CE32A04725ED3\"}}"
   ],
   "quest.36C3A881016E5E96.title": "第一趟矿洞",
   "quest.36C3A881016E5E96.quest_desc": [
-    "从聚落地面往下至少 12 格，亲手挖一块石头或矿石。带回 32 圆石、8 煤炭和 6 粗铁。"
+    "从聚落地面往下至少 12 格，亲手挖一块石头或矿石。带回 32 圆石、8 煤炭和 6 粗铁。",
+    "工作台边要做原料生成器，空地上要搭传动。矿工补给里的铜铁也够你做第一把泰拉兵器。"
   ],
   "quest.49639F9E7F91B628.title": "机械动力的起点",
   "quest.49639F9E7F91B628.quest_desc": [
@@ -13,11 +16,12 @@
   ],
   "quest.04E0645E6BC170B0.title": "为旅途建立后方",
   "quest.04E0645E6BC170B0.quest_desc": [
-    "泥土生成器管原料，曲柄带动机械。领走维度网络发生器，把矿物和下一趟出门的行装分开收好。"
+    "试车后领取木桶，放在回家顺路的位置，打开它存放行装。取用过已有木桶也算。领走维度网络发生器，再去整备兵器和饰品。"
   ],
   "quest.259C64DF4D981F3C.title": "通往猩红与腐化的道路",
   "quest.259C64DF4D981F3C.quest_desc": [
-    "猩红和腐化的道路已经打开。去边境带一批木料回来，第一座工坊就有了开工的材料。"
+    "史莱姆王倒下，镇外原本走不通的边境已经开放。带斧子去趟猩红或腐化，查查那里的木料能用来修什么。",
+    "{\"text\":\"完成后翻开手记 · 第一次认得回家的路\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"30BF0ECE49E4C122\"}}"
   ],
   "chapter.5A0FF97AED39E75E.title": "序章 · 从小屋出发",
   "quest.0464CA606F343573.title": "走出聚落",
@@ -38,11 +42,12 @@
   ],
   "quest.13DACF956E61E42F.title": "一套基础机械方块",
   "quest.13DACF956E61E42F.quest_desc": [
-    "备齐传动杆、齿轮、手摇曲柄和安山机壳各 1 个。把曲柄接到齿轮上，右键转动它。"
+    "备齐传动杆、齿轮、手摇曲柄和安山机壳各 1 个。生成器与机械部件备好后，选变速齿轮或传送带试车。"
   ],
   "quest.441D1DEFF4C0B58E.title": "第一次首领挑战：史莱姆王",
   "quest.441D1DEFF4C0B58E.quest_desc": [
-    "选一处开阔地，使用史莱姆皇冠召唤史莱姆王。横向跑开它的落点，等它落地再还击。"
+    "选一处开阔地，使用史莱姆皇冠召唤史莱姆王。横向跑开它的落点，等它落地再还击。",
+    "{\"text\":\"首领战册 · 史莱姆王\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"35B312A8CFC0CEFF\"}}"
   ],
   "quest.4E2E6DEF9B35CC9D.title": "合成自然罗盘",
   "quest.4E2E6DEF9B35CC9D.quest_desc": [
@@ -55,7 +60,8 @@
   "chapter.6BFCB3A5A742DFD0.title": "第一章 · 重启第一座工坊",
   "quest.69B3711BF25E107B.title": "旧工坊的委托",
   "quest.69B3711BF25E107B.quest_desc": [
-    "边境有座停转的旧工坊。先去腐化或猩红取木样，也可以留在家里先搭传动。自然罗盘能帮你找群系。"
+    "镇上流传着古代英雄封住受侵蚀土地的故事。边境那座工坊究竟是怎样停下来的？先做一把能读出旧设备状态的工具，再进去看看。",
+    "两路可以同时开工。采样的人带斧子去猩红或腐化，留守的人备水车和板材。等木样磨成纤维，两边回到工作盆会合。"
   ],
   "quest.49A552499965E073.title": "越过边境",
   "quest.49A552499965E073.quest_desc": [
@@ -71,7 +77,7 @@
   ],
   "quest.6B8E22D501AC0EA9.title": "异常材料的用途",
   "quest.6B8E22D501AC0EA9.quest_desc": [
-    "把 4 个边境原木送进磨石，每个产出 2 份浸染纤维。收下 8 份纤维，也可以直接送去制胶。"
+    "剖开边境木样之前，先把磨石转起来。4 个原木磨出 8 份浸染纤维，正好是下一锅共振胶的原料。"
   ],
   "quest.136EB0CDAD110108.title": "稳定的共振胶",
   "quest.136EB0CDAD110108.quest_desc": [
@@ -84,7 +90,8 @@
   ],
   "quest.24BD52ACFB3E6BD0.title": "找到旧址",
   "quest.24BD52ACFB3E6BD0.quest_desc": [
-    "顺地图找到废弃工坊，认清动力室、换向装置和屋顶信号台。旧存档可往新生成的区块找，地图遗失可用调谐器补领。"
+    "顺勘测图进工坊，先找原料经过的动力室，再找换向装置和屋顶信号台。可以读一台继电器，也可以先拍下现场。",
+    "旧存档可往新生成的区块找。地图遗失时，在主世界用调谐器对空气右键补领。"
   ],
   "quest.7A22062328908A03.title": "三处故障",
   "quest.7A22062328908A03.quest_desc": [
@@ -93,7 +100,9 @@
   ],
   "quest.4FB59596BCAF8408.title": "工坊重新亮起",
   "quest.4FB59596BCAF8408.quest_desc": [
-    "三处节点亮起后，使用中央控制台重启工坊。收起奖励中的 2 份共振胶，下一章造档案台要用。"
+    "三处都亮起后，保持供能，再操作中央控制台。曾经有人靠这套传动修工具，如今你也可以把它交给下一个来修理的人。",
+    "维修簿通向三项新的调查。把奖励中的共振胶留给档案台。",
+    "{\"text\":\"完成后翻开手记 · 维修簿里的箭头\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"30BF0ECE49E4C122\"}}"
   ],
   "quest.5B7CF06798316864.title": "支线 · 另一种异常",
   "quest.5B7CF06798316864.quest_desc": [
@@ -101,7 +110,7 @@
   ],
   "quest.0712DF7A63B058CE.title": "支线 · 从手作到量产",
   "quest.0712DF7A63B058CE.quest_desc": [
-    "把铜板产量做到 16 张。调谐器用掉的板材也算；领到的漏斗和传送带正好能给压机接上进出料。"
+    "侧送和下落任选一种完成试车，再把铜板产量做到 16 张。调谐器用掉的铜板也算。领回隧道、漏斗和传送带，给下一批留出进出料的位置。"
   ],
   "quest.2AB221424C3AB34C.title": "支线 · 野外见闻录",
   "quest.2AB221424C3AB34C.quest_desc": [
@@ -113,12 +122,14 @@
   ],
   "quest.01646532D249D22F.title": "支线 · 沉睡的铁甲",
   "quest.01646532D249D22F.quest_desc": [
-    "去钢铁守护者室挑战沉睡的守卫。等它的重击落空，再绕到背后出手。"
+    "去钢铁守护者室挑战沉睡的守卫。等它的重击落空，再绕到背后出手。",
+    "{\"text\":\"首领战册 · 钢铁守护者\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"70C86B17DE824438\"}}"
   ],
   "chapter.08D219867E4DF589.title": "第二章 · 遗产调查",
   "quest.1697E0EFFE71246B.title": "维修簿之外",
   "quest.1697E0EFFE71246B.quest_desc": [
-    "工坊的维修簿里有三条线索。工程、奥术、远征任选两条完成，就能在档案台汇总发现。队友可分头调查。"
+    "旧工坊复工了，维修簿里的做法还有多少能用？工匠可以重新装配精密构件，术士可以重做一次施法，探路的人去查遗迹与守敌。",
+    "工程、奥术、远征任选两份成果即可建档。可以与同伴分头，各交一份。"
   ],
   "quest.1C2F30D09583F848.title": "工程 · 让火进入工艺",
   "quest.1C2F30D09583F848.quest_desc": [
@@ -131,7 +142,7 @@
   ],
   "quest.377BDBD8E94E1CD6.title": "整理工程记录",
   "quest.377BDBD8E94E1CD6.quest_desc": [
-    "热工和装配记录齐了。把奖励里的机械臂和黄铜漏斗接到生产线，下一批零件就能自动上料。"
+    "你已经复做了黄铜和精密构件。领走机械臂、黄铜漏斗，等档案台建好，试着给样本做一条分拣线。"
   ],
   "quest.7D0AC0F11F02C768.title": "奥术 · 选择研究方法",
   "quest.7D0AC0F11F02C768.quest_desc": [
@@ -147,21 +158,22 @@
   ],
   "quest.3D8234164AB33DB0.title": "远征 · 走入两处遗产",
   "quest.3D8234164AB33DB0.quest_desc": [
-    "走进两类遗迹，位置就会进入档案。可以选择钢铁守护者室、附魔剑冢、沙漠遗址或古代工厂。",
+    "远征队要交两样东西：两类遗迹的坐标，以及一场首领战果。两件事可按行程先后完成。钢铁守护者室、附魔剑冢、沙漠遗址、古代工厂任选两类走入。",
     "指南针可搜 wrought_chamber、enchanted_sword_shrine、desert_site、ancient_factory。"
   ],
   "quest.2A804883BB0B2318.title": "远征 · 一次自选挑战",
   "quest.2A804883BB0B2318.quest_desc": [
     "任选一位对手：钢铁守护者、霜冻巨兽、克苏鲁之眼、世界吞噬怪、克苏鲁之脑或骷髅领主。",
-    "想找骷髅领主，可用指南针搜 goety:crypt，到诡厄的大坟墓查看罐子。"
+    "想找骷髅领主，可用指南针搜 goety:crypt，到诡厄的大坟墓查看罐子。",
+    "{\"text\":\"挑选对手 · 六项调查委托\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"6DC7AAD8E935A5D8\"}}"
   ],
   "quest.7FB7517299ACEB24.title": "整理远征记录",
   "quest.7FB7517299ACEB24.quest_desc": [
-    "两类遗迹、一场首领战，足够整理第一份远征记录。领到的摔落保护靴适合接着下墓。"
+    "地点和战果都到手了，把这次远征写进总档。下一队就能从档案台绘图，循着你的坐标再来。"
   ],
   "quest.2892644A45456FAE.title": "让两条线索相遇",
   "quest.2892644A45456FAE.quest_desc": [
-    "任意两份调查齐备，就能建立共同档案。挑个回家经常路过的位置，给档案台留一格。"
+    "旧日的工程与术式曾在同一座文明里发展。如今散落的工艺、术式、遗址坐标，又有两份能摆回同一张桌上。找个队友都方便取用的位置建档。"
   ],
   "quest.760440CC9AACAC51.title": "建一处保存知识的地方",
   "quest.760440CC9AACAC51.quest_desc": [
@@ -169,7 +181,9 @@
   ],
   "quest.76FC61C7DB7BD176.title": "我们的遗产档案",
   "quest.76FC61C7DB7BD176.quest_desc": [
-    "空手右键档案台领取档案书。潜行右键轮换已发现地点，松开潜行，主手持空地图右键制图。档案书带回来还能更新。"
+    "空手右键档案台领取档案书，带回旧书可更新。潜行右键选地点，再松开潜行，持空地图右键绘图。",
+    "下次出队要往下界走。把调谐器、共振胶和档案书收在一起，出发时直接取走。",
+    "{\"text\":\"完成后翻开手记 · 翻开第一册档案\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"30BF0ECE49E4C122\"}}"
   ],
   "quest.26D9E56E31143A19.title": "可选 · 完整的三路调查",
   "quest.26D9E56E31143A19.quest_desc": [
@@ -178,37 +192,43 @@
   "chapter.759CB26DEA732B94.title": "第三章 · 世界转折",
   "quest.2B08699FB66C78B4.title": "去往下界之前",
   "quest.2B08699FB66C78B4.quest_desc": [
-    "带粗制调谐器和 1 份共振胶进入下界，领好远征石料。血肉首领倒下后，世界将进入困难模式，部分地形会随之转化。"
+    "从档案台收好书，把修过工坊的粗制调谐器和 1 份共振胶带进下界。取样要靠前队，做饭可以留给灶边的人。",
+    "击败血肉首领会让世界进入困难模式，部分地形随之转化。准备动手时，先把退路或口粮试好。"
   ],
   "quest.6A44FF99927AF1BD.title": "击败血肉首领",
   "quest.6A44FF99927AF1BD.quest_desc": [
-    "看向导巫毒玩偶的提示选择形态，把玩偶投入下界岩浆。击败血肉墙或血肉山，收好掉落的神锤。"
+    "在下界击败巫毒恶魔可拿到向导巫毒玩偶。看玩偶的提示选好形态，准备就绪再投进岩浆。",
+    "血肉墙或血肉山，击败其中一位。拿到宝藏袋就先开袋，收好下一趟敲祭坛要用的神锤。",
+    "{\"text\":\"下界备忘 · 形态与战后变化\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"29A906D9451C6C57\"}}"
   ],
   "quest.70B98B2219093652.title": "世界已进入困难模式",
   "quest.70B98B2219093652.quest_desc": [
-    "世界进入困难模式后，带档案书回档案台查看地形转化进度。下一趟带神锤去找祭坛。"
+    "上次归档的坐标还在，地图外的土地却已经开始变化。带档案书回档案台查看转化进度，再拿神锤去找祭坛。"
   ],
   "quest.24BA016E81A9BDB9.title": "第一炉新矿",
   "quest.24BA016E81A9BDB9.quest_desc": [
-    "把炉料送入有燃料的地狱熔炉，一炉出 2 个对应金属锭。拿到成品，就可以铸造第一套困难模式装备。"
+    "把炉料送入有燃料的地狱熔炉，一炉出 2 个对应金属锭。拿到成品，就可以铸造第一套困难模式装备。",
+    "{\"text\":\"完成后翻开手记 · 神锤响过以后\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"30BF0ECE49E4C122\"}}"
   ],
   "chapter.2D5047AC1452BE5B.title": "第四章 · 困难模式整备",
   "quest.6BEB2BDDDE4B91BF.title": "把新矿带上工作台",
   "quest.6BEB2BDDDE4B91BF.quest_desc": [
-    "在工作台里竖排叠放工作台、铁砧或铅砧、工作台，做成重型工作台。家里已经有的话，空手右键打开。"
+    "第一炉钴或钯金该给谁？矿班用它追下一层矿脉，护卫用它把人平安带回来。先选一班，另一班的委托也会留着。",
+    "在工作台里竖排叠放工作台、铁砧或铅砧、工作台。做出的重型工作台放在炉边，已有的空手打开即可。"
   ],
   "quest.5C52AA144E887000.title": "采掘 · 换上新工具",
   "quest.5C52AA144E887000.quest_desc": [
-    "选一件拿到主手。钴镐用 15 锭、钴钻头用 12 锭；钯金镐和钻头各用 18 锭。做镐另备 3 根珍珠木棍。"
+    "在重型工作台做好一把镐或钻头，拿到主手。钴镐要 15 锭、钴钻头 12 锭，钯金两种工具各要 18 锭。做镐另备 3 根珍珠木棍。"
   ],
   "quest.60BCE50D3F42F766.title": "战斗 · 选一套合身的盔甲",
   "quest.60BCE50D3F42F766.quest_desc": [
-    "穿齐钴甲或钯金甲的头、胸、腿、靴。想选头部款式，可先比较套装效果。",
+    "穿齐同种材料的头、胸、腿、靴。护卫可以带惯用的武器去巡夜，钴甲的头部最好按兵器来选。",
     "{\"text\":\"查手册 · 钴甲与钯金甲\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"46BAC8D6E3A42B63\"}}"
   ],
   "quest.7E82D9E88152A714.title": "把整备用起来",
   "quest.7E82D9E88152A714.quest_desc": [
-    "采掘队带新镐或钻头下矿，护卫队穿整套新甲巡夜。完成其中一队的实地工作，就能领物资准备遗址远征。"
+    "采到第二层矿，或穿新甲挡过近敌和射手，就能接遗址远征。回工坊带上两份热封行军餐，别把压机和厨锅留到临行才开。",
+    "{\"text\":\"完成后翻开手记 · 谁来试这批新料\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"30BF0ECE49E4C122\"}}"
   ],
   "quest.003111937F6E15CC.title": "选修 · 下一阶锻造",
   "quest.003111937F6E15CC.quest_desc": [
@@ -216,15 +236,16 @@
   ],
   "quest.65A8CA872474A532.title": "下界 · 从岩浆块取样",
   "quest.65A8CA872474A532.quest_desc": [
-    "在下界主手持调谐器、副手放共振胶，右键岩浆块。1 份胶能取到 2 份热样胶。"
+    "主手拿调谐器、副手放共振胶，右键下界的岩浆块。一次带回 2 份热样胶，够在压机下封两餐。"
   ],
   "quest.6CF98D5A1B67EC4C.title": "后方 · 备一锅饭",
   "quest.6CF98D5A1B67EC4C.quest_desc": [
-    "在热源上架厨锅，煮蔬菜汤、鸡汤、炖牛肉或炒饭，盛出一份。炖牛肉可用生牛肉、胡萝卜和马铃薯。"
+    "在热源上架起厨锅。蔬菜汤、鸡汤、炖牛肉、炒饭任选一道，盛出送到工坊。家里有生牛肉、胡萝卜和马铃薯，就做炖牛肉。"
   ],
   "quest.01CBB2DD4D43F373.title": "工坊 · 压封行军餐",
   "quest.01CBB2DD4D43F373.quest_desc": [
-    "给压机下的工作盆放入 1 份料理、1 张铜板和 1 份热样胶。把压好的行军餐带到前线；吃下恢复 8 点饥饿值，并获得 90 秒抗火。"
+    "把 1 份料理、1 张铜板、1 份热样胶投入压机下的工作盆。压好行军餐，带一份出门；每份补充 8 点饥饿值，还能抗火 90 秒。",
+    "接下来任选一职。工兵留三盏引路灯，先锋吃下行军餐试战。两项都做，可以再接一单后队口粮。"
   ],
   "quest.4949B108C7E78A72.title": "回程 · 给地狱熔炉配料",
   "quest.4949B108C7E78A72.quest_desc": [
@@ -233,44 +254,53 @@
   "chapter.3ABD0124FB8AEDA1.title": "第五章 · 遗址远征",
   "quest.2A5C04757DCBFF09.title": "工坊配给 · 整装出发",
   "quest.2A5C04757DCBFF09.quest_desc": [
-    "装上 2 份热封行军餐，领取空地图和照明。选地下墓穴或林地府邸出发，带一份现场记录回来。"
+    "带上 2 份热封行军餐来领图纸、笔和照明。地下墓穴或林地府邸选一处走；这趟的要紧事，是让后来的人也能找到入口。",
+    "一处就可交差：写手记、拍照片或挑战当地首领。喜欢找路也有第四种办法：踏勘两处，到档案室展图。"
   ],
   "quest.4E12304BAD37FF5B.title": "墓穴线 · 找到地下墓穴",
   "quest.4E12304BAD37FF5B.quest_desc": [
-    "用归途指南针找铁魔法地下墓穴，或搜 irons_spellbooks:catacombs。走进结构稍作停留，档案台会记下坐标。"
+    "用归途指南针找铁魔法地下墓穴，或用探险者指南针搜 irons_spellbooks:catacombs。进门稍作停留，档案台便会记下坐标。",
+    "先踩出一条回地面的路。在入口写手记或拍照就可回程，想探内室再去找死者之王。"
   ],
   "quest.646D06C50CFE205B.title": "府邸线 · 查明林地据点",
   "quest.646D06C50CFE205B.quest_desc": [
-    "跟随林地探险家地图，或用指南针搜 minecraft:mansion。进入府邸稍作停留，记下第一个发现地点。"
+    "循林地探险家地图出发，或用探险者指南针搜 minecraft:mansion。进入府邸稍作停留，档案台会记住首个地点。",
+    "把靠近入口的房间记在手记里，或趁光线好留一帧。带了黑暗卷轴的队伍还可在这里挑战灾厄宰相。"
   ],
   "quest.33B054D584DD1602.title": "交回远征地图",
   "quest.33B054D584DD1602.quest_desc": [
-    "现场手记、遗址照片或当地首领战果，带回任意一种。回档案台，空手潜行右键选中墓穴或府邸。松开潜行，用空地图右键绘出返程图，下一章就靠它选址。"
+    "回档案台，空手潜行右键选中已发现的墓穴或府邸。松开潜行，手持空地图右键，换一张标好坐标的归档图。",
+    "手记、照片、当地战报或双地踏勘，交任一份。收起归档图，下一趟要给远征队安一只补给桶。",
+    "{\"text\":\"完成后翻开手记 · 地图给谁看\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"30BF0ECE49E4C122\"}}"
   ],
   "quest.3E5955E508399D8A.title": "自选讨伐 · 死者之王",
   "quest.3E5955E508399D8A.quest_desc": [
-    "深入墓穴，与沉睡的遗骸互动，唤醒并击败死者之王。先记住来路，再进内室。"
+    "先留好回程路线，再深入墓穴与沉睡的遗骸互动。击败现身的死者之王，这份战报可以用来归档，第六章驻地也会认领。",
+    "{\"text\":\"首领战册 · 死者之王\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"45966785EFF70FB9\"}}"
   ],
   "quest.093F5AD1EFBF4A19.title": "自选讨伐 · 灾厄宰相",
   "quest.093F5AD1EFBF4A19.quest_desc": [
-    "把黑色染料、魔法布料、不死图腾从上到下竖排，做成黑暗卷轴。在府邸内长按使用，击败现身的灾厄宰相。"
+    "把黑色染料、魔法布料、不死图腾从上到下竖排，制成黑暗卷轴。在府邸内长按使用，迎战灾厄宰相。本人或仆从留下的击败记录都能交差。",
+    "{\"text\":\"首领战册 · 灾厄宰相\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"69BAF0BABD7CB422\"}}"
   ],
   "chapter.2B9783ABBA2533ED.title": "第六章 · 前线补给站",
   "quest.50A0C915D6A748F0.title": "地图的另一端",
   "quest.50A0C915D6A748F0.quest_desc": [
-    "带普通指南针领木桶和营火，顺第五章的地图去设站。行粮、救援、蛙港货运，任选两项交班。"
+    "归档图上多了一个你亲自走过的地方。下一班人可没走过这趟。拿普通指南针领木桶和营火，沿图再走一次。",
+    "营地缺三样：能吃的、能救急的、能接下一箱货的。挑两项办妥，在遗址旁拆一包补给就能交班。"
   ],
   "quest.72AE6BEF433C5981.title": "把木桶留在遗址旁",
   "quest.72AE6BEF433C5981.quest_desc": [
-    "在归档标记水平半径 128 格内放木桶。任选一个侧面，在同高度紧贴放一堆点燃的营火。主手持普通指南针，潜行右键木桶盘点。"
+    "靠近归档标记找一块平地，水平半径 128 格内都可设站。墓穴深处难扎营，就到它正上方的地表。",
+    "在木桶任意一侧同高紧贴点燃营火，主手持普通指南针，潜行右键木桶盘点。看到库存数字，站址就定了。"
   ],
   "quest.171905731D32BC2C.title": "厨房排班 · 装一包行粮",
   "quest.171905731D32BC2C.quest_desc": [
-    "把 2 份热封行军餐、2 煤炭、2 木棍、1 纸放入压机下的工作盆。冷压出野外补给包；两包够一单。"
+    "用第三章的生产线接第一单。压机下的工作盆放 2 份热封行军餐、2 煤炭、2 木棍、1 纸，冷压一包。备齐两包就可送到营地。"
   ],
   "quest.659C865DF9E619B4.title": "救援排班 · 扎紧吊绳",
   "quest.659C865DF9E619B4.quest_desc": [
-    "用压机和工作盆把 1 金苹果、6 竹子、1 线、1 纸包成一份救援物资。两包够一单。"
+    "墓穴里要能止住伤势，也要有办法爬上来。在压机下用工作盆把 1 金苹果、6 竹子、1 线、1 纸压成一包。备齐两包交给营地。"
   ],
   "quest.5E571ACF5BDFCC0D.title": "货运试车 · 封上第一箱",
   "quest.5E571ACF5BDFCC0D.quest_desc": [
@@ -291,7 +321,9 @@
   ],
   "quest.77CBB65AB509D459.title": "交班 · 打开第一份储备",
   "quest.77CBB65AB509D459.quest_desc": [
-    "行粮到站、救援到站、蛙港收货，完成任意两项。带一包补给回到归档遗址附近，对空气右键拆开，供下一班队员取用。"
+    "三项业务有两项运转，补给站就能换班。带一包行粮或救援物资，到归档遗址水平 128 格内，对空气右键亲手拆包。",
+    "锅还可以接着煮，桶里的东西也留给下一趟。收下交班配给，再选一本适合自己的附魔书。",
+    "{\"text\":\"完成后翻开手记 · 桶边的火\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"30BF0ECE49E4C122\"}}"
   ],
   "quest.5318074CD6C4F2D3.title": "驻地餐桌 · 摆一桌盛宴",
   "quest.5318074CD6C4F2D3.quest_desc": [
@@ -307,7 +339,8 @@
   ],
   "quest.4DE233CFEF449102.title": "驻地委托 · 收回通行路线",
   "quest.4DE233CFEF449102.quest_desc": [
-    "死者之王和灾厄宰相任选一位讨伐，带回通行路线。第五章已经赢过的战斗会计入。"
+    "回到墓穴挑战死者之王，或在府邸邀战灾厄宰相。第五章已带回一份战报，驻地就可以直接结算这笔赏金。",
+    "{\"text\":\"查阅两份驻地悬赏\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"6A397FA1121CD9FD\"}}"
   ],
   "quest.48F94E85B08F7E71.title": "扩建验收 · 两套常备库存",
   "quest.48F94E85B08F7E71.quest_desc": [
@@ -320,8 +353,8 @@
   ],
   "quest.7BDB69CBFB808984.title": "噬星之刃 · 第一剑",
   "quest.7BDB69CBFB808984.quest_desc": [
-    "主手握噬星之刃，用剑身命中僵尸、骷髅、蜘蛛或普通史莱姆。按「打开噬星剑谱」查看当前阶段、成长点和下次进化条件。",
-    "按 G 或输入 /bladefolio 打开剑谱。开发版的 G 也绑定了饰品栏，指令可以直接翻开剑谱。",
+    "你还记不起这把剑的来历，先试试它的分量。主手持剑，近身命中僵尸、骷髅、蜘蛛或普通史莱姆。",
+    "按 G 或输入 /bladefolio 翻开剑谱，看离下一阶还差多少成长点。",
     "云朵瓶、赫尔墨斯靴、再生手环任选一件。领奖前可以翻开手册比较。",
     "{\"text\":\"查手册 · 开荒饰品怎么选\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"45935826E246E542\"}}"
   ],
@@ -342,7 +375,7 @@
   ],
   "quest.6B3AEF5579D1E440.title": "把饰品戴上",
   "quest.6B3AEF5579D1E440.quest_desc": [
-    "打开背包的饰品栏，戴上开荒饰品分册里的任意一件。已经戴过的可以取下再戴一次。",
+    "练熟一门兵器，再选一件搭配它的饰品。想越过落点就带云朵瓶，想在平地放风筝就穿跑鞋。把开荒分册里任意一件戴进背包的饰品栏。",
     "{\"text\":\"看七件开荒饰品 · 属性与获取\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"45935826E246E542\"}}",
     "{\"text\":\"翻开整本装备手册\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"684C355CAD5A8963\"}}"
   ],
@@ -350,7 +383,8 @@
   "quest.4EE951BF8047A144.quest_desc": [
     "备一顶金冠或铂金冠，在工作台用 8 个凝胶围住它，得到史莱姆皇冠。先把床和备用食物安顿在战场边。",
     "清出一段可横移的平地，放两层错开的平台。看到史莱姆王起跳，先离开落点再还击。",
-    "{\"text\":\"战前翻阅 · 装备手册\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"684C355CAD5A8963\"}}"
+    "{\"text\":\"战前翻阅 · 装备手册\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"684C355CAD5A8963\"}}",
+    "{\"text\":\"对照召唤物与退路\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"35B312A8CFC0CEFF\"}}"
   ],
   "quest.1AD32E2C8ED462C4.title": "老兵委托 · 三门兵器",
   "quest.1AD32E2C8ED462C4.quest_desc": [
@@ -599,5 +633,324 @@
     "困难模式 · 穿齐四件后，攻击敌人会提高生命再生速度。三种头部均可组成套装；其中钯金头饰还能增加 60 最大魔力。",
     "制作 · 用神锤敲祭坛显出钯金矿，粗钯金在地狱熔炉熔锭。重型工作台做头、胸、腿、靴分别用 12、24、10、8 锭，共 54 锭。",
     "{\"text\":\"返回「护甲与套装」\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"46BAC8D6E3A42B63\"}}"
-  ]
+  ],
+  "quest.36C3A881016E5E96.quest_subtitle": "备好两处工位，再选一种接法试车",
+  "quest.09E7B4F0FD881555.title": "试车 · 借齿轮变速",
+  "quest.09E7B4F0FD881555.quest_desc": [
+    "把大、小齿轮装在平行轴上，让它们沿对角咬合。转动大轮一侧的曲柄，观察小轮提速。这套接法以后能用来带搅拌器。"
+  ],
+  "quest.242E1BEFBFEA54C9.title": "试车 · 把货送到另一头",
+  "quest.242E1BEFBFEA54C9.quest_desc": [
+    "放两根平行的传动杆，用传送带依次右键两端连接。手摇一侧，放一块圆石试试去向。这条短带以后能给压机送料。"
+  ],
+  "quest.04E0645E6BC170B0.quest_subtitle": "变速或送件，任选一项试车",
+  "chapter.5A0FF97AED39E75E.chapter_subtitle": [
+    "镇里给了你一张床。带上旧剑，去看看通往边境的路。"
+  ],
+  "quest.69B3711BF25E107B.quest_subtitle": "边境取样与家中供能，可分头开工",
+  "quest.7A22062328908A03.quest_subtitle": "读数、实拍任选一项，再修同一座工坊的三处接口",
+  "quest.639520F140798DD7.title": "支线 · 侧线送料",
+  "quest.639520F140798DD7.quest_desc": [
+    "把安山漏斗贴在容器侧面，留好接料位置，让一件物品经漏斗进出。送铜锭去压机、收板材入库都可以。"
+  ],
+  "quest.75D5D64B85ED67C5.title": "支线 · 让矿料自己下楼",
+  "quest.75D5D64B85ED67C5.quest_desc": [
+    "在木桶下方接机械动力的溜槽，把一件物资从上层送到下层。可以把矿箱架高，给压机旁腾出操作位置。"
+  ],
+  "chapter.6BFCB3A5A742DFD0.chapter_subtitle": [
+    "边境的木头能做成胶。带着它和一把调谐器，把旧工坊接回动力。"
+  ],
+  "quest.1697E0EFFE71246B.quest_subtitle": "工程、奥术、远征三路任选两路",
+  "quest.7FB7517299ACEB24.quest_subtitle": "两类遗址与一场自选讨伐",
+  "quest.5FA8F40EDEF0CEE4.title": "档案室 · 给书架接一盏灯",
+  "quest.5FA8F40EDEF0CEE4.quest_desc": [
+    "摆一个雕纹书架，让红石比较器的输入端紧贴书架、输出端朝外。装入或取出不同格子的书，比较器强度会跟着变化。可在输出端接红石灯当借阅提示。"
+  ],
+  "quest.0A9DB7C97A0098E0.title": "档案室 · 机械臂接班",
+  "quest.0A9DB7C97A0098E0.quest_desc": [
+    "带上工程调查发给你的机械臂。用置物台作取件点、漏斗作交件点，手持机械臂标好输入和输出，再放下接轴供能。让它搬过一件样品。"
+  ],
+  "chapter.08D219867E4DF589.chapter_subtitle": [
+    "机械、术式和遗址各留下一条线索。带回两份完整的调查，合写一册档案。"
+  ],
+  "quest.2B08699FB66C78B4.quest_subtitle": "从工坊带走工具，让厨房同时开火",
+  "quest.01CBB2DD4D43F373.quest_subtitle": "两路物资在压机下汇合",
+  "quest.6A44FF99927AF1BD.quest_subtitle": "世界转折 · 血肉墙、血肉山任选一战",
+  "quest.47E563F85E3DF8A9.title": "拾回熔岩边的玩偶",
+  "quest.47E563F85E3DF8A9.quest_desc": [
+    "看准巫毒恶魔脚下的地面再交手，把掉落的向导巫毒玩偶收进背包。领走三盏灯笼，正好够替工兵标一条退路。"
+  ],
+  "quest.60F201F11C0C8BC9.title": "留给后队的一餐",
+  "quest.60F201F11C0C8BC9.quest_desc": [
+    "沿灯走过、在火里试过，这条路才好交给下一班。再封一份行军餐，在任务书中提交给后队。",
+    "领到的两只末影箱可一只留在工坊、一只带到前线。同一个人的两只箱子相通，赶路时能随手换装备。"
+  ],
+  "quest.60F201F11C0C8BC9.quest_subtitle": "双线委托 · 提交 1 份热封行军餐",
+  "quest.70B98B2219093652.quest_subtitle": "战后归档 · 困难模式开启",
+  "chapter.759CB26DEA732B94.chapter_subtitle": [
+    "厨房备餐，工坊封装。在下界开好退路，再决定何时迎战血肉首领。"
+  ],
+  "quest.6BEB2BDDDE4B91BF.quest_subtitle": "矿班、护卫任选一班，检验合格就能出队",
+  "quest.7E82D9E88152A714.quest_subtitle": "带两份热封行军餐去领下一张图",
+  "quest.190E463BF2347039.title": "矿班联勤 · 第一趟运矿车",
+  "quest.190E463BF2347039.quest_desc": [
+    "矿工留下铁轨，护卫清过沿途的敌人。备一辆运输矿车（箱子加矿车），再用可乘坐的普通矿车累计行驶 32 格，亲自试一趟线路。",
+    "领到的动力铁轨和红石块可以铺进坡道，把满载的车送回熔炉。"
+  ],
+  "quest.190E463BF2347039.quest_subtitle": "双线委托 · 运货有车，线路试过",
+  "chapter.2D5047AC1452BE5B.chapter_subtitle": [
+    "第一批新锭该做镐钻还是盔甲？挑一件眼下最需要的，带出工坊试一次。"
+  ],
+  "quest.2A5C04757DCBFF09.quest_subtitle": "单地取证，或双地踏勘",
+  "quest.3E5955E508399D8A.quest_subtitle": "墓穴讨伐 · 战果可代替勘察凭据",
+  "quest.093F5AD1EFBF4A19.quest_subtitle": "府邸讨伐 · 战果可代替勘察凭据",
+  "quest.4C762122353F6EE4.title": "双地踏勘 · 给后来者挂一张图",
+  "quest.4C762122353F6EE4.quest_desc": [
+    "两处遗址都走一遍。先在档案台绘一张归档图，把它挂进展示框；第二章已挂过图的也算。若展出的正是这趟绘的遗址图，一张图就够交差。",
+    "领回磁石和指南针。归档图标的是遗址，下次给补给站埋一块磁石，针就可以专指你选的站口。"
+  ],
+  "quest.4C762122353F6EE4.quest_subtitle": "联合委托 · 调查两个遗址，沿用档案室的地图展出记录",
+  "quest.33B054D584DD1602.quest_subtitle": "取到一种凭据后，把归档图带回前线",
+  "chapter.3ABD0124FB8AEDA1.chapter_subtitle": [
+    "去墓穴或府邸带回手记、照片或战果。愿意跑两地的测绘员，还可用展图交差。"
+  ],
+  "quest.50A0C915D6A748F0.quest_subtitle": "沿归档图重访遗址，行粮、救援、货运任选两项",
+  "quest.77CBB65AB509D459.quest_subtitle": "三单择二 · 回到前线拆包交班",
+  "quest.4DE233CFEF449102.quest_subtitle": "自选赏金 · 沿用第五章首领战果",
+  "quest.012D0526E5B8ACCB.title": "前后方联勤 · 随身库房",
+  "quest.012D0526E5B8ACCB.quest_desc": [
+    "第三章后队的两只末影箱派上用场了。一只放工坊，一只放营地，把自己常换的工具存进去，两头都能取。",
+    "累计打开末影箱两次即可交差。营地木桶照常用来盘点全队的货。"
+  ],
+  "quest.012D0526E5B8ACCB.quest_subtitle": "下界后队委托的后续 · 查两次个人库存",
+  "quest.3290EE38B2FFB48F.title": "测绘联勤 · 标出站口",
+  "quest.3290EE38B2FFB48F.quest_desc": [
+    "把双地踏勘领到的磁石安在站口，手持普通指南针对它右键。留一枚普通指南针盘货，把定过向的那枚带出门。",
+    "在同一维度，磁石指针会带你回到埋石的位置。已经学会校准磁石指南针的测绘员可以沿用原有进度。"
+  ],
+  "quest.3290EE38B2FFB48F.quest_subtitle": "双地踏勘的后续 · 给返程留一枚磁石指针",
+  "chapter.2B9783ABBA2533ED.chapter_subtitle": [
+    "在地图指向的地方留一个木桶。行粮、救援、货运办成两项，就能交班。"
+  ],
+  "chapter_group.529379A5653E5792.title": "远征主线",
+  "chapter_group.1AD67844174FBD9C.title": "随身手册",
+  "chapter.30BF0ECE49E4C122.title": "旅人手记",
+  "chapter.30BF0ECE49E4C122.chapter_subtitle": [
+    "翻到正在走的那一段。每完成一章，会留下一页手记。"
+  ],
+  "quest.342CE32A04725ED3.title": "这一路怎样走",
+  "quest.342CE32A04725ED3.quest_subtitle": "行程索引 · 章末添页",
+  "quest.342CE32A04725ED3.quest_desc": [
+    "先在小镇站稳脚，再到边境找那座停转的工坊。下面的地名能翻到对应章节；归来时，再看手记里添了什么。",
+    "{\"text\":\"序章 · 从小屋出发\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"4B61DD93ABC703EA\"}}",
+    "{\"text\":\"第一章 · 重启第一座工坊\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"69B3711BF25E107B\"}}",
+    "{\"text\":\"第二章 · 遗产调查\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"1697E0EFFE71246B\"}}",
+    "{\"text\":\"第三章 · 世界转折\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2B08699FB66C78B4\"}}",
+    "{\"text\":\"第四章 · 困难模式整备\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"6BEB2BDDDE4B91BF\"}}",
+    "{\"text\":\"第五章 · 遗址远征\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2A5C04757DCBFF09\"}}",
+    "{\"text\":\"第六章 · 前线补给站\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"50A0C915D6A748F0\"}}",
+    "{\"text\":\"查首领与世界变化\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"725098F959D2BC77\"}}",
+    "{\"text\":\"查装备与饰品\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"684C355CAD5A8963\"}}"
+  ],
+  "quest.20D18D2D7DDD7624.title": "第一次认得回家的路",
+  "quest.20D18D2D7DDD7624.quest_subtitle": "序章 · 从小屋出发 · 归来记",
+  "quest.20D18D2D7DDD7624.quest_desc": [
+    "我想不起自己从哪儿来，却已经认得回镇的路了。打倒史莱姆王以后，原先走不通的边境也能踏进去了。下次回镇，带一捆那边的木头。",
+    "{\"text\":\"翻回本章成果\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"259C64DF4D981F3C\"}}",
+    "{\"text\":\"下一站 · 重启第一座工坊\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"69B3711BF25E107B\"}}"
+  ],
+  "quest.22B7534252384322.title": "维修簿里的箭头",
+  "quest.22B7534252384322.quest_subtitle": "第一章 · 重启第一座工坊 · 归来记",
+  "quest.22B7534252384322.quest_desc": [
+    "在换向节点旁画一个箭头，在旁边写上八转。下一个来修工坊的人看到这两笔，就知道该从哪根轴开始查。原来一门手艺能这样留下来。",
+    "{\"text\":\"翻回本章成果\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"4FB59596BCAF8408\"}}",
+    "{\"text\":\"下一站 · 遗产调查\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"1697E0EFFE71246B\"}}"
+  ],
+  "quest.491818F96E80FB22.title": "翻开第一册档案",
+  "quest.491818F96E80FB22.quest_subtitle": "第二章 · 遗产调查 · 归来记",
+  "quest.491818F96E80FB22.quest_desc": [
+    "我翻开档案，本想找一个熟悉的名字。读到的却是能重新接好的机器、还可以施放的术式。黄金时代的人曾用这两种本领一同求知。要找回他们的历史，也许可以先学会他们做过的事。",
+    "{\"text\":\"翻回本章成果\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"76FC61C7DB7BD176\"}}",
+    "{\"text\":\"下一站 · 世界转折\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2B08699FB66C78B4\"}}"
+  ],
+  "quest.0A08588D8827B1D6.title": "神锤响过以后",
+  "quest.0A08588D8827B1D6.quest_subtitle": "第三章 · 世界转折 · 归来记",
+  "quest.0A08588D8827B1D6.quest_desc": [
+    "血肉首领倒下、地貌变化、神锤敲响祭坛。我把三件事分行记下，最后一行夹了一张新矿的炉料单。那些金属原本藏在哪里？等下一趟带回证据，再往下写。",
+    "{\"text\":\"翻回本章成果\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"24BA016E81A9BDB9\"}}",
+    "{\"text\":\"下一站 · 困难模式整备\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"6BEB2BDDDE4B91BF\"}}"
+  ],
+  "quest.740C87BDE3458FD6.title": "谁来试这批新料",
+  "quest.740C87BDE3458FD6.quest_subtitle": "第四章 · 困难模式整备 · 归来记",
+  "quest.740C87BDE3458FD6.quest_desc": [
+    "矿工想知道这把镐能再往下挖多深。护卫更关心一件胸甲能不能护住第二次交锋。工坊把问题交给真正要用它们的人，这批金属才有了去处。",
+    "{\"text\":\"翻回本章成果\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"7E82D9E88152A714\"}}",
+    "{\"text\":\"下一站 · 遗址远征\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2A5C04757DCBFF09\"}}"
+  ],
+  "quest.7CD0AE54FACE540B.title": "地图给谁看",
+  "quest.7CD0AE54FACE540B.quest_subtitle": "第五章 · 遗址远征 · 归来记",
+  "quest.7CD0AE54FACE540B.quest_desc": [
+    "来时我只想找到入口。把归档地图摊开，才发觉自己还得回答另一件事：没来过这里的人，怎样也能找到？下一趟就沿这张图走，在能落脚的地方点一堆火。",
+    "{\"text\":\"翻回本章成果\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"33B054D584DD1602\"}}",
+    "{\"text\":\"下一站 · 前线补给站\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"50A0C915D6A748F0\"}}"
+  ],
+  "quest.6CBF4D2D6EFF6D3B.title": "桶边的火",
+  "quest.6CBF4D2D6EFF6D3B.quest_subtitle": "第六章 · 前线补给站 · 归来记",
+  "quest.6CBF4D2D6EFF6D3B.quest_desc": [
+    "离开的时候，我把营火留在木桶旁。晚到的人可以在这里吃一顿饭，脚手架也有地方找。这本手记第一页，是别人留给我的一张床。到这里，我也给后来的人留了点东西。",
+    "{\"text\":\"翻回本章成果\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"77CBB65AB509D459\"}}",
+    "{\"text\":\"回站接一份扩建委托\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"48F94E85B08F7E71\"}}"
+  ],
+  "quest.7E2C4B05D19FA504.title": "两块木样",
+  "quest.7E2C4B05D19FA504.quest_subtitle": "夹页 · 边境采样",
+  "quest.7E2C4B05D19FA504.quest_desc": [
+    "乌木和暗影木并排时很好认。可它们都能磨出纤维，拌成同一种胶。要是只把成品带回去，谁还分得出它来自哪片林子？留一块原木，把采样地写在旁边。",
+    "{\"text\":\"翻到两地采样\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"5B7CF06798316864\"}}"
+  ],
+  "quest.7EE73780E77D801B.title": "镜头外的一行字",
+  "quest.7EE73780E77D801B.quest_subtitle": "夹页 · 两种现场记录",
+  "quest.7EE73780E77D801B.quest_desc": [
+    "旧人曾用精密的仪器望向群星。我只拍了一面墙，回来却分不清暗下来的是纹样，还是提灯挪开了一步。把站立的位置也写下来，下次请同伴从那里再看一眼。",
+    "{\"text\":\"再去现场记一笔\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"506301D381EF9278\"}}",
+    "{\"text\":\"把记录绘成回访图\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"33B054D584DD1602\"}}"
+  ],
+  "chapter.09226FAD78F877E5.title": "首领战册",
+  "chapter.09226FAD78F877E5.chapter_subtitle": [
+    "先找这场仗的用处，再准备召唤物和退路。"
+  ],
+  "quest.725098F959D2BC77.title": "先看这场仗的用处",
+  "quest.725098F959D2BC77.quest_subtitle": "世界门槛与自由讨伐",
+  "quest.725098F959D2BC77.quest_desc": [
+    "史莱姆王管边境，血肉首领管困难模式。想备战这两场，翻「世界转折」；想挑选一份适合当前配装的悬赏，翻后两册。",
+    "{\"text\":\"世界转折\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"0E3DE863E601BAF1\"}}",
+    "{\"text\":\"调查委托\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"6DC7AAD8E935A5D8\"}}",
+    "{\"text\":\"遗址悬赏\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"6A397FA1121CD9FD\"}}",
+    "{\"text\":\"查战前装备与饰品\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"684C355CAD5A8963\"}}"
+  ],
+  "quest.0E3DE863E601BAF1.title": "世界转折",
+  "quest.0E3DE863E601BAF1.quest_subtitle": "首领战册 · 选一位对手",
+  "quest.0E3DE863E601BAF1.quest_desc": [
+    "打赢后，整个存档都会看到变化。",
+    "{\"text\":\"史莱姆王\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"35B312A8CFC0CEFF\"}}",
+    "{\"text\":\"血肉墙／血肉山\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"29A906D9451C6C57\"}}",
+    "{\"text\":\"回到战册目录\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"725098F959D2BC77\"}}"
+  ],
+  "quest.35B312A8CFC0CEFF.title": "史莱姆王",
+  "quest.35B312A8CFC0CEFF.quest_subtitle": "序章 · 打开边境",
+  "quest.35B312A8CFC0CEFF.quest_desc": [
+    "工作台中央放金冠或铂金冠，周围摆 8 个凝胶。带上做好的史莱姆皇冠，到有横移空间的平地使用。",
+    "它收拢身体时先看落点。用跑鞋横移或用云朵瓶越过它，等它落稳再还击。击败本体后，全世界通往猩红和腐化的路开放；第一批边境木就是修工坊的原料。",
+    "{\"text\":\"翻到对应任务\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"441D1DEFF4C0B58E\"}}",
+    "{\"text\":\"挑一件开荒饰品\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"45935826E246E542\"}}",
+    "{\"text\":\"回到「世界转折」\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"0E3DE863E601BAF1\"}}"
+  ],
+  "quest.29A906D9451C6C57.title": "血肉墙／血肉山",
+  "quest.29A906D9451C6C57.quest_subtitle": "第三章 · 任一形态开启困难模式",
+  "quest.29A906D9451C6C57.quest_desc": [
+    "在下界先找一段可以持续移动的路线。手持向导巫毒玩偶长按使用，核对提示里的形态，再把玩偶丢入下界岩浆。",
+    "两种形态任选一场。打赢后世界进入困难模式，地形开始转化；带神锤敲祭坛，去找钴矿或钯金矿。档案台能查到战果和转化进度。",
+    "{\"text\":\"翻到对应任务\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"6A44FF99927AF1BD\"}}",
+    "{\"text\":\"回工坊准备行军餐\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"01CBB2DD4D43F373\"}}",
+    "{\"text\":\"回到「世界转折」\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"0E3DE863E601BAF1\"}}"
+  ],
+  "quest.6DC7AAD8E935A5D8.title": "调查委托",
+  "quest.6DC7AAD8E935A5D8.quest_subtitle": "首领战册 · 选一位对手",
+  "quest.6DC7AAD8E935A5D8.quest_desc": [
+    "第二章走远征路线时，六位对手任选一位，再走访两类遗迹。也可以用工程和奥术两线完成调查。",
+    "{\"text\":\"钢铁守护者\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"70C86B17DE824438\"}}",
+    "{\"text\":\"霜冻巨兽\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"703345080C40CC87\"}}",
+    "{\"text\":\"克苏鲁之眼\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"7C38FB547B8946B5\"}}",
+    "{\"text\":\"世界吞噬怪\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"7B536B4679847DC8\"}}",
+    "{\"text\":\"克苏鲁之脑\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"7733095C1A6E0486\"}}",
+    "{\"text\":\"骷髅领主\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"78A08FDC49D73D4E\"}}",
+    "{\"text\":\"回到战册目录\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"725098F959D2BC77\"}}"
+  ],
+  "quest.70C86B17DE824438.title": "钢铁守护者",
+  "quest.70C86B17DE824438.quest_subtitle": "第一章支线 · 战果可用于远征",
+  "quest.70C86B17DE824438.quest_desc": [
+    "用探险者指南针搜 mowziesmobs:wrought_chamber，进入地下石室。给巨斧留出空间，等重劈落空、斧头陷进地面，再绕到它背后出手。",
+    "赢下第一章「沉睡的铁甲」后，第二章可沿用战果。它的千锻巨斧可右键横扫，也可潜行右键震地。",
+    "{\"text\":\"翻到对应任务\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"01646532D249D22F\"}}",
+    "{\"text\":\"回到「调查委托」\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"6DC7AAD8E935A5D8\"}}"
+  ],
+  "quest.703345080C40CC87.title": "霜冻巨兽",
+  "quest.703345080C40CC87.quest_subtitle": "第二章 · 雪地远征",
+  "quest.703345080C40CC87.quest_desc": [
+    "到雪地寻找沉睡的巨兽；探险者指南针可搜 mowziesmobs:frostmaw_spawn。近身攻击会惊醒它，先留出绕到侧面的空间。",
+    "打倒本体可交一份远征战果。它仍握着冰霜结晶时由玩家击败，才有结晶可取；持晶长按右键能吹出冰霜旋风。",
+    "{\"text\":\"翻到对应任务\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2A804883BB0B2318\"}}",
+    "{\"text\":\"接单 · 雪地结晶回收\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"379A98862E2970D5\"}}",
+    "{\"text\":\"回到「调查委托」\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"6DC7AAD8E935A5D8\"}}"
+  ],
+  "quest.7C38FB547B8946B5.title": "克苏鲁之眼",
+  "quest.7C38FB547B8946B5.quest_subtitle": "第二章 · 夜间邀战",
+  "quest.7C38FB547B8946B5.quest_desc": [
+    "在祭坛用 6 个晶状体制作可疑眼球。选夜晚到开阔处使用，留出横向闪避冲刺的空间。",
+    "想走远征线又不愿深入墓室时，可以挑这一场；另两类遗迹勘察仍需实地完成。",
+    "{\"text\":\"翻到对应任务\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2A804883BB0B2318\"}}",
+    "{\"text\":\"回到「调查委托」\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"6DC7AAD8E935A5D8\"}}"
+  ],
+  "quest.7B536B4679847DC8.title": "世界吞噬怪",
+  "quest.7B536B4679847DC8.quest_subtitle": "第二章 · 腐化调查",
+  "quest.7B536B4679847DC8.quest_desc": [
+    "在祭坛以 30 份魔粉和 15 份腐肉制成蠕虫诱饵，带到腐化之地使用。魔粉可以用当地的魔菇研制。",
+    "把战场留在能看清地面的位置。它分节出土时先避开头部，整场战斗结束后再回档案台整理战果。",
+    "{\"text\":\"翻到对应任务\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2A804883BB0B2318\"}}",
+    "{\"text\":\"回到「调查委托」\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"6DC7AAD8E935A5D8\"}}"
+  ],
+  "quest.7733095C1A6E0486.title": "克苏鲁之脑",
+  "quest.7733095C1A6E0486.quest_subtitle": "第二章 · 猩红调查",
+  "quest.7733095C1A6E0486.quest_desc": [
+    "在祭坛用 30 份毒粉、15 个椎骨制作血腥脊椎，前往猩红之地使用。毒粉可由当地的毒蘑菇制成。",
+    "先腾出能反复转身的战场，处理围上来的随从，再追本体。选这一位也能交同一份远征委托。",
+    "{\"text\":\"翻到对应任务\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2A804883BB0B2318\"}}",
+    "{\"text\":\"回到「调查委托」\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"6DC7AAD8E935A5D8\"}}"
+  ],
+  "quest.78A08FDC49D73D4E.title": "骷髅领主",
+  "quest.78A08FDC49D73D4E.quest_subtitle": "第二章 · 大坟墓调查",
+  "quest.78A08FDC49D73D4E.quest_desc": [
+    "用探险者指南针搜 goety:crypt。进入大坟墓，先清开来路，再查看墓穴瓮；开瓮时可能遭遇领主。",
+    "目标是骷髅领主本体，已有诡厄对应击败成就也可登记。若补给不足，可以先撤回，另选同阶段对手。",
+    "{\"text\":\"翻到对应任务\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"2A804883BB0B2318\"}}",
+    "{\"text\":\"回到「调查委托」\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"6DC7AAD8E935A5D8\"}}"
+  ],
+  "quest.6A397FA1121CD9FD.title": "遗址悬赏",
+  "quest.6A397FA1121CD9FD.quest_subtitle": "首领战册 · 选一位对手",
+  "quest.6A397FA1121CD9FD.quest_desc": [
+    "死者之王和灾厄宰相各算一份现场凭据。也可以记手记、拍照片，或踏勘两地后展出归档图。",
+    "{\"text\":\"死者之王\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"45966785EFF70FB9\"}}",
+    "{\"text\":\"灾厄宰相\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"69BAF0BABD7CB422\"}}",
+    "{\"text\":\"回到战册目录\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"725098F959D2BC77\"}}"
+  ],
+  "quest.45966785EFF70FB9.title": "死者之王",
+  "quest.45966785EFF70FB9.quest_subtitle": "第五章 · 地下墓穴",
+  "quest.45966785EFF70FB9.quest_desc": [
+    "跟随归途指南针，或搜 irons_spellbooks:catacombs。深入墓室，与沉睡的遗骸互动才会唤醒死者之王。",
+    "若只想勘察，可以在惊醒它之前带走现场记录。决定开战时，先把退出内室的路认清。战果可用于第五章制图，也可留给第六章的驻地委托。",
+    "{\"text\":\"翻到对应任务\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"3E5955E508399D8A\"}}",
+    "{\"text\":\"回到「遗址悬赏」\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"6A397FA1121CD9FD\"}}"
+  ],
+  "quest.69BAF0BABD7CB422.title": "灾厄宰相",
+  "quest.69BAF0BABD7CB422.quest_subtitle": "第五章 · 林地府邸",
+  "quest.69BAF0BABD7CB422.quest_desc": [
+    "先找到原版林地府邸。工作台从上到下摆黑色染料、魔法布料和不死图腾，做成黑暗卷轴，在府邸内长按使用。",
+    "盯住宰相本体，分身倒下时继续观察。本人或仆从的原生讨伐成就都可承接；战果能作第五章的调查凭据。",
+    "{\"text\":\"翻到对应任务\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"093F5AD1EFBF4A19\"}}",
+    "{\"text\":\"接单 · 让仆从完成最后一击\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"40BC4833A91D03D1\"}}",
+    "{\"text\":\"回到「遗址悬赏」\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"6A397FA1121CD9FD\"}}"
+  ],
+  "quest.379A98862E2970D5.title": "雪地悬赏 · 带回冰霜结晶",
+  "quest.379A98862E2970D5.quest_desc": [
+    "雪地队要带回一件能继续研究的战利品。找到仍握着冰霜结晶的霜冻巨兽，亲自击败它，把结晶带在身上。",
+    "结晶留给出队的人，长按使用可吹出冰霜旋风。结账时另领取一双摔落保护靴和雪地铺路用的蓝冰。",
+    "{\"text\":\"查找巨兽和持晶条件\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"703345080C40CC87\"}}"
+  ],
+  "quest.379A98862E2970D5.quest_subtitle": "雪地自选 · 本人击败记录与一枚结晶",
+  "quest.40BC4833A91D03D1.title": "府邸悬赏 · 仆从收尾",
+  "quest.40BC4833A91D03D1.quest_desc": [
+    "把第二章的奥术实践带到府邸。这回由你牵制宰相，留给自己的诡厄仆从完成最后一击。",
+    "取得仆从击败宰相的成就可交这份额外战报，领回一个不死图腾和经验瓶。",
+    "{\"text\":\"查阅府邸邀战方法\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"69BAF0BABD7CB422\"}}"
+  ],
+  "quest.40BC4833A91D03D1.quest_subtitle": "奥术自选 · 仆从击败宰相本体"
 }
