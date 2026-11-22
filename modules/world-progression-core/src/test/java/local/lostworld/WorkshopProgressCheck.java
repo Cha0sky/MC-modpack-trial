@@ -17,6 +17,18 @@ final class WorkshopProgressCheck {
                 && WorkshopProgress.explorationKind("explorify:farmstead").equals("farmstead"),"Three genuine structure types stay distinct");
         check(WorkshopProgress.explorationKind("minecraft:village_plains").isEmpty()
                 && WorkshopProgress.explorationKind("explorify:end_shipwreck").isEmpty(),"Unrelated or late-dimension structures do not satisfy the early survey");
+        check(WorkshopTerrain.floor(new int[]{67,68,69,70,70,70,71,71,72},70,69)==70,
+                "A gentle slope keeps both workshop landings within one step of the floor");
+        check(WorkshopTerrain.floor(new int[]{64,65,66,66,66,67,67,68,69},67,68)==67,
+                "The entrance and cut limits can shift the floor away from the median");
+        check(WorkshopTerrain.floor(new int[]{66,67,68,69,70,71,72,73,74},70,70)==WorkshopTerrain.UNSUITABLE,
+                "A single rigid workshop must not straddle a cliff");
+        check(WorkshopTerrain.floor(new int[]{70,70,70},67,72)==WorkshopTerrain.UNSUITABLE,
+                "Level ground in the middle does not compensate for inaccessible approaches");
+        check(WorkshopTerrain.floor(new int[]{70,WorkshopTerrain.UNSUITABLE,70},70,70)==WorkshopTerrain.UNSUITABLE
+                        && WorkshopTerrain.floor(new int[]{70,70,70},70,WorkshopTerrain.UNSUITABLE)==WorkshopTerrain.UNSUITABLE,
+                "A wet footprint or flooded side approach rules out that orientation");
+        System.out.println("PASS: workshop foundation limits, dry footprint and both approaches");
         System.out.println("PASS: workshop consumed ingredients, persistent totals and distinct exploration categories");
     }
 }

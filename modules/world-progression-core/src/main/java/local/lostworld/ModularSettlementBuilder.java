@@ -30,6 +30,7 @@ import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.levelgen.structure.BoundingBox;
 import local.lostworld.SettlementGeometry.Point;
 import local.lostworld.SettlementGeometry.Rect;
+import local.lostworld.SettlementTerrainPreview.Footprint;
 
 /** Plan every authored town plot and connector before any placement. */
 public final class ModularSettlementBuilder {
@@ -42,7 +43,7 @@ public final class ModularSettlementBuilder {
     private static final int MAX_HOME_SITES=12,MAX_PLOT_CHECKS=384,MAX_PLOTS_PER_SITE=REQUIRED.size()*8;
     private record Voxel(int x,int y,int z,BlockState state) {}
     private record Template(String id,int width,int height,int depth,Point entry,Point desired,
-                            Point home,Point bed,List<Point> villagers,List<Voxel> blocks) {}
+                            Point home,Point bed,List<Point> villagers,List<Voxel> blocks,int[] lowestVoxel) {}
     private record Plot(Template template,Rect rect,int floor) {
         BlockPos origin() { return new BlockPos(rect.x(),floor,rect.z()); }
         Point entry() { return new Point(rect.x()+template.entry.x(),floor,rect.z()+template.entry.z()); }
@@ -50,6 +51,7 @@ public final class ModularSettlementBuilder {
     private record Road(List<Point> points,int[] heights) {}
     private record Site(int homeX,int homeZ,int score) {}
     private final ServerLevel level;
+    private final Map<Long,Integer> previewHeights=new HashMap<>();
     private final Map<Long,Integer> groundCache=new HashMap<>();
     private final Map<Long,List<BoundingBox>> structureCache=new HashMap<>();
     private final Map<Long,Integer> roadFloors=new HashMap<>();
@@ -75,21 +77,22 @@ public final class ModularSettlementBuilder {
         Template player=templates.get("player_home");
         BlockPos spawn=level.getSharedSpawnPos();
         List<Point> offsets=new ArrayList<>(List.of(new Point(0,0,0),new Point(-16,0,0),new Point(0,0,-16),
-                new Point(16,0,0),new Point(0,0,16),new Point(-16,0,-16),new Point(16,0,-16),new Point(-16,0,16)));
+                new Point(16,0,0),new Point(0,0,16),new Point(-16,0,-16),new Point(16,0,-16),new Point(-16,0,16),new Point(16,0,16)));
         offsets.addAll(SettlementLayout.siteOffsets());
         List<Site> candidates=new ArrayList<>();HashSet<Long> seen=new HashSet<>();
         for (Point offset:offsets) {
             int x=spawn.getX()-player.width/2+offset.x(),z=spawn.getZ()-player.depth/2+offset.z();
             if (!seen.add(key(x,z))) continue;
-            int score=preview(new Rect(x,z,player.width,player.depth));
-            if (score<0) continue;
-            // Score the entire authored town before spending the bounded terrain budget.
-            int penalty=0;
+            Footprint house=preview(new Rect(x,z,player.width,player.depth));
+            if (house==null) continue;
+            List<Footprint> terrain=new ArrayList<>();
+            terrain.add(house);
             for (String id:REQUIRED.subList(1,REQUIRED.size())) {
                 Template part=templates.get(id);
-                if (preview(new Rect(x+part.desired.x(),z+part.desired.z(),part.width,part.depth))<0) penalty+=48;
+                terrain.add(preview(new Rect(x+part.desired.x(),z+part.desired.z(),part.width,part.depth)));
             }
-            candidates.add(new Site(x,z,penalty+score*4+(Math.abs(offset.x())+Math.abs(offset.z()))/8));
+            int distance=Math.abs(offset.x())+Math.abs(offset.z());
+            candidates.add(new Site(x,z,SettlementTerrainPreview.siteCost(terrain,distance)));
         }
         candidates.sort(java.util.Comparator.comparingInt(Site::score));
         Plot home=null;int homeSites=0;
@@ -165,22 +168,33 @@ public final class ModularSettlementBuilder {
         return new SettlementBuilder.Result(data.settlement(),arrival,bed,blocks);
     }
 
-    private int preview(Rect area) {
+    private int previewHeight(int x,int z) {
         var source=level.getChunkSource();
         var generator=source.getGenerator();
         var random=source.randomState();
+        return previewHeights.computeIfAbsent(key(x,z),k->{
+            int height=generator.getBaseHeight(x,z,Heightmap.Types.OCEAN_FLOOR_WG,level,random);
+            if (height<=level.getSeaLevel() && !SettlementTerrainPreview.drySurface(height,
+                    generator.getBaseHeight(x,z,Heightmap.Types.WORLD_SURFACE_WG,level,random),level.getMinBuildHeight()))
+                return Integer.MIN_VALUE;
+            if (!level.getWorldBorder().isWithinBounds(new BlockPos(x,height,z))
+                    || generator.getBiomeSource().getNoiseBiome(x>>2,height>>2,z>>2,random.sampler()).is(EvilBoundary.LOCKED))
+                return Integer.MIN_VALUE;
+            return height;
+        });
+    }
+
+    private Footprint preview(Rect area) {
         int[] heights=new int[9]; int i=0,min=Integer.MAX_VALUE,max=Integer.MIN_VALUE;
         for (int dx:new int[]{0,area.width()/2,area.width()-1})
             for (int dz:new int[]{0,area.depth()/2,area.depth()-1}) {
                 int x=area.x()+dx,z=area.z()+dz;
-                int height=generator.getBaseHeight(x,z,Heightmap.Types.OCEAN_FLOOR_WG,level,random);
-                if (height<=level.getSeaLevel()) return -1;
-                if (!level.getWorldBorder().isWithinBounds(new BlockPos(x,height,z))
-                        || generator.getBiomeSource().getNoiseBiome(x>>2,height>>2,z>>2,random.sampler()).is(EvilBoundary.LOCKED)) return -1;
+                int height=previewHeight(x,z);
+                if (height==Integer.MIN_VALUE) return null;
                 heights[i++]=height; min=Math.min(min,height);max=Math.max(max,height);
-                if (max-min>12) return -1;
+                if (max-min>SettlementTerrainPreview.MAX_RELIEF) return null;
             }
-        return SettlementTerrainPreview.dryAndWithinSlope(heights,level.getSeaLevel())?max-min:-1;
+        return SettlementTerrainPreview.footprint(heights);
     }
 
     private boolean planPart(Template template,Plot home,int partLimit) {
@@ -228,9 +242,13 @@ public final class ModularSettlementBuilder {
     private boolean dryGround(int x,int z) {
         int y=ground(x,z);
         BlockPos pos=new BlockPos(x,y,z);
+        return level.getWorldBorder().isWithinBounds(pos) && dryFooting(pos) && !EvilBoundary.evil(level,pos);
+    }
+
+    private boolean dryFooting(BlockPos pos) {
         BlockState state=level.getBlockState(pos);
-        return level.getWorldBorder().isWithinBounds(pos) && y>=level.getSeaLevel()-1
-                && state.getFluidState().isEmpty() && state.isSolidRender(level,pos) && !EvilBoundary.evil(level,pos);
+        return state.getFluidState().isEmpty() && state.isSolidRender(level,pos)
+                && !(state.is(BlockTags.ICE) && !level.getFluidState(pos.below()).isEmpty());
     }
 
     private boolean planStreets() {
@@ -364,6 +382,9 @@ public final class ModularSettlementBuilder {
         if (top>floor+48 || top>=level.getMaxBuildHeight())
             return rejectedColumn("height",new BlockPos(x,top,z),null);
         BlockPos pos=new BlockPos(x,raw,z);
+        // A road also needs a solid footing when the whole road surface is above
+        // the terrain. In that case the clearance loop never looks at the raw cell.
+        if (!clearTree && !dryFooting(pos)) return rejectedColumn("unstable-footing",pos,null);
         if (!level.getWorldBorder().isWithinBounds(pos) || EvilBoundary.evil(level,pos)
                 || EvilBoundary.evil(level,new BlockPos(x,floor+1,z)))
             return rejectedColumn("border-or-evil",pos,null);
@@ -402,7 +423,7 @@ public final class ModularSettlementBuilder {
     private int ground(int x,int z) {
         return groundCache.computeIfAbsent(key(x,z),k->{
             int y=surface(x,z)-1;
-            while (y>level.getMinBuildHeight()+8) {
+            while (y>level.getMinBuildHeight()) {
                 BlockPos pos=new BlockPos(x,y,z); BlockState state=level.getBlockState(pos);
                 if (state.is(BlockTags.LOGS) || state.is(BlockTags.LEAVES) || state.is(Blocks.MUSHROOM_STEM)
                         || state.is(Blocks.BROWN_MUSHROOM_BLOCK) || state.is(Blocks.RED_MUSHROOM_BLOCK)
@@ -419,10 +440,14 @@ public final class ModularSettlementBuilder {
     private int placePlot(Plot plot) {
         Template template=plot.template;
         for (int x=0;x<template.width;x++) for (int z=0;z<template.depth;z++) {
+            int lowest=template.lowestVoxel[x*template.depth+z];
+            if (lowest==Integer.MAX_VALUE) continue;
             int wx=plot.rect.x()+x,wz=plot.rect.z()+z;
             int raw=ground(wx,wz),top=Math.max(plot.floor+template.height+2,surface(wx,wz));
-            fillFoundation(wx,wz,plot.floor,raw);
-            for (int y=plot.floor+1;y<=top;y++) set(new BlockPos(wx,y,wz),Blocks.AIR.defaultBlockState());
+            // Support the authored floor. Eaves have clearance at their height
+            // while the ground underneath them keeps its natural contour.
+            if (lowest==0) fillFoundation(wx,wz,plot.floor,raw);
+            for (int y=plot.floor+Math.max(1,lowest);y<=top;y++) set(new BlockPos(wx,y,wz),Blocks.AIR.defaultBlockState());
         }
         for (Voxel voxel:template.blocks)
             if (!(voxel.state.getBlock() instanceof CropBlock))
@@ -493,9 +518,17 @@ public final class ModularSettlementBuilder {
                 for (var entry:module.getAsJsonArray("palette"))
                     palette.add(BlockStateParser.parseForBlock(level.holderLookup(Registries.BLOCK),entry.getAsString(),false).blockState());
                 List<Voxel> voxels=new ArrayList<>();
+                int depth=size.get(2).getAsInt();
+                int[] lowestVoxel=new int[size.get(0).getAsInt()*depth];
+                java.util.Arrays.fill(lowestVoxel,Integer.MAX_VALUE);
                 for (var entry:module.getAsJsonArray("blocks")) {
                     JsonArray b=entry.getAsJsonArray();
-                    voxels.add(new Voxel(b.get(0).getAsInt(),b.get(1).getAsInt(),b.get(2).getAsInt(),palette.get(b.get(3).getAsInt())));
+                    Voxel voxel=new Voxel(b.get(0).getAsInt(),b.get(1).getAsInt(),b.get(2).getAsInt(),palette.get(b.get(3).getAsInt()));
+                    voxels.add(voxel);
+                    if (!voxel.state.isAir()) {
+                        int column=voxel.x*depth+voxel.z;
+                        lowestVoxel[column]=Math.min(lowestVoxel[column],voxel.y);
+                    }
                 }
                 List<Point> villagers=new ArrayList<>();
                 for (var entry:module.getAsJsonArray("villagers")) villagers.add(point(entry.getAsJsonArray()));
@@ -503,7 +536,7 @@ public final class ModularSettlementBuilder {
                 Template template=new Template(module.get("id").getAsString(),size.get(0).getAsInt(),size.get(1).getAsInt(),size.get(2).getAsInt(),
                         point(module.getAsJsonArray("entry")),new Point(desired.get(0).getAsInt(),0,desired.get(1).getAsInt()),
                         module.has("home")?point(module.getAsJsonArray("home")):null,module.has("bed")?point(module.getAsJsonArray("bed")):null,
-                        villagers,voxels);
+                        villagers,voxels,lowestVoxel);
                 templates.put(template.id,template);
             }
             return templates;

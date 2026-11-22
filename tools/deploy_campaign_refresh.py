@@ -17,7 +17,7 @@ GUIDE_RELEASE = "a0805e1"
 JOURNEY_RELEASE = "52bec6b"
 CHAPTERS = tuple(leg.filename for leg in LEGS) + (GEAR_GUIDE, JOURNAL, BESTIARY)
 BUILDS = (
-    ("world-progression-core", "world_progression_core", "0.1.0", "0.7.1-campaign", "0.8.0-production"),
+    ("world-progression-core", "world_progression_core", "0.1.0", "0.8.0-production", "0.8.1-terrain"),
     ("evolvingblade", "evolvingblade", "1.1.0", "1.1.0", "1.1.4-longsword"),
     ("rpgleveling", "rpgleveling", "1.0.0", "1.0.0", "1.0.1-fieldguide"),
 )
@@ -115,7 +115,7 @@ def book_updates(instance, *, guide_only):
     return payloads
 
 
-def main(apply, blade_only=False, guide_only=False, book_only=False, production_only=False):
+def main(apply, blade_only=False, guide_only=False, book_only=False, production_only=False, terrain_only=False):
     instance = INSTANCE.resolve(strict=True)
     if instance != INSTANCE:
         raise RuntimeError("Unexpected development instance")
@@ -131,13 +131,13 @@ def main(apply, blade_only=False, guide_only=False, book_only=False, production_
     for module, mod_id, filename_version, old, new in BUILDS:
         if blade_only and mod_id != "evolvingblade":
             continue
-        if production_only and mod_id != "world_progression_core":
+        if (production_only or terrain_only) and mod_id != "world_progression_core":
             continue
         path = Path("mods") / f"{module}-{filename_version}.jar"
         jar = ROOT / "modules" / module / "build/libs" / f"{module}-{new}.jar"
         compatible = {old, new}
-        if mod_id == "world_progression_core":
-            compatible.add("0.7.0-frontline")
+        if mod_id == "world_progression_core" and not terrain_only:
+            compatible.update(("0.7.0-frontline", "0.7.1-campaign"))
         if mod_id == "evolvingblade":
             compatible.update(("1.1.1-folio", "1.1.2-pixels", "1.1.3-longsword"))
         if mod_version(jar, mod_id) != new or mod_version(instance / path, mod_id) not in compatible:
@@ -151,6 +151,9 @@ def main(apply, blade_only=False, guide_only=False, book_only=False, production_
                          module_versions=module_versions)
         return
 
+    if terrain_only:
+        install_payloads(instance, payloads, "structure-terrain", BUILDS[0][-1], apply, module_versions=module_versions)
+        return
     payloads.update(book_updates(instance, guide_only=False))
     name = "production-campaign" if production_only else "campaign-refresh"
     install_payloads(instance, payloads, name, BUILDS[0][-1], apply, module_versions=module_versions)
@@ -160,9 +163,10 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--apply", action="store_true")
     scope = parser.add_mutually_exclusive_group()
+    scope.add_argument("--terrain-only", action="store_true", help="Update only terrain generation in the progression core")
     scope.add_argument("--production-only", action="store_true", help="Install the production core and changed quests")
     scope.add_argument("--book-only", action="store_true", help="Update only campaign chapters, groups and language")
     scope.add_argument("--guide-only", action="store_true", help="Install the equipment guide and its mainline links")
     scope.add_argument("--blade-only", action="store_true", help="Only replace the growth sword module")
     args = parser.parse_args()
-    main(args.apply, args.blade_only, args.guide_only, args.book_only, args.production_only)
+    main(args.apply, args.blade_only, args.guide_only, args.book_only, args.production_only, args.terrain_only)

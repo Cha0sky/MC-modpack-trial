@@ -68,8 +68,22 @@ def main():
         'RequiredPlayerRange':short(8),'SpawnRange':short(2),
         'SpawnData':compound({'entity':compound({'id':string('minecraft:skeleton')})})}
 
+    # Only the authored footprint clears terrain. Keep the building interior and two blocks
+    # of headroom on each walkable column, including both openings and the exterior stairs.
+    air='minecraft:air'
+    ceilings={}
+    for x in range(width):
+        for z in range(depth):
+            top=max((y for y in range(height) if states[x,y,z]!=air),default=-1)
+            if top<0: continue
+            side_landing=x<=2 and z in (11,12)
+            if top==0 and states[x,0,z] in ('minecraft:coarse_dirt','minecraft:moss_block') and not side_landing:
+                continue
+            ceilings[x,z]=min(top+2,height-1)
     palette=[]; seen={}; blocks=[]
     for pos,state in states.items():
+        x,y,z=pos
+        if y>ceilings.get((x,z),-1): continue
         if state not in seen:
             name,properties=state_parts(state)
             entry={'Name':string(name)}
@@ -86,14 +100,11 @@ def main():
     write_json('worldgen/template_pool/abandoned_workshop.json',{
         'name':'world_progression_core:abandoned_workshop','fallback':'minecraft:empty',
         'elements':[{'weight':1,'element':{'element_type':'minecraft:single_pool_element',
-            'location':'world_progression_core:abandoned_workshop','processors':{'processors':[]},'projection':'rigid'}}]})
+            'location':'world_progression_core:abandoned_workshop','processors':{'processors':[
+                {'processor_type':'world_progression_core:workshop_footing'}]},'projection':'rigid'}}]})
     write_json('worldgen/structure/abandoned_workshop.json',{
-        'type':'minecraft:jigsaw','biomes':'#world_progression_core:has_structure/workshop',
-        # In 1.21.1 the start piece is only added to the saved structure when depth > 0.
-        # This template has no jigsaw connectors, so depth 1 still places just one piece.
-        'start_pool':'world_progression_core:abandoned_workshop','size':1,
-        'start_height':{'absolute':0},'project_start_to_heightmap':'WORLD_SURFACE_WG',
-        'max_distance_from_center':32,'use_expansion_hack':False,
+        'type':'world_progression_core:workshop','biomes':'#world_progression_core:has_structure/workshop',
+        'start_pool':'world_progression_core:abandoned_workshop',
         'terrain_adaptation':'beard_thin','step':'surface_structures','spawn_overrides':{}})
     write_json('worldgen/structure_set/abandoned_workshop.json',{
         'structures':[{'structure':'world_progression_core:abandoned_workshop','weight':1}],
@@ -105,15 +116,19 @@ def main():
 
     # One resource check: imported shape and all active devices must survive conversion.
     readback=NbtReader(gzip.decompress(target.read_bytes())).root()
-    assert readback['size']==layout['size'] and len(readback['blocks'])==width*height*depth
+    assert readback['size']==layout['size'] and len(readback['blocks'])==sum(y+1 for y in ceilings.values())
     names=[entry['Name'] for entry in readback['palette']]
     devices=[b for b in readback['blocks'] if names[b['state']].startswith('world_progression_core:workshop_')]
     assert len(devices)==4 and all('nbt' not in b for b in devices)
+    placed={tuple(b['pos']):names[b['state']] for b in readback['blocks']}
+    for x,y,z in [layout['entrance'],layout['side_entrance'],(8,1,0),(0,1,11)]:
+        assert placed[x,y,z]==placed[x,y+1,z]==air and placed[x,y-1,z]!=air
+    assert (0,0,0) not in placed and all(placed[tuple(relay['connection'])]==air for relay in layout['relays'])
     report={'structure_id':layout['structure_id'],'size':layout['size'],
-            'blocks_with_air':len(blocks),'palette_states':len(palette),
+            'blocks_with_air':len(blocks),'floor_columns':len(ceilings),'palette_states':len(palette),
             'device_positions':[b['pos'] for b in devices],
             'source':'assets/workshop-rekindled/abandoned-workshop.schem',
-            'runtime':'vanilla jigsaw template in new chunks only','game_launched':False}
+            'runtime':'terrain-fitted vanilla pool piece in new chunks only','game_launched':False}
     (ASSETS/'build-report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(json.dumps(report,ensure_ascii=False))
 

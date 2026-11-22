@@ -58,5 +58,9 @@ public final class WorkshopContent {
             ()->new HeritageArchiveBlock(BlockBehaviour.Properties.of().strength(2.5F).sound(SoundType.WOOD)));
     public static final DeferredItem<BlockItem> ARCHIVE_ITEM=ITEMS.registerSimpleBlockItem(ARCHIVE);
     private WorkshopContent() {}
-    public static void register(IEventBus bus) { BLOCKS.register(bus);ITEMS.register(bus); }
+    public static void register(IEventBus bus) {
+        BLOCKS.register(bus);
+        ITEMS.register(bus);
+        WorkshopStructure.register(bus);
+    }
 }

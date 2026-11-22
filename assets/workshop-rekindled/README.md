@@ -6,9 +6,11 @@
 
 1. `python assets/workshop-rekindled/generate_operations.py` 生成 Minecraft Builder 操作源与布局。
 2. Minecraft Builder 以 Java 1.21.1 导出 `abandoned-workshop.schem`。渲染图保存同目录，预览中有色羊毛代表设备占位；导入时替换为本包设备。
-3. `python tools/build_workshop_structure.py` 生成标准 `structure/abandoned_workshop.nbt` 及单模板 jigsaw 世界生成资源。运行时不需要 WorldEdit。
+3. `python tools/build_workshop_structure.py` 生成标准 `structure/abandoned_workshop.nbt`、模板池和工坊选址配置。保留建筑内部、露台和入口的空间，省去空院边缘与房顶以上的多余空气。当前模板在 346 个有效底柱上写入 4,207 项方块和空气。
 
-结构、结构集与模板池 ID 均为 `world_progression_core:abandoned_workshop`。结构只在未生成区块自然出现，选择平原、向日葵平原、森林、繁花森林和白桦林等主世界陆地群系。随机间距24区块、最小分离10区块，避开自然村庄结构集4区块范围。单片刚性模板使用 `beard_thin` 地形衔接，不运行自定义世界放置脚本。
+结构、结构集与模板池 ID 均为 `world_progression_core:abandoned_workshop`。平原、向日葵平原、森林、繁花森林和白桦林等主世界陆地群系参与生成。结构集使用 24 区块间距、10 区块分离及原有盐值，避开自然村庄结构集 4 区块范围。已有勘测图与已保存的原生拼图结构块继续按原坐标读取。
+
+候选区块依种子打乱四个朝向。分别采样主厅、动力翼和楼梯范围的九个地面点，再查主入口与侧门走出建筑后的落脚处。用生成器的地表和海床高度识别水面，选靠近地面中位数的底板高度。九点允许最多削高 2 格、填低 3 格，两处入口与各自门外地面最多相差 1 格。合格时按原生刚性拼图片保存，沿用 `beard_thin`；四向都不合适则留待下个候选区块。在实际铺设的底层下面，石木主体用圆石、入口碎石路用泥土，最多向下补 3 格空隙，只在当次放置的区块范围写入。
 
 ## 运行时接口
 

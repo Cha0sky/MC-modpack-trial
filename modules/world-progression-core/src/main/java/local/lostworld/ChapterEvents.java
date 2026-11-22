@@ -3,12 +3,16 @@ package local.lostworld;
 import com.evolvingblade.growth.GrowthMode;
 import com.evolvingblade.growth.GrowthService;
 import com.evolvingblade.registry.EBItems;
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.vehicle.DismountHelper;
+import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.level.Level;
 import net.neoforged.bus.api.EventPriority;
@@ -58,15 +62,32 @@ public final class ChapterEvents {
         if (!data.arrived(player.getUUID())) gift(player);
         if (!data.hasSettlement()) { EvilBoundary.enforce(player); return; }
         if (!data.arrived(player.getUUID())) {
-            var home = data.home();
-            player.teleportTo(player.server.overworld(),home.getX()+0.5,home.getY(),home.getZ()+0.5,180,0);
-            player.setRespawnPosition(Level.OVERWORLD,data.bed(),180,false,false);
+            ServerLevel town = player.server.overworld();
+            Vec3 landing = homeLanding(town,data.home());
+            if (landing != null) {
+                player.teleportTo(town,landing.x,landing.y,landing.z,180,0);
+                player.sendSystemMessage(Component.literal("你在一间小屋里醒来。村民说，找到你时，你身边只有这把剑。这里可以成为你的第一个家。"));
+            } else {
+                player.sendSystemMessage(Component.literal("镇上的旧屋已经改建，屋里没有安全的落脚处。先在此落脚，再回镇看看。"));
+            }
+            if (town.getBlockState(data.bed()).is(BlockTags.BEDS))
+                player.setRespawnPosition(Level.OVERWORLD,data.bed(),180,false,false);
             data.markArrival(player.getUUID());
-            player.sendSystemMessage(Component.literal("你在一间小屋里醒来。村民说，找到你时，你身边只有这把剑。这里可以成为你的第一个家。"));
         }
         award(player,"arrive");
         if (data.state().defeated()) award(player,"unlock_evil");
         EvilBoundary.enforce(player);
+    }
+
+    static Vec3 homeLanding(ServerLevel town,BlockPos home) {
+        // The authored spot comes first. A later arrival can still use the room
+        // if the first player has built furniture on the original spot.
+        for (BlockPos spot:BlockPos.withinManhattan(home,4,1,4)) {
+            if (!town.getFluidState(spot).isEmpty() || !town.getFluidState(spot.above()).isEmpty()) continue;
+            Vec3 landing=DismountHelper.findSafeDismountLocation(EntityType.PLAYER,town,spot,true);
+            if (landing!=null) return landing;
+        }
+        return null;
     }
     public static void gift(ServerPlayer player) {
         if (!GrowthService.data(player).hasMode()) GrowthService.chooseMode(player,GrowthMode.STANDARD);

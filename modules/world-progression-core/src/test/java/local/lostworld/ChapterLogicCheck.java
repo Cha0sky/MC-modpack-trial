@@ -30,13 +30,22 @@ public final class ChapterLogicCheck {
         check(!fresh.blocksEvil(true,false),"Unlocked biome accessible");
         ChapterState reload = new ChapterState(fresh.active(),fresh.defeated());
         check(!reload.blocksEvil(true,false),"Persisted world remains unlocked");
-        check(SettlementTerrainPreview.dryAndWithinSlope(new int[]{70,70,70,70,70,70,70,70,70},63),"Dry inland footprint allowed");
-        check(!SettlementTerrainPreview.dryAndWithinSlope(new int[]{62,70,70,70,70,70,70,70,70},63),"Wet corner rejected even with a dry centre");
-        check(!SettlementTerrainPreview.dryAndWithinSlope(new int[]{70,70,70,70,63,70,70,70,70},63),"Sea-level centre rejected");
-        check(SettlementTerrainPreview.dryAndWithinSlope(new int[]{64,70,76,70,70,70,70,70,70},63),"Twelve-block rise remains allowed");
-        check(!SettlementTerrainPreview.dryAndWithinSlope(new int[]{64,70,77,70,70,70,70,70,70},63),"Thirteen-block rise rejected before chunk loading");
-        check(!SettlementTerrainPreview.dryAndWithinSlope(new int[]{58,58,58,58,58,58,58,58,58},63),"Ocean bottom is not land");
-        System.out.println("PASS: inland preview, water at edges, sea-level and slope boundaries");
+        check(SettlementTerrainPreview.drySurface(-60,-60,-64),"Dry superflat ground below sea level is usable");
+        check(!SettlementTerrainPreview.drySurface(58,63,-64),"Submerged ground is rejected");
+        check(!SettlementTerrainPreview.drySurface(-64,-64,-64),"An empty void has no footing");
+        var slope=SettlementTerrainPreview.footprint(new int[]{64,70,76,70,70,70,70,70,70});
+        check(slope!=null && slope.median()==70 && slope.relief()==12,"Twelve-block footprint relief is allowed");
+        check(SettlementTerrainPreview.footprint(new int[]{64,70,77,70,70,70,70,70,70})==null,"Steep footprint rejected");
+        var flat=new SettlementTerrainPreview.Footprint(70,0);
+        var ledge=new SettlementTerrainPreview.Footprint(93,0);
+        int gentle=SettlementTerrainPreview.siteCost(java.util.List.of(flat,flat,flat),32);
+        check(gentle<SettlementTerrainPreview.siteCost(java.util.List.of(flat,flat,ledge),0),
+                "A nearby level street outranks a spawn house overlooking a cliff");
+        check(gentle<SettlementTerrainPreview.siteCost(java.util.List.of(flat,slope,slope),0),
+                "Terrain under the other buildings affects the rank of a flat home");
+        check(SettlementTerrainPreview.siteCost(java.util.Arrays.asList(flat,null,flat),0)>gentle,
+                "Plots that need to move cost more but still leave an alternative");
+        System.out.println("PASS: whole-town terrace ranking, dry lowlands, drowned sites and void");
         System.out.println("PASS: chapter state, root boss identity, idempotency, restore and old-world passivity");
     }
 }

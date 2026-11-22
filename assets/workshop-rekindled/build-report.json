@@ -5,7 +5,8 @@
     17,
     20
   ],
-  "blocks_with_air": 8160,
+  "blocks_with_air": 4207,
+  "floor_columns": 346,
   "palette_states": 49,
   "device_positions": [
     [
@@ -30,6 +31,6 @@
     ]
   ],
   "source": "assets/workshop-rekindled/abandoned-workshop.schem",
-  "runtime": "vanilla jigsaw template in new chunks only",
+  "runtime": "terrain-fitted vanilla pool piece in new chunks only",
   "game_launched": false
 }
