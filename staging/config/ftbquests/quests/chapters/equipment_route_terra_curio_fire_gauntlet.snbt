@@ -19,7 +19,12 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "508CAFA75C2C4012",
+          "type": "checkmark"
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -37,9 +42,20 @@
       "x": 6,
       "y": 12.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "4858CCA43490DD5A",
+          "type": "item",
+          "item": {
+            "id": "confluence:arcane_flower",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "48144649D7C6093F",
@@ -60,9 +76,20 @@
       "x": 6,
       "y": 9.600000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "69575BC210EE0139",
+          "type": "item",
+          "item": {
+            "id": "confluence:celestial_emblem",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "288A71F0459715AB",
@@ -83,9 +110,20 @@
       "x": 0,
       "y": 0.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "3213C4558ADED409",
+          "type": "item",
+          "item": {
+            "id": "confluence:celestial_magnet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -103,9 +141,20 @@
       "x": 6,
       "y": 8.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "204DE57EAE78A0B4",
+          "type": "item",
+          "item": {
+            "id": "confluence:magnet_flower",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "288A71F0459715AB",
@@ -126,9 +175,20 @@
       "x": 6,
       "y": 16.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "3A16CBE26BC38FF1",
+          "type": "item",
+          "item": {
+            "id": "confluence:mana_cloak",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "48144649D7C6093F",
@@ -149,9 +209,20 @@
       "x": 3,
       "y": 8.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "5BB0A7FD7E53DD20",
+          "type": "item",
+          "item": {
+            "id": "confluence:mana_flower",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "72BEB0858D5B5DCE"
@@ -171,9 +242,20 @@
       "x": 0,
       "y": 1.5999999999999996,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "6924BB91C0A52B34",
+          "type": "item",
+          "item": {
+            "id": "confluence:natures_gift",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -191,9 +273,20 @@
       "x": 0,
       "y": 3.1999999999999993,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "51241A5FAB8ACCB2",
+          "type": "item",
+          "item": {
+            "id": "confluence:summoner_emblem",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -211,9 +304,20 @@
       "x": 3,
       "y": 17.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "5839D3593234945F",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:avenger_emblem",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "0442C4948EC96FEF",
@@ -236,9 +340,20 @@
       "x": 6,
       "y": 14.4,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "6C8B712D43DFD154",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:berserkers_glove",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "0AA2CBB2658F0BE6",
@@ -259,9 +374,20 @@
       "x": 6,
       "y": 11.200000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "709DAAA3A5CC3A7D",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:destroyer_emblem",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "299A3BBA310F614C",
@@ -282,9 +408,20 @@
       "x": 0,
       "y": 4.800000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "2B50456A5771585F",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:eye_of_the_golem",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -302,9 +439,20 @@
       "x": 0,
       "y": 6.4,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "280454E6B0F6F232",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:feral_claws",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -322,9 +470,20 @@
       "x": 9,
       "y": 12.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "092C81DA4264BE68",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:fire_gauntlet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "1B37AC6EDB77F25B",
@@ -345,9 +504,20 @@
       "x": 0,
       "y": 8.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "77E2E6A81FC1179B",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:flesh_knuckles",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -365,9 +535,20 @@
       "x": 3,
       "y": 11.200000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "6B429809A3251F67",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:frozen_shield",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "5BFC5CC0CD35C8F5",
@@ -388,9 +569,20 @@
       "x": 0,
       "y": 9.600000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "3E846DA704279CB6",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:frozen_turtle_shell",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -408,9 +600,20 @@
       "x": 3,
       "y": 9.600000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "6F96C841ED01D506",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:hero_shield",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "0AA2CBB2658F0BE6",
@@ -431,9 +634,20 @@
       "x": 0,
       "y": 11.200000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "1E37E354EFBFA655",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:magic_quiver",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -451,9 +665,20 @@
       "x": 0,
       "y": 12.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "5BC274C9143FF582",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:magma_stone",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -471,9 +696,20 @@
       "x": 6,
       "y": 17.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "0F1932FC4C75E8A5",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:mechanical_glove",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "299A3BBA310F614C",
@@ -494,9 +730,20 @@
       "x": 3,
       "y": 12.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "1CE533CF2D6D9ADC",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:molten_quiver",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "042ADC9268FA7231",
@@ -517,9 +764,20 @@
       "x": 0,
       "y": 14.4,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "4DCCCEB4F98076DC",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:paladins_shield",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -537,9 +795,20 @@
       "x": 3,
       "y": 16.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "326E146931D4F42C",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:power_glove",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "6BA2FE67EBB2FAD2",
@@ -560,9 +829,20 @@
       "x": 0,
       "y": 16.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "2DE8F64A20557347",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:putrid_scent",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -580,9 +860,20 @@
       "x": 0,
       "y": 17.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "0CFD5F60FB9156BF",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:ranger_emblem",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -600,9 +891,20 @@
       "x": 12,
       "y": 12.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "09F590FBA97D40A6",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:recon_scope",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "760678A83909CD39",
@@ -623,9 +925,20 @@
       "x": 0,
       "y": 19.200000000000003,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "12E99E0C84BA798A",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:rifle_scope",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -643,9 +956,20 @@
       "x": 9,
       "y": 13.600000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "608F6D2755958E94",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:sniper_scope",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "551A3C998097F525",
@@ -666,9 +990,20 @@
       "x": 0,
       "y": 20.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "2863932EA29CDD05",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:sorcerer_emblem",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -686,9 +1021,20 @@
       "x": 3,
       "y": 14.4,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "572E85C579DED2E6",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:stalkers_quiver",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "042ADC9268FA7231",
@@ -709,9 +1055,20 @@
       "x": 0,
       "y": 22.400000000000002,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "2836DC2DEA084E6F",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:star_cloak",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -729,9 +1086,20 @@
       "x": 0,
       "y": 24.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "55A31BAD0EBDEAD7",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:titan_glove",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -749,9 +1117,20 @@
       "x": 0,
       "y": 25.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "2166DD6E14D10C4F",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:warrior_emblem",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",

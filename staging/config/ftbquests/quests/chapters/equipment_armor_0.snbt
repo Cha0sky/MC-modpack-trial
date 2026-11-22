@@ -19,7 +19,12 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "56D7F901C82E8EA3",
+          "type": "checkmark"
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -39,7 +44,12 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "4F4B4466C14D8808",
+          "type": "checkmark"
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -57,9 +67,20 @@
       "x": 0.0,
       "y": 2.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "02335A16AF3056EA",
+          "type": "item",
+          "item": {
+            "id": "confluence:mime_mask",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -77,9 +98,20 @@
       "x": 1.6,
       "y": 2.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "1C75A28B86367804",
+          "type": "item",
+          "item": {
+            "id": "confluence:familiar_wig",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -97,9 +129,20 @@
       "x": 3.2,
       "y": 2.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "09594A474E15923D",
+          "type": "item",
+          "item": {
+            "id": "confluence:bunny_hood",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -117,9 +160,20 @@
       "x": 4.800000000000001,
       "y": 2.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "661CDEBAE04D476E",
+          "type": "item",
+          "item": {
+            "id": "confluence:summer_hat",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -137,9 +191,20 @@
       "x": 0.0,
       "y": 3.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "5542AD8D9B18D71D",
+          "type": "item",
+          "item": {
+            "id": "confluence:mummy_mask",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -157,9 +222,20 @@
       "x": 1.6,
       "y": 3.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "3EEA37E2166D532B",
+          "type": "item",
+          "item": {
+            "id": "confluence:robot_hat",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -177,9 +253,20 @@
       "x": 3.2,
       "y": 3.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "154BCC32D18C60C3",
+          "type": "item",
+          "item": {
+            "id": "confluence:guy_fawkes_hat",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -197,9 +284,20 @@
       "x": 4.800000000000001,
       "y": 3.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "21498769A6E98353",
+          "type": "item",
+          "item": {
+            "id": "confluence:guy_fawkes_mask",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -217,9 +315,20 @@
       "x": 0.0,
       "y": 5.2,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "02AEA97799D1CE39",
+          "type": "item",
+          "item": {
+            "id": "confluence:guy_fawkes_mask_set",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -237,9 +346,20 @@
       "x": 1.6,
       "y": 5.2,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "692C0045DF0F6139",
+          "type": "item",
+          "item": {
+            "id": "confluence:plumbers_hat",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -257,9 +377,20 @@
       "x": 3.2,
       "y": 5.2,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "0BB4597262B8056B",
+          "type": "item",
+          "item": {
+            "id": "confluence:clothiers_hat",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -277,9 +408,20 @@
       "x": 4.800000000000001,
       "y": 5.2,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "1B80ACEBB25B1A38",
+          "type": "item",
+          "item": {
+            "id": "confluence:archaeologists_hat",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -297,9 +439,20 @@
       "x": 0.0,
       "y": 6.800000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "49339AB415192878",
+          "type": "item",
+          "item": {
+            "id": "confluence:heros_hat",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -317,9 +470,20 @@
       "x": 1.6,
       "y": 6.800000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "21920F5CC88650A1",
+          "type": "item",
+          "item": {
+            "id": "confluence:gold_crown",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -337,9 +501,20 @@
       "x": 3.2,
       "y": 6.800000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "2D75FFED1E86479C",
+          "type": "item",
+          "item": {
+            "id": "confluence:platinum_crown",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -357,9 +532,20 @@
       "x": 4.800000000000001,
       "y": 6.800000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "2DEEE80186F91A2D",
+          "type": "item",
+          "item": {
+            "id": "confluence:top_hat",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -377,9 +563,20 @@
       "x": 0.0,
       "y": 8.4,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "1C4A754965AA68B1",
+          "type": "item",
+          "item": {
+            "id": "create:goggles",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -397,9 +594,20 @@
       "x": 1.6,
       "y": 8.4,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "2ED181EFA808CA92",
+          "type": "item",
+          "item": {
+            "id": "irons_spellbooks:tarnished_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -419,7 +627,12 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "33039B427CDCE672",
+          "type": "checkmark"
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -437,9 +650,20 @@
       "x": 8.0,
       "y": 2.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "183133BBFB496C7F",
+          "type": "item",
+          "item": {
+            "id": "confluence:familiar_shirt",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -457,9 +681,20 @@
       "x": 9.6,
       "y": 2.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "1CC36BFCEB5F0B8B",
+          "type": "item",
+          "item": {
+            "id": "confluence:the_doctors_shirt",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -477,9 +712,20 @@
       "x": 11.2,
       "y": 2.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "37B3A6C325EE78BF",
+          "type": "item",
+          "item": {
+            "id": "confluence:clothiers_jacket",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -497,9 +743,20 @@
       "x": 12.8,
       "y": 2.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "54C5A228EF2D1408",
+          "type": "item",
+          "item": {
+            "id": "confluence:mummy_shirt",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -517,9 +774,20 @@
       "x": 8.0,
       "y": 3.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "3829078A6F92CFE9",
+          "type": "item",
+          "item": {
+            "id": "confluence:plumbers_shirt",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -537,9 +805,20 @@
       "x": 9.6,
       "y": 3.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "59A533708DD382B4",
+          "type": "item",
+          "item": {
+            "id": "confluence:amethyst_robe",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -557,9 +836,20 @@
       "x": 11.2,
       "y": 3.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "66F646A7BF6FB8DB",
+          "type": "item",
+          "item": {
+            "id": "confluence:archaeologists_jacket",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -577,9 +867,20 @@
       "x": 12.8,
       "y": 3.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "5E3D51BEE98CCEDF",
+          "type": "item",
+          "item": {
+            "id": "confluence:heros_shirt",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -597,9 +898,20 @@
       "x": 8.0,
       "y": 5.2,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "58B2F5F31CBB5AF7",
+          "type": "item",
+          "item": {
+            "id": "confluence:tuxedo_shirt",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -617,9 +929,20 @@
       "x": 9.6,
       "y": 5.2,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "70E1097B689BA340",
+          "type": "item",
+          "item": {
+            "id": "confluence:robe",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -637,9 +960,20 @@
       "x": 11.2,
       "y": 5.2,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "1F6FA335F96A2CA2",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:majestic_elytra",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -657,9 +991,20 @@
       "x": 12.8,
       "y": 5.2,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "7ACE7D42BA92C0D1",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:chaos_elytra",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -677,9 +1022,20 @@
       "x": 8.0,
       "y": 6.800000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "350F36C91A2125CA",
+          "type": "item",
+          "item": {
+            "id": "minecraft:elytra",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -699,7 +1055,12 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "09D8E4323DCE0355",
+          "type": "checkmark"
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -717,9 +1078,20 @@
       "x": 16.0,
       "y": 2.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "5EE6889451CA68C6",
+          "type": "item",
+          "item": {
+            "id": "confluence:familiar_pants",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -737,9 +1109,20 @@
       "x": 17.6,
       "y": 2.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "40F5FC869588C753",
+          "type": "item",
+          "item": {
+            "id": "confluence:the_doctors_pants",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -757,9 +1140,20 @@
       "x": 19.2,
       "y": 2.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "643266F467B61E82",
+          "type": "item",
+          "item": {
+            "id": "confluence:clothiers_pants",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -777,9 +1171,20 @@
       "x": 20.8,
       "y": 2.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "799D56157AC465BB",
+          "type": "item",
+          "item": {
+            "id": "confluence:mummy_pants",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -797,9 +1202,20 @@
       "x": 16.0,
       "y": 3.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "0F1EE2C870E70217",
+          "type": "item",
+          "item": {
+            "id": "confluence:plumbers_pants",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -817,9 +1233,20 @@
       "x": 17.6,
       "y": 3.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "2430AB0C3B0630A5",
+          "type": "item",
+          "item": {
+            "id": "confluence:archaeologists_pants",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -837,9 +1264,20 @@
       "x": 19.2,
       "y": 3.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "2E4106684318CF3D",
+          "type": "item",
+          "item": {
+            "id": "confluence:heros_pants",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -857,9 +1295,20 @@
       "x": 20.8,
       "y": 3.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "564444F1F91F8CF0",
+          "type": "item",
+          "item": {
+            "id": "confluence:tuxedo_pants",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -879,7 +1328,12 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "408A76B3C5368DF6",
+          "type": "checkmark"
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -897,9 +1351,20 @@
       "x": 24.0,
       "y": 2.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "356808B92F8747D3",
+          "type": "item",
+          "item": {
+            "id": "confluence:familiar_shoes",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -917,9 +1382,20 @@
       "x": 25.6,
       "y": 2.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "274B31CC80288D32",
+          "type": "item",
+          "item": {
+            "id": "confluence:the_doctors_shoes",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -937,9 +1413,20 @@
       "x": 27.2,
       "y": 2.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "5FF224244272FB77",
+          "type": "item",
+          "item": {
+            "id": "confluence:clothiers_shoes",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -957,9 +1444,20 @@
       "x": 28.8,
       "y": 2.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "0E9D43E52DA22AD5",
+          "type": "item",
+          "item": {
+            "id": "confluence:mummy_shoes",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -977,9 +1475,20 @@
       "x": 24.0,
       "y": 3.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "44DF6065E945B314",
+          "type": "item",
+          "item": {
+            "id": "confluence:plumbers_shoes",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -997,9 +1506,20 @@
       "x": 25.6,
       "y": 3.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "13808FA883E23748",
+          "type": "item",
+          "item": {
+            "id": "confluence:archaeologists_shoes",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1017,9 +1537,20 @@
       "x": 27.2,
       "y": 3.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "33BBE1FD2C9AFDFF",
+          "type": "item",
+          "item": {
+            "id": "confluence:heros_shoes",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1037,9 +1568,20 @@
       "x": 28.8,
       "y": 3.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "5AECEF65D13AF8BE",
+          "type": "item",
+          "item": {
+            "id": "confluence:tuxedo_shoes",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",

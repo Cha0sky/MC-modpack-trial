@@ -19,7 +19,12 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "79902B61ADDF06B8",
+          "type": "checkmark"
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -39,7 +44,12 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "16ABD7590482B1B7",
+          "type": "checkmark"
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -57,9 +67,20 @@
       "x": 0.0,
       "y": 2.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "6D97E8EFA0A3C31D",
+          "type": "item",
+          "item": {
+            "id": "irons_spellbooks:gold_crown",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -79,7 +100,12 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "1BE7E9BB9798C0B0",
+          "type": "checkmark"
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -97,9 +123,20 @@
       "x": 8.0,
       "y": 2.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "232806BA90578710",
+          "type": "item",
+          "item": {
+            "id": "avaritia:infinity_chestplate",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -119,7 +156,12 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "40C4A6237040A75D",
+          "type": "checkmark"
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -137,9 +179,20 @@
       "x": 16.0,
       "y": 2.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "1961B38AB2561DA6",
+          "type": "item",
+          "item": {
+            "id": "goety:cursed_metal_wolf_armor",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -157,9 +210,20 @@
       "x": 17.6,
       "y": 2.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "52481243E67048AD",
+          "type": "item",
+          "item": {
+            "id": "goety:netherite_trampler_armor",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -177,9 +241,20 @@
       "x": 19.2,
       "y": 2.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "6E8404A8D4CD640D",
+          "type": "item",
+          "item": {
+            "id": "goety:warg_cursed_armor",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -197,9 +272,20 @@
       "x": 20.8,
       "y": 2.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "716B89ABDAEC12BF",
+          "type": "item",
+          "item": {
+            "id": "goety:black_beast_cursed_armor",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -217,9 +303,20 @@
       "x": 16.0,
       "y": 3.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "219FCC5E34A4176F",
+          "type": "item",
+          "item": {
+            "id": "goety:diamond_ravager_armor",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -237,9 +334,20 @@
       "x": 17.6,
       "y": 3.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "0563C41EBB55AAEE",
+          "type": "item",
+          "item": {
+            "id": "goety:netherite_ravager_armor",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -257,9 +365,20 @@
       "x": 19.2,
       "y": 3.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "33290577F4A04223",
+          "type": "item",
+          "item": {
+            "id": "goety:warg_dark_armor",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -277,9 +396,20 @@
       "x": 20.8,
       "y": 3.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "292092D9CB71786C",
+          "type": "item",
+          "item": {
+            "id": "goety:black_beast_dark_armor",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -297,9 +427,20 @@
       "x": 16.0,
       "y": 5.2,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "2172959DE0604029",
+          "type": "item",
+          "item": {
+            "id": "goety:dark_wolf_armor",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",

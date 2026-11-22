@@ -19,7 +19,12 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "139CE8D1112F0BF6",
+          "type": "checkmark"
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -37,9 +42,20 @@
       "x": 0,
       "y": 0.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "03A66CC04B39AF1A",
+          "type": "item",
+          "item": {
+            "id": "celestial_artifacts:life_etching",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -57,9 +73,20 @@
       "x": 3,
       "y": 4.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "354B5064BD1FA15F",
+          "type": "item",
+          "item": {
+            "id": "celestial_artifacts:sea_god_crown",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "71B3489996D2EFBE",
@@ -80,9 +107,20 @@
       "x": 6,
       "y": 2.4000000000000004,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "2C715BD792F26B8B",
+          "type": "item",
+          "item": {
+            "id": "celestial_artifacts:sea_god_scroll",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "71B3489996D2EFBE",
@@ -103,9 +141,20 @@
       "x": 3,
       "y": 0.8000000000000003,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "34D9D91CCD05A35A",
+          "type": "item",
+          "item": {
+            "id": "celestial_artifacts:yellow_duck",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "5CD1225B57DA6039",
@@ -126,9 +175,20 @@
       "x": 0,
       "y": 1.6000000000000003,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "5B34687380EE810B",
+          "type": "item",
+          "item": {
+            "id": "celestial_core:guardian_spike",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -146,9 +206,20 @@
       "x": 0,
       "y": 3.2,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "7FF662BB4BC383CD",
+          "type": "item",
+          "item": {
+            "id": "celestial_core:ocean_essence",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -166,9 +237,20 @@
       "x": 0,
       "y": 4.800000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "6204ED86E615337F",
+          "type": "item",
+          "item": {
+            "id": "celestial_core:ocean_ingot",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -186,9 +268,20 @@
       "x": 3,
       "y": 2.4000000000000004,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "50E3A1F57B65A710",
+          "type": "item",
+          "item": {
+            "id": "celestial_core:reinforced_ocean_ingot",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "6FB579D56CB16318",

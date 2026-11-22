@@ -19,7 +19,12 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "782DBC31CAE80361",
+          "type": "checkmark"
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -37,9 +42,20 @@
       "x": 6,
       "y": 10.4,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "2C9B09D37B98BAB8",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:avarice_scroll",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "3CD873C52840E274",
@@ -60,9 +76,20 @@
       "x": 0,
       "y": 4.800000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "7A13E83CA49B805B",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:blank_scroll",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -80,9 +107,20 @@
       "x": 3,
       "y": 12.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "68A4F02DF385F640",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:blazing_core",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "2031DAFC5D45672E",
@@ -103,9 +141,20 @@
       "x": 0,
       "y": 6.4,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "0FCADED4505B7320",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:cosmic_heart",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -123,9 +172,20 @@
       "x": 6,
       "y": 8.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "58BBFCCD95FCADF2",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:cosmic_scroll",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "62F2344888BC2359",
@@ -146,9 +206,20 @@
       "x": 6,
       "y": 4.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "7AF81B1487320590",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:cursed_scroll",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "3CD873C52840E274"
@@ -168,9 +239,20 @@
       "x": 6,
       "y": 5.6000000000000005,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "76D3FD718C959D19",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:cursed_xp_scroll",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "3CD873C52840E274"
@@ -190,9 +272,20 @@
       "x": 3,
       "y": 0.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "0B7FB945DF227D71",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:darkest_scroll",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "2567F44B5F5C9C36"
@@ -212,9 +305,20 @@
       "x": 3,
       "y": 1.6000000000000005,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "79F744A49DB8987A",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:escape_scroll",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "2567F44B5F5C9C36"
@@ -234,9 +338,20 @@
       "x": 3,
       "y": 17.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "2D9916D8CB0B0CE2",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:etherium_core",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "2031DAFC5D45672E",
@@ -258,9 +373,20 @@
       "x": 3,
       "y": 3.2,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "1E673775DC118E3B",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:explorer_scroll",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "2567F44B5F5C9C36"
@@ -280,9 +406,20 @@
       "x": 3,
       "y": 9.600000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "0DDB008E113B7EC0",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:golden_ring",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "25B8ACD0FA704531"
@@ -302,9 +439,20 @@
       "x": 3,
       "y": 4.800000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "2F278BE1C867F2AE",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:hunter_scroll",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "2567F44B5F5C9C36"
@@ -324,9 +472,20 @@
       "x": 0,
       "y": 8.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "3BEE3193E2A1467E",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:iron_ring",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -344,9 +503,20 @@
       "x": 6,
       "y": 7.200000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "6CF7E97AFDB00BED",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:night_scroll",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "3CD873C52840E274"
@@ -366,9 +536,20 @@
       "x": 3,
       "y": 14.400000000000002,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "474086C53AD0ED30",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:ocean_stone",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "2031DAFC5D45672E",
@@ -389,9 +570,20 @@
       "x": 6,
       "y": 13.600000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "4E2C4E9FD4D060B0",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:scorched_charm",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "549FD9E88BA87D6C"
@@ -411,9 +603,20 @@
       "x": 0,
       "y": 9.600000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "2FFCFD046A3FAF35",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:spellcore",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -431,9 +634,20 @@
       "x": 0,
       "y": 11.200000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "1CE578155126C76F",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:spellstone_debris",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -451,9 +665,20 @@
       "x": 3,
       "y": 11.200000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "38BD4401CED6336F",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:spellstone_table",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "2031DAFC5D45672E"
@@ -473,9 +698,20 @@
       "x": 3,
       "y": 16.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "7828EA0652DA4078",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:spelltuner",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "2031DAFC5D45672E",
@@ -496,9 +732,20 @@
       "x": 0,
       "y": 12.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "26FAA48763B8A232",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:starlight_pearl",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -516,9 +763,20 @@
       "x": 3,
       "y": 6.4,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "755C7C4BC2094900",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:survivor_scroll",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "2567F44B5F5C9C36"
@@ -538,9 +796,20 @@
       "x": 6,
       "y": 12.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "36EA7DDE1C4D1BBA",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:thunder_scroll",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "3CD873C52840E274",
@@ -561,9 +830,20 @@
       "x": 9,
       "y": 8.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "50D21E658D314F11",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:violence_scroll",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "62F2344888BC2359",
@@ -584,9 +864,20 @@
       "x": 3,
       "y": 8.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "7E25531CE526AD08",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:xp_scroll",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "2567F44B5F5C9C36"

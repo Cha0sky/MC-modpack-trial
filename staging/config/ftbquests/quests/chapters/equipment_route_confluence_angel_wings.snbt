@@ -19,7 +19,12 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "3A9BABAFF26B0073",
+          "type": "checkmark"
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -37,9 +42,20 @@
       "x": 5.1,
       "y": 1.7,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "0F80F2811727C32B",
+          "type": "item",
+          "item": {
+            "id": "confluence:angel_wings",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -57,9 +73,20 @@
       "x": 1.7,
       "y": 3.4,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "04A0B0DD20792182",
+          "type": "item",
+          "item": {
+            "id": "confluence:apprentices_scarf",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -77,9 +104,20 @@
       "x": 8.5,
       "y": 6.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "349DEB9D682A9B8F",
+          "type": "item",
+          "item": {
+            "id": "confluence:argon_moss_fishing_bobber",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -99,7 +137,18 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "275BB341B2A63E26",
+          "type": "item",
+          "item": {
+            "id": "confluence:bat_wings",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -117,9 +166,20 @@
       "x": 3.4,
       "y": 10.2,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "58B8DCE3D68500F6",
+          "type": "item",
+          "item": {
+            "id": "confluence:bee_wings",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -139,7 +199,18 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "3C7FB999CA844D5F",
+          "type": "item",
+          "item": {
+            "id": "confluence:beetle_wings",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -159,7 +230,18 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "4B7CD142113BBFBB",
+          "type": "item",
+          "item": {
+            "id": "confluence:betsys_wings",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -179,7 +261,18 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "3D57A2025C83C377",
+          "type": "item",
+          "item": {
+            "id": "confluence:bone_wings",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -197,9 +290,20 @@
       "x": 0.0,
       "y": 0.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "424800581635C2C5",
+          "type": "item",
+          "item": {
+            "id": "confluence:boredoms_pact_falling_resolve",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -219,7 +323,18 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "6D3D2F67A346BBCA",
+          "type": "item",
+          "item": {
+            "id": "confluence:butterfly_wings",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -237,9 +352,20 @@
       "x": 1.7,
       "y": 8.5,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "7BF71DCAEC56F085",
+          "type": "item",
+          "item": {
+            "id": "confluence:chromatic_cloak",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -257,9 +383,20 @@
       "x": 8.5,
       "y": 5.1,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "1508B0659FF78B3E",
+          "type": "item",
+          "item": {
+            "id": "confluence:clothier_voodoo_doll",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -279,7 +416,18 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "0B936225AD21521E",
+          "type": "item",
+          "item": {
+            "id": "confluence:crimson_heart",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -297,9 +445,20 @@
       "x": 8.5,
       "y": 3.4,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "5A220F1B4B88FE26",
+          "type": "item",
+          "item": {
+            "id": "confluence:demon_wings",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -319,7 +478,18 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "181EF3C29CCC9F13",
+          "type": "item",
+          "item": {
+            "id": "confluence:empress_wings",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -337,9 +507,20 @@
       "x": 1.7,
       "y": 0.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "2430836452EFA6DE",
+          "type": "item",
+          "item": {
+            "id": "confluence:fairy_wings",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -359,7 +540,18 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "46493A59818AE089",
+          "type": "item",
+          "item": {
+            "id": "confluence:festive_wings",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -377,9 +569,20 @@
       "x": 3.4,
       "y": 11.9,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "1D5C0B7B0EE4EDD3",
+          "type": "item",
+          "item": {
+            "id": "confluence:fin_wings",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -399,7 +602,18 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "38E271F1EF45F308",
+          "type": "item",
+          "item": {
+            "id": "confluence:fishron_wings",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -419,7 +633,18 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "5615B1342500780E",
+          "type": "item",
+          "item": {
+            "id": "confluence:flame_wings",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -437,9 +662,20 @@
       "x": 0.0,
       "y": 11.9,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "4004067394FFFFF2",
+          "type": "item",
+          "item": {
+            "id": "confluence:fledgling_wings",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -459,7 +695,18 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "673D59C529BB55AC",
+          "type": "item",
+          "item": {
+            "id": "confluence:frozen_wings",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -477,9 +724,20 @@
       "x": 1.7,
       "y": 6.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "49F62D61DF25B28D",
+          "type": "item",
+          "item": {
+            "id": "confluence:guide_to_plant_fiber_cordage",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -497,9 +755,20 @@
       "x": 0.0,
       "y": 1.7,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "525013E8842EE568",
+          "type": "item",
+          "item": {
+            "id": "confluence:guide_voodoo_doll",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -517,9 +786,20 @@
       "x": 6.8,
       "y": 1.7,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "17B5ADE46B80C7BE",
+          "type": "item",
+          "item": {
+            "id": "confluence:harpy_wings",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -537,9 +817,20 @@
       "x": 6.8,
       "y": 6.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "350EA311281894EF",
+          "type": "item",
+          "item": {
+            "id": "confluence:helium_moss_fishing_bobber",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -559,7 +850,18 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "307800137B84FE50",
+          "type": "item",
+          "item": {
+            "id": "confluence:hoverboard",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -577,9 +879,20 @@
       "x": 8.5,
       "y": 1.7,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "3902D6A9D595043C",
+          "type": "item",
+          "item": {
+            "id": "confluence:huntresss_buckler",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -599,7 +912,18 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "3A64B4A95DA8BBDB",
+          "type": "item",
+          "item": {
+            "id": "confluence:jetpack",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -617,9 +941,20 @@
       "x": 0.0,
       "y": 8.5,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "68095E7D867DCB87",
+          "type": "item",
+          "item": {
+            "id": "confluence:krypton_moss_fishing_bobber",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -637,9 +972,20 @@
       "x": 5.1,
       "y": 8.5,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "12959824577000F4",
+          "type": "item",
+          "item": {
+            "id": "confluence:lava_moss_fishing_bobber",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -659,7 +1005,18 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "50E8736236EA9265",
+          "type": "item",
+          "item": {
+            "id": "confluence:leaf_wings",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -679,7 +1036,18 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "43906D34627794E2",
+          "type": "item",
+          "item": {
+            "id": "confluence:magic_lantern",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -697,9 +1065,20 @@
       "x": 0.0,
       "y": 6.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "0B9DB7F5681A590E",
+          "type": "item",
+          "item": {
+            "id": "confluence:mechanical_lens",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -717,9 +1096,20 @@
       "x": 3.4,
       "y": 6.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "7BBBA9F755DB9E29",
+          "type": "item",
+          "item": {
+            "id": "confluence:monks_belt",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -739,7 +1129,18 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "7FBF560B7E95E00C",
+          "type": "item",
+          "item": {
+            "id": "confluence:mothron_wings",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -759,7 +1160,18 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "39475AF155220C6B",
+          "type": "item",
+          "item": {
+            "id": "confluence:nebula_wings",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -777,9 +1189,20 @@
       "x": 5.1,
       "y": 6.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "201ABC88A6B07B39",
+          "type": "item",
+          "item": {
+            "id": "confluence:neon_moss_fishing_bobber",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -797,9 +1220,20 @@
       "x": 3.4,
       "y": 3.4,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "2BFA45CA3E5AE5DB",
+          "type": "item",
+          "item": {
+            "id": "confluence:paradox_interactive_medal",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -817,9 +1251,20 @@
       "x": 0.0,
       "y": 10.2,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "6C14ABA05D8D9FBD",
+          "type": "item",
+          "item": {
+            "id": "confluence:pygmy_necklace",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -837,9 +1282,20 @@
       "x": 1.7,
       "y": 5.1,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "0CC9E9559C2FD777",
+          "type": "item",
+          "item": {
+            "id": "confluence:radio_thing",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -859,7 +1315,18 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "7874F4E9105CEF29",
+          "type": "item",
+          "item": {
+            "id": "confluence:shadow_orb",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -879,7 +1346,18 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "35FEAA56C91FE042",
+          "type": "item",
+          "item": {
+            "id": "confluence:solar_wings",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -897,9 +1375,20 @@
       "x": 6.8,
       "y": 3.4,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "1DE99D52D31A6312",
+          "type": "item",
+          "item": {
+            "id": "confluence:spectre_goggles",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -919,7 +1408,18 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "10D80979DBDBF95B",
+          "type": "item",
+          "item": {
+            "id": "confluence:spectre_wings",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -939,7 +1439,18 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "5ECC1277196A4BC1",
+          "type": "item",
+          "item": {
+            "id": "confluence:spooky_wings",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -957,9 +1468,20 @@
       "x": 3.4,
       "y": 0.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "369C757EA149F1E4",
+          "type": "item",
+          "item": {
+            "id": "confluence:squires_shield",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -979,7 +1501,18 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "55F14A8AD127DE6D",
+          "type": "item",
+          "item": {
+            "id": "confluence:stardust",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",

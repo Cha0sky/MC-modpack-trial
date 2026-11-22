@@ -19,7 +19,12 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "239F374DE2A64C13",
+          "type": "checkmark"
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -37,9 +42,20 @@
       "x": 0,
       "y": 0.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "3FC4E5C4D4986214",
+          "type": "item",
+          "item": {
+            "id": "touhou_little_maid:ultramarine_orb_elixir",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -57,9 +73,20 @@
       "x": 0,
       "y": 1.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "0E0DDA825075C5A3",
+          "type": "item",
+          "item": {
+            "id": "touhou_little_maid_spell:anchor_core",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -77,9 +104,20 @@
       "x": 0,
       "y": 3.2,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "1FF7B5901448A91D",
+          "type": "item",
+          "item": {
+            "id": "touhou_little_maid_spell:bleeding_heart",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -97,9 +135,20 @@
       "x": 0,
       "y": 4.800000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "455CA9113B128C35",
+          "type": "item",
+          "item": {
+            "id": "touhou_little_maid_spell:chaos_book",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -117,9 +166,20 @@
       "x": 3,
       "y": 3.2,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "2D63EE0BBD5B4FE8",
+          "type": "item",
+          "item": {
+            "id": "touhou_little_maid_spell:double_heart_chain",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "3893F7BCB3B5F407"
@@ -139,9 +199,20 @@
       "x": 6,
       "y": 3.2,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "24E60EF5FE1D88F5",
+          "type": "item",
+          "item": {
+            "id": "touhou_little_maid_spell:dream_cat_crystal",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "0EF49B4D55B673AA",
@@ -165,9 +236,20 @@
       "x": 0,
       "y": 6.4,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "28C6D879C0D034D0",
+          "type": "item",
+          "item": {
+            "id": "touhou_little_maid_spell:quick_chant_ring",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",

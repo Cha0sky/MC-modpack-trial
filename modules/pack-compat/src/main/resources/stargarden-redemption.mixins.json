@@ -1,0 +1,23 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "local.stargarden.compat.redemption.mixin",
+  "plugin": "local.stargarden.compat.redemption.RedemptionMixinPlugin",
+  "compatibilityLevel": "JAVA_21",
+  "priority": 900,
+  "mixins": [
+    "EligibilityTarget",
+    "RedemptionTargets",
+    "CursedScrollMixin",
+    "RedemptionRingMixin"
+  ],
+  "client": [
+    "ClientEligibilityTargets",
+    "TooltipTarget",
+    "RedemptionTooltipMixin",
+    "TaintingRecipesMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

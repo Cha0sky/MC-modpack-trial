@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "terra_curio:aglet",
+    "terra_curio:cloud_in_a_bottle",
+    "terra_curio:blizzard_in_a_bottle",
+    "terra_curio:hermes_boots",
+    "terra_curio:flurry_boots",
+    "terra_curio:band_of_regeneration",
+    "terra_curio:shackle"
+  ]
+}

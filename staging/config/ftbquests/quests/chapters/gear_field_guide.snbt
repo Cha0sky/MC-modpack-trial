@@ -16,8 +16,14 @@
       },
       "min_width": 300,
       "optional": true,
+      "disable_toast": true,
       "dependencies": [],
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "4374B599B0A262B8",
+          "type": "checkmark"
+        }
+      ],
       "rewards": []
     },
     {
@@ -29,8 +35,14 @@
       },
       "min_width": 300,
       "optional": true,
+      "disable_toast": true,
       "dependencies": [],
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "20DF38557D5BE890",
+          "type": "checkmark"
+        }
+      ],
       "rewards": []
     },
     {
@@ -41,9 +53,21 @@
         "id": "terra_curio:cloud_in_a_bottle"
       },
       "min_width": 300,
-      "optional": true,
+      "optional": false,
+      "disable_toast": true,
       "dependencies": [],
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "10E91671914A83E3",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:cloud_in_a_bottle",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": []
     },
     {
@@ -54,9 +78,21 @@
         "id": "terra_curio:hermes_boots"
       },
       "min_width": 300,
-      "optional": true,
+      "optional": false,
+      "disable_toast": true,
       "dependencies": [],
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "5FCC611BAF1DF855",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:hermes_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": []
     },
     {
@@ -67,9 +103,21 @@
         "id": "terra_curio:band_of_regeneration"
       },
       "min_width": 300,
-      "optional": true,
+      "optional": false,
+      "disable_toast": true,
       "dependencies": [],
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "4892FEFE767B682F",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:band_of_regeneration",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": []
     },
     {
@@ -80,9 +128,21 @@
         "id": "terra_curio:aglet"
       },
       "min_width": 300,
-      "optional": true,
+      "optional": false,
+      "disable_toast": true,
       "dependencies": [],
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "1FD92F16A256C231",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:aglet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": []
     },
     {
@@ -93,9 +153,21 @@
         "id": "terra_curio:blizzard_in_a_bottle"
       },
       "min_width": 300,
-      "optional": true,
+      "optional": false,
+      "disable_toast": true,
       "dependencies": [],
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "42D2E3081AD7C331",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:blizzard_in_a_bottle",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": []
     },
     {
@@ -106,9 +178,21 @@
         "id": "terra_curio:flurry_boots"
       },
       "min_width": 300,
-      "optional": true,
+      "optional": false,
+      "disable_toast": true,
       "dependencies": [],
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "2196A0C23A5931D2",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:flurry_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": []
     },
     {
@@ -119,9 +203,21 @@
         "id": "terra_curio:shackle"
       },
       "min_width": 300,
-      "optional": true,
+      "optional": false,
+      "disable_toast": true,
       "dependencies": [],
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "7FA643E8319F6D97",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:shackle",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": []
     },
     {
@@ -133,8 +229,14 @@
       },
       "min_width": 300,
       "optional": true,
+      "disable_toast": true,
       "dependencies": [],
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "3FC37067E1BFF70D",
+          "type": "checkmark"
+        }
+      ],
       "rewards": []
     },
     {
@@ -145,9 +247,21 @@
         "id": "terra_curio:cloud_in_a_balloon"
       },
       "min_width": 300,
-      "optional": true,
+      "optional": false,
+      "disable_toast": true,
       "dependencies": [],
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "1D77E8E37E2C8BFF",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:cloud_in_a_balloon",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": []
     },
     {
@@ -158,9 +272,21 @@
         "id": "terra_curio:anklet_of_the_wind"
       },
       "min_width": 300,
-      "optional": true,
+      "optional": false,
+      "disable_toast": true,
       "dependencies": [],
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "568F16BF6B25AA2A",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:anklet_of_the_wind",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": []
     },
     {
@@ -171,9 +297,21 @@
         "id": "terra_curio:spectre_boots"
       },
       "min_width": 300,
-      "optional": true,
+      "optional": false,
+      "disable_toast": true,
       "dependencies": [],
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "0BC2A3C1C6B2DCE3",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:spectre_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": []
     },
     {
@@ -184,9 +322,21 @@
         "id": "terra_curio:lightning_boots"
       },
       "min_width": 300,
-      "optional": true,
+      "optional": false,
+      "disable_toast": true,
       "dependencies": [],
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "5E9CD54C7508AFBA",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:lightning_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": []
     },
     {
@@ -197,9 +347,21 @@
         "id": "terra_curio:feral_claws"
       },
       "min_width": 300,
-      "optional": true,
+      "optional": false,
+      "disable_toast": true,
       "dependencies": [],
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "4302C8AB603E5C1C",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:feral_claws",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": []
     },
     {
@@ -210,9 +372,21 @@
         "id": "terra_curio:shark_tooth_necklace"
       },
       "min_width": 300,
-      "optional": true,
+      "optional": false,
+      "disable_toast": true,
       "dependencies": [],
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "604575007C5197D7",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:shark_tooth_necklace",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": []
     },
     {
@@ -223,9 +397,21 @@
         "id": "confluence:natures_gift"
       },
       "min_width": 300,
-      "optional": true,
+      "optional": false,
+      "disable_toast": true,
       "dependencies": [],
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "058EF96DE4F82087",
+          "type": "item",
+          "item": {
+            "id": "confluence:natures_gift",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": []
     },
     {
@@ -236,9 +422,21 @@
         "id": "confluence:mana_flower"
       },
       "min_width": 300,
-      "optional": true,
+      "optional": false,
+      "disable_toast": true,
       "dependencies": [],
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "16AAAF367A4ACE0A",
+          "type": "item",
+          "item": {
+            "id": "confluence:mana_flower",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": []
     },
     {
@@ -250,8 +448,14 @@
       },
       "min_width": 300,
       "optional": true,
+      "disable_toast": true,
       "dependencies": [],
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "05DE9259D34CE1D5",
+          "type": "checkmark"
+        }
+      ],
       "rewards": []
     },
     {
@@ -262,9 +466,21 @@
         "id": "confluence:copper_broadsword"
       },
       "min_width": 300,
-      "optional": true,
+      "optional": false,
+      "disable_toast": true,
       "dependencies": [],
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "267639B1A27A73A7",
+          "type": "item",
+          "item": {
+            "id": "confluence:copper_broadsword",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": []
     },
     {
@@ -275,9 +491,21 @@
         "id": "confluence:iron_bow"
       },
       "min_width": 300,
-      "optional": true,
+      "optional": false,
+      "disable_toast": true,
       "dependencies": [],
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "398E9851DD23E272",
+          "type": "item",
+          "item": {
+            "id": "confluence:iron_bow",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": []
     },
     {
@@ -288,9 +516,21 @@
         "id": "confluence:amethyst_staff"
       },
       "min_width": 300,
-      "optional": true,
+      "optional": false,
+      "disable_toast": true,
       "dependencies": [],
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "5D16CB0CCB940B2F",
+          "type": "item",
+          "item": {
+            "id": "confluence:amethyst_staff",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": []
     },
     {
@@ -301,9 +541,21 @@
         "id": "evolvingblade:star_eater"
       },
       "min_width": 300,
-      "optional": true,
+      "optional": false,
+      "disable_toast": true,
       "dependencies": [],
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "6106390F8F82E1DF",
+          "type": "item",
+          "item": {
+            "id": "evolvingblade:star_eater",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": []
     },
     {
@@ -315,8 +567,14 @@
       },
       "min_width": 300,
       "optional": true,
+      "disable_toast": true,
       "dependencies": [],
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "4B70D97AD34308E5",
+          "type": "checkmark"
+        }
+      ],
       "rewards": []
     },
     {
@@ -327,9 +585,21 @@
         "id": "confluence:copper_chestplate"
       },
       "min_width": 300,
-      "optional": true,
+      "optional": false,
+      "disable_toast": true,
       "dependencies": [],
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "337CFF73E06FDC6F",
+          "type": "item",
+          "item": {
+            "id": "confluence:copper_chestplate",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": []
     },
     {
@@ -340,9 +610,21 @@
         "id": "confluence:cobalt_chestplate"
       },
       "min_width": 300,
-      "optional": true,
+      "optional": false,
+      "disable_toast": true,
       "dependencies": [],
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "0A8E67C3B44E3F13",
+          "type": "item",
+          "item": {
+            "id": "confluence:cobalt_chestplate",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": []
     },
     {
@@ -353,9 +635,21 @@
         "id": "confluence:palladium_chestplate"
       },
       "min_width": 300,
-      "optional": true,
+      "optional": false,
+      "disable_toast": true,
       "dependencies": [],
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "1EDEFFC8365BA726",
+          "type": "item",
+          "item": {
+            "id": "confluence:palladium_chestplate",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": []
     }
   ]

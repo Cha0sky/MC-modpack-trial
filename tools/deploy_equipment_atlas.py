@@ -16,9 +16,13 @@ BASELINE = "12901c2"
 def atlas_updates(instance):
     payloads = {}
     prefixes = []
-    receipt = ROOT / "evidence/gear-expansion-deployment.json"
-    if not receipt.is_file(): receipt = ROOT / "evidence/equipment-atlas-deployment.json"
-    last = json.loads(receipt.read_bytes()) if receipt.is_file() else {}
+    last = {}
+    for release in ("equipment-atlas", "gear-expansion", "equipment-collection"):
+        receipt = ROOT / "evidence" / f"{release}-deployment.json"
+        if receipt.is_file():
+            record = json.loads(receipt.read_bytes())
+            if record.get("instance") == str(instance) and record["date"] > last.get("date", ""):
+                last = record
     for src in sorted((QUESTS / "chapters").glob(PREFIX + "*.snbt")):
         file = BOOK_PATH / "chapters" / src.name
         content = src.read_bytes()

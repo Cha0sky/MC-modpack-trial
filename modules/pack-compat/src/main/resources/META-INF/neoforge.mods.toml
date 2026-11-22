@@ -1,0 +1,32 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="All Rights Reserved"
+[[mods]]
+modId="stargarden_pack_compat"
+version="${modVersion}"
+displayName="星庭远征 · 饰品与收集手册"
+description="装备持有记录、饰品配方查询与救赎之戒的整合。"
+[[mixins]]
+config="stargarden-equipment.mixins.json"
+[[mixins]]
+config="stargarden-redemption.mixins.json"
+[[dependencies.stargarden_pack_compat]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.1]"
+[[dependencies.stargarden_pack_compat]]
+modId="neoforge"
+type="required"
+versionRange="[21.1.248,21.2)"
+[[dependencies.stargarden_pack_compat]]
+modId="ftbquests"
+type="required"
+versionRange="[2101.1.35]"
+[[dependencies.stargarden_pack_compat]]
+modId="enigmaticlegacyplus"
+type="required"
+versionRange="[1.21.1-1.1.2]"
+[[dependencies.stargarden_pack_compat]]
+modId="curios"
+type="required"
+versionRange="[9.5.1+1.21.1,10)"

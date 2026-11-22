@@ -19,7 +19,12 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "64495DF8993A45B3",
+          "type": "checkmark"
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -37,9 +42,20 @@
       "x": 3,
       "y": 1.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "212AA4DCD00DB10A",
+          "type": "item",
+          "item": {
+            "id": "confluence:coin_ring",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "4E6FE85646DF2BF6",
@@ -60,9 +76,20 @@
       "x": 0,
       "y": 0.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "5FEF5DA7775BA9F4",
+          "type": "item",
+          "item": {
+            "id": "confluence:discount_card",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -80,9 +107,20 @@
       "x": 0,
       "y": 12.4,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "68FE3B5DB5D6C1A3",
+          "type": "item",
+          "item": {
+            "id": "confluence:fishing_bobber",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -100,9 +138,20 @@
       "x": 3,
       "y": 12.4,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "04E408C7B2692699",
+          "type": "item",
+          "item": {
+            "id": "confluence:glowing_fishing_bobber",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "60ACDA8AA90BB264"
@@ -122,9 +171,20 @@
       "x": 0,
       "y": 1.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "6AA84EE5B114C370",
+          "type": "item",
+          "item": {
+            "id": "confluence:gold_ring",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -142,9 +202,20 @@
       "x": 6,
       "y": 1.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "4F05B42DF80A985D",
+          "type": "item",
+          "item": {
+            "id": "confluence:greedy_ring",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "580BDD6B462E797B",
@@ -165,9 +236,20 @@
       "x": 0,
       "y": 7.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "02D30B5D1A7746F0",
+          "type": "item",
+          "item": {
+            "id": "confluence:hercules_beetle",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -185,9 +267,20 @@
       "x": 0,
       "y": 3.2,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "50026A05E854002D",
+          "type": "item",
+          "item": {
+            "id": "confluence:lucky_coin",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -205,9 +298,20 @@
       "x": 0,
       "y": 8.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "044FE3B90585AF3F",
+          "type": "item",
+          "item": {
+            "id": "confluence:necromantic_scroll",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -225,9 +329,20 @@
       "x": 3,
       "y": 7.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "250DE273D44008E6",
+          "type": "item",
+          "item": {
+            "id": "confluence:papyrus_scarab",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "77955510C5ECF6B8",

@@ -378,6 +378,7 @@
   "quest.6B3AEF5579D1E440.title": "把饰品戴上",
   "quest.6B3AEF5579D1E440.quest_desc": [
     "练熟一门兵器，再选一件搭配它的饰品。想越过落点就带云朵瓶，想在平地放风筝就穿跑鞋。把开荒分册里任意一件戴进背包的饰品栏。",
+    "点持有任务的图标可看七件候选饰品，再点其中一件查看 JEI 配方。",
     "{\"text\":\"看七件开荒饰品 · 属性与获取\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"45935826E246E542\"}}",
     "{\"text\":\"翻开整本装备手册\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"684C355CAD5A8963\"}}"
   ],
@@ -442,6 +443,7 @@
   "quest.684C355CAD5A8963.title": "装备手册 · 目录",
   "quest.684C355CAD5A8963.quest_desc": [
     "点击下列分册查看装备。饰品放进背包的饰品栏，武器拿在主手，套装穿在四个护甲位。",
+    "具体装备页会在队伍首次持有时登记，物品仍留在玩家手中。点任务栏里的物品图标可查 JEI 配方。纯目录页可以手动勾为已读。",
     "{\"text\":\"全盔甲 · 按单件护甲值查阅\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"6F67D3AF2352EE0B\"}}",
     "{\"text\":\"全饰品 · 从材料追到成品\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"052784AEB4F7DBD1\"}}",
     "{\"text\":\"开荒饰品\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"45935826E246E542\"}}",
@@ -13033,7 +13035,7 @@
   "quest.42318D47BBEEFF35.title": "救赎之戒",
   "quest.42318D47BBEEFF35.quest_desc": [
     "佩戴位置 · 戒指",
-    "持续回复生命，增强输出与抗性，并保留额外抢夺、时运和独特掉落。",
+    "持续回复生命，增强输出与抗性。佩戴时继承七咒之戒的全部正面效果，可使用要求佩戴七咒之戒的装备与能力。计算诅咒条数时按七咒之戒计。",
     "救赎 · 佩戴七咒之戒，手持神圣之石经历死亡，戒指随之转化。极限模式手持神圣之石右击即可。",
     "{\"text\":\"材料与前置 · 神圣之石\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"23101E472F7119E7\"}}",
     "{\"text\":\"材料与前置 · 七咒之戒\",\"color\":\"aqua\",\"underlined\":true,\"clickEvent\":{\"action\":\"change_page\",\"value\":\"1532BB543A87BA83\"}}",

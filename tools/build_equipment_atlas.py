@@ -39,6 +39,13 @@ def entry_link(label, kind, item):
     return turn_page(label, item_id(kind, item))
 
 
+def page_task(qid, item=None):
+    if item is None:
+        return {"id": atlas_id("read/" + qid), "type": "checkmark"}
+    return {"id": atlas_id("held/" + qid), "type": "item", "item": {"id": item, "count": 1},
+            "count": 1, "consume_items": False}
+
+
 def tier_of(points):
     if not isinstance(points, (int, float)): return "可变"
     return next(label for maximum, label in TIERS if points <= maximum)
@@ -57,9 +64,10 @@ class Chapter:
                     "icon": {"id": icon}, "progression_mode": "flexible", "disable_toast": True, "quests": []}
         self.lang = {f"chapter.{self.id}.title": title}
 
-    def page(self, qid, name, icon, x, y, lines, *, subtitle="", parents=()):
+    def page(self, qid, name, icon, x, y, lines, *, subtitle="", parents=(), item=None, optional=None):
         self.doc["quests"].append({"id": qid, "icon": {"id": icon}, "x": x, "y": y, "min_width": 345,
-            "optional": True, "disable_toast": True, "tasks": [], "rewards": [], "dependencies": list(parents),
+            "optional": item is None if optional is None else optional, "disable_toast": True,
+            "tasks": [page_task(qid, item)], "rewards": [], "dependencies": list(parents),
             "progression_mode": "flexible", "hide_until_deps_complete": False, "hide_until_deps_visible": False,
             "hide_details_until_startable": False, "hide_lock_icon": True, "hide_dependency_lines": False})
         self.lang[f"quest.{qid}.title"] = name
@@ -110,7 +118,7 @@ def add_armor(records, sources):
                 lines = [pts + " · " + label, *effects, *obtaining(item, sources, sources.recipe_info(item), v.get("source", [])),
                          turn_page("查看本档" + label, head), item]
                 book.page(item_id("armor", item), v["name"], item, x + i % 4 * 1.6, 2 + i // 4 * 1.6, lines,
-                          subtitle=pts + " · " + label)
+                          subtitle=pts + " · " + label, item=item)
     return chapters
 
 
@@ -248,7 +256,11 @@ def add_accessories(records, sources, shelf="", offset=0, extra_recipes=None):
             lines.append(item)
             deps = [local_id(k) for k in parents if k in members and positions[k][2] < rank]
             icon = "minecraft:paper" if item == "enigmaticlegacyplus:extra_scroll" else item
-            book.page(local_id(item), v["name"], icon, x, y, list(dict.fromkeys(lines)), subtitle=slots, parents=deps)
+            # Keep creative-only and unfinished entries inspectable without requiring them to finish a collection.
+            optional = item in {"enigmaticlegacyplus:extra_scroll", "enigmaticlegacyplus:blessing_scroll",
+                                "enigmaticlegacyplus:creation_heart", "relics:leafy_ring"} or item in sources.tag_items("confluence_magic_lib:wip")
+            book.page(local_id(item), v["name"], icon, x, y, list(dict.fromkeys(lines)), subtitle=slots,
+                      parents=deps, item=item, optional=optional)
     return books, graph
 
 
@@ -298,7 +310,7 @@ def build(guide_id, extra_mods=None):
     back = turn_page("返回随身装备手册", guide_id("index"))
     armor_index.page(atlas_id("armor/index"), armor_index.title, "minecraft:iron_chestplate", 0, 0,
                      ["选一档护甲值，再按头、胸、腿、足或动物装备查找。",
-                      *[turn_page(b.title, b.id) for b in armor_books], back])
+                      *[turn_page(b.title, b.id) for b in armor_books], back], optional=False)
     shelves = defaultdict(list)
     for b in base_routes:
         if "单件" in b.title or "独立" in b.title: shelf = "独立饰品"
@@ -308,7 +320,7 @@ def build(guide_id, extra_mods=None):
     shelves.update(shelves_by_mod)
     route_index.page(atlas_id("routes/index"), route_index.title, "terra_curio:lightning_boots", 0, 0,
                      ["想做一件成品，沿路线向左找材料。点开任一件，也能向右查它可以合成什么。",
-                      *[turn_page(name, atlas_id("routes/shelf/" + name)) for name in shelves], back])
+                      *[turn_page(name, atlas_id("routes/shelf/" + name)) for name in shelves], back], optional=False)
     for pos, (name, part) in enumerate(shelves.items()):
         route_index.page(atlas_id("routes/shelf/" + name), name, part[0].doc["icon"]["id"], pos * 2, 2,
                          ([SHELF_TEXT[name]] if name in SHELF_TEXT else []) + [turn_page(b.title, b.id) for b in part])

@@ -19,7 +19,12 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "2D149FB2D34881A1",
+          "type": "checkmark"
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -37,9 +42,20 @@
       "x": 0,
       "y": 0.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "1FBC95B05D8FC10C",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:aglet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -57,9 +73,20 @@
       "x": 0,
       "y": 1.6000000000000014,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "545DB311A7B7F617",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:anklet_of_the_wind",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -77,9 +104,20 @@
       "x": 0,
       "y": 3.200000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "74248BEFA9857104",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:dunerider_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -97,9 +135,20 @@
       "x": 6,
       "y": 9.600000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "2AB46C646C22D075",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:fairy_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "67EA26FB097E567B",
@@ -120,9 +169,20 @@
       "x": 0,
       "y": 4.800000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "73BDED323568D005",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:flower_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -140,9 +200,20 @@
       "x": 0,
       "y": 6.400000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "61BD00346D533416",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:flurry_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -160,9 +231,20 @@
       "x": 9,
       "y": 8.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "0B69B773966369A9",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:frostspark_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "16191607EAE4F99B",
@@ -183,9 +265,20 @@
       "x": 0,
       "y": 8.000000000000002,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "3CDA4BB307AD1249",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:hermes_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -203,9 +296,20 @@
       "x": 0,
       "y": 9.600000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "0057D83431809B56",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:ice_skates",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -223,9 +327,20 @@
       "x": 0,
       "y": 11.200000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "7390DFF6029494AE",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:lava_charm",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -243,9 +358,20 @@
       "x": 9,
       "y": 10.400000000000002,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "4425A24580F26E16",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:lava_waders",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "180E5B2A48FC23E4",
@@ -270,9 +396,20 @@
       "x": 6,
       "y": 8.000000000000002,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "4D57113C75225813",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:lightning_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "66A1F1B291291527",
@@ -294,9 +431,20 @@
       "x": 3,
       "y": 8.000000000000002,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "420038553B3E1893",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:magma_skull",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "180E5B2A48FC23E4",
@@ -317,9 +465,20 @@
       "x": 3,
       "y": 9.600000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "4D1576059B9816A2",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:molten_charm",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "180E5B2A48FC23E4",
@@ -340,9 +499,20 @@
       "x": 6,
       "y": 11.200000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "013F0214055E23A8",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:molten_skull_rose",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "180E5B2A48FC23E4",
@@ -365,9 +535,20 @@
       "x": 0,
       "y": 12.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "212A140E994189CA",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:obsidian_rose",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -385,9 +566,20 @@
       "x": 0,
       "y": 14.400000000000002,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "124D08A3D9ACE28B",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:obsidian_skull",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -405,9 +597,20 @@
       "x": 3,
       "y": 11.200000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "023162C876AFD73E",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:obsidian_skull_rose",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "2013F0B187607150",
@@ -428,9 +631,20 @@
       "x": 3,
       "y": 12.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "7FBD7F1891A11600",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:obsidian_water_walking_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "007C4BEBE10B104F",
@@ -451,9 +665,20 @@
       "x": 0,
       "y": 16.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "7E21AA8465AB01A1",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:rocket_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -471,9 +696,20 @@
       "x": 0,
       "y": 17.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "632957F5254C7353",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:sailfish_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -491,9 +727,20 @@
       "x": 3,
       "y": 6.400000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "5D35A9B35BC71C31",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:spectre_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "1557E9E67E6B9011",
@@ -517,9 +764,20 @@
       "x": 12,
       "y": 9.600000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "1416574E9D229731",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:terraspark_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "202032BAA4944E33",
@@ -540,9 +798,20 @@
       "x": 0,
       "y": 19.200000000000003,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "39A101904E650330",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:water_walking_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",

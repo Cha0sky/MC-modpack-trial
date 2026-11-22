@@ -1,0 +1,22 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev' version '2.0.81'
+}
+version = '1.0.0'
+group = 'local.stargarden'
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+neoForge { version = '21.1.248' }
+
+def instanceMods = providers.gradleProperty('packMods').getOrElse(
+    new File(projectDir, '../../../../.minecraft/versions/星庭远征-开发版/mods').path)
+dependencies {
+    compileOnly fileTree(instanceMods) {
+        include '*enigmaticlegacyplus-*.jar', '*curios-neoforge-*.jar', '*ftb-quests-*.jar',
+                '*ftb-library-*.jar', '*ftb-teams-*.jar', '*architectury-*.jar'
+    }
+}
+tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }
+tasks.named('processResources') {
+    inputs.property('modVersion', project.version)
+    filesMatching('META-INF/neoforge.mods.toml') { expand(modVersion: project.version) }
+}

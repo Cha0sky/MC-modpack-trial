@@ -19,7 +19,12 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "61C7EE5E0F29C2E2",
+          "type": "checkmark"
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -37,9 +42,20 @@
       "x": 3,
       "y": 17.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "50BB5D8828A5DF06",
+          "type": "item",
+          "item": {
+            "id": "goety:abyss_crown",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "30D1E2CAB43B552E"
@@ -59,9 +75,20 @@
       "x": 3,
       "y": 21.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "4D705D1D103C421E",
+          "type": "item",
+          "item": {
+            "id": "goety:abyss_robe",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "2DF4344BCFE4B0B5"
@@ -81,9 +108,20 @@
       "x": 0,
       "y": 7.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "3069A96845FFDA47",
+          "type": "item",
+          "item": {
+            "id": "goety:dark_robe",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -101,9 +139,20 @@
       "x": 0,
       "y": 8.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "2961D2B0E1B7DD60",
+          "type": "item",
+          "item": {
+            "id": "goety:dark_robe_fancy",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -121,9 +170,20 @@
       "x": 0,
       "y": 25.400000000000002,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "4C57CBD865CCE142",
+          "type": "item",
+          "item": {
+            "id": "goety:focus_bag",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -141,9 +201,20 @@
       "x": 3,
       "y": 25.400000000000002,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "6CFDF90849CC799B",
+          "type": "item",
+          "item": {
+            "id": "goety:focus_pack",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "06620BFD3611A5DA"
@@ -163,9 +234,20 @@
       "x": 0,
       "y": 29.200000000000003,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "382DC4BD8230E42B",
+          "type": "item",
+          "item": {
+            "id": "goety:frost_robe",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -183,9 +265,20 @@
       "x": 0,
       "y": 30.800000000000004,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "435CFBB17B82491B",
+          "type": "item",
+          "item": {
+            "id": "goety:frost_robe_cryo",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -203,9 +296,20 @@
       "x": 3,
       "y": 7.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "4403AF9DB57BCF5D",
+          "type": "item",
+          "item": {
+            "id": "goety:grand_robe",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "3AA4C10D50EE6887"
@@ -225,9 +329,20 @@
       "x": 0,
       "y": 0.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "22E22E2F76BFA189",
+          "type": "item",
+          "item": {
+            "id": "goety:illusion_robe",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -245,9 +360,20 @@
       "x": 0,
       "y": 1.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "76851C78703B33E8",
+          "type": "item",
+          "item": {
+            "id": "goety:illusion_robe_mirror",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -265,9 +391,20 @@
       "x": 3,
       "y": 1.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "5475EDADABDD54CA",
+          "type": "item",
+          "item": {
+            "id": "goety:nameless_cape",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "3D0816AA08D439BE",
@@ -288,9 +425,20 @@
       "x": 3,
       "y": 34.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "34D5AD2D5C352204",
+          "type": "item",
+          "item": {
+            "id": "goety:nameless_crown",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "262347F9D6938320"
@@ -310,9 +458,20 @@
       "x": 0,
       "y": 3.2,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "65794FB72D5E939A",
+          "type": "item",
+          "item": {
+            "id": "goety:necro_cape",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -330,9 +489,20 @@
       "x": 0,
       "y": 34.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "4E00D97B125D0BBE",
+          "type": "item",
+          "item": {
+            "id": "goety:necro_crown",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -350,9 +520,20 @@
       "x": 0,
       "y": 13.200000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "47496CE4980BC453",
+          "type": "item",
+          "item": {
+            "id": "goety:nether_crown",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -370,9 +551,20 @@
       "x": 3,
       "y": 12.4,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "2688A4D71A46FEB3",
+          "type": "item",
+          "item": {
+            "id": "goety:unholy_hat",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "3A03E88317BB3DA7"
@@ -392,9 +584,20 @@
       "x": 3,
       "y": 14.000000000000002,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "620B6B58F5B6B263",
+          "type": "item",
+          "item": {
+            "id": "goety:unholy_hat_halo",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -412,9 +615,20 @@
       "x": 0,
       "y": 17.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "18B45903BC0525B5",
+          "type": "item",
+          "item": {
+            "id": "goety:wild_crown",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -432,9 +646,20 @@
       "x": 0,
       "y": 21.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "2A91E9D62F2FD9AA",
+          "type": "item",
+          "item": {
+            "id": "goety:wild_robe",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",

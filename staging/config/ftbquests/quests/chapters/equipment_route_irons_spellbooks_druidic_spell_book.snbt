@@ -19,7 +19,12 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "1C6740E0F19B39B3",
+          "type": "checkmark"
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -37,9 +42,20 @@
       "x": 3,
       "y": 0.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "63EF0A1ABA94C981",
+          "type": "item",
+          "item": {
+            "id": "goetyiron:hemolytic_ring",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "1458DD66F5D80A6C"
@@ -59,9 +75,20 @@
       "x": 0,
       "y": 7.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "6CD4BFCB9A09B388",
+          "type": "item",
+          "item": {
+            "id": "irons_spellbooks:conjurers_talisman",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -79,9 +106,20 @@
       "x": 0,
       "y": 3.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "19201554A2B602A9",
+          "type": "item",
+          "item": {
+            "id": "irons_spellbooks:diamond_spell_book",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -99,9 +137,20 @@
       "x": 6,
       "y": 3.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "551D9CD8E109395A",
+          "type": "item",
+          "item": {
+            "id": "irons_spellbooks:druidic_spell_book",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "381EA029C0C804B9"
@@ -121,9 +170,20 @@
       "x": 3,
       "y": 7.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "3C0E77F1A63BFCB5",
+          "type": "item",
+          "item": {
+            "id": "irons_spellbooks:greater_conjurers_talisman",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "2C95919D686238D7"
@@ -143,9 +203,20 @@
       "x": 3,
       "y": 3.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "2C721C26B88DF8CC",
+          "type": "item",
+          "item": {
+            "id": "irons_spellbooks:rotten_spell_book",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "5D16254EA6284C28"
@@ -165,9 +236,20 @@
       "x": 0,
       "y": 0.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "03EE478CE9EFAF61",
+          "type": "item",
+          "item": {
+            "id": "irons_spellbooks:wicked_bone_ring",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -185,9 +267,20 @@
       "x": 3,
       "y": 11.399999999999999,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "594E4FE7B1F1A551",
+          "type": "item",
+          "item": {
+            "id": "l2complements:eternal_totem_of_dream",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "66C677D8F7ABC6D6"
@@ -207,9 +300,20 @@
       "x": 0,
       "y": 11.399999999999999,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "4FC39F8517635AD6",
+          "type": "item",
+          "item": {
+            "id": "l2complements:totem_of_dream",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -227,9 +331,20 @@
       "x": 3,
       "y": 15.2,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "3D3D0D22B2B69A6D",
+          "type": "item",
+          "item": {
+            "id": "l2hostility:abrahadabra",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "20E13FA77A8E5BF9"
@@ -249,9 +364,20 @@
       "x": 0,
       "y": 19.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "74DE171A11E57C02",
+          "type": "item",
+          "item": {
+            "id": "l2hostility:curse_of_greed",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -269,9 +395,20 @@
       "x": 0,
       "y": 22.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "552D6018D911DDB4",
+          "type": "item",
+          "item": {
+            "id": "l2hostility:curse_of_sloth",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -289,9 +426,20 @@
       "x": 3,
       "y": 22.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "0CFFEFA66626D171",
+          "type": "item",
+          "item": {
+            "id": "l2hostility:divinity_light",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "45245080ACFF40C8"
@@ -311,9 +459,20 @@
       "x": 3,
       "y": 19.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "0D839EC53C2541AE",
+          "type": "item",
+          "item": {
+            "id": "l2hostility:greed_of_nidhoggur",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "5CA34165B663C7AD"
@@ -333,9 +492,20 @@
       "x": 0,
       "y": 15.2,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "2819FC1C6AD71538",
+          "type": "item",
+          "item": {
+            "id": "l2hostility:ring_of_reflection",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -353,9 +523,20 @@
       "x": 3,
       "y": 27.400000000000002,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "518391835245CDE2",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:explorers_equipment",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "34D0B7488EDE98A0",
@@ -376,9 +557,20 @@
       "x": 0,
       "y": 26.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "34EFF2F49C898FAA",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:hand_drill",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -396,9 +588,20 @@
       "x": 0,
       "y": 28.200000000000003,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "48498B3D8A99854A",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:shot_put",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",

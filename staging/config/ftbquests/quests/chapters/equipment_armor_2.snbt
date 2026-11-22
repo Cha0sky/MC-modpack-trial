@@ -19,7 +19,12 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "2760FB2968156632",
+          "type": "checkmark"
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -39,7 +44,12 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "6D1F979CCBCAF82E",
+          "type": "checkmark"
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -57,9 +67,20 @@
       "x": 0.0,
       "y": 2.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "366EDDFE861B896F",
+          "type": "item",
+          "item": {
+            "id": "cataclysm:monstrous_helm",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -77,9 +98,20 @@
       "x": 1.6,
       "y": 2.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "4809828E41DA56DB",
+          "type": "item",
+          "item": {
+            "id": "celestial_core:ocean_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -97,9 +129,20 @@
       "x": 3.2,
       "y": 2.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "7316B5497B8C3EB1",
+          "type": "item",
+          "item": {
+            "id": "celestial_core:virtual_gold_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -117,9 +160,20 @@
       "x": 4.800000000000001,
       "y": 2.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "73F815C1BC3C0A65",
+          "type": "item",
+          "item": {
+            "id": "confluence:jungle_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -137,9 +191,20 @@
       "x": 0.0,
       "y": 3.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "20662AAB7BDDA733",
+          "type": "item",
+          "item": {
+            "id": "confluence:tiki_mask",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -157,9 +222,20 @@
       "x": 1.6,
       "y": 3.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "4A549473B2AE6B1B",
+          "type": "item",
+          "item": {
+            "id": "confluence:shadow_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -177,9 +253,20 @@
       "x": 3.2,
       "y": 3.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "0AF2C966CEE022ED",
+          "type": "item",
+          "item": {
+            "id": "confluence:necro_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -197,9 +284,20 @@
       "x": 4.800000000000001,
       "y": 3.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "59C92FEBC826415E",
+          "type": "item",
+          "item": {
+            "id": "confluence:meteor_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -217,9 +315,20 @@
       "x": 0.0,
       "y": 5.2,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "0A77B52735526582",
+          "type": "item",
+          "item": {
+            "id": "confluence:heim_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -237,9 +346,20 @@
       "x": 1.6,
       "y": 5.2,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "2921B204DD0D447A",
+          "type": "item",
+          "item": {
+            "id": "confluence:crimson_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -257,9 +377,20 @@
       "x": 3.2,
       "y": 5.2,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "34ECFBDD21BA1998",
+          "type": "item",
+          "item": {
+            "id": "confluence:hallowed_headgear",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -277,9 +408,20 @@
       "x": 4.800000000000001,
       "y": 5.2,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "74BD7210FF835031",
+          "type": "item",
+          "item": {
+            "id": "confluence:adamantite_headgear",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -297,9 +439,20 @@
       "x": 0.0,
       "y": 6.800000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "245A5CA60463265F",
+          "type": "item",
+          "item": {
+            "id": "confluence:spider_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -317,9 +470,20 @@
       "x": 1.6,
       "y": 6.800000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "3EA7EEA484E31B9C",
+          "type": "item",
+          "item": {
+            "id": "confluence:bee_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -337,9 +501,20 @@
       "x": 3.2,
       "y": 6.800000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "026B4D60E4DB169B",
+          "type": "item",
+          "item": {
+            "id": "confluence:gladiator_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -357,9 +532,20 @@
       "x": 4.800000000000001,
       "y": 6.800000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "33C05DD26F8094A6",
+          "type": "item",
+          "item": {
+            "id": "confluence:golden_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -377,9 +563,20 @@
       "x": 0.0,
       "y": 8.4,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "7E137D72B3829DE0",
+          "type": "item",
+          "item": {
+            "id": "confluence:titanium_headgear",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -397,9 +594,20 @@
       "x": 1.6,
       "y": 8.4,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "2A4FEBFBF34792A8",
+          "type": "item",
+          "item": {
+            "id": "confluence:palladium_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -417,9 +625,20 @@
       "x": 3.2,
       "y": 8.4,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "52D8A3340BC66409",
+          "type": "item",
+          "item": {
+            "id": "confluence:cobalt_mask",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -437,9 +656,20 @@
       "x": 4.800000000000001,
       "y": 8.4,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "4494AF7D819DE0FA",
+          "type": "item",
+          "item": {
+            "id": "confluence:platinum_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -457,9 +687,20 @@
       "x": 0.0,
       "y": 10.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "331BE3BE6F43C9B2",
+          "type": "item",
+          "item": {
+            "id": "confluence:obsidian_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -477,9 +718,20 @@
       "x": 1.6,
       "y": 10.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "7E4945E82D7C279A",
+          "type": "item",
+          "item": {
+            "id": "create:netherite_diving_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -497,9 +749,20 @@
       "x": 3.2,
       "y": 10.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "7542ABE7C4E63F0A",
+          "type": "item",
+          "item": {
+            "id": "goety:cursed_paladin_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -517,9 +780,20 @@
       "x": 4.800000000000001,
       "y": 10.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "7B60B41980811924",
+          "type": "item",
+          "item": {
+            "id": "goety:dark_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -537,9 +811,20 @@
       "x": 0.0,
       "y": 11.600000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "44382902DA851A7C",
+          "type": "item",
+          "item": {
+            "id": "irons_spellbooks:netherite_mage_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -557,9 +842,20 @@
       "x": 1.6,
       "y": 11.600000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "0FC9ED0FA2A80F04",
+          "type": "item",
+          "item": {
+            "id": "irons_spellbooks:cryomancer_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -577,9 +873,20 @@
       "x": 3.2,
       "y": 11.600000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "2FB2735A04B245D5",
+          "type": "item",
+          "item": {
+            "id": "irons_spellbooks:wizard_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -597,9 +904,20 @@
       "x": 4.800000000000001,
       "y": 11.600000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "6B4C3A9800AE8086",
+          "type": "item",
+          "item": {
+            "id": "irons_spellbooks:wizard_hat",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -617,9 +935,20 @@
       "x": 0.0,
       "y": 13.200000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "6A0017AE02934CAC",
+          "type": "item",
+          "item": {
+            "id": "irons_spellbooks:pumpkin_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -637,9 +966,20 @@
       "x": 1.6,
       "y": 13.200000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "392321FCA95CA269",
+          "type": "item",
+          "item": {
+            "id": "irons_spellbooks:shadowwalker_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -657,9 +997,20 @@
       "x": 3.2,
       "y": 13.200000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "0A6B0F6569B6C8EF",
+          "type": "item",
+          "item": {
+            "id": "irons_spellbooks:pyromancer_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -677,9 +1028,20 @@
       "x": 4.800000000000001,
       "y": 13.200000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "6714C8B9D04E5080",
+          "type": "item",
+          "item": {
+            "id": "irons_spellbooks:priest_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -697,9 +1059,20 @@
       "x": 0.0,
       "y": 14.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "30AFC93912CA22BD",
+          "type": "item",
+          "item": {
+            "id": "irons_spellbooks:cultist_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -717,9 +1090,20 @@
       "x": 1.6,
       "y": 14.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "4605EA25BD5DDE74",
+          "type": "item",
+          "item": {
+            "id": "irons_spellbooks:plagued_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -737,9 +1121,20 @@
       "x": 3.2,
       "y": 14.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "17392149B6F76978",
+          "type": "item",
+          "item": {
+            "id": "irons_spellbooks:electromancer_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -757,9 +1152,20 @@
       "x": 4.800000000000001,
       "y": 14.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "47EF4651791F23FC",
+          "type": "item",
+          "item": {
+            "id": "irons_spellbooks:archevoker_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -777,9 +1183,20 @@
       "x": 0.0,
       "y": 16.4,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "14E1CAD2C8F22D84",
+          "type": "item",
+          "item": {
+            "id": "kaleidoscope_cookery:straw_hat_flower",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -797,9 +1214,20 @@
       "x": 1.6,
       "y": 16.4,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "3F07FA0194FB2578",
+          "type": "item",
+          "item": {
+            "id": "kaleidoscope_cookery:straw_hat",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -817,9 +1245,20 @@
       "x": 3.2,
       "y": 16.4,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "5568314987075636",
+          "type": "item",
+          "item": {
+            "id": "l2complements:eternium_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -837,9 +1276,20 @@
       "x": 4.800000000000001,
       "y": 16.4,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "05C5E4A10479AED6",
+          "type": "item",
+          "item": {
+            "id": "l2complements:poseidite_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -857,9 +1307,20 @@
       "x": 0.0,
       "y": 18.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "5002E012A505B242",
+          "type": "item",
+          "item": {
+            "id": "l2complements:shulkerate_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -877,9 +1338,20 @@
       "x": 1.6,
       "y": 18.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "6B91469ADC6D8E90",
+          "type": "item",
+          "item": {
+            "id": "minecraft:netherite_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -897,9 +1369,20 @@
       "x": 3.2,
       "y": 18.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "155B90366F2DE177",
+          "type": "item",
+          "item": {
+            "id": "minecraft:diamond_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -917,9 +1400,20 @@
       "x": 4.800000000000001,
       "y": 18.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "19400B279273D4E9",
+          "type": "item",
+          "item": {
+            "id": "terra_entity:wraith_armor_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -937,9 +1431,20 @@
       "x": 0.0,
       "y": 19.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "5BB3B49BB6395ABA",
+          "type": "item",
+          "item": {
+            "id": "terra_entity:possessed_armor_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -957,9 +1462,20 @@
       "x": 1.6,
       "y": 19.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "1709B9F292302991",
+          "type": "item",
+          "item": {
+            "id": "touhou_little_maid_spell:star_witch_hat",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -977,9 +1493,20 @@
       "x": 3.2,
       "y": 19.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "0C245F038E31ED84",
+          "type": "item",
+          "item": {
+            "id": "confluence:orichalcum_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -997,9 +1524,20 @@
       "x": 4.800000000000001,
       "y": 19.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "743E6307468DF3FB",
+          "type": "item",
+          "item": {
+            "id": "confluence:wizard_hat",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1017,9 +1555,20 @@
       "x": 0.0,
       "y": 21.200000000000003,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "7FD09473C548709C",
+          "type": "item",
+          "item": {
+            "id": "confluence:hallowed_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1037,9 +1586,20 @@
       "x": 1.6,
       "y": 21.200000000000003,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "1FC420EE04350541",
+          "type": "item",
+          "item": {
+            "id": "confluence:mythril_hat",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1057,9 +1617,20 @@
       "x": 3.2,
       "y": 21.200000000000003,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "3F90B8D3EB42FF79",
+          "type": "item",
+          "item": {
+            "id": "confluence:adamantite_mask",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1077,9 +1648,20 @@
       "x": 4.800000000000001,
       "y": 21.200000000000003,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "6131B7A0FA4587F8",
+          "type": "item",
+          "item": {
+            "id": "confluence:viking_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1097,9 +1679,20 @@
       "x": 0.0,
       "y": 22.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "6A8F05215B2DC770",
+          "type": "item",
+          "item": {
+            "id": "confluence:titanium_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1117,9 +1710,20 @@
       "x": 1.6,
       "y": 22.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "2A8979C01C64BFE7",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:etherium_helmet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1139,7 +1743,12 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "47DB3165C292BCFC",
+          "type": "checkmark"
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1157,9 +1766,20 @@
       "x": 8.0,
       "y": 2.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "124F07409C6CB218",
+          "type": "item",
+          "item": {
+            "id": "confluence:mining_chestplate",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1177,9 +1797,20 @@
       "x": 9.6,
       "y": 2.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "3340A9F84745152A",
+          "type": "item",
+          "item": {
+            "id": "confluence:amber_robe",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1197,9 +1828,20 @@
       "x": 11.2,
       "y": 2.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "0A175F7B07BDE065",
+          "type": "item",
+          "item": {
+            "id": "confluence:diamond_robe",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1217,9 +1859,20 @@
       "x": 12.8,
       "y": 2.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "49A9256CDBA2F844",
+          "type": "item",
+          "item": {
+            "id": "confluence:copper_chestplate",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1237,9 +1890,20 @@
       "x": 8.0,
       "y": 3.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "51E190CB4999BC19",
+          "type": "item",
+          "item": {
+            "id": "confluence:tin_chestplate",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1257,9 +1921,20 @@
       "x": 9.6,
       "y": 3.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "6BFE046FF56236CD",
+          "type": "item",
+          "item": {
+            "id": "minecraft:leather_chestplate",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1277,9 +1952,20 @@
       "x": 11.2,
       "y": 3.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "51EBE0F240F7E281",
+          "type": "item",
+          "item": {
+            "id": "confluence:spore_root_chestplate",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1297,9 +1983,20 @@
       "x": 12.8,
       "y": 3.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "28C89F71027ED414",
+          "type": "item",
+          "item": {
+            "id": "confluence:dead_mans_seater",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1317,9 +2014,20 @@
       "x": 8.0,
       "y": 5.2,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "3899735A642AD6AF",
+          "type": "item",
+          "item": {
+            "id": "create:copper_backtank",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1337,9 +2045,20 @@
       "x": 9.6,
       "y": 5.2,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "05CAFC57C27BDC98",
+          "type": "item",
+          "item": {
+            "id": "kaleidoscope_cookery:farmer_chest_plate",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1359,7 +2078,12 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "032EBF1322869FE2",
+          "type": "checkmark"
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1377,9 +2101,20 @@
       "x": 16.0,
       "y": 2.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "1B34EB61322B5387",
+          "type": "item",
+          "item": {
+            "id": "confluence:copper_leggings",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1397,9 +2132,20 @@
       "x": 17.6,
       "y": 2.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "7451D82AE0F0F4F3",
+          "type": "item",
+          "item": {
+            "id": "confluence:tin_leggings",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1417,9 +2163,20 @@
       "x": 19.2,
       "y": 2.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "49749B1DB948B513",
+          "type": "item",
+          "item": {
+            "id": "minecraft:golden_leggings",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1437,9 +2194,20 @@
       "x": 20.8,
       "y": 2.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "4FD171877DE360C4",
+          "type": "item",
+          "item": {
+            "id": "confluence:spore_root_leggings",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1457,9 +2225,20 @@
       "x": 16.0,
       "y": 3.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "1CE61DF0B3A08F81",
+          "type": "item",
+          "item": {
+            "id": "minecraft:chainmail_leggings",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1479,7 +2258,12 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "27B0CC5F2533E384",
+          "type": "checkmark"
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1497,9 +2281,20 @@
       "x": 24.0,
       "y": 2.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "37E4F349AC28F39D",
+          "type": "item",
+          "item": {
+            "id": "celestial_core:ocean_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1517,9 +2312,20 @@
       "x": 25.6,
       "y": 2.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "1B084D0C978B659A",
+          "type": "item",
+          "item": {
+            "id": "celestial_core:virtual_gold_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1537,9 +2343,20 @@
       "x": 27.2,
       "y": 2.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "08375A65AA63CCC7",
+          "type": "item",
+          "item": {
+            "id": "confluence:jungle_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1557,9 +2374,20 @@
       "x": 28.8,
       "y": 2.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "307C160373D9CFE0",
+          "type": "item",
+          "item": {
+            "id": "confluence:tiki_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1577,9 +2405,20 @@
       "x": 24.0,
       "y": 3.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "4563189A2373FA4D",
+          "type": "item",
+          "item": {
+            "id": "confluence:shadow_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1597,9 +2436,20 @@
       "x": 25.6,
       "y": 3.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "3FCA30EBC9280CCB",
+          "type": "item",
+          "item": {
+            "id": "confluence:necro_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1617,9 +2467,20 @@
       "x": 27.2,
       "y": 3.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "3CC8C2D884DFE323",
+          "type": "item",
+          "item": {
+            "id": "confluence:meteor_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1637,9 +2498,20 @@
       "x": 28.8,
       "y": 3.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "02F87C5B85041CFB",
+          "type": "item",
+          "item": {
+            "id": "confluence:heim_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1657,9 +2529,20 @@
       "x": 24.0,
       "y": 5.2,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "40D4C0878408F786",
+          "type": "item",
+          "item": {
+            "id": "confluence:crimson_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1677,9 +2560,20 @@
       "x": 25.6,
       "y": 5.2,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "2EB6F22DD52FB27A",
+          "type": "item",
+          "item": {
+            "id": "confluence:spider_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1697,9 +2591,20 @@
       "x": 27.2,
       "y": 5.2,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "05F51E98F3300AAF",
+          "type": "item",
+          "item": {
+            "id": "confluence:bee_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1717,9 +2622,20 @@
       "x": 28.8,
       "y": 5.2,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "0CC41E12C3C98410",
+          "type": "item",
+          "item": {
+            "id": "confluence:gladiator_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1737,9 +2653,20 @@
       "x": 24.0,
       "y": 6.800000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "6C73DBD59E1DB9EB",
+          "type": "item",
+          "item": {
+            "id": "confluence:golden_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1757,9 +2684,20 @@
       "x": 25.6,
       "y": 6.800000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "1845366E59B6E0AA",
+          "type": "item",
+          "item": {
+            "id": "confluence:platinum_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1777,9 +2715,20 @@
       "x": 27.2,
       "y": 6.800000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "49DD9019FB2BA919",
+          "type": "item",
+          "item": {
+            "id": "confluence:obsidian_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1797,9 +2746,20 @@
       "x": 28.8,
       "y": 6.800000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "1E6BEA9583B4C32F",
+          "type": "item",
+          "item": {
+            "id": "create:netherite_diving_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1817,9 +2777,20 @@
       "x": 24.0,
       "y": 8.4,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "520F26B430E92D8A",
+          "type": "item",
+          "item": {
+            "id": "goety:cursed_paladin_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1837,9 +2808,20 @@
       "x": 25.6,
       "y": 8.4,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "200F48A4E2944267",
+          "type": "item",
+          "item": {
+            "id": "goety:dark_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1857,9 +2839,20 @@
       "x": 27.2,
       "y": 8.4,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "57770248CC8A31FC",
+          "type": "item",
+          "item": {
+            "id": "irons_spellbooks:netherite_mage_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1877,9 +2870,20 @@
       "x": 28.8,
       "y": 8.4,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "10415769920F0416",
+          "type": "item",
+          "item": {
+            "id": "irons_spellbooks:cryomancer_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1897,9 +2901,20 @@
       "x": 24.0,
       "y": 10.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "3C8BF265A40263C1",
+          "type": "item",
+          "item": {
+            "id": "irons_spellbooks:wizard_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1917,9 +2932,20 @@
       "x": 25.6,
       "y": 10.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "3B4B30CC24BDA106",
+          "type": "item",
+          "item": {
+            "id": "irons_spellbooks:pumpkin_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1937,9 +2963,20 @@
       "x": 27.2,
       "y": 10.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "4A6C0F0FCB10A0DF",
+          "type": "item",
+          "item": {
+            "id": "irons_spellbooks:shadowwalker_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1957,9 +2994,20 @@
       "x": 28.8,
       "y": 10.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "4CC7A87C53BE42C2",
+          "type": "item",
+          "item": {
+            "id": "irons_spellbooks:pyromancer_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1977,9 +3025,20 @@
       "x": 24.0,
       "y": 11.600000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "6EE128267308EE1E",
+          "type": "item",
+          "item": {
+            "id": "irons_spellbooks:priest_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -1997,9 +3056,20 @@
       "x": 25.6,
       "y": 11.600000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "5E93EA0B73070F07",
+          "type": "item",
+          "item": {
+            "id": "irons_spellbooks:cultist_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -2017,9 +3087,20 @@
       "x": 27.2,
       "y": 11.600000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "5A104850E1CFC0BD",
+          "type": "item",
+          "item": {
+            "id": "irons_spellbooks:plagued_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -2037,9 +3118,20 @@
       "x": 28.8,
       "y": 11.600000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "351E4E8814E7AB89",
+          "type": "item",
+          "item": {
+            "id": "irons_spellbooks:speed_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -2057,9 +3149,20 @@
       "x": 24.0,
       "y": 13.200000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "51CA9848E69E9F76",
+          "type": "item",
+          "item": {
+            "id": "irons_spellbooks:electromancer_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -2077,9 +3180,20 @@
       "x": 25.6,
       "y": 13.200000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "068F6EB350340CC7",
+          "type": "item",
+          "item": {
+            "id": "irons_spellbooks:archevoker_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -2097,9 +3211,20 @@
       "x": 27.2,
       "y": 13.200000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "260C4F8CEF4968AB",
+          "type": "item",
+          "item": {
+            "id": "l2complements:eternium_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -2117,9 +3242,20 @@
       "x": 28.8,
       "y": 13.200000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "2A6815B69DD70416",
+          "type": "item",
+          "item": {
+            "id": "l2complements:poseidite_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -2137,9 +3273,20 @@
       "x": 24.0,
       "y": 14.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "036CB939F819E59F",
+          "type": "item",
+          "item": {
+            "id": "l2complements:shulkerate_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -2157,9 +3304,20 @@
       "x": 25.6,
       "y": 14.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "6D80AE0337CF36DD",
+          "type": "item",
+          "item": {
+            "id": "minecraft:netherite_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -2177,9 +3335,20 @@
       "x": 27.2,
       "y": 14.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "53C1C502167DE468",
+          "type": "item",
+          "item": {
+            "id": "minecraft:diamond_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -2197,9 +3366,20 @@
       "x": 28.8,
       "y": 14.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "4D149269B68525DC",
+          "type": "item",
+          "item": {
+            "id": "terra_entity:wraith_armor_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -2217,9 +3397,20 @@
       "x": 24.0,
       "y": 16.4,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "5BBADC3FA8BAE32B",
+          "type": "item",
+          "item": {
+            "id": "terra_entity:possessed_armor_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -2237,9 +3428,20 @@
       "x": 25.6,
       "y": 16.4,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "0343B5EDE85C0E3A",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:etherium_boots",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -2259,7 +3461,12 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "3032BDF360F15252",
+          "type": "checkmark"
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -2277,9 +3484,20 @@
       "x": 32.0,
       "y": 2.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "7A4B5983064E8F90",
+          "type": "item",
+          "item": {
+            "id": "minecraft:leather_horse_armor",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",

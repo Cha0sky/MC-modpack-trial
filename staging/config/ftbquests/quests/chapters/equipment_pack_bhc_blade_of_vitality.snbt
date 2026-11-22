@@ -19,7 +19,12 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "24D650AB528CAF65",
+          "type": "checkmark"
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -37,9 +42,20 @@
       "x": 21,
       "y": 7.2,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "0816D48E578A61D1",
+          "type": "item",
+          "item": {
+            "id": "bhc:blade_of_vitality",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "2D326C2242887074",
@@ -60,9 +76,20 @@
       "x": 0,
       "y": 0.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "05FC62C07B6A73BE",
+          "type": "item",
+          "item": {
+            "id": "bhc:blue_heart",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -80,9 +107,20 @@
       "x": 12,
       "y": 7.2,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "68187FAFA4547958",
+          "type": "item",
+          "item": {
+            "id": "bhc:blue_heart_canister",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "22B8DE847F976969",
@@ -103,9 +141,20 @@
       "x": 0,
       "y": 1.5999999999999996,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "4E8331EEF13DBAA0",
+          "type": "item",
+          "item": {
+            "id": "bhc:blue_heart_melted",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -123,9 +172,20 @@
       "x": 3,
       "y": 4.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "078A1C850A17798F",
+          "type": "item",
+          "item": {
+            "id": "bhc:blue_heart_patch",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "22B8DE847F976969"
@@ -145,9 +205,20 @@
       "x": 15,
       "y": 9.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "31209CFE07B5D2F5",
+          "type": "item",
+          "item": {
+            "id": "bhc:blue_heartpulse_belt",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "2838D678DBDACEF4",
@@ -169,9 +240,20 @@
       "x": 0,
       "y": 3.1999999999999993,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "6536A7BCE18FB05B",
+          "type": "item",
+          "item": {
+            "id": "bhc:canister",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -189,9 +271,20 @@
       "x": 0,
       "y": 4.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "7F7AC8EBF8A61159",
+          "type": "item",
+          "item": {
+            "id": "bhc:green_heart",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -209,9 +302,20 @@
       "x": 9,
       "y": 7.2,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "392BA068691EC6D5",
+          "type": "item",
+          "item": {
+            "id": "bhc:green_heart_canister",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "2D6525FFC65B3F9D",
@@ -232,9 +336,20 @@
       "x": 0,
       "y": 6.4,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "66D3ED6AC3A41801",
+          "type": "item",
+          "item": {
+            "id": "bhc:green_heart_melted",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -252,9 +367,20 @@
       "x": 3,
       "y": 5.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "1FA988293E90CE7F",
+          "type": "item",
+          "item": {
+            "id": "bhc:green_heart_patch",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "2D6525FFC65B3F9D"
@@ -274,9 +400,20 @@
       "x": 12,
       "y": 8.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "111B8AE8FCCFC2E8",
+          "type": "item",
+          "item": {
+            "id": "bhc:green_heartpulse_belt",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "495104DD837C4456",
@@ -298,9 +435,20 @@
       "x": 15,
       "y": 8.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "4B0CDE5FFC8DDEED",
+          "type": "item",
+          "item": {
+            "id": "bhc:heart_amulet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "22B8DE847F976969",
@@ -327,9 +475,20 @@
       "x": 0,
       "y": 8.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "380F97A9A4E984D1",
+          "type": "item",
+          "item": {
+            "id": "bhc:red_heart",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -347,9 +506,20 @@
       "x": 3,
       "y": 10.4,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "61C7A08A6F8A5002",
+          "type": "item",
+          "item": {
+            "id": "bhc:red_heart_canister",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "298D0BCF4F032A2F",
@@ -372,9 +542,20 @@
       "x": 0,
       "y": 9.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "6BAC66A3DBE734B7",
+          "type": "item",
+          "item": {
+            "id": "bhc:red_heart_melted",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -392,9 +573,20 @@
       "x": 3,
       "y": 8.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "754C495E0924CB14",
+          "type": "item",
+          "item": {
+            "id": "bhc:red_heart_patch",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "1C401CCED65FFCB0"
@@ -414,9 +606,20 @@
       "x": 6,
       "y": 7.2,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "1ED816E6D8D3AAD8",
+          "type": "item",
+          "item": {
+            "id": "bhc:red_heartpulse_belt",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "77DD9DFFA9705C7A"
@@ -436,9 +639,20 @@
       "x": 0,
       "y": 11.2,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "5CCA3D7B8C91E9FF",
+          "type": "item",
+          "item": {
+            "id": "bhc:relic_apple",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -456,9 +670,20 @@
       "x": 18,
       "y": 8.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "0C09308B78D63B96",
+          "type": "item",
+          "item": {
+            "id": "bhc:soul_heart_amulet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "2838D678DBDACEF4",
@@ -484,9 +709,20 @@
       "x": 15,
       "y": 6.4,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "05DEE7F4FD24096E",
+          "type": "item",
+          "item": {
+            "id": "bhc:soul_heart_canister",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "22B8DE847F976969",
@@ -510,9 +746,20 @@
       "x": 3,
       "y": 7.2,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "5850C997CA2AFB55",
+          "type": "item",
+          "item": {
+            "id": "bhc:soul_heart_crystal",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "22B8DE847F976969",
@@ -535,9 +782,20 @@
       "x": 21,
       "y": 8.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "4BE10C70DDF3FC87",
+          "type": "item",
+          "item": {
+            "id": "bhc:vigor_bow",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "2D326C2242887074",
@@ -558,9 +816,20 @@
       "x": 0,
       "y": 12.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "12CE6CD9C41147E4",
+          "type": "item",
+          "item": {
+            "id": "bhc:wither_bone",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -578,9 +847,20 @@
       "x": 0,
       "y": 14.4,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "44E2D01C4D8E3E01",
+          "type": "item",
+          "item": {
+            "id": "bhc:yellow_heart",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -598,9 +878,20 @@
       "x": 6,
       "y": 8.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "6F5D1C833BCF0E24",
+          "type": "item",
+          "item": {
+            "id": "bhc:yellow_heart_canister",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "77DD9DFFA9705C7A",
@@ -621,9 +912,20 @@
       "x": 0,
       "y": 16.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "3C82B0AD7545D3B6",
+          "type": "item",
+          "item": {
+            "id": "bhc:yellow_heart_melted",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -641,9 +943,20 @@
       "x": 3,
       "y": 12.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "78CAE03ABCB62C7A",
+          "type": "item",
+          "item": {
+            "id": "bhc:yellow_heart_patch",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "0985E74E661D0C92"
@@ -663,9 +976,20 @@
       "x": 9,
       "y": 8.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "20EECF08F0A0A702",
+          "type": "item",
+          "item": {
+            "id": "bhc:yellow_heartpulse_belt",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "77DD9DFFA9705C7A",

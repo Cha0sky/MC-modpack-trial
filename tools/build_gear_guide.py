@@ -65,15 +65,16 @@ RELATED = {
 
 
 def main(extra_mods=None):
-    from build_equipment_atlas import atlas_id, build, entry_link
+    from build_equipment_atlas import atlas_id, build, entry_link, page_task
     chapter = {"id": guide_id("chapter"), "filename": FILENAME, "group": GUIDE_GROUP, "order_index": 1,
                "icon": {"id": "terra_curio:cloud_in_a_bottle"}, "quests": []}
     lang = {f"chapter.{chapter['id']}.title": "装备手册 · 武器与饰品"}
 
-    def page(key, title, icon, x, y, lines):
+    def page(key, title, icon, x, y, lines, *, item=None):
         qid = guide_id(key)
         chapter["quests"].append({"id": qid, "x": x, "y": y, "icon": {"id": icon},
-                                  "min_width": 300, "optional": True, "dependencies": [], "tasks": [], "rewards": []})
+                                  "min_width": 300, "optional": item is None, "disable_toast": True,
+                                  "dependencies": [], "tasks": [page_task(qid, item)], "rewards": []})
         lang[f"quest.{qid}.title"] = title
         lang[f"quest.{qid}.quest_desc"] = list(lines)
 
@@ -93,6 +94,7 @@ def main(extra_mods=None):
     )
     page("index", "装备手册 · 目录", "minecraft:book", 0, 0, [
         "点击下列分册查看装备。饰品放进背包的饰品栏，武器拿在主手，套装穿在四个护甲位。",
+        "具体装备页会在队伍首次持有时登记，物品仍留在玩家手中。点任务栏里的物品图标可查 JEI 配方。纯目录页可以手动勾为已读。",
         turn_page("全盔甲 · 按单件护甲值查阅", atlas_id("armor/index")),
         turn_page("全饰品 · 从材料追到成品", atlas_id("routes/index")),
         *[guide_link(title, key) for key, title, _, _, _ in groups],
@@ -110,7 +112,7 @@ def main(extra_mods=None):
                  [*lines, *([entry_link("展开这件饰品的完整路线", "accessory", item_id)] if key in ("starter", "advanced") else
                            [entry_link("查看胸甲护甲值与单件配方", "armor", item_id)] if key == "armor" else []),
                   *[guide_link("相关装备 · " + titles[target], target)
-                            for target in RELATED.get(slug, ())], guide_link(f"返回「{title}」", key)])
+                            for target in RELATED.get(slug, ())], guide_link(f"返回「{title}」", key)], item=item_id)
 
     write(QUESTS / f"chapters/{FILENAME}.snbt", chapter)
     for locale in ("zh_cn", "en_us"):

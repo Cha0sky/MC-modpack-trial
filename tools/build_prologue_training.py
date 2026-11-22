@@ -1,5 +1,7 @@
 """Extend the prologue with equipment drills and its shared-world catch-up route."""
 
+from pathlib import Path
+
 from build_heritage_quests import DATA, write
 from build_gear_guide import guide_link
 
@@ -35,6 +37,9 @@ def build_records():
                 "world_progression_core:unlock_evil": True}}}}}}, "requirements": [["done","three_styles"]]})
     write(DATA / "advancement/prologue_training/accessory.json", {"criteria": {"equipped": {
         "trigger": "curios:equip_curio", "conditions": {"item": {"items": ["terra_curio:" + n for n in ACCESSORIES]}}}}})
+    compat_data = Path(__file__).resolve().parents[1] / "modules/pack-compat/src/main/resources/data/stargarden_pack_compat"
+    write(compat_data / "tags/item/starter_accessories.json", {
+        "replace": False, "values": ["terra_curio:" + name for name in ACCESSORIES]})
     targets = ["minecraft:" + mob for mob in ("zombie", "husk", "drowned", "skeleton", "stray",
                "bogged", "spider", "cave_spider", "creeper", "slime", "pillager")]
     for name, weapons in DRILLS.items():
@@ -106,11 +111,15 @@ def add_training(chapter, language, uid):
         "主手施法，让宝石弹命中僵尸、骷髅、蜘蛛或史莱姆。紫晶、黄玉、蓝玉、红玉和钻石法杖均可。",
         guide_link("查手册 · 紫晶法杖与魔力准备", "amethyst_staff")
     ], [("minecraft:amethyst_shard", 12)])
-    add("loadout", "把饰品戴上", (10, 5), "terra_curio:cloud_in_a_bottle", ["melee", "archery", "magic"],
+    loadout = add("loadout", "把饰品戴上", (10, 5), "terra_curio:cloud_in_a_bottle", ["melee", "archery", "magic"],
         adv("accessory"), [
             "练熟一门兵器，再选一件搭配它的饰品。想越过落点就带云朵瓶，想在平地放风筝就穿跑鞋。把开荒分册里任意一件戴进背包的饰品栏。",
+            "点持有任务的图标可看七件候选饰品，再点其中一件查看 JEI 配方。",
             guide_link("看七件开荒饰品 · 属性与获取", "starter"), guide_link("翻开整本装备手册", "index")
         ], [("minecraft:golden_carrot", 12)], minimum=1)
+    loadout["tasks"].append({"id": uid("loadout/held"), "type": "item", "count": 1, "consume_items": False,
+                             "item": {"id": "terra_curio:cloud_in_a_bottle", "count": 1,
+                                      "components": {"minecraft:custom_data": {"stargarden_starter_accessories": True}}}})
     add("crown", "王冠与退路", (14, 3), "confluence:slime_crown",
         ["workshop", "allocate", "blade", "loadout"], {"type": "item", "item": {"id": "confluence:slime_crown", "count": 1},
         "count": 1, "consume_items": False}, [

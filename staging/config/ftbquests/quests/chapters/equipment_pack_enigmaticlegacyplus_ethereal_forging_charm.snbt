@@ -19,7 +19,12 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "3CF4AA4C0F216582",
+          "type": "checkmark"
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -37,9 +42,20 @@
       "x": 6,
       "y": 4.800000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "5DD3435C1A2EC2E8",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:dislocation_ring",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "1E344B96D5ADB474"
@@ -59,9 +75,20 @@
       "x": 6,
       "y": 3.2,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "392DF3876943456F",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:earth_promise",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "0691EB6AFBAD1A93",
@@ -82,9 +109,20 @@
       "x": 3,
       "y": 0.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "507C190D1F748FA3",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:ender_ring",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "626593FA7CB19EF8"
@@ -104,9 +142,20 @@
       "x": 12,
       "y": 4.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "3347CE2603EFC7F0",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:ethereal_forging_charm",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "065142EDF2AC1FD7",
@@ -127,9 +176,20 @@
       "x": 12,
       "y": 2.4000000000000004,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "798A22D71FB43290",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:forger_crystal",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "065142EDF2AC1FD7"
@@ -149,9 +209,20 @@
       "x": 9,
       "y": 2.4000000000000004,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "44D43227B8185D6A",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:forger_gem",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "0A0AF97DC8B14F01"
@@ -171,9 +242,20 @@
       "x": 3,
       "y": 1.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "6CB002AA3CACEBCA",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:golden_ring",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "626593FA7CB19EF8"
@@ -193,9 +275,20 @@
       "x": 3,
       "y": 3.2,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "7950DC643643234B",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:infernal_ring",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "626593FA7CB19EF8"
@@ -215,9 +308,20 @@
       "x": 0,
       "y": 1.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "0F3E2730FAEAC73A",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:iron_ring",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -235,9 +339,20 @@
       "x": 3,
       "y": 4.800000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "77EB62F09109F60E",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:magnet_ring",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "626593FA7CB19EF8"
@@ -257,9 +372,20 @@
       "x": 3,
       "y": 6.4,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "53458A0822F8144B",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:miner_ring",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "626593FA7CB19EF8"
@@ -279,9 +405,20 @@
       "x": 0,
       "y": 3.2,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "12A8E4473B7236CA",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:mining_charm",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -299,9 +436,20 @@
       "x": 6,
       "y": 1.6,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "1AA2723DB5E42EBC",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:quartz_ring",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "0691EB6AFBAD1A93"
@@ -321,9 +469,20 @@
       "x": 0,
       "y": 4.800000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "2037452CB51B8EC0",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:starlight_pearl",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -341,9 +500,20 @@
       "x": 9,
       "y": 4.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "4553C7A7B9B0AB30",
+          "type": "item",
+          "item": {
+            "id": "enigmaticlegacyplus:starlight_ring",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "0A0AF97DC8B14F01"

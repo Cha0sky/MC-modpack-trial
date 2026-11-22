@@ -826,6 +826,21 @@
           "id": "58819EF49DEDB1BE",
           "type": "advancement",
           "advancement": "world_progression_core:prologue_training/accessory"
+        },
+        {
+          "id": "0AF1EE5B491B7133",
+          "type": "item",
+          "count": 1,
+          "consume_items": false,
+          "item": {
+            "id": "terra_curio:cloud_in_a_bottle",
+            "count": 1,
+            "components": {
+              "minecraft:custom_data": {
+                "stargarden_starter_accessories": true
+              }
+            }
+          }
         }
       ],
       "rewards": [

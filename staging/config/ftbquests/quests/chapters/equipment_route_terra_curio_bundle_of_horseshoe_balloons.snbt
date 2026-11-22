@@ -19,7 +19,12 @@
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "3022EA6951E7BD9A",
+          "type": "checkmark"
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -37,9 +42,20 @@
       "x": 6,
       "y": 7.200000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "5E659F06CE0F6D2C",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:amber_horseshoe_balloon",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "3A7B6797CB104D81",
@@ -60,9 +76,20 @@
       "x": 3,
       "y": 10.400000000000002,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "1BC74E532E132CC0",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:balloon_pufferfish",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "20EB1BF6C19FDF1F"
@@ -82,9 +109,20 @@
       "x": 3,
       "y": 2.4000000000000004,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "400828C259B94C39",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:blizzard_in_a_balloon",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "11CD602B9438EC95",
@@ -105,9 +143,20 @@
       "x": 0,
       "y": 0.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "651454E8C554BDED",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:blizzard_in_a_bottle",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -125,9 +174,20 @@
       "x": 6,
       "y": 2.4000000000000004,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "1C0D04B158C98D74",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:blue_horseshoe_balloon",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "7470C7F4FD763059",
@@ -148,9 +208,20 @@
       "x": 6,
       "y": 4.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "5866CC761F3E41E6",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:bundle_of_balloons",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "7CB97A5A2B4A0DDE",
@@ -172,9 +243,20 @@
       "x": 9,
       "y": 4.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "1A05D2137A5667D1",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:bundle_of_horseshoe_balloons",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "7CB97A5A2B4A0DDE",
@@ -201,9 +283,20 @@
       "x": 3,
       "y": 4.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "652C8F56847386DC",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:cloud_in_a_balloon",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "6D0C966F0D4377B7",
@@ -224,9 +317,20 @@
       "x": 0,
       "y": 1.6000000000000005,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "0B76EFFAF5E86B3B",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:cloud_in_a_bottle",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -244,9 +348,20 @@
       "x": 6,
       "y": 5.6000000000000005,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "1346A909C8E66D7A",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:fart_in_a_balloon",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "2F2AD60EEEC93E43",
@@ -267,9 +382,20 @@
       "x": 3,
       "y": 0.7999999999999998,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "3A392259855524C6",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:fart_in_a_jar",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "6D0C966F0D4377B7"
@@ -289,9 +415,20 @@
       "x": 9,
       "y": 5.6000000000000005,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "45AC1DC425A4C8D7",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:green_horseshoe_balloon",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "4B686F479CA002F0",
@@ -312,9 +449,20 @@
       "x": 3,
       "y": 7.200000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "5FA63EAC4D6A6834",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:honey_balloon",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "162072C9EA32E60B",
@@ -335,9 +483,20 @@
       "x": 0,
       "y": 3.2,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "1B18B4F01BB8BE5B",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:honey_comb",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -355,9 +514,20 @@
       "x": 0,
       "y": 4.800000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "509DE4C3F76B5CD2",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:lucky_horseshoe",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -375,9 +545,20 @@
       "x": 3,
       "y": 5.6000000000000005,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "6D2EE30AF5F3ADFD",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:obsidian_horseshoe",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "1886D5513754C4B2",
@@ -398,9 +579,20 @@
       "x": 0,
       "y": 6.4,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "4BCF8DA5BEDD29E8",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:obsidian_skull",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -418,9 +610,20 @@
       "x": 9,
       "y": 7.200000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "758CF45EF4B13058",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:pink_horseshoe_balloon",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "1886D5513754C4B2",
@@ -441,9 +644,20 @@
       "x": 3,
       "y": 8.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "62A3A4ACC0D777F3",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:sandstorm_in_a_balloon",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "5CE820142B8AEF69",
@@ -464,9 +678,20 @@
       "x": 0,
       "y": 8.0,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "645A5D91059E3D1B",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:sandstorm_in_a_bottle",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -484,9 +709,20 @@
       "x": 6,
       "y": 10.400000000000002,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "2641486C874DECC9",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:sharkron_balloon",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "57608B6CC21F7539",
@@ -507,9 +743,20 @@
       "x": 0,
       "y": 9.600000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "6103C700852FF8DE",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:shiny_red_balloon",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -527,9 +774,20 @@
       "x": 0,
       "y": 11.200000000000001,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "50CFA97C8B2EA527",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:tsunami_in_a_bottle",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [],
       "progression_mode": "flexible",
@@ -547,9 +805,20 @@
       "x": 6,
       "y": 0.7999999999999998,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "0DD30616F84B9270",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:white_horseshoe_balloon",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "7CB97A5A2B4A0DDE",
@@ -570,9 +839,20 @@
       "x": 6,
       "y": 8.8,
       "min_width": 345,
-      "optional": true,
+      "optional": false,
       "disable_toast": true,
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "0382458A3B7318CF",
+          "type": "item",
+          "item": {
+            "id": "terra_curio:yellow_horseshoe_balloon",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
       "rewards": [],
       "dependencies": [
         "1886D5513754C4B2",
