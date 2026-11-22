@@ -1,10 +1,12 @@
 # 星庭远征整合包：开发交接文档
 
-更新时间：2026-11-21，Asia/Shanghai。用途：让新对话了解当前整合包状态并协助用户规划下一项开发。**本文件不是新任务、推送、启动游戏或修改存档的自动授权。**
+更新时间：2026-11-22，Asia/Shanghai。用途：让新对话了解当前整合包状态并协助用户规划下一项开发。**本文件不是新任务、推送、启动游戏或修改存档的自动授权。**
 
 ## 1. 接手时先看这里
 
-当前开发版包含序章至第六章，共 94 项任务。开局先领加点手册和卷轴、练噬星之刃，再自选泰拉武器与饰品备战史莱姆王。进度核心为 `0.7.1-campaign`，成长剑为 `1.1.4-longsword`，加点手册为 `1.0.1-fieldguide`。任务、资源及版本已从实例读回，实机由用户验收。[玩法指引](docs/design/campaign-field-guide.md) · [部署回执](evidence/campaign-refresh-deployment.json)。
+当前开发版包含序章至第六章的 94 项任务，另有独立的「装备手册 · 武器与饰品」。开局先领加点手册和卷轴、练噬星之刃，再自选泰拉武器与饰品备战史莱姆王。进度核心为 `0.7.1-campaign`，成长剑为 `1.1.4-longsword`，加点手册为 `1.0.1-fieldguide`。任务、资源及版本已从实例读回，实机由用户验收。[玩法指引](docs/design/campaign-field-guide.md) · [部署回执](evidence/campaign-refresh-deployment.json)。
+
+装备手册自开局即可查阅。序章领奖、兵器演练、佩戴饰品、备战以及第四章选甲共 7 处设有正文链接。手册共 27 页，收录 15 件饰品、4 种武器和 3 套护甲，已从开发版核对数据；游戏中点击体验待用户实测。[部署回执](evidence/equipment-guide-deployment.json)。
 
 任务图滚轮修复已部署。FTB Quests 与 FTB Library 均为 `2101.1.35`，可在章节任务图上用 Ctrl＋滚轮缩放。游戏内手感待用户确认。[部署回执](evidence/ftb-quest-zoom-deployment.json)。
 

@@ -1,8 +1,12 @@
 # 项目状态
 
-更新：2026-11-21（Asia/Shanghai）。玩法以 PLAN.md 为准，叙事按作者世界观与状态标记约束。正式开发遵循 AGENTS.md 的任务批准与 Git 流程。
+更新：2026-11-22（Asia/Shanghai）。玩法以 PLAN.md 为准，叙事按作者世界观与状态标记约束。正式开发遵循 AGENTS.md 的任务批准与 Git 流程。
 
 接续说明：[AI-HANDOFF.md](AI-HANDOFF.md) 是完整交接入口，含集镇生成已验收、工坊第一章与遗产调查第二章已部署待实测、实现入口、Git 与备份快照和后续规划。新对话优先阅读；交接不是新的实施或推送授权。
+
+## 2026-11-22 装备手册与任务正文跳转
+
+实现 `3ae4994`。参考本机《Confluence：Journey's Start》的装备分册与 ATM10 的正文跳转，新增 27 页手册，含目录、四个分册、15 件饰品、4 种武器和 3 套护甲。7 个主线任务用原生 change_page 直达对应内容。已备份并部署手册章节及两份语言文件，读回核对索引、装备链接和完整性；实机由用户验收。[开荒指引](docs/design/campaign-field-guide.md) · [部署回执](evidence/equipment-guide-deployment.json)。
 
 ## 2026-11-21 任务图 Ctrl＋滚轮缩放修复
 
