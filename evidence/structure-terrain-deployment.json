@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-23T02:24:33.335471+08:00",
+  "instance": "D:\\PCL 正式版 2.10.6 (1)\\.minecraft\\versions\\星庭远征-开发版",
+  "applied": true,
+  "source_commit": "c0c22c437aa6cde0cd57f98b8cf6eb0a3ed7d666",
+  "files": [
+    {
+      "path": "mods/world-progression-core-0.1.0.jar",
+      "existed": true
+    }
+  ],
+  "runtime_acceptance": "pending user playtest",
+  "core_version": "0.8.1-terrain",
+  "module_versions": {
+    "world_progression_core": "0.8.1-terrain"
+  },
+  "backup": "D:\\PCL 正式版 2.10.6 (1)\\codex\\modpack-project\\backups\\structure-terrain-20261123-022433-335471"
+}
