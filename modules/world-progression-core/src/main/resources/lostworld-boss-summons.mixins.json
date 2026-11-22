@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "local.lostworld.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "KingSlimeSummonMixin", "HoneySlimeOriginMixin", "DemonEyeOriginMixin",
+    "BroodMotherEggMixin", "SpiderEggOriginMixin", "SplitSummonOriginMixin",
+    "FleshWallLeechMixin", "FleshHillSummonMixin", "FleshHillPillarSpawnMixin", "FleshHillPillarDamageMixin"
+  ]
+}

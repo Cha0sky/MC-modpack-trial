@@ -4,6 +4,7 @@ public final class ChapterLogicCheck {
     private static void check(boolean value,String message) { if (!value) throw new AssertionError(message); }
     public static void main(String[] args) {
         WorkshopProgressCheck.run();
+        BossBalanceCheck.run();
         HeritageProgressCheck.run();
         check(HeritageProgress.inDepotRange(-138, 30, -10, 30), "A camp can sit on the 128-block boundary");
         check(!HeritageProgress.inDepotRange(-138, 31, -10, 30), "Use a horizontal radius around the archived site");
