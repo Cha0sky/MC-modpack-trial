@@ -1,0 +1,113 @@
+{
+  "id": "50279ECF1A1E88F2",
+  "filename": "equipment_route_confluence_steampunk_wings",
+  "group": "6D1938960E54F1E0",
+  "order_index": 19,
+  "icon": {
+    "id": "confluence:steampunk_wings"
+  },
+  "progression_mode": "flexible",
+  "disable_toast": true,
+  "quests": [
+    {
+      "id": "341CC6C0A597431E",
+      "icon": {
+        "id": "confluence:steampunk_wings"
+      },
+      "x": 0,
+      "y": -3,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "47D72FED4211975B",
+      "icon": {
+        "id": "confluence:steampunk_wings"
+      },
+      "x": 3.4,
+      "y": 0.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "1FCB883A04706C06",
+      "icon": {
+        "id": "confluence:tattered_wings"
+      },
+      "x": 5.1,
+      "y": 0.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "6804D47D49D56CC9",
+      "icon": {
+        "id": "confluence:vortex_booster"
+      },
+      "x": 0.0,
+      "y": 0.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "0D0FFC3084987FE1",
+      "icon": {
+        "id": "confluence:xenon_moss_fishing_bobber"
+      },
+      "x": 1.7,
+      "y": 0.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    }
+  ]
+}

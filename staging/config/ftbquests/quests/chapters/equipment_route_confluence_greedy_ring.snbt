@@ -1,0 +1,244 @@
+{
+  "id": "567B21E3EC456838",
+  "filename": "equipment_route_confluence_greedy_ring",
+  "group": "6D1938960E54F1E0",
+  "order_index": 12,
+  "icon": {
+    "id": "confluence:greedy_ring"
+  },
+  "progression_mode": "flexible",
+  "disable_toast": true,
+  "quests": [
+    {
+      "id": "6DAA7B21D5209B08",
+      "icon": {
+        "id": "confluence:greedy_ring"
+      },
+      "x": 0,
+      "y": -3,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "580BDD6B462E797B",
+      "icon": {
+        "id": "confluence:coin_ring"
+      },
+      "x": 3,
+      "y": 1.6,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "4E6FE85646DF2BF6",
+        "33C55C540FB5F62B"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "216BA8FDA2201999",
+      "icon": {
+        "id": "confluence:discount_card"
+      },
+      "x": 0,
+      "y": 0.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "60ACDA8AA90BB264",
+      "icon": {
+        "id": "confluence:fishing_bobber"
+      },
+      "x": 0,
+      "y": 12.4,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "68DC2E609347DFC1",
+      "icon": {
+        "id": "confluence:glowing_fishing_bobber"
+      },
+      "x": 3,
+      "y": 12.4,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "60ACDA8AA90BB264"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "4E6FE85646DF2BF6",
+      "icon": {
+        "id": "confluence:gold_ring"
+      },
+      "x": 0,
+      "y": 1.6,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "16D1CF1076C0D344",
+      "icon": {
+        "id": "confluence:greedy_ring"
+      },
+      "x": 6,
+      "y": 1.6,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "580BDD6B462E797B",
+        "216BA8FDA2201999"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "77955510C5ECF6B8",
+      "icon": {
+        "id": "confluence:hercules_beetle"
+      },
+      "x": 0,
+      "y": 7.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "33C55C540FB5F62B",
+      "icon": {
+        "id": "confluence:lucky_coin"
+      },
+      "x": 0,
+      "y": 3.2,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "50F1D7E17452C1F9",
+      "icon": {
+        "id": "confluence:necromantic_scroll"
+      },
+      "x": 0,
+      "y": 8.6,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "63C95BB3800A2761",
+      "icon": {
+        "id": "confluence:papyrus_scarab"
+      },
+      "x": 3,
+      "y": 7.8,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "77955510C5ECF6B8",
+        "50F1D7E17452C1F9"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    }
+  ]
+}

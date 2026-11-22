@@ -1,0 +1,93 @@
+{
+  "id": "1DAA7C56CB3EE4D2",
+  "filename": "equipment_routes_index",
+  "group": "6D1938960E54F1E0",
+  "order_index": -1,
+  "icon": {
+    "id": "terra_curio:lightning_boots"
+  },
+  "progression_mode": "flexible",
+  "disable_toast": true,
+  "quests": [
+    {
+      "id": "052784AEB4F7DBD1",
+      "icon": {
+        "id": "terra_curio:lightning_boots"
+      },
+      "x": 0,
+      "y": 0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "5D277CCE26CF0CD2",
+      "icon": {
+        "id": "terra_curio:terraspark_boots"
+      },
+      "x": 0,
+      "y": 2,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "143FE113EFFE1A18",
+      "icon": {
+        "id": "confluence:greedy_ring"
+      },
+      "x": 2,
+      "y": 2,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "5A57BB020D18DFC1",
+      "icon": {
+        "id": "cataclysm:aptrgangr_head"
+      },
+      "x": 4,
+      "y": 2,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    }
+  ]
+}

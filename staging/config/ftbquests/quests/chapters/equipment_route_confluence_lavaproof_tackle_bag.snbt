@@ -1,0 +1,160 @@
+{
+  "id": "085D92546EE6A07E",
+  "filename": "equipment_route_confluence_lavaproof_tackle_bag",
+  "group": "6D1938960E54F1E0",
+  "order_index": 11,
+  "icon": {
+    "id": "confluence:lavaproof_tackle_bag"
+  },
+  "progression_mode": "flexible",
+  "disable_toast": true,
+  "quests": [
+    {
+      "id": "1E2690CEB4525B70",
+      "icon": {
+        "id": "confluence:lavaproof_tackle_bag"
+      },
+      "x": 0,
+      "y": -3,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "39749CBEE7648CE3",
+      "icon": {
+        "id": "confluence:angler_tackle_bag"
+      },
+      "x": 3,
+      "y": 2.4000000000000004,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "5A9F5678DAB50CBD",
+        "5AAC3DB50E5E7D9E",
+        "65C732C5EF78E527"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "5A9F5678DAB50CBD",
+      "icon": {
+        "id": "confluence:high_test_fishing_line"
+      },
+      "x": 0,
+      "y": 0.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "7385316D0887748F",
+      "icon": {
+        "id": "confluence:lavaproof_fishing_hook"
+      },
+      "x": 0,
+      "y": 1.6000000000000003,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "5EF9B41E80D464F6",
+      "icon": {
+        "id": "confluence:lavaproof_tackle_bag"
+      },
+      "x": 6,
+      "y": 2.4000000000000004,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "39749CBEE7648CE3",
+        "7385316D0887748F"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "5AAC3DB50E5E7D9E",
+      "icon": {
+        "id": "confluence:tackle_box"
+      },
+      "x": 0,
+      "y": 3.2,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "65C732C5EF78E527",
+      "icon": {
+        "id": "terra_curio:angler_earring"
+      },
+      "x": 0,
+      "y": 4.800000000000001,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    }
+  ]
+}

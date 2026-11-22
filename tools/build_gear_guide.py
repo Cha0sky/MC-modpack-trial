@@ -65,6 +65,7 @@ RELATED = {
 
 
 def main():
+    from build_equipment_atlas import atlas_id, build, entry_link
     chapter = {"id": guide_id("chapter"), "filename": FILENAME, "group": GUIDE_GROUP, "order_index": 1,
                "icon": {"id": "terra_curio:cloud_in_a_bottle"}, "quests": []}
     lang = {f"chapter.{chapter['id']}.title": "装备手册 · 武器与饰品"}
@@ -92,22 +93,29 @@ def main():
     )
     page("index", "装备手册 · 目录", "minecraft:book", 0, 0, [
         "点击下列分册查看装备。饰品放进背包的饰品栏，武器拿在主手，套装穿在四个护甲位。",
+        turn_page("全盔甲 · 按单件护甲值查阅", atlas_id("armor/index")),
+        turn_page("全饰品 · 从材料追到成品", atlas_id("routes/index")),
         *[guide_link(title, key) for key, title, _, _, _ in groups],
         "从主线点进来时，按退格键可以返回上一个条目。",
     ])
     titles = {slug: name for _, _, _, _, entries in groups for slug, name, _, _ in entries}
     for column, (key, title, icon, overview, entries) in enumerate(groups):
         x = -6 + column * 4
-        page(key, title, icon, x, 2, [overview, *[guide_link(row[1], row[0]) for row in entries],
+        extra = ([turn_page("查所有护甲部件与分级", atlas_id("armor/index"))] if key == "armor" else
+                 [turn_page("查所有饰品与合成路线", atlas_id("routes/index"))] if key in ("starter", "advanced") else [])
+        page(key, title, icon, x, 2, [overview, *extra, *[guide_link(row[1], row[0]) for row in entries],
                                       guide_link("返回装备目录", "index")])
         for position, (slug, name, item_id, lines) in enumerate(entries):
             page(slug, name, item_id, x - 0.75 + 1.5 * (position % 2), 4 + 1.5 * (position // 2),
-                 [*lines, *[guide_link("相关装备 · " + titles[target], target)
+                 [*lines, *([entry_link("展开这件饰品的完整路线", "accessory", item_id)] if key in ("starter", "advanced") else
+                           [entry_link("查看胸甲护甲值与单件配方", "armor", item_id)] if key == "armor" else []),
+                  *[guide_link("相关装备 · " + titles[target], target)
                             for target in RELATED.get(slug, ())], guide_link(f"返回「{title}」", key)])
 
     write(QUESTS / f"chapters/{FILENAME}.snbt", chapter)
     for locale in ("zh_cn", "en_us"):
         merge(QUESTS / f"lang/{locale}.snbt", lang)
+    build(guide_id)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,233 @@
+{
+  "id": "71C1A9D72577A261",
+  "filename": "equipment_route_touhou_little_maid_drown_protect_bauble",
+  "group": "6D1938960E54F1E0",
+  "order_index": 25,
+  "icon": {
+    "id": "touhou_little_maid:drown_protect_bauble"
+  },
+  "progression_mode": "flexible",
+  "disable_toast": true,
+  "quests": [
+    {
+      "id": "63CC872308E1291F",
+      "icon": {
+        "id": "touhou_little_maid:drown_protect_bauble"
+      },
+      "x": 0,
+      "y": -3,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "732D83A3CBB9F2A1",
+      "icon": {
+        "id": "touhou_little_maid:drown_protect_bauble"
+      },
+      "x": 3.4,
+      "y": 0.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "60E00307B95F9900",
+      "icon": {
+        "id": "touhou_little_maid:explosion_protect_bauble"
+      },
+      "x": 6.8,
+      "y": 0.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "593423E213E1440E",
+      "icon": {
+        "id": "touhou_little_maid:fall_protect_bauble"
+      },
+      "x": 1.7,
+      "y": 0.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "0394DE6BCA9D2828",
+      "icon": {
+        "id": "touhou_little_maid:fire_protect_bauble"
+      },
+      "x": 5.1,
+      "y": 0.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "5EF6388504896835",
+      "icon": {
+        "id": "touhou_little_maid:item_magnet_bauble"
+      },
+      "x": 8.5,
+      "y": 0.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "29DBF96EF0B85181",
+      "icon": {
+        "id": "touhou_little_maid:magic_protect_bauble"
+      },
+      "x": 1.7,
+      "y": 1.7,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "28B63D8B076598D2",
+      "icon": {
+        "id": "touhou_little_maid:mute_bauble"
+      },
+      "x": 0.0,
+      "y": 1.7,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "16494BC38DA429B5",
+      "icon": {
+        "id": "touhou_little_maid:nimble_fabric"
+      },
+      "x": 3.4,
+      "y": 1.7,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "6F83D402FC76F882",
+      "icon": {
+        "id": "touhou_little_maid:projectile_protect_bauble"
+      },
+      "x": 0.0,
+      "y": 0.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "33446446A3C0E2D6",
+      "icon": {
+        "id": "touhou_little_maid:wireless_io"
+      },
+      "x": 5.1,
+      "y": 1.7,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    }
+  ]
+}

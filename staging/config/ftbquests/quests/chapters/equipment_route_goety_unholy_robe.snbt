@@ -1,0 +1,202 @@
+{
+  "id": "2A80572EF5CA96FE",
+  "filename": "equipment_route_goety_unholy_robe",
+  "group": "6D1938960E54F1E0",
+  "order_index": 8,
+  "icon": {
+    "id": "goety:unholy_robe"
+  },
+  "progression_mode": "flexible",
+  "disable_toast": true,
+  "quests": [
+    {
+      "id": "58EA558B37E86084",
+      "icon": {
+        "id": "goety:unholy_robe"
+      },
+      "x": 0,
+      "y": -3,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "6C94B665E03DF2BF",
+      "icon": {
+        "id": "goety:nether_robe"
+      },
+      "x": 6,
+      "y": 2.4000000000000004,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "2C4C617F7C40E952",
+        "548D5B25D53A2BCD",
+        "30E4E7299B8536D3",
+        "1F8719192C30089D"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "734260998F79B826",
+      "icon": {
+        "id": "goety:nether_robe_warped"
+      },
+      "x": 6,
+      "y": 0.8,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "45A951C1DDE0E56B",
+      "icon": {
+        "id": "goety:unholy_robe"
+      },
+      "x": 9,
+      "y": 1.6,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "6C94B665E03DF2BF"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "2C4C617F7C40E952",
+      "icon": {
+        "id": "goety:warlock_robe"
+      },
+      "x": 3,
+      "y": 0.8,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "7B47CA1DA838DFEA"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "548D5B25D53A2BCD",
+      "icon": {
+        "id": "goety:warlock_robe_dark"
+      },
+      "x": 3,
+      "y": 2.4000000000000004,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "7B47CA1DA838DFEA",
+      "icon": {
+        "id": "goety:warlock_sash"
+      },
+      "x": 0,
+      "y": 0.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "30E4E7299B8536D3",
+      "icon": {
+        "id": "goety:witch_robe"
+      },
+      "x": 0,
+      "y": 1.6,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "1F8719192C30089D",
+      "icon": {
+        "id": "goety:witch_robe_hedge"
+      },
+      "x": 0,
+      "y": 3.2,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    }
+  ]
+}

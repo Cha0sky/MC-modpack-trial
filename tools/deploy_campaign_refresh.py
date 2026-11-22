@@ -119,6 +119,11 @@ def main(apply, blade_only=False, guide_only=False, book_only=False, production_
     instance = INSTANCE.resolve(strict=True)
     if instance != INSTANCE:
         raise RuntimeError("Unexpected development instance")
+    if guide_only and (QUESTS / "chapters/equipment_armor_index.snbt").exists() and (
+            instance / BOOK_PATH / f"chapters/{JOURNAL}.snbt").exists():
+        from deploy_equipment_atlas import main as install_atlas
+        install_atlas(apply)
+        return
     if guide_only or book_only:
         updates = book_updates(instance, guide_only=guide_only)
         if updates:

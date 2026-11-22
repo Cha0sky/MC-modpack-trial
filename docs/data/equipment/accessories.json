@@ -1,0 +1,5300 @@
+[
+  {
+    "id": "beyonddimensions:net_feeder_item",
+    "name": "网络喂食器",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "从绑定的维度网络向玩家提供食物。"
+    ]
+  },
+  {
+    "id": "beyonddimensions:net_magnet_item",
+    "name": "网络磁铁",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "将范围内的掉落实体收进绑定网络，收集距离可切换。"
+    ]
+  },
+  {
+    "id": "beyonddimensions:net_restocker_item",
+    "name": "网络补货器",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "按已设定的补货项目从网络补充随身物资。"
+    ]
+  },
+  {
+    "id": "beyonddimensions:net_terminal_item",
+    "name": "便携网络终端",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "打开所连接的维度网络，存取其中物品。"
+    ]
+  },
+  {
+    "id": "beyonddimensions:xp_exchange_item",
+    "name": "经验棒",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "通过绑定的网络在玩家经验和网络存储之间转存。"
+    ]
+  },
+  {
+    "id": "cataclysm:aptrgangr_head",
+    "name": "武弁的头",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "冥行武弁头颅外观，可戴在头部。"
+    ]
+  },
+  {
+    "id": "cataclysm:belt_of_beginner",
+    "name": "初学者腰带",
+    "slots": [
+      "腰部"
+    ],
+    "effects": [
+      "提供 2 个额外护身符槽。"
+    ]
+  },
+  {
+    "id": "cataclysm:belt_of_monstrosity",
+    "name": "巨兽腰带",
+    "slots": [
+      "腰部"
+    ],
+    "effects": [
+      "提供 2 个额外护身符槽。"
+    ]
+  },
+  {
+    "id": "cataclysm:berserker_soul_amulet",
+    "name": "战魂护符",
+    "slots": [
+      "项链"
+    ],
+    "effects": [
+      "攻击伤害 +10%，护甲 −25%。"
+    ]
+  },
+  {
+    "id": "cataclysm:blazing_grips",
+    "name": "炽热之握",
+    "slots": [
+      "手部"
+    ],
+    "effects": [
+      "击中时有几率对目标施加炽热烙印"
+    ]
+  },
+  {
+    "id": "cataclysm:chitin_claw",
+    "name": "甲壳巨钳",
+    "slots": [
+      "手部"
+    ],
+    "effects": [
+      "实体交互距离 +0.25 格，方块交互距离 +1 格。"
+    ]
+  },
+  {
+    "id": "cataclysm:draugr_head",
+    "name": "魂尸的头",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "再行魂尸头颅外观，可戴在头部。"
+    ]
+  },
+  {
+    "id": "cataclysm:kobolediator_skull",
+    "name": "骸龙斗士头颅",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "骸龙斗士头骨外观，可戴在头部。"
+    ]
+  },
+  {
+    "id": "cataclysm:ring_of_grudged",
+    "name": "怨怒之戒",
+    "slots": [
+      "指环"
+    ],
+    "effects": [
+      "额外暴击伤害属性 +10。"
+    ]
+  },
+  {
+    "id": "cataclysm:sticky_gloves",
+    "name": "粘性手套",
+    "slots": [
+      "手部"
+    ],
+    "effects": [
+      "阻止骸龙抢东西"
+    ]
+  },
+  {
+    "id": "cataclysm:sturdy_boots",
+    "name": "结实皮靴",
+    "slots": [
+      "足部"
+    ],
+    "effects": [
+      "足以支撑你在细雪表面上行走"
+    ]
+  },
+  {
+    "id": "cataclysm:unbreakable_skull",
+    "name": "不破之颅",
+    "slots": [
+      "护身符"
+    ],
+    "effects": [
+      "抵消一次眩晕效果，之后要冷却一段时间才能再次生效"
+    ]
+  },
+  {
+    "id": "cataclysm:vitality_ankh",
+    "name": "活力安卡",
+    "slots": [
+      "项链"
+    ],
+    "effects": [
+      "自然治疗属性 +20。"
+    ]
+  },
+  {
+    "id": "confluence:adhesive_bandage",
+    "name": "黏性绷带",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "对流血免疫"
+    ]
+  },
+  {
+    "id": "confluence:angel_wings",
+    "name": "天使之翼",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "飞行速度系数 0.6，动力飞行 2.5 秒，可滑翔。",
+      "可飞行和缓慢坠落"
+    ]
+  },
+  {
+    "id": "confluence:angler_tackle_bag",
+    "name": "渔夫渔具袋",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "钓鱼线永远不会断，降低鱼饵消耗几率，渔力增加10"
+    ]
+  },
+  {
+    "id": "confluence:apprentices_scarf",
+    "name": "学徒围巾",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "哨兵上限 +1、召唤伤害 +10%。"
+    ]
+  },
+  {
+    "id": "confluence:arcane_flower",
+    "name": "奥术花",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "仇恨 -400。",
+      "魔力消耗降低8%"
+    ]
+  },
+  {
+    "id": "confluence:argon_moss_fishing_bobber",
+    "name": "氩苔藓钓鱼浮标",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "增加渔力，钓鱼浮标会发光"
+    ]
+  },
+  {
+    "id": "confluence:armor_bracing",
+    "name": "盔甲背带",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "对盔甲破损和虚弱免疫"
+    ]
+  },
+  {
+    "id": "confluence:armor_polish",
+    "name": "盔甲抛光剂",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "对盔甲破损免疫"
+    ]
+  },
+  {
+    "id": "confluence:band_of_starpower",
+    "name": "星力手环",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "最大魔力增加20"
+    ]
+  },
+  {
+    "id": "confluence:bat_wings",
+    "name": "蝙蝠之翼",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "飞行速度系数 0.68，动力飞行 3.1 秒，可滑翔。",
+      "可飞行和缓慢坠落"
+    ]
+  },
+  {
+    "id": "confluence:bee_wings",
+    "name": "蜜蜂之翼",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "飞行速度系数 0.68，动力飞行 3.1 秒，可滑翔。",
+      "可飞行和缓慢坠落"
+    ]
+  },
+  {
+    "id": "confluence:beetle_wings",
+    "name": "甲虫之翼",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "飞行速度系数 0.68，动力飞行 3.7 秒，可滑翔。",
+      "可飞行和缓慢坠落"
+    ]
+  },
+  {
+    "id": "confluence:betsys_wings",
+    "name": "双足翼龙之翼",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "飞行速度系数 0.72，动力飞行 4.2 秒，可滑翔，支持水平飞行。",
+      "可飞行和缓慢坠落"
+    ]
+  },
+  {
+    "id": "confluence:bone_wings",
+    "name": "骨之翼",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "飞行速度系数 0.68，动力飞行 3.7 秒，可滑翔。",
+      "可飞行和缓慢坠落"
+    ]
+  },
+  {
+    "id": "confluence:boredoms_pact_falling_resolve",
+    "name": "「无聊之咒·陨志」",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "移动会累积计数，原地站立后计数每秒减少，归零时会在佩戴者上方召出落石。",
+      "「无聊之咒·陨志」"
+    ]
+  },
+  {
+    "id": "confluence:butterfly_wings",
+    "name": "蝴蝶之翼",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "飞行速度系数 0.68，动力飞行 3.1 秒，可滑翔。",
+      "可飞行和缓慢坠落"
+    ]
+  },
+  {
+    "id": "confluence:celestial_cuffs",
+    "name": "天界手铐",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "扩大魔力星的拾取范围"
+    ]
+  },
+  {
+    "id": "confluence:celestial_emblem",
+    "name": "天界徽章",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "魔法伤害 +15%。",
+      "扩大魔力星的拾取范围，魔法伤害提高15%"
+    ]
+  },
+  {
+    "id": "confluence:celestial_magnet",
+    "name": "天界磁石",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "扩大魔力星的拾取范围"
+    ]
+  },
+  {
+    "id": "confluence:charm_of_myths",
+    "name": "神话护身符",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "提供生命恢复，减少治疗药水的冷却时间"
+    ]
+  },
+  {
+    "id": "confluence:chromatic_cloak",
+    "name": "炫彩斗篷",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "对微光相位化免疫，当淹没在微光中时潜行可以相位化"
+    ]
+  },
+  {
+    "id": "confluence:clothier_voodoo_doll",
+    "name": "服装商巫毒玩偶",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "佩戴后可攻击服装商，在夜间亲手杀死他能再次召出骷髅王。",
+      "“你这人真可怕”"
+    ]
+  },
+  {
+    "id": "confluence:coin_ring",
+    "name": "钱币戒指",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "幸运 +0.05。",
+      "击中敌人有时会掉落额外的钱币，扩大钱币的拾取范围"
+    ]
+  },
+  {
+    "id": "confluence:countercurse_mantra",
+    "name": "反诅咒咒语",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "对沉默和诅咒免疫"
+    ]
+  },
+  {
+    "id": "confluence:crimson_heart",
+    "name": "猩红心脏",
+    "slots": [
+      "照明宠物"
+    ],
+    "effects": [
+      "装备后召出随行的猩红之心，作为照明宠物。"
+    ],
+    "source": [
+      "在猩红地下击碎天然猩红之心，每次有 20% 概率掉落同名照明宠物饰品。"
+    ]
+  },
+  {
+    "id": "confluence:demon_wings",
+    "name": "恶魔之翼",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "飞行速度系数 0.6，动力飞行 2.5 秒，可滑翔。",
+      "可飞行和缓慢坠落"
+    ]
+  },
+  {
+    "id": "confluence:discount_card",
+    "name": "优惠卡",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "商店价格降低20%"
+    ]
+  },
+  {
+    "id": "confluence:empress_wings",
+    "name": "女皇之翼",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "飞行速度系数 0.85，动力飞行 4.3 秒，可滑翔。",
+      "可飞行和缓慢坠落"
+    ]
+  },
+  {
+    "id": "confluence:fairy_wings",
+    "name": "仙灵之翼",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "飞行速度系数 0.65，动力飞行 2.8 秒，可滑翔。",
+      "可飞行和缓慢坠落"
+    ]
+  },
+  {
+    "id": "confluence:festive_wings",
+    "name": "喜庆之翼",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "飞行速度系数 0.7，动力飞行 4.2 秒，可滑翔。",
+      "可飞行和缓慢坠落"
+    ]
+  },
+  {
+    "id": "confluence:fin_wings",
+    "name": "鳍翼",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "飞行速度系数 0.65，动力飞行 2.8 秒，可滑翔。",
+      "可飞行和缓慢坠落"
+    ]
+  },
+  {
+    "id": "confluence:fishing_bobber",
+    "name": "钓鱼浮标",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "增加渔力"
+    ]
+  },
+  {
+    "id": "confluence:fishron_wings",
+    "name": "猪鱼龙之翼",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "飞行速度系数 0.85，动力飞行 4.6 秒，可滑翔。",
+      "可飞行和缓慢坠落"
+    ]
+  },
+  {
+    "id": "confluence:flame_wings",
+    "name": "烈焰之翼",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "飞行速度系数 0.68，动力飞行 3.1 秒，可滑翔。",
+      "可飞行和缓慢坠落"
+    ]
+  },
+  {
+    "id": "confluence:fledgling_wings",
+    "name": "雏翼",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "飞行速度系数 0.3，动力飞行 1.4 秒，可滑翔。",
+      "可飞行和缓慢坠落"
+    ]
+  },
+  {
+    "id": "confluence:frozen_wings",
+    "name": "冰冻之翼",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "飞行速度系数 0.65，动力飞行 2.8 秒，可滑翔。",
+      "可飞行和缓慢坠落"
+    ]
+  },
+  {
+    "id": "confluence:glowing_fishing_bobber",
+    "name": "发光钓鱼浮标",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "增加渔力，钓鱼浮标会发光"
+    ]
+  },
+  {
+    "id": "confluence:gold_ring",
+    "name": "金戒指",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "扩大钱币的拾取范围"
+    ]
+  },
+  {
+    "id": "confluence:greedy_ring",
+    "name": "贪婪戒指",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "幸运 +0.05。",
+      "击中敌人有时会掉落额外的钱币，扩大钱币的拾取范围，商店价格降低20%"
+    ]
+  },
+  {
+    "id": "confluence:guide_to_plant_fiber_cordage",
+    "name": "植物纤维绳索宝典",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "可从藤蔓收集藤蔓绳"
+    ]
+  },
+  {
+    "id": "confluence:guide_voodoo_doll",
+    "name": "向导巫毒玩偶",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "佩戴后可伤害向导。长按使用可切换血肉墙与血肉山形态，在地狱把玩偶投入岩浆能引发相应的首领战。",
+      "“你这人真可怕”"
+    ],
+    "source": [
+      "下界巫毒恶魔携带向导巫毒玩偶，击败后可拾取。"
+    ]
+  },
+  {
+    "id": "confluence:harpy_wings",
+    "name": "女妖之翼",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "飞行速度系数 0.65，动力飞行 2.8 秒，可滑翔。",
+      "可飞行和缓慢坠落"
+    ]
+  },
+  {
+    "id": "confluence:helium_moss_fishing_bobber",
+    "name": "氦苔藓钓鱼浮标",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "增加渔力，钓鱼浮标会发光"
+    ]
+  },
+  {
+    "id": "confluence:hercules_beetle",
+    "name": "大力士甲虫",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "召唤伤害 +15%、召唤物击退 +2。"
+    ]
+  },
+  {
+    "id": "confluence:high_test_fishing_line",
+    "name": "优质钓鱼线",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "鱼线永远不会断"
+    ]
+  },
+  {
+    "id": "confluence:hoverboard",
+    "name": "悬浮板",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "飞行速度系数 0.68，动力飞行 3.7 秒，可滑翔，支持水平飞行。",
+      "可飞行和缓慢坠落"
+    ]
+  },
+  {
+    "id": "confluence:huntresss_buckler",
+    "name": "女猎人圆盾",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "哨兵上限 +1、召唤伤害 +10%。"
+    ]
+  },
+  {
+    "id": "confluence:jetpack",
+    "name": "喷气背包",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "飞行速度系数 0.65，动力飞行 3.15 秒，可滑翔。",
+      "可飞行和缓慢坠落"
+    ]
+  },
+  {
+    "id": "confluence:krypton_moss_fishing_bobber",
+    "name": "氪苔藓钓鱼浮标",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "增加渔力，钓鱼浮标会发光"
+    ]
+  },
+  {
+    "id": "confluence:lava_moss_fishing_bobber",
+    "name": "熔岩苔藓钓鱼浮标",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "增加渔力，钓鱼浮标会发光"
+    ]
+  },
+  {
+    "id": "confluence:lavaproof_fishing_hook",
+    "name": "防熔岩钓钩",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "可在熔岩中钓鱼"
+    ]
+  },
+  {
+    "id": "confluence:lavaproof_tackle_bag",
+    "name": "防熔岩渔具袋",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "钓鱼线永远不会断，降低鱼饵消耗几率，渔力增加10"
+    ]
+  },
+  {
+    "id": "confluence:leaf_wings",
+    "name": "叶之翼",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "飞行速度系数 0.6，动力飞行 2.5 秒，可滑翔。",
+      "可飞行和缓慢坠落"
+    ]
+  },
+  {
+    "id": "confluence:lucky_coin",
+    "name": "幸运币",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "幸运 +0.05。",
+      "击中敌人有时会掉落额外的钱币"
+    ]
+  },
+  {
+    "id": "confluence:magic_cuffs",
+    "name": "魔法手铐",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "最大魔力值增加20"
+    ]
+  },
+  {
+    "id": "confluence:magic_lantern",
+    "name": "魔法灯笼",
+    "slots": [
+      "照明宠物"
+    ],
+    "effects": [
+      "装备后召出随行的魔法灯笼，作为照明宠物。"
+    ]
+  },
+  {
+    "id": "confluence:magnet_flower",
+    "name": "磁花",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "魔力消耗降低8%"
+    ]
+  },
+  {
+    "id": "confluence:mana_cloak",
+    "name": "魔力斗篷",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "收集星星会恢复魔力"
+    ]
+  },
+  {
+    "id": "confluence:mana_flower",
+    "name": "魔力花",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "魔力不足时会自动使用携带的魔力药水。",
+      "魔力消耗降低8%"
+    ]
+  },
+  {
+    "id": "confluence:mana_regeneration_band",
+    "name": "魔力再生手环",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "最大魔力值增加20"
+    ]
+  },
+  {
+    "id": "confluence:mechanical_lens",
+    "name": "机械透镜",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "给予改良的布线视野"
+    ]
+  },
+  {
+    "id": "confluence:medicated_bandage",
+    "name": "药用绷带",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "对中毒和流血免疫"
+    ]
+  },
+  {
+    "id": "confluence:megaphone",
+    "name": "扩音器",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "对沉默免疫"
+    ]
+  },
+  {
+    "id": "confluence:monks_belt",
+    "name": "武僧腰带",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "哨兵上限 +1、召唤伤害 +10%。"
+    ]
+  },
+  {
+    "id": "confluence:mothron_wings",
+    "name": "蛾怪之翼",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "飞行速度系数 0.68，动力飞行 3.7 秒，可滑翔。",
+      "可飞行和缓慢坠落"
+    ]
+  },
+  {
+    "id": "confluence:natures_gift",
+    "name": "大自然的恩赐",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "魔力消耗减少6%"
+    ]
+  },
+  {
+    "id": "confluence:nazar",
+    "name": "邪眼",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "对诅咒免疫"
+    ]
+  },
+  {
+    "id": "confluence:nebula_wings",
+    "name": "星云斗篷",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "飞行速度系数 0.85，动力飞行 4.6 秒，可滑翔，支持水平飞行。",
+      "可飞行和缓慢坠落"
+    ]
+  },
+  {
+    "id": "confluence:necromantic_scroll",
+    "name": "死灵卷轴",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "仆从上限 +1、召唤伤害 +10%。"
+    ]
+  },
+  {
+    "id": "confluence:neon_moss_fishing_bobber",
+    "name": "氖苔藓钓鱼浮标",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "增加渔力，钓鱼浮标会发光"
+    ]
+  },
+  {
+    "id": "confluence:paint_sprayer",
+    "name": "喷漆器",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "自动给放置的物体刷油漆或涂料"
+    ]
+  },
+  {
+    "id": "confluence:papyrus_scarab",
+    "name": "甲虫莎草纸",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "仆从上限 +1、召唤伤害 +15%、召唤物击退 +2。"
+    ]
+  },
+  {
+    "id": "confluence:paradox_interactive_medal",
+    "name": "帕拉多克斯·英特拉克缇福勋章",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "同时玩过钢铁雄心、维多利亚、欧陆风云、十字军之王、都市天际线的证明。"
+    ]
+  },
+  {
+    "id": "confluence:philosophers_stone",
+    "name": "点金石",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "减少治疗药水的冷却时间"
+    ]
+  },
+  {
+    "id": "confluence:pocket_mirror",
+    "name": "袖珍镜",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "对石化免疫"
+    ]
+  },
+  {
+    "id": "confluence:pygmy_necklace",
+    "name": "矮人项链",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "仆从上限 +1。"
+    ]
+  },
+  {
+    "id": "confluence:radio_thing",
+    "name": "收音机",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "允许使用者以不同的方式看世界"
+    ]
+  },
+  {
+    "id": "confluence:reflective_shades",
+    "name": "反光墨镜",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "对失明和石化免疫"
+    ]
+  },
+  {
+    "id": "confluence:shadow_orb",
+    "name": "暗影珠",
+    "slots": [
+      "照明宠物"
+    ],
+    "effects": [
+      "装备后召出随行的暗影珠，作为照明宠物。"
+    ],
+    "source": [
+      "在腐化地下击碎天然暗影珠，每次有 20% 概率掉落同名照明宠物饰品。"
+    ]
+  },
+  {
+    "id": "confluence:solar_wings",
+    "name": "日耀之翼",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "飞行速度系数 0.85，动力飞行 4.6 秒，可滑翔。",
+      "可飞行和缓慢坠落"
+    ]
+  },
+  {
+    "id": "confluence:spectre_goggles",
+    "name": "幽灵护目镜",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "提供幽灵视觉以与回声块交互"
+    ]
+  },
+  {
+    "id": "confluence:spectre_wings",
+    "name": "幽灵之翼",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "飞行速度系数 0.68，动力飞行 3.7 秒，可滑翔。",
+      "可飞行和缓慢坠落"
+    ]
+  },
+  {
+    "id": "confluence:spooky_wings",
+    "name": "阴森之翼",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "飞行速度系数 0.7，动力飞行 4.2 秒，可滑翔。",
+      "可飞行和缓慢坠落"
+    ]
+  },
+  {
+    "id": "confluence:squires_shield",
+    "name": "侍卫护盾",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "哨兵上限 +1、召唤伤害 +10%。"
+    ]
+  },
+  {
+    "id": "confluence:stardust",
+    "name": "星尘之翼",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "飞行速度系数 0.85，动力飞行 4.6 秒，可滑翔。",
+      "可飞行和缓慢坠落"
+    ]
+  },
+  {
+    "id": "confluence:steampunk_wings",
+    "name": "蒸汽朋克之翼",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "飞行速度系数 0.7，动力飞行 4.2 秒，可滑翔。",
+      "可飞行和缓慢坠落"
+    ]
+  },
+  {
+    "id": "confluence:summoner_emblem",
+    "name": "召唤师徽章",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "召唤伤害 +15%。"
+    ]
+  },
+  {
+    "id": "confluence:tackle_box",
+    "name": "钓具箱",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "降低鱼饵消耗几率"
+    ]
+  },
+  {
+    "id": "confluence:tattered_wings",
+    "name": "褴褛仙灵之翼",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "飞行速度系数 0.7，动力飞行 4.2 秒，可滑翔。",
+      "可飞行和缓慢坠落"
+    ]
+  },
+  {
+    "id": "confluence:vortex_booster",
+    "name": "星旋强化翼",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "飞行速度系数 0.85，动力飞行 4.6 秒，可滑翔，支持水平飞行。",
+      "可飞行和缓慢坠落"
+    ]
+  },
+  {
+    "id": "confluence:xenon_moss_fishing_bobber",
+    "name": "氙苔藓钓鱼浮标",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "增加渔力，钓鱼浮标会发光"
+    ]
+  },
+  {
+    "id": "create:goggles",
+    "name": "工程师护目镜",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "查看 Create 设备的转速、应力和流体等仪表信息。"
+    ]
+  },
+  {
+    "id": "goety:abyss_crown",
+    "name": "深渊王冠",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "水生仆从能够永续存在"
+    ]
+  },
+  {
+    "id": "goety:abyss_robe",
+    "name": "深渊长袍",
+    "slots": [
+      "躯干"
+    ],
+    "effects": [
+      "改善呼吸，允许水生仆从使用主人的灵魂能量治愈自身"
+    ]
+  },
+  {
+    "id": "goety:alarming_charm",
+    "name": "警示护符",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "灾厄猎杀发生时发出警报."
+    ]
+  },
+  {
+    "id": "goety:amethyst_necklace",
+    "name": "紫水晶项链",
+    "slots": [
+      "项链"
+    ],
+    "effects": [
+      "减半所有占卜类法术的施法时间."
+    ]
+  },
+  {
+    "id": "goety:brew_bag",
+    "name": "药酿包",
+    "slots": [
+      "腰带"
+    ],
+    "effects": [
+      "保存喷溅型药酿，可用药酿包界面或轮盘快速换取。"
+    ]
+  },
+  {
+    "id": "goety:crone_hat",
+    "name": "巫婆帽",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "普通药剂使用后有 25% 几率保留，药酿为 10%。"
+    ],
+    "source": [
+      "击败诡厄巫婆可取得她的帽子。可在朽坏木屋用蓄能的水晶球邀战。"
+    ]
+  },
+  {
+    "id": "goety:dark_hat",
+    "name": "黑暗帽子",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "全法术施法时间减半."
+    ]
+  },
+  {
+    "id": "goety:dark_robe",
+    "name": "黑暗长袍",
+    "slots": [
+      "躯干"
+    ],
+    "effects": [
+      "减免所有法术的灵魂消耗."
+    ]
+  },
+  {
+    "id": "goety:dark_robe_fancy",
+    "name": "黑暗长袍",
+    "slots": [
+      "躯干"
+    ],
+    "effects": [
+      "与黑暗长袍同类，可降低施法消耗的灵魂能量。"
+    ]
+  },
+  {
+    "id": "goety:eternal_cauldron",
+    "name": "永恒坩埚",
+    "slots": [
+      "背部"
+    ],
+    "effects": [
+      "可背负的坩埚，带独立物品栏和操作界面。"
+    ]
+  },
+  {
+    "id": "goety:feline_amulet",
+    "name": "猫的护身符",
+    "slots": [
+      "项链"
+    ],
+    "effects": [
+      "让附近的苦力怕和幻翼像避开猫一样避开佩戴者。"
+    ]
+  },
+  {
+    "id": "goety:focus_bag",
+    "name": "聚晶包",
+    "slots": [
+      "腰带"
+    ],
+    "effects": [
+      "可收纳 10 个聚晶，持魔杖时可通过聚晶轮盘换取。"
+    ]
+  },
+  {
+    "id": "goety:focus_pack",
+    "name": "多晶大袋",
+    "slots": [
+      "腰带"
+    ],
+    "effects": [
+      "可收纳 20 个聚晶，适合需要多套法术的施法者。"
+    ]
+  },
+  {
+    "id": "goety:frost_crown",
+    "name": "冰霜王冠",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "霜冻仆从将会永续存在。"
+    ]
+  },
+  {
+    "id": "goety:frost_robe",
+    "name": "冰霜长袍",
+    "slots": [
+      "躯干"
+    ],
+    "effects": [
+      "霜冻法术的灵魂消耗减半。能穿过细雪并抵御冻结。"
+    ]
+  },
+  {
+    "id": "goety:frost_robe_cryo",
+    "name": "冰霜长袍",
+    "slots": [
+      "躯干"
+    ],
+    "effects": [
+      "霜冻法术的灵魂消耗减半。能穿过细雪并抵御冻结。"
+    ]
+  },
+  {
+    "id": "goety:geo_robe",
+    "name": "占卜长袍",
+    "slots": [
+      "躯干"
+    ],
+    "effects": [
+      "占卜法术的灵魂消耗减半。"
+    ]
+  },
+  {
+    "id": "goety:grand_robe",
+    "name": "华丽长袍",
+    "slots": [
+      "躯干"
+    ],
+    "effects": [
+      "使用魔杖施法期间，减半所有受到的伤害."
+    ]
+  },
+  {
+    "id": "goety:grand_turban",
+    "name": "华丽头巾",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "受伤时有概率生成一个友好的怒鬼."
+    ]
+  },
+  {
+    "id": "goety:grave_glove",
+    "name": "坟墓手套",
+    "slots": [
+      "手部"
+    ],
+    "effects": [
+      "镰刀攻击速度 +50%。"
+    ]
+  },
+  {
+    "id": "goety:illusion_robe",
+    "name": "幻术师长袍",
+    "slots": [
+      "躯干"
+    ],
+    "effects": [
+      "完善幻象法术."
+    ]
+  },
+  {
+    "id": "goety:illusion_robe_mirror",
+    "name": "幻术师长袍",
+    "slots": [
+      "躯干"
+    ],
+    "effects": [
+      "幻术长袍的外观变体，强化幻象法术。"
+    ]
+  },
+  {
+    "id": "goety:nameless_cape",
+    "name": "无名长袍",
+    "slots": [
+      "背部",
+      "躯干"
+    ],
+    "effects": [
+      "死灵长袍的强化形态，允许亡灵仆从用主人灵魂能量疗伤。无名套移除原套装的日晒负面效果。"
+    ]
+  },
+  {
+    "id": "goety:nameless_crown",
+    "name": "无名王冠",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "死灵王冠的强化形态，支持亡灵仆从长期存在。无名套移除原套装的日晒负面效果。"
+    ]
+  },
+  {
+    "id": "goety:necro_cape",
+    "name": "死灵长袍",
+    "slots": [
+      "背部",
+      "躯干"
+    ],
+    "effects": [
+      "允许亡灵仆从使用主人的灵魂能量治愈自身."
+    ]
+  },
+  {
+    "id": "goety:necro_crown",
+    "name": "死灵王冠",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "亡灵仆从将会永续存在"
+    ]
+  },
+  {
+    "id": "goety:nether_crown",
+    "name": "下界王冠",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "下界仆从将会永续存在。"
+    ]
+  },
+  {
+    "id": "goety:nether_robe",
+    "name": "下界长袍",
+    "slots": [
+      "躯干"
+    ],
+    "effects": [
+      "降低火焰伤害，下界法术灵魂消耗减半，允许下界仆从消耗灵魂能量自愈。"
+    ]
+  },
+  {
+    "id": "goety:nether_robe_warped",
+    "name": "下界长袍",
+    "slots": [
+      "躯干"
+    ],
+    "effects": [
+      "降低火焰伤害，下界法术灵魂消耗减半，允许下界仆从消耗灵魂能量自愈。"
+    ]
+  },
+  {
+    "id": "goety:ominous_charm",
+    "name": "不祥护符",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "存下佩戴者的不祥之兆，之后可用饰品按键释放。"
+    ]
+  },
+  {
+    "id": "goety:pendant_of_hunger",
+    "name": "饥饿吊坠",
+    "slots": [
+      "项链"
+    ],
+    "effects": [
+      "吸纳物品栏的腐肉，在饥饿值下降时自动喂食。腐肉仍可能引发饥饿。"
+    ]
+  },
+  {
+    "id": "goety:plushie",
+    "name": "毛绒玩偶",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "可放置，也可作为头部外观展示的毛绒玩偶。"
+    ]
+  },
+  {
+    "id": "goety:plushie_1",
+    "name": "BoxSomething毛绒玩偶",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "可放置，也可作为头部外观展示的毛绒玩偶。"
+    ]
+  },
+  {
+    "id": "goety:plushie_10",
+    "name": "Ur-Tsar the Glorious毛绒玩偶",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "可放置，也可作为头部外观展示的毛绒玩偶。"
+    ]
+  },
+  {
+    "id": "goety:plushie_11",
+    "name": "KrakenKru 毛绒玩偶",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "可放置，也可作为头部外观展示的毛绒玩偶。"
+    ]
+  },
+  {
+    "id": "goety:plushie_12",
+    "name": "NightHeron §毛绒玩偶",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "可放置，也可作为头部外观展示的毛绒玩偶。"
+    ]
+  },
+  {
+    "id": "goety:plushie_2",
+    "name": "Codatower毛绒玩偶",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "可放置，也可作为头部外观展示的毛绒玩偶。"
+    ]
+  },
+  {
+    "id": "goety:plushie_3",
+    "name": "Fracsail毛绒玩偶",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "可放置，也可作为头部外观展示的毛绒玩偶。"
+    ]
+  },
+  {
+    "id": "goety:plushie_4",
+    "name": "Nedeak毛绒玩偶",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "可放置，也可作为头部外观展示的毛绒玩偶。"
+    ]
+  },
+  {
+    "id": "goety:plushie_5",
+    "name": "Jade Jester毛绒玩偶",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "可放置，也可作为头部外观展示的毛绒玩偶。"
+    ]
+  },
+  {
+    "id": "goety:plushie_6",
+    "name": "SLM_SHDY毛绒玩偶",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "可放置，也可作为头部外观展示的毛绒玩偶。"
+    ]
+  },
+  {
+    "id": "goety:plushie_7",
+    "name": "東漢 駒毛绒玩偶",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "可放置，也可作为头部外观展示的毛绒玩偶。"
+    ]
+  },
+  {
+    "id": "goety:plushie_8",
+    "name": "Peppertheskink毛绒玩偶",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "可放置，也可作为头部外观展示的毛绒玩偶。"
+    ]
+  },
+  {
+    "id": "goety:plushie_9",
+    "name": "Mrdrewlego毛绒玩偶",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "可放置，也可作为头部外观展示的毛绒玩偶。"
+    ]
+  },
+  {
+    "id": "goety:ring_of_force",
+    "name": "原力戒指",
+    "slots": [
+      "戒指",
+      "指环"
+    ],
+    "effects": [
+      "原力法术会慢慢窒息它所影响的实体。"
+    ]
+  },
+  {
+    "id": "goety:ring_of_the_dragon",
+    "name": "龙息戒指",
+    "slots": [
+      "戒指",
+      "指环"
+    ],
+    "effects": [
+      "传送时在起始位置引发爆炸。"
+    ]
+  },
+  {
+    "id": "goety:ring_of_the_forge",
+    "name": "锻造之戒",
+    "slots": [
+      "戒指",
+      "指环"
+    ],
+    "effects": [
+      "使最新召唤的僵尸和骷髅仆从总是会自带盔甲."
+    ]
+  },
+  {
+    "id": "goety:ring_of_thirst",
+    "name": "渴解之戒",
+    "slots": [
+      "戒指",
+      "指环"
+    ],
+    "effects": [
+      "自己或自己的仆从杀死生物后，直接取得掉落的经验。"
+    ]
+  },
+  {
+    "id": "goety:ring_of_want",
+    "name": "渴望戒指",
+    "slots": [
+      "戒指",
+      "指环"
+    ],
+    "effects": [
+      "持有渴望附魔时，使用大部分法术和仆从击杀的生物会掉落更多战利品"
+    ]
+  },
+  {
+    "id": "goety:ring_of_wrecking",
+    "name": "破灭之戒",
+    "slots": [
+      "戒指",
+      "指环"
+    ],
+    "effects": [
+      "穿戴者或仆从杀死的生物将不再掉落可损坏的装备。"
+    ]
+  },
+  {
+    "id": "goety:sea_amulet",
+    "name": "海洋护身符",
+    "slots": [
+      "项链"
+    ],
+    "effects": [
+      "在激活的潮涌核心 8 格内充能，潜水时消耗储能维持潮涌能量。"
+    ]
+  },
+  {
+    "id": "goety:soul_healer",
+    "name": "灵魂治疗护符",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "用储存的灵魂能量治疗自身。给灾厄村民仆从后，它会在低血量时自动使用。"
+    ]
+  },
+  {
+    "id": "goety:spiteful_belt",
+    "name": "恶意腰带",
+    "slots": [
+      "腰带"
+    ],
+    "effects": [
+      "用荆棘反伤攻击者"
+    ]
+  },
+  {
+    "id": "goety:star_amulet",
+    "name": "灵魂盾护身符",
+    "slots": [
+      "项链"
+    ],
+    "effects": [
+      "半血以下禁止飞行，且无视所有箭类攻击."
+    ]
+  },
+  {
+    "id": "goety:storm_crown",
+    "name": "风暴王冠",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "风暴仆从将会永续存在。"
+    ]
+  },
+  {
+    "id": "goety:storm_robe",
+    "name": "风暴长袍",
+    "slots": [
+      "躯干"
+    ],
+    "effects": [
+      "减缓下落并抵御雷击，风暴法术的灵魂消耗减半。"
+    ]
+  },
+  {
+    "id": "goety:targeting_monocle",
+    "name": "寻位眼镜",
+    "slots": [
+      "护符",
+      "头部"
+    ],
+    "effects": [
+      "激活时锁定附近的目标。"
+    ]
+  },
+  {
+    "id": "goety:thrash_glove",
+    "name": "锤击手套",
+    "slots": [
+      "手部"
+    ],
+    "effects": [
+      "锤类武器的攻击速度 +50%。"
+    ]
+  },
+  {
+    "id": "goety:totem_of_roots",
+    "name": "根之图腾",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "收集和储存灵魂能量，可用作诡厄施法的灵魂储备。"
+    ]
+  },
+  {
+    "id": "goety:totem_of_souls",
+    "name": "灵魂图腾",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "储存灵魂能量，容量高于根之图腾。"
+    ]
+  },
+  {
+    "id": "goety:unholy_hat",
+    "name": "不洁圣冠",
+    "slots": [
+      "头部",
+      "女仆饰品"
+    ],
+    "effects": [
+      "提供火焰保护，使下界仆从能够长期存在。与不洁长袍配合可将部分火焰法术转为狱火。"
+    ]
+  },
+  {
+    "id": "goety:unholy_hat_halo",
+    "name": "不洁圣冠",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "提供火焰保护，使下界仆从能够长期存在。与不洁长袍配合可将部分火焰法术转为狱火。"
+    ]
+  },
+  {
+    "id": "goety:unholy_robe",
+    "name": "不洁长袍",
+    "slots": [
+      "躯干"
+    ],
+    "effects": [
+      "给予防火能力，并且允许下界仆从使用灵魂能量治愈自己。"
+    ]
+  },
+  {
+    "id": "goety:void_crown",
+    "name": "虚空王冠",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "虚空仆从将会永续存在。"
+    ]
+  },
+  {
+    "id": "goety:void_robe",
+    "name": "虚空长袍",
+    "slots": [
+      "躯干"
+    ],
+    "effects": [
+      "有几率瞬移闪避，免疫虚空侵蚀。虚空法术的灵魂消耗减半。"
+    ]
+  },
+  {
+    "id": "goety:warlock_robe",
+    "name": "术士长袍",
+    "slots": [
+      "躯干"
+    ],
+    "effects": [
+      "提高魔法与爆炸防护，配合术士腰带可提升蜘蛛的卵掉落。"
+    ]
+  },
+  {
+    "id": "goety:warlock_robe_dark",
+    "name": "术士长袍",
+    "slots": [
+      "躯干"
+    ],
+    "effects": [
+      "提高魔法与爆炸防护，配合术士腰带可提升蜘蛛的卵掉落。"
+    ]
+  },
+  {
+    "id": "goety:warlock_sash",
+    "name": "术士腰带",
+    "slots": [
+      "腰带"
+    ],
+    "effects": [
+      "配合术士长袍，提高蜘蛛掉落蜘蛛卵的机会。"
+    ]
+  },
+  {
+    "id": "goety:wayfarers_belt",
+    "name": "旅人腰带",
+    "slots": [
+      "腰带"
+    ],
+    "effects": [
+      "增加游泳速度，移动速度，跳跃高度，以及使你可以直接迈上一格高的方块."
+    ]
+  },
+  {
+    "id": "goety:wild_crown",
+    "name": "荒野王冠",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "荒野仆从将会永续存在。"
+    ]
+  },
+  {
+    "id": "goety:wild_robe",
+    "name": "荒野长袍",
+    "slots": [
+      "躯干"
+    ],
+    "effects": [
+      "穿戴者对毒物和酸液免疫， 允许荒野仆从使用灵魂能量进行治疗"
+    ]
+  },
+  {
+    "id": "goety:wind_crown",
+    "name": "烈风王冠",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "烈风仆从将会永续存在。"
+    ]
+  },
+  {
+    "id": "goety:wind_robe",
+    "name": "烈风长袍",
+    "slots": [
+      "躯干"
+    ],
+    "effects": [
+      "以灵魂能量为代价提供缓降，完全免疫摔落伤害"
+    ]
+  },
+  {
+    "id": "goety:witch_hat",
+    "name": "女巫帽",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "加速女巫长袍内的药剂酿造."
+    ]
+  },
+  {
+    "id": "goety:witch_hat_hedge",
+    "name": "女巫帽",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "女巫帽的外观变体，可加快女巫长袍内部的药酿制作。"
+    ]
+  },
+  {
+    "id": "goety:witch_robe",
+    "name": "女巫长袍",
+    "slots": [
+      "躯干"
+    ],
+    "effects": [
+      "提高魔法抗性，带可操作的内部酿造台。"
+    ]
+  },
+  {
+    "id": "goety:witch_robe_hedge",
+    "name": "女巫长袍",
+    "slots": [
+      "躯干"
+    ],
+    "effects": [
+      "提高魔法抗性，带可操作的内部酿造台。"
+    ]
+  },
+  {
+    "id": "goetydelight:doll_item",
+    "name": "玩偶",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "佩戴在头部展示玩偶外观；切石机中的羊毛可用于取得玩偶。"
+    ],
+    "source": [
+      "把羊毛放入切石机，选择玩偶。"
+    ]
+  },
+  {
+    "id": "goetyiron:hemolytic_ring",
+    "name": "溶血之戒",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "佩戴时，召唤的亡灵可能会获得献祭印记"
+    ]
+  },
+  {
+    "id": "irons_spellbooks:affinity_ring",
+    "name": "%s亲和之戒",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "储存特定法术的亲和信息，装备后强化戒指所标示的法术。空戒尚未绑定法术。"
+    ]
+  },
+  {
+    "id": "irons_spellbooks:amethyst_resonance_charm",
+    "name": "紫水晶共鸣护符",
+    "slots": [
+      "项链"
+    ],
+    "effects": [
+      "魔力再生 +15%。"
+    ]
+  },
+  {
+    "id": "irons_spellbooks:betrayer_signet",
+    "name": "背叛者徽记",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "邪术法强 +10%。",
+      "根据目标生物的最大法力值，对其造成额外伤害。"
+    ]
+  },
+  {
+    "id": "irons_spellbooks:blaze_spell_book",
+    "name": "炽焰术士典籍",
+    "slots": [
+      "法术书"
+    ],
+    "effects": [
+      "10 个法术槽，最大魔力 +200，火焰法强 +10%。"
+    ]
+  },
+  {
+    "id": "irons_spellbooks:cast_time_ring",
+    "name": "速吟之戒",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "施法耗时缩减 +15%。"
+    ]
+  },
+  {
+    "id": "irons_spellbooks:concentration_amulet",
+    "name": "专注护身符",
+    "slots": [
+      "项链"
+    ],
+    "effects": [
+      "佩戴后，施放需要长时间吟唱的法术不会被打断。"
+    ]
+  },
+  {
+    "id": "irons_spellbooks:conjurers_talisman",
+    "name": "召唤师护符",
+    "slots": [
+      "项链"
+    ],
+    "effects": [
+      "召唤物伤害 +15%。"
+    ]
+  },
+  {
+    "id": "irons_spellbooks:cooldown_ring",
+    "name": "复效之戒",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "法术冷却缩减 +15%。"
+    ]
+  },
+  {
+    "id": "irons_spellbooks:copper_spell_book",
+    "name": "初学者日志",
+    "slots": [
+      "法术书"
+    ],
+    "effects": [
+      "5 个法术槽。"
+    ]
+  },
+  {
+    "id": "irons_spellbooks:cursed_doll_spell_book",
+    "name": "噬血邪典",
+    "slots": [
+      "法术书"
+    ],
+    "effects": [
+      "10 个法术槽，最大魔力 +200，鲜血法强和法术抗性各 +10%。"
+    ]
+  },
+  {
+    "id": "irons_spellbooks:diamond_spell_book",
+    "name": "附魔法术书",
+    "slots": [
+      "法术书"
+    ],
+    "effects": [
+      "10 个法术槽，最大魔力 +100。"
+    ]
+  },
+  {
+    "id": "irons_spellbooks:dragonskin_spell_book",
+    "name": "龙鳞法术书",
+    "slots": [
+      "法术书"
+    ],
+    "effects": [
+      "12 个法术槽，最大魔力 +200，末影法强 +10%。"
+    ]
+  },
+  {
+    "id": "irons_spellbooks:druidic_spell_book",
+    "name": "德鲁伊巨著",
+    "slots": [
+      "法术书"
+    ],
+    "effects": [
+      "10 个法术槽，最大魔力 +200，自然法强 +10%。"
+    ]
+  },
+  {
+    "id": "irons_spellbooks:emerald_stoneplate_ring",
+    "name": "方型绿宝石之戒",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "佩戴后，击败生物会额外掉落25%的经验。"
+    ]
+  },
+  {
+    "id": "irons_spellbooks:evoker_spell_book",
+    "name": "唤魔者魔典",
+    "slots": [
+      "法术书"
+    ],
+    "effects": [
+      "最大魔力 +200，唤魔法强 +10%。"
+    ]
+  },
+  {
+    "id": "irons_spellbooks:expulsion_ring",
+    "name": "驱逐之戒",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "佩戴后若受到攻击，会迸发气流击退攻击者。"
+    ]
+  },
+  {
+    "id": "irons_spellbooks:fireward_ring",
+    "name": "焰护之戒",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "佩戴后，免疫火焰伤害。"
+    ]
+  },
+  {
+    "id": "irons_spellbooks:frostward_ring",
+    "name": "冰护之戒",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "佩戴后，免疫冰冻伤害。"
+    ]
+  },
+  {
+    "id": "irons_spellbooks:gold_spell_book",
+    "name": "学徒法术书",
+    "slots": [
+      "法术书"
+    ],
+    "effects": [
+      "8 个法术槽，最大魔力 +50，施法耗时缩减 +15%。"
+    ]
+  },
+  {
+    "id": "irons_spellbooks:greater_conjurers_talisman",
+    "name": "高级召唤师护符",
+    "slots": [
+      "项链"
+    ],
+    "effects": [
+      "召唤物伤害 +15%。",
+      "超时的召唤法术不会进入冷却。"
+    ]
+  },
+  {
+    "id": "irons_spellbooks:heavy_chain_necklace",
+    "name": "沉重环链",
+    "slots": [
+      "项链"
+    ],
+    "effects": [
+      "法术抗性 +15%。"
+    ]
+  },
+  {
+    "id": "irons_spellbooks:ice_spell_book",
+    "name": "霜印之书",
+    "slots": [
+      "法术书"
+    ],
+    "effects": [
+      "12 个法术槽，最大魔力 +200，冰霜法强 +10%。"
+    ]
+  },
+  {
+    "id": "irons_spellbooks:invisibility_ring",
+    "name": "隐身之戒",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "我想说阅读小字，但我看不到它。"
+    ]
+  },
+  {
+    "id": "irons_spellbooks:iron_spell_book",
+    "name": "铁箍书卷",
+    "slots": [
+      "法术书"
+    ],
+    "effects": [
+      "6 个法术槽。"
+    ]
+  },
+  {
+    "id": "irons_spellbooks:legendary_spell_book",
+    "name": "传奇法术书",
+    "slots": [
+      "法术书"
+    ],
+    "effects": [
+      "12 个法术槽。"
+    ]
+  },
+  {
+    "id": "irons_spellbooks:lurker_ring",
+    "name": "潜伏之戒",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "佩戴者隐身时的攻击可额外造成 50% 伤害，触发冷却 15 秒。"
+    ]
+  },
+  {
+    "id": "irons_spellbooks:mana_ring",
+    "name": "奥术之戒",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "最大魔力 +100。"
+    ]
+  },
+  {
+    "id": "irons_spellbooks:necronomicon_spell_book",
+    "name": "亡灵律典",
+    "slots": [
+      "法术书"
+    ],
+    "effects": [
+      "合计 10 个法术槽，最大魔力 +200。预置猩红斩击、血步、汲取射线和烈焰风暴，并提升唤起亡灵的亲和。"
+    ]
+  },
+  {
+    "id": "irons_spellbooks:netherite_spell_book",
+    "name": "远古法典",
+    "slots": [
+      "法术书"
+    ],
+    "effects": [
+      "12 个法术槽，最大魔力 +200，冷却缩减 +20%。"
+    ]
+  },
+  {
+    "id": "irons_spellbooks:poisonward_ring",
+    "name": "毒护之戒",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "佩戴后，免疫中毒伤害。"
+    ]
+  },
+  {
+    "id": "irons_spellbooks:rotten_spell_book",
+    "name": "破败法术书",
+    "slots": [
+      "法术书"
+    ],
+    "effects": [
+      "8 个法术槽，最大魔力 +100，法术抗性 −15%。"
+    ]
+  },
+  {
+    "id": "irons_spellbooks:silver_ring",
+    "name": "银戒",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "最大魔力 +25。"
+    ]
+  },
+  {
+    "id": "irons_spellbooks:teleportation_amulet",
+    "name": "传送护身符",
+    "slots": [
+      "项链"
+    ],
+    "effects": [
+      "传送后获得3秒的闪避效果。"
+    ]
+  },
+  {
+    "id": "irons_spellbooks:villager_spell_book",
+    "name": "村民圣典",
+    "slots": [
+      "法术书"
+    ],
+    "effects": [
+      "10 个法术槽，最大魔力 +200，神圣法强 +10%，施法耗时缩减 +10%。"
+    ],
+    "source": [
+      "向铁魔法牧师交易，交出已翻译的高位唤魔者日志。"
+    ]
+  },
+  {
+    "id": "irons_spellbooks:visibility_ring",
+    "name": "明视之戒",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "佩戴后，可清除佩戴者所获得的失明与黑暗效果。"
+    ]
+  },
+  {
+    "id": "irons_spellbooks:wicked_bone_ring",
+    "name": "邪骨之戒",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "+1 法术弹射物反弹次数"
+    ]
+  },
+  {
+    "id": "irons_spellbooks:wimpy_spell_book",
+    "name": "无用之书",
+    "slots": [
+      "法术书"
+    ],
+    "effects": [
+      "原始法术槽为 0。"
+    ]
+  },
+  {
+    "id": "l2complements:eternal_totem_of_dream",
+    "name": "永恒幻梦图腾",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "幻梦图腾的可重用版本，触发后进入冷却。"
+    ]
+  },
+  {
+    "id": "l2complements:totem_of_dream",
+    "name": "幻梦图腾",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "致命伤害触发时恢复满血并回到出生点，同时获得指向原地点的易碎传送石。"
+    ]
+  },
+  {
+    "id": "l2complements:totem_of_the_sea",
+    "name": "海神图腾",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "在水中、雨中或气泡柱内受到通常的致命伤害时发挥图腾效果。"
+    ]
+  },
+  {
+    "id": "l2hostility:abrahadabra",
+    "name": "扭曲之魂",
+    "slots": [
+      "恶意诅咒"
+    ],
+    "effects": [
+      "当一个怪物携带的词条试图对你施加词条效果时，将其施加在周围所有对你有敌意的生物上作为替代"
+    ]
+  },
+  {
+    "id": "l2hostility:abyssal_thorn",
+    "name": "深渊王座",
+    "slots": [
+      "恶意诅咒"
+    ],
+    "effects": [
+      "怪物会获得当前等级下所有能获得的词条，但佩戴嫉妒诅咒时，必定掉落那些词条"
+    ]
+  },
+  {
+    "id": "l2hostility:charm_of_looting_1",
+    "name": "粗糙抢夺宝珠",
+    "slots": [
+      "护符",
+      "潘多拉"
+    ],
+    "effects": [
+      "第 1 阶掠夺串饰。击败符合对应词条与等级条件的敌人时，可取得指定额外掉落。"
+    ]
+  },
+  {
+    "id": "l2hostility:charm_of_looting_2",
+    "name": "魔能抢夺宝珠",
+    "slots": [
+      "护符",
+      "潘多拉"
+    ],
+    "effects": [
+      "第 2 阶掠夺串饰。击败符合对应词条与等级条件的敌人时，可取得指定额外掉落。"
+    ]
+  },
+  {
+    "id": "l2hostility:charm_of_looting_3",
+    "name": "混沌抢夺宝珠",
+    "slots": [
+      "护符",
+      "潘多拉"
+    ],
+    "effects": [
+      "第 3 阶掠夺串饰。击败符合对应词条与等级条件的敌人时，可取得指定额外掉落。"
+    ]
+  },
+  {
+    "id": "l2hostility:charm_of_looting_4",
+    "name": "奇迹抢夺宝珠",
+    "slots": [
+      "护符",
+      "潘多拉"
+    ],
+    "effects": [
+      "第 4 阶掠夺串饰。击败符合对应词条与等级条件的敌人时，可取得指定额外掉落。"
+    ]
+  },
+  {
+    "id": "l2hostility:curse_of_envy",
+    "name": "嫉妒诅咒",
+    "slots": [
+      "护符",
+      "恶意诅咒"
+    ],
+    "effects": [
+      "击杀带词条的怪物时有机会取得其词条，每阶概率 2%。"
+    ]
+  },
+  {
+    "id": "l2hostility:curse_of_gluttony",
+    "name": "暴食诅咒",
+    "slots": [
+      "护符",
+      "恶意诅咒"
+    ],
+    "effects": [
+      "击杀怪物时，每级提供 2% 瓶装恶意掉率。"
+    ]
+  },
+  {
+    "id": "l2hostility:curse_of_greed",
+    "name": "贪婪诅咒",
+    "slots": [
+      "护符",
+      "恶意诅咒"
+    ],
+    "effects": [
+      "击杀怪物的词条物品掉落率 ×2。"
+    ]
+  },
+  {
+    "id": "l2hostility:curse_of_lust",
+    "name": "色欲诅咒",
+    "slots": [
+      "护符",
+      "恶意诅咒"
+    ],
+    "effects": [
+      "击杀怪物掉落所有装备"
+    ]
+  },
+  {
+    "id": "l2hostility:curse_of_pride",
+    "name": "傲慢诅咒",
+    "slots": [
+      "护符",
+      "恶意诅咒"
+    ],
+    "effects": [
+      "每级玩家难度使生命上限 +0.5%、伤害 +0.5%。"
+    ]
+  },
+  {
+    "id": "l2hostility:curse_of_sloth",
+    "name": "怠惰诅咒",
+    "slots": [
+      "护符",
+      "恶意诅咒"
+    ],
+    "effects": [
+      "击杀生物不再提升难度"
+    ]
+  },
+  {
+    "id": "l2hostility:curse_of_wrath",
+    "name": "暴怒诅咒",
+    "slots": [
+      "护符",
+      "恶意诅咒"
+    ],
+    "effects": [
+      "攻击等级高于自己的怪物时，每级等级差增加 2% 伤害。"
+    ]
+  },
+  {
+    "id": "l2hostility:detector_glasses",
+    "name": "侦测眼镜",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "配合恶意探测器查看已净化的区段。"
+    ]
+  },
+  {
+    "id": "l2hostility:divinity_cross",
+    "name": "神圣十字",
+    "slots": [
+      "护符",
+      "恶意诅咒"
+    ],
+    "effects": [
+      "净化效果不会清除1级的正面效果"
+    ]
+  },
+  {
+    "id": "l2hostility:divinity_light",
+    "name": "神圣之光",
+    "slots": [
+      "护符",
+      "恶意诅咒"
+    ],
+    "effects": [
+      "玩家动态等级维持在0"
+    ]
+  },
+  {
+    "id": "l2hostility:flaming_thorn",
+    "name": "魔焰荆棘",
+    "slots": [
+      "手部"
+    ],
+    "effects": [
+      "击中怪物时施加 5 秒魂火，等级取决于目标当前效果种数。"
+    ]
+  },
+  {
+    "id": "l2hostility:greed_of_nidhoggur",
+    "name": "尼德霍格之欲",
+    "slots": [
+      "恶意诅咒"
+    ],
+    "effects": [
+      "击杀怪物时，每级怪物等级为其掉落物数量增加 0.5%。"
+    ]
+  },
+  {
+    "id": "l2hostility:imagine_breaker",
+    "name": "破咒遗骨",
+    "slots": [
+      "手部"
+    ],
+    "effects": [
+      "你所有的近战伤害穿透魔法防御"
+    ]
+  },
+  {
+    "id": "l2hostility:infinity_glove",
+    "name": "宝石手套",
+    "slots": [
+      "手部"
+    ],
+    "effects": [
+      "提供 5 个额外戒指槽和 1 个额外护符槽。"
+    ]
+  },
+  {
+    "id": "l2hostility:oddeyes_glasses",
+    "name": "异色眼镜",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "帮助发现隐身生物，也能在失明或黑暗中识别怪物。"
+    ]
+  },
+  {
+    "id": "l2hostility:platinum_star",
+    "name": "破风拳套",
+    "slots": [
+      "护符",
+      "手部"
+    ],
+    "effects": [
+      "你所有的近战伤害无视伤害冷却"
+    ]
+  },
+  {
+    "id": "l2hostility:pocket_of_restoration",
+    "name": "解咒口袋",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "自动收纳被封印的物品，将其解除封印后放回原位"
+    ]
+  },
+  {
+    "id": "l2hostility:ring_of_corrosion",
+    "name": "丑恶诅咒之戒",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "攻击时消耗目标装备 20% 最大耐久，受击时自己装备损失 10% 最大耐久。"
+    ]
+  },
+  {
+    "id": "l2hostility:ring_of_divinity",
+    "name": "圣光守护之戒",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "玩家免疫魔法伤害，获得持续的净化效果"
+    ]
+  },
+  {
+    "id": "l2hostility:ring_of_healing",
+    "name": "再生之戒",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "每秒回复 5% 最大生命值。"
+    ]
+  },
+  {
+    "id": "l2hostility:ring_of_incarceration",
+    "name": "禁锢诅咒之戒",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "潜行时，对你和你攻击范围内所有生物施加禁锢"
+    ]
+  },
+  {
+    "id": "l2hostility:ring_of_life",
+    "name": "屹立不倒之戒",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "单次损失生命上限为自身最大生命的 90%。"
+    ]
+  },
+  {
+    "id": "l2hostility:ring_of_ocean",
+    "name": "深海加护之戒",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "玩家永远湿润"
+    ]
+  },
+  {
+    "id": "l2hostility:ring_of_reflection",
+    "name": "诅咒扭曲之戒",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "当一个怪物携带的词条试图对你施加药水效果时，将其施加在周围所有对你有敌意的生物上作为替代"
+    ]
+  },
+  {
+    "id": "l2hostility:triple_strip_cape",
+    "name": "三色披风",
+    "slots": [
+      "背部"
+    ],
+    "effects": [
+      "提供 3 个额外背部槽。"
+    ]
+  },
+  {
+    "id": "minecraft:totem_of_undying",
+    "name": "不死图腾",
+    "slots": [
+      "女仆饰品"
+    ],
+    "effects": [
+      "女仆饰品格也能装不死图腾，在致命伤害时触发。"
+    ]
+  },
+  {
+    "id": "pandora:pandora_bracelet",
+    "name": "潘多拉手环",
+    "slots": [
+      "手镯"
+    ],
+    "effects": [
+      "可串上 9 个潘多拉串饰，持有时可右键编辑。"
+    ]
+  },
+  {
+    "id": "pandora:pandora_necklace",
+    "name": "潘多拉项链",
+    "slots": [
+      "项链"
+    ],
+    "effects": [
+      "可串上 18 个潘多拉串饰，持有时可右键编辑。"
+    ]
+  },
+  {
+    "id": "tarotcards:death",
+    "name": "塔罗牌：死亡",
+    "slots": [
+      "塔罗牌"
+    ],
+    "effects": [
+      "对生物造成的伤害 +20%。"
+    ]
+  },
+  {
+    "id": "tarotcards:judgement",
+    "name": "塔罗牌：审判",
+    "slots": [
+      "塔罗牌"
+    ],
+    "effects": [
+      "有 15% 几率打出双倍伤害。"
+    ]
+  },
+  {
+    "id": "tarotcards:justice",
+    "name": "塔罗牌：正义",
+    "slots": [
+      "塔罗牌"
+    ],
+    "effects": [
+      "将所受伤害的 25% 反弹给攻击者。"
+    ]
+  },
+  {
+    "id": "tarotcards:strength",
+    "name": "塔罗牌：力量",
+    "slots": [
+      "塔罗牌"
+    ],
+    "effects": [
+      "获得力量 2 级。"
+    ]
+  },
+  {
+    "id": "tarotcards:tarot_deck",
+    "name": "塔罗牌牌组",
+    "slots": [
+      "塔罗牌"
+    ],
+    "effects": [
+      "容纳 22 张牌。牌组内卡牌效果也会生效。",
+      "保护你珍贵的牌！"
+    ]
+  },
+  {
+    "id": "tarotcards:temperance",
+    "name": "塔罗牌：节制",
+    "slots": [
+      "塔罗牌"
+    ],
+    "effects": [
+      "饥饿消耗减少 25%。"
+    ]
+  },
+  {
+    "id": "tarotcards:the_chariot",
+    "name": "塔罗牌：战车",
+    "slots": [
+      "塔罗牌"
+    ],
+    "effects": [
+      "移动速度 +20%。"
+    ]
+  },
+  {
+    "id": "tarotcards:the_devil",
+    "name": "塔罗牌：恶魔",
+    "slots": [
+      "塔罗牌"
+    ],
+    "effects": [
+      "攻击造成虚弱效果。"
+    ]
+  },
+  {
+    "id": "tarotcards:the_emperor",
+    "name": "塔罗牌：皇帝",
+    "slots": [
+      "塔罗牌"
+    ],
+    "effects": [
+      "获得村庄英雄 3 级。"
+    ]
+  },
+  {
+    "id": "tarotcards:the_empress",
+    "name": "塔罗牌：女帝",
+    "slots": [
+      "塔罗牌"
+    ],
+    "effects": [
+      "作用范围 3 格，在附近照料动物与幼崽。",
+      "临近的动物自动繁殖，幼崽成长速度加快。"
+    ]
+  },
+  {
+    "id": "tarotcards:the_fool",
+    "name": "塔罗牌：愚者",
+    "slots": [
+      "塔罗牌"
+    ],
+    "effects": [
+      "获得跳跃提升 3 级。"
+    ]
+  },
+  {
+    "id": "tarotcards:the_hanged_man",
+    "name": "塔罗牌：倒吊者",
+    "slots": [
+      "塔罗牌"
+    ],
+    "effects": [
+      "将所受伤害的 50% 转成经验，每次上限 25。"
+    ]
+  },
+  {
+    "id": "tarotcards:the_hermit",
+    "name": "塔罗牌：隐者",
+    "slots": [
+      "塔罗牌"
+    ],
+    "effects": [
+      "在 10 格内没有盟友时，护甲 +10。"
+    ]
+  },
+  {
+    "id": "tarotcards:the_hierophant",
+    "name": "塔罗牌：教皇",
+    "slots": [
+      "塔罗牌"
+    ],
+    "effects": [
+      "获得经验值时额外增加 150%。"
+    ]
+  },
+  {
+    "id": "tarotcards:the_high_priestess",
+    "name": "塔罗牌：女祭司",
+    "slots": [
+      "塔罗牌"
+    ],
+    "effects": [
+      "用经验值升级手持的附魔书。"
+    ]
+  },
+  {
+    "id": "tarotcards:the_lovers",
+    "name": "塔罗牌：恋人",
+    "slots": [
+      "塔罗牌"
+    ],
+    "effects": [
+      "为 5 格内的盟友提供生命恢复 3 级。"
+    ]
+  },
+  {
+    "id": "tarotcards:the_magician",
+    "name": "塔罗牌：魔术师",
+    "slots": [
+      "塔罗牌"
+    ],
+    "effects": [
+      "黄金物品不会损坏。"
+    ]
+  },
+  {
+    "id": "tarotcards:the_moon",
+    "name": "塔罗牌：月亮",
+    "slots": [
+      "塔罗牌"
+    ],
+    "effects": [
+      "夜视效果。"
+    ]
+  },
+  {
+    "id": "tarotcards:the_star",
+    "name": "塔罗牌：星星",
+    "slots": [
+      "塔罗牌"
+    ],
+    "effects": [
+      "基础方块触及距离 +50%。"
+    ]
+  },
+  {
+    "id": "tarotcards:the_sun",
+    "name": "塔罗牌：太阳",
+    "slots": [
+      "塔罗牌"
+    ],
+    "effects": [
+      "基础最大生命值 +25%。"
+    ]
+  },
+  {
+    "id": "tarotcards:the_tower",
+    "name": "塔罗牌：塔楼",
+    "slots": [
+      "塔罗牌"
+    ],
+    "effects": [
+      "摔落伤害减少 100%。"
+    ]
+  },
+  {
+    "id": "tarotcards:the_world",
+    "name": "塔罗牌：世界",
+    "slots": [
+      "塔罗牌"
+    ],
+    "effects": [
+      "对 3 格内的生物施加缓慢 4 级。"
+    ]
+  },
+  {
+    "id": "tarotcards:wheel_of_fortune",
+    "name": "塔罗牌：命运之轮",
+    "slots": [
+      "塔罗牌"
+    ],
+    "effects": [
+      "幸运 +3。"
+    ]
+  },
+  {
+    "id": "terra_curio:aglet",
+    "name": "鞋带束头",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "移动速度 +5%。"
+    ]
+  },
+  {
+    "id": "terra_curio:amber_horseshoe_balloon",
+    "name": "琥珀马掌气球",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "跳跃力度 +43%、幸运 +0.05、掉落伤害倍率 -100。",
+      "增加跳跃高度",
+      "消除掉落伤害",
+      "受到伤害后释放蜜蜂并将使用者浸入蜂蜜中"
+    ]
+  },
+  {
+    "id": "terra_curio:ambhipian_boots",
+    "name": "水陆两用靴",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "安全掉落距离 +7、跳跃力度 +60%。",
+      "穿戴者可飞速奔跑",
+      "增加跳跃高度",
+      "增加抗坠落性"
+    ]
+  },
+  {
+    "id": "terra_curio:ancient_chisel",
+    "name": "远古凿子",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "挖掘速度 +25%。",
+      "“古老的问题需要古老的解决方案”"
+    ]
+  },
+  {
+    "id": "terra_curio:angler_earring",
+    "name": "渔夫耳环",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "渔力 +10。"
+    ]
+  },
+  {
+    "id": "terra_curio:ankh_charm",
+    "name": "十字章护身符",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "免疫中毒、失明、缓慢、虚弱、流血、破甲、困惑、诅咒、沉默、石化。",
+      "对大部分减益免疫"
+    ]
+  },
+  {
+    "id": "terra_curio:ankh_shield",
+    "name": "十字章护盾",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "免疫中毒、失明、缓慢、虚弱、流血、破甲、困惑、诅咒、沉默、石化。",
+      "击退抗性 +1、护甲 +2。",
+      "对大部分减益免疫",
+      "对火块免疫"
+    ]
+  },
+  {
+    "id": "terra_curio:anklet_of_the_wind",
+    "name": "疾风脚镯",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "移动速度 +10%。"
+    ]
+  },
+  {
+    "id": "terra_curio:architect_gizmo_pack",
+    "name": "建筑师发明背包",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "方块交互距离 +3。",
+      "右键点击延迟降低2，且降低效果不能与其材料的降低效果叠加。"
+    ]
+  },
+  {
+    "id": "terra_curio:arctic_diving_gear",
+    "name": "北极潜水装备",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "游泳速度 +0.5。",
+      "大大延长水下呼吸时间",
+      "提供额外冰面行动力",
+      "发出非常微弱的光芒，这种光芒在水下会变得更醒目"
+    ]
+  },
+  {
+    "id": "terra_curio:avenger_emblem",
+    "name": "复仇者徽章",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "近战伤害 +12%、远程伤害 +12%、魔法伤害 +12%、召唤伤害 +12%。"
+    ]
+  },
+  {
+    "id": "terra_curio:balloon_pufferfish",
+    "name": "气球河豚鱼",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "跳跃力度 +43%、安全掉落距离 +2。",
+      "增加跳跃高度"
+    ]
+  },
+  {
+    "id": "terra_curio:band_of_regeneration",
+    "name": "再生手环",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "缓慢再生生命"
+    ]
+  },
+  {
+    "id": "terra_curio:base_point",
+    "name": "基点",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "移动速度 +16%、掉落伤害倍率 -100、跳跃力度 +100%、跨步高度 +0.5。",
+      "“你可听闻这寂静之声？”"
+    ]
+  },
+  {
+    "id": "terra_curio:bee_cloak",
+    "name": "蜜蜂斗篷",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "受到伤害后会使星星坠落",
+      "受到伤害后释放蜜蜂并将使用者浸入蜂蜜中"
+    ]
+  },
+  {
+    "id": "terra_curio:berserkers_glove",
+    "name": "狂战士手套",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "护甲 +4、攻击速度 +12%、攻击击退 +100%、实体交互距离 +10%、仇恨 +400。",
+      "启用近战武器自动挥动",
+      "多人模式时，敌人更可能以你为目标"
+    ]
+  },
+  {
+    "id": "terra_curio:bezoar",
+    "name": "牛黄",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "对中毒免疫"
+    ]
+  },
+  {
+    "id": "terra_curio:black_belt",
+    "name": "黑腰带",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "闪避率 +10%。",
+      "有几率避开攻击"
+    ]
+  },
+  {
+    "id": "terra_curio:blindfold",
+    "name": "蒙眼布",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "对失明免疫"
+    ]
+  },
+  {
+    "id": "terra_curio:blizzard_in_a_balloon",
+    "name": "暴雪气球",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "跳跃力度 +43%、安全掉落距离 +4。",
+      "可让持有者二段跳",
+      "增加跳跃高度"
+    ]
+  },
+  {
+    "id": "terra_curio:blizzard_in_a_bottle",
+    "name": "暴雪瓶",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "安全掉落距离 +3。",
+      "可让持有者二段跳"
+    ]
+  },
+  {
+    "id": "terra_curio:blue_horseshoe_balloon",
+    "name": "蓝马掌气球",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "跳跃力度 +75%、幸运 +0.05、掉落伤害倍率 -100。",
+      "可让持有者二段跳",
+      "增加跳跃高度",
+      "消除掉落伤害"
+    ]
+  },
+  {
+    "id": "terra_curio:bone_glove",
+    "name": "骨头手套",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "在你攻击时向敌人射出交叉骨"
+    ]
+  },
+  {
+    "id": "terra_curio:brain_of_confusion",
+    "name": "混乱之脑",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "有几率制造幻觉并躲避攻击",
+      "闪避后暂时增加4%暴击几率",
+      "被击中后可能会迷惑附近的敌人"
+    ]
+  },
+  {
+    "id": "terra_curio:brick_layer",
+    "name": "砌砖刀",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "右键点击延迟降低1"
+    ]
+  },
+  {
+    "id": "terra_curio:bundle_of_balloons",
+    "name": "气球束",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "跳跃力度 +43%、安全掉落距离 +7。",
+      "可让持有者四段跳",
+      "增加跳跃高度"
+    ]
+  },
+  {
+    "id": "terra_curio:bundle_of_horseshoe_balloons",
+    "name": "马掌气球束",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "跳跃力度 +43%、幸运 +0.05、掉落伤害倍率 -100。",
+      "可让持有者四段跳",
+      "增加跳跃高度",
+      "消除掉落伤害"
+    ]
+  },
+  {
+    "id": "terra_curio:celestial_shell",
+    "name": "天界壳",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "攻击速度 +10%、近战伤害 +10%、远程伤害 +10%、魔法伤害 +10%、召唤伤害 +10%、暴击率 +2%、护甲 +4、挖掘速度 +15%、召唤物击退 +0.5。",
+      "在晚上将持有者变成狼人，入水时将持有者变成人鱼"
+    ]
+  },
+  {
+    "id": "terra_curio:celestial_starboard",
+    "name": "天界星盘",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "掉落伤害倍率 -100。",
+      "可飞行和缓慢坠落",
+      "按住潜行与跳跃键以水平飞行",
+      "“你懂得越多”"
+    ]
+  },
+  {
+    "id": "terra_curio:celestial_stone",
+    "name": "天界石",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "攻击速度 +10%、近战伤害 +10%、远程伤害 +10%、魔法伤害 +10%、召唤伤害 +10%、暴击率 +2%、护甲 +4、挖掘速度 +15%、召唤物击退 +0.5。",
+      "小幅提高属性值"
+    ]
+  },
+  {
+    "id": "terra_curio:climbing_claws",
+    "name": "攀爬爪",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "可沿墙滑下，按住潜行键可更快地下滑",
+      "结合鞋钉使用时能力还会有所提升"
+    ]
+  },
+  {
+    "id": "terra_curio:cloud_in_a_balloon",
+    "name": "云朵气球",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "跳跃力度 +43%、安全掉落距离 +4。",
+      "可让持有者二段跳",
+      "增加跳跃高度"
+    ]
+  },
+  {
+    "id": "terra_curio:cloud_in_a_bottle",
+    "name": "云朵瓶",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "安全掉落距离 +3。",
+      "可让持有者二段跳"
+    ]
+  },
+  {
+    "id": "terra_curio:cobalt_shield",
+    "name": "钴护盾",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "击退抗性 +1。",
+      "对击退免疫"
+    ]
+  },
+  {
+    "id": "terra_curio:compass",
+    "name": "罗盘",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "显示水平位置"
+    ]
+  },
+  {
+    "id": "terra_curio:copper_watch",
+    "name": "铜表",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "报时"
+    ]
+  },
+  {
+    "id": "terra_curio:cross_necklace",
+    "name": "十字项链",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "增加受到伤害后的无敌时间"
+    ]
+  },
+  {
+    "id": "terra_curio:depth_meter",
+    "name": "深度计",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "显示深度"
+    ]
+  },
+  {
+    "id": "terra_curio:destroyer_emblem",
+    "name": "毁灭者徽章",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "近战伤害 +10%、远程伤害 +10%、魔法伤害 +10%、召唤伤害 +10%、暴击率 +8%。"
+    ]
+  },
+  {
+    "id": "terra_curio:detoxification_capsule",
+    "name": "解毒囊",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "对中毒和凋零免疫"
+    ]
+  },
+  {
+    "id": "terra_curio:diving_gear",
+    "name": "潜水装备",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "游泳速度 +0.5。",
+      "大大延长水下呼吸时间"
+    ]
+  },
+  {
+    "id": "terra_curio:dps_meter",
+    "name": "每秒伤害计数器",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "显示你的每秒伤害"
+    ]
+  },
+  {
+    "id": "terra_curio:dunerider_boots",
+    "name": "沙丘行者靴",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "穿戴者可飞速奔跑，在沙地上还能跑得更快",
+      "“无节律行走就不会引来蠕虫”"
+    ]
+  },
+  {
+    "id": "terra_curio:energy_bar",
+    "name": "能量棒",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "对饥饿免疫"
+    ]
+  },
+  {
+    "id": "terra_curio:everlasting",
+    "name": "亘古",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "免疫中毒、失明、缓慢、虚弱、流血、破甲、困惑、诅咒、沉默、石化。",
+      "闪避率 +10%。"
+    ]
+  },
+  {
+    "id": "terra_curio:explorers_equipment",
+    "name": "探险家宝具",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "对挖掘疲劳和漂浮免疫"
+    ]
+  },
+  {
+    "id": "terra_curio:extendo_grip",
+    "name": "加长握爪",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "方块交互距离 +3。"
+    ]
+  },
+  {
+    "id": "terra_curio:eye_of_the_golem",
+    "name": "石巨人之眼",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "暴击率 +10%。"
+    ]
+  },
+  {
+    "id": "terra_curio:fairy_boots",
+    "name": "仙灵靴",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "可飞行、可飞速奔跑",
+      "你走过的草地上会长出花朵"
+    ]
+  },
+  {
+    "id": "terra_curio:fart_in_a_balloon",
+    "name": "臭屁气球",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "跳跃力度 +43%、安全掉落距离 +4。",
+      "可让持有者二段跳",
+      "增加跳跃高度"
+    ]
+  },
+  {
+    "id": "terra_curio:fart_in_a_jar",
+    "name": "罐中臭屁",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "安全掉落距离 +3。",
+      "可让持有者二段跳"
+    ]
+  },
+  {
+    "id": "terra_curio:fast_clock",
+    "name": "快走时钟",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "对缓慢免疫"
+    ]
+  },
+  {
+    "id": "terra_curio:feral_claws",
+    "name": "猛爪手套",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "攻击速度 +12%。",
+      "启用近战武器自动挥动"
+    ]
+  },
+  {
+    "id": "terra_curio:fire_gauntlet",
+    "name": "烈火手套",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "近战伤害 +12%、攻击速度 +12%、攻击击退 +100%、实体交互距离 +10%。",
+      "启用近战武器自动挥动",
+      "增加近战击退并使攻击附着火焰伤害"
+    ]
+  },
+  {
+    "id": "terra_curio:fish_finder",
+    "name": "探鱼器",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "显示钓鱼信息",
+      "显示天气",
+      "显示月相"
+    ]
+  },
+  {
+    "id": "terra_curio:fishermans_pocket_guide",
+    "name": "渔民袖珍宝典",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "显示钓鱼信息"
+    ]
+  },
+  {
+    "id": "terra_curio:flashlight",
+    "name": "手电筒",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "对黑暗免疫"
+    ]
+  },
+  {
+    "id": "terra_curio:flesh_knuckles",
+    "name": "血肉指虎",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "护甲 +4、仇恨 +400。",
+      "多人模式时，敌人更可能以你为目标"
+    ]
+  },
+  {
+    "id": "terra_curio:flipper",
+    "name": "脚蹼",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "游泳速度 +0.5。"
+    ]
+  },
+  {
+    "id": "terra_curio:flower_boots",
+    "name": "花靴",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "你走过的草地上会长出花朵"
+    ]
+  },
+  {
+    "id": "terra_curio:flurry_boots",
+    "name": "疾风雪靴",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "穿戴者可飞速奔跑"
+    ]
+  },
+  {
+    "id": "terra_curio:flying_carpet",
+    "name": "飞毯",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "可让持有者漂浮几秒钟"
+    ]
+  },
+  {
+    "id": "terra_curio:frog_flipper",
+    "name": "青蛙脚蹼",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "游泳速度 +0.5、安全掉落距离 +7、跳跃力度 +60%。",
+      "增加跳跃高度",
+      "增加抗坠落性"
+    ]
+  },
+  {
+    "id": "terra_curio:frog_gear",
+    "name": "青蛙装备",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "游泳速度 +0.5、安全掉落距离 +7、跳跃力度 +60%。",
+      "“身为绿皮生物可太难了”",
+      "增加跳跃高度",
+      "增加抗坠落性",
+      "可爬墙，按住潜行键可快速下滑"
+    ]
+  },
+  {
+    "id": "terra_curio:frog_leg",
+    "name": "蛙腿",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "安全掉落距离 +7、跳跃力度 +60%。",
+      "增加跳跃高度",
+      "增加抗坠落性"
+    ]
+  },
+  {
+    "id": "terra_curio:frog_webbing",
+    "name": "青蛙蹼",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "安全掉落距离 +7、跳跃力度 +60%。",
+      "增加跳跃高度",
+      "增加抗坠落性",
+      "可爬墙，按住潜行键可快速下滑"
+    ]
+  },
+  {
+    "id": "terra_curio:frostspark_boots",
+    "name": "霜花靴",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "移动速度 +8%。",
+      "可飞行、飞速奔跑、并提供额外冰面行动力"
+    ]
+  },
+  {
+    "id": "terra_curio:frozen_shield",
+    "name": "冰冻护盾",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "护甲 +3、击退抗性 +1。",
+      "当生命值超过25%时，吸收对团队中玩家造成的25%伤害",
+      "当生命值低于50%时，在主人周围放置一个外壳，使伤害降低25%"
+    ]
+  },
+  {
+    "id": "terra_curio:frozen_turtle_shell",
+    "name": "冰冻海龟壳",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "当生命值低于50%时，在主人周围放置一个外壳，使伤害降低25%"
+    ]
+  },
+  {
+    "id": "terra_curio:goblin_tech",
+    "name": "哥布林数据仪",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "显示你周围最贵重的矿石",
+      "显示玩家的移动速度",
+      "显示你的每秒伤害"
+    ]
+  },
+  {
+    "id": "terra_curio:gold_watch",
+    "name": "金表",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "报时"
+    ]
+  },
+  {
+    "id": "terra_curio:gps",
+    "name": "全球定位系统",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "报时",
+      "显示深度",
+      "显示水平位置"
+    ]
+  },
+  {
+    "id": "terra_curio:gravity_globe",
+    "name": "重力球",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "可让持有者反转重力"
+    ]
+  },
+  {
+    "id": "terra_curio:green_horseshoe_balloon",
+    "name": "绿马掌气球",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "跳跃力度 +75%、幸运 +0.05、掉落伤害倍率 -100。",
+      "可让持有者二段跳",
+      "增加跳跃高度",
+      "消除掉落伤害"
+    ]
+  },
+  {
+    "id": "terra_curio:hand_drill",
+    "name": "手钻",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "对挖掘疲劳免疫"
+    ]
+  },
+  {
+    "id": "terra_curio:hand_of_creation",
+    "name": "创造之手",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "方块交互距离 +3、挖掘速度 +25%、拾取距离 +6.25。",
+      "右键点击延迟降低3，且降低效果不能与其材料的降低效果叠加",
+      "按↑键站得更高，按潜行键下来"
+    ]
+  },
+  {
+    "id": "terra_curio:hand_warmer",
+    "name": "暖手宝",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "免疫冻结。",
+      "对细雪免疫"
+    ]
+  },
+  {
+    "id": "terra_curio:hermes_boots",
+    "name": "赫尔墨斯靴",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "穿戴者可飞速奔跑"
+    ]
+  },
+  {
+    "id": "terra_curio:hero_shield",
+    "name": "英雄护盾",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "护甲 +5、击退抗性 +1、仇恨 +400。",
+      "多人模式时，敌人更可能以你为目标"
+    ]
+  },
+  {
+    "id": "terra_curio:hive_pack",
+    "name": "蜂巢背包",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "增加友好蜜蜂的力量"
+    ]
+  },
+  {
+    "id": "terra_curio:holy_water",
+    "name": "圣水",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "对凋零免疫"
+    ]
+  },
+  {
+    "id": "terra_curio:honey_balloon",
+    "name": "蜂蜜气球",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "跳跃力度 +43%、安全掉落距离 +2。",
+      "受到伤害后释放蜜蜂并将使用者浸入蜂蜜中",
+      "增加跳跃高度"
+    ]
+  },
+  {
+    "id": "terra_curio:honey_comb",
+    "name": "蜂窝",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "受到伤害后释放蜜蜂并将使用者浸入蜂蜜中"
+    ]
+  },
+  {
+    "id": "terra_curio:ice_skates",
+    "name": "溜冰鞋",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "提供额外冰面行动力"
+    ]
+  },
+  {
+    "id": "terra_curio:inner_tube",
+    "name": "浮游圈",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "可让人浮在水面"
+    ]
+  },
+  {
+    "id": "terra_curio:jellyfish_diving_gear",
+    "name": "水母潜水装备",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "游泳速度 +0.5。",
+      "大大延长水下呼吸时间",
+      "发出非常微弱的光芒，这种光芒在水下会变得更醒目"
+    ]
+  },
+  {
+    "id": "terra_curio:jellyfish_necklace",
+    "name": "水母项链",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "发出非常微弱的光芒，这种光芒在水下会变得更醒目"
+    ]
+  },
+  {
+    "id": "terra_curio:lava_charm",
+    "name": "熔岩护身符",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "对熔岩免疫7秒"
+    ]
+  },
+  {
+    "id": "terra_curio:lava_waders",
+    "name": "熔岩靴",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "提供在水、蜂蜜、熔岩上行走的能力",
+      "对火块免疫、对熔岩免疫7秒"
+    ]
+  },
+  {
+    "id": "terra_curio:life_form_analyzer",
+    "name": "生命体分析机",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "显示您周围稀有生物的名称"
+    ]
+  },
+  {
+    "id": "terra_curio:lightning_boots",
+    "name": "闪电靴",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "移动速度 +8%。",
+      "可飞行、可飞速奔跑"
+    ]
+  },
+  {
+    "id": "terra_curio:lucky_horseshoe",
+    "name": "幸运马掌",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "幸运 +0.05、掉落伤害倍率 -100。",
+      "“据说能带来好运、驱除邪灵”",
+      "消除掉落伤害"
+    ]
+  },
+  {
+    "id": "terra_curio:magic_quiver",
+    "name": "魔法箭袋",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "远程伤害 +10%、远程弹速 +20%。",
+      "20%几率不消耗箭"
+    ]
+  },
+  {
+    "id": "terra_curio:magiluminescence",
+    "name": "魔光护符",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "移动速度 +15%。",
+      "提高移动速度和加速度",
+      "“我黑暗生命中的一道短暂曙光”"
+    ]
+  },
+  {
+    "id": "terra_curio:magma_skull",
+    "name": "岩浆骷髅头",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "对熔岩免疫7秒",
+      "对火块免疫"
+    ]
+  },
+  {
+    "id": "terra_curio:magma_stone",
+    "name": "岩浆石",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "近战攻击造成火焰伤害"
+    ]
+  },
+  {
+    "id": "terra_curio:master_ninja_gear",
+    "name": "忍者大师装备",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "闪避率 +10%。",
+      "可爬墙，按住潜行键可快速下滑",
+      "双击一个方向可猛冲",
+      "有几率避开攻击"
+    ]
+  },
+  {
+    "id": "terra_curio:mechanical_glove",
+    "name": "机械手套",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "近战伤害 +12%、攻击速度 +12%、攻击击退 +100%、实体交互距离 +10%。",
+      "启用近战武器自动挥动"
+    ]
+  },
+  {
+    "id": "terra_curio:metal_detector",
+    "name": "金属探测器",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "显示你周围最贵重的矿石"
+    ]
+  },
+  {
+    "id": "terra_curio:molten_charm",
+    "name": "熔火护身符",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "对火块免疫",
+      "对熔岩免疫7秒"
+    ]
+  },
+  {
+    "id": "terra_curio:molten_quiver",
+    "name": "熔火箭袋",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "远程伤害 +10%、远程弹速 +20%。",
+      "20%几率不消耗箭",
+      "点燃木箭，火光熊熊",
+      "“在恐惧中颤抖吧！”"
+    ]
+  },
+  {
+    "id": "terra_curio:molten_skull_rose",
+    "name": "熔火骷髅头玫瑰",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "对火块免疫",
+      "对熔岩免疫7秒",
+      "减少因触碰熔岩而造成的伤害"
+    ]
+  },
+  {
+    "id": "terra_curio:moon_charm",
+    "name": "月光护身符",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "暴击率 +2%、近战伤害 +5.1%、攻击速度 +5.1%、移动速度 +5%、护甲 +3、跳跃力度 +10%。",
+      "在晚上将持有者变成狼人"
+    ]
+  },
+  {
+    "id": "terra_curio:moon_shell",
+    "name": "月亮贝壳",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "暴击率 +2%、近战伤害 +5.1%、攻击速度 +5.1%、移动速度 +5%、护甲 +3、跳跃力度 +10%。",
+      "在晚上将持有者变成狼人，入水时将持有者变成人鱼"
+    ]
+  },
+  {
+    "id": "terra_curio:moon_stone",
+    "name": "月亮石",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "攻击速度 +10%、近战伤害 +10%、远程伤害 +10%、魔法伤害 +10%、召唤伤害 +10%、暴击率 +2%、护甲 +4、挖掘速度 +15%、召唤物击退 +0.5。",
+      "在夜晚时略微增强属性值"
+    ]
+  },
+  {
+    "id": "terra_curio:neptunes_shell",
+    "name": "海神贝壳",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "水下挖掘速度 +0.8。",
+      "入水时将持有者变成人鱼"
+    ]
+  },
+  {
+    "id": "terra_curio:nutrient_solution",
+    "name": "营养液",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "对虚弱和饥饿免疫"
+    ]
+  },
+  {
+    "id": "terra_curio:obsidian_horseshoe",
+    "name": "黑曜石马掌",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "幸运 +0.05、掉落伤害倍率 -100。",
+      "消除掉落伤害",
+      "对火块免疫"
+    ]
+  },
+  {
+    "id": "terra_curio:obsidian_rose",
+    "name": "黑曜石玫瑰",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "减少因触碰熔岩而造成的伤害"
+    ]
+  },
+  {
+    "id": "terra_curio:obsidian_shield",
+    "name": "黑曜石护盾",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "击退抗性 +1、护甲 +1。",
+      "对火块免疫"
+    ]
+  },
+  {
+    "id": "terra_curio:obsidian_skull",
+    "name": "黑曜石骷髅头",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "护甲 +1。",
+      "对火块免疫"
+    ]
+  },
+  {
+    "id": "terra_curio:obsidian_skull_rose",
+    "name": "黑曜石骷髅头玫瑰",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "对火块免疫",
+      "减少因触碰熔岩而造成的伤害"
+    ]
+  },
+  {
+    "id": "terra_curio:obsidian_water_walking_boots",
+    "name": "黑曜石水上漂靴",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "提供在水和蜂蜜上行走的能力",
+      "对火块免疫"
+    ]
+  },
+  {
+    "id": "terra_curio:paladins_shield",
+    "name": "圣骑士护盾",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "护甲 +3、击退抗性 +1。",
+      "当生命值高于25%时，吸收团队中其他玩家所受伤害的25%"
+    ]
+  },
+  {
+    "id": "terra_curio:panic_necklace",
+    "name": "恐慌项链",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "受到伤害后增加移动速度"
+    ]
+  },
+  {
+    "id": "terra_curio:pda",
+    "name": "个人数字助手",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "报时",
+      "显示天气",
+      "显示水平位置",
+      "显示深度",
+      "显示月相",
+      "显示钓鱼信息",
+      "显示你周围最贵重的矿石",
+      "显示您周围稀有生物的名称",
+      "探测你周围的敌人",
+      "显示怪物击杀数量",
+      "显示你的每秒伤害",
+      "显示玩家的移动速度"
+    ]
+  },
+  {
+    "id": "terra_curio:pink_horseshoe_balloon",
+    "name": "粉马掌气球",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "跳跃力度 +43%、幸运 +0.05、掉落伤害倍率 -100。",
+      "可让持有者二段跳",
+      "增加跳跃高度",
+      "消除掉落伤害"
+    ]
+  },
+  {
+    "id": "terra_curio:platinum_watch",
+    "name": "铂金表",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "报时"
+    ]
+  },
+  {
+    "id": "terra_curio:portable_cement_mixer",
+    "name": "便携式水泥搅拌机",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "右键点击延迟降低1"
+    ]
+  },
+  {
+    "id": "terra_curio:power_glove",
+    "name": "强力手套",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "攻击速度 +12%、攻击击退 +100%、实体交互距离 +10%。",
+      "启用近战武器自动挥动"
+    ]
+  },
+  {
+    "id": "terra_curio:putrid_scent",
+    "name": "腐香囊",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "近战伤害 +5%、远程伤害 +5%、魔法伤害 +5%、召唤伤害 +5%、仇恨 -400。",
+      "多人模式下，敌怪不太可能以你为目标"
+    ]
+  },
+  {
+    "id": "terra_curio:radar",
+    "name": "雷达",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "探测你周围的敌人"
+    ]
+  },
+  {
+    "id": "terra_curio:ram_rune",
+    "name": "牧羊符文",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "按住潜行键跳跃即可向下猛击",
+      "猛击地面会对附近的敌人造成伤害"
+    ]
+  },
+  {
+    "id": "terra_curio:ranger_emblem",
+    "name": "游侠徽章",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "远程伤害 +15%。"
+    ]
+  },
+  {
+    "id": "terra_curio:recon_scope",
+    "name": "侦察镜",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "暴击率 +10%、远程伤害 +10%、仇恨 -400。",
+      "扩大远程武器的视野范围",
+      "手持远程武器并潜行可拉远视野",
+      "多人模式下，敌怪不太可能以你为目标",
+      "“发现敌人”"
+    ]
+  },
+  {
+    "id": "terra_curio:rek_3000",
+    "name": "R.E.K.3000",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "探测你周围的敌人",
+      "显示您周围稀有生物的名称",
+      "显示怪物击杀数量"
+    ]
+  },
+  {
+    "id": "terra_curio:rifle_scope",
+    "name": "步枪瞄准镜",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "扩大远程武器的视野范围",
+      "手持远程武器并潜行可拉远视野"
+    ]
+  },
+  {
+    "id": "terra_curio:rocket_boots",
+    "name": "火箭靴",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "可飞行"
+    ]
+  },
+  {
+    "id": "terra_curio:royal_gel",
+    "name": "皇家凝胶",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "史莱姆将变成友好生物"
+    ]
+  },
+  {
+    "id": "terra_curio:sailfish_boots",
+    "name": "旗鱼靴",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "穿戴者可飞速奔跑"
+    ]
+  },
+  {
+    "id": "terra_curio:sandstorm_in_a_balloon",
+    "name": "沙暴气球",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "跳跃力度 +43%、安全掉落距离 +4。",
+      "可让持有者二段跳",
+      "增加跳跃高度"
+    ]
+  },
+  {
+    "id": "terra_curio:sandstorm_in_a_bottle",
+    "name": "沙暴瓶",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "安全掉落距离 +3。",
+      "可让持有者二段跳"
+    ]
+  },
+  {
+    "id": "terra_curio:searchlight",
+    "name": "探照灯",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "对失明和黑暗免疫"
+    ]
+  },
+  {
+    "id": "terra_curio:sextant",
+    "name": "六分仪",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "月相: 满月",
+      "月相: 亏凸月",
+      "月相: 下弦月",
+      "月相: 残月",
+      "月相: 新月",
+      "月相: 峨眉月",
+      "月相: 上弦月",
+      "月相: 盈凸月",
+      "显示月相"
+    ]
+  },
+  {
+    "id": "terra_curio:shackle",
+    "name": "镣铐",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "护甲 +1。"
+    ]
+  },
+  {
+    "id": "terra_curio:shark_tooth_necklace",
+    "name": "鲨牙项链",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "护甲穿透 +5。"
+    ]
+  },
+  {
+    "id": "terra_curio:sharkron_balloon",
+    "name": "鲨鱼龙气球",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "跳跃力度 +43%、安全掉落距离 +4。",
+      "可让持有者二段跳",
+      "增加跳跃高度"
+    ]
+  },
+  {
+    "id": "terra_curio:shield_of_cthulhu",
+    "name": "克苏鲁护盾",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "护甲 +2。"
+    ]
+  },
+  {
+    "id": "terra_curio:shiny_red_balloon",
+    "name": "闪亮红气球",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "跳跃力度 +43%、安全掉落距离 +2。",
+      "增加跳跃高度"
+    ]
+  },
+  {
+    "id": "terra_curio:shiny_stone",
+    "name": "闪亮石",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "不移动时，大大提高生命再生速度"
+    ]
+  },
+  {
+    "id": "terra_curio:shoe_spikes",
+    "name": "鞋钉",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "可沿墙滑下，按住潜行键可更快地下滑",
+      "结合攀爬爪使用时能力还会有所提升"
+    ]
+  },
+  {
+    "id": "terra_curio:shot_put",
+    "name": "铅球",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "对漂浮免疫"
+    ]
+  },
+  {
+    "id": "terra_curio:silver_watch",
+    "name": "银表",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "报时"
+    ]
+  },
+  {
+    "id": "terra_curio:sniper_scope",
+    "name": "狙击镜",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "暴击率 +10%、远程伤害 +10%。",
+      "扩大远程武器的视野范围",
+      "手持远程武器并潜行可拉远视野"
+    ]
+  },
+  {
+    "id": "terra_curio:soaring_insignia",
+    "name": "翱翔徽章",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "移动速度 +7.5%、跳跃力度 +80%。",
+      "给予无限翅膀飞行时间和无限火箭靴飞行时间"
+    ]
+  },
+  {
+    "id": "terra_curio:sorcerer_emblem",
+    "name": "巫师徽章",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "魔法伤害 +15%。"
+    ]
+  },
+  {
+    "id": "terra_curio:spectre_boots",
+    "name": "幽灵靴",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "可飞行、可飞速奔跑"
+    ]
+  },
+  {
+    "id": "terra_curio:stalkers_quiver",
+    "name": "潜行者箭袋",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "远程伤害 +10%、远程弹速 +20%、仇恨 -400。",
+      "20%几率不消耗箭",
+      "多人模式下，敌怪不太可能以你为目标"
+    ]
+  },
+  {
+    "id": "terra_curio:star_cloak",
+    "name": "星星斗篷",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "受到伤害后会使星星坠落"
+    ]
+  },
+  {
+    "id": "terra_curio:star_veil",
+    "name": "星星面纱",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "增加受到伤害后的无敌时间",
+      "受到伤害后会使星星坠落"
+    ]
+  },
+  {
+    "id": "terra_curio:step_stool",
+    "name": "梯凳",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "佩戴步凳后可借助临时垫脚高度触及高处。"
+    ]
+  },
+  {
+    "id": "terra_curio:stinger_necklace",
+    "name": "毒刺项链",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "护甲穿透 +5。",
+      "受到伤害后释放蜜蜂并将使用者浸入蜂蜜中。"
+    ]
+  },
+  {
+    "id": "terra_curio:stopwatch",
+    "name": "秒表",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "显示玩家的移动速度"
+    ]
+  },
+  {
+    "id": "terra_curio:sun_stone",
+    "name": "太阳石",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "攻击速度 +10%、近战伤害 +10%、远程伤害 +10%、魔法伤害 +10%、召唤伤害 +10%、暴击率 +2%、护甲 +4、挖掘速度 +15%、召唤物击退 +0.5。",
+      "在白天时略微增强属性值"
+    ]
+  },
+  {
+    "id": "terra_curio:sweetheart_necklace",
+    "name": "甜心项链",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "受到伤害后释放蜜蜂并将使用者浸入蜂蜜中、并提高移动速度。"
+    ]
+  },
+  {
+    "id": "terra_curio:tabi",
+    "name": "分趾厚底袜",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "双击一个方向可猛冲"
+    ]
+  },
+  {
+    "id": "terra_curio:tally_counter",
+    "name": "杀怪计数器",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "已杀死 '",
+      "显示怪物击杀数量"
+    ]
+  },
+  {
+    "id": "terra_curio:terraspark_boots",
+    "name": "泰拉闪耀靴",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "移动速度 +8%。",
+      "可飞行、飞速奔跑、并提供额外冰面行动力",
+      "提供在水、蜂蜜、熔岩上行走的能力",
+      "对火块免疫并在7秒内对熔岩免疫",
+      "减少因触碰熔岩而造成的伤害"
+    ]
+  },
+  {
+    "id": "terra_curio:the_plan",
+    "name": "计划书",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "对缓慢和反胃免疫"
+    ]
+  },
+  {
+    "id": "terra_curio:tiger_climbing_gear",
+    "name": "猛虎攀爬装备",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "可爬墙，按住潜行键可快速下滑"
+    ]
+  },
+  {
+    "id": "terra_curio:tin_watch",
+    "name": "锡表",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "报时"
+    ]
+  },
+  {
+    "id": "terra_curio:titan_glove",
+    "name": "泰坦手套",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "攻击击退 +100%、实体交互距离 +10%。"
+    ]
+  },
+  {
+    "id": "terra_curio:toolbelt",
+    "name": "工具腰带",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "方块交互距离 +1。"
+    ]
+  },
+  {
+    "id": "terra_curio:toolbox",
+    "name": "工具箱",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "方块交互距离 +1。"
+    ]
+  },
+  {
+    "id": "terra_curio:treasure_magnet",
+    "name": "宝藏磁石",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "拾取距离 +6.25。",
+      "扩大物品拾取范围"
+    ]
+  },
+  {
+    "id": "terra_curio:trifold_map",
+    "name": "三折地图",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "对反胃免疫"
+    ]
+  },
+  {
+    "id": "terra_curio:tsunami_in_a_bottle",
+    "name": "海啸瓶",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "安全掉落距离 +3。",
+      "可让持有者二段跳"
+    ]
+  },
+  {
+    "id": "terra_curio:tungsten_watch",
+    "name": "钨表",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "报时"
+    ]
+  },
+  {
+    "id": "terra_curio:vitamins",
+    "name": "维生素",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "对虚弱免疫"
+    ]
+  },
+  {
+    "id": "terra_curio:warrior_emblem",
+    "name": "战士徽章",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "近战伤害 +15%。"
+    ]
+  },
+  {
+    "id": "terra_curio:water_walking_boots",
+    "name": "水上漂靴",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "提供在水和蜂蜜上行走的能力"
+    ]
+  },
+  {
+    "id": "terra_curio:weather_radio",
+    "name": "天气收音机",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "显示天气"
+    ]
+  },
+  {
+    "id": "terra_curio:white_horseshoe_balloon",
+    "name": "白马掌气球",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "跳跃力度 +43%、幸运 +0.05、掉落伤害倍率 -100。",
+      "可让持有者二段跳",
+      "增加跳跃高度",
+      "消除掉落伤害"
+    ]
+  },
+  {
+    "id": "terra_curio:worm_scarf",
+    "name": "蠕虫围巾",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "所受伤害减少17%"
+    ]
+  },
+  {
+    "id": "terra_curio:yellow_horseshoe_balloon",
+    "name": "黄马掌气球",
+    "slots": [
+      "泰拉饰品"
+    ],
+    "effects": [
+      "跳跃力度 +75%、幸运 +0.05、掉落伤害倍率 -100。",
+      "可让持有者二段跳",
+      "增加跳跃高度",
+      "消除掉落伤害"
+    ]
+  },
+  {
+    "id": "terra_entity:chester_staff",
+    "name": "眼骨",
+    "slots": [
+      "宠物"
+    ],
+    "effects": [
+      "召唤宠物切斯特，可随身带着它行动。"
+    ]
+  },
+  {
+    "id": "terra_entity:honeyed_goggles",
+    "name": "涂蜜护目镜",
+    "slots": [
+      "坐骑"
+    ],
+    "effects": [
+      "从坐骑栏召唤蜜蜂坐骑。"
+    ]
+  },
+  {
+    "id": "terra_entity:slimy_saddle",
+    "name": "粘鞍",
+    "slots": [
+      "坐骑"
+    ],
+    "effects": [
+      "从坐骑栏召唤史莱姆坐骑。"
+    ]
+  },
+  {
+    "id": "terra_entity:wallet",
+    "name": "钱币槽",
+    "slots": [
+      "宠物"
+    ],
+    "effects": [
+      "召唤随行的宠物扑满。"
+    ]
+  },
+  {
+    "id": "touhou_little_maid:drown_protect_bauble",
+    "name": "溺水保护饰品",
+    "slots": [
+      "女仆饰品"
+    ],
+    "effects": [
+      "让女仆能够抵御溺水伤害。"
+    ]
+  },
+  {
+    "id": "touhou_little_maid:explosion_protect_bauble",
+    "name": "爆炸保护饰品",
+    "slots": [
+      "女仆饰品"
+    ],
+    "effects": [
+      "让女仆能够抵御爆炸伤害。"
+    ]
+  },
+  {
+    "id": "touhou_little_maid:fall_protect_bauble",
+    "name": "摔落保护饰品",
+    "slots": [
+      "女仆饰品"
+    ],
+    "effects": [
+      "让女仆能够抵御摔落伤害。"
+    ]
+  },
+  {
+    "id": "touhou_little_maid:fire_protect_bauble",
+    "name": "火焰保护饰品",
+    "slots": [
+      "女仆饰品"
+    ],
+    "effects": [
+      "让女仆能够抵御火焰伤害。"
+    ]
+  },
+  {
+    "id": "touhou_little_maid:item_magnet_bauble",
+    "name": "物品磁铁",
+    "slots": [
+      "女仆饰品"
+    ],
+    "effects": [
+      "拓展女仆的拾取范围。"
+    ]
+  },
+  {
+    "id": "touhou_little_maid:magic_protect_bauble",
+    "name": "药水保护饰品",
+    "slots": [
+      "女仆饰品"
+    ],
+    "effects": [
+      "让女仆能够抵药水伤害。"
+    ]
+  },
+  {
+    "id": "touhou_little_maid:mute_bauble",
+    "name": "禁言饰品",
+    "slots": [
+      "女仆饰品"
+    ],
+    "effects": [
+      "如果你不喜欢女仆经常说话，它能让你的女仆保持沉默"
+    ]
+  },
+  {
+    "id": "touhou_little_maid:nimble_fabric",
+    "name": "闪避布",
+    "slots": [
+      "女仆饰品"
+    ],
+    "effects": [
+      "使女仆能够通过传送来躲避来袭的弹射物。"
+    ]
+  },
+  {
+    "id": "touhou_little_maid:projectile_protect_bauble",
+    "name": "弹射物保护饰品",
+    "slots": [
+      "女仆饰品"
+    ],
+    "effects": [
+      "让女仆能够抵御弹射物伤害。"
+    ]
+  },
+  {
+    "id": "touhou_little_maid:ultramarine_orb_elixir",
+    "name": "绀珠之药",
+    "slots": [
+      "女仆饰品"
+    ],
+    "effects": [
+      "女仆携带时在致命伤害后提供额外生命，消耗饰品耐久。"
+    ]
+  },
+  {
+    "id": "touhou_little_maid:wireless_io",
+    "name": "隙间",
+    "slots": [
+      "女仆饰品"
+    ],
+    "effects": [
+      "隙间可以把物品从箱子传送到女仆，反之亦然。"
+    ]
+  },
+  {
+    "id": "touhou_little_maid_spell:anchor_core",
+    "name": "锚定核心",
+    "slots": [
+      "女仆饰品"
+    ],
+    "effects": [
+      "持续强制加载女仆所在区块",
+      "拦截 save / saveWithoutId / remove 等非常规复制或移除",
+      "阻止实体转换与部分外部捕捉机制；血量大于0时不掉落战利品",
+      "锚定此界，长驻相护"
+    ]
+  },
+  {
+    "id": "touhou_little_maid_spell:arc_cross",
+    "name": "弧光十字",
+    "slots": [
+      "女仆饰品"
+    ],
+    "effects": [
+      "惧暗者听见轰鸣，受召者立于光中。",
+      "女仆装备时，持续获得10级雷暴与神圣守护。"
+    ]
+  },
+  {
+    "id": "touhou_little_maid_spell:bleeding_heart",
+    "name": "喋血之心",
+    "slots": [
+      "女仆饰品"
+    ],
+    "effects": [
+      "女仆造成伤害时按 10% 伤害量回复女仆和主人。",
+      "同时治疗女仆和主人"
+    ]
+  },
+  {
+    "id": "touhou_little_maid_spell:blue_note",
+    "name": "法术白名单",
+    "slots": [
+      "女仆饰品"
+    ],
+    "effects": [
+      "用于标记铁魔法的法术",
+      "标记法术会对主人释放"
+    ]
+  },
+  {
+    "id": "touhou_little_maid_spell:chaos_book",
+    "name": "混沌之书",
+    "slots": [
+      "通用饰品",
+      "女仆饰品"
+    ],
+    "effects": [
+      "将伤害拆为 5 段，每段至少 3 点。命中额外造成目标最大生命 1% 的真实伤害，至少 5 点。"
+    ]
+  },
+  {
+    "id": "touhou_little_maid_spell:double_heart_chain",
+    "name": "双心之链",
+    "slots": [
+      "通用饰品",
+      "女仆饰品"
+    ],
+    "effects": [
+      "相距 32 格内，主人与女仆分担伤害，分担比例 50%。",
+      "女仆和主人共同承担伤害"
+    ]
+  },
+  {
+    "id": "touhou_little_maid_spell:dream_cat_crystal",
+    "name": "梦云水晶",
+    "slots": [
+      "通用饰品",
+      "女仆饰品"
+    ],
+    "effects": [
+      "云间幻梦，万法归宗。",
+      "为20格内其他女仆提供攻击伤害 +50% 与法术冷却×1/3；每秒修复背包全部物品1点耐久",
+      "死亡时按“100%-120秒内复活次数×10%”概率满血复活并获得15秒无敌；生物友好、Boss仅在近期被其攻击后反击",
+      "联动：紫荆银冠反伤改为每次触发且翻倍；混沌之书真伤翻倍；双心链改为仅女仆受50%伤害；馥郁巧思喂食改为2个不重复高等级正面效果",
+      "身游星海，万象随心。",
+      "归隐一叹，终途渐近。",
+      "创世余晖，皆为善因。",
+      "最大生命值 +50%，最终伤害 ×0.7，单次最终伤害上限 40；免疫燃烧、溺水、爆炸、原版魔法与熔岩",
+      "主世界：饱和II/抗性II/再生II；下界：力量III/迅捷III/急迫III；末地：夜视IV/抗性IV/力量IV；归隐之地持续无敌",
+      "每30秒获得2种不重复随机正面效果，等级2-10，持续30-60秒；同时阻止一切非正面效果写入"
+    ]
+  },
+  {
+    "id": "touhou_little_maid_spell:ender_pocket",
+    "name": "末影腰包",
+    "slots": [
+      "女仆饰品"
+    ],
+    "effects": [
+      "允许远程访问女仆背包",
+      "绑定按键打开女仆选择界面"
+    ]
+  },
+  {
+    "id": "touhou_little_maid_spell:floating_fox_leaf",
+    "name": "浮波狐叶",
+    "slots": [
+      "女仆饰品"
+    ],
+    "effects": [
+      "让女仆能够踏水而行，并显著抑制水面下沉",
+      "女仆完全没入水中后会恢复正常游泳",
+      "主人在范围内也可共享踏水；按住潜行或完全下潜时不触发"
+    ]
+  },
+  {
+    "id": "touhou_little_maid_spell:flow_core",
+    "name": "流转核心",
+    "slots": [
+      "女仆饰品"
+    ],
+    "effects": [
+      "每 0.5 秒按每级好感回复 2.5% 最大生命；每级好感的最终减伤为 15%。"
+    ]
+  },
+  {
+    "id": "touhou_little_maid_spell:fragrant_ingenuity",
+    "name": "馥郁巧思",
+    "slots": [
+      "通用饰品",
+      "女仆饰品"
+    ],
+    "effects": [
+      "梦云水晶联动：改为2个不重复正面效果，等级2-10，持续120-240秒"
+    ]
+  },
+  {
+    "id": "touhou_little_maid_spell:hairpin",
+    "name": "发簪",
+    "slots": [
+      "女仆饰品"
+    ],
+    "effects": [
+      "女仆所受伤害由主人进行减伤再返回",
+      "好感度3级：免疫非正面效果"
+    ]
+  },
+  {
+    "id": "touhou_little_maid_spell:molten_fox_leaf",
+    "name": "熔岩狐叶",
+    "slots": [
+      "女仆饰品"
+    ],
+    "effects": [
+      "让女仆能够踏熔岩而行，并稳定停留在岩浆表面",
+      "免疫火焰、燃烧、灼热地面与熔岩伤害",
+      "主人在范围内也可共享踏熔岩与火焰保护；按住潜行或完全没入岩浆时不触发"
+    ]
+  },
+  {
+    "id": "touhou_little_maid_spell:quick_chant_ring",
+    "name": "时痕之戒",
+    "slots": [
+      "女仆饰品"
+    ],
+    "effects": [
+      "女仆每级好感减少 25% 法术冷却。"
+    ]
+  },
+  {
+    "id": "touhou_little_maid_spell:rock_crystal",
+    "name": "磐石魔晶",
+    "slots": [
+      "女仆饰品"
+    ],
+    "effects": [
+      "女仆击退抗性 +8。"
+    ]
+  },
+  {
+    "id": "touhou_little_maid_spell:sliver_cercis",
+    "name": "紫荆银冠",
+    "slots": [
+      "通用饰品",
+      "女仆饰品"
+    ],
+    "effects": [
+      "恶意终归于己身",
+      "梦云水晶联动：每次受伤均触发反伤，且反伤倍率翻倍"
+    ]
+  },
+  {
+    "id": "touhou_little_maid_spell:soul_book",
+    "name": "魂之书",
+    "slots": [
+      "女仆饰品"
+    ],
+    "effects": [
+      "同时拦截玩家与女仆的非正常伤害结算链路"
+    ]
+  },
+  {
+    "id": "touhou_little_maid_spell:spell_enhancement_core",
+    "name": "法术强化核心",
+    "slots": [
+      "女仆饰品"
+    ],
+    "effects": [
+      "同步主人高于默认值的铁魔法属性",
+      "每2秒刷新一次，仅在安装 Iron's Spellbooks 时生效"
+    ]
+  },
+  {
+    "id": "touhou_little_maid_spell:spell_overlimit_core",
+    "name": "法术超限核心",
+    "slots": [
+      "女仆饰品"
+    ],
+    "effects": [
+      "允许同时记录原本互斥的同类/继承关系法术书",
+      "未装备时同类法术书只能保留一种；装备后取消该限制",
+      "法术，易如反掌啊"
+    ]
+  },
+  {
+    "id": "touhou_little_maid_spell:spring_bloom_return",
+    "name": "春花-返",
+    "slots": [
+      "女仆饰品"
+    ],
+    "effects": [
+      "施法获得花返，最多 3 层，持续 20 秒。受击触发后消耗一层，回复 5% 最大生命，返还 20% 剩余法术冷却。",
+      "好感度3级时额外清除1个负面效果"
+    ]
+  },
+  {
+    "id": "touhou_little_maid_spell:spring_ring",
+    "name": "烬血之戒",
+    "slots": [
+      "女仆饰品"
+    ],
+    "effects": [
+      "随女仆损失的生命比例增加伤害，最多 +50%。",
+      "根据女仆损失百分比生命增加相同百分比伤害"
+    ]
+  },
+  {
+    "id": "touhou_little_maid_spell:staranchor_pearl",
+    "name": "星锚珍珠",
+    "slots": [
+      "女仆饰品"
+    ],
+    "effects": [
+      "前文明用以探索虚空的道具，可在扭曲的空间中保全自我。",
+      "无法修复，耐久耗尽即碎。"
+    ]
+  },
+  {
+    "id": "touhou_little_maid_spell:transmog_necklace",
+    "name": "幻化项链",
+    "slots": [
+      "女仆饰品"
+    ],
+    "effects": [
+      "轻触幻光，饰梦成环",
+      "女仆装备时，会在头顶渲染所选的幻化光环",
+      "手持右键打开样式选择界面",
+      "鼠标悬停物品时，按住左 Shift 并滚轮可快捷切换样式"
+    ]
+  },
+  {
+    "id": "touhou_little_maid_spell:wound_rime_blade",
+    "name": "破愈咒锋",
+    "slots": [
+      "女仆饰品"
+    ],
+    "effects": [
+      "记录命中过敌人的最低生命值，阻止其后续治疗超过该生命值",
+      "它造成的伤口永不愈合",
+      "仅对非玩家、非女仆目标生效；多次命中会叠加压制记录"
+    ]
+  }
+]

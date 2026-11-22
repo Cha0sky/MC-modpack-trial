@@ -17,6 +17,10 @@ def turn_page(label, target):
 
 MAIN_GROUP = quest_id("campaign_groups", "campaign")
 GUIDE_GROUP = quest_id("campaign_groups", "guides")
+ARMOR_GROUP = quest_id("campaign_groups", "armor_catalog")
+ACCESSORY_GROUP = quest_id("campaign_groups", "accessory_routes")
+BOOK_GROUPS = ((MAIN_GROUP, "远征主线"), (GUIDE_GROUP, "随身手册"),
+               (ARMOR_GROUP, "护甲图鉴"), (ACCESSORY_GROUP, "饰品合成图"))
 JOURNAL = "journey_journal"
 BESTIARY = "expedition_bestiary"
 

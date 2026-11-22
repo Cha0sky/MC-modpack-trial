@@ -1,7 +1,7 @@
 """Author the journey journal, field bestiary and FTB chapter groups."""
 from build_gear_guide import guide_link
 from build_heritage_quests import QUESTS, merge, write
-from campaign_navigation import BESTIARY, GUIDE_GROUP, JOURNAL, LEGS, MAIN_GROUP, quest_id, turn_page
+from campaign_navigation import BESTIARY, BOOK_GROUPS, GUIDE_GROUP, JOURNAL, LEGS, MAIN_GROUP, quest_id, turn_page
 
 
 def page(chapter, lang, key, title, subtitle, icon, position, lines, *, after=()):
@@ -134,7 +134,7 @@ def hunts():
 
 
 def main():
-    groups = [(MAIN_GROUP, "远征主线"), (GUIDE_GROUP, "随身手册")]
+    groups = BOOK_GROUPS
     write(QUESTS / "chapter_groups.snbt", {"chapter_groups": [{"id": k} for k, _ in groups]})
     language = {f"chapter_group.{key}.title": title for key, title in groups}
     for chapter, words in (journal(), hunts()):

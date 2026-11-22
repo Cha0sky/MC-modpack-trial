@@ -1,0 +1,75 @@
+{
+  "id": "0CB39A5C4579E0B5",
+  "filename": "equipment_route_touhou_little_maid_spell_soul_book",
+  "group": "6D1938960E54F1E0",
+  "order_index": 16,
+  "icon": {
+    "id": "touhou_little_maid_spell:soul_book"
+  },
+  "progression_mode": "flexible",
+  "disable_toast": true,
+  "quests": [
+    {
+      "id": "544EA0E41EDD336C",
+      "icon": {
+        "id": "touhou_little_maid_spell:soul_book"
+      },
+      "x": 0,
+      "y": -3,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "3E5B30585EEDBD69",
+      "icon": {
+        "id": "minecraft:totem_of_undying"
+      },
+      "x": 0,
+      "y": 0.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "5363C97B5DC4F49B",
+      "icon": {
+        "id": "touhou_little_maid_spell:soul_book"
+      },
+      "x": 3,
+      "y": 0.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "3E5B30585EEDBD69"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    }
+  ]
+}

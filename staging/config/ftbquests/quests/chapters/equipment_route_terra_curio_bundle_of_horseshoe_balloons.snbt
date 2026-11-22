@@ -1,0 +1,589 @@
+{
+  "id": "08F653E06FFD22DE",
+  "filename": "equipment_route_terra_curio_bundle_of_horseshoe_balloons",
+  "group": "6D1938960E54F1E0",
+  "order_index": 2,
+  "icon": {
+    "id": "terra_curio:bundle_of_horseshoe_balloons"
+  },
+  "progression_mode": "flexible",
+  "disable_toast": true,
+  "quests": [
+    {
+      "id": "744EC27BFF4B8B1B",
+      "icon": {
+        "id": "terra_curio:bundle_of_horseshoe_balloons"
+      },
+      "x": 0,
+      "y": -3,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "477F824A341DE5A2",
+      "icon": {
+        "id": "terra_curio:amber_horseshoe_balloon"
+      },
+      "x": 6,
+      "y": 7.200000000000001,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "3A7B6797CB104D81",
+        "1886D5513754C4B2"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "57608B6CC21F7539",
+      "icon": {
+        "id": "terra_curio:balloon_pufferfish"
+      },
+      "x": 3,
+      "y": 10.400000000000002,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "20EB1BF6C19FDF1F"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "7CB97A5A2B4A0DDE",
+      "icon": {
+        "id": "terra_curio:blizzard_in_a_balloon"
+      },
+      "x": 3,
+      "y": 2.4000000000000004,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "11CD602B9438EC95",
+        "20EB1BF6C19FDF1F"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "11CD602B9438EC95",
+      "icon": {
+        "id": "terra_curio:blizzard_in_a_bottle"
+      },
+      "x": 0,
+      "y": 0.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "48ED8B96F33ED696",
+      "icon": {
+        "id": "terra_curio:blue_horseshoe_balloon"
+      },
+      "x": 6,
+      "y": 2.4000000000000004,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "7470C7F4FD763059",
+        "1886D5513754C4B2"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "4D3C25BBE346B86E",
+      "icon": {
+        "id": "terra_curio:bundle_of_balloons"
+      },
+      "x": 6,
+      "y": 4.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "7CB97A5A2B4A0DDE",
+        "7470C7F4FD763059",
+        "42F40A76D1696169"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "795EE45BDDB2D1A3",
+      "icon": {
+        "id": "terra_curio:bundle_of_horseshoe_balloons"
+      },
+      "x": 9,
+      "y": 4.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "7CB97A5A2B4A0DDE",
+        "48ED8B96F33ED696",
+        "4D3C25BBE346B86E",
+        "7470C7F4FD763059",
+        "1886D5513754C4B2",
+        "42F40A76D1696169",
+        "4DABB3FB0D264C86",
+        "2128E73EEC0662F7"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "7470C7F4FD763059",
+      "icon": {
+        "id": "terra_curio:cloud_in_a_balloon"
+      },
+      "x": 3,
+      "y": 4.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "6D0C966F0D4377B7",
+        "20EB1BF6C19FDF1F"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "6D0C966F0D4377B7",
+      "icon": {
+        "id": "terra_curio:cloud_in_a_bottle"
+      },
+      "x": 0,
+      "y": 1.6000000000000005,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "4B686F479CA002F0",
+      "icon": {
+        "id": "terra_curio:fart_in_a_balloon"
+      },
+      "x": 6,
+      "y": 5.6000000000000005,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "2F2AD60EEEC93E43",
+        "20EB1BF6C19FDF1F"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "2F2AD60EEEC93E43",
+      "icon": {
+        "id": "terra_curio:fart_in_a_jar"
+      },
+      "x": 3,
+      "y": 0.7999999999999998,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "6D0C966F0D4377B7"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "1F22E51DCBBE2A71",
+      "icon": {
+        "id": "terra_curio:green_horseshoe_balloon"
+      },
+      "x": 9,
+      "y": 5.6000000000000005,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "4B686F479CA002F0",
+        "1886D5513754C4B2"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "3A7B6797CB104D81",
+      "icon": {
+        "id": "terra_curio:honey_balloon"
+      },
+      "x": 3,
+      "y": 7.200000000000001,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "162072C9EA32E60B",
+        "20EB1BF6C19FDF1F"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "162072C9EA32E60B",
+      "icon": {
+        "id": "terra_curio:honey_comb"
+      },
+      "x": 0,
+      "y": 3.2,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "1886D5513754C4B2",
+      "icon": {
+        "id": "terra_curio:lucky_horseshoe"
+      },
+      "x": 0,
+      "y": 4.800000000000001,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "414C7AD492FDDEFE",
+      "icon": {
+        "id": "terra_curio:obsidian_horseshoe"
+      },
+      "x": 3,
+      "y": 5.6000000000000005,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "1886D5513754C4B2",
+        "4952E94A610B70B7"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "4952E94A610B70B7",
+      "icon": {
+        "id": "terra_curio:obsidian_skull"
+      },
+      "x": 0,
+      "y": 6.4,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "3AAD475EFB2CC17D",
+      "icon": {
+        "id": "terra_curio:pink_horseshoe_balloon"
+      },
+      "x": 9,
+      "y": 7.200000000000001,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "1886D5513754C4B2",
+        "21D2444EDB40268D"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "42F40A76D1696169",
+      "icon": {
+        "id": "terra_curio:sandstorm_in_a_balloon"
+      },
+      "x": 3,
+      "y": 8.8,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "5CE820142B8AEF69",
+        "20EB1BF6C19FDF1F"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "5CE820142B8AEF69",
+      "icon": {
+        "id": "terra_curio:sandstorm_in_a_bottle"
+      },
+      "x": 0,
+      "y": 8.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "21D2444EDB40268D",
+      "icon": {
+        "id": "terra_curio:sharkron_balloon"
+      },
+      "x": 6,
+      "y": 10.400000000000002,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "57608B6CC21F7539",
+        "45CD21FB516E1C59"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "20EB1BF6C19FDF1F",
+      "icon": {
+        "id": "terra_curio:shiny_red_balloon"
+      },
+      "x": 0,
+      "y": 9.600000000000001,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "45CD21FB516E1C59",
+      "icon": {
+        "id": "terra_curio:tsunami_in_a_bottle"
+      },
+      "x": 0,
+      "y": 11.200000000000001,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "4DABB3FB0D264C86",
+      "icon": {
+        "id": "terra_curio:white_horseshoe_balloon"
+      },
+      "x": 6,
+      "y": 0.7999999999999998,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "7CB97A5A2B4A0DDE",
+        "1886D5513754C4B2"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "2128E73EEC0662F7",
+      "icon": {
+        "id": "terra_curio:yellow_horseshoe_balloon"
+      },
+      "x": 6,
+      "y": 8.8,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "1886D5513754C4B2",
+        "42F40A76D1696169"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    }
+  ]
+}

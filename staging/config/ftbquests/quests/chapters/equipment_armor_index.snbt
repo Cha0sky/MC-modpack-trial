@@ -1,0 +1,33 @@
+{
+  "id": "1A73C0B78CC0A188",
+  "filename": "equipment_armor_index",
+  "group": "2A358FE51A17E292",
+  "order_index": -1,
+  "icon": {
+    "id": "minecraft:diamond_chestplate"
+  },
+  "progression_mode": "flexible",
+  "disable_toast": true,
+  "quests": [
+    {
+      "id": "6F67D3AF2352EE0B",
+      "icon": {
+        "id": "minecraft:iron_chestplate"
+      },
+      "x": 0,
+      "y": 0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    }
+  ]
+}

@@ -1,0 +1,2860 @@
+[
+  {
+    "id": "aeronautics:aviators_goggles",
+    "name": "飞行员护目镜",
+    "slot": "head",
+    "armor": 1
+  },
+  {
+    "id": "avaritia:infinity_boots",
+    "name": "无尽靴子",
+    "slot": "feet",
+    "armor": 6
+  },
+  {
+    "id": "avaritia:infinity_chestplate",
+    "name": "无尽胸甲",
+    "slot": "chest",
+    "armor": 16
+  },
+  {
+    "id": "avaritia:infinity_helmet",
+    "name": "无尽头盔",
+    "slot": "head",
+    "armor": 6
+  },
+  {
+    "id": "avaritia:infinity_leggings",
+    "name": "无尽护腿",
+    "slot": "legs",
+    "armor": 12
+  },
+  {
+    "id": "cataclysm:bloom_stone_pauldrons",
+    "name": "花岩肩甲",
+    "slot": "chest",
+    "armor": 9
+  },
+  {
+    "id": "cataclysm:bone_reptile_chestplate",
+    "name": "骸龙胸甲",
+    "slot": "chest",
+    "armor": 11
+  },
+  {
+    "id": "cataclysm:bone_reptile_helmet",
+    "name": "骸龙头盔",
+    "slot": "head",
+    "armor": 6
+  },
+  {
+    "id": "cataclysm:cursium_boots",
+    "name": "咒魂靴子",
+    "slot": "feet",
+    "armor": 5
+  },
+  {
+    "id": "cataclysm:cursium_chestplate",
+    "name": "咒魂胸甲",
+    "slot": "chest",
+    "armor": 10
+  },
+  {
+    "id": "cataclysm:cursium_helmet",
+    "name": "咒魂头盔",
+    "slot": "head",
+    "armor": 5
+  },
+  {
+    "id": "cataclysm:cursium_leggings",
+    "name": "咒魂护腿",
+    "slot": "legs",
+    "armor": 8
+  },
+  {
+    "id": "cataclysm:ignitium_boots",
+    "name": "腾炎靴子",
+    "slot": "feet",
+    "armor": 6
+  },
+  {
+    "id": "cataclysm:ignitium_chestplate",
+    "name": "腾炎胸甲",
+    "slot": "chest",
+    "armor": 11
+  },
+  {
+    "id": "cataclysm:ignitium_elytra_chestplate",
+    "name": "腾炎鞘翅胸甲",
+    "slot": "chest",
+    "armor": 11,
+    "effect": "结合鞘翅与焰魔胸甲。"
+  },
+  {
+    "id": "cataclysm:ignitium_helmet",
+    "name": "腾炎头盔",
+    "slot": "head",
+    "armor": 6
+  },
+  {
+    "id": "cataclysm:ignitium_leggings",
+    "name": "腾炎护腿",
+    "slot": "legs",
+    "armor": 9
+  },
+  {
+    "id": "cataclysm:monstrous_helm",
+    "name": "恶兽头盔",
+    "slot": "head",
+    "armor": 3
+  },
+  {
+    "id": "confluence:adamantite_boots",
+    "name": "精金靴子",
+    "slot": "feet",
+    "armor": 7,
+    "effect": "移动速度 +5%"
+  },
+  {
+    "id": "confluence:adamantite_chestplate",
+    "name": "精金胸甲",
+    "slot": "chest",
+    "armor": 8,
+    "effect": "四职业伤害 +8%"
+  },
+  {
+    "id": "confluence:adamantite_headgear",
+    "name": "精金头饰",
+    "slot": "head",
+    "armor": 3,
+    "effect": "魔力上限 +80。魔法伤害 +12%。暴击率 +12%。最大魔力增加80"
+  },
+  {
+    "id": "confluence:adamantite_helmet",
+    "name": "精金头盔",
+    "slot": "head",
+    "armor": 7,
+    "effect": "暴击率 +7%。近战伤害 +14%"
+  },
+  {
+    "id": "confluence:adamantite_leggings",
+    "name": "精金护腿",
+    "slot": "legs",
+    "armor": 7,
+    "effect": "暴击率 +7%"
+  },
+  {
+    "id": "confluence:adamantite_mask",
+    "name": "精金面具",
+    "slot": "head",
+    "armor": 4,
+    "effect": "远程伤害 +14%。暴击率 +10%"
+  },
+  {
+    "id": "confluence:amber_robe",
+    "name": "琥珀长袍",
+    "slot": "chest",
+    "armor": 3,
+    "effect": "魔力上限 +60。最大魔力增加60。魔力消耗降低13%"
+  },
+  {
+    "id": "confluence:amethyst_robe",
+    "name": "紫晶长袍",
+    "slot": "chest",
+    "armor": 0,
+    "effect": "魔力上限 +20。最大魔力增加20。魔力消耗降低5%"
+  },
+  {
+    "id": "confluence:angler_hat",
+    "name": "渔夫帽",
+    "slot": "head",
+    "armor": 1,
+    "effect": "渔力增加5"
+  },
+  {
+    "id": "confluence:angler_pants",
+    "name": "渔夫裤",
+    "slot": "legs",
+    "armor": 1,
+    "effect": "渔力增加5"
+  },
+  {
+    "id": "confluence:angler_vest",
+    "name": "渔夫背心",
+    "slot": "chest",
+    "armor": 1,
+    "effect": "渔力增加5"
+  },
+  {
+    "id": "confluence:archaeologists_hat",
+    "name": "考古帽",
+    "slot": "head",
+    "armor": 0,
+    "effect": "汇流时装，单件基础护甲为 0。"
+  },
+  {
+    "id": "confluence:archaeologists_jacket",
+    "name": "考古夹克",
+    "slot": "chest",
+    "armor": 0,
+    "effect": "汇流时装，单件基础护甲为 0。"
+  },
+  {
+    "id": "confluence:archaeologists_pants",
+    "name": "考古裤",
+    "slot": "legs",
+    "armor": 0,
+    "effect": "汇流时装，单件基础护甲为 0。"
+  },
+  {
+    "id": "confluence:archaeologists_shoes",
+    "name": "考古鞋",
+    "slot": "feet",
+    "armor": 0,
+    "effect": "汇流时装，单件基础护甲为 0。"
+  },
+  {
+    "id": "confluence:ash_boots",
+    "name": "灰烬木靴子",
+    "slot": "feet",
+    "armor": 2
+  },
+  {
+    "id": "confluence:ash_chestplate",
+    "name": "灰烬木胸甲",
+    "slot": "chest",
+    "armor": 2
+  },
+  {
+    "id": "confluence:ash_helmet",
+    "name": "灰烬木头盔",
+    "slot": "head",
+    "armor": 2
+  },
+  {
+    "id": "confluence:ash_leggings",
+    "name": "灰烬木护腿",
+    "slot": "legs",
+    "armor": 2
+  },
+  {
+    "id": "confluence:bee_boots",
+    "name": "蜜蜂靴",
+    "slot": "feet",
+    "armor": 3,
+    "effect": "召唤伤害 +2.5%"
+  },
+  {
+    "id": "confluence:bee_chestplate",
+    "name": "蜜蜂胸甲",
+    "slot": "chest",
+    "armor": 5,
+    "effect": "召唤伤害 +4%。仆从容量 +1"
+  },
+  {
+    "id": "confluence:bee_helmet",
+    "name": "蜜蜂头盔",
+    "slot": "head",
+    "armor": 3,
+    "effect": "召唤伤害 +4%。仆从容量 +1"
+  },
+  {
+    "id": "confluence:bee_leggings",
+    "name": "蜜蜂护腿",
+    "slot": "legs",
+    "armor": 5,
+    "effect": "召唤伤害 +2.5%"
+  },
+  {
+    "id": "confluence:bunny_hood",
+    "name": "兔兔兜帽",
+    "slot": "head",
+    "armor": 0,
+    "effect": "汇流时装，单件基础护甲为 0。"
+  },
+  {
+    "id": "confluence:cactus_boots",
+    "name": "仙人掌靴子",
+    "slot": "feet",
+    "armor": 1
+  },
+  {
+    "id": "confluence:cactus_chestplate",
+    "name": "仙人掌胸甲",
+    "slot": "chest",
+    "armor": 2
+  },
+  {
+    "id": "confluence:cactus_helmet",
+    "name": "仙人掌头盔",
+    "slot": "head",
+    "armor": 1
+  },
+  {
+    "id": "confluence:cactus_leggings",
+    "name": "仙人掌护腿",
+    "slot": "legs",
+    "armor": 2
+  },
+  {
+    "id": "confluence:clothiers_hat",
+    "name": "红帽",
+    "slot": "head",
+    "armor": 0,
+    "effect": "汇流时装，单件基础护甲为 0。"
+  },
+  {
+    "id": "confluence:clothiers_jacket",
+    "name": "服装商夹克",
+    "slot": "chest",
+    "armor": 0,
+    "effect": "汇流时装，单件基础护甲为 0。"
+  },
+  {
+    "id": "confluence:clothiers_pants",
+    "name": "服装商裤",
+    "slot": "legs",
+    "armor": 0,
+    "effect": "汇流时装，单件基础护甲为 0。"
+  },
+  {
+    "id": "confluence:clothiers_shoes",
+    "name": "服装商鞋",
+    "slot": "feet",
+    "armor": 0,
+    "effect": "汇流时装，单件基础护甲为 0。"
+  },
+  {
+    "id": "confluence:cobalt_boots",
+    "name": "钴靴子",
+    "slot": "feet",
+    "armor": 6,
+    "effect": "四职业伤害 +3%"
+  },
+  {
+    "id": "confluence:cobalt_chestplate",
+    "name": "钴胸甲",
+    "slot": "chest",
+    "armor": 7,
+    "effect": "暴击率 +5%"
+  },
+  {
+    "id": "confluence:cobalt_hat",
+    "name": "钴帽",
+    "slot": "head",
+    "armor": 1,
+    "effect": "魔力上限 +40。魔法伤害 +10%。暴击率 +9%。最大魔力增加40"
+  },
+  {
+    "id": "confluence:cobalt_helmet",
+    "name": "钴头盔",
+    "slot": "head",
+    "armor": 5,
+    "effect": "近战伤害 +15%。移动速度 +10%"
+  },
+  {
+    "id": "confluence:cobalt_leggings",
+    "name": "钴护腿",
+    "slot": "legs",
+    "armor": 7,
+    "effect": "移动速度 +10%"
+  },
+  {
+    "id": "confluence:cobalt_mask",
+    "name": "钴面具",
+    "slot": "head",
+    "armor": 3,
+    "effect": "远程伤害 +10%。暴击率 +10%"
+  },
+  {
+    "id": "confluence:cold_crystal_boots",
+    "name": "寒晶靴",
+    "slot": "feet",
+    "armor": 2,
+    "effect": "暴击率 +4%"
+  },
+  {
+    "id": "confluence:cold_crystal_chestplate",
+    "name": "寒晶胸甲",
+    "slot": "chest",
+    "armor": 5,
+    "effect": "魔力上限 +20。暴击率 +4%。最大魔力值增加20"
+  },
+  {
+    "id": "confluence:cold_crystal_helmet",
+    "name": "寒晶头盔",
+    "slot": "head",
+    "armor": 2,
+    "effect": "魔力上限 +20。暴击率 +4%。最大魔力值增加20"
+  },
+  {
+    "id": "confluence:cold_crystal_leggings",
+    "name": "寒晶护腿",
+    "slot": "legs",
+    "armor": 5,
+    "effect": "魔法伤害 +4%"
+  },
+  {
+    "id": "confluence:copper_boots",
+    "name": "铜靴子",
+    "slot": "feet",
+    "armor": 2
+  },
+  {
+    "id": "confluence:copper_chestplate",
+    "name": "铜胸甲",
+    "slot": "chest",
+    "armor": 3
+  },
+  {
+    "id": "confluence:copper_helmet",
+    "name": "铜头盔",
+    "slot": "head",
+    "armor": 2
+  },
+  {
+    "id": "confluence:copper_leggings",
+    "name": "铜护腿",
+    "slot": "legs",
+    "armor": 3
+  },
+  {
+    "id": "confluence:crimson_boots",
+    "name": "猩红靴",
+    "slot": "feet",
+    "armor": 3,
+    "effect": "四职业伤害 +1.5%"
+  },
+  {
+    "id": "confluence:crimson_chestplate",
+    "name": "猩红胸甲",
+    "slot": "chest",
+    "armor": 7,
+    "effect": "四职业伤害 +3%"
+  },
+  {
+    "id": "confluence:crimson_helmet",
+    "name": "猩红头盔",
+    "slot": "head",
+    "armor": 3,
+    "effect": "四职业伤害 +3%"
+  },
+  {
+    "id": "confluence:crimson_leggings",
+    "name": "猩红护腿",
+    "slot": "legs",
+    "armor": 6,
+    "effect": "四职业伤害 +1.5%"
+  },
+  {
+    "id": "confluence:crystal_assassin_boots",
+    "name": "水晶刺客靴子",
+    "slot": "feet",
+    "armor": 6
+  },
+  {
+    "id": "confluence:crystal_assassin_chestplate",
+    "name": "水晶刺客胸甲",
+    "slot": "chest",
+    "armor": 7
+  },
+  {
+    "id": "confluence:crystal_assassin_helmet",
+    "name": "水晶刺客头盔",
+    "slot": "head",
+    "armor": 6
+  },
+  {
+    "id": "confluence:crystal_assassin_leggings",
+    "name": "水晶刺客护腿",
+    "slot": "legs",
+    "armor": 7
+  },
+  {
+    "id": "confluence:dead_mans_seater",
+    "name": "死人毛衣",
+    "slot": "chest",
+    "armor": 4,
+    "effect": "可作时装，实际穿入护甲槽时提供 4 点护甲。",
+    "source": "开启自然生成、尚未结算战利品的死人木箱或死人金箱，留意周围机关。"
+  },
+  {
+    "id": "confluence:diamond_robe",
+    "name": "钻石长袍",
+    "slot": "chest",
+    "armor": 3,
+    "effect": "魔力上限 +80。最大魔力增加80。魔力消耗降低15%"
+  },
+  {
+    "id": "confluence:ebony_boots",
+    "name": "乌木靴子",
+    "slot": "feet",
+    "armor": 1
+  },
+  {
+    "id": "confluence:ebony_chestplate",
+    "name": "乌木胸甲",
+    "slot": "chest",
+    "armor": 2
+  },
+  {
+    "id": "confluence:ebony_helmet",
+    "name": "乌木头盔",
+    "slot": "head",
+    "armor": 1
+  },
+  {
+    "id": "confluence:ebony_leggings",
+    "name": "乌木护腿",
+    "slot": "legs",
+    "armor": 1
+  },
+  {
+    "id": "confluence:familiar_pants",
+    "name": "便装裤",
+    "slot": "legs",
+    "armor": 0,
+    "effect": "汇流时装，单件基础护甲为 0。"
+  },
+  {
+    "id": "confluence:familiar_shirt",
+    "name": "便装衣",
+    "slot": "chest",
+    "armor": 0,
+    "effect": "汇流时装，单件基础护甲为 0。"
+  },
+  {
+    "id": "confluence:familiar_shoes",
+    "name": "便装鞋",
+    "slot": "feet",
+    "armor": 0,
+    "effect": "汇流时装，单件基础护甲为 0。"
+  },
+  {
+    "id": "confluence:familiar_wig",
+    "name": "便装假发",
+    "slot": "head",
+    "armor": 0,
+    "effect": "汇流时装，单件基础护甲为 0。"
+  },
+  {
+    "id": "confluence:flinx_fur_coat",
+    "name": "小雪怪皮毛外套",
+    "slot": "chest",
+    "armor": 1,
+    "effect": "召唤伤害 +5%。仆从容量 +1"
+  },
+  {
+    "id": "confluence:fossil_boots",
+    "name": "化石靴",
+    "slot": "feet",
+    "armor": 2,
+    "effect": "暴击率 +2%"
+  },
+  {
+    "id": "confluence:fossil_chestplate",
+    "name": "化石胸甲",
+    "slot": "chest",
+    "armor": 6,
+    "effect": "远程伤害 +5%"
+  },
+  {
+    "id": "confluence:fossil_helmet",
+    "name": "化石头盔",
+    "slot": "head",
+    "armor": 2,
+    "effect": "暴击率 +4%"
+  },
+  {
+    "id": "confluence:fossil_leggings",
+    "name": "化石护腿",
+    "slot": "legs",
+    "armor": 6,
+    "effect": "暴击率 +2%"
+  },
+  {
+    "id": "confluence:gladiator_boots",
+    "name": "角斗士靴子",
+    "slot": "feet",
+    "armor": 3
+  },
+  {
+    "id": "confluence:gladiator_chestplate",
+    "name": "角斗士胸甲",
+    "slot": "chest",
+    "armor": 6
+  },
+  {
+    "id": "confluence:gladiator_helmet",
+    "name": "角斗士头盔",
+    "slot": "head",
+    "armor": 3
+  },
+  {
+    "id": "confluence:gladiator_leggings",
+    "name": "角斗士护腿",
+    "slot": "legs",
+    "armor": 6
+  },
+  {
+    "id": "confluence:goggles",
+    "name": "护目镜",
+    "slot": "head",
+    "armor": 1
+  },
+  {
+    "id": "confluence:gold_crown",
+    "name": "金冠",
+    "slot": "head",
+    "armor": 0,
+    "effect": "汇流时装，单件基础护甲为 0。"
+  },
+  {
+    "id": "confluence:golden_boots",
+    "name": "金靴子",
+    "slot": "feet",
+    "armor": 3
+  },
+  {
+    "id": "confluence:golden_chestplate",
+    "name": "金胸甲",
+    "slot": "chest",
+    "armor": 6
+  },
+  {
+    "id": "confluence:golden_helmet",
+    "name": "金头盔",
+    "slot": "head",
+    "armor": 3
+  },
+  {
+    "id": "confluence:golden_leggings",
+    "name": "金护腿",
+    "slot": "legs",
+    "armor": 6
+  },
+  {
+    "id": "confluence:green_cap",
+    "name": "绿帽子",
+    "slot": "head",
+    "armor": 2
+  },
+  {
+    "id": "confluence:guy_fawkes_hat",
+    "name": "盖伊·福克斯帽",
+    "slot": "head",
+    "armor": 0,
+    "effect": "汇流时装，单件基础护甲为 0。"
+  },
+  {
+    "id": "confluence:guy_fawkes_mask",
+    "name": "盖伊·福克斯面具",
+    "slot": "head",
+    "armor": 0,
+    "effect": "汇流时装，单件基础护甲为 0。"
+  },
+  {
+    "id": "confluence:guy_fawkes_mask_set",
+    "name": "盖伊·福克斯面具套装",
+    "slot": "head",
+    "armor": 0,
+    "effect": "汇流时装，单件基础护甲为 0。"
+  },
+  {
+    "id": "confluence:hallowed_boots",
+    "name": "神圣靴子",
+    "slot": "feet",
+    "armor": 7
+  },
+  {
+    "id": "confluence:hallowed_chestplate",
+    "name": "神圣胸甲",
+    "slot": "chest",
+    "armor": 8
+  },
+  {
+    "id": "confluence:hallowed_headgear",
+    "name": "神圣头饰",
+    "slot": "head",
+    "armor": 3
+  },
+  {
+    "id": "confluence:hallowed_helmet",
+    "name": "神圣头盔",
+    "slot": "head",
+    "armor": 4
+  },
+  {
+    "id": "confluence:hallowed_hood",
+    "name": "神圣兜帽",
+    "slot": "head",
+    "armor": 1
+  },
+  {
+    "id": "confluence:hallowed_leggings",
+    "name": "神圣护腿",
+    "slot": "legs",
+    "armor": 7
+  },
+  {
+    "id": "confluence:hallowed_mask",
+    "name": "神圣面具",
+    "slot": "head",
+    "armor": 7
+  },
+  {
+    "id": "confluence:heim_boots",
+    "name": "渊鳞靴",
+    "slot": "feet",
+    "armor": 3,
+    "effect": "游泳速度 +5%"
+  },
+  {
+    "id": "confluence:heim_chestplate",
+    "name": "渊鳞胸甲",
+    "slot": "chest",
+    "armor": 6,
+    "effect": "暴击率 +4%"
+  },
+  {
+    "id": "confluence:heim_helmet",
+    "name": "渊鳞头盔",
+    "slot": "head",
+    "armor": 3,
+    "effect": "近战伤害 +3%。延长水下呼吸时间5%"
+  },
+  {
+    "id": "confluence:heim_leggings",
+    "name": "渊鳞护腿",
+    "slot": "legs",
+    "armor": 6,
+    "effect": "近战伤害 +2%。暴击率 +3%"
+  },
+  {
+    "id": "confluence:heros_hat",
+    "name": "英雄帽",
+    "slot": "head",
+    "armor": 0,
+    "effect": "汇流时装，单件基础护甲为 0。"
+  },
+  {
+    "id": "confluence:heros_pants",
+    "name": "英雄裤",
+    "slot": "legs",
+    "armor": 0,
+    "effect": "汇流时装，单件基础护甲为 0。"
+  },
+  {
+    "id": "confluence:heros_shirt",
+    "name": "英雄衣",
+    "slot": "chest",
+    "armor": 0,
+    "effect": "汇流时装，单件基础护甲为 0。"
+  },
+  {
+    "id": "confluence:heros_shoes",
+    "name": "英雄鞋",
+    "slot": "feet",
+    "armor": 0,
+    "effect": "汇流时装，单件基础护甲为 0。"
+  },
+  {
+    "id": "confluence:insulated_pants",
+    "name": "保温裤",
+    "slot": "legs",
+    "armor": 2,
+    "source": "去冰雪群系击败穿着这件装备的冰冻僵尸。也可向天空型皮匠购买（4 级交易，基价 5 颗绿宝石）。"
+  },
+  {
+    "id": "confluence:insulated_shoes",
+    "name": "保温鞋",
+    "slot": "feet",
+    "armor": 2,
+    "source": "去冰雪群系击败穿着这件装备的冰冻僵尸。也可向天空型皮匠购买（4 级交易，基价 5 颗绿宝石）。"
+  },
+  {
+    "id": "confluence:jade_robe",
+    "name": "翡翠长袍",
+    "slot": "chest",
+    "armor": 2,
+    "effect": "魔力上限 +60。最大魔力增加60。魔力消耗降低11%"
+  },
+  {
+    "id": "confluence:jungle_boots",
+    "name": "丛林靴子",
+    "slot": "feet",
+    "armor": 3,
+    "effect": "暴击率 +6%"
+  },
+  {
+    "id": "confluence:jungle_chestplate",
+    "name": "丛林胸甲",
+    "slot": "chest",
+    "armor": 6,
+    "effect": "魔力上限 +20。魔法伤害 +6%。最大魔力增加20"
+  },
+  {
+    "id": "confluence:jungle_helmet",
+    "name": "丛林头盔",
+    "slot": "head",
+    "armor": 3,
+    "effect": "魔力上限 +40。暴击率 +6%。最大魔力增加40"
+  },
+  {
+    "id": "confluence:jungle_leggings",
+    "name": "丛林护腿",
+    "slot": "legs",
+    "armor": 6,
+    "effect": "魔力上限 +20。最大魔力增加20"
+  },
+  {
+    "id": "confluence:lead_boots",
+    "name": "铅靴子",
+    "slot": "feet",
+    "armor": 2
+  },
+  {
+    "id": "confluence:lead_chestplate",
+    "name": "铅胸甲",
+    "slot": "chest",
+    "armor": 5
+  },
+  {
+    "id": "confluence:lead_helmet",
+    "name": "铅头盔",
+    "slot": "head",
+    "armor": 2
+  },
+  {
+    "id": "confluence:lead_leggings",
+    "name": "铅护腿",
+    "slot": "legs",
+    "armor": 5
+  },
+  {
+    "id": "confluence:magic_hat",
+    "name": "魔法帽",
+    "slot": "head",
+    "armor": 2,
+    "effect": "魔法伤害 +6%。暴击率 +6%"
+  },
+  {
+    "id": "confluence:meteor_boots",
+    "name": "流星靴子",
+    "slot": "feet",
+    "armor": 3,
+    "effect": "魔法伤害 +4.5%"
+  },
+  {
+    "id": "confluence:meteor_chestplate",
+    "name": "流星胸甲",
+    "slot": "chest",
+    "armor": 6,
+    "effect": "魔法伤害 +9%"
+  },
+  {
+    "id": "confluence:meteor_helmet",
+    "name": "流星头盔",
+    "slot": "head",
+    "armor": 3,
+    "effect": "魔法伤害 +9%"
+  },
+  {
+    "id": "confluence:meteor_leggings",
+    "name": "流星护腿",
+    "slot": "legs",
+    "armor": 6,
+    "effect": "魔法伤害 +4.5%"
+  },
+  {
+    "id": "confluence:mime_mask",
+    "name": "丑角面具",
+    "slot": "head",
+    "armor": 0,
+    "effect": "汇流时装，单件基础护甲为 0。"
+  },
+  {
+    "id": "confluence:mining_boots",
+    "name": "挖矿靴",
+    "slot": "feet",
+    "armor": 1,
+    "effect": "挖掘速度 +5%",
+    "source": "在看不见天空的地下寻找不死矿工。普通骷髅在这类位置生成时有 1% 机会装备全套矿工装。"
+  },
+  {
+    "id": "confluence:mining_chestplate",
+    "name": "挖矿衣",
+    "slot": "chest",
+    "armor": 3,
+    "effect": "挖掘速度 +10%",
+    "source": "在看不见天空的地下寻找不死矿工。普通骷髅在这类位置生成时有 1% 机会装备全套矿工装。"
+  },
+  {
+    "id": "confluence:mining_helmet",
+    "name": "挖矿头盔",
+    "slot": "head",
+    "armor": 2,
+    "effect": "穿戴时可提供照明。照明需要 Sodium Dynamic Lights",
+    "source": "在看不见天空的地下寻找不死矿工。普通骷髅在这类位置生成时有 1% 机会装备全套矿工装。"
+  },
+  {
+    "id": "confluence:mining_leggings",
+    "name": "挖矿裤",
+    "slot": "legs",
+    "armor": 2,
+    "effect": "挖掘速度 +5%",
+    "source": "在看不见天空的地下寻找不死矿工。普通骷髅在这类位置生成时有 1% 机会装备全套矿工装。"
+  },
+  {
+    "id": "confluence:molten_boots",
+    "name": "熔岩靴子",
+    "slot": "feet",
+    "armor": 6,
+    "effect": "攻击速度 +3.5%"
+  },
+  {
+    "id": "confluence:molten_chestplate",
+    "name": "熔岩胸甲",
+    "slot": "chest",
+    "armor": 7,
+    "effect": "近战伤害 +7%"
+  },
+  {
+    "id": "confluence:molten_helmet",
+    "name": "熔岩头盔",
+    "slot": "head",
+    "armor": 5,
+    "effect": "暴击率 +7%"
+  },
+  {
+    "id": "confluence:molten_leggings",
+    "name": "熔岩护腿",
+    "slot": "legs",
+    "armor": 7,
+    "effect": "攻击速度 +3.5%"
+  },
+  {
+    "id": "confluence:mummy_mask",
+    "name": "木乃伊面具",
+    "slot": "head",
+    "armor": 0,
+    "effect": "汇流时装，单件基础护甲为 0。"
+  },
+  {
+    "id": "confluence:mummy_pants",
+    "name": "木乃伊裤",
+    "slot": "legs",
+    "armor": 0,
+    "effect": "汇流时装，单件基础护甲为 0。"
+  },
+  {
+    "id": "confluence:mummy_shirt",
+    "name": "木乃伊衣",
+    "slot": "chest",
+    "armor": 0,
+    "effect": "汇流时装，单件基础护甲为 0。"
+  },
+  {
+    "id": "confluence:mummy_shoes",
+    "name": "木乃伊鞋",
+    "slot": "feet",
+    "armor": 0,
+    "effect": "汇流时装，单件基础护甲为 0。"
+  },
+  {
+    "id": "confluence:mystic_robe",
+    "name": "神秘长袍",
+    "slot": "chest",
+    "armor": 2,
+    "effect": "魔法伤害 +6%。暴击率 +6%"
+  },
+  {
+    "id": "confluence:mythril_boots",
+    "name": "秘银靴子",
+    "slot": "feet",
+    "armor": 6,
+    "effect": "暴击率 +5%"
+  },
+  {
+    "id": "confluence:mythril_chestplate",
+    "name": "秘银胸甲",
+    "slot": "chest",
+    "armor": 7,
+    "effect": "四职业伤害 +7%"
+  },
+  {
+    "id": "confluence:mythril_hat",
+    "name": "秘银帽",
+    "slot": "head",
+    "armor": 4,
+    "effect": "远程伤害 +12%。暴击率 +7%"
+  },
+  {
+    "id": "confluence:mythril_helmet",
+    "name": "秘银头盔",
+    "slot": "head",
+    "armor": 6,
+    "effect": "暴击率 +8%。近战伤害 +10%"
+  },
+  {
+    "id": "confluence:mythril_hood",
+    "name": "秘银兜帽",
+    "slot": "head",
+    "armor": 2,
+    "effect": "魔力上限 +60。魔法伤害 +15%。最大魔力增加60"
+  },
+  {
+    "id": "confluence:mythril_leggings",
+    "name": "秘银护腿",
+    "slot": "legs",
+    "armor": 7,
+    "effect": "暴击率 +5%"
+  },
+  {
+    "id": "confluence:necro_boots",
+    "name": "死灵靴子",
+    "slot": "feet",
+    "armor": 3,
+    "effect": "远程伤害 +2.5%"
+  },
+  {
+    "id": "confluence:necro_chestplate",
+    "name": "死灵胸甲",
+    "slot": "chest",
+    "armor": 7,
+    "effect": "远程伤害 +5%"
+  },
+  {
+    "id": "confluence:necro_helmet",
+    "name": "死灵头盔",
+    "slot": "head",
+    "armor": 3,
+    "effect": "远程伤害 +5%"
+  },
+  {
+    "id": "confluence:necro_leggings",
+    "name": "死灵护腿",
+    "slot": "legs",
+    "armor": 6,
+    "effect": "远程伤害 +2.5%"
+  },
+  {
+    "id": "confluence:ninja_boots",
+    "name": "忍者靴",
+    "slot": "feet",
+    "armor": 2,
+    "effect": "暴击率 +1.5%"
+  },
+  {
+    "id": "confluence:ninja_chestplate",
+    "name": "忍者胸甲",
+    "slot": "chest",
+    "armor": 5,
+    "effect": "暴击率 +3%"
+  },
+  {
+    "id": "confluence:ninja_helmet",
+    "name": "忍者头盔",
+    "slot": "head",
+    "armor": 2,
+    "effect": "暴击率 +3%"
+  },
+  {
+    "id": "confluence:ninja_leggings",
+    "name": "忍者护腿",
+    "slot": "legs",
+    "armor": 5,
+    "effect": "暴击率 +1.5%"
+  },
+  {
+    "id": "confluence:obsidian_boots",
+    "name": "黑曜石靴子",
+    "slot": "feet",
+    "armor": 3,
+    "effect": "召唤伤害 +4%"
+  },
+  {
+    "id": "confluence:obsidian_chestplate",
+    "name": "黑曜石胸甲",
+    "slot": "chest",
+    "armor": 6,
+    "effect": "仆从容量 +1"
+  },
+  {
+    "id": "confluence:obsidian_helmet",
+    "name": "黑曜石头盔",
+    "slot": "head",
+    "armor": 3,
+    "effect": "召唤伤害 +8%"
+  },
+  {
+    "id": "confluence:obsidian_leggings",
+    "name": "黑曜石护腿",
+    "slot": "legs",
+    "armor": 5,
+    "effect": "召唤伤害 +4%"
+  },
+  {
+    "id": "confluence:orichalcum_boots",
+    "name": "山铜靴子",
+    "slot": "feet",
+    "armor": 6,
+    "effect": "移动速度 +11%"
+  },
+  {
+    "id": "confluence:orichalcum_chestplate",
+    "name": "山铜胸甲",
+    "slot": "chest",
+    "armor": 7,
+    "effect": "暴击率 +6%"
+  },
+  {
+    "id": "confluence:orichalcum_headgear",
+    "name": "山铜头饰",
+    "slot": "head",
+    "armor": 2,
+    "effect": "暴击率 +18%。魔力上限 +80。最大魔力增加80"
+  },
+  {
+    "id": "confluence:orichalcum_helmet",
+    "name": "山铜头盔",
+    "slot": "head",
+    "armor": 4,
+    "effect": "暴击率 +15%。移动速度 +8%"
+  },
+  {
+    "id": "confluence:orichalcum_leggings",
+    "name": "山铜护腿",
+    "slot": "legs",
+    "armor": 7,
+    "effect": "四职业伤害 +8%"
+  },
+  {
+    "id": "confluence:orichalcum_mask",
+    "name": "山铜面具",
+    "slot": "head",
+    "armor": 6,
+    "effect": "近战伤害 +11%。攻击速度 +11%。移动速度 +7%"
+  },
+  {
+    "id": "confluence:palladium_boots",
+    "name": "钯金靴子",
+    "slot": "feet",
+    "armor": 6,
+    "effect": "暴击率 +1%"
+  },
+  {
+    "id": "confluence:palladium_chestplate",
+    "name": "钯金胸甲",
+    "slot": "chest",
+    "armor": 7,
+    "effect": "四职业伤害 +3%。暴击率 +2%"
+  },
+  {
+    "id": "confluence:palladium_headgear",
+    "name": "钯金头饰",
+    "slot": "head",
+    "armor": 1,
+    "effect": "魔法伤害 +9%。暴击率 +9%。魔力上限 +60。最大魔力增加60"
+  },
+  {
+    "id": "confluence:palladium_helmet",
+    "name": "钯金头盔",
+    "slot": "head",
+    "armor": 3,
+    "effect": "远程伤害 +9%。暴击率 +9%"
+  },
+  {
+    "id": "confluence:palladium_leggings",
+    "name": "钯金护腿",
+    "slot": "legs",
+    "armor": 7,
+    "effect": "四职业伤害 +2%"
+  },
+  {
+    "id": "confluence:palladium_mask",
+    "name": "钯金面具",
+    "slot": "head",
+    "armor": 5,
+    "effect": "近战伤害 +12%。攻击速度 +12%"
+  },
+  {
+    "id": "confluence:pearl_boots",
+    "name": "珍珠木靴子",
+    "slot": "feet",
+    "armor": 1
+  },
+  {
+    "id": "confluence:pearl_chestplate",
+    "name": "珍珠木胸甲",
+    "slot": "chest",
+    "armor": 2
+  },
+  {
+    "id": "confluence:pearl_helmet",
+    "name": "珍珠木头盔",
+    "slot": "head",
+    "armor": 1
+  },
+  {
+    "id": "confluence:pearl_leggings",
+    "name": "珍珠木护腿",
+    "slot": "legs",
+    "armor": 2
+  },
+  {
+    "id": "confluence:pink_insulated_pants",
+    "name": "粉色保温裤",
+    "slot": "legs",
+    "armor": 2,
+    "source": "去冰雪群系击败穿着这件装备的冰冻僵尸。冰冻僵尸有 1% 机会穿粉色款。也可向天空型皮匠购买（4 级交易，基价 5 颗绿宝石）。"
+  },
+  {
+    "id": "confluence:pink_insulated_shoes",
+    "name": "粉色保温鞋",
+    "slot": "feet",
+    "armor": 2,
+    "source": "去冰雪群系击败穿着这件装备的冰冻僵尸。冰冻僵尸有 1% 机会穿粉色款。也可向天空型皮匠购买（4 级交易，基价 5 颗绿宝石）。"
+  },
+  {
+    "id": "confluence:pink_snow_caps",
+    "name": "粉色防雪帽",
+    "slot": "head",
+    "armor": 2,
+    "source": "去冰雪群系击败穿着这件装备的冰冻僵尸。冰冻僵尸有 1% 机会穿粉色款。也可向天空型皮匠购买（3 级交易，基价 4 颗绿宝石）。"
+  },
+  {
+    "id": "confluence:pink_snow_suits",
+    "name": "粉色防雪衣",
+    "slot": "chest",
+    "armor": 2,
+    "source": "去冰雪群系击败穿着这件装备的冰冻僵尸。冰冻僵尸有 1% 机会穿粉色款。也可向天空型皮匠购买（3 级交易，基价 4 颗绿宝石）。"
+  },
+  {
+    "id": "confluence:plank_boots",
+    "name": "木制靴子",
+    "slot": "feet",
+    "armor": 1
+  },
+  {
+    "id": "confluence:plank_chestplate",
+    "name": "木制胸甲",
+    "slot": "chest",
+    "armor": 1
+  },
+  {
+    "id": "confluence:plank_helmet",
+    "name": "木制头盔",
+    "slot": "head",
+    "armor": 1
+  },
+  {
+    "id": "confluence:plank_leggings",
+    "name": "木制护腿",
+    "slot": "legs",
+    "armor": 1
+  },
+  {
+    "id": "confluence:platinum_boots",
+    "name": "铂金靴子",
+    "slot": "feet",
+    "armor": 3
+  },
+  {
+    "id": "confluence:platinum_chestplate",
+    "name": "铂金胸甲",
+    "slot": "chest",
+    "armor": 6
+  },
+  {
+    "id": "confluence:platinum_crown",
+    "name": "铂金冠",
+    "slot": "head",
+    "armor": 0,
+    "effect": "汇流时装，单件基础护甲为 0。"
+  },
+  {
+    "id": "confluence:platinum_helmet",
+    "name": "铂金头盔",
+    "slot": "head",
+    "armor": 3
+  },
+  {
+    "id": "confluence:platinum_leggings",
+    "name": "铂金护腿",
+    "slot": "legs",
+    "armor": 6
+  },
+  {
+    "id": "confluence:plumbers_hat",
+    "name": "管道工帽",
+    "slot": "head",
+    "armor": 0,
+    "effect": "汇流时装，单件基础护甲为 0。"
+  },
+  {
+    "id": "confluence:plumbers_pants",
+    "name": "管道工背带裤",
+    "slot": "legs",
+    "armor": 0,
+    "effect": "汇流时装，单件基础护甲为 0。"
+  },
+  {
+    "id": "confluence:plumbers_shirt",
+    "name": "管道工衣",
+    "slot": "chest",
+    "armor": 0,
+    "effect": "汇流时装，单件基础护甲为 0。"
+  },
+  {
+    "id": "confluence:plumbers_shoes",
+    "name": "管道工鞋",
+    "slot": "feet",
+    "armor": 0,
+    "effect": "汇流时装，单件基础护甲为 0。"
+  },
+  {
+    "id": "confluence:pumpkin_boots",
+    "name": "南瓜靴子",
+    "slot": "feet",
+    "armor": 2
+  },
+  {
+    "id": "confluence:pumpkin_chestplate",
+    "name": "南瓜胸甲",
+    "slot": "chest",
+    "armor": 2
+  },
+  {
+    "id": "confluence:pumpkin_helmet",
+    "name": "南瓜头盔",
+    "slot": "head",
+    "armor": 2
+  },
+  {
+    "id": "confluence:pumpkin_leggings",
+    "name": "南瓜护腿",
+    "slot": "legs",
+    "armor": 2
+  },
+  {
+    "id": "confluence:rain_cap",
+    "name": "雨帽",
+    "slot": "head",
+    "armor": 1,
+    "source": "在非冰雪群系的雨中寻找雨衣僵尸，击败后有机会取得它穿着的这件装备。"
+  },
+  {
+    "id": "confluence:raincoat",
+    "name": "雨衣",
+    "slot": "chest",
+    "armor": 2,
+    "source": "在非冰雪群系的雨中寻找雨衣僵尸，击败后有机会取得它穿着的这件装备。"
+  },
+  {
+    "id": "confluence:robe",
+    "name": "长袍",
+    "slot": "chest",
+    "armor": 0,
+    "effect": "汇流时装，单件基础护甲为 0。"
+  },
+  {
+    "id": "confluence:robot_hat",
+    "name": "机器人帽",
+    "slot": "head",
+    "armor": 0,
+    "effect": "汇流时装，单件基础护甲为 0。"
+  },
+  {
+    "id": "confluence:ruby_robe",
+    "name": "红玉长袍",
+    "slot": "chest",
+    "armor": 2,
+    "effect": "魔力上限 +60。最大魔力增加60。魔力消耗降低13%"
+  },
+  {
+    "id": "confluence:sapphire_robe",
+    "name": "蓝玉长袍",
+    "slot": "chest",
+    "armor": 1,
+    "effect": "魔力上限 +40。最大魔力增加40。魔力消耗降低9%"
+  },
+  {
+    "id": "confluence:shadow_boots",
+    "name": "暗影靴",
+    "slot": "feet",
+    "armor": 3,
+    "effect": "暴击率 +2.5%"
+  },
+  {
+    "id": "confluence:shadow_chestplate",
+    "name": "暗影胸甲",
+    "slot": "chest",
+    "armor": 7,
+    "effect": "暴击率 +5%"
+  },
+  {
+    "id": "confluence:shadow_helmet",
+    "name": "暗影头盔",
+    "slot": "head",
+    "armor": 3,
+    "effect": "暴击率 +5%"
+  },
+  {
+    "id": "confluence:shadow_leggings",
+    "name": "暗影护腿",
+    "slot": "legs",
+    "armor": 6,
+    "effect": "暴击率 +2.5%"
+  },
+  {
+    "id": "confluence:shadow_plank_boots",
+    "name": "暗影木靴子",
+    "slot": "feet",
+    "armor": 1
+  },
+  {
+    "id": "confluence:shadow_plank_chestplate",
+    "name": "暗影木胸甲",
+    "slot": "chest",
+    "armor": 2
+  },
+  {
+    "id": "confluence:shadow_plank_helmet",
+    "name": "暗影木头盔",
+    "slot": "head",
+    "armor": 1
+  },
+  {
+    "id": "confluence:shadow_plank_leggings",
+    "name": "暗影木护腿",
+    "slot": "legs",
+    "armor": 1
+  },
+  {
+    "id": "confluence:silver_boots",
+    "name": "银靴子",
+    "slot": "feet",
+    "armor": 2
+  },
+  {
+    "id": "confluence:silver_chestplate",
+    "name": "银胸甲",
+    "slot": "chest",
+    "armor": 6
+  },
+  {
+    "id": "confluence:silver_helmet",
+    "name": "银头盔",
+    "slot": "head",
+    "armor": 2
+  },
+  {
+    "id": "confluence:silver_leggings",
+    "name": "银护腿",
+    "slot": "legs",
+    "armor": 5
+  },
+  {
+    "id": "confluence:snow_caps",
+    "name": "防雪帽",
+    "slot": "head",
+    "armor": 2,
+    "source": "去冰雪群系击败穿着这件装备的冰冻僵尸。也可向天空型皮匠购买（3 级交易，基价 4 颗绿宝石）。"
+  },
+  {
+    "id": "confluence:snow_suits",
+    "name": "防雪衣",
+    "slot": "chest",
+    "armor": 2,
+    "source": "去冰雪群系击败穿着这件装备的冰冻僵尸。也可向天空型皮匠购买（3 级交易，基价 4 颗绿宝石）。"
+  },
+  {
+    "id": "confluence:spider_boots",
+    "name": "蜘蛛靴子",
+    "slot": "feet",
+    "armor": 3,
+    "effect": "召唤伤害 +6%"
+  },
+  {
+    "id": "confluence:spider_chestplate",
+    "name": "蜘蛛胸甲",
+    "slot": "chest",
+    "armor": 7,
+    "effect": "召唤伤害 +5%。仆从容量 +1"
+  },
+  {
+    "id": "confluence:spider_helmet",
+    "name": "蜘蛛头盔",
+    "slot": "head",
+    "armor": 3,
+    "effect": "召唤伤害 +5%。仆从容量 +1"
+  },
+  {
+    "id": "confluence:spider_leggings",
+    "name": "蜘蛛护腿",
+    "slot": "legs",
+    "armor": 7,
+    "effect": "仆从容量 +1"
+  },
+  {
+    "id": "confluence:spore_root_boots",
+    "name": "孢根靴",
+    "slot": "feet",
+    "armor": 2,
+    "effect": "召唤伤害 +2%"
+  },
+  {
+    "id": "confluence:spore_root_chestplate",
+    "name": "孢根胸甲",
+    "slot": "chest",
+    "armor": 4,
+    "effect": "召唤伤害 +3%"
+  },
+  {
+    "id": "confluence:spore_root_helmet",
+    "name": "孢根头盔",
+    "slot": "head",
+    "armor": 2,
+    "effect": "召唤伤害 +2%。仆从容量 +1"
+  },
+  {
+    "id": "confluence:spore_root_leggings",
+    "name": "孢根护腿",
+    "slot": "legs",
+    "armor": 4,
+    "effect": "召唤伤害 +3%"
+  },
+  {
+    "id": "confluence:summer_hat",
+    "name": "夏日草帽",
+    "slot": "head",
+    "armor": 0,
+    "effect": "汇流时装，单件基础护甲为 0。"
+  },
+  {
+    "id": "confluence:the_doctors_pants",
+    "name": "博士裤",
+    "slot": "legs",
+    "armor": 0,
+    "effect": "汇流时装，单件基础护甲为 0。"
+  },
+  {
+    "id": "confluence:the_doctors_shirt",
+    "name": "博士衣",
+    "slot": "chest",
+    "armor": 0,
+    "effect": "汇流时装，单件基础护甲为 0。"
+  },
+  {
+    "id": "confluence:the_doctors_shoes",
+    "name": "博士鞋",
+    "slot": "feet",
+    "armor": 0,
+    "effect": "汇流时装，单件基础护甲为 0。"
+  },
+  {
+    "id": "confluence:tiki_boots",
+    "name": "提基靴子",
+    "slot": "feet",
+    "armor": 3,
+    "effect": "召唤伤害 +10%。仆从容量 +1"
+  },
+  {
+    "id": "confluence:tiki_leggings",
+    "name": "提基裤",
+    "slot": "legs",
+    "armor": 5,
+    "effect": "鞭子范围 +10%"
+  },
+  {
+    "id": "confluence:tiki_mask",
+    "name": "提基面具",
+    "slot": "head",
+    "armor": 3,
+    "effect": "召唤伤害 +10%。仆从容量 +1"
+  },
+  {
+    "id": "confluence:tiki_shirt",
+    "name": "提基衣",
+    "slot": "chest",
+    "armor": 6,
+    "effect": "召唤伤害 +10%。仆从容量 +1"
+  },
+  {
+    "id": "confluence:tin_boots",
+    "name": "锡靴子",
+    "slot": "feet",
+    "armor": 2
+  },
+  {
+    "id": "confluence:tin_chestplate",
+    "name": "锡胸甲",
+    "slot": "chest",
+    "armor": 3
+  },
+  {
+    "id": "confluence:tin_helmet",
+    "name": "锡头盔",
+    "slot": "head",
+    "armor": 2
+  },
+  {
+    "id": "confluence:tin_leggings",
+    "name": "锡护腿",
+    "slot": "legs",
+    "armor": 3
+  },
+  {
+    "id": "confluence:titanium_boots",
+    "name": "钛金靴子",
+    "slot": "feet",
+    "armor": 6,
+    "effect": "移动速度 +6%"
+  },
+  {
+    "id": "confluence:titanium_chestplate",
+    "name": "钛金胸甲",
+    "slot": "chest",
+    "armor": 7,
+    "effect": "四职业伤害 +4%。暴击率 +3%"
+  },
+  {
+    "id": "confluence:titanium_headgear",
+    "name": "钛金头饰",
+    "slot": "head",
+    "armor": 3,
+    "effect": "魔法伤害 +16%。暴击率 +7%。魔力上限 +100。最大魔力增加100"
+  },
+  {
+    "id": "confluence:titanium_helmet",
+    "name": "钛金头盔",
+    "slot": "head",
+    "armor": 4,
+    "effect": "远程伤害 +16%。暴击率 +7%"
+  },
+  {
+    "id": "confluence:titanium_leggings",
+    "name": "钛金护腿",
+    "slot": "legs",
+    "armor": 7,
+    "effect": "四职业伤害 +3%。暴击率 +3%"
+  },
+  {
+    "id": "confluence:titanium_mask",
+    "name": "钛金面具",
+    "slot": "head",
+    "armor": 7,
+    "effect": "近战伤害 +9%。暴击率 +9%。攻击速度 +9%"
+  },
+  {
+    "id": "confluence:top_hat",
+    "name": "高顶礼貌",
+    "slot": "head",
+    "armor": 0,
+    "effect": "汇流时装，单件基础护甲为 0。"
+  },
+  {
+    "id": "confluence:topaz_robe",
+    "name": "黄玉长袍",
+    "slot": "chest",
+    "armor": 1,
+    "effect": "魔力上限 +40。最大魔力增加40。魔力消耗降低7%"
+  },
+  {
+    "id": "confluence:tungsten_boots",
+    "name": "钨靴子",
+    "slot": "feet",
+    "armor": 2
+  },
+  {
+    "id": "confluence:tungsten_chestplate",
+    "name": "钨胸甲",
+    "slot": "chest",
+    "armor": 6
+  },
+  {
+    "id": "confluence:tungsten_helmet",
+    "name": "钨头盔",
+    "slot": "head",
+    "armor": 2
+  },
+  {
+    "id": "confluence:tungsten_leggings",
+    "name": "钨护腿",
+    "slot": "legs",
+    "armor": 5
+  },
+  {
+    "id": "confluence:tuxedo_pants",
+    "name": "西装裤",
+    "slot": "legs",
+    "armor": 0,
+    "effect": "汇流时装，单件基础护甲为 0。"
+  },
+  {
+    "id": "confluence:tuxedo_shirt",
+    "name": "西装衣",
+    "slot": "chest",
+    "armor": 0,
+    "effect": "汇流时装，单件基础护甲为 0。"
+  },
+  {
+    "id": "confluence:tuxedo_shoes",
+    "name": "西装鞋",
+    "slot": "feet",
+    "armor": 0,
+    "effect": "汇流时装，单件基础护甲为 0。"
+  },
+  {
+    "id": "confluence:viking_helmet",
+    "name": "维京头盔",
+    "slot": "head",
+    "armor": 4
+  },
+  {
+    "id": "confluence:wizard_hat",
+    "name": "巫师帽",
+    "slot": "head",
+    "armor": 4,
+    "effect": "魔法伤害 +5%"
+  },
+  {
+    "id": "create:cardboard_boots",
+    "name": "纸板靴子",
+    "slot": "feet",
+    "armor": 1
+  },
+  {
+    "id": "create:cardboard_chestplate",
+    "name": "纸板胸甲",
+    "slot": "chest",
+    "armor": 1
+  },
+  {
+    "id": "create:cardboard_helmet",
+    "name": "纸板头盔",
+    "slot": "head",
+    "armor": 1
+  },
+  {
+    "id": "create:cardboard_leggings",
+    "name": "纸板护腿",
+    "slot": "legs",
+    "armor": 1
+  },
+  {
+    "id": "create:copper_backtank",
+    "name": "铜背罐",
+    "slot": "chest",
+    "armor": 4
+  },
+  {
+    "id": "create:copper_diving_boots",
+    "name": "铜潜水靴",
+    "slot": "feet",
+    "armor": 1
+  },
+  {
+    "id": "create:copper_diving_helmet",
+    "name": "铜潜水头盔",
+    "slot": "head",
+    "armor": 2
+  },
+  {
+    "id": "create:goggles",
+    "name": "工程师护目镜",
+    "slot": "head",
+    "armor": 0,
+    "effect": "工程师护目镜可在头部装备槽读取机器数据。"
+  },
+  {
+    "id": "create:netherite_backtank",
+    "name": "下界合金背罐",
+    "slot": "chest",
+    "armor": 8
+  },
+  {
+    "id": "create:netherite_diving_boots",
+    "name": "下界合金潜水靴",
+    "slot": "feet",
+    "armor": 3
+  },
+  {
+    "id": "create:netherite_diving_helmet",
+    "name": "下界合金潜水头盔",
+    "slot": "head",
+    "armor": 3
+  },
+  {
+    "id": "goety:black_beast_cursed_armor",
+    "name": "暗兽诅咒铠甲",
+    "slot": "body",
+    "armor": 15,
+    "effect": "供暗兽穿戴。"
+  },
+  {
+    "id": "goety:black_beast_dark_armor",
+    "name": "暗兽黑暗铠甲",
+    "slot": "body",
+    "armor": 20,
+    "effect": "供暗兽穿戴。"
+  },
+  {
+    "id": "goety:black_iron_boots",
+    "name": "黑铁靴子",
+    "slot": "feet",
+    "armor": 2
+  },
+  {
+    "id": "goety:black_iron_chestplate",
+    "name": "黑铁胸甲",
+    "slot": "chest",
+    "armor": 6
+  },
+  {
+    "id": "goety:black_iron_helmet",
+    "name": "黑铁头盔",
+    "slot": "head",
+    "armor": 2
+  },
+  {
+    "id": "goety:black_iron_leggings",
+    "name": "黑铁护腿",
+    "slot": "legs",
+    "armor": 5
+  },
+  {
+    "id": "goety:cursed_knight_boots",
+    "name": "诅咒骑士靴子",
+    "slot": "feet",
+    "armor": 2,
+    "source": "击败穿这套甲的缠魂甲胄，每个护甲槽的基础掉落率为 5%。"
+  },
+  {
+    "id": "goety:cursed_knight_chestplate",
+    "name": "诅咒骑士胸甲",
+    "slot": "chest",
+    "armor": 6,
+    "source": "击败穿这套甲的缠魂甲胄，每个护甲槽的基础掉落率为 5%。"
+  },
+  {
+    "id": "goety:cursed_knight_helmet",
+    "name": "诅咒骑士头盔",
+    "slot": "head",
+    "armor": 2,
+    "source": "击败穿这套甲的缠魂甲胄，每个护甲槽的基础掉落率为 5%。"
+  },
+  {
+    "id": "goety:cursed_knight_leggings",
+    "name": "诅咒骑士护腿",
+    "slot": "legs",
+    "armor": 5,
+    "source": "击败穿这套甲的缠魂甲胄，每个护甲槽的基础掉落率为 5%。"
+  },
+  {
+    "id": "goety:cursed_metal_wolf_armor",
+    "name": "诅咒金属狼铠",
+    "slot": "body",
+    "armor": 13,
+    "effect": "供狼穿戴。"
+  },
+  {
+    "id": "goety:cursed_paladin_boots",
+    "name": "诅咒圣骑士靴子",
+    "slot": "feet",
+    "armor": 3
+  },
+  {
+    "id": "goety:cursed_paladin_chestplate",
+    "name": "诅咒圣骑士胸甲",
+    "slot": "chest",
+    "armor": 7
+  },
+  {
+    "id": "goety:cursed_paladin_helmet",
+    "name": "诅咒圣骑士头盔",
+    "slot": "head",
+    "armor": 3
+  },
+  {
+    "id": "goety:cursed_paladin_leggings",
+    "name": "诅咒圣骑士护腿",
+    "slot": "legs",
+    "armor": 6
+  },
+  {
+    "id": "goety:dark_boots",
+    "name": "黑暗靴子",
+    "slot": "feet",
+    "armor": 3
+  },
+  {
+    "id": "goety:dark_chestplate",
+    "name": "黑暗胸甲",
+    "slot": "chest",
+    "armor": 8
+  },
+  {
+    "id": "goety:dark_helmet",
+    "name": "黑暗头盔",
+    "slot": "head",
+    "armor": 3
+  },
+  {
+    "id": "goety:dark_leggings",
+    "name": "黑暗护腿",
+    "slot": "legs",
+    "armor": 6
+  },
+  {
+    "id": "goety:dark_wolf_armor",
+    "name": "黑暗狼铠",
+    "slot": "body",
+    "armor": 20,
+    "effect": "供狼穿戴。"
+  },
+  {
+    "id": "goety:diamond_ravager_armor",
+    "name": "钻石劫掠兽盔甲",
+    "slot": "body",
+    "armor": 15,
+    "effect": "劫掠兽用兽甲。"
+  },
+  {
+    "id": "goety:diamond_trampler_armor",
+    "name": "钻石践踏者盔甲",
+    "slot": "body",
+    "armor": 11,
+    "effect": "践踏者用兽甲。"
+  },
+  {
+    "id": "goety:gold_ravager_armor",
+    "name": "金劫掠兽盔甲",
+    "slot": "body",
+    "armor": 11,
+    "effect": "劫掠兽用兽甲。"
+  },
+  {
+    "id": "goety:gold_trampler_armor",
+    "name": "金践踏者盔甲",
+    "slot": "body",
+    "armor": 7,
+    "effect": "践踏者用兽甲。"
+  },
+  {
+    "id": "goety:iron_ravager_armor",
+    "name": "铁劫掠兽盔甲",
+    "slot": "body",
+    "armor": 7,
+    "effect": "劫掠兽用兽甲。"
+  },
+  {
+    "id": "goety:iron_trampler_armor",
+    "name": "铁践踏者盔甲",
+    "slot": "body",
+    "armor": 5,
+    "effect": "践踏者用兽甲。"
+  },
+  {
+    "id": "goety:malefic_helm",
+    "name": "恶骸骨盔",
+    "slot": "head",
+    "armor": 2,
+    "source": "击败异教牧首，其专属死亡掉落会生成恶骸骨盔。"
+  },
+  {
+    "id": "goety:netherite_ravager_armor",
+    "name": "下界合金劫掠兽盔甲",
+    "slot": "body",
+    "armor": 20,
+    "effect": "劫掠兽用兽甲。"
+  },
+  {
+    "id": "goety:netherite_trampler_armor",
+    "name": "下界合金践踏者盔甲",
+    "slot": "body",
+    "armor": 15,
+    "effect": "践踏者用兽甲。"
+  },
+  {
+    "id": "goety:warg_cursed_armor",
+    "name": "座狼诅咒铠甲",
+    "slot": "body",
+    "armor": 15,
+    "effect": "供座狼穿戴。"
+  },
+  {
+    "id": "goety:warg_dark_armor",
+    "name": "座狼黑暗铠甲",
+    "slot": "body",
+    "armor": 20,
+    "effect": "供座狼穿戴。"
+  },
+  {
+    "id": "irons_spellbooks:archevoker_boots",
+    "name": "高位唤魔者靴子",
+    "slot": "feet",
+    "armor": 3,
+    "effect": "魔力上限 +125，法术强度 +5%，唤魔法术强度 +10%。"
+  },
+  {
+    "id": "irons_spellbooks:archevoker_chestplate",
+    "name": "高位唤魔者战袍",
+    "slot": "chest",
+    "armor": 8,
+    "effect": "魔力上限 +125，法术强度 +5%，唤魔法术强度 +10%。"
+  },
+  {
+    "id": "irons_spellbooks:archevoker_helmet",
+    "name": "高位唤魔者法帽",
+    "slot": "head",
+    "armor": 3,
+    "effect": "魔力上限 +125，法术强度 +5%，唤魔法术强度 +10%。"
+  },
+  {
+    "id": "irons_spellbooks:archevoker_leggings",
+    "name": "高位唤魔者护腿",
+    "slot": "legs",
+    "armor": 6,
+    "effect": "魔力上限 +125，法术强度 +5%，唤魔法术强度 +10%。"
+  },
+  {
+    "id": "irons_spellbooks:cryomancer_boots",
+    "name": "冰霜术士靴子",
+    "slot": "feet",
+    "armor": 3,
+    "effect": "魔力上限 +125，法术强度 +5%，冰霜法术强度 +10%。"
+  },
+  {
+    "id": "irons_spellbooks:cryomancer_chestplate",
+    "name": "冰霜术士法袍",
+    "slot": "chest",
+    "armor": 8,
+    "effect": "魔力上限 +125，法术强度 +5%，冰霜法术强度 +10%。"
+  },
+  {
+    "id": "irons_spellbooks:cryomancer_helmet",
+    "name": "冰霜术士兜帽",
+    "slot": "head",
+    "armor": 3,
+    "effect": "魔力上限 +125，法术强度 +5%，冰霜法术强度 +10%。"
+  },
+  {
+    "id": "irons_spellbooks:cryomancer_leggings",
+    "name": "冰霜术士护腿",
+    "slot": "legs",
+    "armor": 6,
+    "effect": "魔力上限 +125，法术强度 +5%，冰霜法术强度 +10%。"
+  },
+  {
+    "id": "irons_spellbooks:cultist_boots",
+    "name": "猩红教徒靴子",
+    "slot": "feet",
+    "armor": 3,
+    "effect": "魔力上限 +125，法术强度 +5%，鲜血法术强度 +10%。"
+  },
+  {
+    "id": "irons_spellbooks:cultist_chestplate",
+    "name": "猩红教徒法袍",
+    "slot": "chest",
+    "armor": 8,
+    "effect": "魔力上限 +125，法术强度 +5%，鲜血法术强度 +10%。"
+  },
+  {
+    "id": "irons_spellbooks:cultist_helmet",
+    "name": "猩红教徒兜帽",
+    "slot": "head",
+    "armor": 3,
+    "effect": "魔力上限 +125，法术强度 +5%，鲜血法术强度 +10%。"
+  },
+  {
+    "id": "irons_spellbooks:cultist_leggings",
+    "name": "猩红教徒护腿",
+    "slot": "legs",
+    "armor": 6,
+    "effect": "魔力上限 +125，法术强度 +5%，鲜血法术强度 +10%。"
+  },
+  {
+    "id": "irons_spellbooks:electromancer_boots",
+    "name": "雷霆术士靴子",
+    "slot": "feet",
+    "armor": 3,
+    "effect": "魔力上限 +125，法术强度 +5%，雷电法术强度 +10%。"
+  },
+  {
+    "id": "irons_spellbooks:electromancer_chestplate",
+    "name": "雷霆术士法袍",
+    "slot": "chest",
+    "armor": 8,
+    "effect": "魔力上限 +125，法术强度 +5%，雷电法术强度 +10%。"
+  },
+  {
+    "id": "irons_spellbooks:electromancer_helmet",
+    "name": "雷霆术士法帽",
+    "slot": "head",
+    "armor": 3,
+    "effect": "魔力上限 +125，法术强度 +5%，雷电法术强度 +10%。"
+  },
+  {
+    "id": "irons_spellbooks:electromancer_leggings",
+    "name": "雷霆术士护腿",
+    "slot": "legs",
+    "armor": 6,
+    "effect": "魔力上限 +125，法术强度 +5%，雷电法术强度 +10%。"
+  },
+  {
+    "id": "irons_spellbooks:gold_crown",
+    "name": "Iron的皇冠",
+    "slot": "head",
+    "armor": 20,
+    "effect": "魔力上限 +9900，冷却缩减 +90%。",
+    "source": "铁魔法的开发用王冠，本版本未查到常规生存配方或掉落。"
+  },
+  {
+    "id": "irons_spellbooks:infernal_sorcerer_chestplate",
+    "name": "炼狱巫师胸甲",
+    "slot": "chest",
+    "armor": 8,
+    "effect": "魔力上限 +150，法术强度 +10%。"
+  },
+  {
+    "id": "irons_spellbooks:netherite_mage_boots",
+    "name": "下界合金战法靴子",
+    "slot": "feet",
+    "armor": 3,
+    "effect": "魔力上限 +125，法术强度 +5%。"
+  },
+  {
+    "id": "irons_spellbooks:netherite_mage_chestplate",
+    "name": "下界合金战法袍",
+    "slot": "chest",
+    "armor": 8,
+    "effect": "魔力上限 +125，法术强度 +5%。"
+  },
+  {
+    "id": "irons_spellbooks:netherite_mage_helmet",
+    "name": "下界合金战法帽",
+    "slot": "head",
+    "armor": 3,
+    "effect": "魔力上限 +125，法术强度 +5%。"
+  },
+  {
+    "id": "irons_spellbooks:netherite_mage_leggings",
+    "name": "下界合金战法护腿",
+    "slot": "legs",
+    "armor": 6,
+    "effect": "魔力上限 +125，法术强度 +5%。"
+  },
+  {
+    "id": "irons_spellbooks:paladin_chestplate",
+    "name": "光明使者胸甲",
+    "slot": "chest",
+    "armor": 8,
+    "effect": "魔力上限 +150，法术强度 +10%。"
+  },
+  {
+    "id": "irons_spellbooks:plagued_boots",
+    "name": "瘟疫术士靴子",
+    "slot": "feet",
+    "armor": 3,
+    "effect": "魔力上限 +125，法术强度 +5%，自然法术强度 +10%。"
+  },
+  {
+    "id": "irons_spellbooks:plagued_chestplate",
+    "name": "瘟疫术士法袍",
+    "slot": "chest",
+    "armor": 8,
+    "effect": "魔力上限 +125，法术强度 +5%，自然法术强度 +10%。"
+  },
+  {
+    "id": "irons_spellbooks:plagued_helmet",
+    "name": "瘟疫术士兜帽",
+    "slot": "head",
+    "armor": 3,
+    "effect": "魔力上限 +125，法术强度 +5%，自然法术强度 +10%。"
+  },
+  {
+    "id": "irons_spellbooks:plagued_leggings",
+    "name": "瘟疫术士护腿",
+    "slot": "legs",
+    "armor": 6,
+    "effect": "魔力上限 +125，法术强度 +5%，自然法术强度 +10%。"
+  },
+  {
+    "id": "irons_spellbooks:priest_boots",
+    "name": "牧师靴子",
+    "slot": "feet",
+    "armor": 3,
+    "effect": "魔力上限 +125，法术强度 +5%，神圣法术强度 +10%。"
+  },
+  {
+    "id": "irons_spellbooks:priest_chestplate",
+    "name": "牧师法袍",
+    "slot": "chest",
+    "armor": 8,
+    "effect": "魔力上限 +125，法术强度 +5%，神圣法术强度 +10%。"
+  },
+  {
+    "id": "irons_spellbooks:priest_helmet",
+    "name": "牧师兜帽",
+    "slot": "head",
+    "armor": 3,
+    "effect": "魔力上限 +125，法术强度 +5%，神圣法术强度 +10%。"
+  },
+  {
+    "id": "irons_spellbooks:priest_leggings",
+    "name": "牧师护腿",
+    "slot": "legs",
+    "armor": 6,
+    "effect": "魔力上限 +125，法术强度 +5%，神圣法术强度 +10%。"
+  },
+  {
+    "id": "irons_spellbooks:pumpkin_boots",
+    "name": "惊悚南瓜靴子",
+    "slot": "feet",
+    "armor": 3,
+    "effect": "魔力上限 +75。"
+  },
+  {
+    "id": "irons_spellbooks:pumpkin_chestplate",
+    "name": "惊悚南瓜法袍",
+    "slot": "chest",
+    "armor": 8,
+    "effect": "魔力上限 +75。"
+  },
+  {
+    "id": "irons_spellbooks:pumpkin_helmet",
+    "name": "惊悚南瓜法帽",
+    "slot": "head",
+    "armor": 3,
+    "effect": "魔力上限 +75。"
+  },
+  {
+    "id": "irons_spellbooks:pumpkin_leggings",
+    "name": "惊悚南瓜护腿",
+    "slot": "legs",
+    "armor": 6,
+    "effect": "魔力上限 +75。"
+  },
+  {
+    "id": "irons_spellbooks:pyromancer_boots",
+    "name": "炽焰术士靴子",
+    "slot": "feet",
+    "armor": 3,
+    "effect": "魔力上限 +125，法术强度 +5%，火焰法术强度 +10%。"
+  },
+  {
+    "id": "irons_spellbooks:pyromancer_chestplate",
+    "name": "炽焰术士法袍",
+    "slot": "chest",
+    "armor": 8,
+    "effect": "魔力上限 +125，法术强度 +5%，火焰法术强度 +10%。"
+  },
+  {
+    "id": "irons_spellbooks:pyromancer_helmet",
+    "name": "炽焰术士法帽",
+    "slot": "head",
+    "armor": 3,
+    "effect": "魔力上限 +125，法术强度 +5%，火焰法术强度 +10%。"
+  },
+  {
+    "id": "irons_spellbooks:pyromancer_leggings",
+    "name": "炽焰术士护腿",
+    "slot": "legs",
+    "armor": 6,
+    "effect": "魔力上限 +125，法术强度 +5%，火焰法术强度 +10%。"
+  },
+  {
+    "id": "irons_spellbooks:shadowwalker_boots",
+    "name": "暗影行者靴子",
+    "slot": "feet",
+    "armor": 3,
+    "effect": "魔力上限 +125，法术强度 +5%，末影法术强度 +10%。"
+  },
+  {
+    "id": "irons_spellbooks:shadowwalker_chestplate",
+    "name": "暗影行者胸甲",
+    "slot": "chest",
+    "armor": 8,
+    "effect": "魔力上限 +125，法术强度 +5%，末影法术强度 +10%。"
+  },
+  {
+    "id": "irons_spellbooks:shadowwalker_helmet",
+    "name": "暗影行者头盔",
+    "slot": "head",
+    "armor": 3,
+    "effect": "魔力上限 +125，法术强度 +5%，末影法术强度 +10%。"
+  },
+  {
+    "id": "irons_spellbooks:shadowwalker_leggings",
+    "name": "暗影行者护腿",
+    "slot": "legs",
+    "armor": 6,
+    "effect": "魔力上限 +125，法术强度 +5%，末影法术强度 +10%。"
+  },
+  {
+    "id": "irons_spellbooks:speed_boots",
+    "name": "迅捷之靴",
+    "slot": "feet",
+    "armor": 3,
+    "effect": "魔力上限 +150，法术强度 +10%，施法移动速度 +60%，移动速度 +25%。"
+  },
+  {
+    "id": "irons_spellbooks:tarnished_helmet",
+    "name": "黯淡皇冠",
+    "slot": "head",
+    "armor": 0,
+    "effect": "魔力上限 +150，魔力恢复 +25%，攻击伤害 −15%。",
+    "source": "击败头戴这顶王冠的亡灵术士，头盔槽基础掉落率为 15%。"
+  },
+  {
+    "id": "irons_spellbooks:wandering_magician_boots",
+    "name": "流浪法师靴子",
+    "slot": "feet",
+    "armor": 2,
+    "effect": "魔力上限 +25。"
+  },
+  {
+    "id": "irons_spellbooks:wandering_magician_chestplate",
+    "name": "流浪法师法袍",
+    "slot": "chest",
+    "armor": 6,
+    "effect": "魔力上限 +25。"
+  },
+  {
+    "id": "irons_spellbooks:wandering_magician_helmet",
+    "name": "流浪法师兜帽",
+    "slot": "head",
+    "armor": 2,
+    "effect": "魔力上限 +25。"
+  },
+  {
+    "id": "irons_spellbooks:wandering_magician_leggings",
+    "name": "流浪法师裤子",
+    "slot": "legs",
+    "armor": 5,
+    "effect": "魔力上限 +25。"
+  },
+  {
+    "id": "irons_spellbooks:wizard_boots",
+    "name": "巫师靴子",
+    "slot": "feet",
+    "armor": 3,
+    "effect": "魔力上限 +125，法术强度 +5%。"
+  },
+  {
+    "id": "irons_spellbooks:wizard_chestplate",
+    "name": "巫师法袍",
+    "slot": "chest",
+    "armor": 8,
+    "effect": "魔力上限 +125，法术强度 +5%。"
+  },
+  {
+    "id": "irons_spellbooks:wizard_hat",
+    "name": "巫师宽檐帽",
+    "slot": "head",
+    "armor": 3,
+    "effect": "魔力上限 +125，法术强度 +5%。"
+  },
+  {
+    "id": "irons_spellbooks:wizard_helmet",
+    "name": "巫师头盔",
+    "slot": "head",
+    "armor": 3,
+    "effect": "魔力上限 +125，法术强度 +5%。"
+  },
+  {
+    "id": "irons_spellbooks:wizard_leggings",
+    "name": "巫师护腿",
+    "slot": "legs",
+    "armor": 6,
+    "effect": "魔力上限 +125，法术强度 +5%。"
+  },
+  {
+    "id": "kaleidoscope_cookery:farmer_boots",
+    "name": "农夫皮靴",
+    "slot": "feet",
+    "armor": 2
+  },
+  {
+    "id": "kaleidoscope_cookery:farmer_chest_plate",
+    "name": "农夫围裙",
+    "slot": "chest",
+    "armor": 4
+  },
+  {
+    "id": "kaleidoscope_cookery:farmer_leggings",
+    "name": "农夫长裤",
+    "slot": "legs",
+    "armor": 5
+  },
+  {
+    "id": "kaleidoscope_cookery:straw_hat",
+    "name": "草帽",
+    "slot": "head",
+    "armor": 3
+  },
+  {
+    "id": "kaleidoscope_cookery:straw_hat_flower",
+    "name": "缀花草帽",
+    "slot": "head",
+    "armor": 3
+  },
+  {
+    "id": "l2complements:eternium_boots",
+    "name": "永恒靴子",
+    "slot": "feet",
+    "armor": 3
+  },
+  {
+    "id": "l2complements:eternium_chestplate",
+    "name": "永恒胸甲",
+    "slot": "chest",
+    "armor": 8
+  },
+  {
+    "id": "l2complements:eternium_helmet",
+    "name": "永恒头盔",
+    "slot": "head",
+    "armor": 3
+  },
+  {
+    "id": "l2complements:eternium_leggings",
+    "name": "永恒护腿",
+    "slot": "legs",
+    "armor": 6
+  },
+  {
+    "id": "l2complements:poseidite_boots",
+    "name": "海神靴子",
+    "slot": "feet",
+    "armor": 3
+  },
+  {
+    "id": "l2complements:poseidite_chestplate",
+    "name": "海神胸甲",
+    "slot": "chest",
+    "armor": 8
+  },
+  {
+    "id": "l2complements:poseidite_helmet",
+    "name": "海神头盔",
+    "slot": "head",
+    "armor": 3
+  },
+  {
+    "id": "l2complements:poseidite_leggings",
+    "name": "海神护腿",
+    "slot": "legs",
+    "armor": 6
+  },
+  {
+    "id": "l2complements:sculkium_boots",
+    "name": "幽匿靴子",
+    "slot": "feet",
+    "armor": 5
+  },
+  {
+    "id": "l2complements:sculkium_chestplate",
+    "name": "幽匿胸甲",
+    "slot": "chest",
+    "armor": 10
+  },
+  {
+    "id": "l2complements:sculkium_helmet",
+    "name": "幽匿头盔",
+    "slot": "head",
+    "armor": 6
+  },
+  {
+    "id": "l2complements:sculkium_leggings",
+    "name": "幽匿护腿",
+    "slot": "legs",
+    "armor": 9
+  },
+  {
+    "id": "l2complements:shulkerate_boots",
+    "name": "潜影靴子",
+    "slot": "feet",
+    "armor": 3
+  },
+  {
+    "id": "l2complements:shulkerate_chestplate",
+    "name": "潜影胸甲",
+    "slot": "chest",
+    "armor": 8
+  },
+  {
+    "id": "l2complements:shulkerate_helmet",
+    "name": "潜影头盔",
+    "slot": "head",
+    "armor": 3
+  },
+  {
+    "id": "l2complements:shulkerate_leggings",
+    "name": "潜影护腿",
+    "slot": "legs",
+    "armor": 6
+  },
+  {
+    "id": "l2complements:totemic_gold_boots",
+    "name": "生命靴子",
+    "slot": "feet",
+    "armor": 2
+  },
+  {
+    "id": "l2complements:totemic_gold_chestplate",
+    "name": "生命胸甲",
+    "slot": "chest",
+    "armor": 6
+  },
+  {
+    "id": "l2complements:totemic_gold_helmet",
+    "name": "生命头盔",
+    "slot": "head",
+    "armor": 2
+  },
+  {
+    "id": "l2complements:totemic_gold_leggings",
+    "name": "生命护腿",
+    "slot": "legs",
+    "armor": 5
+  },
+  {
+    "id": "minecraft:chainmail_boots",
+    "name": "锁链靴子",
+    "slot": "feet",
+    "armor": 1
+  },
+  {
+    "id": "minecraft:chainmail_chestplate",
+    "name": "锁链胸甲",
+    "slot": "chest",
+    "armor": 5
+  },
+  {
+    "id": "minecraft:chainmail_helmet",
+    "name": "锁链头盔",
+    "slot": "head",
+    "armor": 2
+  },
+  {
+    "id": "minecraft:chainmail_leggings",
+    "name": "锁链护腿",
+    "slot": "legs",
+    "armor": 4
+  },
+  {
+    "id": "minecraft:diamond_boots",
+    "name": "钻石靴子",
+    "slot": "feet",
+    "armor": 3
+  },
+  {
+    "id": "minecraft:diamond_chestplate",
+    "name": "钻石胸甲",
+    "slot": "chest",
+    "armor": 8
+  },
+  {
+    "id": "minecraft:diamond_helmet",
+    "name": "钻石头盔",
+    "slot": "head",
+    "armor": 3
+  },
+  {
+    "id": "minecraft:diamond_horse_armor",
+    "name": "钻石马铠",
+    "slot": "body",
+    "armor": 11,
+    "effect": "装备给驯服的马。"
+  },
+  {
+    "id": "minecraft:diamond_leggings",
+    "name": "钻石护腿",
+    "slot": "legs",
+    "armor": 6
+  },
+  {
+    "id": "minecraft:elytra",
+    "name": "鞘翅",
+    "slot": "chest",
+    "armor": 0,
+    "effect": "从高处下落时展开滑翔。"
+  },
+  {
+    "id": "minecraft:golden_boots",
+    "name": "金靴子",
+    "slot": "feet",
+    "armor": 1
+  },
+  {
+    "id": "minecraft:golden_chestplate",
+    "name": "金胸甲",
+    "slot": "chest",
+    "armor": 5
+  },
+  {
+    "id": "minecraft:golden_helmet",
+    "name": "金头盔",
+    "slot": "head",
+    "armor": 2
+  },
+  {
+    "id": "minecraft:golden_horse_armor",
+    "name": "金马铠",
+    "slot": "body",
+    "armor": 7,
+    "effect": "装备给驯服的马。"
+  },
+  {
+    "id": "minecraft:golden_leggings",
+    "name": "金护腿",
+    "slot": "legs",
+    "armor": 3
+  },
+  {
+    "id": "minecraft:iron_boots",
+    "name": "铁靴子",
+    "slot": "feet",
+    "armor": 2
+  },
+  {
+    "id": "minecraft:iron_chestplate",
+    "name": "铁胸甲",
+    "slot": "chest",
+    "armor": 6
+  },
+  {
+    "id": "minecraft:iron_helmet",
+    "name": "铁头盔",
+    "slot": "head",
+    "armor": 2
+  },
+  {
+    "id": "minecraft:iron_horse_armor",
+    "name": "铁马铠",
+    "slot": "body",
+    "armor": 5,
+    "effect": "装备给驯服的马。"
+  },
+  {
+    "id": "minecraft:iron_leggings",
+    "name": "铁护腿",
+    "slot": "legs",
+    "armor": 5
+  },
+  {
+    "id": "minecraft:leather_boots",
+    "name": "皮革靴子",
+    "slot": "feet",
+    "armor": 1
+  },
+  {
+    "id": "minecraft:leather_chestplate",
+    "name": "皮革外套",
+    "slot": "chest",
+    "armor": 3
+  },
+  {
+    "id": "minecraft:leather_helmet",
+    "name": "皮革帽子",
+    "slot": "head",
+    "armor": 1
+  },
+  {
+    "id": "minecraft:leather_horse_armor",
+    "name": "皮革马铠",
+    "slot": "body",
+    "armor": 3,
+    "effect": "装备给驯服的马。"
+  },
+  {
+    "id": "minecraft:leather_leggings",
+    "name": "皮革裤子",
+    "slot": "legs",
+    "armor": 2
+  },
+  {
+    "id": "minecraft:netherite_boots",
+    "name": "下界合金靴子",
+    "slot": "feet",
+    "armor": 3
+  },
+  {
+    "id": "minecraft:netherite_chestplate",
+    "name": "下界合金胸甲",
+    "slot": "chest",
+    "armor": 8
+  },
+  {
+    "id": "minecraft:netherite_helmet",
+    "name": "下界合金头盔",
+    "slot": "head",
+    "armor": 3
+  },
+  {
+    "id": "minecraft:netherite_leggings",
+    "name": "下界合金护腿",
+    "slot": "legs",
+    "armor": 6
+  },
+  {
+    "id": "minecraft:turtle_helmet",
+    "name": "海龟壳",
+    "slot": "head",
+    "armor": 2,
+    "effect": "离开水面可获得水下呼吸。"
+  },
+  {
+    "id": "minecraft:wolf_armor",
+    "name": "狼铠",
+    "slot": "body",
+    "armor": 11,
+    "effect": "供驯服的狼穿戴；多数伤害优先消耗狼铠耐久。"
+  },
+  {
+    "id": "mowziesmobs:geomancer_beads",
+    "name": "地卜师念珠",
+    "slot": "head",
+    "armor": 2
+  },
+  {
+    "id": "mowziesmobs:geomancer_belt",
+    "name": "地卜师腰带",
+    "slot": "legs",
+    "armor": 6
+  },
+  {
+    "id": "mowziesmobs:geomancer_robe",
+    "name": "地卜师长袍",
+    "slot": "chest",
+    "armor": 7
+  },
+  {
+    "id": "mowziesmobs:geomancer_sandals",
+    "name": "地卜师拖鞋",
+    "slot": "feet",
+    "armor": 2
+  },
+  {
+    "id": "mowziesmobs:sol_visage",
+    "name": "太阳神面具",
+    "slot": "head",
+    "armor": 2
+  },
+  {
+    "id": "mowziesmobs:umvuthana_mask_bliss",
+    "name": "欣喜面具",
+    "slot": "head",
+    "armor": 1
+  },
+  {
+    "id": "mowziesmobs:umvuthana_mask_faith",
+    "name": "信仰面具",
+    "slot": "head",
+    "armor": 1
+  },
+  {
+    "id": "mowziesmobs:umvuthana_mask_fear",
+    "name": "恐惧面具",
+    "slot": "head",
+    "armor": 1
+  },
+  {
+    "id": "mowziesmobs:umvuthana_mask_fury",
+    "name": "愤怒面具",
+    "slot": "head",
+    "armor": 1
+  },
+  {
+    "id": "mowziesmobs:umvuthana_mask_misery",
+    "name": "痛苦面具",
+    "slot": "head",
+    "armor": 1
+  },
+  {
+    "id": "mowziesmobs:umvuthana_mask_rage",
+    "name": "盛怒面具",
+    "slot": "head",
+    "armor": 1
+  },
+  {
+    "id": "mowziesmobs:wrought_helmet",
+    "name": "精炼头盔",
+    "slot": "head",
+    "armor": 2
+  },
+  {
+    "id": "terra_curio:diving_helmet",
+    "name": "潜水头盔",
+    "slot": "head",
+    "armor": 2,
+    "effect": "溺水伤害降为原来的六分之一。"
+  },
+  {
+    "id": "terra_entity:possessed_armor_boots",
+    "name": "附魔盔甲·靴子",
+    "slot": "feet",
+    "armor": 3,
+    "source": "讨伐穿戴此套装备的装甲幻影魔，从其装备掉落取得。"
+  },
+  {
+    "id": "terra_entity:possessed_armor_chestplate",
+    "name": "附魔盔甲·胸甲",
+    "slot": "chest",
+    "armor": 6,
+    "source": "讨伐穿戴此套装备的装甲幻影魔，从其装备掉落取得。"
+  },
+  {
+    "id": "terra_entity:possessed_armor_helmet",
+    "name": "附魔盔甲·头盔",
+    "slot": "head",
+    "armor": 3,
+    "source": "讨伐穿戴此套装备的装甲幻影魔，从其装备掉落取得。"
+  },
+  {
+    "id": "terra_entity:possessed_armor_leggings",
+    "name": "附魔盔甲·护腿",
+    "slot": "legs",
+    "armor": 6,
+    "source": "讨伐穿戴此套装备的装甲幻影魔，从其装备掉落取得。"
+  },
+  {
+    "id": "terra_entity:wraith_armor_boots",
+    "name": "幻灵盔甲·靴子",
+    "slot": "feet",
+    "armor": 3,
+    "source": "讨伐穿戴此套装备的幻灵，从其装备掉落取得。"
+  },
+  {
+    "id": "terra_entity:wraith_armor_chestplate",
+    "name": "幻灵盔甲·胸甲",
+    "slot": "chest",
+    "armor": 5,
+    "source": "讨伐穿戴此套装备的幻灵，从其装备掉落取得。"
+  },
+  {
+    "id": "terra_entity:wraith_armor_helmet",
+    "name": "幻灵盔甲·头盔",
+    "slot": "head",
+    "armor": 3,
+    "source": "讨伐穿戴此套装备的幻灵，从其装备掉落取得。"
+  },
+  {
+    "id": "terra_entity:wraith_armor_leggings",
+    "name": "幻灵盔甲·护腿",
+    "slot": "legs",
+    "armor": 5,
+    "source": "讨伐穿戴此套装备的幻灵，从其装备掉落取得。"
+  },
+  {
+    "id": "touhou_little_maid_spell:star_witch_hat",
+    "name": "星之魔女法帽",
+    "slot": "head",
+    "armor": 3,
+    "effect": "魔力上限 +200，法术强度 +15%，冷却缩减 +10%。",
+    "source": "在星途终岸赢下可解锁装备交易的星之魔女切磋。随后用 32 颗绿宝石向她购买，每日限 1 件。"
+  }
+]
