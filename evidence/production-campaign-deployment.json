@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-23T01:27:05.447964+08:00",
+  "instance": "D:\\PCL 正式版 2.10.6 (1)\\.minecraft\\versions\\星庭远征-开发版",
+  "applied": true,
+  "source_commit": "eb17a3e74e0b7661ec3a04b209d8c2d8bd02ec8c",
+  "files": [
+    {
+      "path": "mods/world-progression-core-0.1.0.jar",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/01_workshop_rekindled.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/02_heritage_survey.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/03_world_turn.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/04_field_equipment.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/06_frontline_depot.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/journey_journal.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/lang/en_us.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/lang/zh_cn.snbt",
+      "existed": true
+    }
+  ],
+  "runtime_acceptance": "pending user playtest",
+  "core_version": "0.8.0-production",
+  "module_versions": {
+    "world_progression_core": "0.8.0-production"
+  },
+  "backup": "D:\\PCL 正式版 2.10.6 (1)\\codex\\modpack-project\\backups\\production-campaign-20261123-012705-447964"
+}
