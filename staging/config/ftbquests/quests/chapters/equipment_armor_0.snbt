@@ -630,12 +630,52 @@
       "hide_dependency_lines": false
     },
     {
+      "id": "027D7E700FEE6C0A",
+      "icon": {
+        "id": "enigmaticlegacyplus:majestic_elytra"
+      },
+      "x": 11.2,
+      "y": 5.2,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "5FDCCFE592D89C6A",
+      "icon": {
+        "id": "enigmaticlegacyplus:chaos_elytra"
+      },
+      "x": 12.8,
+      "y": 5.2,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
       "id": "20D08185FB4CBF40",
       "icon": {
         "id": "minecraft:elytra"
       },
-      "x": 11.2,
-      "y": 5.2,
+      "x": 8.0,
+      "y": 6.800000000000001,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,

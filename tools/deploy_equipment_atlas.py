@@ -16,9 +16,9 @@ BASELINE = "12901c2"
 def atlas_updates(instance):
     payloads = {}
     prefixes = []
-    receipt = ROOT / "evidence/equipment-atlas-deployment.json"
+    receipt = ROOT / "evidence/gear-expansion-deployment.json"
+    if not receipt.is_file(): receipt = ROOT / "evidence/equipment-atlas-deployment.json"
     last = json.loads(receipt.read_bytes()) if receipt.is_file() else {}
-    deployed = {p["path"] for p in last.get("files", [])} if last.get("instance") == str(instance) else set()
     for src in sorted((QUESTS / "chapters").glob(PREFIX + "*.snbt")):
         file = BOOK_PATH / "chapters" / src.name
         content = src.read_bytes()
@@ -31,10 +31,19 @@ def atlas_updates(instance):
             if dest.read_bytes() == content: continue
             # FTB saves chapters back in its own SNBT formatting. When the source
             # for this release is identical, keep the instance's own serialization.
-            if file.as_posix() in deployed:
+            if last.get("instance") == str(instance):
                 prior = subprocess.run(["git", "show", last["source_commit"] + ":staging/" + file.as_posix()],
                                        cwd=ROOT, capture_output=True)
-                if prior.returncode == 0 and json.loads(prior.stdout) == chapter: continue
+                if prior.returncode == 0:
+                    previous_chapter = json.loads(prior.stdout)
+                    if previous_chapter == chapter: continue
+                    try:
+                        live = json.loads(dest.read_bytes())
+                    except ValueError:
+                        live = None
+                    if live == previous_chapter:
+                        payloads[file] = content
+                        continue
             raise ValueError(f"Review the installed equipment chapter before replacing it: {file}")
         payloads[file] = content
     if not prefixes: raise ValueError("Build the equipment chapters before deploying")
@@ -54,7 +63,7 @@ def atlas_updates(instance):
     for locale in ("zh_cn", "en_us"):
         rel = Path("lang", locale + ".snbt")
         file = BOOK_PATH / rel
-        base = previous(file, BASELINE)
+        base = previous(file, last["source_commit"] if last.get("instance") == str(instance) else BASELINE)
         staged = read_language(QUESTS / rel)
         current = read_language(instance / file)
         changed = False

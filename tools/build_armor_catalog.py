@@ -29,7 +29,7 @@ CLASSES = {
 }
 
 
-def read_resources(instance):
+def read_resources(instance, jars):
     labels, tags, classes = {}, {}, {}
     def read_jar(jar):
         for path in jar.namelist():
@@ -49,7 +49,7 @@ def read_resources(instance):
                     tags.setdefault(key, []).extend(data["values"])
             elif path.removesuffix(".class") in CLASSES and path.endswith(".class"):
                 classes[path] = jar.read(path)
-    for path in sorted((instance / "mods").glob("*.jar")):
+    for path in jars:
         with ZipFile(path) as jar:
             read_jar(jar)
     # Vanilla translations are in the launcher's asset index.
@@ -70,7 +70,7 @@ def decode_registries(classes, destination, java, vineflower):
                     "--thread-count=2", str(archive), str(destination)], check=True)
 
 
-def records(source, labels, tags, config):
+def records(source, labels, tags, config, extra=()):
     result = {}
     translations = {
         "irons_spellbooks:wizard_hat": "巫师宽檐帽",
@@ -256,6 +256,8 @@ def records(source, labels, tags, config):
     for piece in PIECES:
         result["confluence:mining_" + piece]["source"] = "在看不见天空的地下寻找不死矿工。普通骷髅在这类位置生成时有 1% 机会装备全套矿工装。"
 
+    result.update((row["id"], row) for row in extra)
+
     def resolve(tag, visited):
         if tag in visited:
             return set()
@@ -280,14 +282,17 @@ def main():
     parser.add_argument("--output", type=Path, default=OUTPUT)
     parser.add_argument("--java", type=Path, default=Path("C:/Gradle/jdk-21-temurin/bin/java.exe"))
     parser.add_argument("--vineflower", type=Path)
+    parser.add_argument("--extra-mods", type=Path)
     args = parser.parse_args()
     vf = args.vineflower or next((ROOT / "work/build-baseline/gradle-user-home/caches/modules-2/files-2.1/org.vineflower/vineflower")
                                   .glob("*/*/vineflower-*.jar"))
-    labels, tags, classes = read_resources(args.instance)
+    from equipment_expansions import mod_jars, records as expansion_records
+    jars = mod_jars(args.instance, args.extra_mods)
+    labels, tags, classes = read_resources(args.instance, jars)
     with tempfile.TemporaryDirectory() as temporary:
         source = Path(temporary)
         decode_registries(classes, source, args.java, vf)
-        armor = records(source, labels, tags, args.instance / "config")
+        armor = records(source, labels, tags, args.instance / "config", expansion_records(jars, "armor_records"))
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(armor, ensure_ascii=False, indent=2) + "\n", encoding="utf8")
     print(f"{len(armor)} armor items written to {args.output}")

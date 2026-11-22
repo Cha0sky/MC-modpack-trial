@@ -109,6 +109,126 @@
     "armor": 3
   },
   {
+    "id": "celestial_core:ocean_boots",
+    "name": "海洋靴子",
+    "slot": "feet",
+    "armor": 3,
+    "effects": [
+      "每件提供 2 点盔甲韧性。四件套持续提供水下呼吸。"
+    ]
+  },
+  {
+    "id": "celestial_core:ocean_chestplate",
+    "name": "海洋胸甲",
+    "slot": "chest",
+    "armor": 8,
+    "effects": [
+      "每件提供 2 点盔甲韧性。四件套持续提供水下呼吸。"
+    ]
+  },
+  {
+    "id": "celestial_core:ocean_helmet",
+    "name": "海洋头盔",
+    "slot": "head",
+    "armor": 3,
+    "effects": [
+      "每件提供 2 点盔甲韧性。四件套持续提供水下呼吸。"
+    ]
+  },
+  {
+    "id": "celestial_core:ocean_leggings",
+    "name": "海洋护腿",
+    "slot": "legs",
+    "armor": 6,
+    "effects": [
+      "每件提供 2 点盔甲韧性。四件套持续提供水下呼吸。"
+    ]
+  },
+  {
+    "id": "celestial_core:sakura_boots",
+    "name": "樱花靴子",
+    "slot": "feet",
+    "armor": 2,
+    "effects": [
+      "穿在盔甲栏时，每 5 秒恢复 1 点耐久。"
+    ]
+  },
+  {
+    "id": "celestial_core:sakura_chestplate",
+    "name": "樱花胸甲",
+    "slot": "chest",
+    "armor": 6,
+    "effects": [
+      "穿在盔甲栏时，每 5 秒恢复 1 点耐久。"
+    ]
+  },
+  {
+    "id": "celestial_core:sakura_helmet",
+    "name": "樱花头盔",
+    "slot": "head",
+    "armor": 2,
+    "effects": [
+      "穿在盔甲栏时，每 5 秒恢复 1 点耐久。"
+    ]
+  },
+  {
+    "id": "celestial_core:sakura_leggings",
+    "name": "樱花护腿",
+    "slot": "legs",
+    "armor": 5,
+    "effects": [
+      "穿在盔甲栏时，每 5 秒恢复 1 点耐久。"
+    ]
+  },
+  {
+    "id": "celestial_core:virtual_gold_boots",
+    "name": "虚金靴子",
+    "slot": "feet",
+    "armor": 3,
+    "effects": [
+      "每件提供 2 点盔甲韧性，附魔能力为 30。四件套持续提供抗火。"
+    ],
+    "source": [
+      "击杀着火且穿有附魔金甲的生物可取得虚金残骸，九块合成虚金锭，再按对应盔甲的形状制作。"
+    ]
+  },
+  {
+    "id": "celestial_core:virtual_gold_chestplate",
+    "name": "虚金胸甲",
+    "slot": "chest",
+    "armor": 8,
+    "effects": [
+      "每件提供 2 点盔甲韧性，附魔能力为 30。四件套持续提供抗火。"
+    ],
+    "source": [
+      "击杀着火且穿有附魔金甲的生物可取得虚金残骸，九块合成虚金锭，再按对应盔甲的形状制作。"
+    ]
+  },
+  {
+    "id": "celestial_core:virtual_gold_helmet",
+    "name": "虚金头盔",
+    "slot": "head",
+    "armor": 3,
+    "effects": [
+      "每件提供 2 点盔甲韧性，附魔能力为 30。四件套持续提供抗火。"
+    ],
+    "source": [
+      "击杀着火且穿有附魔金甲的生物可取得虚金残骸，九块合成虚金锭，再按对应盔甲的形状制作。"
+    ]
+  },
+  {
+    "id": "celestial_core:virtual_gold_leggings",
+    "name": "虚金护腿",
+    "slot": "legs",
+    "armor": 6,
+    "effects": [
+      "每件提供 2 点盔甲韧性，附魔能力为 30。四件套持续提供抗火。"
+    ],
+    "source": [
+      "击杀着火且穿有附魔金甲的生物可取得虚金残骸，九块合成虚金锭，再按对应盔甲的形状制作。"
+    ]
+  },
+  {
     "id": "confluence:adamantite_boots",
     "name": "精金靴子",
     "slot": "feet",
@@ -1785,6 +1905,48 @@
     "name": "下界合金潜水头盔",
     "slot": "head",
     "armor": 3
+  },
+  {
+    "id": "enigmaticlegacyplus:chaos_elytra",
+    "name": "混沌之傲",
+    "slot": "chest",
+    "armor": 0,
+    "effect": "滑翔时按住跳跃加速，消耗耐久。高速冲撞可以攻击敌人。"
+  },
+  {
+    "id": "enigmaticlegacyplus:etherium_boots",
+    "name": "以太靴子",
+    "slot": "feet",
+    "armor": 4,
+    "effect": "每件额外增加 8% 以太护盾属性。"
+  },
+  {
+    "id": "enigmaticlegacyplus:etherium_chestplate",
+    "name": "以太胸甲",
+    "slot": "chest",
+    "armor": 9,
+    "effect": "每件额外增加 8% 以太护盾属性。"
+  },
+  {
+    "id": "enigmaticlegacyplus:etherium_helmet",
+    "name": "以太头盔",
+    "slot": "head",
+    "armor": 4,
+    "effect": "每件额外增加 8% 以太护盾属性。"
+  },
+  {
+    "id": "enigmaticlegacyplus:etherium_leggings",
+    "name": "以太护腿",
+    "slot": "legs",
+    "armor": 7,
+    "effect": "每件额外增加 8% 以太护盾属性。"
+  },
+  {
+    "id": "enigmaticlegacyplus:majestic_elytra",
+    "name": "壮丽鞘翅",
+    "slot": "chest",
+    "armor": 0,
+    "effect": "滑翔中按住跳跃可以加速，飞行加速消耗耐久。"
   },
   {
     "id": "goety:black_beast_cursed_armor",

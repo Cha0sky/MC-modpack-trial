@@ -88,6 +88,86 @@
       "hide_details_until_startable": false,
       "hide_lock_icon": true,
       "hide_dependency_lines": false
+    },
+    {
+      "id": "1C827D5D71444227",
+      "icon": {
+        "id": "enigmaticlegacyplus:the_cube"
+      },
+      "x": 6,
+      "y": 2,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "1AE1E9FC0C53C8F3",
+      "icon": {
+        "id": "relics:amphibian_boot"
+      },
+      "x": 8,
+      "y": 2,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "6C4C1E15E2DCA8BD",
+      "icon": {
+        "id": "celestial_artifacts:cursed_talisman"
+      },
+      "x": 10,
+      "y": 2,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "7AB626F219100D30",
+      "icon": {
+        "id": "bhc:blade_of_vitality"
+      },
+      "x": 12,
+      "y": 2,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
     }
   ]
 }

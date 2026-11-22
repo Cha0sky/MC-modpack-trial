@@ -430,12 +430,32 @@
       "hide_dependency_lines": false
     },
     {
+      "id": "0221AE55C0A5E044",
+      "icon": {
+        "id": "celestial_core:sakura_chestplate"
+      },
+      "x": 12.8,
+      "y": 3.6,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
       "id": "7EB48E55B3D00ED8",
       "icon": {
         "id": "confluence:jungle_chestplate"
       },
-      "x": 12.8,
-      "y": 3.6,
+      "x": 8.0,
+      "y": 5.2,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -454,7 +474,7 @@
       "icon": {
         "id": "confluence:fossil_chestplate"
       },
-      "x": 8.0,
+      "x": 9.6,
       "y": 5.2,
       "min_width": 345,
       "optional": true,
@@ -474,7 +494,7 @@
       "icon": {
         "id": "confluence:tiki_shirt"
       },
-      "x": 9.6,
+      "x": 11.2,
       "y": 5.2,
       "min_width": 345,
       "optional": true,
@@ -494,7 +514,7 @@
       "icon": {
         "id": "confluence:meteor_chestplate"
       },
-      "x": 11.2,
+      "x": 12.8,
       "y": 5.2,
       "min_width": 345,
       "optional": true,
@@ -514,8 +534,8 @@
       "icon": {
         "id": "confluence:heim_chestplate"
       },
-      "x": 12.8,
-      "y": 5.2,
+      "x": 8.0,
+      "y": 6.800000000000001,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -534,7 +554,7 @@
       "icon": {
         "id": "confluence:gladiator_chestplate"
       },
-      "x": 8.0,
+      "x": 9.6,
       "y": 6.800000000000001,
       "min_width": 345,
       "optional": true,
@@ -554,7 +574,7 @@
       "icon": {
         "id": "confluence:golden_chestplate"
       },
-      "x": 9.6,
+      "x": 11.2,
       "y": 6.800000000000001,
       "min_width": 345,
       "optional": true,
@@ -574,7 +594,7 @@
       "icon": {
         "id": "confluence:tungsten_chestplate"
       },
-      "x": 11.2,
+      "x": 12.8,
       "y": 6.800000000000001,
       "min_width": 345,
       "optional": true,
@@ -594,8 +614,8 @@
       "icon": {
         "id": "confluence:platinum_chestplate"
       },
-      "x": 12.8,
-      "y": 6.800000000000001,
+      "x": 8.0,
+      "y": 8.4,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -614,7 +634,7 @@
       "icon": {
         "id": "confluence:silver_chestplate"
       },
-      "x": 8.0,
+      "x": 9.6,
       "y": 8.4,
       "min_width": 345,
       "optional": true,
@@ -634,7 +654,7 @@
       "icon": {
         "id": "confluence:obsidian_chestplate"
       },
-      "x": 9.6,
+      "x": 11.2,
       "y": 8.4,
       "min_width": 345,
       "optional": true,
@@ -654,7 +674,7 @@
       "icon": {
         "id": "goety:cursed_knight_chestplate"
       },
-      "x": 11.2,
+      "x": 12.8,
       "y": 8.4,
       "min_width": 345,
       "optional": true,
@@ -674,8 +694,8 @@
       "icon": {
         "id": "goety:black_iron_chestplate"
       },
-      "x": 12.8,
-      "y": 8.4,
+      "x": 8.0,
+      "y": 10.0,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -694,7 +714,7 @@
       "icon": {
         "id": "irons_spellbooks:wandering_magician_chestplate"
       },
-      "x": 8.0,
+      "x": 9.6,
       "y": 10.0,
       "min_width": 345,
       "optional": true,
@@ -714,7 +734,7 @@
       "icon": {
         "id": "l2complements:totemic_gold_chestplate"
       },
-      "x": 9.6,
+      "x": 11.2,
       "y": 10.0,
       "min_width": 345,
       "optional": true,
@@ -734,7 +754,7 @@
       "icon": {
         "id": "minecraft:iron_chestplate"
       },
-      "x": 11.2,
+      "x": 12.8,
       "y": 10.0,
       "min_width": 345,
       "optional": true,
@@ -754,8 +774,8 @@
       "icon": {
         "id": "terra_entity:possessed_armor_chestplate"
       },
-      "x": 12.8,
-      "y": 10.0,
+      "x": 8.0,
+      "y": 11.600000000000001,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -772,10 +792,30 @@
     {
       "id": "31E62AB8F9D215F4",
       "icon": {
-        "id": "confluence:cold_crystal_leggings"
+        "id": "celestial_core:sakura_leggings"
       },
       "x": 16,
       "y": 0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "3F06C9E04064D1A9",
+      "icon": {
+        "id": "celestial_core:sakura_leggings"
+      },
+      "x": 16.0,
+      "y": 2.0,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -794,7 +834,7 @@
       "icon": {
         "id": "confluence:cold_crystal_leggings"
       },
-      "x": 16.0,
+      "x": 17.6,
       "y": 2.0,
       "min_width": 345,
       "optional": true,
@@ -814,7 +854,7 @@
       "icon": {
         "id": "confluence:ninja_leggings"
       },
-      "x": 17.6,
+      "x": 19.2,
       "y": 2.0,
       "min_width": 345,
       "optional": true,
@@ -834,7 +874,7 @@
       "icon": {
         "id": "confluence:tiki_leggings"
       },
-      "x": 19.2,
+      "x": 20.8,
       "y": 2.0,
       "min_width": 345,
       "optional": true,
@@ -854,8 +894,8 @@
       "icon": {
         "id": "confluence:bee_leggings"
       },
-      "x": 20.8,
-      "y": 2.0,
+      "x": 16.0,
+      "y": 3.6,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -874,7 +914,7 @@
       "icon": {
         "id": "confluence:tungsten_leggings"
       },
-      "x": 16.0,
+      "x": 17.6,
       "y": 3.6,
       "min_width": 345,
       "optional": true,
@@ -894,7 +934,7 @@
       "icon": {
         "id": "confluence:lead_leggings"
       },
-      "x": 17.6,
+      "x": 19.2,
       "y": 3.6,
       "min_width": 345,
       "optional": true,
@@ -914,7 +954,7 @@
       "icon": {
         "id": "confluence:silver_leggings"
       },
-      "x": 19.2,
+      "x": 20.8,
       "y": 3.6,
       "min_width": 345,
       "optional": true,
@@ -934,8 +974,8 @@
       "icon": {
         "id": "confluence:obsidian_leggings"
       },
-      "x": 20.8,
-      "y": 3.6,
+      "x": 16.0,
+      "y": 5.2,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -954,7 +994,7 @@
       "icon": {
         "id": "goety:cursed_knight_leggings"
       },
-      "x": 16.0,
+      "x": 17.6,
       "y": 5.2,
       "min_width": 345,
       "optional": true,
@@ -974,7 +1014,7 @@
       "icon": {
         "id": "goety:black_iron_leggings"
       },
-      "x": 17.6,
+      "x": 19.2,
       "y": 5.2,
       "min_width": 345,
       "optional": true,
@@ -994,7 +1034,7 @@
       "icon": {
         "id": "irons_spellbooks:wandering_magician_leggings"
       },
-      "x": 19.2,
+      "x": 20.8,
       "y": 5.2,
       "min_width": 345,
       "optional": true,
@@ -1014,8 +1054,8 @@
       "icon": {
         "id": "kaleidoscope_cookery:farmer_leggings"
       },
-      "x": 20.8,
-      "y": 5.2,
+      "x": 16.0,
+      "y": 6.800000000000001,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -1034,7 +1074,7 @@
       "icon": {
         "id": "l2complements:totemic_gold_leggings"
       },
-      "x": 16.0,
+      "x": 17.6,
       "y": 6.800000000000001,
       "min_width": 345,
       "optional": true,
@@ -1054,7 +1094,7 @@
       "icon": {
         "id": "minecraft:iron_leggings"
       },
-      "x": 17.6,
+      "x": 19.2,
       "y": 6.800000000000001,
       "min_width": 345,
       "optional": true,
@@ -1074,8 +1114,48 @@
       "icon": {
         "id": "terra_entity:wraith_armor_leggings"
       },
-      "x": 19.2,
+      "x": 20.8,
       "y": 6.800000000000001,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "57BDAE3F05C9C01D",
+      "icon": {
+        "id": "celestial_core:ocean_leggings"
+      },
+      "x": 16.0,
+      "y": 8.4,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "4814CA54855CDE50",
+      "icon": {
+        "id": "celestial_core:virtual_gold_leggings"
+      },
+      "x": 17.6,
+      "y": 8.4,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -1094,8 +1174,8 @@
       "icon": {
         "id": "confluence:jungle_leggings"
       },
-      "x": 20.8,
-      "y": 6.800000000000001,
+      "x": 19.2,
+      "y": 8.4,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -1114,7 +1194,7 @@
       "icon": {
         "id": "confluence:fossil_leggings"
       },
-      "x": 16.0,
+      "x": 20.8,
       "y": 8.4,
       "min_width": 345,
       "optional": true,
@@ -1134,8 +1214,8 @@
       "icon": {
         "id": "confluence:shadow_leggings"
       },
-      "x": 17.6,
-      "y": 8.4,
+      "x": 16.0,
+      "y": 10.0,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -1154,8 +1234,8 @@
       "icon": {
         "id": "confluence:necro_leggings"
       },
-      "x": 19.2,
-      "y": 8.4,
+      "x": 17.6,
+      "y": 10.0,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -1174,8 +1254,8 @@
       "icon": {
         "id": "confluence:meteor_leggings"
       },
-      "x": 20.8,
-      "y": 8.4,
+      "x": 19.2,
+      "y": 10.0,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -1194,7 +1274,7 @@
       "icon": {
         "id": "confluence:heim_leggings"
       },
-      "x": 16.0,
+      "x": 20.8,
       "y": 10.0,
       "min_width": 345,
       "optional": true,
@@ -1214,8 +1294,8 @@
       "icon": {
         "id": "confluence:crimson_leggings"
       },
-      "x": 17.6,
-      "y": 10.0,
+      "x": 16.0,
+      "y": 11.600000000000001,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -1234,8 +1314,8 @@
       "icon": {
         "id": "confluence:gladiator_leggings"
       },
-      "x": 19.2,
-      "y": 10.0,
+      "x": 17.6,
+      "y": 11.600000000000001,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -1254,8 +1334,8 @@
       "icon": {
         "id": "confluence:golden_leggings"
       },
-      "x": 20.8,
-      "y": 10.0,
+      "x": 19.2,
+      "y": 11.600000000000001,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -1274,7 +1354,7 @@
       "icon": {
         "id": "confluence:platinum_leggings"
       },
-      "x": 16.0,
+      "x": 20.8,
       "y": 11.600000000000001,
       "min_width": 345,
       "optional": true,
@@ -1294,8 +1374,8 @@
       "icon": {
         "id": "goety:cursed_paladin_leggings"
       },
-      "x": 17.6,
-      "y": 11.600000000000001,
+      "x": 16.0,
+      "y": 13.200000000000001,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -1314,8 +1394,8 @@
       "icon": {
         "id": "goety:dark_leggings"
       },
-      "x": 19.2,
-      "y": 11.600000000000001,
+      "x": 17.6,
+      "y": 13.200000000000001,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -1334,8 +1414,8 @@
       "icon": {
         "id": "irons_spellbooks:netherite_mage_leggings"
       },
-      "x": 20.8,
-      "y": 11.600000000000001,
+      "x": 19.2,
+      "y": 13.200000000000001,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -1354,7 +1434,7 @@
       "icon": {
         "id": "irons_spellbooks:cryomancer_leggings"
       },
-      "x": 16.0,
+      "x": 20.8,
       "y": 13.200000000000001,
       "min_width": 345,
       "optional": true,
@@ -1374,8 +1454,8 @@
       "icon": {
         "id": "irons_spellbooks:wizard_leggings"
       },
-      "x": 17.6,
-      "y": 13.200000000000001,
+      "x": 16.0,
+      "y": 14.8,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -1394,8 +1474,8 @@
       "icon": {
         "id": "irons_spellbooks:pumpkin_leggings"
       },
-      "x": 19.2,
-      "y": 13.200000000000001,
+      "x": 17.6,
+      "y": 14.8,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -1414,8 +1494,8 @@
       "icon": {
         "id": "irons_spellbooks:shadowwalker_leggings"
       },
-      "x": 20.8,
-      "y": 13.200000000000001,
+      "x": 19.2,
+      "y": 14.8,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -1434,7 +1514,7 @@
       "icon": {
         "id": "irons_spellbooks:pyromancer_leggings"
       },
-      "x": 16.0,
+      "x": 20.8,
       "y": 14.8,
       "min_width": 345,
       "optional": true,
@@ -1454,8 +1534,8 @@
       "icon": {
         "id": "irons_spellbooks:priest_leggings"
       },
-      "x": 17.6,
-      "y": 14.8,
+      "x": 16.0,
+      "y": 16.4,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -1474,8 +1554,8 @@
       "icon": {
         "id": "irons_spellbooks:cultist_leggings"
       },
-      "x": 19.2,
-      "y": 14.8,
+      "x": 17.6,
+      "y": 16.4,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -1494,8 +1574,8 @@
       "icon": {
         "id": "irons_spellbooks:plagued_leggings"
       },
-      "x": 20.8,
-      "y": 14.8,
+      "x": 19.2,
+      "y": 16.4,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -1514,7 +1594,7 @@
       "icon": {
         "id": "irons_spellbooks:electromancer_leggings"
       },
-      "x": 16.0,
+      "x": 20.8,
       "y": 16.4,
       "min_width": 345,
       "optional": true,
@@ -1534,8 +1614,8 @@
       "icon": {
         "id": "irons_spellbooks:archevoker_leggings"
       },
-      "x": 17.6,
-      "y": 16.4,
+      "x": 16.0,
+      "y": 18.0,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -1554,8 +1634,8 @@
       "icon": {
         "id": "l2complements:eternium_leggings"
       },
-      "x": 19.2,
-      "y": 16.4,
+      "x": 17.6,
+      "y": 18.0,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -1574,8 +1654,8 @@
       "icon": {
         "id": "l2complements:poseidite_leggings"
       },
-      "x": 20.8,
-      "y": 16.4,
+      "x": 19.2,
+      "y": 18.0,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -1594,7 +1674,7 @@
       "icon": {
         "id": "l2complements:shulkerate_leggings"
       },
-      "x": 16.0,
+      "x": 20.8,
       "y": 18.0,
       "min_width": 345,
       "optional": true,
@@ -1614,8 +1694,8 @@
       "icon": {
         "id": "minecraft:netherite_leggings"
       },
-      "x": 17.6,
-      "y": 18.0,
+      "x": 16.0,
+      "y": 19.6,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -1634,8 +1714,8 @@
       "icon": {
         "id": "minecraft:diamond_leggings"
       },
-      "x": 19.2,
-      "y": 18.0,
+      "x": 17.6,
+      "y": 19.6,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -1654,8 +1734,8 @@
       "icon": {
         "id": "mowziesmobs:geomancer_belt"
       },
-      "x": 20.8,
-      "y": 18.0,
+      "x": 19.2,
+      "y": 19.6,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -1674,7 +1754,7 @@
       "icon": {
         "id": "terra_entity:possessed_armor_leggings"
       },
-      "x": 16.0,
+      "x": 20.8,
       "y": 19.6,
       "min_width": 345,
       "optional": true,

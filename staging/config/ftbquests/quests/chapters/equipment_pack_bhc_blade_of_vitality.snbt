@@ -1,0 +1,683 @@
+{
+  "id": "5FFD738EE69A529A",
+  "filename": "equipment_pack_bhc_blade_of_vitality",
+  "group": "6D1938960E54F1E0",
+  "order_index": 41,
+  "icon": {
+    "id": "bhc:blade_of_vitality"
+  },
+  "progression_mode": "flexible",
+  "disable_toast": true,
+  "quests": [
+    {
+      "id": "24B71D97F08C4C61",
+      "icon": {
+        "id": "bhc:blade_of_vitality"
+      },
+      "x": 0,
+      "y": -3,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "4711E8BED68F5ABE",
+      "icon": {
+        "id": "bhc:blade_of_vitality"
+      },
+      "x": 21,
+      "y": 7.2,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "2D326C2242887074",
+        "2D8B623E50D65AB8"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "22B8DE847F976969",
+      "icon": {
+        "id": "bhc:blue_heart"
+      },
+      "x": 0,
+      "y": 0.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "2838D678DBDACEF4",
+      "icon": {
+        "id": "bhc:blue_heart_canister"
+      },
+      "x": 12,
+      "y": 7.2,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "22B8DE847F976969",
+        "495104DD837C4456"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "065C87AAD4298D4E",
+      "icon": {
+        "id": "bhc:blue_heart_melted"
+      },
+      "x": 0,
+      "y": 1.5999999999999996,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "04E5EAB95E474366",
+      "icon": {
+        "id": "bhc:blue_heart_patch"
+      },
+      "x": 3,
+      "y": 4.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "22B8DE847F976969"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "0E750A2A375479C2",
+      "icon": {
+        "id": "bhc:blue_heartpulse_belt"
+      },
+      "x": 15,
+      "y": 9.6,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "2838D678DBDACEF4",
+        "495104DD837C4456",
+        "310223404AE0F9F6"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "298D0BCF4F032A2F",
+      "icon": {
+        "id": "bhc:canister"
+      },
+      "x": 0,
+      "y": 3.1999999999999993,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "2D6525FFC65B3F9D",
+      "icon": {
+        "id": "bhc:green_heart"
+      },
+      "x": 0,
+      "y": 4.8,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "495104DD837C4456",
+      "icon": {
+        "id": "bhc:green_heart_canister"
+      },
+      "x": 9,
+      "y": 7.2,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "2D6525FFC65B3F9D",
+        "1EAA6486153E08B3"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "3E48D1E3D2825FFD",
+      "icon": {
+        "id": "bhc:green_heart_melted"
+      },
+      "x": 0,
+      "y": 6.4,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "0DB294191653E1D6",
+      "icon": {
+        "id": "bhc:green_heart_patch"
+      },
+      "x": 3,
+      "y": 5.6,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "2D6525FFC65B3F9D"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "310223404AE0F9F6",
+      "icon": {
+        "id": "bhc:green_heartpulse_belt"
+      },
+      "x": 12,
+      "y": 8.8,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "495104DD837C4456",
+        "1EAA6486153E08B3",
+        "0DE623158DCF479A"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "69FE6A84B18D221D",
+      "icon": {
+        "id": "bhc:heart_amulet"
+      },
+      "x": 15,
+      "y": 8.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "22B8DE847F976969",
+        "2838D678DBDACEF4",
+        "2D6525FFC65B3F9D",
+        "495104DD837C4456",
+        "1C401CCED65FFCB0",
+        "77DD9DFFA9705C7A",
+        "0985E74E661D0C92",
+        "1EAA6486153E08B3"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "1C401CCED65FFCB0",
+      "icon": {
+        "id": "bhc:red_heart"
+      },
+      "x": 0,
+      "y": 8.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "77DD9DFFA9705C7A",
+      "icon": {
+        "id": "bhc:red_heart_canister"
+      },
+      "x": 3,
+      "y": 10.4,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "298D0BCF4F032A2F",
+        "1C401CCED65FFCB0",
+        "7318CEDBE6F717DB",
+        "0F3863B37BD884AA"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "4D702182DFDF2AF2",
+      "icon": {
+        "id": "bhc:red_heart_melted"
+      },
+      "x": 0,
+      "y": 9.6,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "4030E44BB36EDC1C",
+      "icon": {
+        "id": "bhc:red_heart_patch"
+      },
+      "x": 3,
+      "y": 8.8,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "1C401CCED65FFCB0"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "01C92E2224FD656D",
+      "icon": {
+        "id": "bhc:red_heartpulse_belt"
+      },
+      "x": 6,
+      "y": 7.2,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "77DD9DFFA9705C7A"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "7318CEDBE6F717DB",
+      "icon": {
+        "id": "bhc:relic_apple"
+      },
+      "x": 0,
+      "y": 11.2,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "2D326C2242887074",
+      "icon": {
+        "id": "bhc:soul_heart_amulet"
+      },
+      "x": 18,
+      "y": 8.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "2838D678DBDACEF4",
+        "495104DD837C4456",
+        "69FE6A84B18D221D",
+        "77DD9DFFA9705C7A",
+        "72944848E7C46F4B",
+        "2D8B623E50D65AB8",
+        "1EAA6486153E08B3"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "72944848E7C46F4B",
+      "icon": {
+        "id": "bhc:soul_heart_canister"
+      },
+      "x": 15,
+      "y": 6.4,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "22B8DE847F976969",
+        "2838D678DBDACEF4",
+        "2D6525FFC65B3F9D",
+        "1C401CCED65FFCB0",
+        "0985E74E661D0C92"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "2D8B623E50D65AB8",
+      "icon": {
+        "id": "bhc:soul_heart_crystal"
+      },
+      "x": 3,
+      "y": 7.2,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "22B8DE847F976969",
+        "2D6525FFC65B3F9D",
+        "1C401CCED65FFCB0",
+        "0985E74E661D0C92"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "7B6751460110554E",
+      "icon": {
+        "id": "bhc:vigor_bow"
+      },
+      "x": 21,
+      "y": 8.8,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "2D326C2242887074",
+        "2D8B623E50D65AB8"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "0F3863B37BD884AA",
+      "icon": {
+        "id": "bhc:wither_bone"
+      },
+      "x": 0,
+      "y": 12.8,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "0985E74E661D0C92",
+      "icon": {
+        "id": "bhc:yellow_heart"
+      },
+      "x": 0,
+      "y": 14.4,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "1EAA6486153E08B3",
+      "icon": {
+        "id": "bhc:yellow_heart_canister"
+      },
+      "x": 6,
+      "y": 8.8,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "77DD9DFFA9705C7A",
+        "0985E74E661D0C92"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "3854E0C063DD13DE",
+      "icon": {
+        "id": "bhc:yellow_heart_melted"
+      },
+      "x": 0,
+      "y": 16.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "11D120DB06FB8367",
+      "icon": {
+        "id": "bhc:yellow_heart_patch"
+      },
+      "x": 3,
+      "y": 12.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "0985E74E661D0C92"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "0DE623158DCF479A",
+      "icon": {
+        "id": "bhc:yellow_heartpulse_belt"
+      },
+      "x": 9,
+      "y": 8.8,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "77DD9DFFA9705C7A",
+        "01C92E2224FD656D",
+        "1EAA6486153E08B3"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    }
+  ]
+}

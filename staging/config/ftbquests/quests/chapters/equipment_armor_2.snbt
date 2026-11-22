@@ -70,11 +70,51 @@
       "hide_dependency_lines": false
     },
     {
+      "id": "41A1576D2A38725C",
+      "icon": {
+        "id": "celestial_core:ocean_helmet"
+      },
+      "x": 1.6,
+      "y": 2.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "097ED43F6C792C8A",
+      "icon": {
+        "id": "celestial_core:virtual_gold_helmet"
+      },
+      "x": 3.2,
+      "y": 2.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
       "id": "21058A31CAF0F709",
       "icon": {
         "id": "confluence:jungle_helmet"
       },
-      "x": 1.6,
+      "x": 4.800000000000001,
       "y": 2.0,
       "min_width": 345,
       "optional": true,
@@ -94,8 +134,8 @@
       "icon": {
         "id": "confluence:tiki_mask"
       },
-      "x": 3.2,
-      "y": 2.0,
+      "x": 0.0,
+      "y": 3.6,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -114,8 +154,8 @@
       "icon": {
         "id": "confluence:shadow_helmet"
       },
-      "x": 4.800000000000001,
-      "y": 2.0,
+      "x": 1.6,
+      "y": 3.6,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -134,7 +174,7 @@
       "icon": {
         "id": "confluence:necro_helmet"
       },
-      "x": 0.0,
+      "x": 3.2,
       "y": 3.6,
       "min_width": 345,
       "optional": true,
@@ -154,7 +194,7 @@
       "icon": {
         "id": "confluence:meteor_helmet"
       },
-      "x": 1.6,
+      "x": 4.800000000000001,
       "y": 3.6,
       "min_width": 345,
       "optional": true,
@@ -174,8 +214,8 @@
       "icon": {
         "id": "confluence:heim_helmet"
       },
-      "x": 3.2,
-      "y": 3.6,
+      "x": 0.0,
+      "y": 5.2,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -194,8 +234,8 @@
       "icon": {
         "id": "confluence:crimson_helmet"
       },
-      "x": 4.800000000000001,
-      "y": 3.6,
+      "x": 1.6,
+      "y": 5.2,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -214,7 +254,7 @@
       "icon": {
         "id": "confluence:hallowed_headgear"
       },
-      "x": 0.0,
+      "x": 3.2,
       "y": 5.2,
       "min_width": 345,
       "optional": true,
@@ -234,7 +274,7 @@
       "icon": {
         "id": "confluence:adamantite_headgear"
       },
-      "x": 1.6,
+      "x": 4.800000000000001,
       "y": 5.2,
       "min_width": 345,
       "optional": true,
@@ -254,8 +294,8 @@
       "icon": {
         "id": "confluence:spider_helmet"
       },
-      "x": 3.2,
-      "y": 5.2,
+      "x": 0.0,
+      "y": 6.800000000000001,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -274,8 +314,8 @@
       "icon": {
         "id": "confluence:bee_helmet"
       },
-      "x": 4.800000000000001,
-      "y": 5.2,
+      "x": 1.6,
+      "y": 6.800000000000001,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -294,7 +334,7 @@
       "icon": {
         "id": "confluence:gladiator_helmet"
       },
-      "x": 0.0,
+      "x": 3.2,
       "y": 6.800000000000001,
       "min_width": 345,
       "optional": true,
@@ -314,7 +354,7 @@
       "icon": {
         "id": "confluence:golden_helmet"
       },
-      "x": 1.6,
+      "x": 4.800000000000001,
       "y": 6.800000000000001,
       "min_width": 345,
       "optional": true,
@@ -334,8 +374,8 @@
       "icon": {
         "id": "confluence:titanium_headgear"
       },
-      "x": 3.2,
-      "y": 6.800000000000001,
+      "x": 0.0,
+      "y": 8.4,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -354,8 +394,8 @@
       "icon": {
         "id": "confluence:palladium_helmet"
       },
-      "x": 4.800000000000001,
-      "y": 6.800000000000001,
+      "x": 1.6,
+      "y": 8.4,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -374,7 +414,7 @@
       "icon": {
         "id": "confluence:cobalt_mask"
       },
-      "x": 0.0,
+      "x": 3.2,
       "y": 8.4,
       "min_width": 345,
       "optional": true,
@@ -394,7 +434,7 @@
       "icon": {
         "id": "confluence:platinum_helmet"
       },
-      "x": 1.6,
+      "x": 4.800000000000001,
       "y": 8.4,
       "min_width": 345,
       "optional": true,
@@ -414,8 +454,8 @@
       "icon": {
         "id": "confluence:obsidian_helmet"
       },
-      "x": 3.2,
-      "y": 8.4,
+      "x": 0.0,
+      "y": 10.0,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -434,8 +474,8 @@
       "icon": {
         "id": "create:netherite_diving_helmet"
       },
-      "x": 4.800000000000001,
-      "y": 8.4,
+      "x": 1.6,
+      "y": 10.0,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -454,7 +494,7 @@
       "icon": {
         "id": "goety:cursed_paladin_helmet"
       },
-      "x": 0.0,
+      "x": 3.2,
       "y": 10.0,
       "min_width": 345,
       "optional": true,
@@ -474,7 +514,7 @@
       "icon": {
         "id": "goety:dark_helmet"
       },
-      "x": 1.6,
+      "x": 4.800000000000001,
       "y": 10.0,
       "min_width": 345,
       "optional": true,
@@ -494,8 +534,8 @@
       "icon": {
         "id": "irons_spellbooks:netherite_mage_helmet"
       },
-      "x": 3.2,
-      "y": 10.0,
+      "x": 0.0,
+      "y": 11.600000000000001,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -514,8 +554,8 @@
       "icon": {
         "id": "irons_spellbooks:cryomancer_helmet"
       },
-      "x": 4.800000000000001,
-      "y": 10.0,
+      "x": 1.6,
+      "y": 11.600000000000001,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -534,7 +574,7 @@
       "icon": {
         "id": "irons_spellbooks:wizard_helmet"
       },
-      "x": 0.0,
+      "x": 3.2,
       "y": 11.600000000000001,
       "min_width": 345,
       "optional": true,
@@ -554,7 +594,7 @@
       "icon": {
         "id": "irons_spellbooks:wizard_hat"
       },
-      "x": 1.6,
+      "x": 4.800000000000001,
       "y": 11.600000000000001,
       "min_width": 345,
       "optional": true,
@@ -574,8 +614,8 @@
       "icon": {
         "id": "irons_spellbooks:pumpkin_helmet"
       },
-      "x": 3.2,
-      "y": 11.600000000000001,
+      "x": 0.0,
+      "y": 13.200000000000001,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -594,8 +634,8 @@
       "icon": {
         "id": "irons_spellbooks:shadowwalker_helmet"
       },
-      "x": 4.800000000000001,
-      "y": 11.600000000000001,
+      "x": 1.6,
+      "y": 13.200000000000001,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -614,7 +654,7 @@
       "icon": {
         "id": "irons_spellbooks:pyromancer_helmet"
       },
-      "x": 0.0,
+      "x": 3.2,
       "y": 13.200000000000001,
       "min_width": 345,
       "optional": true,
@@ -634,7 +674,7 @@
       "icon": {
         "id": "irons_spellbooks:priest_helmet"
       },
-      "x": 1.6,
+      "x": 4.800000000000001,
       "y": 13.200000000000001,
       "min_width": 345,
       "optional": true,
@@ -654,8 +694,8 @@
       "icon": {
         "id": "irons_spellbooks:cultist_helmet"
       },
-      "x": 3.2,
-      "y": 13.200000000000001,
+      "x": 0.0,
+      "y": 14.8,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -674,8 +714,8 @@
       "icon": {
         "id": "irons_spellbooks:plagued_helmet"
       },
-      "x": 4.800000000000001,
-      "y": 13.200000000000001,
+      "x": 1.6,
+      "y": 14.8,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -694,7 +734,7 @@
       "icon": {
         "id": "irons_spellbooks:electromancer_helmet"
       },
-      "x": 0.0,
+      "x": 3.2,
       "y": 14.8,
       "min_width": 345,
       "optional": true,
@@ -714,7 +754,7 @@
       "icon": {
         "id": "irons_spellbooks:archevoker_helmet"
       },
-      "x": 1.6,
+      "x": 4.800000000000001,
       "y": 14.8,
       "min_width": 345,
       "optional": true,
@@ -734,8 +774,8 @@
       "icon": {
         "id": "kaleidoscope_cookery:straw_hat_flower"
       },
-      "x": 3.2,
-      "y": 14.8,
+      "x": 0.0,
+      "y": 16.4,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -754,8 +794,8 @@
       "icon": {
         "id": "kaleidoscope_cookery:straw_hat"
       },
-      "x": 4.800000000000001,
-      "y": 14.8,
+      "x": 1.6,
+      "y": 16.4,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -774,7 +814,7 @@
       "icon": {
         "id": "l2complements:eternium_helmet"
       },
-      "x": 0.0,
+      "x": 3.2,
       "y": 16.4,
       "min_width": 345,
       "optional": true,
@@ -794,7 +834,7 @@
       "icon": {
         "id": "l2complements:poseidite_helmet"
       },
-      "x": 1.6,
+      "x": 4.800000000000001,
       "y": 16.4,
       "min_width": 345,
       "optional": true,
@@ -814,8 +854,8 @@
       "icon": {
         "id": "l2complements:shulkerate_helmet"
       },
-      "x": 3.2,
-      "y": 16.4,
+      "x": 0.0,
+      "y": 18.0,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -834,8 +874,8 @@
       "icon": {
         "id": "minecraft:netherite_helmet"
       },
-      "x": 4.800000000000001,
-      "y": 16.4,
+      "x": 1.6,
+      "y": 18.0,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -854,7 +894,7 @@
       "icon": {
         "id": "minecraft:diamond_helmet"
       },
-      "x": 0.0,
+      "x": 3.2,
       "y": 18.0,
       "min_width": 345,
       "optional": true,
@@ -874,7 +914,7 @@
       "icon": {
         "id": "terra_entity:wraith_armor_helmet"
       },
-      "x": 1.6,
+      "x": 4.800000000000001,
       "y": 18.0,
       "min_width": 345,
       "optional": true,
@@ -894,8 +934,8 @@
       "icon": {
         "id": "terra_entity:possessed_armor_helmet"
       },
-      "x": 3.2,
-      "y": 18.0,
+      "x": 0.0,
+      "y": 19.6,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -914,8 +954,8 @@
       "icon": {
         "id": "touhou_little_maid_spell:star_witch_hat"
       },
-      "x": 4.800000000000001,
-      "y": 18.0,
+      "x": 1.6,
+      "y": 19.6,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -934,7 +974,7 @@
       "icon": {
         "id": "confluence:orichalcum_helmet"
       },
-      "x": 0.0,
+      "x": 3.2,
       "y": 19.6,
       "min_width": 345,
       "optional": true,
@@ -954,7 +994,7 @@
       "icon": {
         "id": "confluence:wizard_hat"
       },
-      "x": 1.6,
+      "x": 4.800000000000001,
       "y": 19.6,
       "min_width": 345,
       "optional": true,
@@ -974,8 +1014,8 @@
       "icon": {
         "id": "confluence:hallowed_helmet"
       },
-      "x": 3.2,
-      "y": 19.6,
+      "x": 0.0,
+      "y": 21.200000000000003,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -994,8 +1034,8 @@
       "icon": {
         "id": "confluence:mythril_hat"
       },
-      "x": 4.800000000000001,
-      "y": 19.6,
+      "x": 1.6,
+      "y": 21.200000000000003,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -1014,7 +1054,7 @@
       "icon": {
         "id": "confluence:adamantite_mask"
       },
-      "x": 0.0,
+      "x": 3.2,
       "y": 21.200000000000003,
       "min_width": 345,
       "optional": true,
@@ -1034,7 +1074,7 @@
       "icon": {
         "id": "confluence:viking_helmet"
       },
-      "x": 1.6,
+      "x": 4.800000000000001,
       "y": 21.200000000000003,
       "min_width": 345,
       "optional": true,
@@ -1054,8 +1094,28 @@
       "icon": {
         "id": "confluence:titanium_helmet"
       },
-      "x": 3.2,
-      "y": 21.200000000000003,
+      "x": 0.0,
+      "y": 22.8,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "243120FC9995BEE1",
+      "icon": {
+        "id": "enigmaticlegacyplus:etherium_helmet"
+      },
+      "x": 1.6,
+      "y": 22.8,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -1412,10 +1472,50 @@
     {
       "id": "5A599FA202620EF6",
       "icon": {
-        "id": "confluence:jungle_boots"
+        "id": "celestial_core:ocean_boots"
       },
       "x": 24,
       "y": 0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "3ED5A19014D8FF5F",
+      "icon": {
+        "id": "celestial_core:ocean_boots"
+      },
+      "x": 24.0,
+      "y": 2.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "2B78FCECEB333F65",
+      "icon": {
+        "id": "celestial_core:virtual_gold_boots"
+      },
+      "x": 25.6,
+      "y": 2.0,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -1434,7 +1534,7 @@
       "icon": {
         "id": "confluence:jungle_boots"
       },
-      "x": 24.0,
+      "x": 27.2,
       "y": 2.0,
       "min_width": 345,
       "optional": true,
@@ -1454,7 +1554,7 @@
       "icon": {
         "id": "confluence:tiki_boots"
       },
-      "x": 25.6,
+      "x": 28.8,
       "y": 2.0,
       "min_width": 345,
       "optional": true,
@@ -1474,8 +1574,8 @@
       "icon": {
         "id": "confluence:shadow_boots"
       },
-      "x": 27.2,
-      "y": 2.0,
+      "x": 24.0,
+      "y": 3.6,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -1494,8 +1594,8 @@
       "icon": {
         "id": "confluence:necro_boots"
       },
-      "x": 28.8,
-      "y": 2.0,
+      "x": 25.6,
+      "y": 3.6,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -1514,7 +1614,7 @@
       "icon": {
         "id": "confluence:meteor_boots"
       },
-      "x": 24.0,
+      "x": 27.2,
       "y": 3.6,
       "min_width": 345,
       "optional": true,
@@ -1534,7 +1634,7 @@
       "icon": {
         "id": "confluence:heim_boots"
       },
-      "x": 25.6,
+      "x": 28.8,
       "y": 3.6,
       "min_width": 345,
       "optional": true,
@@ -1554,8 +1654,8 @@
       "icon": {
         "id": "confluence:crimson_boots"
       },
-      "x": 27.2,
-      "y": 3.6,
+      "x": 24.0,
+      "y": 5.2,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -1574,8 +1674,8 @@
       "icon": {
         "id": "confluence:spider_boots"
       },
-      "x": 28.8,
-      "y": 3.6,
+      "x": 25.6,
+      "y": 5.2,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -1594,7 +1694,7 @@
       "icon": {
         "id": "confluence:bee_boots"
       },
-      "x": 24.0,
+      "x": 27.2,
       "y": 5.2,
       "min_width": 345,
       "optional": true,
@@ -1614,7 +1714,7 @@
       "icon": {
         "id": "confluence:gladiator_boots"
       },
-      "x": 25.6,
+      "x": 28.8,
       "y": 5.2,
       "min_width": 345,
       "optional": true,
@@ -1634,8 +1734,8 @@
       "icon": {
         "id": "confluence:golden_boots"
       },
-      "x": 27.2,
-      "y": 5.2,
+      "x": 24.0,
+      "y": 6.800000000000001,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -1654,8 +1754,8 @@
       "icon": {
         "id": "confluence:platinum_boots"
       },
-      "x": 28.8,
-      "y": 5.2,
+      "x": 25.6,
+      "y": 6.800000000000001,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -1674,7 +1774,7 @@
       "icon": {
         "id": "confluence:obsidian_boots"
       },
-      "x": 24.0,
+      "x": 27.2,
       "y": 6.800000000000001,
       "min_width": 345,
       "optional": true,
@@ -1694,7 +1794,7 @@
       "icon": {
         "id": "create:netherite_diving_boots"
       },
-      "x": 25.6,
+      "x": 28.8,
       "y": 6.800000000000001,
       "min_width": 345,
       "optional": true,
@@ -1714,8 +1814,8 @@
       "icon": {
         "id": "goety:cursed_paladin_boots"
       },
-      "x": 27.2,
-      "y": 6.800000000000001,
+      "x": 24.0,
+      "y": 8.4,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -1734,8 +1834,8 @@
       "icon": {
         "id": "goety:dark_boots"
       },
-      "x": 28.8,
-      "y": 6.800000000000001,
+      "x": 25.6,
+      "y": 8.4,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -1754,7 +1854,7 @@
       "icon": {
         "id": "irons_spellbooks:netherite_mage_boots"
       },
-      "x": 24.0,
+      "x": 27.2,
       "y": 8.4,
       "min_width": 345,
       "optional": true,
@@ -1774,7 +1874,7 @@
       "icon": {
         "id": "irons_spellbooks:cryomancer_boots"
       },
-      "x": 25.6,
+      "x": 28.8,
       "y": 8.4,
       "min_width": 345,
       "optional": true,
@@ -1794,8 +1894,8 @@
       "icon": {
         "id": "irons_spellbooks:wizard_boots"
       },
-      "x": 27.2,
-      "y": 8.4,
+      "x": 24.0,
+      "y": 10.0,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -1814,8 +1914,8 @@
       "icon": {
         "id": "irons_spellbooks:pumpkin_boots"
       },
-      "x": 28.8,
-      "y": 8.4,
+      "x": 25.6,
+      "y": 10.0,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -1834,7 +1934,7 @@
       "icon": {
         "id": "irons_spellbooks:shadowwalker_boots"
       },
-      "x": 24.0,
+      "x": 27.2,
       "y": 10.0,
       "min_width": 345,
       "optional": true,
@@ -1854,7 +1954,7 @@
       "icon": {
         "id": "irons_spellbooks:pyromancer_boots"
       },
-      "x": 25.6,
+      "x": 28.8,
       "y": 10.0,
       "min_width": 345,
       "optional": true,
@@ -1874,8 +1974,8 @@
       "icon": {
         "id": "irons_spellbooks:priest_boots"
       },
-      "x": 27.2,
-      "y": 10.0,
+      "x": 24.0,
+      "y": 11.600000000000001,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -1894,8 +1994,8 @@
       "icon": {
         "id": "irons_spellbooks:cultist_boots"
       },
-      "x": 28.8,
-      "y": 10.0,
+      "x": 25.6,
+      "y": 11.600000000000001,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -1914,7 +2014,7 @@
       "icon": {
         "id": "irons_spellbooks:plagued_boots"
       },
-      "x": 24.0,
+      "x": 27.2,
       "y": 11.600000000000001,
       "min_width": 345,
       "optional": true,
@@ -1934,7 +2034,7 @@
       "icon": {
         "id": "irons_spellbooks:speed_boots"
       },
-      "x": 25.6,
+      "x": 28.8,
       "y": 11.600000000000001,
       "min_width": 345,
       "optional": true,
@@ -1954,8 +2054,8 @@
       "icon": {
         "id": "irons_spellbooks:electromancer_boots"
       },
-      "x": 27.2,
-      "y": 11.600000000000001,
+      "x": 24.0,
+      "y": 13.200000000000001,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -1974,8 +2074,8 @@
       "icon": {
         "id": "irons_spellbooks:archevoker_boots"
       },
-      "x": 28.8,
-      "y": 11.600000000000001,
+      "x": 25.6,
+      "y": 13.200000000000001,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -1994,7 +2094,7 @@
       "icon": {
         "id": "l2complements:eternium_boots"
       },
-      "x": 24.0,
+      "x": 27.2,
       "y": 13.200000000000001,
       "min_width": 345,
       "optional": true,
@@ -2014,7 +2114,7 @@
       "icon": {
         "id": "l2complements:poseidite_boots"
       },
-      "x": 25.6,
+      "x": 28.8,
       "y": 13.200000000000001,
       "min_width": 345,
       "optional": true,
@@ -2034,8 +2134,8 @@
       "icon": {
         "id": "l2complements:shulkerate_boots"
       },
-      "x": 27.2,
-      "y": 13.200000000000001,
+      "x": 24.0,
+      "y": 14.8,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -2054,8 +2154,8 @@
       "icon": {
         "id": "minecraft:netherite_boots"
       },
-      "x": 28.8,
-      "y": 13.200000000000001,
+      "x": 25.6,
+      "y": 14.8,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -2074,7 +2174,7 @@
       "icon": {
         "id": "minecraft:diamond_boots"
       },
-      "x": 24.0,
+      "x": 27.2,
       "y": 14.8,
       "min_width": 345,
       "optional": true,
@@ -2094,7 +2194,7 @@
       "icon": {
         "id": "terra_entity:wraith_armor_boots"
       },
-      "x": 25.6,
+      "x": 28.8,
       "y": 14.8,
       "min_width": 345,
       "optional": true,
@@ -2114,8 +2214,28 @@
       "icon": {
         "id": "terra_entity:possessed_armor_boots"
       },
-      "x": 27.2,
-      "y": 14.8,
+      "x": 24.0,
+      "y": 16.4,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "1361BA562249FB22",
+      "icon": {
+        "id": "enigmaticlegacyplus:etherium_boots"
+      },
+      "x": 25.6,
+      "y": 16.4,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,

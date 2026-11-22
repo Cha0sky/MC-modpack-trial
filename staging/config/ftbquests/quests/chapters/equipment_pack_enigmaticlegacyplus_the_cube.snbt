@@ -1,0 +1,811 @@
+{
+  "id": "33E5EA5EF3E8C2BA",
+  "filename": "equipment_pack_enigmaticlegacyplus_the_cube",
+  "group": "6D1938960E54F1E0",
+  "order_index": 28,
+  "icon": {
+    "id": "enigmaticlegacyplus:the_cube"
+  },
+  "progression_mode": "flexible",
+  "disable_toast": true,
+  "quests": [
+    {
+      "id": "4EBC15564847CD5E",
+      "icon": {
+        "id": "enigmaticlegacyplus:the_cube"
+      },
+      "x": 0,
+      "y": -3,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "7960245612383510",
+      "icon": {
+        "id": "enigmaticlegacyplus:angel_blessing"
+      },
+      "x": 9,
+      "y": 12.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "0D91FB269AC8B4BF",
+        "6EA3021E26D0BE25",
+        "058CF5F65AF0E4D5"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "00546FF3A69FE509",
+      "icon": {
+        "id": "enigmaticlegacyplus:ascension_amulet"
+      },
+      "x": 6,
+      "y": 14.4,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "3F6808A538BE0493",
+        "78DBD2E2363595D9",
+        "50B97E6CBCFEBE8A",
+        "4BEFA9EFAF1B89AB",
+        "17ED7B71F4E02EDB",
+        "3DB7FE8E71553DF6",
+        "4A7483321AAEB7AF",
+        "6695C59D85FB884D"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "61D91A5B806D21F6",
+      "icon": {
+        "id": "enigmaticlegacyplus:blank_scroll"
+      },
+      "x": 0,
+      "y": 8.8,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "270FC88DE22466DC",
+      "icon": {
+        "id": "enigmaticlegacyplus:blazing_core"
+      },
+      "x": 3,
+      "y": 3.1999999999999993,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "6EA3021E26D0BE25",
+        "058CF5F65AF0E4D5"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "793664993B1848B4",
+      "icon": {
+        "id": "enigmaticlegacyplus:chaos_elytra"
+      },
+      "x": 6,
+      "y": 12.8,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "3F6808A538BE0493",
+        "36364547D8E81236"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "3F6808A538BE0493",
+      "icon": {
+        "id": "enigmaticlegacyplus:cosmic_heart"
+      },
+      "x": 0,
+      "y": 10.4,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "6BF8F84AF408939B",
+      "icon": {
+        "id": "enigmaticlegacyplus:desolation_ring"
+      },
+      "x": 6,
+      "y": 11.200000000000001,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "3F6808A538BE0493",
+        "036409B40D155454",
+        "36364547D8E81236"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "6D9A98A791A865D2",
+      "icon": {
+        "id": "enigmaticlegacyplus:eldritch_amulet"
+      },
+      "x": 9,
+      "y": 13.600000000000001,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "00546FF3A69FE509"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "78DBD2E2363595D9",
+      "icon": {
+        "id": "enigmaticlegacyplus:enigmatic_amulet_aqua"
+      },
+      "x": 3,
+      "y": 16.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "3928273A63B1825C"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "50B97E6CBCFEBE8A",
+      "icon": {
+        "id": "enigmaticlegacyplus:enigmatic_amulet_black"
+      },
+      "x": 3,
+      "y": 17.6,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "3928273A63B1825C"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "4BEFA9EFAF1B89AB",
+      "icon": {
+        "id": "enigmaticlegacyplus:enigmatic_amulet_blue"
+      },
+      "x": 3,
+      "y": 19.200000000000003,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "3928273A63B1825C"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "17ED7B71F4E02EDB",
+      "icon": {
+        "id": "enigmaticlegacyplus:enigmatic_amulet_green"
+      },
+      "x": 3,
+      "y": 20.8,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "3928273A63B1825C"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "3DB7FE8E71553DF6",
+      "icon": {
+        "id": "enigmaticlegacyplus:enigmatic_amulet_magenta"
+      },
+      "x": 3,
+      "y": 22.400000000000002,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "3928273A63B1825C"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "4A7483321AAEB7AF",
+      "icon": {
+        "id": "enigmaticlegacyplus:enigmatic_amulet_red"
+      },
+      "x": 3,
+      "y": 24.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "3928273A63B1825C"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "6695C59D85FB884D",
+      "icon": {
+        "id": "enigmaticlegacyplus:enigmatic_amulet_violet"
+      },
+      "x": 3,
+      "y": 25.6,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "3928273A63B1825C"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "11208163201E8E8C",
+      "icon": {
+        "id": "enigmaticlegacyplus:eye_of_nebula"
+      },
+      "x": 3,
+      "y": 4.800000000000001,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "6EA3021E26D0BE25",
+        "058CF5F65AF0E4D5"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "3ACFBE19E3DDFA5C",
+      "icon": {
+        "id": "enigmaticlegacyplus:fabulous_scroll"
+      },
+      "x": 15,
+      "y": 12.8,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "469D1A49D68DAE2F"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "7187F26F7484AC8A",
+      "icon": {
+        "id": "enigmaticlegacyplus:forgotten_ice"
+      },
+      "x": 3,
+      "y": 6.4,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "6EA3021E26D0BE25",
+        "058CF5F65AF0E4D5"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "036409B40D155454",
+      "icon": {
+        "id": "enigmaticlegacyplus:golden_ring"
+      },
+      "x": 3,
+      "y": 0.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "0E65091E27B02D63"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "551B4ED4565A59AE",
+      "icon": {
+        "id": "enigmaticlegacyplus:golem_heart"
+      },
+      "x": 3,
+      "y": 1.5999999999999996,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "0E65091E27B02D63",
+        "6EA3021E26D0BE25",
+        "058CF5F65AF0E4D5"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "469D1A49D68DAE2F",
+      "icon": {
+        "id": "enigmaticlegacyplus:heaven_scroll"
+      },
+      "x": 12,
+      "y": 14.4,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "7960245612383510",
+        "61D91A5B806D21F6"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "24A260C6A79C7441",
+      "icon": {
+        "id": "enigmaticlegacyplus:illusion_lantern"
+      },
+      "x": 3,
+      "y": 8.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "6EA3021E26D0BE25",
+        "058CF5F65AF0E4D5"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "0E65091E27B02D63",
+      "icon": {
+        "id": "enigmaticlegacyplus:iron_ring"
+      },
+      "x": 0,
+      "y": 12.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "31B1B5ACFF74584E",
+      "icon": {
+        "id": "enigmaticlegacyplus:lost_engine"
+      },
+      "x": 3,
+      "y": 9.600000000000001,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "6EA3021E26D0BE25",
+        "058CF5F65AF0E4D5"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "5B312E11A77118B6",
+      "icon": {
+        "id": "enigmaticlegacyplus:majestic_elytra"
+      },
+      "x": 12,
+      "y": 11.200000000000001,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "7960245612383510",
+        "11208163201E8E8C"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "48B75ECA906B99BD",
+      "icon": {
+        "id": "enigmaticlegacyplus:ocean_stone"
+      },
+      "x": 3,
+      "y": 11.200000000000001,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "6EA3021E26D0BE25",
+        "058CF5F65AF0E4D5"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "0D91FB269AC8B4BF",
+      "icon": {
+        "id": "enigmaticlegacyplus:quartz_ring"
+      },
+      "x": 6,
+      "y": 9.600000000000001,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "036409B40D155454"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "2B46F16DAFB338B1",
+      "icon": {
+        "id": "enigmaticlegacyplus:redemption_amulet"
+      },
+      "x": 6,
+      "y": 16.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "78DBD2E2363595D9",
+        "50B97E6CBCFEBE8A",
+        "4BEFA9EFAF1B89AB",
+        "17ED7B71F4E02EDB",
+        "3DB7FE8E71553DF6",
+        "4A7483321AAEB7AF",
+        "6695C59D85FB884D"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "6A49AC9E3A903B7D",
+      "icon": {
+        "id": "enigmaticlegacyplus:revival_leaf"
+      },
+      "x": 3,
+      "y": 12.8,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "6EA3021E26D0BE25",
+        "058CF5F65AF0E4D5"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "6EA3021E26D0BE25",
+      "icon": {
+        "id": "enigmaticlegacyplus:spellcore"
+      },
+      "x": 0,
+      "y": 13.600000000000001,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "058CF5F65AF0E4D5",
+      "icon": {
+        "id": "enigmaticlegacyplus:spellstone_debris"
+      },
+      "x": 0,
+      "y": 15.200000000000001,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "32C2BD4CBEFABBFD",
+      "icon": {
+        "id": "enigmaticlegacyplus:the_cube"
+      },
+      "x": 12,
+      "y": 12.8,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "7960245612383510",
+        "270FC88DE22466DC",
+        "3F6808A538BE0493",
+        "11208163201E8E8C",
+        "7187F26F7484AC8A",
+        "551B4ED4565A59AE",
+        "24A260C6A79C7441",
+        "31B1B5ACFF74584E",
+        "48B75ECA906B99BD",
+        "6A49AC9E3A903B7D",
+        "6EA3021E26D0BE25",
+        "058CF5F65AF0E4D5",
+        "36364547D8E81236"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "3928273A63B1825C",
+      "icon": {
+        "id": "enigmaticlegacyplus:unwitnessed_amulet"
+      },
+      "x": 0,
+      "y": 16.8,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "36364547D8E81236",
+      "icon": {
+        "id": "enigmaticlegacyplus:void_pearl"
+      },
+      "x": 3,
+      "y": 14.4,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "6EA3021E26D0BE25",
+        "058CF5F65AF0E4D5"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    }
+  ]
+}

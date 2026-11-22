@@ -1,0 +1,55 @@
+{
+  "minecraft": "1.21.1",
+  "neoforge": "21.1.248",
+  "files": [
+    {
+      "id": "enigmaticlegacyplus",
+      "version": "1.21.1-1.1.2",
+      "file": "enigmaticlegacyplus-1.21.1-1.1.2.jar",
+      "url": "https://cdn.modrinth.com/data/oIjj1Fan/versions/ELK5gx91/enigmaticlegacyplus-1.21.1-1.1.2.jar",
+      "release": "https://modrinth.com/mod/enigmaticlegacy-plus/version/ELK5gx91"
+    },
+    {
+      "id": "bhc",
+      "version": "1.21.1-1.4.2",
+      "file": "baubley-heart-canisters-1.21.1-1.4.2.jar",
+      "url": "https://cdn.modrinth.com/data/fPdy2fCM/versions/C8wXuovY/baubley-heart-canisters-1.21.1-1.4.2.jar",
+      "release": "https://modrinth.com/mod/baubley-heart-canisters/version/C8wXuovY"
+    },
+    {
+      "id": "caelus",
+      "version": "7.0.1+1.21.1",
+      "file": "caelus-neoforge-7.0.1+1.21.1.jar",
+      "url": "https://cdn.modrinth.com/data/40FYwb4z/versions/KsfI4QsR/caelus-neoforge-7.0.1%2B1.21.1.jar",
+      "release": "https://modrinth.com/mod/caelus/version/KsfI4QsR"
+    },
+    {
+      "id": "relics",
+      "version": "0.10.7.8",
+      "file": "relics-1.21.1-0.10.7.8.jar",
+      "url": "https://cdn.modrinth.com/data/OCJRPujW/versions/nvZZMhJS/relics-1.21.1-0.10.7.8.jar",
+      "release": "https://modrinth.com/mod/relics-mod/version/nvZZMhJS"
+    },
+    {
+      "id": "octolib",
+      "version": "0.6.3.2",
+      "file": "OctoLib-NEOFORGE-0.6.3.2+1.21.jar",
+      "url": "https://cdn.modrinth.com/data/RH2KUdKJ/versions/bhZqwctG/OctoLib-NEOFORGE-0.6.3.2%2B1.21.jar",
+      "release": "https://modrinth.com/mod/shatterbyte-lib/version/bhZqwctG"
+    },
+    {
+      "id": "celestial_artifacts",
+      "version": "2.0.4",
+      "file": "celestial_artifacts-2.0.4.jar",
+      "url": "https://edge.forgecdn.net/files/8805/750/celestial_artifacts-2.0.4.jar",
+      "release": "https://www.curseforge.com/minecraft/mc-mods/celestial-artifacts/files/8805750"
+    },
+    {
+      "id": "celestial_core",
+      "version": "2.0.2",
+      "file": "celestial_core-2.0.2.jar",
+      "url": "https://edge.forgecdn.net/files/8872/040/celestial_core-2.0.2.jar",
+      "release": "https://www.curseforge.com/minecraft/mc-mods/celestial-core/files/8872040"
+    }
+  ]
+}

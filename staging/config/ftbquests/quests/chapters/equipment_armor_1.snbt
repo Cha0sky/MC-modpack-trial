@@ -450,11 +450,31 @@
       "hide_dependency_lines": false
     },
     {
+      "id": "5A7A730A9B502F10",
+      "icon": {
+        "id": "celestial_core:sakura_helmet"
+      },
+      "x": 0.0,
+      "y": 10.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
       "id": "3A522B9BB91B5A39",
       "icon": {
         "id": "confluence:fossil_helmet"
       },
-      "x": 0.0,
+      "x": 1.6,
       "y": 10.0,
       "min_width": 345,
       "optional": true,
@@ -474,7 +494,7 @@
       "icon": {
         "id": "confluence:pumpkin_helmet"
       },
-      "x": 1.6,
+      "x": 3.2,
       "y": 10.0,
       "min_width": 345,
       "optional": true,
@@ -494,7 +514,7 @@
       "icon": {
         "id": "confluence:spore_root_helmet"
       },
-      "x": 3.2,
+      "x": 4.800000000000001,
       "y": 10.0,
       "min_width": 345,
       "optional": true,
@@ -514,8 +534,8 @@
       "icon": {
         "id": "confluence:cold_crystal_helmet"
       },
-      "x": 4.800000000000001,
-      "y": 10.0,
+      "x": 0.0,
+      "y": 11.600000000000001,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -534,7 +554,7 @@
       "icon": {
         "id": "confluence:orichalcum_headgear"
       },
-      "x": 0.0,
+      "x": 1.6,
       "y": 11.600000000000001,
       "min_width": 345,
       "optional": true,
@@ -554,7 +574,7 @@
       "icon": {
         "id": "confluence:ninja_helmet"
       },
-      "x": 1.6,
+      "x": 3.2,
       "y": 11.600000000000001,
       "min_width": 345,
       "optional": true,
@@ -574,7 +594,7 @@
       "icon": {
         "id": "confluence:mining_helmet"
       },
-      "x": 3.2,
+      "x": 4.800000000000001,
       "y": 11.600000000000001,
       "min_width": 345,
       "optional": true,
@@ -594,8 +614,8 @@
       "icon": {
         "id": "confluence:ash_helmet"
       },
-      "x": 4.800000000000001,
-      "y": 11.600000000000001,
+      "x": 0.0,
+      "y": 13.200000000000001,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -614,7 +634,7 @@
       "icon": {
         "id": "confluence:mythril_hood"
       },
-      "x": 0.0,
+      "x": 1.6,
       "y": 13.200000000000001,
       "min_width": 345,
       "optional": true,
@@ -634,7 +654,7 @@
       "icon": {
         "id": "confluence:pink_snow_caps"
       },
-      "x": 1.6,
+      "x": 3.2,
       "y": 13.200000000000001,
       "min_width": 345,
       "optional": true,
@@ -654,7 +674,7 @@
       "icon": {
         "id": "confluence:green_cap"
       },
-      "x": 3.2,
+      "x": 4.800000000000001,
       "y": 13.200000000000001,
       "min_width": 345,
       "optional": true,
@@ -674,8 +694,8 @@
       "icon": {
         "id": "confluence:tungsten_helmet"
       },
-      "x": 4.800000000000001,
-      "y": 13.200000000000001,
+      "x": 0.0,
+      "y": 14.8,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -694,7 +714,7 @@
       "icon": {
         "id": "confluence:lead_helmet"
       },
-      "x": 0.0,
+      "x": 1.6,
       "y": 14.8,
       "min_width": 345,
       "optional": true,
@@ -714,7 +734,7 @@
       "icon": {
         "id": "confluence:copper_helmet"
       },
-      "x": 1.6,
+      "x": 3.2,
       "y": 14.8,
       "min_width": 345,
       "optional": true,
@@ -734,7 +754,7 @@
       "icon": {
         "id": "confluence:silver_helmet"
       },
-      "x": 3.2,
+      "x": 4.800000000000001,
       "y": 14.8,
       "min_width": 345,
       "optional": true,
@@ -754,8 +774,8 @@
       "icon": {
         "id": "confluence:tin_helmet"
       },
-      "x": 4.800000000000001,
-      "y": 14.8,
+      "x": 0.0,
+      "y": 16.4,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -774,7 +794,7 @@
       "icon": {
         "id": "confluence:snow_caps"
       },
-      "x": 0.0,
+      "x": 1.6,
       "y": 16.4,
       "min_width": 345,
       "optional": true,
@@ -794,7 +814,7 @@
       "icon": {
         "id": "confluence:magic_hat"
       },
-      "x": 1.6,
+      "x": 3.2,
       "y": 16.4,
       "min_width": 345,
       "optional": true,
@@ -814,7 +834,7 @@
       "icon": {
         "id": "create:copper_diving_helmet"
       },
-      "x": 3.2,
+      "x": 4.800000000000001,
       "y": 16.4,
       "min_width": 345,
       "optional": true,
@@ -834,8 +854,8 @@
       "icon": {
         "id": "goety:malefic_helm"
       },
-      "x": 4.800000000000001,
-      "y": 16.4,
+      "x": 0.0,
+      "y": 18.0,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -854,7 +874,7 @@
       "icon": {
         "id": "goety:cursed_knight_helmet"
       },
-      "x": 0.0,
+      "x": 1.6,
       "y": 18.0,
       "min_width": 345,
       "optional": true,
@@ -874,7 +894,7 @@
       "icon": {
         "id": "goety:black_iron_helmet"
       },
-      "x": 1.6,
+      "x": 3.2,
       "y": 18.0,
       "min_width": 345,
       "optional": true,
@@ -894,7 +914,7 @@
       "icon": {
         "id": "irons_spellbooks:wandering_magician_helmet"
       },
-      "x": 3.2,
+      "x": 4.800000000000001,
       "y": 18.0,
       "min_width": 345,
       "optional": true,
@@ -914,8 +934,8 @@
       "icon": {
         "id": "l2complements:totemic_gold_helmet"
       },
-      "x": 4.800000000000001,
-      "y": 18.0,
+      "x": 0.0,
+      "y": 19.6,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -934,7 +954,7 @@
       "icon": {
         "id": "minecraft:turtle_helmet"
       },
-      "x": 0.0,
+      "x": 1.6,
       "y": 19.6,
       "min_width": 345,
       "optional": true,
@@ -954,7 +974,7 @@
       "icon": {
         "id": "minecraft:golden_helmet"
       },
-      "x": 1.6,
+      "x": 3.2,
       "y": 19.6,
       "min_width": 345,
       "optional": true,
@@ -974,7 +994,7 @@
       "icon": {
         "id": "minecraft:iron_helmet"
       },
-      "x": 3.2,
+      "x": 4.800000000000001,
       "y": 19.6,
       "min_width": 345,
       "optional": true,
@@ -994,8 +1014,8 @@
       "icon": {
         "id": "minecraft:chainmail_helmet"
       },
-      "x": 4.800000000000001,
-      "y": 19.6,
+      "x": 0.0,
+      "y": 21.200000000000003,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -1014,7 +1034,7 @@
       "icon": {
         "id": "mowziesmobs:geomancer_beads"
       },
-      "x": 0.0,
+      "x": 1.6,
       "y": 21.200000000000003,
       "min_width": 345,
       "optional": true,
@@ -1034,7 +1054,7 @@
       "icon": {
         "id": "mowziesmobs:sol_visage"
       },
-      "x": 1.6,
+      "x": 3.2,
       "y": 21.200000000000003,
       "min_width": 345,
       "optional": true,
@@ -1054,7 +1074,7 @@
       "icon": {
         "id": "mowziesmobs:wrought_helmet"
       },
-      "x": 3.2,
+      "x": 4.800000000000001,
       "y": 21.200000000000003,
       "min_width": 345,
       "optional": true,
@@ -1074,8 +1094,8 @@
       "icon": {
         "id": "terra_curio:diving_helmet"
       },
-      "x": 4.800000000000001,
-      "y": 21.200000000000003,
+      "x": 0.0,
+      "y": 22.8,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -1990,12 +2010,32 @@
       "hide_dependency_lines": false
     },
     {
+      "id": "5483F639675862BA",
+      "icon": {
+        "id": "celestial_core:sakura_boots"
+      },
+      "x": 28.8,
+      "y": 5.2,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
       "id": "3E60E5D9DCD0A8EA",
       "icon": {
         "id": "confluence:insulated_shoes"
       },
-      "x": 28.8,
-      "y": 5.2,
+      "x": 24.0,
+      "y": 6.800000000000001,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -2014,7 +2054,7 @@
       "icon": {
         "id": "confluence:fossil_boots"
       },
-      "x": 24.0,
+      "x": 25.6,
       "y": 6.800000000000001,
       "min_width": 345,
       "optional": true,
@@ -2034,7 +2074,7 @@
       "icon": {
         "id": "confluence:pumpkin_boots"
       },
-      "x": 25.6,
+      "x": 27.2,
       "y": 6.800000000000001,
       "min_width": 345,
       "optional": true,
@@ -2054,7 +2094,7 @@
       "icon": {
         "id": "confluence:spore_root_boots"
       },
-      "x": 27.2,
+      "x": 28.8,
       "y": 6.800000000000001,
       "min_width": 345,
       "optional": true,
@@ -2074,8 +2114,8 @@
       "icon": {
         "id": "confluence:cold_crystal_boots"
       },
-      "x": 28.8,
-      "y": 6.800000000000001,
+      "x": 24.0,
+      "y": 8.4,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -2094,7 +2134,7 @@
       "icon": {
         "id": "confluence:ninja_boots"
       },
-      "x": 24.0,
+      "x": 25.6,
       "y": 8.4,
       "min_width": 345,
       "optional": true,
@@ -2114,7 +2154,7 @@
       "icon": {
         "id": "confluence:ash_boots"
       },
-      "x": 25.6,
+      "x": 27.2,
       "y": 8.4,
       "min_width": 345,
       "optional": true,
@@ -2134,7 +2174,7 @@
       "icon": {
         "id": "confluence:pink_insulated_shoes"
       },
-      "x": 27.2,
+      "x": 28.8,
       "y": 8.4,
       "min_width": 345,
       "optional": true,
@@ -2154,8 +2194,8 @@
       "icon": {
         "id": "confluence:tungsten_boots"
       },
-      "x": 28.8,
-      "y": 8.4,
+      "x": 24.0,
+      "y": 10.0,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -2174,7 +2214,7 @@
       "icon": {
         "id": "confluence:lead_boots"
       },
-      "x": 24.0,
+      "x": 25.6,
       "y": 10.0,
       "min_width": 345,
       "optional": true,
@@ -2194,7 +2234,7 @@
       "icon": {
         "id": "confluence:copper_boots"
       },
-      "x": 25.6,
+      "x": 27.2,
       "y": 10.0,
       "min_width": 345,
       "optional": true,
@@ -2214,7 +2254,7 @@
       "icon": {
         "id": "confluence:silver_boots"
       },
-      "x": 27.2,
+      "x": 28.8,
       "y": 10.0,
       "min_width": 345,
       "optional": true,
@@ -2234,8 +2274,8 @@
       "icon": {
         "id": "confluence:tin_boots"
       },
-      "x": 28.8,
-      "y": 10.0,
+      "x": 24.0,
+      "y": 11.600000000000001,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -2254,7 +2294,7 @@
       "icon": {
         "id": "goety:cursed_knight_boots"
       },
-      "x": 24.0,
+      "x": 25.6,
       "y": 11.600000000000001,
       "min_width": 345,
       "optional": true,
@@ -2274,7 +2314,7 @@
       "icon": {
         "id": "goety:black_iron_boots"
       },
-      "x": 25.6,
+      "x": 27.2,
       "y": 11.600000000000001,
       "min_width": 345,
       "optional": true,
@@ -2294,7 +2334,7 @@
       "icon": {
         "id": "irons_spellbooks:wandering_magician_boots"
       },
-      "x": 27.2,
+      "x": 28.8,
       "y": 11.600000000000001,
       "min_width": 345,
       "optional": true,
@@ -2314,8 +2354,8 @@
       "icon": {
         "id": "kaleidoscope_cookery:farmer_boots"
       },
-      "x": 28.8,
-      "y": 11.600000000000001,
+      "x": 24.0,
+      "y": 13.200000000000001,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -2334,7 +2374,7 @@
       "icon": {
         "id": "l2complements:totemic_gold_boots"
       },
-      "x": 24.0,
+      "x": 25.6,
       "y": 13.200000000000001,
       "min_width": 345,
       "optional": true,
@@ -2354,7 +2394,7 @@
       "icon": {
         "id": "minecraft:iron_boots"
       },
-      "x": 25.6,
+      "x": 27.2,
       "y": 13.200000000000001,
       "min_width": 345,
       "optional": true,
@@ -2374,7 +2414,7 @@
       "icon": {
         "id": "mowziesmobs:geomancer_sandals"
       },
-      "x": 27.2,
+      "x": 28.8,
       "y": 13.200000000000001,
       "min_width": 345,
       "optional": true,

@@ -1,0 +1,793 @@
+{
+  "id": "628CA10C23B0A51E",
+  "filename": "equipment_pack_celestial_artifacts_cursed_talisman",
+  "group": "6D1938960E54F1E0",
+  "order_index": 34,
+  "icon": {
+    "id": "celestial_artifacts:cursed_talisman"
+  },
+  "progression_mode": "flexible",
+  "disable_toast": true,
+  "quests": [
+    {
+      "id": "01B1646C331AEC3F",
+      "icon": {
+        "id": "celestial_artifacts:cursed_talisman"
+      },
+      "x": 0,
+      "y": -3,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "2D9195DB85504394",
+      "icon": {
+        "id": "celestial_artifacts:abyss_will_badge"
+      },
+      "x": 3,
+      "y": 8.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "2D07196F01850F4B",
+        "24221063CC34D95D",
+        "0175918EB326D33A",
+        "2A57374B1C222973",
+        "08D5693BCD2DC92E"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "09018A69CD892572",
+      "icon": {
+        "id": "celestial_artifacts:angel_pearl"
+      },
+      "x": 3,
+      "y": 20.8,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "41B26D7AD9FF68C0",
+        "24221063CC34D95D",
+        "2D12088F71AD214C",
+        "6DAEC4C73FBF1EA5",
+        "2CF9B2B538C05009"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "25B82E24E9C9BA3F",
+      "icon": {
+        "id": "celestial_artifacts:chaotic_etching"
+      },
+      "x": 0,
+      "y": 0.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "7E8070A1E68EBA7B",
+      "icon": {
+        "id": "celestial_artifacts:corrupt_badge"
+      },
+      "x": 3,
+      "y": 9.600000000000001,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "25B82E24E9C9BA3F",
+        "2D07196F01850F4B",
+        "24221063CC34D95D",
+        "2A57374B1C222973",
+        "5D32AA87A9C38570"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "4E5740A1ACBC4745",
+      "icon": {
+        "id": "celestial_artifacts:cursed_protector"
+      },
+      "x": 3,
+      "y": 16.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "25B82E24E9C9BA3F",
+        "24221063CC34D95D",
+        "22B8AFE0C638F807",
+        "08D5693BCD2DC92E",
+        "5D32AA87A9C38570"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "61B58DB87109609B",
+      "icon": {
+        "id": "celestial_artifacts:cursed_talisman"
+      },
+      "x": 3,
+      "y": 12.8,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "25B82E24E9C9BA3F",
+        "24221063CC34D95D",
+        "2D12088F71AD214C",
+        "2A57374B1C222973",
+        "09BBB2CF119FE6A3",
+        "08D5693BCD2DC92E",
+        "1B46A32902DA5C8D"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "293064C1DEBEEE21",
+      "icon": {
+        "id": "celestial_artifacts:cursed_totem"
+      },
+      "x": 3,
+      "y": 11.2,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "2D07196F01850F4B",
+        "4574F95038DB5AF1",
+        "24221063CC34D95D",
+        "543BDBA3C265FFD4",
+        "32C46911FC45BB6B"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "41B26D7AD9FF68C0",
+      "icon": {
+        "id": "celestial_artifacts:desire_etching"
+      },
+      "x": 0,
+      "y": 1.5999999999999996,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "2D07196F01850F4B",
+      "icon": {
+        "id": "celestial_artifacts:end_etching"
+      },
+      "x": 0,
+      "y": 3.1999999999999993,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "381228D6F252D461",
+      "icon": {
+        "id": "celestial_artifacts:hidden_bracelet"
+      },
+      "x": 3,
+      "y": 17.6,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "24221063CC34D95D",
+        "2A57374B1C222973",
+        "22B8AFE0C638F807",
+        "08D5693BCD2DC92E",
+        "32C46911FC45BB6B"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "2D15325E7A738655",
+      "icon": {
+        "id": "celestial_artifacts:holy_talisman"
+      },
+      "x": 3,
+      "y": 24.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "4574F95038DB5AF1",
+        "24221063CC34D95D",
+        "2D12088F71AD214C",
+        "3908328CB74EFA47",
+        "1596A9779873D2DE",
+        "6DAEC4C73FBF1EA5",
+        "2CF9B2B538C05009"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "4574F95038DB5AF1",
+      "icon": {
+        "id": "celestial_artifacts:life_etching"
+      },
+      "x": 0,
+      "y": 4.800000000000001,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "43DBA0D5AA0FC68A",
+      "icon": {
+        "id": "celestial_artifacts:lock_of_abyss"
+      },
+      "x": 3,
+      "y": 19.200000000000003,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "25B82E24E9C9BA3F",
+        "24221063CC34D95D",
+        "2A57374B1C222973",
+        "08D5693BCD2DC92E",
+        "77B8A238F2A7D170"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "24221063CC34D95D",
+      "icon": {
+        "id": "celestial_artifacts:nebula_cube"
+      },
+      "x": 0,
+      "y": 6.4,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "0175918EB326D33A",
+      "icon": {
+        "id": "celestial_artifacts:nihility_etching"
+      },
+      "x": 0,
+      "y": 8.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "2D12088F71AD214C",
+      "icon": {
+        "id": "celestial_artifacts:origin_etching"
+      },
+      "x": 0,
+      "y": 9.600000000000001,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "438D991259B4A658",
+      "icon": {
+        "id": "celestial_artifacts:sacrificial_object"
+      },
+      "x": 3,
+      "y": 14.4,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "41B26D7AD9FF68C0",
+        "24221063CC34D95D",
+        "2A57374B1C222973",
+        "22B8AFE0C638F807",
+        "09BBB2CF119FE6A3",
+        "32C46911FC45BB6B",
+        "1596A9779873D2DE"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "2B5E4D4EB5ED8754",
+      "icon": {
+        "id": "celestial_artifacts:shadow_pendant"
+      },
+      "x": 3,
+      "y": 25.6,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "24221063CC34D95D",
+        "2A57374B1C222973",
+        "09BBB2CF119FE6A3",
+        "32C46911FC45BB6B",
+        "1B46A32902DA5C8D",
+        "02D960EE94454440"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "7F6CF88DB7991AA8",
+      "icon": {
+        "id": "celestial_artifacts:soul_box"
+      },
+      "x": 3,
+      "y": 22.400000000000002,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [
+        "4574F95038DB5AF1",
+        "24221063CC34D95D",
+        "0175918EB326D33A",
+        "0E2AA2E4355174F9",
+        "1596A9779873D2DE",
+        "77B8A238F2A7D170"
+      ],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "2A57374B1C222973",
+      "icon": {
+        "id": "celestial_artifacts:the_end_dust"
+      },
+      "x": 0,
+      "y": 11.2,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "22B8AFE0C638F807",
+      "icon": {
+        "id": "celestial_artifacts:truth_etching"
+      },
+      "x": 0,
+      "y": 12.8,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "09BBB2CF119FE6A3",
+      "icon": {
+        "id": "celestial_artifacts:unowned_pendant"
+      },
+      "x": 0,
+      "y": 14.4,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "543BDBA3C265FFD4",
+      "icon": {
+        "id": "celestial_core:broken_totem"
+      },
+      "x": 0,
+      "y": 16.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "3908328CB74EFA47",
+      "icon": {
+        "id": "celestial_core:celestial_fragment"
+      },
+      "x": 0,
+      "y": 17.6,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "08D5693BCD2DC92E",
+      "icon": {
+        "id": "celestial_core:cursed_essence"
+      },
+      "x": 0,
+      "y": 19.200000000000003,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "32C46911FC45BB6B",
+      "icon": {
+        "id": "celestial_core:death_essence"
+      },
+      "x": 0,
+      "y": 20.8,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "0E2AA2E4355174F9",
+      "icon": {
+        "id": "celestial_core:heart_fragment"
+      },
+      "x": 0,
+      "y": 22.400000000000002,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "1596A9779873D2DE",
+      "icon": {
+        "id": "celestial_core:light_fragment"
+      },
+      "x": 0,
+      "y": 24.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "1B46A32902DA5C8D",
+      "icon": {
+        "id": "celestial_core:midnight_fragment"
+      },
+      "x": 0,
+      "y": 25.6,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "6DAEC4C73FBF1EA5",
+      "icon": {
+        "id": "celestial_core:pure_nether_star"
+      },
+      "x": 0,
+      "y": 27.200000000000003,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "5D32AA87A9C38570",
+      "icon": {
+        "id": "celestial_core:shulker_scrap"
+      },
+      "x": 0,
+      "y": 28.8,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "2CF9B2B538C05009",
+      "icon": {
+        "id": "celestial_core:soaring_wings"
+      },
+      "x": 0,
+      "y": 30.400000000000002,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "02D960EE94454440",
+      "icon": {
+        "id": "celestial_core:void_essence"
+      },
+      "x": 0,
+      "y": 32.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
+      "id": "77B8A238F2A7D170",
+      "icon": {
+        "id": "celestial_core:warden_sclerite"
+      },
+      "x": 0,
+      "y": 33.6,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    }
+  ]
+}

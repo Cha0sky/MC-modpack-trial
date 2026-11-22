@@ -12,6 +12,9 @@ from deploy_workshop import INSTANCE, QUESTS
 
 
 STATIONS = {
+    "cursed_shaped": "工作台", "shapeless_no_remain": "工作台",
+    "spellstone_table": "术石台", "amulet_shapeless": "工作台升级护符",
+    "fluid_transformation": "流体转化",
     "crafting_shaped": "工作台", "crafting_shapeless": "工作台", "smithing_transform": "锻造台",
     "workshop": "工匠作坊", "hardmode_anvil": "困难模式砧", "heavy_work_bench": "重型工作台",
     "loom": "织布机", "sawmill": "锯木机", "sky_mill": "天磨", "ritual": "黑暗祭坛",
@@ -55,12 +58,26 @@ def read_json(jar, name):
         return json.loads(re.sub(r'(?m)^\s*//[^\n]*', '', raw), strict=False)
 
 
+@lru_cache(maxsize=8)
+def mod_files(paths):
+    found = {}
+    for path in paths:
+        with ZipFile(path) as jar:
+            name = "META-INF/neoforge.mods.toml"
+            if name not in jar.namelist(): continue
+            for mod in tomllib.loads(jar.read(name).decode("utf-8-sig")).get("mods", []):
+                found[mod["modId"]] = path
+    return found
+
+
 def rid(value):
     return value if ":" in value else "minecraft:" + value
 
 
 class EquipmentSources:
-    def __init__(self, instance=INSTANCE):
+    def __init__(self, instance=INSTANCE, extra_mods=None):
+        from equipment_expansions import mod_jars
+        self.jars = mod_jars(instance, extra_mods)
         self.instance = instance
         self.lang = {}
         self.fallback = {}
@@ -76,7 +93,7 @@ class EquipmentSources:
         self.buy = defaultdict(set)
         self.quests = defaultdict(set)
         vanilla = instance / (instance.name + ".jar")
-        for file in [vanilla, *sorted((instance / "mods").glob("*.jar"))]:
+        for file in [vanilla, *self.jars]:
             with ZipFile(file) as base:
                 for layer in jar_layers(base):
                     self._read_layer(layer)
@@ -150,6 +167,20 @@ class EquipmentSources:
     def config(path):
         return tomllib.loads(path.read_text("utf-8-sig"))
 
+    def add_pack_labels(self, rows):
+        for row in rows:
+            self.lang["item." + row["id"].replace(":", ".")] = row["name"]
+        for tag, name in {
+            "c:strings": "线", "c:glass_blocks/colorless": "无色玻璃方块", "c:bones": "骨头",
+            "c:hearts": "任意颜色的微型心", "c:wither_bones": "凋零骨", "c:leathers": "皮革",
+            "c:rods/wooden": "木棒", "c:nether_stars": "下界之星", "c:gems/prismarine": "海晶碎片",
+            "c:gems/amethyst": "紫水晶碎片", "c:gems/diamond": "钻石", "c:gems/emerald": "绿宝石",
+            "c:ingots/iron": "铁锭", "c:storage_blocks/gold": "金块", "c:storage_blocks/netherite": "下界合金块",
+            "c:seeds": "任意种子", "minecraft:wool": "任意羊毛", "minecraft:leaves": "任意树叶",
+            "enigmaticlegacyplus:enigmatic_amulets": "任意已显现的护身符",
+        }.items():
+            self.lang["tag.item." + tag.replace(":", ".").replace("/", ".")] = name
+
     def name(self, key):
         if key.startswith("#"):
             tag = key[1:]
@@ -212,6 +243,12 @@ class EquipmentSources:
             for key in ("template", "base", "addition", "source", "activation_item", "ingredient", "input"):
                 if key in d: add(d[key])
             for inp in d.get("ingredients", []): add(inp)
+            if d["type"] == "celestial_core:fluid_transformation":
+                for inp in d.get("inputs", []): add(inp)
+        if d["type"] == "enigmaticlegacyplus:spellstone_table":
+            # The menu requires and consumes one core outside the seven recipe slots.
+            add("enigmaticlegacyplus:spellcore")
+            if d.get("debris_count"): add("enigmaticlegacyplus:spellstone_debris", d["debris_count"])
         return result
 
     def _index(self):
@@ -220,6 +257,7 @@ class EquipmentSources:
             if "confluence" in self.mods and (ns == "terra_entity" or ns == "terra_curio" and slug in TC_REMOVED): continue
             if not all(map(self.condition, d.get("neoforge:conditions", []))): continue
             result = d.get("result", d.get("results", d.get("target", [])))
+            if d.get("type") == "celestial_core:fluid_transformation": result = d.get("output", [])
             for stack in result if isinstance(result, list) else [result]:
                 output = stack if isinstance(stack, str) else stack.get("id", stack.get("item")) if isinstance(stack, dict) else None
                 if isinstance(output, str):
@@ -262,6 +300,8 @@ class EquipmentSources:
             path = key.split(":")[1]
             if not path.startswith(("chests/", "entities/", "blocks/", "gameplay/", "treasure_bag/", "archaeology/", "advancement/")): continue
             if path.startswith("chests/additional_"): continue
+            if key.startswith("enigmaticlegacyplus:chests/") and path.endswith("_addon"): continue
+            if key.startswith("celestial_artifacts:chests/"): continue  # Injected tables, resolved to actual locations by the mod reader.
             todo, visited = [key], set()
             while todo:
                 sub = todo.pop()
@@ -294,6 +334,9 @@ class EquipmentSources:
                 if isinstance(raw, dict) and (potion := raw.get("components", {}).get("minecraft:potion_contents", {}).get("potion")):
                     key_potion = "item.minecraft.potion.effect." + potion.split(":")[-1]
                     extra.append("药水须用" + self.lang.get(key_potion, potion))
+            if ty == "cursed_shaped": extra.append("若成品属于诅咒或祝福物品，能被浸染的材料须先浸染")
+            if ty == "spellstone_table": extra.append("术质核心放入专槽，成品取出时消耗")
+            if ty == "fluid_transformation": extra.append("投入流体：" + self.name(d["fluid"]))
             if d.get("power"): extra.append("P 点 " + str(d["power"]))
             if count > 1: extra.append(f"产出 {count} 件")
             if ty == "sequenced_assembly":
@@ -312,6 +355,10 @@ class EquipmentSources:
             details = []
             for options, amount in parts.items():
                 s = " 或 ".join(self.name(i) for i in options)
+                if d.get("all_different") and options == ("#enigmaticlegacyplus:materials_of_the_cube",):
+                    choices = sorted(self.tag_items(options[0][1:]))
+                    details.append(f"从 {len(choices)} 种术石中任选 {amount} 种，各 1 个")
+                    continue
                 details.append((f"（{s}）" if len(options) > 1 else s) + (f" ×{amount}" if amount != 1 else ""))
             line = station + " · " + " ＋ ".join(details) + ("（" + "，".join(extra) + "）" if extra else "")
             ingredients = set()
@@ -322,7 +369,7 @@ class EquipmentSources:
             routes.append((line, ingredients, ty))
         return routes
 
-    def loot_name(self, key):
+    def loot_name(self, key, expansion=False):
         ns, path = key.split(":", 1)
         category, _, suffix = path.partition("/")
         slug = suffix.split("/")[-1]
@@ -335,6 +382,16 @@ class EquipmentSources:
             tier = "大师" if mode.startswith("master") else "专家" if mode.startswith("expert") else mode
             return "打开" + self.name("terra_entity:" + boss) + "的宝藏袋（" + tier + "）"
         label = LOOT_NAMES.get(slug)
+        if expansion and not label:
+            label = {
+                "ancient_city_ice_box": "远古城市冰窖", "bastion_bridge": "堡垒遗迹桥梁", "bastion_other": "堡垒遗迹杂物箱",
+                "igloo_chest": "雪屋", "jungle_temple": "丛林神庙", "jungle_temple_dispenser": "丛林神庙发射器",
+                "ruined_portal": "废弃传送门", "stronghold_corridor": "要塞走廊", "stronghold_crossing": "要塞十字路口",
+                "underwater_ruin_big": "大型海底废墟", "village_armorer": "村庄盔甲匠铺",
+                "stronghold_library": "要塞图书馆", "shipwreck_supply": "沉船补给箱", "shipwreck_map": "沉船地图箱",
+                "bastion_treasure": "堡垒遗迹藏宝室", "bastion_hoglin_stable": "堡垒遗迹疣猪兽棚",
+            }.get(slug)
+            if key.startswith("enigmaticlegacyplus:chests/spellstone_hut/"): label = "术石小屋宝箱"
         if not label:
             variant = slug.removesuffix("_chests") + "_chest" if slug.endswith("_chests") else slug
             translated = self.name(ns + ":" + variant)
@@ -354,7 +411,8 @@ class EquipmentSources:
             name = npc.split(":")[1]
             ways.append("购买 · " + self.name("terra_entity:" + name))
         kinds = defaultdict(list)
-        for label in dict.fromkeys(self.loot_name(t) for t in sorted(self.finds[item])):
+        expansion = item.split(":")[0] in {"enigmaticlegacyplus", "bhc", "celestial_artifacts", "celestial_core", "relics"}
+        for label in dict.fromkeys(self.loot_name(t, expansion) for t in sorted(self.finds[item])):
             kind, sep, value = label.partition(" · ")
             if sep: kinds[kind].append(value)
             else: ways.append(label)

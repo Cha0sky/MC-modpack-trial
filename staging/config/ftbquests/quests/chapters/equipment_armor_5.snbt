@@ -70,11 +70,31 @@
       "hide_dependency_lines": false
     },
     {
+      "id": "27D386402C6FF7D4",
+      "icon": {
+        "id": "enigmaticlegacyplus:etherium_chestplate"
+      },
+      "x": 1.6,
+      "y": 2.0,
+      "min_width": 345,
+      "optional": true,
+      "disable_toast": true,
+      "tasks": [],
+      "rewards": [],
+      "dependencies": [],
+      "progression_mode": "flexible",
+      "hide_until_deps_complete": false,
+      "hide_until_deps_visible": false,
+      "hide_details_until_startable": false,
+      "hide_lock_icon": true,
+      "hide_dependency_lines": false
+    },
+    {
       "id": "6159D9FD540E5DA9",
       "icon": {
         "id": "cataclysm:cursium_chestplate"
       },
-      "x": 1.6,
+      "x": 3.2,
       "y": 2.0,
       "min_width": 345,
       "optional": true,
@@ -94,7 +114,7 @@
       "icon": {
         "id": "l2complements:sculkium_chestplate"
       },
-      "x": 3.2,
+      "x": 4.800000000000001,
       "y": 2.0,
       "min_width": 345,
       "optional": true,
@@ -114,8 +134,8 @@
       "icon": {
         "id": "cataclysm:ignitium_chestplate"
       },
-      "x": 4.800000000000001,
-      "y": 2.0,
+      "x": 0.0,
+      "y": 3.6,
       "min_width": 345,
       "optional": true,
       "disable_toast": true,
@@ -134,7 +154,7 @@
       "icon": {
         "id": "cataclysm:ignitium_elytra_chestplate"
       },
-      "x": 0.0,
+      "x": 1.6,
       "y": 3.6,
       "min_width": 345,
       "optional": true,
@@ -154,7 +174,7 @@
       "icon": {
         "id": "cataclysm:bone_reptile_chestplate"
       },
-      "x": 1.6,
+      "x": 3.2,
       "y": 3.6,
       "min_width": 345,
       "optional": true,

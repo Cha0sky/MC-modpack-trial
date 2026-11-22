@@ -102,10 +102,10 @@ def clean(text):
     return re.sub(r"§[a-z0-9]", "", text, flags=re.IGNORECASE).strip()
 
 
-def scan(instance):
+def scan(instance, jars):
     tags, language, fallback, models, slot_ids = defaultdict(list), {}, {}, set(), set()
     classes, overlays = {}, defaultdict(dict)
-    for path in sorted((instance / "mods").glob("*.jar")):
+    for path in jars:
         with ZipFile(path) as root:
             for jar in walk_jars(root):
                 for file in jar.namelist():
@@ -176,8 +176,11 @@ def effects_for(item, index, class_effects, configured):
     return effects
 
 
-def build(instance, decompiler=None):
-    tags, language, fallback, models, slot_ids, classes, overlays = scan(instance)
+def build(instance, decompiler=None, extra_mods=None):
+    from equipment_expansions import mod_jars, records
+    jars = mod_jars(instance, extra_mods)
+    additions = {v["id"]: v for v in records(jars, "accessory_records")}
+    tags, language, fallback, models, slot_ids, classes, overlays = scan(instance, jars)
     class_effects = registry_effects(classes, overlays, ROOT, decompiler)
     items = defaultdict(set)
     for slot in sorted(slot_ids):
@@ -191,7 +194,11 @@ def build(instance, decompiler=None):
     out = []
     index = effect_index(language)
     configured = configured_effects(instance)
-    for item, slots in sorted(items.items()):
+    for item in sorted(items.keys() | additions.keys()):
+        if item in additions:
+            out.append(additions[item])
+            continue
+        slots = items[item]
         namespace, path = item.split(":")
         langkeys = ["item." + namespace + "." + path, "block." + namespace + "." + path]
         name = next((source[key] for source in (language, fallback) for key in langkeys if key in source), None)
@@ -211,8 +218,9 @@ def main():
     parser.add_argument("--instance", type=Path, default=INSTANCE)
     parser.add_argument("--output", type=Path, default=OUTPUT)
     parser.add_argument("--decompiler", type=Path, help="Vineflower JAR for the installed Terra accessory registries")
+    parser.add_argument("--extra-mods", type=Path)
     args = parser.parse_args()
-    rows = build(args.instance, args.decompiler)
+    rows = build(args.instance, args.decompiler, args.extra_mods)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(rows, ensure_ascii=False, indent=2) + "\n", encoding="utf8")
     print(f"{len(rows)} accessories")

@@ -64,7 +64,7 @@ RELATED = {
 }
 
 
-def main():
+def main(extra_mods=None):
     from build_equipment_atlas import atlas_id, build, entry_link
     chapter = {"id": guide_id("chapter"), "filename": FILENAME, "group": GUIDE_GROUP, "order_index": 1,
                "icon": {"id": "terra_curio:cloud_in_a_bottle"}, "quests": []}
@@ -115,8 +115,12 @@ def main():
     write(QUESTS / f"chapters/{FILENAME}.snbt", chapter)
     for locale in ("zh_cn", "en_us"):
         merge(QUESTS / f"lang/{locale}.snbt", lang)
-    build(guide_id)
+    build(guide_id, extra_mods)
 
 
 if __name__ == "__main__":
-    main()
+    import argparse
+    from pathlib import Path
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--extra-mods", type=Path)
+    main(parser.parse_args().extra_mods)

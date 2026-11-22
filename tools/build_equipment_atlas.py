@@ -9,6 +9,7 @@ import networkx as nx
 from build_heritage_quests import QUESTS, write
 from campaign_navigation import ACCESSORY_GROUP, ARMOR_GROUP, BOOK_GROUPS, quest_id, turn_page
 from equipment_sources import EquipmentSources
+from equipment_expansions import SHELVES, SHELF_TEXT, records as expansion_records, virtual_recipes
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "docs/data/equipment"
@@ -158,13 +159,14 @@ def layout(sub):
     return depth, vertical
 
 
-def add_accessories(records, sources):
+def add_accessories(records, sources, shelf="", offset=0, extra_recipes=None):
     items = {v["id"]: v for v in records}
-    recipes = {k: sources.recipe_info(k) for k in items}
+    recipes = {k: sources.recipe_info(k) + (extra_recipes or {}).get(k, []) for k in items}
     graph = nx.DiGraph()
     graph.add_nodes_from(sorted(items))
     for dest in sorted(items):
         for _, inputs, kind in recipes[dest]:
+            if dest == "enigmaticlegacyplus:unwitnessed_amulet": continue  # Rerolling restores the starting form.
             if kind == "item_transmutation": continue  # A reversible shimmer conversion is listed as an alternative source.
             graph.add_edges_from((parent, dest) for parent in sorted(inputs & items.keys()) if parent != dest)
     groups = branch_plans(graph)
@@ -200,13 +202,15 @@ def add_accessories(records, sources):
     for order, (members, families, label) in enumerate(plans):
         sub = graph.subgraph(members)
         tip = min(members, key=lambda k: (-len(nx.ancestors(sub, k)), sub.out_degree(k), k))
-        key = "route_" + tip.replace(":", "_")
+        key = ("pack_" if shelf else "route_") + tip.replace(":", "_")
         if key in (b.key for b in books):
             key += "_" + atlas_id("|".join(sorted(members)))[:7].lower()
         title = label or (items[tip]["name"] + " · 合成路线")
+        if shelf:
+            title = (items[tip]["name"] + " · 配方与用途") if families else shelf.split(" · ")[0] + " · 单件图鉴"
         repeats[title] += 1
         if repeats[title] > 1: title += f"（{repeats[title]}）"
-        book = Chapter(key, title, ACCESSORY_GROUP, order, tip)
+        book = Chapter(key, title, ACCESSORY_GROUP, offset + order, tip)
         books.append(book)
         for item in sorted(members): owner.setdefault(item, key)
         positions = {}
@@ -218,13 +222,13 @@ def add_accessories(records, sources):
                 for item in family: positions[item] = (depth[item] * 3, bottom + vert[item] - low, depth[item])
                 bottom += max(vert.values()) - low + 3.8
         else:
-            ordered = sorted(members, key=lambda k: (items[k]["slots"], items[k]["name"], k))
+            ordered = sorted(members, key=lambda k: (items[k].get("slots", []), items[k]["name"], k))
             for i, item in enumerate(ordered): positions[item] = (i % 6 * 1.7, i // 6 * 1.7, 0)
         def local_id(k):
             return item_id("accessory", k) if owner[k] == key else atlas_id(key + "/ref/" + k)
         book.page(atlas_id("contents/" + key), title, tip, 0, -3,
                   (["从左往右看。连线表示前一件可以参加后一件的配方；有替代材料时，打开成品看每一种做法。"]
-                   if families else ["这些饰品的配方没有用到本册其他饰品，或可从探索、交易等途径直接取得。"])
+                   if families and not shelf else ["沿线点开材料与成品，可查配方、装填或其他进阶条件。"] if families else ["这些饰品的配方没有用到本册其他饰品，或可从探索、交易等途径直接取得。"])
                   + [turn_page(items[k]["name"], local_id(k)) for k in sorted(members, key=lambda k: (positions[k], k))])
         for item in sorted(members):
             v = items[item]
@@ -232,23 +236,55 @@ def add_accessories(records, sources):
             parents = sorted(graph.predecessors(item))
             forward = sorted(graph.successors(item))
             effects = v.get("effects", [])
-            slots = "、".join(v["slots"])
-            lines = ["佩戴位置 · " + slots, *effects,
+            slots = "、".join(v.get("slots", []))
+            usage = v.get("label") or ("佩戴位置 · " + slots if slots else "合成与进阶材料")
+            lines = [usage, *effects,
                      *obtaining(item, sources, recipes[item], v.get("source", []))]
-            lines += [entry_link("配方中的饰品 · " + items[k]["name"], "accessory", k) for k in parents]
-            lines += [entry_link("可合成 · " + items[k]["name"], "accessory", k) for k in forward]
-            lines += [turn_page("返回本册合成图" if families else "返回本册目录", book.id), item]
+            lines += [entry_link(("材料与前置 · " if shelf else "配方中的饰品 · ") + items[k]["name"], "accessory", k) for k in parents]
+            lines += [entry_link(("后续用途 · " if shelf else "可合成 · ") + items[k]["name"], "accessory", k) for k in forward]
+            if shelf and owner[item] != key:
+                lines = [entry_link("查看属性、来源与全部用途", "accessory", item)]
+            if not shelf: lines.append(turn_page("返回本册合成图" if families else "返回本册目录", book.id))
+            lines.append(item)
             deps = [local_id(k) for k in parents if k in members and positions[k][2] < rank]
-            book.page(local_id(item), v["name"], item, x, y, list(dict.fromkeys(lines)), subtitle=slots, parents=deps)
+            icon = "minecraft:paper" if item == "enigmaticlegacyplus:extra_scroll" else item
+            book.page(local_id(item), v["name"], icon, x, y, list(dict.fromkeys(lines)), subtitle=slots, parents=deps)
     return books, graph
 
 
-def build(guide_id):
+def build(guide_id, extra_mods=None):
     armor = json.loads((DATA / "armor.json").read_bytes())
     accessories = json.loads((DATA / "accessories.json").read_bytes())
-    sources = EquipmentSources()
+    sources = EquipmentSources(extra_mods=extra_mods)
     armor_books = add_armor(armor, sources)
-    routes, graph = add_accessories(accessories, sources)
+    def namespace(row): return row["id"].split(":")[0]
+    routes, graph = add_accessories([r for r in accessories if namespace(r) not in SHELVES], sources)
+    base_routes = list(routes)
+    extra = virtual_recipes(sources.jars)
+    helpers = expansion_records(sources.jars, "progression_records")
+    sources.add_pack_labels(accessories + helpers)
+    shelves_by_mod = {}
+    for mod, label in SHELVES.items():
+        members = [r for r in accessories + helpers if r.get("shelf", namespace(r)) == mod]
+        if members:
+            books, family = add_accessories(members, sources, label, len(routes), extra)
+            shelves_by_mod[label] = books
+            routes.extend(books)
+            graph.update(family)
+    # A small number of expansion recipes also consume equipment from another shelf.
+    catalog = {row["id"]: row for row in accessories + helpers}
+    pages = {q["id"]: b.lang for b in routes for q in b.doc["quests"]}
+    for dest, row in catalog.items():
+        if row.get("shelf", namespace(row)) not in SHELVES: continue
+        for _, ingredients, kind in sources.recipe_info(dest):
+            if kind == "item_transmutation": continue
+            for parent in sorted(ingredients & catalog.keys()):
+                if (parent, dest) in graph.edges or parent == dest: continue
+                if row.get("shelf", namespace(row)) == catalog[parent].get("shelf", namespace(catalog[parent])): continue
+                graph.add_edge(parent, dest)
+                for origin, other, label in ((dest, parent, "材料与前置 · "), (parent, dest, "后续用途 · ")):
+                    qid = item_id("accessory", origin)
+                    pages[qid]["quest." + qid + ".quest_desc"].insert(-1, entry_link(label + catalog[other]["name"], "accessory", other))
     dual = {r["id"] for r in armor} & {r["id"] for r in accessories}
     for collection, other, label in ((armor_books, "accessory", "查看饰品槽与合成路线"),
                                       (routes, "armor", "查看护甲位与护甲值")):
@@ -264,17 +300,18 @@ def build(guide_id):
                      ["选一档护甲值，再按头、胸、腿、足或动物装备查找。",
                       *[turn_page(b.title, b.id) for b in armor_books], back])
     shelves = defaultdict(list)
-    for b in routes:
+    for b in base_routes:
         if "单件" in b.title or "独立" in b.title: shelf = "独立饰品"
         elif "小型" in b.title: shelf = "小型合成路线"
         else: shelf = "多阶合成路线"
         shelves[shelf].append(b)
+    shelves.update(shelves_by_mod)
     route_index.page(atlas_id("routes/index"), route_index.title, "terra_curio:lightning_boots", 0, 0,
                      ["想做一件成品，沿路线向左找材料。点开任一件，也能向右查它可以合成什么。",
                       *[turn_page(name, atlas_id("routes/shelf/" + name)) for name in shelves], back])
     for pos, (name, part) in enumerate(shelves.items()):
         route_index.page(atlas_id("routes/shelf/" + name), name, part[0].doc["icon"]["id"], pos * 2, 2,
-                         [turn_page(b.title, b.id) for b in part])
+                         ([SHELF_TEXT[name]] if name in SHELF_TEXT else []) + [turn_page(b.title, b.id) for b in part])
     lang = {f"chapter_group.{k}.title": v for k, v in BOOK_GROUPS}
     books = [armor_index, route_index, *armor_books, *routes]
     chapters = QUESTS / "chapters"

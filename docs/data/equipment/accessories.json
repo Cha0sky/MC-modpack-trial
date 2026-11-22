@@ -50,6 +50,69 @@
     ]
   },
   {
+    "id": "bhc:blue_heartpulse_belt",
+    "name": "蓝色心跳腰带",
+    "slots": [
+      "腰带"
+    ],
+    "effects": [
+      "移动速度 +48%，跳跃强度 +0.32，跨步高度 +0.4 格。跌落距离不超过 6 格时免受摔落伤害。"
+    ]
+  },
+  {
+    "id": "bhc:green_heartpulse_belt",
+    "name": "绿色心跳腰带",
+    "slots": [
+      "腰带"
+    ],
+    "effects": [
+      "移动速度 +36%，跳跃强度 +0.24，跨步高度 +0.4 格。跌落距离不超过 6 格时免受摔落伤害。"
+    ]
+  },
+  {
+    "id": "bhc:heart_amulet",
+    "name": "生命护符",
+    "slots": [
+      "生命护符"
+    ],
+    "effects": [
+      "主手持护符右击打开，按颜色装入心罐，再放入专用生命护符槽。每罐增加 2 点最大生命。受伤后摘下护符会保留已损失的血量，重伤时先治疗。",
+      "红、黄、绿、蓝各可装 10 罐，默认最多增加 80 点生命。"
+    ]
+  },
+  {
+    "id": "bhc:red_heartpulse_belt",
+    "name": "红色心跳腰带",
+    "slots": [
+      "腰带"
+    ],
+    "effects": [
+      "移动速度 +12%，跳跃强度 +0.08，跨步高度 +0.4 格。跌落距离不超过 6 格时免受摔落伤害。"
+    ]
+  },
+  {
+    "id": "bhc:soul_heart_amulet",
+    "name": "灵魂生命护符",
+    "slots": [
+      "生命护符"
+    ],
+    "effects": [
+      "主手持护符右击打开，按颜色装入心罐，再放入专用生命护符槽。每罐增加 2 点最大生命。受伤后摘下护符会保留已损失的血量，重伤时先治疗。",
+      "第 5 格可装灵魂心罐，五种各装 10 罐共增加 100 点生命。致死时消耗一罐灵魂心罐，回满生命、清除原有效果，并获得再生、伤害吸收和抗火。默认返还一罐蓝色心罐。",
+      "本版升级配方会把原护符中已装入的心罐转移到成品。"
+    ]
+  },
+  {
+    "id": "bhc:yellow_heartpulse_belt",
+    "name": "黄色心跳腰带",
+    "slots": [
+      "腰带"
+    ],
+    "effects": [
+      "移动速度 +24%，跳跃强度 +0.16，跨步高度 +0.4 格。跌落距离不超过 6 格时免受摔落伤害。"
+    ]
+  },
+  {
     "id": "cataclysm:aptrgangr_head",
     "name": "武弁的头",
     "slots": [
@@ -178,6 +241,1113 @@
     "effects": [
       "自然治疗属性 +20。"
     ]
+  },
+  {
+    "id": "celestial_artifacts:abyss_core",
+    "name": "深渊之核",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "单次伤害超过 12 点时可将其压至 12 点，默认冷却 60 秒。",
+      "需要同时装备灾厄之册。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:abyss_will_badge",
+    "name": "深渊意志徽章",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "每隔一段时间叠加深渊呼唤，同时提高输出与承伤。主动爆发会临时叠高层数，结束后清空层数并损失生命。",
+      "需要同时装备灾厄之册。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:amethyst_ring",
+    "name": "紫水晶戒指",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "获得夜视并提高攻击伤害。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:angel_desire",
+    "name": "天使的祈愿",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "飞行时提高伤害、免疫弹射物，并可为鞘翅飞行提供动力。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:angel_heart",
+    "name": "天使之心",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "每 2 秒回复 1 点生命，每 30 秒清除负面效果，低血量时还能减伤。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:angel_pearl",
+    "name": "天使珍珠",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "持续治疗附近玩家。自己身上每种正面效果都会增加护甲与生命恢复速度。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:bearing_stamen",
+    "name": "生息胸花",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "增加 20 点最大生命，强化生命恢复，并提供再生效果。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:catastrophe_scroll",
+    "name": "灾厄之册",
+    "slots": [
+      "灾厄书槽"
+    ],
+    "effects": [
+      "开启灾厄诅咒、专属掉落和饰品。默认增加 3 个护符槽和 7 个刻蚀槽，戴上后无法用常规方式摘下。刻蚀板可反转对应诅咒。"
+    ],
+    "source": [
+      "默认随家传项链一起发给玩家，可自行决定何时佩戴。"
+    ]
+  },
+  {
+    "id": "celestial_artifacts:chaotic_etching",
+    "name": "混沌刻蚀板",
+    "slots": [
+      "刻蚀板"
+    ],
+    "effects": [
+      "反转混沌诅咒，失血时提高伤害减免。"
+    ],
+    "source": [
+      "让爆炸伤害击杀凋灵，默认有 30% 概率掉落。"
+    ]
+  },
+  {
+    "id": "celestial_artifacts:chaotic_pendant",
+    "name": "混沌吊坠",
+    "slots": [
+      "吊坠"
+    ],
+    "effects": [
+      "用附魔台附魔时，所得附魔的等级提高 3 级。",
+      "需要同时装备灾厄之册。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:charming_bracelet",
+    "name": "魅力手环",
+    "slots": [
+      "手镯"
+    ],
+    "effects": [
+      "增加 2 点护甲。击杀僵尸能改善附近村民对你的好感，受击还能让周围生物转向攻击者。"
+    ],
+    "source": [
+      "对村民的声誉达到 100 时击杀村民，默认有 50% 概率掉落。"
+    ]
+  },
+  {
+    "id": "celestial_artifacts:corrupt_badge",
+    "name": "腐化徽章",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "每种负面效果都能提高攻击、攻速和挖掘速度。主动释放可以给自己施加负面效果。",
+      "需要同时装备灾厄之册。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:cross_necklace",
+    "name": "十字项链",
+    "slots": [
+      "项链"
+    ],
+    "effects": [
+      "受伤后额外增加 10 游戏刻的无敌时间。"
+    ],
+    "source": [
+      "搜寻平原村庄的民居宝箱时有机会获得。"
+    ]
+  },
+  {
+    "id": "celestial_artifacts:cursed_protector",
+    "name": "受诅咒的坚盾",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "降低正面承伤，大额伤害另有减免。副手盾牌不再进入冷却。",
+      "需要同时装备灾厄之册。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:cursed_talisman",
+    "name": "噬咒护符",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "武器与防具上的诅咒附魔为你增加暴击率和暴击伤害。",
+      "需要同时装备灾厄之册。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:cursed_totem",
+    "name": "被咒者的图腾",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "承受非致命伤害积攒怨念，叠满 5 层可消耗层数抵消一次致命伤。触发不死图腾时还会诅咒近处的攻击者。",
+      "需要同时装备灾厄之册。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:deer_inscribed_amulet",
+    "name": "悯鹿护符",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "提高最大生命、护甲、韧性和攻击，周期性强化下一击。装备灾厄之册时，反转的诅咒越多，增伤越高。",
+      "戴齐悯鹿护符与眷蝶之戒，普通攻击可追加一次魔法或深渊伤害。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:deers_mercy_amulet",
+    "name": "铭鹿护符",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "增加 10 点最大生命和 2 点攻击伤害，也是悯鹿护符的前置饰品。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:demon_curse",
+    "name": "大恶魔之咒",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "禁止自身回血，将额外治疗力转成攻击力与移速。",
+      "需要同时装备灾厄之册。"
+    ],
+    "source": [
+      "亲手击败凋灵后再击杀恼鬼，默认有 3% 概率掉落。"
+    ]
+  },
+  {
+    "id": "celestial_artifacts:demon_heart",
+    "name": "恶魔之心",
+    "slots": [
+      "心脏"
+    ],
+    "effects": [
+      "每条灾厄诅咒都加强战斗属性，达到 3 条后防止燃烧，5 条后免疫缓慢与虚弱。",
+      "需要同时装备灾厄之册。"
+    ],
+    "source": [
+      "搜寻古城宝箱时有机会获得。"
+    ]
+  },
+  {
+    "id": "celestial_artifacts:desire_etching",
+    "name": "欲望刻蚀板",
+    "slots": [
+      "刻蚀板"
+    ],
+    "effects": [
+      "反转欲望诅咒，提高时运与抢夺等级。"
+    ],
+    "source": [
+      "佩戴灾厄之册并触发欲望诅咒后，以至少 7 级抢夺击杀凋灵，默认有 25% 概率掉落。"
+    ]
+  },
+  {
+    "id": "celestial_artifacts:destroyer_badge",
+    "name": "毁灭者徽章",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "攻击伤害提高 40%，同时承受更多伤害，适合能控制交战距离的配装。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:diamond_ring",
+    "name": "钻石戒指",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "佩戴后持续获得力量效果。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:emerald_bracelet",
+    "name": "绿宝石手环",
+    "slots": [
+      "手镯"
+    ],
+    "effects": [
+      "提高暴击率。幸运达到 2 点时，受击有机会获得伤害吸收。",
+      "戴齐绿宝石戒指、项链和手环，额外提高幸运和暴击率。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:emerald_necklace",
+    "name": "绿宝石项链",
+    "slots": [
+      "项链"
+    ],
+    "effects": [
+      "击杀生物时有机会额外获得绿宝石。",
+      "戴齐绿宝石戒指、项链和手环，额外提高幸运和暴击率。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:emerald_ring",
+    "name": "绿宝石戒指",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "增加 1 点幸运，可参与绿宝石饰品套装。",
+      "戴齐绿宝石戒指、项链和手环，额外提高幸运和暴击率。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:end_etching",
+    "name": "终焉刻蚀板",
+    "slots": [
+      "刻蚀板"
+    ],
+    "effects": [
+      "反转终焉诅咒，攻击后按自身已损生命回血。"
+    ],
+    "source": [
+      "佩戴灾厄之册并触发终焉诅咒后，身带至少 9 种负面效果击杀监守者，默认有 75% 概率掉落。"
+    ]
+  },
+  {
+    "id": "celestial_artifacts:ender_protector",
+    "name": "末影庇佑者",
+    "slots": [
+      "项链"
+    ],
+    "effects": [
+      "提供 4 点盔甲韧性。成功格挡时有 50% 概率将攻击者传送走。",
+      "需要同时装备灾厄之册。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:evil_eye",
+    "name": "邪恶之瞳",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "免疫黑暗与失明，适合探索幽匿区域。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:fang_necklace",
+    "name": "毒牙项链",
+    "slots": [
+      "项链"
+    ],
+    "effects": [
+      "提高攻速，对穿甲目标增伤。命中有 50% 概率施加中毒。"
+    ],
+    "source": [
+      "搜寻废弃矿井宝箱时有机会获得。"
+    ]
+  },
+  {
+    "id": "celestial_artifacts:flame_arrow_bag",
+    "name": "火焰箭袋",
+    "slots": [
+      "背部"
+    ],
+    "effects": [
+      "提高弓伤害与箭矢击退，命中的箭矢还会点燃目标。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:flight_ring",
+    "name": "飞仙戒指",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "提供飞行能力。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:forest_cloak",
+    "name": "丛林披风",
+    "slots": [
+      "身体"
+    ],
+    "effects": [
+      "增加跳跃高度，遭遇弹射物时有 20% 概率闪避。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:freeze_ring",
+    "name": "冰冻之戒",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "免疫冰冻伤害。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:gallop_necklace",
+    "name": "疾行项链",
+    "slots": [
+      "项链"
+    ],
+    "effects": [
+      "增加移速，移动中攻击时还能把速度转为额外伤害。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:gluttony_badge",
+    "name": "暴食徽章",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "每点饱食度提供 1% 减伤。进食后短暂获得力量与生命恢复，平时需留意饥饿效果。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:gold_ring",
+    "name": "金戒指",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "佩戴后持续获得幸运效果。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:greedy_heart",
+    "name": "贪婪之心",
+    "slots": [
+      "心脏"
+    ],
+    "effects": [
+      "提高经验收益，附带时运与抢夺各 1 级。",
+      "需要同时装备灾厄之册。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:guardian_eye",
+    "name": "守卫者之眼",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "提高水中机动性，水下不会耗氧。位于水中或雨中时，所受伤害降低 20%。"
+    ],
+    "source": [
+      "击杀远古守卫者，默认有 50% 概率掉落。"
+    ]
+  },
+  {
+    "id": "celestial_artifacts:heart_of_revenge",
+    "name": "复仇之心",
+    "slots": [
+      "心脏"
+    ],
+    "effects": [
+      "提高弓伤害，受到伤害后有短暂的复仇增伤窗口。"
+    ],
+    "source": [
+      "搜寻堡垒遗迹的宝藏箱时有机会获得。"
+    ]
+  },
+  {
+    "id": "celestial_artifacts:heirloom_necklace",
+    "name": "家传项链",
+    "slots": [
+      "项链"
+    ],
+    "effects": [
+      "提供 2 点护甲、5% 移速与 10% 经验加成。"
+    ],
+    "source": [
+      "默认在玩家首次触发模组的开局赠礼时放入背包。"
+    ]
+  },
+  {
+    "id": "celestial_artifacts:hidden_bracelet",
+    "name": "隐匿手环",
+    "slots": [
+      "手镯"
+    ],
+    "effects": [
+      "隐身消失后过一段时间可再获隐身。隐身期间攻击伤害提高 25%。",
+      "需要同时装备灾厄之册。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:holy_necklace",
+    "name": "神圣项链",
+    "slots": [
+      "项链"
+    ],
+    "effects": [
+      "增加 4 点最大生命，延长受伤后的无敌时间，接受治疗还可短时获得抗性提升。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:holy_sword",
+    "name": "大天使之证",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "提升暴击率，受击会反伤，失血时提高攻击。攻击亡灵造成的伤害还会等量治疗自己。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:holy_talisman",
+    "name": "神圣七彩护符",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "周期性削弱附近怪物，对亡灵有更高减伤。遭遇致命攻击时保留 1 点生命并获得吸收护盾，默认冷却 60 秒。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:iron_scabbard",
+    "name": "铁剑鞘",
+    "slots": [
+      "背部"
+    ],
+    "effects": [
+      "每 10 秒短暂获得强化刀刃，提高攻击伤害和暴击率。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:knight_shelter",
+    "name": "骑士庇护",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "提高护甲和伤害减免。持盾会定时回血，主手持盾回复更快，成功格挡还可反伤。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:leech_scabbard",
+    "name": "水蛭剑鞘",
+    "slots": [
+      "背部"
+    ],
+    "effects": [
+      "定时获得强化刀刃。效果生效时，造成伤害的 25% 用来治疗自己。"
+    ],
+    "source": [
+      "搜寻大型海底废墟宝箱时有机会获得。"
+    ]
+  },
+  {
+    "id": "celestial_artifacts:life_bracelet",
+    "name": "生命手环",
+    "slots": [
+      "手镯"
+    ],
+    "effects": [
+      "提高生命恢复属性，并持续提供生命恢复效果。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:life_etching",
+    "name": "生命刻蚀板",
+    "slots": [
+      "刻蚀板"
+    ],
+    "effects": [
+      "反转生命诅咒，提升最大生命和治疗力。"
+    ],
+    "source": [
+      "佩戴灾厄之册并触发生命诅咒后，击杀最大生命至少 500 点的生物，默认有 15% 概率掉落。"
+    ]
+  },
+  {
+    "id": "celestial_artifacts:lock_of_abyss",
+    "name": "深渊之锁",
+    "slots": [
+      "项链"
+    ],
+    "effects": [
+      "攻击施加缓慢，重复命中逐级叠高。达到触发条件时消耗缓慢，造成额外深渊伤害。",
+      "需要同时装备灾厄之册。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:magic_arrow_bag",
+    "name": "魔法箭袋",
+    "slots": [
+      "背部"
+    ],
+    "effects": [
+      "提高弓伤害 10%，箭矢额外获得 1 点击退。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:magic_horseshoe",
+    "name": "魔法马掌",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "提高移动速度和幸运，摔落伤害降低 95%。"
+    ],
+    "source": [
+      "在 Y ≥ 300 的开阔水域钓鱼时有机会获得。"
+    ]
+  },
+  {
+    "id": "celestial_artifacts:nether_fire",
+    "name": "地狱之火",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "免疫火焰伤害，受到攻击后会点燃攻击者。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:netherite_ring",
+    "name": "下界合金戒指",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "提供抗火效果，在下界还可减免 10% 伤害。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:nihility_etching",
+    "name": "虚无刻蚀板",
+    "slots": [
+      "刻蚀板"
+    ],
+    "effects": [
+      "反转虚无诅咒，降低虚空伤害，受击时对攻击者施加负面效果。"
+    ],
+    "source": [
+      "佩戴灾厄之册并触发虚无诅咒后，用绕过附魔防护的伤害击杀监守者，默认有 50% 概率掉落。"
+    ]
+  },
+  {
+    "id": "celestial_artifacts:nostalgic_butterfly_ring",
+    "name": "眷蝶之戒",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "提高暴击率，同时降低暴击伤害。可与鹿系护符组成套装。",
+      "戴齐悯鹿护符与眷蝶之戒，普通攻击可追加一次魔法或深渊伤害。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:origin_etching",
+    "name": "始源刻蚀板",
+    "slots": [
+      "刻蚀板"
+    ],
+    "effects": [
+      "反转始源诅咒，提升挖掘速度与攻击伤害。"
+    ],
+    "source": [
+      "佩戴灾厄之册并触发始源诅咒后，在末影龙高度 Y ≥ 200 时击杀它，默认有 50% 概率掉落。"
+    ]
+  },
+  {
+    "id": "celestial_artifacts:prayer_crown",
+    "name": "祷告者冠冕",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "延长受伤后的无敌时间，潜行承伤降低 25%。受击还有机会按本次伤害治疗自己。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:precious_bracelet",
+    "name": "珍钻手环",
+    "slots": [
+      "手镯"
+    ],
+    "effects": [
+      "魔法伤害降低 40%，方块交互距离增加 1 格。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:precious_necklace",
+    "name": "珍钻项链",
+    "slots": [
+      "项链"
+    ],
+    "effects": [
+      "提高 20% 暴击伤害。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:red_heart_necklace",
+    "name": "红心项链",
+    "slots": [
+      "项链"
+    ],
+    "effects": [
+      "最大生命提高 5%。"
+    ],
+    "source": [
+      "搜寻平原村庄的民居宝箱时有机会获得。"
+    ]
+  },
+  {
+    "id": "celestial_artifacts:red_ruby_bracelet",
+    "name": "绯红宝石手环",
+    "slots": [
+      "手镯"
+    ],
+    "effects": [
+      "火焰伤害降低 90%，受到火焰伤害时短暂获得力量。"
+    ],
+    "source": [
+      "搜寻下界要塞桥梁宝箱时有机会获得。"
+    ]
+  },
+  {
+    "id": "celestial_artifacts:ring_of_life",
+    "name": "生息之戒",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "每 5 秒随机催熟附近的一株作物。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:sacrificial_object",
+    "name": "古代殉葬品",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "减免 5% 伤害。死亡时有机会留下金锭，并带走附近最大生命低于自己的敌对生物。",
+      "需要同时装备灾厄之册。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:sakura_hairpin",
+    "name": "樱花发簪",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "提高最大生命和护甲，幸运越高，暴击加成越多。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:sands_talisman",
+    "name": "金沙护符",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "增加 50% 经验获取，在炎热地区增加 30% 攻击伤害。"
+    ],
+    "source": [
+      "搜寻沙漠神殿宝箱时有机会获得。"
+    ]
+  },
+  {
+    "id": "celestial_artifacts:scarlet_bracelet",
+    "name": "猩红手环",
+    "slots": [
+      "手镯"
+    ],
+    "effects": [
+      "攻击时能消耗自身生命，将其换成按目标最大生命计算的额外伤害。默认最多消耗到自身半血。",
+      "需要同时装备灾厄之册。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:sea_god_crown",
+    "name": "海神王冠",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "提供水下呼吸和夜视。主动发动可将天气转为下雨，默认冷却 30 秒。",
+      "搭配海神王冠与海神卷轴可减少水生敌人的伤害，手持三叉戟还会加强近战与投掷攻击。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:sea_god_scroll",
+    "name": "海神卷轴",
+    "slots": [
+      "卷轴"
+    ],
+    "effects": [
+      "消除水下挖掘速度惩罚。在雨中或水中可获得力量与抗性。",
+      "搭配海神王冠与海神卷轴可减少水生敌人的伤害，手持三叉戟还会加强近战与投掷攻击。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:shadow_pendant",
+    "name": "怨影吊坠",
+    "slots": [
+      "吊坠"
+    ],
+    "effects": [
+      "造成伤害时吸血，阻止失眠招来幻翼。在低于 7 级的光照中，越暗越能获得攻防加成。",
+      "需要同时装备灾厄之册。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:skywalker_scroll",
+    "name": "传送卷轴",
+    "slots": [
+      "卷轴"
+    ],
+    "effects": [
+      "潜行发动记录坐标，正常发动返回记录处。传送限于同一维度。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:solar_magnet",
+    "name": "太阳磁铁",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "吸引周围掉落物，白天攻击伤害提高 25%。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:soul_box",
+    "name": "魂灵匣",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "规避致命一击并向攻击者反击，造成按自身最大生命计算的深渊伤害。保命默认冷却 240 秒。",
+      "需要同时装备灾厄之册。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:spirit_arrow_bag",
+    "name": "精灵箭袋",
+    "slots": [
+      "背部"
+    ],
+    "effects": [
+      "弓伤害提高 20%，箭矢飞得更快并额外击退敌人。",
+      "精灵四件套含手环、花冠、项链和箭袋。持续拉弓可强化箭矢，背射增伤，速度效果下射出的箭还有机会使敌人缓慢。"
+    ],
+    "source": [
+      "搜寻丛林神庙宝箱时有机会获得。"
+    ]
+  },
+  {
+    "id": "celestial_artifacts:spirit_bracelet",
+    "name": "精灵手环",
+    "slots": [
+      "手镯"
+    ],
+    "effects": [
+      "加快拉弓与弩上弦，箭矢命中后短暂加速移动。",
+      "精灵四件套含手环、花冠、项链和箭袋。持续拉弓可强化箭矢，背射增伤，速度效果下射出的箭还有机会使敌人缓慢。"
+    ],
+    "source": [
+      "搜寻丛林神庙宝箱时有机会获得。"
+    ]
+  },
+  {
+    "id": "celestial_artifacts:spirit_crown",
+    "name": "精灵花冠",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "周围实体少时提高箭矢伤害。与目标距离每增加 1 格，还有一份距离增伤。",
+      "精灵四件套含手环、花冠、项链和箭袋。持续拉弓可强化箭矢，背射增伤，速度效果下射出的箭还有机会使敌人缓慢。"
+    ],
+    "source": [
+      "搜寻丛林神庙宝箱时有机会获得。"
+    ]
+  },
+  {
+    "id": "celestial_artifacts:spirit_necklace",
+    "name": "精灵项链",
+    "slots": [
+      "项链"
+    ],
+    "effects": [
+      "增强远程输出，受击时可短暂加速移动。",
+      "精灵四件套含手环、花冠、项链和箭袋。持续拉弓可强化箭矢，背射增伤，速度效果下射出的箭还有机会使敌人缓慢。"
+    ],
+    "source": [
+      "搜寻丛林神庙宝箱时有机会获得。"
+    ]
+  },
+  {
+    "id": "celestial_artifacts:star_necklace",
+    "name": "星星项链",
+    "slots": [
+      "项链"
+    ],
+    "effects": [
+      "从背后攻击提高 40% 伤害，夜间还能获得抗性提升。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:thunder_ring",
+    "name": "雷电之戒",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "免疫雷击伤害。"
+    ],
+    "source": [
+      "搜寻大型海底废墟宝箱时有机会获得。"
+    ]
+  },
+  {
+    "id": "celestial_artifacts:titan_scabbard",
+    "name": "泰坦剑鞘",
+    "slots": [
+      "背部"
+    ],
+    "effects": [
+      "周期性获得强化刀刃。在此期间近战攻击最大生命高于自己的目标时，额外增伤 75%。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:traveler_scroll",
+    "name": "旅行者卷轴",
+    "slots": [
+      "卷轴"
+    ],
+    "effects": [
+      "提高地面、飞行与水中机动性，每次进入新维度还可获得短时速度与生命恢复。"
+    ],
+    "source": [
+      "搜寻末地城宝箱时有机会获得。"
+    ]
+  },
+  {
+    "id": "celestial_artifacts:treasure_hunter_necklace",
+    "name": "寻宝者项链",
+    "slots": [
+      "项链"
+    ],
+    "effects": [
+      "在特定生物群系的开阔水域钓鱼，有机会钓出相应结构的战利品箱。",
+      "需要同时装备灾厄之册。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:truth_etching",
+    "name": "真理刻蚀板",
+    "slots": [
+      "刻蚀板"
+    ],
+    "effects": [
+      "反转真理诅咒，限制一次生物攻击最多能打掉的生命比例。"
+    ],
+    "source": [
+      "让袭击阵营的灾厄村民击杀凋灵，默认有 50% 概率掉落。"
+    ]
+  },
+  {
+    "id": "celestial_artifacts:twisted_brain",
+    "name": "扭曲之脑",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "受击时有 17% 概率规避本次伤害，同时获得短时攻击增益。",
+      "需要同时装备灾厄之册。"
+    ],
+    "source": [
+      "让凋灵击杀袭击阵营的灾厄村民，默认有 10% 概率掉落。"
+    ]
+  },
+  {
+    "id": "celestial_artifacts:twisted_heart",
+    "name": "扭曲之心",
+    "slots": [
+      "心脏"
+    ],
+    "effects": [
+      "装备时削弱护甲、韧性和攻击。背负虚无诅咒后，这些代价会反转为加成。",
+      "需要同时装备灾厄之册。"
+    ],
+    "source": [
+      "让凋灵击杀最大生命至少 20 点的生物，默认有 10% 概率掉落。"
+    ]
+  },
+  {
+    "id": "celestial_artifacts:twisted_scabbard",
+    "name": "扭曲剑鞘",
+    "slots": [
+      "背部"
+    ],
+    "effects": [
+      "击杀生物可积攒扭曲附着，提高近战伤害。层数随时间流失，背负终焉诅咒时每层更强，装备也会削弱治疗。",
+      "需要同时装备灾厄之册。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:twisted_scroll",
+    "name": "扭曲卷轴",
+    "slots": [
+      "卷轴"
+    ],
+    "effects": [
+      "增加 1 级抢夺。遭遇的怪物有几率分裂，战利品收益与围攻风险随之增加。",
+      "需要同时装备灾厄之册。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:undead_charm",
+    "name": "不死者护符",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "规避一次致命伤害，默认冷却 180 秒。",
+      "需要同时装备灾厄之册。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:unowned_pendant",
+    "name": "神秘吊坠",
+    "slots": [
+      "吊坠"
+    ],
+    "effects": [
+      "古城出土的吊坠底坯，可再制成混沌吊坠、怨影吊坠或疾行项链。"
+    ],
+    "source": [
+      "搜寻古城宝箱时有机会获得。"
+    ]
+  },
+  {
+    "id": "celestial_artifacts:war_dead_badge",
+    "name": "战争亡者之徽",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "失血时逐步提高护甲、攻击和移速。背负混沌诅咒且低于半血时，周围怪物越多，攻击回复越多。",
+      "需要同时装备灾厄之册。"
+    ],
+    "source": []
+  },
+  {
+    "id": "celestial_artifacts:yellow_duck",
+    "name": "小黄鸭",
+    "slots": [
+      "头部"
+    ],
+    "effects": [
+      "允许直接在水面行走。"
+    ],
+    "source": []
   },
   {
     "id": "confluence:adhesive_bandage",
@@ -1144,6 +2314,742 @@
     ],
     "effects": [
       "查看 Create 设备的转速、应力和流体等仪表信息。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:angel_blessing",
+    "name": "天使之祝",
+    "slots": [
+      "术石"
+    ],
+    "effects": [
+      "在空中发动定向冲刺；可偏转弹射物，免疫摔落和挤压。承受虚空和凋零的代价更高。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:ascension_amulet",
+    "name": "飞升护符",
+    "slots": [
+      "护身符"
+    ],
+    "effects": [
+      "同时获得七色神秘护身符的加成，并增加 1 个护符槽。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:avarice_scroll",
+    "name": "无尽贪婪契约",
+    "slots": [
+      "卷轴"
+    ],
+    "effects": [
+      "增加时运，村民交易打六五折，让猪灵保持中立。击杀生物有 15% 几率额外掉落一颗绿宝石。",
+      "需承受七咒之戒的诅咒方可使用。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:berserk_emblem",
+    "name": "血战沙场之证",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "已损失的生命比例越高，攻击、行动速度和抗性加成越强。",
+      "需承受七咒之戒的诅咒方可使用。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:blazing_core",
+    "name": "烈焰之核",
+    "slots": [
+      "术石"
+    ],
+    "effects": [
+      "免疫火焰，可短时间抵挡熔岩伤害，受击时点燃攻击者。水生生物对你造成更多伤害。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:blessing_scroll",
+    "name": "祝福卷轴（占位）",
+    "slots": [
+      "卷轴"
+    ],
+    "effects": [
+      "此版本注册为占位物品，尚无卷轴能力。"
+    ],
+    "source": [
+      "本版未提供可确认的普通生存获取途径。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:chaos_elytra",
+    "name": "混沌之傲",
+    "slots": [
+      "背部"
+    ],
+    "effects": [
+      "滑翔时按住跳跃加速，消耗耐久。高速冲撞可以攻击敌人。",
+      "深渊遗物要求佩戴七咒之戒，且承受诅咒的时间占游玩时间默认至少 99.5%。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:cosmic_scroll",
+    "name": "建筑师的青睐",
+    "slots": [
+      "卷轴"
+    ],
+    "effects": [
+      "致命伤害触发时恢复至半血并取得增益，此后进入冷却。对未被选召的玩家有额外近战威胁。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:creation_heart",
+    "name": "创造之心",
+    "slots": [
+      "术石"
+    ],
+    "effects": [
+      "装备或放在物品栏中即可获得不朽。装备时能飞行并发动凋灵骷髅头弹幕。"
+    ],
+    "source": [
+      "创造模式物品，可在创造物品栏取得。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:cursed_ring",
+    "name": "七咒之戒",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "接受七项诅咒以换取抢夺、时运、特殊掉落等奖励。常规操作无法摘下，戴前请查看完整诅咒。"
+    ],
+    "source": [
+      "模组开启初始装备时，首次登录会收到七咒之戒。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:cursed_scroll",
+    "name": "千咒卷轴",
+    "slots": [
+      "卷轴"
+    ],
+    "effects": [
+      "身上装备的诅咒附魔会强化卷轴的战斗加成。",
+      "需承受七咒之戒的诅咒方可使用。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:cursed_xp_scroll",
+    "name": "无知诅咒卷轴",
+    "slots": [
+      "卷轴"
+    ],
+    "effects": [
+      "可存取经验，等级越高能力越强。经验球收益降低，死亡会失去全部经验。",
+      "需承受七咒之戒的诅咒方可使用。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:desolation_ring",
+    "name": "荒芜之负",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "敌对生物不再主动锁定你，附近未被激怒的生物可以代死。击杀生物也会失去掉落物。",
+      "深渊遗物要求佩戴七咒之戒，且承受诅咒的时间占游玩时间默认至少 99.5%。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:dimness_charm",
+    "name": "黯淡之证",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "需承受七咒达到一定时间比例才能佩戴。它放宽深渊物品的七咒时间要求，并减轻七咒对护甲与输出的惩罚。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:dislocation_ring",
+    "name": "转位之戒",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "立即收集范围内的掉落物，可用潜行切换拾取状态。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:earth_promise",
+    "name": "地灵之诺",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "当一次伤害达到当前生命值的一定比例时，完全挡下这次伤害，随后进入冷却。",
+      "需承受七咒，或佩戴至少 5 级的救赎之戒方可使用。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:eldritch_amulet",
+    "name": "轻蔑之约",
+    "slots": [
+      "护身符"
+    ],
+    "effects": [
+      "持续注视的生物会虚弱、减速。死亡时保留物品栏，经验和灵魂水晶仍会丢失。",
+      "深渊遗物要求佩戴七咒之戒，且承受诅咒的时间占游玩时间默认至少 99.5%。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:enchanter_pearl",
+    "name": "附魔师的珍珠",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "附魔台无需青金石，附魔更容易出现高品质结果；额外增加一个护符槽。",
+      "需承受七咒之戒的诅咒方可使用。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:ender_ring",
+    "name": "末影之戒",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "按随身末影箱键打开自己的末影箱，便于远征途中存取物资。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:enigmatic_amulet_aqua",
+    "name": "神秘护身符（青）",
+    "slots": [
+      "护身符"
+    ],
+    "effects": [
+      "疾跑速度 +15%。",
+      "死亡时以超维容器保存物品、经验与灵魂水晶，返回容器旁即可取回。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:enigmatic_amulet_black",
+    "name": "神秘护身符（黑）",
+    "slots": [
+      "护身符"
+    ],
+    "effects": [
+      "获得 10% 生命窃取。",
+      "死亡时以超维容器保存物品、经验与灵魂水晶，返回容器旁即可取回。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:enigmatic_amulet_blue",
+    "name": "神秘护身符（蓝）",
+    "slots": [
+      "护身符"
+    ],
+    "effects": [
+      "游泳速度 +25%。",
+      "死亡时以超维容器保存物品、经验与灵魂水晶，返回容器旁即可取回。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:enigmatic_amulet_green",
+    "name": "神秘护身符（绿）",
+    "slots": [
+      "护身符"
+    ],
+    "effects": [
+      "挖掘效率 +2。",
+      "死亡时以超维容器保存物品、经验与灵魂水晶，返回容器旁即可取回。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:enigmatic_amulet_magenta",
+    "name": "神秘护身符（品红）",
+    "slots": [
+      "护身符"
+    ],
+    "effects": [
+      "重力降低 20%，安全下落距离增加 1 格。",
+      "死亡时以超维容器保存物品、经验与灵魂水晶，返回容器旁即可取回。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:enigmatic_amulet_red",
+    "name": "神秘护身符（红）",
+    "slots": [
+      "护身符"
+    ],
+    "effects": [
+      "攻击伤害 +2。",
+      "死亡时以超维容器保存物品、经验与灵魂水晶，返回容器旁即可取回。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:enigmatic_amulet_violet",
+    "name": "神秘护身符（紫）",
+    "slots": [
+      "护身符"
+    ],
+    "effects": [
+      "有 15% 几率偏转弹射物。",
+      "死亡时以超维容器保存物品、经验与灵魂水晶，返回容器旁即可取回。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:enigmatic_eye",
+    "name": "休眠之眼／莫测之眼",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "手持休眠之眼右击，将它唤醒为莫测之眼。佩戴后增加一个护符槽，还能识破迷人徽章，显示玩家真名。"
+    ],
+    "source": [
+      "每名玩家第一次打开尚未生成战利品的非空藏宝箱时，可在箱中找到休眠之眼。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:escape_scroll",
+    "name": "死后召回卷轴",
+    "slots": [
+      "卷轴"
+    ],
+    "effects": [
+      "死亡时把物品送至床或重生锚旁；未设置重生位置时送至世界出生点。卷轴自身留在原地。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:ethereal_forging_charm",
+    "name": "飘渺锻符",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "提高携带物品保住耐久的机会，改善锻造产物属性。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:etherium_core",
+    "name": "以太核心",
+    "slots": [
+      "术石"
+    ],
+    "effects": [
+      "受击时以以太护盾抵挡伤害，为后续反击蓄势，并提供爆炸防护。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:explorer_scroll",
+    "name": "探索者卷轴",
+    "slots": [
+      "卷轴"
+    ],
+    "effects": [
+      "探测附近的藏宝位置，探索新结构时可以先查看提示。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:extra_scroll",
+    "name": "扩展卷轴（占位）",
+    "slots": [
+      "卷轴"
+    ],
+    "effects": [
+      "此版本注册为占位物品，尚无卷轴能力。"
+    ],
+    "source": [
+      "本版未提供可确认的普通生存获取途径。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:eye_of_nebula",
+    "name": "星云之眼",
+    "slots": [
+      "术石"
+    ],
+    "effects": [
+      "可瞬移至敌人身后，有机会闪避伤害，提升魔法战斗能力。接触水会受伤。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:fabulous_scroll",
+    "name": "创造者的恩赐",
+    "slots": [
+      "卷轴"
+    ],
+    "effects": [
+      "消耗经验可自由飞行，信标范围内免除飞行的经验开销。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:forger_crystal",
+    "name": "无暇锻造之石",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "锻造时铁砧不会损坏，经验花费减半。两件相同且耐久全满的工具可打造成不可破坏的工具，用作不死图腾。",
+      "需承受七咒，或佩戴至少 5 级的救赎之戒方可使用。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:forger_gem",
+    "name": "锻造者的宝石",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "铁砧经验花费减半，铁砧与锻造产物都更耐用。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:forgotten_ice",
+    "name": "忘却冰晶",
+    "slots": [
+      "术石"
+    ],
+    "effects": [
+      "冰上行走、抵抗冻结，并冻结攻击者。主动能力能冻结周围，火焰是其弱点。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:golden_ring",
+    "name": "精美戒指",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "猪灵会把佩戴者当作穿戴金器的旅人，维持中立。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:golem_heart",
+    "name": "魔像之心",
+    "slots": [
+      "术石"
+    ],
+    "effects": [
+      "提高护甲与抗击退能力；空着护甲栏时另获护甲、韧性与爆炸抗性，魔法伤害仍是弱点。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:heaven_scroll",
+    "name": "天堂之礼",
+    "slots": [
+      "卷轴"
+    ],
+    "effects": [
+      "在信标范围内消耗经验飞行，建设高处时也能维持挖掘速度。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:hell_blade_charm",
+    "name": "地狱刃片护符",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "当一次攻击足以削去目标一定比例的血量时，追加伤害并回复自身生命。"
+    ],
+    "source": [
+      "在下界保持半血以下攻击敌人，积累隐藏的战斗分数。超过 100 分后打开尚未生成战利品的下界藏宝箱，可获得一枚。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:hunter_scroll",
+    "name": "寻猎者卷轴",
+    "slots": [
+      "卷轴"
+    ],
+    "effects": [
+      "根据猎杀记录获得抗性。面对不同猎物时，留意卷轴上的记录。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:ichor_charm",
+    "name": "腐蚀护符",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "免疫灵液侵蚀，并能利用敌人已有的状态效果施加灵液。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:illusion_lantern",
+    "name": "虚幻冥灯",
+    "slots": [
+      "术石"
+    ],
+    "effects": [
+      "召出灵魂火焰攻击敌人并在邻近目标间分摊伤害；强光会带来额外危险。"
+    ],
+    "source": [
+      "下界灵魂沙峡谷中，玩家挖掘灵魂土也有 0.6% 几率发现它。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:infernal_ring",
+    "name": "淬炼之戒",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "帮助保留烈焰巨力的力量，在满血时提供减伤。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:insignia",
+    "name": "迷人徽章",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "佩戴后可用别名隐藏真名。已觉醒的神秘之眼能识破伪装。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:iron_ring",
+    "name": "铁戒指",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "佩戴时增加 1 点护甲。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:lost_engine",
+    "name": "失落引擎",
+    "slots": [
+      "术石"
+    ],
+    "effects": [
+      "物品冷却缩短 25%，免疫摔落和爆炸；佩戴时要躲避雷击。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:magnet_ring",
+    "name": "磁力之戒",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "吸引附近的掉落物，在需要保持掉落物原位时可按住潜行。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:majestic_elytra",
+    "name": "壮丽鞘翅",
+    "slots": [
+      "背部"
+    ],
+    "effects": [
+      "滑翔中按住跳跃可以加速，飞行加速消耗耐久。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:miner_ring",
+    "name": "采掘者之戒",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "消耗燃料把采掘掉落物直接熔炼，适合长时间下矿。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:mining_charm",
+    "name": "猎宝者护符",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "可切换地下夜视，在没有照明的巷道里辨认矿脉。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:monster_charm",
+    "name": "怪物猎人勋章",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "提高对亡灵生物的伤害，击杀怪物获得双倍经验。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:night_scroll",
+    "name": "暗夜契约卷轴",
+    "slots": [
+      "卷轴"
+    ],
+    "effects": [
+      "阻止幻翼自然生成，部分战斗属性随周围的明暗改变。",
+      "需承受七咒之戒的诅咒方可使用。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:ocean_stone",
+    "name": "海洋意志",
+    "slots": [
+      "术石"
+    ],
+    "effects": [
+      "赋予水下呼吸并强化游泳，主动能力可消耗经验改变天气。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:quartz_ring",
+    "name": "魔法石英戒指",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "护甲 +2、幸运 +1.5，受到的魔法伤害默认减少 25%。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:redemption_amulet",
+    "name": "明耀护符",
+    "slots": [
+      "护身符"
+    ],
+    "effects": [
+      "攻击蓄力能提供减伤，未被你攻击的目标无法伤你；另获幸运、韧性与一个护符槽。",
+      "需承受七咒，或佩戴至少 5 级的救赎之戒方可使用。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:redemption_ring",
+    "name": "救赎之戒",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "持续回复生命，增强输出与抗性，并保留额外抢夺、时运和独特掉落。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:revival_leaf",
+    "name": "复苏之叶",
+    "slots": [
+      "术石"
+    ],
+    "effects": [
+      "主动能力消耗经验治疗周围生物。植被能为佩戴者提供空中机动。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:scorched_charm",
+    "name": "阳灼护符",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "免疫火焰灼伤，可在熔岩上行走，攻击燃烧目标时汲取生命。",
+      "需承受七咒，或佩戴至少 5 级的救赎之戒方可使用。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:spelltuner",
+    "name": "术质调谐器",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "在物品栏内对术石右击进行调律，得到对应效果并提高寻找术石的机会。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:starlight_ring",
+    "name": "辉光之戒",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "提高流星出现几率，并可使相关装备将当前位置视为信标范围内。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:survivor_scroll",
+    "name": "生存者卷轴",
+    "slots": [
+      "卷轴"
+    ],
+    "effects": [
+      "在亮处获得恢复，生命较低时还有额外的生存属性。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:the_cube",
+    "name": "非欧立方",
+    "slots": [
+      "术石"
+    ],
+    "effects": [
+      "疾跑、游泳、攻击速度、挖掘、时运和幸运均获提升。生命高于 1 点时可挡住致命一击并留 1 点。主动能力会将你送到三大维度之一的随机地点。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:thunder_scroll",
+    "name": "万钧之护卷轴",
+    "slots": [
+      "卷轴"
+    ],
+    "effects": [
+      "免疫闪电，改善横扫攻击，多次命中后可以引雷。",
+      "需承受七咒，或佩戴至少 5 级的救赎之戒方可使用。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:unwitnessed_amulet",
+    "name": "无主护身符",
+    "slots": [
+      "护身符"
+    ],
+    "effects": [
+      "手持右击会显现七种颜色中的一种，并刻下使用者名字。颜色决定附加属性。"
+    ],
+    "source": [
+      "模组开启初始装备时，首次登录可取得无主护身符。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:violence_scroll",
+    "name": "暴戾之咒",
+    "slots": [
+      "卷轴"
+    ],
+    "effects": [
+      "吸收诅咒附魔的力量，缩短目标受击后的无敌时间。",
+      "深渊遗物要求佩戴七咒之戒，且承受诅咒的时间占游玩时间默认至少 99.5%。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:void_pearl",
+    "name": "虚空珍珠",
+    "slots": [
+      "术石"
+    ],
+    "effects": [
+      "免去呼吸需求，攻击附加凋零。靠近你的生物在黑暗中会受到伤害，并有机会抵挡致命伤害。"
+    ]
+  },
+  {
+    "id": "enigmaticlegacyplus:xp_scroll",
+    "name": "永恒智慧卷轴",
+    "slots": [
+      "卷轴"
+    ],
+    "effects": [
+      "无限量存取经验。手持时潜行右击启停，右击在吸收与释放模式间切换。"
     ]
   },
   {
@@ -2709,6 +4615,318 @@
     ],
     "effects": [
       "可串上 18 个潘多拉串饰，持有时可右键编辑。"
+    ]
+  },
+  {
+    "id": "relics:amphibian_boot",
+    "name": "两栖靴",
+    "slots": [
+      "足部"
+    ],
+    "effects": [
+      "连续游泳或淋雨奔跑会逐渐提速。鳃能力解锁后，水下不再消耗氧气。"
+    ],
+    "source": [
+      "探索获取，可在海洋、海岸或河流群系中的结构箱中随机找到。"
+    ]
+  },
+  {
+    "id": "relics:aqua_walker",
+    "name": "水行者",
+    "slots": [
+      "足部"
+    ],
+    "effects": [
+      "允许短时踩水过河。鞋底渗水后会拖着你下沉，长距离涉水要给自己留好落脚点。"
+    ],
+    "source": [
+      "探索获取，可在海洋、海岸或河流群系中的结构箱中随机找到。"
+    ]
+  },
+  {
+    "id": "relics:bastion_ring",
+    "name": "堡垒戒指",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "让普通猪灵保持中立，最近的猪灵会指引堡垒方向。交易能力也可能额外结算一次以物易物。"
+    ],
+    "source": [
+      "探索获取，可在堡垒遗迹等猪灵主题的结构箱中随机找到。"
+    ]
+  },
+  {
+    "id": "relics:chorus_inhibitor",
+    "name": "紫颂果抑制器",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "食用紫颂果时可以选定视线中的方块作为传送落点。"
+    ],
+    "source": [
+      "探索获取，可在末地结构箱，或主世界要塞等名称含 stronghold 的结构箱中随机找到。"
+    ]
+  },
+  {
+    "id": "relics:drowned_belt",
+    "name": "溺水腰带",
+    "slots": [
+      "腰带"
+    ],
+    "effects": [
+      "扩展遗物槽位，增加下沉速度与水下输出。解锁激流能力后，晴天陆地上也能发动激流三叉戟。"
+    ],
+    "source": [
+      "探索获取，可在海洋、海岸或河流群系中的结构箱中随机找到。"
+    ]
+  },
+  {
+    "id": "relics:elytra_booster",
+    "name": "鞘翅助推器",
+    "slots": [
+      "背部"
+    ],
+    "effects": [
+      "在背包中用燃料给推进器充能，鞘翅飞行时发动能力便可消耗充能向前加速。"
+    ],
+    "source": [
+      "探索获取，可在末地结构箱，或主世界要塞等名称含 stronghold 的结构箱中随机找到。"
+    ]
+  },
+  {
+    "id": "relics:enders_hand",
+    "name": "末影之手",
+    "slots": [
+      "手部"
+    ],
+    "effects": [
+      "让末影人保持中立，发动换位能力可以与视线中的目标交换位置。"
+    ],
+    "source": [
+      "探索获取，可在末地结构箱，或主世界要塞等名称含 stronghold 的结构箱中随机找到。"
+    ]
+  },
+  {
+    "id": "relics:holy_locket",
+    "name": "圣锁",
+    "slots": [
+      "项链"
+    ],
+    "effects": [
+      "圣洁姿态可将部分治疗化为伤害，不洁姿态可汲取周围治疗。消耗储存的充能可以短时免伤。"
+    ],
+    "source": [
+      "探索获取，可在沙漠或恶地群系中的结构箱中随机找到。"
+    ]
+  },
+  {
+    "id": "relics:hunter_belt",
+    "name": "猎人腰带",
+    "slots": [
+      "腰带"
+    ],
+    "effects": [
+      "扩展遗物槽位。驯养的宠物随训练能力提高伤害。"
+    ],
+    "source": [
+      "探索获取，可在主世界的结构箱中随机找到。"
+    ]
+  },
+  {
+    "id": "relics:ice_breaker",
+    "name": "破冰者",
+    "slots": [
+      "足部"
+    ],
+    "effects": [
+      "提高下落速度和击退抗性。下坠时发动能力，着地冲击波将击退周围目标，威力取决于落差。"
+    ],
+    "source": [
+      "探索获取，可在针叶林、冰雪或山地群系中的结构箱中随机找到。"
+    ]
+  },
+  {
+    "id": "relics:ice_skates",
+    "name": "冰刀",
+    "slots": [
+      "足部"
+    ],
+    "effects": [
+      "在冰面连续滑行会逐步加速。撞击目标时，伤害随滑行时间提高。"
+    ],
+    "source": [
+      "探索获取，可在冰原、雪地或冰川群系中的结构箱中随机找到。"
+    ]
+  },
+  {
+    "id": "relics:jellyfish_necklace",
+    "name": "水母项链",
+    "slots": [
+      "项链"
+    ],
+    "effects": [
+      "入水后不再下沉，碰撞敌人可放电。解锁麻痹能力后，电击还会限制目标行动。"
+    ],
+    "source": [
+      "探索获取，可在海洋、海岸或河流群系中的结构箱中随机找到。"
+    ]
+  },
+  {
+    "id": "relics:leafy_ring",
+    "name": "叶环 [WIP]",
+    "slots": [
+      "戒指"
+    ],
+    "effects": [
+      "潜行并将头部藏入草丛等适用植物方块时，获得隐匿效果。"
+    ],
+    "source": [
+      "作者将叶环标为开发中。本版默认遗物战利品表没有为它指定箱子，也没有生存配方。"
+    ]
+  },
+  {
+    "id": "relics:leather_belt",
+    "name": "皮带",
+    "slots": [
+      "腰带"
+    ],
+    "effects": [
+      "增加可装备遗物的槽位数，具体增量见这件腰带的能力页。"
+    ],
+    "source": [
+      "探索获取，可在主世界的结构箱中随机找到。"
+    ]
+  },
+  {
+    "id": "relics:magma_walker",
+    "name": "熔岩漫步者",
+    "slots": [
+      "足部"
+    ],
+    "effects": [
+      "可短时行走在熔岩表面，超时过热会持续受伤。耐热能力还能抵消岩浆块伤害。"
+    ],
+    "source": [
+      "探索获取，可在下界结构箱，也可寻找废弃传送门宝箱中随机找到。"
+    ]
+  },
+  {
+    "id": "relics:midnight_robe",
+    "name": "午夜长袍",
+    "slots": [
+      "背部"
+    ],
+    "effects": [
+      "暗处隐身并加速。隐身中的首次攻击额外增伤。离开目标脚下的圆圈后才能再次潜伏。"
+    ],
+    "source": [
+      "探索获取，可在末地结构箱，或主世界要塞等名称含 stronghold 的结构箱中随机找到。"
+    ]
+  },
+  {
+    "id": "relics:phantom_boot",
+    "name": "幻影靴",
+    "slots": [
+      "足部"
+    ],
+    "effects": [
+      "脚下生成临时幻影桥，其他持有这种遗物的人也能通行。在桥上停留过久会坠落，落地后才能再架桥。"
+    ],
+    "source": [
+      "探索获取，可在末地结构箱，或主世界要塞等名称含 stronghold 的结构箱中随机找到。"
+    ]
+  },
+  {
+    "id": "relics:rage_glove",
+    "name": "狂怒手套",
+    "slots": [
+      "手部"
+    ],
+    "effects": [
+      "连续攻击叠怒，超过 3 秒断连就会清空。怒气同时放大输出与承伤，冲刺可耗尽怒气攻击沿途目标。"
+    ],
+    "source": [
+      "探索获取，可在下界结构箱，也可寻找废弃传送门宝箱中随机找到。"
+    ]
+  },
+  {
+    "id": "relics:reflection_necklace",
+    "name": "反射项链",
+    "slots": [
+      "项链"
+    ],
+    "effects": [
+      "承伤积蓄能量，蓄满或停受伤 5 秒后向四周迸射黑曜石碎片，伤害并击晕目标。"
+    ],
+    "source": [
+      "探索获取，可在下界结构箱，也可寻找废弃传送门宝箱中随机找到。"
+    ]
+  },
+  {
+    "id": "relics:roller_skates",
+    "name": "轮滑鞋",
+    "slots": [
+      "足部"
+    ],
+    "effects": [
+      "持续朝前移动就会加速，普通地面也会像冰面一样打滑。"
+    ],
+    "source": [
+      "探索获取，可在主世界的结构箱中随机找到。"
+    ]
+  },
+  {
+    "id": "relics:shadow_glaive",
+    "name": "影子长矛",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "造成伤害时有机会放出弹射飞刃，在 16 格内的目标间跳转。解锁分裂能力后，弹射还有机会复制飞刃。"
+    ],
+    "source": [
+      "探索获取，可在末地结构箱，或主世界要塞等名称含 stronghold 的结构箱中随机找到。"
+    ]
+  },
+  {
+    "id": "relics:spore_sack",
+    "name": "孢子袋",
+    "slots": [
+      "护符"
+    ],
+    "effects": [
+      "生命跌破一半会释放追踪孢子，按已损失生命造成伤害并阻止目标治疗 5 秒。回到半血以上可重新触发。"
+    ],
+    "source": [
+      "探索获取，可在丛林、竹林或热带雨林群系中的结构箱中随机找到。"
+    ]
+  },
+  {
+    "id": "relics:springy_boot",
+    "name": "弹簧靴",
+    "slots": [
+      "足部"
+    ],
+    "effects": [
+      "落地时从方块表面向上反弹，主动发动还可将自己弹向空中。"
+    ],
+    "source": [
+      "探索获取，可在山峰、高地或丘陵群系中的结构箱中随机找到。"
+    ]
+  },
+  {
+    "id": "relics:wool_mitten",
+    "name": "羊毛手套",
+    "slots": [
+      "手部"
+    ],
+    "effects": [
+      "戴着手套，用空手对雪按住使用键制出冰雪球。命中会击晕目标并冻结附近敌人。"
+    ],
+    "source": [
+      "探索获取，可在针叶林、冰雪或山地群系中的结构箱中随机找到。"
     ]
   },
   {
