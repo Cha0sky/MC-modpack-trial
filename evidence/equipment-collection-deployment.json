@@ -1,0 +1,237 @@
+{
+  "date": "2026-11-23T06:35:55.511206+08:00",
+  "instance": "D:\\PCL 正式版 2.10.6 (1)\\.minecraft\\versions\\星庭远征-开发版",
+  "applied": true,
+  "source_commit": "0d700cdeb84217208b798d94af3896002d51e40d",
+  "files": [
+    {
+      "path": "config/ftbquests/quests/chapters/00_lostworld_chapter1.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_armor_0.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_armor_1.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_armor_2.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_armor_3.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_armor_4.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_armor_5.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_armor_6.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_armor_index.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_pack_bhc_blade_of_vitality.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_pack_celestial_artifacts_catastrophe_scroll.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_pack_celestial_artifacts_chaotic_pendant.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_pack_celestial_artifacts_cursed_talisman.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_pack_celestial_artifacts_deer_inscribed_amulet.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_pack_celestial_artifacts_ender_protector.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_pack_celestial_artifacts_flight_ring.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_pack_celestial_artifacts_sea_god_scroll.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_pack_enigmaticlegacyplus_berserk_emblem.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_pack_enigmaticlegacyplus_ethereal_forging_charm.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_pack_enigmaticlegacyplus_redemption_ring.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_pack_enigmaticlegacyplus_the_cube.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_pack_enigmaticlegacyplus_thunder_scroll.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_pack_relics_amphibian_boot.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_routes_index.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_route_beyonddimensions_net_feeder_item.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_route_cataclysm_aptrgangr_head.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_route_confluence_angel_wings.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_route_confluence_celestial_cuffs.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_route_confluence_greedy_ring.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_route_confluence_lavaproof_tackle_bag.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_route_confluence_steampunk_wings.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_route_goety_alarming_charm.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_route_goety_nameless_cape.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_route_goety_storm_crown.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_route_goety_unholy_robe.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_route_irons_spellbooks_affinity_ring.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_route_irons_spellbooks_druidic_spell_book.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_route_l2hostility_abyssal_thorn.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_route_tarotcards_death.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_route_terra_curio_ankh_shield.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_route_terra_curio_base_point.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_route_terra_curio_bundle_of_horseshoe_balloons.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_route_terra_curio_celestial_shell.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_route_terra_curio_fire_gauntlet.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_route_terra_curio_frog_gear.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_route_terra_curio_hand_of_creation.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_route_terra_curio_pda.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_route_terra_curio_terraspark_boots.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_route_touhou_little_maid_drown_protect_bauble.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_route_touhou_little_maid_spell_arc_cross.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_route_touhou_little_maid_spell_dream_cat_crystal.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/equipment_route_touhou_little_maid_spell_soul_book.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/chapters/gear_field_guide.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/lang/zh_cn.snbt",
+      "existed": true
+    },
+    {
+      "path": "config/ftbquests/quests/lang/en_us.snbt",
+      "existed": true
+    },
+    {
+      "path": "mods/stargarden-pack-compat-1.0.0.jar",
+      "existed": false
+    }
+  ],
+  "runtime_acceptance": "pending user playtest",
+  "module_versions": {
+    "stargarden_pack_compat": "1.0.0"
+  },
+  "backup": "D:\\PCL 正式版 2.10.6 (1)\\codex\\modpack-project\\backups\\equipment-collection-20261123-063555-511206"
+}
